@@ -1,0 +1,132 @@
+extends:
+  - "eslint:recommended"
+  - "plugin:react/recommended"
+  - "@react-native-community"
+  - prettier
+globals:
+  DataView: false
+  Promise: false
+  Uint8Array: false
+parser: babel-eslint
+plugins:
+  - babel
+  - prettier
+  - react
+root: true
+rules:
+  arrow-parens: warn
+  arrow-spacing: warn
+  comma-dangle:
+    - error
+    - arrays: only-multiline
+      objects: only-multiline
+      imports: only-multiline
+      exports: only-multiline
+      functions: never
+  complexity:
+    - error
+    - max: 20
+  curly: off
+  eol-last: warn
+  eqeqeq: warn
+  import/extensions: off
+  indent:
+    - error
+    - 2
+    - ignoredNodes:
+        - 'JSXElement'
+        - 'JSXElement > *'
+        - 'JSXAttribute'
+        - 'JSXIdentifier'
+        - 'JSXNamespacedName'
+        - 'JSXMemberExpression'
+        - 'JSXSpreadAttribute'
+        - 'JSXExpressionContainer'
+        - 'JSXOpeningElement'
+        - 'JSXClosingElement'
+        - 'JSXText'
+        - 'JSXEmptyExpression'
+        - 'JSXSpreadChild'
+      SwitchCase: 1
+  jsx-a11y/anchor-has-content: off
+  jsx-a11y/click-events-have-key-events: off
+  jsx-a11y/no-static-element-interactions: off
+  newline-before-return: warn
+  no-console: warn
+  no-duplicate-imports: warn
+  no-empty:
+    - warn
+    - allowEmptyCatch: true
+  no-extra-semi: warn
+  no-implicit-globals: warn
+  no-plusplus:
+    - error
+    - allowForLoopAfterthoughts: true
+  no-var: warn
+  prefer-arrow-callback: warn
+  prefer-const: warn
+  quotes:
+    - warn
+    - single
+    - avoidEscape: true
+      allowTemplateLiterals: false
+  react/jsx-closing-bracket-location:
+    - error
+    - after-props
+  react/jsx-curly-brace-presence:
+    - error
+    - props: always
+      children: ignore
+  react/jsx-curly-spacing:
+    - error
+    - when: never
+  react/jsx-first-prop-new-line: off
+  react/jsx-fragments:
+    - error
+    - element
+  react/jsx-indent:
+    - error
+    - 2
+  react/jsx-indent-props:
+    - error
+    - first
+  react/jsx-max-props-per-line: off
+  react/jsx-no-target-blank: off
+  react/jsx-props-no-spreading:
+    - error
+    - html: enforce
+      custom: enforce
+      explicitSpread: ignore
+  react/jsx-wrap-multilines:
+    - error
+    - arrow: ignore
+      assignment: ignore
+      condition: ignore
+      declaration: ignore
+      logical: ignore
+      prop: ignore
+      return: parens-new-line
+  react/prop-types: off
+  react-hooks/rules-of-hooks: error
+  react-hooks/exhaustive-deps: warn
+  semi: warn
+  semi-spacing: warn
+  space-before-function-paren:
+    - error
+    - anonymous: always
+      named: never
+      asyncArrow: always
+  space-in-parens:
+    - error
+    - never
+  space-unary-ops: 0
+  template-curly-spacing:
+    - error
+    - never
+settings:
+  import/resolver:
+    babel-module:
+      - alias:
+          "react-dom": "./src/reactDom.js"
+  react:
+    version: detect
