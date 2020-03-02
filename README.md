@@ -1,2 +1,1 @@
-# coronik
-
+# Coronik App
