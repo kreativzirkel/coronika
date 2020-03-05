@@ -182,6 +182,10 @@ PODS:
     - React-cxxreact (= 0.61.5)
     - React-jsi (= 0.61.5)
   - React-jsinspector (0.61.5)
+  - react-native-contacts (5.0.7):
+    - React
+  - react-native-get-random-values (1.2.0):
+    - React
   - react-native-splash-screen (3.2.0):
     - React
   - react-native-unicons (0.0.5):
@@ -229,7 +233,7 @@ PODS:
     - React
   - RNScreens (1.0.0-alpha.23):
     - React
-  - RNSVG (11.0.1):
+  - RNSVG (12.0.1):
     - React
   - Yoga (1.14.0)
 
@@ -250,6 +254,8 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - react-native-contacts (from `../node_modules/react-native-contacts`)
+  - react-native-get-random-values (from `../node_modules/react-native-get-random-values`)
   - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - "react-native-unicons (from `../node_modules/@iconscout/react-native-unicons`)"
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -303,6 +309,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-contacts:
+    :path: "../node_modules/react-native-contacts"
+  react-native-get-random-values:
+    :path: "../node_modules/react-native-get-random-values"
   react-native-splash-screen:
     :path: "../node_modules/react-native-splash-screen"
   react-native-unicons:
@@ -356,6 +366,8 @@ SPEC CHECKSUMS:
   React-jsi: cb2cd74d7ccf4cffb071a46833613edc79cdf8f7
   React-jsiexecutor: d5525f9ed5f782fdbacb64b9b01a43a9323d2386
   React-jsinspector: fa0ecc501688c3c4c34f28834a76302233e29dc0
+  react-native-contacts: a30bebe23ddeda7c34bf97cfa5f952201efc5329
+  react-native-get-random-values: 34ff720b6ad484b14d2190edf9074c443b564e4e
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-unicons: 47c4a16fdde482ef922324a33f36cfbe416b2f82
   React-RCTActionSheet: 600b4d10e3aea0913b5a92256d2719c0cdd26d76
@@ -372,9 +384,9 @@ SPEC CHECKSUMS:
   RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a
   RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
   RNScreens: f28b48b8345f2f5f39ed6195518291515032a788
-  RNSVG: 67f1f12dae2cef6ed59a42cae74a6b8f5a9e7b46
+  RNSVG: bdfb404dd65316598683f83186e59d4164a4147e
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: 820314df1d72163bcbb061d12b0e31e72d2121e8
+PODFILE CHECKSUM: 436402656dc5d82d4e615184c79ea88367d53077
 
 COCOAPODS: 1.8.4

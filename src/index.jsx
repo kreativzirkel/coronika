@@ -3,8 +3,8 @@ import { createSwitchNavigator, createAppContainer } from 'react-navigation';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import App from './App';
-import configureStore from './createStore';
 import screens from './components/screens';
+import configureStore from './createStore';
 
 const InitialNavigator = createSwitchNavigator(
   {

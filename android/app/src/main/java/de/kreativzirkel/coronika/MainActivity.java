@@ -1,4 +1,4 @@
-package de.kreativzirkel.coronik;
+package de.kreativzirkel.coronika;
 
 import android.os.Bundle;
 import org.devio.rn.splashscreen.SplashScreen;
@@ -17,6 +17,6 @@ SplashScreen.show(this, R.style.SplashScreenTheme);    }
    */
   @Override
   protected String getMainComponentName() {
-    return "Coronik";
+    return "coronika";
   }
 }

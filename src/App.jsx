@@ -6,6 +6,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import screens from './components/screens';
+import { COLOR_PRIMARY, COLOR_SECONDARY } from './constants';
 
 const styles = StyleSheet.create({
   navigationItemIcon: {
@@ -16,15 +17,15 @@ const styles = StyleSheet.create({
   },
   navigationItemIconWrapper: {
     alignItems: 'center',
-    backgroundColor: '#f7f7f7',
+    backgroundColor: COLOR_SECONDARY,
     borderRadius: 10,
-    height: 60,
+    height: 55,
     justifyContent: 'center',
     marginBottom: 5,
-    width: 60,
+    width: 55,
   },
   navigationItemIconWrapperFocused: {
-    backgroundColor: '#17d9bd',
+    backgroundColor: COLOR_PRIMARY,
   },
   navigationItemText: {
     fontFamily: 'JetBrainsMono-Regular',
@@ -60,17 +61,17 @@ const AppNavigator = createBottomTabNavigator(
     },
     Share: {
       screen: screens.Share,
-    }
-  /*
+    },
+    /*
     Scanner: {
       screen: ScannerNavigator,
-    },*/,
+    },*/
   },
   {
     initialRouteName: 'Home',
     defaultNavigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ focused, tintColor }) => {
-        const { routeName, key } = navigation.state;
+        const { routeName } = navigation.state;
 
         const onPress = () => {
           if (!focused) {
@@ -79,6 +80,7 @@ const AppNavigator = createBottomTabNavigator(
         };
 
         const NavigationIcon = (props) => {
+          /* eslint-disable react/jsx-props-no-spreading */
           switch (routeName) {
             case 'Contacts':
               return <UilUserPlus {...props} />;
@@ -89,13 +91,14 @@ const AppNavigator = createBottomTabNavigator(
             default:
               return null;
           }
+          /* eslint-enable react/jsx-props-no-spreading */
         };
 
         return (
           <TouchableOpacity onPress={onPress}>
             <View
               style={{ ...styles.navigationItemIconWrapper, ...(focused && styles.navigationItemIconWrapperFocused) }}>
-              <NavigationIcon size={35} color={focused ? '#ffffff' : '#000000'} />
+              <NavigationIcon size={30} color={focused ? '#ffffff' : '#000000'} />
             </View>
             <Text style={styles.navigationItemText}>{routeName}</Text>
           </TouchableOpacity>
@@ -108,7 +111,7 @@ const AppNavigator = createBottomTabNavigator(
         backgroundColor: '#ffffff',
         borderTopWidth: 0,
         color: '#000000',
-        height: 120,
+        height: 90,
       },
     },
   }

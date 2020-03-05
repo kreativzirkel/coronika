@@ -1,4 +1,4 @@
-# Coronik App
+# Coronika App
 
 ## Fonts
 
@@ -17,4 +17,4 @@ Automatic generation using react-native-make.
 
 ## Splash Screen
 
-`react-native set-splash --path ./src/assets/images/splash_screen.png --resize cover --background "#56af31"`
+`react-native set-splash --path ./src/assets/images/splash_screen.png --resize cover --background "#17d9bd"`

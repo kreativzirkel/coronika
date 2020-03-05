@@ -1,6 +1,8 @@
 import React from 'react';
-import { StatusBar, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import Layout from '../../widgets/Layout';
 
+// noinspection JSUnresolvedFunction
 const styles = StyleSheet.create({
   text: {
     fontFamily: 'JetBrainsMono-Bold',
@@ -8,7 +10,6 @@ const styles = StyleSheet.create({
   },
   view: {
     alignItems: 'center',
-    backgroundColor: '#ffffff',
     flex: 1,
     flexDirection: 'column',
     height: '100%',
@@ -18,13 +19,13 @@ const styles = StyleSheet.create({
 
 const Share = () => {
   return (
-    <View style={styles.view}>
-      <StatusBar barStyle={'dark-content'} backgroundColor={'#ffffff'} />
-
-      <View>
-        <Text style={styles.text}>Share</Text>
+    <Layout backgroundColor={'#ffffff'}>
+      <View style={styles.view}>
+        <View>
+          <Text style={styles.text}>Share</Text>
+        </View>
       </View>
-    </View>
+    </Layout>
   );
 };
 

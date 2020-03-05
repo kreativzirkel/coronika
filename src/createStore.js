@@ -9,9 +9,9 @@ import thunk from 'redux-thunk';
 import { reducers } from './redux';
 
 const storeConfig = {
-  key: 'coronik',
+  key: 'coronika',
   storage: AsyncStorage,
-  blacklist: [],
+  blacklist: ['contacts'],
 };
 
 const purgeStore = async () => {
