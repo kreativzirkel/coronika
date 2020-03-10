@@ -4,6 +4,8 @@ import { StyleSheet, View } from 'react-native';
 // noinspection JSUnresolvedFunction
 const styles = StyleSheet.create({
   header: {
+    alignItems: 'center',
+    flexDirection: 'row',
     flexGrow: 0,
     flexShrink: 0,
     padding: 16,

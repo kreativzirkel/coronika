@@ -11,7 +11,7 @@ import { reducers } from './redux';
 const storeConfig = {
   key: 'coronika',
   storage: AsyncStorage,
-  blacklist: ['contacts'],
+  blacklist: ['app', 'contacts', 'dashboard', 'day', 'i18n'],
 };
 
 const purgeStore = async () => {

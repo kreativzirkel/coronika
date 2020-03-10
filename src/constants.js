@@ -1,7 +1,11 @@
 const COLOR_PRIMARY = '#17d9bd';
 const COLOR_SECONDARY = '#f8f7f8';
+const DEFAULT_LANGUAGE = 'en';
+const SUPPORTED_LANGUAGES = ['de', 'en'];
 
 module.exports = {
   COLOR_PRIMARY,
   COLOR_SECONDARY,
+  DEFAULT_LANGUAGE,
+  SUPPORTED_LANGUAGES,
 };

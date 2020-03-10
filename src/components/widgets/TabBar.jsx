@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
+// noinspection JSUnresolvedFunction
 const styles = StyleSheet.create({
   tabBar: {
     display: 'flex',

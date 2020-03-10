@@ -1,11 +1,12 @@
 import { PermissionsAndroid } from 'react-native';
 import RNContacts from 'react-native-contacts';
 import connect from 'react-redux/lib/connect/connect';
+import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
-import { addContact, setActiveTab, setSearchValue } from './actions';
+import { importContacts as importContactsAction, removeContact } from './actions';
 import Screen from './ui';
 
-const importContacts = () => async (dispatch) => {
+export const importContacts = () => async (dispatch) => {
   // noinspection JSCheckFunctionSignatures,JSUnresolvedFunction,JSUnresolvedVariable
   PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_CONTACTS, {
     title: 'Contacts',
@@ -16,19 +17,22 @@ const importContacts = () => async (dispatch) => {
       if (err === 'denied') {
         // error
       } else {
-        contacts.forEach(({ familyName, givenName, middleName, recordID }) => {
+        const contactsToImport = [];
+
+        contacts.forEach(({ familyName, givenName, middleName, phoneNumbers, recordID }) => {
           // ignore company contacts
           if (givenName.trim() !== '') {
-            dispatch(
-              addContact({
-                givenName,
-                middleName,
-                familyName,
-                recordID,
-              })
-            );
+            contactsToImport.push({
+              givenName,
+              middleName,
+              familyName,
+              phoneNumbers,
+              recordID,
+            });
           }
         });
+
+        dispatch(importContactsAction(contactsToImport));
       }
     });
   });
@@ -47,21 +51,32 @@ const contactsSortingFunction = (a, b) => {
   return 0;
 };
 
-const mapStateToProps = ({ contacts: { activeTab, contacts, searchValue } }) => {
+const locationsSortingFunction = (a, b) => {
+  const titleA = a.title.toLowerCase();
+  const titleB = b.title.toLowerCase();
+  if (titleA < titleB) {
+    return -1;
+  }
+  if (titleA > titleB) {
+    return 1;
+  }
+
+  return 0;
+};
+
+const mapStateToProps = ({ contacts: { contacts, locations } }) => {
   contacts.sort((a, b) => contactsSortingFunction(a, b));
+  locations.sort((a, b) => locationsSortingFunction(a, b));
 
   return {
-    activeTab,
     contacts,
-    searchValue,
+    locations,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    importContacts: () => dispatch(importContacts()),
-    setActiveTab: (activeTab) => dispatch(setActiveTab(activeTab)),
-    setSearchValue: (searchValue) => dispatch(setSearchValue(searchValue)),
+    deleteContact: (contactId) => dispatch(removeContact(contactId)),
   };
 };
 
@@ -69,6 +84,6 @@ const Container = container(Screen, {
   componentDidMount() {},
 });
 
-const Contacts = connect(mapStateToProps, mapDispatchToProps)(Container);
+const Contacts = withI18n(connect(mapStateToProps, mapDispatchToProps)(Container));
 
 export default Contacts;

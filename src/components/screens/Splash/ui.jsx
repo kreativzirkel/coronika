@@ -1,3 +1,4 @@
+import LottieView from 'lottie-react-native';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { COLOR_PRIMARY } from '../../../constants';
@@ -5,10 +6,8 @@ import Layout from '../../widgets/Layout';
 
 // noinspection JSUnresolvedFunction
 const styles = StyleSheet.create({
-  text: {
-    color: '#ffffff',
-    fontFamily: 'JetBrainsMono-Bold',
-    fontSize: 50,
+  animation: {
+    width: '90%',
   },
   view: {
     alignItems: 'center',
@@ -24,7 +23,12 @@ const Splash = () => {
     <Layout backgroundColor={COLOR_PRIMARY} statusBarHidden>
       <View style={styles.view}>
         <View>
-          <Text style={styles.text}>coronika</Text>
+          <LottieView
+            autoPlay
+            loop={false}
+            source={require('../../../assets/animations/splash.json')}
+            style={styles.animation}
+          />
         </View>
       </View>
     </Layout>

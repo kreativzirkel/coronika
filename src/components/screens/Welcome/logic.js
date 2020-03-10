@@ -1,4 +1,5 @@
 import connect from 'react-redux/lib/connect/connect';
+import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
 import Screen from './ui';
 
@@ -11,9 +12,11 @@ const mapDispatchToProps = (/* dispatch */) => {
 };
 
 const Container = container(Screen, {
-  componentDidMount() {},
+  componentDidMount() {
+
+  },
 });
 
-const Home = connect(mapStateToProps, mapDispatchToProps)(Container);
+const Welcome = withI18n(connect(mapStateToProps, mapDispatchToProps)(Container));
 
-export default Home;
+export default Welcome;
