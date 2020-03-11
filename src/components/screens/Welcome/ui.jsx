@@ -28,6 +28,15 @@ const styles = StyleSheet.create({
     fontSize: 32,
     textAlign: 'center',
   },
+  sliderPaginationDot: {
+    backgroundColor: '#000000',
+    borderRadius: 0,
+    height: 5,
+    width: 50,
+  },
+  sliderPaginationDotActive: {
+    backgroundColor: COLOR_PRIMARY,
+  },
   view: {
     alignItems: 'center',
     flex: 1,
@@ -98,14 +107,12 @@ const Welcome = ({ navigation }) => {
     <Layout backgroundColor={'#ffffff'} statusBarHidden>
       <View style={styles.view}>
         <AppIntroSlider
-          activeDotStyle={{ backgroundColor: COLOR_PRIMARY }}
-          dotStyle={{ backgroundColor: '#E6E6E6' }}
+          activeDotStyle={{ ...styles.sliderPaginationDot, ...styles.sliderPaginationDotActive }}
+          dotStyle={styles.sliderPaginationDot}
           ref={slider}
           renderItem={({ item: { animation, headline, text, buttonText, key }, index }) => {
             return (
-              <View
-                key={key}
-                style={{ ...styles.view, ...styles.viewSlide }}>
+              <View key={key} style={{ ...styles.view, ...styles.viewSlide }}>
                 <LottieView autoPlay loop source={animation} style={styles.animation} />
                 <Text style={styles.headline}>{headline}</Text>
                 <Text style={styles.text}>{text}</Text>
