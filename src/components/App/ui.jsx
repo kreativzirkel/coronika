@@ -5,6 +5,7 @@ import React from 'react';
 import { Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import withI18n from '../../i18n';
 import screens from '../screens';
 
 // noinspection JSUnresolvedFunction
@@ -71,26 +72,55 @@ const onShare = async () => {
 
 const Tab = createBottomTabNavigator();
 
+const TabNavigationItem = withI18n(({ isFocused, key, onPress, routeName, __ }) => {
+  let label;
+
+  switch (routeName) {
+    case 'Contacts':
+      label = __('navigation.contacts.label');
+      break;
+    case 'Dashboard':
+      label = __('navigation.dashboard.label');
+      break;
+    case 'Share':
+      label = __('navigation.share.label');
+      break;
+    default:
+      label = routeName;
+  }
+
+  const NavigationIcon = (props) => {
+    /* eslint-disable react/jsx-props-no-spreading */
+    switch (routeName) {
+      case 'Contacts':
+        return <UilUserPlus {...props} />;
+      case 'Dashboard':
+        return <UilBookOpen {...props} />;
+      case 'Share':
+        return <UilShareAlt {...props} />;
+      default:
+        return null;
+    }
+    /* eslint-enable react/jsx-props-no-spreading */
+  };
+
+  return (
+    <TouchableOpacity key={key} onPress={onPress} style={styles.navigationItem}>
+      <View style={{ ...styles.navigationItemIconWrapper, ...(isFocused && styles.navigationItemIconWrapperFocused) }}>
+        <NavigationIcon size={30} color={isFocused ? '#ffffff' : '#000000'} />
+      </View>
+      <Text numberOfLines={1} style={styles.navigationItemText}>
+        {label}
+      </Text>
+    </TouchableOpacity>
+  );
+});
+
 const AppNavigatorTabBar = ({ state, descriptors, navigation }) => (
   <View style={styles.navigationBar}>
     {state.routes.map((route, index) => {
       const isFocused = state.index === index;
       const { name: routeName } = route;
-      let title;
-
-      switch (routeName) {
-        case 'Contacts':
-          title = 'Kontakte';
-          break;
-        case 'Dashboard':
-          title = 'Übersicht';
-          break;
-        case 'Share':
-          title = 'Teilen';
-          break;
-        default:
-          title = routeName;
-      }
 
       const onPress = () => {
         if (routeName === 'Share') {
@@ -112,29 +142,13 @@ const AppNavigatorTabBar = ({ state, descriptors, navigation }) => (
         }
       };
 
-      const NavigationIcon = (props) => {
-        /* eslint-disable react/jsx-props-no-spreading */
-        switch (routeName) {
-          case 'Contacts':
-            return <UilUserPlus {...props} />;
-          case 'Dashboard':
-            return <UilBookOpen {...props} />;
-          case 'Share':
-            return <UilShareAlt {...props} />;
-          default:
-            return null;
-        }
-        /* eslint-enable react/jsx-props-no-spreading */
-      };
-
       return (
-        <TouchableOpacity key={`main-navigation-item-${index}`} onPress={onPress} style={styles.navigationItem}>
-          <View
-            style={{ ...styles.navigationItemIconWrapper, ...(isFocused && styles.navigationItemIconWrapperFocused) }}>
-            <NavigationIcon size={30} color={isFocused ? '#ffffff' : '#000000'} />
-          </View>
-          <Text style={styles.navigationItemText}>{title}</Text>
-        </TouchableOpacity>
+        <TabNavigationItem
+          isFocused={isFocused}
+          key={`main-navigation-item-${index}`}
+          onPress={onPress}
+          routeName={routeName}
+        />
       );
     })}
   </View>

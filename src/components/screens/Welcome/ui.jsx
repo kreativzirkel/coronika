@@ -52,32 +52,31 @@ const styles = StyleSheet.create({
   },
 });
 
-const slides = [
-  {
-    animation: require('../../../assets/animations/why.json'),
-    headline: 'Gemeinsam das Corona Virus eindämmen.',
-    text: 'Zusammen können wir Infektionswege nachvollziehen und so eine Ausbreitung eindämmen.',
-    buttonText: 'Super, ich will mithelfen!',
-    key: 'welcome-slide-0',
-  },
-  {
-    animation: require('../../../assets/animations/what.json'),
-    headline: 'Ein Tagebuch mit Orten und Personen',
-    text:
-      'Trage täglich ein, wen du getroffen hast und an welchen öffentlichen Orten (U-Bahn, Supermarkt, usw.) du dich aufgehalten hast. Mit wenigen Minuten täglich leistest du einen Beitrag zur Gesundheit aller.',
-    buttonText: 'Alles klar',
-    key: 'welcome-slide-1',
-  },
-  {
-    animation: require('../../../assets/animations/how.json'),
-    headline: 'Deine Daten gehören dir',
-    text: 'Alle Informationen, die in Coronik anlegst werden lokal gespeichert.',
-    buttonText: 'Jetzt anfangen',
-    key: 'welcome-slide-2',
-  },
-];
+const Welcome = ({ navigation, __ }) => {
+  const slides = [
+    {
+      animation: require('../../../assets/animations/why.json'),
+      headline: __('welcome-screen.slides.intro.headline'),
+      text: __('welcome-screen.slides.intro.text'),
+      buttonText: __('welcome-screen.slides.intro.button'),
+      key: 'welcome-slide-0',
+    },
+    {
+      animation: require('../../../assets/animations/what.json'),
+      headline: __('welcome-screen.slides.how-to.headline'),
+      text: __('welcome-screen.slides.how-to.text'),
+      buttonText: __('welcome-screen.slides.how-to.button'),
+      key: 'welcome-slide-1',
+    },
+    {
+      animation: require('../../../assets/animations/how.json'),
+      headline: __('welcome-screen.slides.local-data.headline'),
+      text: __('welcome-screen.slides.local-data.text'),
+      buttonText: __('welcome-screen.slides.local-data.button'),
+      key: 'welcome-slide-2',
+    },
+  ];
 
-const Welcome = ({ navigation }) => {
   const next = (index) => {
     const nextSlide = index + 1;
     const isFinished = nextSlide === slides.length;

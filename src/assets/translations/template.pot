@@ -3,6 +3,118 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
-#: src/components/screens/Contacts/ui.jsx:40
-msgid "contacts-screen.header.headline"
+#: src/components/App/ui.jsx:80
+msgid "navigation.contacts.label"
+msgstr ""
+
+#: src/components/App/ui.jsx:83
+msgid "navigation.dashboard.label"
+msgstr ""
+
+#: src/components/App/ui.jsx:86
+msgid "navigation.share.label"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:422
+msgid "contacts"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:432
+msgid "locations"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:443
+msgid "entries.contacts.list.new"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:460
+msgid "entries.search.list.empty"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:468
+msgid "entries.contacts.list.empty"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:473
+msgid "entries.contacts.list.import.button"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:491
+msgid "entries.locations.list.new"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:507
+msgid "entries.locations.list.empty"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:518
+msgid "entries.selection.add"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:528
+msgid "entries.modals.new-contact.headline"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:538
+msgid "entries.modals.new-contact.placeholder.name"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:550
+msgid "entries.modals.new-contact.placeholder.phone-number"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:559
+msgid "entries.modals.new-contact.button"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:568
+msgid "entries.modals.new-location.headline"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:578
+msgid "entries.modals.new-location.placeholder.title"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:589
+msgid "entries.modals.new-location.placeholder.description"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:598
+msgid "entries.modals.new-location.button"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:607
+msgid "entries.modals.select-location.headline"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:626
+msgid "entries.modals.select-location.placeholder.description"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:641
+msgid "Cancel"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:642
+msgid "Confirm"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:655
+msgid "entries.modals.select-location.button"
+msgstr ""
+
+#: src/components/screens/Day/ui.jsx:68
+msgid "day-screen.header.headline"
+msgstr ""
+
+#: src/components/screens/Day/ui.jsx:76
+msgid "day-screen.contacts.empty"
+msgstr ""
+
+#: src/components/screens/Day/ui.jsx:77
+msgid "day-screen.locations.empty"
+msgstr ""
+
+#: src/components/screens/Day/ui.jsx:87
+msgid "day-screen.entries.add"
 msgstr ""
