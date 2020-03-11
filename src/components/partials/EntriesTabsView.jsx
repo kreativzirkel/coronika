@@ -4,6 +4,7 @@ import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
 import UilTimes from '@iconscout/react-native-unicons/icons/uil-times';
 // import UilUsersAlt from '@iconscout/react-native-unicons/icons/uil-users-alt';
 import UilUser from '@iconscout/react-native-unicons/icons/uil-user';
+import moment from 'moment';
 import React, { Fragment } from 'react';
 import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Modal from 'react-native-modal';
@@ -13,6 +14,7 @@ import withI18n from '../../i18n';
 import { addContact, addLocation } from '../screens/Contacts/actions';
 import { importContacts } from '../screens/Contacts/logic';
 import ContactsList from '../widgets/ContactsList';
+import DateTimePickerModal from '../widgets/DateTimePickerModal';
 import LocationsList from '../widgets/LocationsList';
 import SearchBar from '../widgets/SearchBar';
 import TabBar from '../widgets/TabBar';
@@ -101,6 +103,15 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     padding: 15,
   },
+  modalTextInputText: {
+    color: '#000000',
+    fontFamily: 'JetBrainsMono-Regular',
+    fontSize: 16,
+  },
+  modalTimeInput: {
+    backgroundColor: '#b0b0b1',
+    borderRadius: 8,
+  },
   modalButton: {
     alignItems: 'center',
     backgroundColor: COLOR_PRIMARY,
@@ -144,10 +155,20 @@ class EntriesTabsView extends React.PureComponent {
 
     this.searchInput = React.createRef();
 
+    const { timestamp } = this.props;
+
+    const now = moment();
+    const selectLocationTimestamp = moment(timestamp || 0)
+      .hours(now.hours())
+      .minutes(now.minutes())
+      .valueOf();
+
     this.state = {
       activeTab: TABS.CONTACTS,
       isModalNewContactVisible: false,
       isModalNewLocationVisible: false,
+      isModalSelectLocationVisible: false,
+      isModalSelectLocationTimestampVisible: false,
       newContactName: '',
       newContactPhone: '',
       newLocationDescription: '',
@@ -158,6 +179,10 @@ class EntriesTabsView extends React.PureComponent {
         groups: [],
         locations: [],
       },
+      selectLocationDescription: '',
+      selectLocationId: '',
+      selectLocationTimestamp,
+      selectLocationTitle: '',
     };
   }
 
@@ -231,6 +256,18 @@ class EntriesTabsView extends React.PureComponent {
     this.setState({ isModalNewLocationVisible: false });
   }
 
+  closeModalSelectLocation() {
+    this.setState({ isModalSelectLocationVisible: false });
+  }
+
+  openModalSelectLocationTimestamp() {
+    this.setState({ isModalSelectLocationTimestampVisible: true });
+  }
+
+  closeModalSelectLocationTimestamp() {
+    this.setState({ isModalSelectLocationTimestampVisible: false });
+  }
+
   setActiveTab(activeTab) {
     this.setState({ activeTab });
   }
@@ -255,6 +292,21 @@ class EntriesTabsView extends React.PureComponent {
     this.setState({ searchValue });
   }
 
+  setSelectLocationDescription(selectLocationDescription) {
+    this.setState({ selectLocationDescription });
+  }
+
+  setSelectLocationTimestamp(selectLocationTimestamp) {
+    this.setState({ selectLocationTimestamp });
+  }
+
+  confirmSelectLocationTimestamp(selectLocationTimestamp) {
+    const timestamp = moment(selectLocationTimestamp).valueOf();
+
+    this.setSelectLocationTimestamp(timestamp);
+    this.closeModalSelectLocationTimestamp();
+  }
+
   toggleContactSelection(id) {
     const { selectedEntries } = this.state;
     let updatedSelection;
@@ -270,6 +322,39 @@ class EntriesTabsView extends React.PureComponent {
     this.setState({ selectedEntries: updatedSelectedEntries });
   }
 
+  toggleLocationSelection(id) {
+    const { locations } = this.props;
+    const { selectedEntries } = this.state;
+
+    if (selectedEntries.locations.find(({ id: locationId }) => locationId === id)) {
+      const updatedSelection = selectedEntries.locations.filter(({ id: locationId }) => locationId !== id);
+
+      const updatedSelectedEntries = { ...selectedEntries, locations: updatedSelection };
+
+      this.setState({ selectedEntries: updatedSelectedEntries });
+    } else {
+      const { title } = locations.find(({ id: locationId }) => locationId === id);
+
+      this.setState({
+        isModalSelectLocationVisible: true,
+        selectLocationDescription: '',
+        selectLocationId: id,
+        selectLocationTitle: title,
+      });
+    }
+  }
+
+  addLocationToSelectedLocations() {
+    const { selectedEntries, selectLocationDescription, selectLocationId, selectLocationTimestamp } = this.state;
+    const updatedSelection = [
+      ...selectedEntries.locations,
+      { id: selectLocationId, description: selectLocationDescription, timestamp: selectLocationTimestamp },
+    ];
+    const updatedSelectedEntries = { ...selectedEntries, locations: updatedSelection };
+
+    this.setState({ isModalSelectLocationVisible: false, selectedEntries: updatedSelectedEntries });
+  }
+
   render() {
     const {
       allowSelection,
@@ -277,6 +362,7 @@ class EntriesTabsView extends React.PureComponent {
       customContactsEmptyText,
       customLocationsEmptyText,
       deleteContactItem,
+      deleteLocationItem,
       disableDeleteImportedContacts,
       hideCreateButton,
       locations,
@@ -286,12 +372,17 @@ class EntriesTabsView extends React.PureComponent {
       activeTab,
       isModalNewContactVisible,
       isModalNewLocationVisible,
+      isModalSelectLocationVisible,
+      isModalSelectLocationTimestampVisible,
       newContactName,
       newContactPhone,
       newLocationDescription,
       newLocationTitle,
       searchValue,
       selectedEntries,
+      selectLocationDescription,
+      selectLocationTimestamp,
+      selectLocationTitle,
     } = this.state;
 
     const buttonAddNewContactDisabled = newContactName.length < 3;
@@ -379,7 +470,7 @@ class EntriesTabsView extends React.PureComponent {
                           </Text>
                           <TouchableOpacity onPress={() => this.importContacts()} style={styles.contactsImportButton}>
                             <UilImport color={COLOR_PRIMARY} size={22} style={styles.contactsImportButtonIcon} />
-                            <Text style={styles.contactsImportButtonText}>Jetzt importieren</Text>
+                            <Text style={styles.contactsImportButtonText}>{__('entries.contacts.list.import.button')}</Text>
                           </TouchableOpacity>
                         </Fragment>
                       )}
@@ -402,7 +493,14 @@ class EntriesTabsView extends React.PureComponent {
               )}
 
               {filteredLocations && filteredLocations.length > 0 ? (
-                <LocationsList locations={filteredLocations} />
+                <LocationsList
+                  allowDelete={typeof deleteLocationItem === 'function'}
+                  allowSelection={allowSelection}
+                  deleteItem={(id, description, time) => deleteLocationItem(id, description, time)}
+                  selectedLocations={selectedEntries.locations}
+                  toggleSelection={(id) => this.toggleLocationSelection(id)}
+                  locations={filteredLocations}
+                />
               ) : (
                 <View style={styles.entriesEmptyWrapper}>
                   <Text style={styles.entriesEmptyText}>
@@ -497,7 +595,64 @@ class EntriesTabsView extends React.PureComponent {
 
             <TouchableOpacity disabled={buttonAddNewLocationDisabled} onPress={() => this.addNewLocation()}>
               <View style={{ ...styles.modalButton, ...(buttonAddNewLocationDisabled && styles.modalButtonDisabled) }}>
-                <Text style={styles.modalButtonText}>{__('entries.modals.new-contact.button')}</Text>
+                <Text style={styles.modalButtonText}>{__('entries.modals.new-location.button')}</Text>
+              </View>
+            </TouchableOpacity>
+          </KeyboardAvoidingView>
+        </Modal>
+
+        <Modal isVisible={isModalSelectLocationVisible} style={styles.modal}>
+          <KeyboardAvoidingView behavior={'padding'} enabled style={styles.modalContent}>
+            <View style={styles.modalHeader}>
+              <Text style={styles.modalHeaderText}>{__('entries.modals.select-location.headline')}</Text>
+              <TouchableOpacity onPress={() => this.closeModalSelectLocation()}>
+                <UilTimes size={34} color={COLOR_PRIMARY} />
+              </TouchableOpacity>
+            </View>
+
+            <TextInput
+              autoCompleteType={'off'}
+              autoCorrect={false}
+              editable={false}
+              style={styles.modalTextInput}
+              textContentType={'none'}
+              value={selectLocationTitle}
+            />
+
+            <TextInput
+              autoCompleteType={'off'}
+              autoCorrect={false}
+              onChangeText={(value) => this.setSelectLocationDescription(value)}
+              placeholder={__('entries.modals.select-location.placeholder.description')}
+              placeholderTextColor={'#B0B0B1'}
+              style={styles.modalTextInput}
+              textContentType={'none'}
+              value={selectLocationDescription}
+            />
+
+            <TouchableOpacity onPress={() => this.openModalSelectLocationTimestamp()}>
+              <View style={styles.modalTextInput}>
+                <Text style={styles.modalTextInputText}>{moment(selectLocationTimestamp).format('LT')}</Text>
+              </View>
+            </TouchableOpacity>
+
+            <View style={styles.modalTimeInput}>
+              <DateTimePickerModal
+                cancelTextIOS={__('Cancel')}
+                confirmTextIOS={__('Confirm')}
+                customHeaderIOS={() => <View />}
+                date={new Date(selectLocationTimestamp)}
+                headerTextIOS={''}
+                isVisible={isModalSelectLocationTimestampVisible}
+                mode={'time'}
+                onCancel={() => this.closeModalSelectLocationTimestamp()}
+                onConfirm={(value) => this.confirmSelectLocationTimestamp(value)}
+              />
+            </View>
+
+            <TouchableOpacity onPress={() => this.addLocationToSelectedLocations()}>
+              <View style={styles.modalButton}>
+                <Text style={styles.modalButtonText}>{__('entries.modals.select-location.button')}</Text>
               </View>
             </TouchableOpacity>
           </KeyboardAvoidingView>

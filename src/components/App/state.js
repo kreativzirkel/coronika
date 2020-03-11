@@ -47,8 +47,13 @@ export default (state = initialState, action = { type: null }) => {
       const timestamp = action.timestamp;
       const location = action.location;
       const days = cloneDeep(state.days);
+      const existingLocation = days[timestamp].locations.find(({ id }) => id === location.id);
 
-      if (!days[timestamp].locations.find(({ id }) => id === location.id)) {
+      if (
+        !existingLocation ||
+        existingLocation.description !== location.description ||
+        existingLocation.timestamp !== location.timestamp
+      ) {
         days[timestamp].locations.push(location);
       }
 
@@ -58,10 +63,21 @@ export default (state = initialState, action = { type: null }) => {
     case 'REMOVE_LOCATION_FROM_DAY_APP': {
       const timestamp = action.timestamp;
       const locationId = action.locationId;
+      const locationDescription = action.locationDescription;
+      const locationTimestamp = action.locationTimestamp;
       const days = cloneDeep(state.days);
 
-      if (days[timestamp].locations.find(({ id }) => id === locationId)) {
-        days[timestamp].locations = days[timestamp].locations.filter(({ id }) => id !== locationId);
+      if (
+        days[timestamp].locations.find(
+          ({ id, description, timestamp }) =>
+            id === locationId && description === locationDescription && timestamp === locationTimestamp
+        )
+      ) {
+        days[timestamp].locations = days[timestamp].locations.filter(
+          ({ id, description, timestamp }) =>
+            id !== locationId ||
+            (id === locationId && (description !== locationDescription || timestamp !== locationTimestamp))
+        );
       }
 
       return { ...state, days };

@@ -10,8 +10,10 @@ export const removeContactFromDay = (timestamp, contactId) => ({
 
 export const addLocationToDay = (timestamp, location) => ({ type: 'ADD_LOCATION_TO_DAY_APP', timestamp, location });
 
-export const removeLocationFromDay = (timestamp, locationId) => ({
+export const removeLocationFromDay = (timestamp, locationId, locationDescription, locationTimestamp) => ({
   type: 'REMOVE_LOCATION_FROM_DAY_APP',
   timestamp,
   locationId,
+  locationDescription,
+  locationTimestamp,
 });

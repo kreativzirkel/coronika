@@ -57,7 +57,7 @@ const TabBarItem = ({ active, counter, counterVisible, icon: Icon, label, onPres
   <View style={{ ...styles.tabBarItem, ...(active && styles.tabBarItemActive) }}>
     <TouchableOpacity onPress={() => onPress && onPress()} style={styles.tabBarItemButton}>
       {Icon && <Icon color={active ? COLOR_PRIMARY : '#000000'} size={24} style={styles.tabBarItemIcon} />}
-      <Text style={{ ...styles.tabBarItemLabel, ...(active && styles.tabBarItemLabelActive) }}>{label}</Text>
+      <Text numberOfLines={1} style={{ ...styles.tabBarItemLabel, ...(active && styles.tabBarItemLabelActive) }}>{label}</Text>
       {counterVisible && (
         <Text style={{ ...styles.tabBarItemCounter, ...(active && styles.tabBarItemCounterActive) }}>
           {`(${counter})`}

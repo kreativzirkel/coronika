@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
 const slides = [
   {
     animation: require('../../../assets/animations/why.json'),
-    headline: 'Gemeinsam den Corona Virus eindämmen.',
+    headline: 'Gemeinsam das Corona Virus eindämmen.',
     text: 'Zusammen können wir Infektionswege nachvollziehen und so eine Ausbreitung eindämmen.',
     buttonText: 'Super, ich will mithelfen!',
     key: 'welcome-slide-0',
@@ -72,22 +72,8 @@ const slides = [
     animation: require('../../../assets/animations/how.json'),
     headline: 'Deine Daten gehören dir',
     text: 'Alle Informationen, die in Coronik anlegst werden lokal gespeichert.',
-    buttonText: 'Sehr gut',
-    key: 'welcome-slide-2',
-  },
-  {
-    animation: require('../../../assets/animations/why.json'),
-    headline: 'Importiere deine Kontakte',
-    text: 'Mit deinen Kontakten in der App kannst du noch einfacher Kontaktpersonen anlegen.',
-    buttonText: 'Verstanden',
-    key: 'welcome-slide-3',
-  },
-  {
-    animation: require('../../../assets/animations/why.json'),
-    headline: 'Los geht’s',
-    text: 'Trage den gestrigen Tag ein und lege die ersten Personen und Orte ein.',
     buttonText: 'Jetzt anfangen',
-    key: 'welcome-slide-4',
+    key: 'welcome-slide-2',
   },
 ];
 

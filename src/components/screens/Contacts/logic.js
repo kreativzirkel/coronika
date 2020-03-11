@@ -3,7 +3,7 @@ import RNContacts from 'react-native-contacts';
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
-import { importContacts as importContactsAction, removeContact } from './actions';
+import { importContacts as importContactsAction, removeContact, removeLocation } from './actions';
 import Screen from './ui';
 
 export const importContacts = () => async (dispatch) => {
@@ -77,6 +77,7 @@ const mapStateToProps = ({ contacts: { contacts, locations } }) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     deleteContact: (contactId) => dispatch(removeContact(contactId)),
+    deleteLocation: (locationId) => dispatch(removeLocation(locationId)),
   };
 };
 

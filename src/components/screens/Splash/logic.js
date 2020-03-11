@@ -32,6 +32,7 @@ const Container = container(Screen, {
 
     (async () => {
       await sleep(3000);
+      // TODO: check if onboarding is already completed
       navigation.navigate('Welcome');
     })();
   },

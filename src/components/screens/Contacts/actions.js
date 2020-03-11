@@ -4,4 +4,6 @@ export const removeContact = (contactId) => ({ type: 'REMOVE_CONTACT_CONTACTS', 
 
 export const addLocation = (location) => ({ type: 'ADD_LOCATION_CONTACTS', location });
 
+export const removeLocation = (locationId) => ({type: 'REMOVE_LOCATION_CONTACTS', locationId});
+
 export const importContacts = (contacts) => ({ type: 'IMPORT_CONTACTS_CONTACTS', contacts });

@@ -18,12 +18,11 @@ const addSelection = (selection, navigation) => async (dispatch, getState) => {
     }
   });
 
-  selection.locations.forEach((locationId) => {
+  selection.locations.forEach(({ description, id: locationId, timestamp: locationTimestamp }) => {
     const location = locations.find(({ id }) => id === locationId);
+    const newLocation = { ...location, description, timestamp: locationTimestamp };
 
-    // TODO: consider individual location time and description
-
-    dispatch(addLocationToDay(timestamp, location));
+    dispatch(addLocationToDay(timestamp, newLocation));
   });
 
   navigation.navigate('Day');
@@ -67,6 +66,7 @@ const mapStateToProps = ({ app: { days }, contacts: { contacts, locations }, day
   return {
     contacts: availableContacts,
     locations,
+    timestamp,
   };
 };
 

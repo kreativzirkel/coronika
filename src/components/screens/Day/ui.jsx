@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Day = ({ contacts, locations, timestamp, deleteContactFromDay, navigation, __ }) => {
+const Day = ({ contacts, locations, timestamp, deleteContactFromDay, deleteLocationFromDay, navigation, __ }) => {
   const today = moment()
     .hours(0)
     .minutes(0)
@@ -76,6 +76,7 @@ const Day = ({ contacts, locations, timestamp, deleteContactFromDay, navigation,
         customContactsEmptyText={__('day-screen.contacts.empty')}
         customLocationsEmptyText={__('day-screen.locations.empty')}
         deleteContactItem={(id) => deleteContactFromDay(id)}
+        deleteLocationItem={(id, description, time) => deleteLocationFromDay(id, description, time)}
         hideCreateButton
         locations={locations}
       />

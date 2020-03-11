@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const AddEntry = ({ contacts, locations, addSelection, navigation, __ }) => {
+const AddEntry = ({ contacts, locations, timestamp, addSelection, navigation, __ }) => {
   const goBack = () => navigation.dispatch(CommonActions.goBack());
 
   return (
@@ -43,6 +43,7 @@ const AddEntry = ({ contacts, locations, addSelection, navigation, __ }) => {
         addSelection={(selection) => addSelection(selection, navigation)}
         contacts={contacts}
         locations={locations}
+        timestamp={timestamp}
       />
     </Layout>
   );

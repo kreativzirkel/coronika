@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Contacts = ({ contacts, locations, deleteContact, __ }) => {
+const Contacts = ({ contacts, locations, deleteContact, deleteLocation, __ }) => {
   return (
     <Layout backgroundColor={COLOR_SECONDARY}>
       <View style={styles.view}>
@@ -43,6 +43,7 @@ const Contacts = ({ contacts, locations, deleteContact, __ }) => {
         <EntriesTabsView
           contacts={contacts}
           deleteContactItem={(id) => deleteContact(id)}
+          deleteLocationItem={(id) => deleteLocation(id)}
           disableDeleteImportedContacts
           locations={locations}
         />
