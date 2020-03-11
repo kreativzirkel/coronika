@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-
 const { spawnSync } = require('child_process');
 const colors = require('colors/safe');
 const fs = require('fs');

@@ -171,7 +171,7 @@ msgstr "Your data is yours."
 #: src/components/screens/Policy/ui.jsx:88
 msgid "policy-screen.content.section-2.text"
 msgstr ""
-"All information created in Coronika is stored locally. No data is tracked or "
+"All information you create in Coronika is stored locally. No data is tracked or "
 "passed on."
 
 #: src/components/screens/Welcome/ui.jsx:14

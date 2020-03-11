@@ -32,82 +32,85 @@ const onShare = async () => {
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigationItem = withI18n(withViewportUnits(({ isFocused, key, onPress, routeName, vw, __ }) => {
-  // noinspection JSUnresolvedFunction
-  const styles = StyleSheet.create({
-    navigationItem: {
-      alignItems: 'center',
-      display: 'flex',
-      flexDirection: 'column',
-    },
-    navigationItemIcon: {
-      color: '#000000',
-    },
-    navigationItemIconFocused: {
-      color: '#ffffff',
-    },
-    navigationItemIconWrapper: {
-      alignItems: 'center',
-      backgroundColor: COLOR_SECONDARY,
-      borderRadius: vw(2.3),
-      height: vw(13),
-      justifyContent: 'center',
-      marginBottom: vw(1.5),
-      width: vw(13),
-    },
-    navigationItemIconWrapperFocused: {
-      backgroundColor: COLOR_PRIMARY,
-    },
-    navigationItemText: {
-      fontFamily: 'JetBrainsMono-Regular',
-      fontSize: vw(2.8),
-      textAlign: 'center',
-      textTransform: 'lowercase',
-    },
-  });
+const TabNavigationItem = withI18n(
+  withViewportUnits(({ isFocused, key, onPress, routeName, vw, __ }) => {
+    // noinspection JSUnresolvedFunction
+    const styles = StyleSheet.create({
+      navigationItem: {
+        alignItems: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+      },
+      navigationItemIcon: {
+        color: '#000000',
+      },
+      navigationItemIconFocused: {
+        color: '#ffffff',
+      },
+      navigationItemIconWrapper: {
+        alignItems: 'center',
+        backgroundColor: COLOR_SECONDARY,
+        borderRadius: vw(2.3),
+        height: vw(13),
+        justifyContent: 'center',
+        marginBottom: vw(1.5),
+        width: vw(13),
+      },
+      navigationItemIconWrapperFocused: {
+        backgroundColor: COLOR_PRIMARY,
+      },
+      navigationItemText: {
+        fontFamily: 'JetBrainsMono-Regular',
+        fontSize: vw(2.8),
+        textAlign: 'center',
+        textTransform: 'lowercase',
+      },
+    });
 
-  let label;
+    let label;
 
-  switch (routeName) {
-    case 'Contacts':
-      label = __('navigation.contacts.label');
-      break;
-    case 'Dashboard':
-      label = __('navigation.dashboard.label');
-      break;
-    case 'Share':
-      label = __('navigation.share.label');
-      break;
-    default:
-      label = routeName;
-  }
-
-  const NavigationIcon = (props) => {
-    /* eslint-disable react/jsx-props-no-spreading */
     switch (routeName) {
       case 'Contacts':
-        return <UilUserPlus {...props} />;
+        label = __('navigation.contacts.label');
+        break;
       case 'Dashboard':
-        return <UilBookOpen {...props} />;
+        label = __('navigation.dashboard.label');
+        break;
       case 'Share':
-        return <UilShareAlt {...props} />;
+        label = __('navigation.share.label');
+        break;
       default:
-        return null;
+        label = routeName;
     }
-    /* eslint-enable react/jsx-props-no-spreading */
-  };
 
-  return (
-    <TouchableOpacity key={key} onPress={onPress} style={styles.navigationItem}>
-      <View style={{ ...styles.navigationItemIconWrapper, ...(isFocused && styles.navigationItemIconWrapperFocused) }}>
-        <NavigationIcon size={vw(8)} color={isFocused ? '#ffffff' : '#000000'} />
-      </View>
-      <Text numberOfLines={1} style={styles.navigationItemText}>
-        {label}
-      </Text>
-    </TouchableOpacity>
-  );
-}));
+    const NavigationIcon = (props) => {
+      /* eslint-disable react/jsx-props-no-spreading */
+      switch (routeName) {
+        case 'Contacts':
+          return <UilUserPlus {...props} />;
+        case 'Dashboard':
+          return <UilBookOpen {...props} />;
+        case 'Share':
+          return <UilShareAlt {...props} />;
+        default:
+          return null;
+      }
+      /* eslint-enable react/jsx-props-no-spreading */
+    };
+
+    return (
+      <TouchableOpacity key={key} onPress={onPress} style={styles.navigationItem}>
+        <View
+          style={{ ...styles.navigationItemIconWrapper, ...(isFocused && styles.navigationItemIconWrapperFocused) }}>
+          <NavigationIcon size={vw(8)} color={isFocused ? '#ffffff' : '#000000'} />
+        </View>
+        <Text numberOfLines={1} style={styles.navigationItemText}>
+          {label}
+        </Text>
+      </TouchableOpacity>
+    );
+  })
+);
 
 const AppNavigatorTabBar = withViewportUnits(({ state, descriptors, navigation, vw }) => {
   // noinspection JSUnresolvedFunction
@@ -139,7 +142,7 @@ const AppNavigatorTabBar = withViewportUnits(({ state, descriptors, navigation, 
 
             if (subNavigationRouteName !== 'Dashboard') {
               //console.log(descriptors);
-              const { navigation: t } = descriptors[route.key];
+
               // TODO: reset to dashboard screen if other screen is visible
               navigation.navigate(routeName);
             }
@@ -158,7 +161,7 @@ const AppNavigatorTabBar = withViewportUnits(({ state, descriptors, navigation, 
         );
       })}
     </View>
-  )
+  );
 });
 
 /*

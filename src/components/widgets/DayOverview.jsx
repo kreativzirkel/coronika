@@ -42,7 +42,7 @@ const DayOverview = ({ contacts, isDark, isTotal, locations, timestamp, today, v
       color: '#707070',
       fontFamily: 'JetBrainsMono-Regular',
       fontSize: vw(3.5),
-      marginBottom: vw(.5),
+      marginBottom: vw(0.5),
       textTransform: 'lowercase',
     },
     dayValueCaptionDark: {

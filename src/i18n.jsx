@@ -3,10 +3,8 @@ import de from 'moment/locale/de';
 import en from 'moment/locale/en-gb';
 import React from 'react';
 import { ReactReduxContext } from 'react-redux';
-/* eslint-disable camelcase */
 import de_DE from './assets/translations/de_DE';
 import en_US from './assets/translations/en_US';
-/* eslint-enable camelcase */
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from './constants';
 
 const getMessages = (language) => {
@@ -106,7 +104,6 @@ const withI18n = (WrappedComponent) => {
       if (this.unsubscribeStore) this.unsubscribeStore();
     }
 
-    /* eslint-disable-next-line no-underscore-dangle */
     __(text) {
       const { currentLanguage, messages } = this.state;
 
@@ -122,9 +119,9 @@ const withI18n = (WrappedComponent) => {
       const { currentLanguage } = this.state;
 
       return (
-        /* eslint-disable no-underscore-dangle,react/jsx-props-no-spreading */
+        /* eslint-disable react/jsx-props-no-spreading */
         <WrappedComponent {...{ ...props, currentLanguage }} ref={forwardedRef} __={(text) => this.__(text)} />
-        /* eslint-enable no-underscore-dangle,react/jsx-props-no-spreading */
+        /* eslint-enable react/jsx-props-no-spreading */
       );
     }
   }

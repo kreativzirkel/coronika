@@ -5,7 +5,7 @@ import Swipeable from 'react-native-gesture-handler/Swipeable';
 import withViewportUnits from '../../utils/withViewportUnits';
 
 const renderRightActions = (progress, deleteItem, vw) => {
-  let linear = progress.interpolate({
+  const linear = progress.interpolate({
     inputRange: [0, 1, 2, 3, 4, 5, 6],
     outputRange: [0, 1, 1, 1, 1, 1, 1],
   });

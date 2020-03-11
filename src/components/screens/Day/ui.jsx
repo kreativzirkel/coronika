@@ -28,6 +28,10 @@ const Day = ({ contacts, locations, timestamp, deleteContactFromDay, deleteLocat
       color: COLOR_PRIMARY,
       fontFamily: 'JetBrainsMono-Regular',
       fontSize: vw(5.5),
+      textTransform: 'lowercase',
+    },
+    dayOverviewWrapper: {
+      marginBottom: vw(0.7),
     },
     header: {
       alignItems: 'center',
@@ -69,7 +73,15 @@ const Day = ({ contacts, locations, timestamp, deleteContactFromDay, deleteLocat
         </View>
       </Header>
 
-      <DayOverview contacts={contacts.length} isDark locations={locations.length} timestamp={timestamp} today={today} />
+      <View style={styles.dayOverviewWrapper}>
+        <DayOverview
+          contacts={contacts.length}
+          isDark
+          locations={locations.length}
+          timestamp={timestamp}
+          today={today}
+        />
+      </View>
 
       <EntriesTabsView
         contacts={contacts}

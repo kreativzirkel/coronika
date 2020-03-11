@@ -33,7 +33,7 @@ const Policy = ({ navigation, vw, __ }) => {
       textTransform: 'lowercase',
     },
     madeByText: {
-      color: '#B0B0B1',
+      color: '#909091',
       fontFamily: 'JetBrainsMono-Regular',
       fontSize: vw(3.5),
       marginLeft: vw(2),
@@ -66,10 +66,7 @@ const Policy = ({ navigation, vw, __ }) => {
 
   const goBack = () => navigation.dispatch(CommonActions.goBack());
 
-  const visitKreativzirkel = () =>
-    Linking.openURL('https://www.kreativzirkel.de/').catch((err) =>
-      console.log('could not open https://www.kreativzirkel.de/', err)
-    );
+  const visitKreativzirkel = () => Linking.openURL('https://www.kreativzirkel.de/').catch(() => {});
 
   return (
     <Layout backgroundColor={COLOR_SECONDARY}>

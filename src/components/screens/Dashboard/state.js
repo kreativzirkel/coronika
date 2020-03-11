@@ -61,19 +61,19 @@ export default (state = initialState, action = { type: null }) => {
     }
 
     case 'REMOVE_LOCATION_FROM_DAY_DASHBOARD': {
-      const timestamp = action.timestamp;
+      const dayTimestamp = action.timestamp;
       const locationId = action.locationId;
       const locationDescription = action.locationDescription;
       const locationTimestamp = action.locationTimestamp;
       const days = cloneDeep(state.days);
 
       if (
-        days[timestamp].locations.find(
+        days[dayTimestamp].locations.find(
           ({ id, description, timestamp }) =>
             id === locationId && description === locationDescription && timestamp === locationTimestamp
         )
       ) {
-        days[timestamp].locations = days[timestamp].locations.filter(
+        days[dayTimestamp].locations = days[dayTimestamp].locations.filter(
           ({ id, description, timestamp }) =>
             id !== locationId ||
             (id === locationId && (description !== locationDescription || timestamp !== locationTimestamp))

@@ -1,6 +1,6 @@
 import LottieView from 'lottie-react-native';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { COLOR_PRIMARY } from '../../../constants';
 import Layout from '../../widgets/Layout';
 

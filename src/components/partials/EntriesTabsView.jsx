@@ -303,6 +303,7 @@ class EntriesTabsView extends React.PureComponent {
         color: COLOR_PRIMARY,
         fontFamily: 'JetBrainsMono-Regular',
         fontSize: vw(4.8),
+        textTransform: 'lowercase',
       },
       contactsImportButton: {
         alignItems: 'center',
@@ -316,6 +317,7 @@ class EntriesTabsView extends React.PureComponent {
         color: COLOR_PRIMARY,
         fontFamily: 'JetBrainsMono-Regular',
         fontSize: vw(4.5),
+        textTransform: 'lowercase',
       },
       entriesEmptyWrapper: {
         flex: 1,
@@ -487,7 +489,7 @@ class EntriesTabsView extends React.PureComponent {
             </Fragment>
           )}
 
-          {activeTab === TABS.GROUPS && <Fragment></Fragment>}
+          {activeTab === TABS.GROUPS && <Fragment />}
 
           {activeTab === TABS.LOCATIONS && (
             <Fragment>
@@ -545,7 +547,7 @@ class EntriesTabsView extends React.PureComponent {
               autoCompleteType={'off'}
               autoCorrect={false}
               onChangeText={(value) => this.setNewContactName(value)}
-              placeholder={__('entries.modals.new-contact.placeholder.name')}
+              placeholder={__('entries.modals.new-contact.placeholder.name').toLowerCase()}
               placeholderTextColor={'#B0B0B1'}
               style={styles.modalTextInput}
               textContentType={'none'}
@@ -557,7 +559,7 @@ class EntriesTabsView extends React.PureComponent {
               autoCorrect={false}
               onChangeText={(value) => this.setNewContactPhone(value)}
               keyboardType={'phone-pad'}
-              placeholder={__('entries.modals.new-contact.placeholder.phone-number')}
+              placeholder={__('entries.modals.new-contact.placeholder.phone-number').toLowerCase()}
               placeholderTextColor={'#B0B0B1'}
               style={styles.modalTextInput}
               textContentType={'none'}
@@ -585,7 +587,7 @@ class EntriesTabsView extends React.PureComponent {
               autoCompleteType={'off'}
               autoCorrect={false}
               onChangeText={(value) => this.setNewLocationTitle(value)}
-              placeholder={__('entries.modals.new-location.placeholder.title')}
+              placeholder={__('entries.modals.new-location.placeholder.title').toLowerCase()}
               placeholderTextColor={'#B0B0B1'}
               style={styles.modalTextInput}
               textContentType={'none'}
@@ -596,7 +598,7 @@ class EntriesTabsView extends React.PureComponent {
               autoCompleteType={'off'}
               autoCorrect={false}
               onChangeText={(value) => this.setNewLocationDescription(value)}
-              placeholder={__('entries.modals.new-location.placeholder.description')}
+              placeholder={__('entries.modals.new-location.placeholder.description').toLowerCase()}
               placeholderTextColor={'#B0B0B1'}
               style={styles.modalTextInput}
               textContentType={'none'}
@@ -633,7 +635,7 @@ class EntriesTabsView extends React.PureComponent {
               autoCompleteType={'off'}
               autoCorrect={false}
               onChangeText={(value) => this.setSelectLocationDescription(value)}
-              placeholder={__('entries.modals.select-location.placeholder.description')}
+              placeholder={__('entries.modals.select-location.placeholder.description').toLowerCase()}
               placeholderTextColor={'#B0B0B1'}
               style={styles.modalTextInput}
               textContentType={'none'}

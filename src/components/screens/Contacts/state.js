@@ -58,7 +58,7 @@ export default (state = initialState, action = { type: null }) => {
 
     case 'ADD_LOCATION_CONTACTS': {
       const location = action.location;
-      let locations = cloneDeep(state.locations);
+      const locations = cloneDeep(state.locations);
 
       if (!location.id) {
         location.id = uuidv4();

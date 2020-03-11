@@ -174,7 +174,7 @@ msgstr "Deine Daten gehören dir."
 #: src/components/screens/Policy/ui.jsx:88
 msgid "policy-screen.content.section-2.text"
 msgstr ""
-"Alle Informationen, die in Coronika anlegst, werden lokal gespeichert. Keine "
+"Alle Informationen, die du in Coronika anlegst, werden lokal gespeichert. Keine "
 "Daten werden getrackt oder weitergegeben."
 
 #: src/components/screens/Welcome/ui.jsx:14

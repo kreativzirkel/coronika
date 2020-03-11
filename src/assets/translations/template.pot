@@ -3,20 +3,24 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
-#: src/components/App/ui.jsx:73
-msgid "navigation.contacts.label"
+#: src/components/screens/Policy/ui.jsx:79
+msgid "policy-screen.header.headline"
 msgstr ""
 
-#: src/components/App/ui.jsx:76
-msgid "navigation.dashboard.label"
+#: src/components/screens/Policy/ui.jsx:85
+msgid "policy-screen.content.section-1.headline"
 msgstr ""
 
-#: src/components/App/ui.jsx:79
-msgid "navigation.share.label"
+#: src/components/screens/Policy/ui.jsx:86
+msgid "policy-screen.content.section-1.text"
 msgstr ""
 
-#: src/components/screens/Dashboard/ui.jsx:74
-msgid "dashboard-screen.header.buttons.policy"
+#: src/components/screens/Policy/ui.jsx:87
+msgid "policy-screen.content.section-2.headline"
+msgstr ""
+
+#: src/components/screens/Policy/ui.jsx:88
+msgid "policy-screen.content.section-2.text"
 msgstr ""
 
 #: src/components/screens/Welcome/ui.jsx:14

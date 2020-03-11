@@ -53,7 +53,7 @@ const SearchBar = React.forwardRef(({ onPressSearchIcon, searchValue, setSearchV
         autoCorrect={false}
         onChangeText={(value) => setSearchValue(value)}
         /* onSubmitEditing={() => this.onSubmitEditing()} */
-        placeholder={__('placeholder.search-input')}
+        placeholder={__('placeholder.search-input').toLowerCase()}
         placeholderTextColor={'#B0B0B1'}
         ref={ref}
         returnKeyType={'search'}
@@ -62,7 +62,7 @@ const SearchBar = React.forwardRef(({ onPressSearchIcon, searchValue, setSearchV
         value={searchValue}
       />
     </View>
-  )
+  );
 });
 
 export default withI18n(withViewportUnits(SearchBar));
