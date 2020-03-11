@@ -132,6 +132,10 @@ msgstr "Add entry"
 msgid "contacts-screen.header.headline"
 msgstr "Manage contacts"
 
+#: src/components/screens/Dashboard/ui.jsx:75
+msgid "dashboard-screen.header.buttons.policy"
+msgstr "Policy"
+
 #: src/components/screens/Day/ui.jsx:68
 msgid "day-screen.header.headline"
 msgstr "Daily overview"
@@ -147,6 +151,28 @@ msgstr "You haven’t added any locations for this day."
 #: src/components/screens/Day/ui.jsx:87
 msgid "day-screen.entries.add"
 msgstr "Add entry"
+
+#: src/components/screens/Policy/ui.jsx:79
+msgid "policy-screen.header.headline"
+msgstr "Policy"
+
+#: src/components/screens/Policy/ui.jsx:85
+msgid "policy-screen.content.section-1.headline"
+msgstr "Containing the corona virus together."
+
+#: src/components/screens/Policy/ui.jsx:86
+msgid "policy-screen.content.section-1.text"
+msgstr "By tracing infection routes, we can limit the spread."
+
+#: src/components/screens/Policy/ui.jsx:87
+msgid "policy-screen.content.section-2.headline"
+msgstr "Your data is yours."
+
+#: src/components/screens/Policy/ui.jsx:88
+msgid "policy-screen.content.section-2.text"
+msgstr ""
+"All information created in Coronika is stored locally. No data is tracked or "
+"passed on."
 
 #: src/components/screens/Welcome/ui.jsx:14
 msgid "welcome-screen.slides.intro.headline"

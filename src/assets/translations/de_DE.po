@@ -133,6 +133,10 @@ msgstr "Eintrag hinzufügen"
 msgid "contacts-screen.header.headline"
 msgstr "Kontakte verwalten"
 
+#: src/components/screens/Dashboard/ui.jsx:75
+msgid "dashboard-screen.header.buttons.policy"
+msgstr "Policy"
+
 #: src/components/screens/Day/ui.jsx:68
 msgid "day-screen.header.headline"
 msgstr "Tagesübersicht"
@@ -148,6 +152,30 @@ msgstr "Du hast für diesen Tag noch keine Orte hinzugefügt."
 #: src/components/screens/Day/ui.jsx:87
 msgid "day-screen.entries.add"
 msgstr "Eintrag hinzufügen"
+
+#: src/components/screens/Policy/ui.jsx:79
+msgid "policy-screen.header.headline"
+msgstr "Policy"
+
+#: src/components/screens/Policy/ui.jsx:85
+msgid "policy-screen.content.section-1.headline"
+msgstr "Gemeinsam das Corona Virus eindämmen."
+
+#: src/components/screens/Policy/ui.jsx:86
+msgid "policy-screen.content.section-1.text"
+msgstr ""
+"Indem wir Infektionswege nachvollziehen, können wir eine Ausbreitung "
+"eindämmen."
+
+#: src/components/screens/Policy/ui.jsx:87
+msgid "policy-screen.content.section-2.headline"
+msgstr "Deine Daten gehören dir."
+
+#: src/components/screens/Policy/ui.jsx:88
+msgid "policy-screen.content.section-2.text"
+msgstr ""
+"Alle Informationen, die in Coronika anlegst, werden lokal gespeichert. Keine "
+"Daten werden getrackt oder weitergegeben."
 
 #: src/components/screens/Welcome/ui.jsx:14
 msgid "welcome-screen.slides.intro.headline"
