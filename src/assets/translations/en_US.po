@@ -15,189 +15,188 @@ msgstr ""
 "esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.3\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: src/components/App/ui.jsx:80
 msgid "navigation.contacts.label"
-msgstr "Kontakte"
+msgstr "Contacts"
 
 #: src/components/App/ui.jsx:83
 msgid "navigation.dashboard.label"
-msgstr "Übersicht"
+msgstr "Overview"
 
 #: src/components/App/ui.jsx:86
 msgid "navigation.share.label"
-msgstr "Teilen"
+msgstr "Share"
 
 #: src/components/partials/EntriesTabsView.jsx:425
 #: src/components/widgets/DayOverview.jsx:90
 msgid "contacts"
-msgstr "Kontakte"
+msgstr "contacts"
 
 #: src/components/partials/EntriesTabsView.jsx:435
 #: src/components/widgets/DayOverview.jsx:78
 msgid "locations"
-msgstr "Orte"
+msgstr "locations"
 
 #: src/components/partials/EntriesTabsView.jsx:446
 msgid "entries.contacts.list.new"
-msgstr "Neuer Kontakt"
+msgstr "New contact"
 
 #: src/components/partials/EntriesTabsView.jsx:463
 msgid "entries.search.list.empty"
-msgstr "Zu deiner Suche konnte nichts gefunden werden."
+msgstr "Nothing could be found on your search."
 
 #: src/components/partials/EntriesTabsView.jsx:470
 msgid "entries.contacts.list.empty"
 msgstr ""
-"Du hast noch keinen Kontakt angelegt. Um direkt loszulegen, kannst du deine "
-"Kontakte importieren."
+"You have not yet created a contact. To get started right away, you can "
+"import your contacts."
 
 #: src/components/partials/EntriesTabsView.jsx:474
 msgid "entries.contacts.list.import.button"
-msgstr "Jetzt importieren"
+msgstr "Import now"
 
 #: src/components/partials/EntriesTabsView.jsx:493
 msgid "entries.locations.list.new"
-msgstr "Neuer Ort"
+msgstr "New location"
 
 #: src/components/partials/EntriesTabsView.jsx:509
 msgid "entries.locations.list.empty"
 msgstr ""
-"Du hast noch keinen Ort angelegt. Beginne jetzt und erstelle deinen ersten "
-"Ort."
+"You haven’t created a location yet. Start now and create your first location."
 
 #: src/components/partials/EntriesTabsView.jsx:524
 msgid "entries.selection.add"
-msgstr "Auswahl hinzufügen"
+msgstr "Add selection"
 
 #: src/components/partials/EntriesTabsView.jsx:534
 msgid "entries.modals.new-contact.headline"
-msgstr "Neuer Kontakt"
+msgstr "New contact"
 
 #: src/components/partials/EntriesTabsView.jsx:544
 msgid "entries.modals.new-contact.placeholder.name"
-msgstr "Vorname Name"
+msgstr "Name"
 
 #: src/components/partials/EntriesTabsView.jsx:556
 msgid "entries.modals.new-contact.placeholder.phone-number"
-msgstr "Telefon"
+msgstr "Phone"
 
 #: src/components/partials/EntriesTabsView.jsx:565
 msgid "entries.modals.new-contact.button"
-msgstr "Hinzufügen"
+msgstr "Add"
 
 #: src/components/partials/EntriesTabsView.jsx:574
 msgid "entries.modals.new-location.headline"
-msgstr "Neuer Ort"
+msgstr "New location"
 
 #: src/components/partials/EntriesTabsView.jsx:584
 msgid "entries.modals.new-location.placeholder.title"
-msgstr "Titel"
+msgstr "Title"
 
 #: src/components/partials/EntriesTabsView.jsx:595
 msgid "entries.modals.new-location.placeholder.description"
-msgstr "Beschreibung"
+msgstr "Description"
 
 #: src/components/partials/EntriesTabsView.jsx:604
 msgid "entries.modals.new-location.button"
-msgstr "Hinzufügen"
+msgstr "Add"
 
 #: src/components/partials/EntriesTabsView.jsx:613
 msgid "entries.modals.select-location.headline"
-msgstr "Ort auswählen"
+msgstr "Select location"
 
 #: src/components/partials/EntriesTabsView.jsx:632
 msgid "entries.modals.select-location.placeholder.description"
-msgstr "Beschreibung"
+msgstr "Description"
 
 #: src/components/partials/EntriesTabsView.jsx:647
 msgid "Cancel"
-msgstr "Abbrechen"
+msgstr "Cancel"
 
 #: src/components/partials/EntriesTabsView.jsx:648
 msgid "Confirm"
-msgstr "Bestätigen"
+msgstr "Confirm"
 
 #: src/components/partials/EntriesTabsView.jsx:661
 msgid "entries.modals.select-location.button"
-msgstr "Auswählen"
+msgstr "Select"
 
 #: src/components/screens/AddEntry/ui.jsx:37
 msgid "add-entry-screen.header.headline"
-msgstr "Eintrag hinzufügen"
+msgstr "Add entry"
 
 #: src/components/screens/Contacts/ui.jsx:40
 msgid "contacts-screen.header.headline"
-msgstr "Kontakte verwalten"
+msgstr "Manage contacts"
 
 #: src/components/screens/Day/ui.jsx:68
 msgid "day-screen.header.headline"
-msgstr "Tagesübersicht"
+msgstr "Daily overview"
 
 #: src/components/screens/Day/ui.jsx:76
 msgid "day-screen.contacts.empty"
-msgstr "Du hast für diesen Tag noch keine Kontakte hinzugefügt."
+msgstr "You have not added any contacts for this day."
 
 #: src/components/screens/Day/ui.jsx:77
 msgid "day-screen.locations.empty"
-msgstr "Du hast für diesen Tag noch keine Orte hinzugefügt."
+msgstr "You haven’t added any locations for this day."
 
 #: src/components/screens/Day/ui.jsx:87
 msgid "day-screen.entries.add"
-msgstr "Eintrag hinzufügen"
+msgstr "Add entry"
 
 #: src/components/screens/Welcome/ui.jsx:59
 msgid "welcome-screen.slides.intro.headline"
-msgstr "Gemeinsam das Corona Virus eindämmen."
+msgstr "Containing the corona virus together."
 
 #: src/components/screens/Welcome/ui.jsx:60
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
-"Zusammen können wir Infektionswege nachvollziehen und so eine Ausbreitung "
-"eindämmen."
+"Together we can trace infection paths and thus contain the spread of the "
+"disease."
 
 #: src/components/screens/Welcome/ui.jsx:61
 msgid "welcome-screen.slides.intro.button"
-msgstr "Super, ich will mithelfen!"
+msgstr "Great, I want to help!"
 
 #: src/components/screens/Welcome/ui.jsx:66
 msgid "welcome-screen.slides.how-to.headline"
-msgstr "Ein Tagebuch mit Orten und Personen"
+msgstr "A diary with locations and contacts"
 
 #: src/components/screens/Welcome/ui.jsx:67
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
-"Trage täglich ein, wen du getroffen hast und an welchen öffentlichen Orten "
-"(U-Bahn, Supermarkt, usw.) du dich aufgehalten hast. Mit wenigen Minuten "
-"täglich leistest du einen Beitrag zur Gesundheit aller. "
+"Record daily who you met and in which public places (subway, supermarket, "
+"etc.) you were. By spending a few minutes a day you contribute to the health "
+"of everyone. "
 
 #: src/components/screens/Welcome/ui.jsx:68
 msgid "welcome-screen.slides.how-to.button"
-msgstr "Alles klar"
+msgstr "Okay"
 
 #: src/components/screens/Welcome/ui.jsx:73
 msgid "welcome-screen.slides.local-data.headline"
-msgstr "Deine Daten gehören dir!"
+msgstr "Your data belongs to you!"
 
 #: src/components/screens/Welcome/ui.jsx:74
 msgid "welcome-screen.slides.local-data.text"
-msgstr "Alle Informationen, die in Coronik anlegst werden lokal gespeichert. "
+msgstr "All information created in Coronika is stored locally."
 
 #: src/components/screens/Welcome/ui.jsx:75
 msgid "welcome-screen.slides.local-data.button"
-msgstr "Jetzt anfangen"
+msgstr "Start now"
 
 #: src/components/widgets/DayOverview.jsx:71
 msgid "today"
-msgstr "heute"
+msgstr "today"
 
 #: src/components/widgets/DayOverview.jsx:74
 msgid "total"
-msgstr "gesamt"
+msgstr "total"
 
 #: src/components/widgets/SearchBar.jsx:54
 msgid "placeholder.search-input"
-msgstr "Suche"
+msgstr "Search"

@@ -79,7 +79,7 @@ msgstr "Neuer Kontakt"
 
 #: src/components/partials/EntriesTabsView.jsx:544
 msgid "entries.modals.new-contact.placeholder.name"
-msgstr "Vorname Name"
+msgstr "Vorname Nachname"
 
 #: src/components/partials/EntriesTabsView.jsx:556
 msgid "entries.modals.new-contact.placeholder.phone-number"
@@ -184,7 +184,7 @@ msgstr "Deine Daten gehören dir!"
 
 #: src/components/screens/Welcome/ui.jsx:74
 msgid "welcome-screen.slides.local-data.text"
-msgstr "Alle Informationen, die in Coronik anlegst werden lokal gespeichert. "
+msgstr "Alle Informationen, die in Coronika anlegst werden lokal gespeichert. "
 
 #: src/components/screens/Welcome/ui.jsx:75
 msgid "welcome-screen.slides.local-data.button"
