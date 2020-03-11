@@ -28,6 +28,9 @@ const TABS = {
 
 // noinspection JSUnresolvedFunction
 const styles = StyleSheet.create({
+  buttonAddSelection: {
+    marginTop: 10,
+  },
   buttonCreateNew: {
     alignItems: 'center',
     display: 'flex',
@@ -333,11 +336,11 @@ class EntriesTabsView extends React.PureComponent {
 
       this.setState({ selectedEntries: updatedSelectedEntries });
     } else {
-      const { title } = locations.find(({ id: locationId }) => locationId === id);
+      const { description, title } = locations.find(({ id: locationId }) => locationId === id);
 
       this.setState({
         isModalSelectLocationVisible: true,
-        selectLocationDescription: '',
+        selectLocationDescription: description,
         selectLocationId: id,
         selectLocationTitle: title,
       });
@@ -464,13 +467,12 @@ class EntriesTabsView extends React.PureComponent {
                         <Text style={styles.entriesEmptyText}>{customContactsEmptyText}</Text>
                       ) : (
                         <Fragment>
-                          <Text style={styles.entriesEmptyText}>
-                            {__('entries.contacts.list.empty')}
-                            {/*Du hast noch keinen Kontakt angelegt. Um direkt loszulegen, kannst du deine Kontakte importieren.*/}
-                          </Text>
+                          <Text style={styles.entriesEmptyText}>{__('entries.contacts.list.empty')}</Text>
                           <TouchableOpacity onPress={() => this.importContacts()} style={styles.contactsImportButton}>
                             <UilImport color={COLOR_PRIMARY} size={22} style={styles.contactsImportButtonIcon} />
-                            <Text style={styles.contactsImportButtonText}>{__('entries.contacts.list.import.button')}</Text>
+                            <Text style={styles.contactsImportButtonText}>
+                              {__('entries.contacts.list.import.button')}
+                            </Text>
                           </TouchableOpacity>
                         </Fragment>
                       )}
@@ -505,7 +507,6 @@ class EntriesTabsView extends React.PureComponent {
                 <View style={styles.entriesEmptyWrapper}>
                   <Text style={styles.entriesEmptyText}>
                     {customLocationsEmptyText ? customLocationsEmptyText : __('entries.locations.list.empty')}
-                    {/* Du hast noch keinen Ort angelegt. Beginne jetzt und erstelle deinen ersten Ort. */}
                   </Text>
                 </View>
               )}
@@ -514,7 +515,12 @@ class EntriesTabsView extends React.PureComponent {
 
           {allowSelection && (
             <TouchableOpacity disabled={buttonAddSelectionDisabled} onPress={() => this.addSelection()}>
-              <View style={{ ...styles.modalButton, ...(buttonAddSelectionDisabled && styles.modalButtonDisabled) }}>
+              <View
+                style={{
+                  ...styles.modalButton,
+                  ...(buttonAddSelectionDisabled && styles.modalButtonDisabled),
+                  ...styles.buttonAddSelection,
+                }}>
                 <Text style={styles.modalButtonText}>{__('entries.selection.add')}</Text>
                 <Text style={styles.modalButtonTextCounter}>{`(${selectionCounter})`}</Text>
               </View>

@@ -10,7 +10,7 @@ const slider = React.createRef();
 // noinspection JSUnresolvedFunction
 const styles = StyleSheet.create({
   animation: {
-    width: '80%',
+    width: 300,
   },
   headline: {
     fontFamily: 'JetBrainsMono-Bold',
