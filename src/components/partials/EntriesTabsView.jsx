@@ -11,6 +11,7 @@ import Modal from 'react-native-modal';
 import ReactReduxContext from 'react-redux/lib/components/Context';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
+import withViewportUnits from '../../utils/withViewportUnits';
 import { addContact, addLocation } from '../screens/Contacts/actions';
 import { importContacts } from '../screens/Contacts/logic';
 import ContactsList from '../widgets/ContactsList';
@@ -25,132 +26,6 @@ const TABS = {
   GROUPS: 1,
   LOCATIONS: 2,
 };
-
-// noinspection JSUnresolvedFunction
-const styles = StyleSheet.create({
-  buttonAddSelection: {
-    marginTop: 10,
-  },
-  buttonCreateNew: {
-    alignItems: 'center',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginBottom: 24,
-    marginTop: 24,
-  },
-  buttonCreateNewIcon: {
-    marginRight: 5,
-  },
-  buttonCreateNewText: {
-    color: COLOR_PRIMARY,
-    fontFamily: 'JetBrainsMono-Regular',
-    fontSize: 17,
-  },
-  contactsImportButton: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
-  contactsImportButtonIcon: {
-    marginRight: 5,
-  },
-  contactsImportButtonText: {
-    color: COLOR_PRIMARY,
-    fontFamily: 'JetBrainsMono-Regular',
-    fontSize: 18,
-  },
-  entriesEmptyWrapper: {
-    flex: 1,
-    padding: 30,
-    paddingTop: 75,
-  },
-  entriesEmptyText: {
-    fontFamily: 'JetBrainsMono-Regular',
-    fontSize: 15,
-    marginBottom: 15,
-    textAlign: 'center',
-  },
-  modal: {
-    justifyContent: 'flex-end',
-    margin: 0,
-  },
-  modalContent: {
-    backgroundColor: '#ffffff',
-    borderTopLeftRadius: 8,
-    borderTopRightRadius: 8,
-    padding: 10,
-  },
-  modalHeader: {
-    alignItems: 'center',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 20,
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingTop: 10,
-  },
-  modalHeaderText: {
-    fontFamily: 'JetBrainsMono-Bold',
-    fontSize: 20,
-    textTransform: 'lowercase',
-  },
-  modalTextInput: {
-    backgroundColor: COLOR_SECONDARY,
-    borderRadius: 8,
-    color: '#000000',
-    fontFamily: 'JetBrainsMono-Regular',
-    fontSize: 16,
-    height: 50,
-    marginBottom: 15,
-    padding: 15,
-  },
-  modalTextInputText: {
-    color: '#000000',
-    fontFamily: 'JetBrainsMono-Regular',
-    fontSize: 16,
-  },
-  modalTimeInput: {
-    backgroundColor: '#b0b0b1',
-    borderRadius: 8,
-  },
-  modalButton: {
-    alignItems: 'center',
-    backgroundColor: COLOR_PRIMARY,
-    borderRadius: 8,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginBottom: 10,
-    padding: 14,
-  },
-  modalButtonDisabled: {
-    opacity: 0.2,
-  },
-  modalButtonText: {
-    color: '#ffffff',
-    fontFamily: 'JetBrainsMono-Bold',
-    fontSize: 26,
-    textTransform: 'lowercase',
-  },
-  modalButtonTextCounter: {
-    alignSelf: 'flex-start',
-    color: '#ffffff',
-    fontFamily: 'JetBrainsMono-Bold',
-    fontSize: 16,
-    marginLeft: 5,
-    textTransform: 'lowercase',
-  },
-  tabContentWrapper: {
-    alignItems: 'center',
-    backgroundColor: '#ffffff',
-    flex: 1,
-    flexDirection: 'column',
-    height: '100%',
-    justifyContent: 'center',
-    width: '100%',
-  },
-});
 
 class EntriesTabsView extends React.PureComponent {
   constructor(props) {
@@ -369,6 +244,7 @@ class EntriesTabsView extends React.PureComponent {
       disableDeleteImportedContacts,
       hideCreateButton,
       locations,
+      vw,
       __,
     } = this.props;
     const {
@@ -407,6 +283,134 @@ class EntriesTabsView extends React.PureComponent {
       ? locations.filter(({ title }) => title.toLowerCase().indexOf(searchValue.trim().toLowerCase()) !== -1)
       : locations;
 
+    // noinspection JSUnresolvedFunction
+    const styles = StyleSheet.create({
+      buttonAddSelection: {
+        marginTop: 10,
+      },
+      buttonCreateNew: {
+        alignItems: 'center',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        marginBottom: 24,
+        marginTop: 24,
+      },
+      buttonCreateNewIcon: {
+        marginRight: vw(1.5),
+      },
+      buttonCreateNewText: {
+        color: COLOR_PRIMARY,
+        fontFamily: 'JetBrainsMono-Regular',
+        fontSize: vw(4.8),
+      },
+      contactsImportButton: {
+        alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'center',
+      },
+      contactsImportButtonIcon: {
+        marginRight: vw(1.5),
+      },
+      contactsImportButtonText: {
+        color: COLOR_PRIMARY,
+        fontFamily: 'JetBrainsMono-Regular',
+        fontSize: vw(4.5),
+      },
+      entriesEmptyWrapper: {
+        flex: 1,
+        padding: vw(10),
+        paddingTop: vw(5),
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+      entriesEmptyText: {
+        fontFamily: 'JetBrainsMono-Regular',
+        fontSize: vw(4.4),
+        marginBottom: vw(4.5),
+        textAlign: 'center',
+      },
+      modal: {
+        justifyContent: 'flex-end',
+        margin: 0,
+      },
+      modalContent: {
+        backgroundColor: '#ffffff',
+        borderTopLeftRadius: vw(2.3),
+        borderTopRightRadius: vw(2.3),
+        padding: vw(3),
+      },
+      modalHeader: {
+        alignItems: 'center',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginBottom: vw(4.5),
+        paddingLeft: vw(3),
+        paddingRight: vw(3),
+        paddingTop: vw(2),
+      },
+      modalHeaderText: {
+        fontFamily: 'JetBrainsMono-Bold',
+        fontSize: vw(5),
+        textTransform: 'lowercase',
+      },
+      modalTextInput: {
+        backgroundColor: COLOR_SECONDARY,
+        borderRadius: vw(2.3),
+        color: '#000000',
+        fontFamily: 'JetBrainsMono-Regular',
+        fontSize: vw(4),
+        height: vw(15),
+        marginBottom: vw(4),
+        padding: vw(4),
+      },
+      modalTextInputText: {
+        color: '#000000',
+        fontFamily: 'JetBrainsMono-Regular',
+        fontSize: vw(4),
+      },
+      modalTimeInput: {
+        backgroundColor: '#b0b0b1',
+        borderRadius: vw(2.3),
+      },
+      modalButton: {
+        alignItems: 'center',
+        backgroundColor: COLOR_PRIMARY,
+        borderRadius: vw(2.3),
+        flexDirection: 'row',
+        justifyContent: 'center',
+        marginBottom: vw(5),
+        padding: vw(3.5),
+      },
+      modalButtonDisabled: {
+        opacity: 0.2,
+      },
+      modalButtonText: {
+        color: '#ffffff',
+        fontFamily: 'JetBrainsMono-Bold',
+        fontSize: vw(6),
+        textTransform: 'lowercase',
+      },
+      modalButtonTextCounter: {
+        alignSelf: 'flex-start',
+        color: '#ffffff',
+        fontFamily: 'JetBrainsMono-Bold',
+        fontSize: vw(4),
+        marginLeft: vw(1.5),
+        textTransform: 'lowercase',
+      },
+      tabContentWrapper: {
+        alignItems: 'center',
+        backgroundColor: '#ffffff',
+        flex: 1,
+        flexDirection: 'column',
+        height: '100%',
+        justifyContent: 'center',
+        width: '100%',
+      },
+    });
+
     return (
       <Fragment>
         <SearchBar
@@ -442,7 +446,7 @@ class EntriesTabsView extends React.PureComponent {
             <Fragment>
               {!hideCreateButton && (
                 <TouchableOpacity onPress={() => this.openModalNewContact()} style={styles.buttonCreateNew}>
-                  <UilPlus color={COLOR_PRIMARY} size={20} style={styles.buttonCreateNewIcon} />
+                  <UilPlus color={COLOR_PRIMARY} size={vw(5.5)} style={styles.buttonCreateNewIcon} />
                   <Text style={styles.buttonCreateNewText}>{__('entries.contacts.list.new')}</Text>
                 </TouchableOpacity>
               )}
@@ -469,7 +473,7 @@ class EntriesTabsView extends React.PureComponent {
                         <Fragment>
                           <Text style={styles.entriesEmptyText}>{__('entries.contacts.list.empty')}</Text>
                           <TouchableOpacity onPress={() => this.importContacts()} style={styles.contactsImportButton}>
-                            <UilImport color={COLOR_PRIMARY} size={22} style={styles.contactsImportButtonIcon} />
+                            <UilImport color={COLOR_PRIMARY} size={vw(5.5)} style={styles.contactsImportButtonIcon} />
                             <Text style={styles.contactsImportButtonText}>
                               {__('entries.contacts.list.import.button')}
                             </Text>
@@ -489,7 +493,7 @@ class EntriesTabsView extends React.PureComponent {
             <Fragment>
               {!hideCreateButton && (
                 <TouchableOpacity onPress={() => this.openModalNewLocation()} style={styles.buttonCreateNew}>
-                  <UilPlus color={COLOR_PRIMARY} size={20} style={styles.buttonCreateNewIcon} />
+                  <UilPlus color={COLOR_PRIMARY} size={vw(5.5)} style={styles.buttonCreateNewIcon} />
                   <Text style={styles.buttonCreateNewText}>{__('entries.locations.list.new')}</Text>
                 </TouchableOpacity>
               )}
@@ -533,7 +537,7 @@ class EntriesTabsView extends React.PureComponent {
             <View style={styles.modalHeader}>
               <Text style={styles.modalHeaderText}>{__('entries.modals.new-contact.headline')}</Text>
               <TouchableOpacity onPress={() => this.closeModalNewContact()}>
-                <UilTimes size={34} color={COLOR_PRIMARY} />
+                <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
               </TouchableOpacity>
             </View>
 
@@ -573,7 +577,7 @@ class EntriesTabsView extends React.PureComponent {
             <View style={styles.modalHeader}>
               <Text style={styles.modalHeaderText}>{__('entries.modals.new-location.headline')}</Text>
               <TouchableOpacity onPress={() => this.closeModalNewLocation()}>
-                <UilTimes size={34} color={COLOR_PRIMARY} />
+                <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
               </TouchableOpacity>
             </View>
 
@@ -612,7 +616,7 @@ class EntriesTabsView extends React.PureComponent {
             <View style={styles.modalHeader}>
               <Text style={styles.modalHeaderText}>{__('entries.modals.select-location.headline')}</Text>
               <TouchableOpacity onPress={() => this.closeModalSelectLocation()}>
-                <UilTimes size={34} color={COLOR_PRIMARY} />
+                <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
               </TouchableOpacity>
             </View>
 
@@ -670,4 +674,4 @@ class EntriesTabsView extends React.PureComponent {
 
 EntriesTabsView.contextType = ReactReduxContext;
 
-export default withI18n(EntriesTabsView);
+export default withI18n(withViewportUnits(EntriesTabsView));

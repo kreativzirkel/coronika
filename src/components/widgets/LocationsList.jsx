@@ -1,67 +1,76 @@
+import UilMinus from '@iconscout/react-native-unicons/icons/uil-minus';
+import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
 import moment from 'moment';
 import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import withViewportUnits from '../../utils/withViewportUnits';
 import ListItem from './ListItem';
-import UilMinus from '@iconscout/react-native-unicons/icons/uil-minus';
-import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
 
-// noinspection JSUnresolvedFunction
-const styles = StyleSheet.create({
-  location: {
-    backgroundColor: COLOR_SECONDARY,
-    borderRadius: 8,
-    flexDirection: 'column',
-    marginLeft: 8,
-    marginRight: 8,
-    marginTop: 8,
-    padding: 12,
-    paddingBottom: 15,
-    paddingTop: 15,
-  },
-  locationText: {
-    fontFamily: 'JetBrainsMono-Regular',
-    fontSize: 15,
-  },
-  locationHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  locationContent: {
-    flexDirection: 'column',
-  },
-  locationContentText: {
-    color: '#000000',
-    fontFamily: 'JetBrainsMono-Regular',
-    fontSize: 15,
-    marginTop: 4,
-  },
-  locationContentDescription: {
-    color: '#b0b0b1',
-    fontSize: 14,
-  },
-  locationContentTime: {},
-  locationsList: {
-    flex: 1,
-    paddingBottom: 8,
-    width: '100%',
-  },
-  selectButton: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    marginBottom: -5,
-    marginTop: -5,
-  },
-  selectButtonInner: {
-    borderRadius: 50,
-  },
-  selectButtonInnerSelected: {
-    backgroundColor: COLOR_PRIMARY,
-  },
-});
+const LocationsList = ({
+  allowDelete,
+  allowSelection,
+  deleteItem,
+  locations,
+  selectedLocations,
+  toggleSelection,
+  vw,
+}) => {
+  // noinspection JSUnresolvedFunction
+  const styles = StyleSheet.create({
+    location: {
+      backgroundColor: COLOR_SECONDARY,
+      borderRadius: vw(2.3),
+      flexDirection: 'column',
+      marginLeft: vw(2.5),
+      marginRight: vw(2.5),
+      marginTop: vw(2.3),
+      padding: vw(3),
+      paddingBottom: vw(3.8),
+      paddingTop: vw(3.8),
+    },
+    locationText: {
+      fontFamily: 'JetBrainsMono-Regular',
+      fontSize: vw(4.2),
+    },
+    locationHeader: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
+    locationContent: {
+      flexDirection: 'column',
+    },
+    locationContentText: {
+      color: '#000000',
+      fontFamily: 'JetBrainsMono-Regular',
+      fontSize: vw(3.8),
+      marginTop: vw(1),
+    },
+    locationContentDescription: {
+      color: '#b0b0b1',
+      fontSize: vw(3.5),
+    },
+    locationContentTime: {},
+    locationsList: {
+      flex: 1,
+      paddingBottom: vw(2.3),
+      width: '100%',
+    },
+    selectButton: {
+      alignItems: 'center',
+      flexDirection: 'row',
+      marginBottom: -vw(1.25),
+      marginTop: -vw(1.25),
+    },
+    selectButtonInner: {
+      borderRadius: 50,
+    },
+    selectButtonInnerSelected: {
+      backgroundColor: COLOR_PRIMARY,
+    },
+  });
 
-const LocationsList = ({ allowDelete, allowSelection, deleteItem, locations, selectedLocations, toggleSelection }) =>
-  locations ? (
+  return locations ? (
     <FlatList
       data={locations}
       keyExtractor={({ description, id, timestamp }) => `location-${id}-${description}-${timestamp}`}
@@ -92,9 +101,9 @@ const LocationsList = ({ allowDelete, allowSelection, deleteItem, locations, sel
                         ...(isLocationSelected && styles.selectButtonInnerSelected),
                       }}>
                       {isLocationSelected ? (
-                        <UilMinus size={25} color={'#ffffff'} />
+                        <UilMinus size={vw(7)} color={'#ffffff'} />
                       ) : (
-                        <UilPlus size={25} color={COLOR_PRIMARY} />
+                        <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
                       )}
                     </View>
                   </TouchableOpacity>
@@ -135,5 +144,6 @@ const LocationsList = ({ allowDelete, allowSelection, deleteItem, locations, sel
       style={styles.locationsList}
     />
   ) : null;
+};
 
-export default LocationsList;
+export default withViewportUnits(LocationsList);

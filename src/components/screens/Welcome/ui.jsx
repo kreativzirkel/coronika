@@ -7,52 +7,7 @@ import Layout from '../../widgets/Layout';
 
 const slider = React.createRef();
 
-// noinspection JSUnresolvedFunction
-const styles = StyleSheet.create({
-  animation: {
-    width: 300,
-  },
-  headline: {
-    fontFamily: 'JetBrainsMono-Bold',
-    fontSize: 32,
-    textAlign: 'center',
-  },
-  text: {
-    fontFamily: 'JetBrainsMono-Regular',
-    fontSize: 16,
-    textAlign: 'center',
-  },
-  button: {
-    color: COLOR_PRIMARY,
-    fontFamily: 'JetBrainsMono-Bold',
-    fontSize: 32,
-    textAlign: 'center',
-  },
-  sliderPaginationDot: {
-    backgroundColor: '#000000',
-    borderRadius: 0,
-    height: 5,
-    width: 50,
-  },
-  sliderPaginationDotActive: {
-    backgroundColor: COLOR_PRIMARY,
-  },
-  view: {
-    alignItems: 'center',
-    flex: 1,
-    flexDirection: 'column',
-    height: '100%',
-    justifyContent: 'center',
-    width: '100%',
-  },
-  viewSlide: {
-    justifyContent: 'space-between',
-    padding: 30,
-    paddingBottom: 80,
-  },
-});
-
-const Welcome = ({ navigation, __ }) => {
+const Welcome = ({ navigation, vw, __ }) => {
   const slides = [
     {
       animation: require('../../../assets/animations/why.json'),
@@ -77,6 +32,55 @@ const Welcome = ({ navigation, __ }) => {
     },
   ];
 
+  // noinspection JSUnresolvedFunction
+  const styles = StyleSheet.create({
+    animation: {
+      width: vw(55),
+    },
+    headline: {
+      fontFamily: 'JetBrainsMono-Bold',
+      fontSize: vw(7),
+      textAlign: 'center',
+    },
+    text: {
+      fontFamily: 'JetBrainsMono-Regular',
+      fontSize: vw(4.5),
+      textAlign: 'center',
+    },
+    button: {
+      color: COLOR_PRIMARY,
+      fontFamily: 'JetBrainsMono-Bold',
+      fontSize: vw(7),
+      textAlign: 'center',
+    },
+    sliderPagination: {
+      bottom: vw(2),
+    },
+    sliderPaginationDot: {
+      backgroundColor: '#000000',
+      borderRadius: 0,
+      height: 5,
+      width: vw(15),
+    },
+    sliderPaginationDotActive: {
+      backgroundColor: COLOR_PRIMARY,
+    },
+    view: {
+      alignItems: 'center',
+      flex: 1,
+      flexDirection: 'column',
+      height: '100%',
+      justifyContent: 'center',
+      width: '100%',
+    },
+    viewSlide: {
+      justifyContent: 'space-between',
+      padding: vw(10),
+      paddingBottom: vw(20),
+      paddingTop: vw(5),
+    },
+  });
+
   const next = (index) => {
     const nextSlide = index + 1;
     const isFinished = nextSlide === slides.length;
@@ -94,6 +98,7 @@ const Welcome = ({ navigation, __ }) => {
         <AppIntroSlider
           activeDotStyle={{ ...styles.sliderPaginationDot, ...styles.sliderPaginationDotActive }}
           dotStyle={styles.sliderPaginationDot}
+          paginationStyle={styles.sliderPagination}
           ref={slider}
           renderItem={({ item: { animation, headline, text, buttonText, key }, index }) => {
             return (

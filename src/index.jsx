@@ -1,11 +1,13 @@
-import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react';
+import { SafeAreaView, View } from 'react-native';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import App from './components/App/logic';
 import screens from './components/screens';
+import { COLOR_SECONDARY } from './constants';
 import configureStore from './createStore';
 
 const Stack = createStackNavigator();
@@ -18,11 +20,30 @@ const AppNavigator = () => (
   </Stack.Navigator>
 );
 
+const AppNavigatorWrapper = () => (
+  <SafeAreaView style={{ backgroundColor: COLOR_SECONDARY, flex: 1 }}>
+    <View
+      style={{
+        width: '100%',
+        height: '50%',
+        backgroundColor: '#ffffff',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        position: 'absolute',
+        zIndex: -1,
+      }}
+    />
+
+    <AppNavigator />
+  </SafeAreaView>
+);
+
 const Tab = createBottomTabNavigator();
 
 const InitialNavigator = () => (
   <Tab.Navigator backBehaviour={'none'} initialRouteName={'Splash'} tabBar={() => null}>
-    <Tab.Screen component={AppNavigator} name={'App'} options={{ gestureEnabled: false }} />
+    <Tab.Screen component={AppNavigatorWrapper} name={'App'} options={{ gestureEnabled: false }} />
     <Tab.Screen component={screens.Splash} name={'Splash'} />
     <Tab.Screen component={screens.Welcome} name={'Welcome'} />
   </Tab.Navigator>

@@ -3,105 +3,105 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
-#: src/components/App/ui.jsx:80
+#: src/components/App/ui.jsx:73
 msgid "navigation.contacts.label"
 msgstr ""
 
-#: src/components/App/ui.jsx:83
+#: src/components/App/ui.jsx:76
 msgid "navigation.dashboard.label"
 msgstr ""
 
-#: src/components/App/ui.jsx:86
+#: src/components/App/ui.jsx:79
 msgid "navigation.share.label"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:425
-#: src/components/widgets/DayOverview.jsx:90
+#: src/components/partials/EntriesTabsView.jsx:429
+#: src/components/widgets/DayOverview.jsx:91
 msgid "contacts"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:435
-#: src/components/widgets/DayOverview.jsx:78
+#: src/components/partials/EntriesTabsView.jsx:439
+#: src/components/widgets/DayOverview.jsx:79
 msgid "locations"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:446
+#: src/components/partials/EntriesTabsView.jsx:450
 msgid "entries.contacts.list.new"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:463
+#: src/components/partials/EntriesTabsView.jsx:467
 msgid "entries.search.list.empty"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:470
+#: src/components/partials/EntriesTabsView.jsx:474
 msgid "entries.contacts.list.empty"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:474
+#: src/components/partials/EntriesTabsView.jsx:478
 msgid "entries.contacts.list.import.button"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:493
+#: src/components/partials/EntriesTabsView.jsx:497
 msgid "entries.locations.list.new"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:509
+#: src/components/partials/EntriesTabsView.jsx:513
 msgid "entries.locations.list.empty"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:524
+#: src/components/partials/EntriesTabsView.jsx:528
 msgid "entries.selection.add"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:534
+#: src/components/partials/EntriesTabsView.jsx:538
 msgid "entries.modals.new-contact.headline"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:544
+#: src/components/partials/EntriesTabsView.jsx:548
 msgid "entries.modals.new-contact.placeholder.name"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:556
+#: src/components/partials/EntriesTabsView.jsx:560
 msgid "entries.modals.new-contact.placeholder.phone-number"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:565
+#: src/components/partials/EntriesTabsView.jsx:569
 msgid "entries.modals.new-contact.button"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:574
+#: src/components/partials/EntriesTabsView.jsx:578
 msgid "entries.modals.new-location.headline"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:584
+#: src/components/partials/EntriesTabsView.jsx:588
 msgid "entries.modals.new-location.placeholder.title"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:595
+#: src/components/partials/EntriesTabsView.jsx:599
 msgid "entries.modals.new-location.placeholder.description"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:604
+#: src/components/partials/EntriesTabsView.jsx:608
 msgid "entries.modals.new-location.button"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:613
+#: src/components/partials/EntriesTabsView.jsx:617
 msgid "entries.modals.select-location.headline"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:632
+#: src/components/partials/EntriesTabsView.jsx:636
 msgid "entries.modals.select-location.placeholder.description"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:647
+#: src/components/partials/EntriesTabsView.jsx:651
 msgid "Cancel"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:648
+#: src/components/partials/EntriesTabsView.jsx:652
 msgid "Confirm"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:661
+#: src/components/partials/EntriesTabsView.jsx:665
 msgid "entries.modals.select-location.button"
 msgstr ""
 
@@ -129,50 +129,50 @@ msgstr ""
 msgid "day-screen.entries.add"
 msgstr ""
 
-#: src/components/screens/Welcome/ui.jsx:59
+#: src/components/screens/Welcome/ui.jsx:14
 msgid "welcome-screen.slides.intro.headline"
 msgstr ""
 
-#: src/components/screens/Welcome/ui.jsx:60
+#: src/components/screens/Welcome/ui.jsx:15
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
 
-#: src/components/screens/Welcome/ui.jsx:61
+#: src/components/screens/Welcome/ui.jsx:16
 msgid "welcome-screen.slides.intro.button"
 msgstr ""
 
-#: src/components/screens/Welcome/ui.jsx:66
+#: src/components/screens/Welcome/ui.jsx:21
 msgid "welcome-screen.slides.how-to.headline"
 msgstr ""
 
-#: src/components/screens/Welcome/ui.jsx:67
+#: src/components/screens/Welcome/ui.jsx:22
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
 
-#: src/components/screens/Welcome/ui.jsx:68
+#: src/components/screens/Welcome/ui.jsx:23
 msgid "welcome-screen.slides.how-to.button"
 msgstr ""
 
-#: src/components/screens/Welcome/ui.jsx:73
+#: src/components/screens/Welcome/ui.jsx:28
 msgid "welcome-screen.slides.local-data.headline"
 msgstr ""
 
-#: src/components/screens/Welcome/ui.jsx:74
+#: src/components/screens/Welcome/ui.jsx:29
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 
-#: src/components/screens/Welcome/ui.jsx:75
+#: src/components/screens/Welcome/ui.jsx:30
 msgid "welcome-screen.slides.local-data.button"
 msgstr ""
 
-#: src/components/widgets/DayOverview.jsx:71
+#: src/components/widgets/DayOverview.jsx:72
 msgid "today"
 msgstr ""
 
-#: src/components/widgets/DayOverview.jsx:74
+#: src/components/widgets/DayOverview.jsx:75
 msgid "total"
 msgstr ""
 
-#: src/components/widgets/SearchBar.jsx:54
+#: src/components/widgets/SearchBar.jsx:56
 msgid "placeholder.search-input"
 msgstr ""

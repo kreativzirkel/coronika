@@ -1,6 +1,7 @@
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
+import withViewportUnits from '../../../utils/withViewportUnits';
 import { addContactToDay, addLocationToDay } from '../../screens/Dashboard/actions';
 import Screen from './ui';
 
@@ -80,6 +81,6 @@ const Container = container(Screen, {
   componentDidMount() {},
 });
 
-const AddEntry = withI18n(connect(mapStateToProps, mapDispatchToProps)(Container));
+const AddEntry = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Container)));
 
 export default AddEntry;

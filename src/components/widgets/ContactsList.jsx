@@ -4,51 +4,8 @@ import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
 import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import withViewportUnits from '../../utils/withViewportUnits';
 import ListItem from './ListItem';
-
-// noinspection JSUnresolvedFunction
-const styles = StyleSheet.create({
-  contact: {
-    backgroundColor: COLOR_SECONDARY,
-    borderRadius: 8,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginLeft: 8,
-    marginRight: 8,
-    marginTop: 8,
-    padding: 12,
-    paddingBottom: 15,
-    paddingTop: 15,
-  },
-  contactText: {
-    fontFamily: 'JetBrainsMono-Regular',
-    fontSize: 15,
-  },
-  contactTextIconImported: {
-    marginLeft: 5,
-  },
-  contactTextWrapper: {
-    alignItems: 'center',
-    flexDirection: 'row',
-  },
-  contactsList: {
-    flex: 1,
-    paddingBottom: 8,
-    width: '100%',
-  },
-  selectButton: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    marginBottom: -5,
-    marginTop: -5,
-  },
-  selectButtonInner: {
-    borderRadius: 50,
-  },
-  selectButtonInnerSelected: {
-    backgroundColor: COLOR_PRIMARY,
-  },
-});
 
 const ContactsList = ({
   allowDelete,
@@ -58,8 +15,53 @@ const ContactsList = ({
   disableDeleteImportedContacts,
   selectedContacts,
   toggleSelection,
-}) =>
-  contacts ? (
+  vw,
+}) => {
+  // noinspection JSUnresolvedFunction
+  const styles = StyleSheet.create({
+    contact: {
+      backgroundColor: COLOR_SECONDARY,
+      borderRadius: vw(2.3),
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginLeft: vw(2.5),
+      marginRight: vw(2.5),
+      marginTop: vw(2.3),
+      padding: vw(3),
+      paddingBottom: vw(3.8),
+      paddingTop: vw(3.8),
+    },
+    contactText: {
+      fontFamily: 'JetBrainsMono-Regular',
+      fontSize: vw(4.2),
+    },
+    contactTextIconImported: {
+      marginLeft: vw(1.5),
+    },
+    contactTextWrapper: {
+      alignItems: 'center',
+      flexDirection: 'row',
+    },
+    contactsList: {
+      flex: 1,
+      paddingBottom: vw(2.3),
+      width: '100%',
+    },
+    selectButton: {
+      alignItems: 'center',
+      flexDirection: 'row',
+      marginBottom: -vw(1.25),
+      marginTop: -vw(1.25),
+    },
+    selectButtonInner: {
+      borderRadius: 50,
+    },
+    selectButtonInnerSelected: {
+      backgroundColor: COLOR_PRIMARY,
+    },
+  });
+
+  return contacts ? (
     <FlatList
       data={contacts}
       keyExtractor={({ id }) => id}
@@ -75,7 +77,7 @@ const ContactsList = ({
 
                 {recordID !== undefined && (
                   <View style={styles.contactTextIconImported}>
-                    <UilMobileAndroid color={'#b0b0b0'} size={18} />
+                    <UilMobileAndroid color={'#b0b0b0'} size={vw(5)} />
                   </View>
                 )}
               </View>
@@ -85,9 +87,9 @@ const ContactsList = ({
                   <View
                     style={{ ...styles.selectButtonInner, ...(isContactSelected && styles.selectButtonInnerSelected) }}>
                     {isContactSelected ? (
-                      <UilMinus size={25} color={'#ffffff'} />
+                      <UilMinus size={vw(7)} color={'#ffffff'} />
                     ) : (
-                      <UilPlus size={25} color={COLOR_PRIMARY} />
+                      <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
                     )}
                   </View>
                 </TouchableOpacity>
@@ -99,5 +101,6 @@ const ContactsList = ({
       style={styles.contactsList}
     />
   ) : null;
+};
 
-export default ContactsList;
+export default withViewportUnits(ContactsList);

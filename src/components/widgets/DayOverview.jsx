@@ -3,64 +3,65 @@ import { StyleSheet, Text, View } from 'react-native';
 import moment from 'moment';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
+import withViewportUnits from '../../utils/withViewportUnits';
 
-// noinspection JSUnresolvedFunction
-const styles = StyleSheet.create({
-  day: {
-    backgroundColor: COLOR_SECONDARY,
-    borderRadius: 8,
-    display: 'flex',
-    flexDirection: 'row',
-    marginBottom: 8,
-    marginLeft: 8,
-    marginRight: 8,
-    padding: 12,
-    paddingBottom: 15,
-    paddingTop: 15,
-  },
-  dayDark: {
-    backgroundColor: '#000000',
-  },
-  dayValue: {
-    fontFamily: 'JetBrainsMono-Bold',
-    fontSize: 30,
-    textTransform: 'lowercase',
-  },
-  dayValueNumber: {
-    color: COLOR_PRIMARY,
-    textAlign: 'right',
-  },
-  dayValueNumberEmpty: {
-    color: '#d6d6d6',
-  },
-  dayValueNumberDark: {
-    color: '#ffffff',
-  },
-  dayValueCaption: {
-    color: '#707070',
-    fontFamily: 'JetBrainsMono-Regular',
-    fontSize: 13,
-    marginBottom: 3,
-    textTransform: 'lowercase',
-  },
-  dayValueCaptionDark: {
-    color: '#ffffff',
-  },
-  dayDateWrapper: {
-    flex: 1,
-  },
-  dayContactsWrapper: {
-    flexGrow: 0,
-    flexShrink: 0,
-  },
-  dayLocationsWrapper: {
-    flexGrow: 0,
-    flexShrink: 0,
-    marginRight: 15,
-  },
-});
+const DayOverview = ({ contacts, isDark, isTotal, locations, timestamp, today, vw, __ }) => {
+  // noinspection JSUnresolvedFunction
+  const styles = StyleSheet.create({
+    day: {
+      backgroundColor: COLOR_SECONDARY,
+      borderRadius: vw(2.3),
+      display: 'flex',
+      flexDirection: 'row',
+      marginBottom: vw(2),
+      marginLeft: vw(2.5),
+      marginRight: vw(2.5),
+      padding: vw(3),
+      paddingBottom: vw(2.5),
+      paddingTop: vw(2.5),
+    },
+    dayDark: {
+      backgroundColor: '#000000',
+    },
+    dayValue: {
+      fontFamily: 'JetBrainsMono-Bold',
+      fontSize: vw(8),
+      textTransform: 'lowercase',
+    },
+    dayValueNumber: {
+      color: COLOR_PRIMARY,
+      textAlign: 'right',
+    },
+    dayValueNumberEmpty: {
+      color: '#d6d6d6',
+    },
+    dayValueNumberDark: {
+      color: '#ffffff',
+    },
+    dayValueCaption: {
+      color: '#707070',
+      fontFamily: 'JetBrainsMono-Regular',
+      fontSize: vw(3.5),
+      marginBottom: vw(.5),
+      textTransform: 'lowercase',
+    },
+    dayValueCaptionDark: {
+      color: '#ffffff',
+    },
+    dayDateWrapper: {
+      flex: 1,
+    },
+    dayContactsWrapper: {
+      flexGrow: 0,
+      flexShrink: 0,
+    },
+    dayLocationsWrapper: {
+      flexGrow: 0,
+      flexShrink: 0,
+      marginRight: vw(5),
+    },
+  });
 
-const DayOverview = ({ contacts, isDark, isTotal, locations, timestamp, today, __ }) => {
   const currentDay = moment(timestamp);
   const isToday = currentDay.diff(today) === 0;
 
@@ -102,4 +103,4 @@ const DayOverview = ({ contacts, isDark, isTotal, locations, timestamp, today, _
   );
 };
 
-export default withI18n(DayOverview);
+export default withI18n(withViewportUnits(DayOverview));

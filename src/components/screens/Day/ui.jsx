@@ -10,43 +10,43 @@ import EntriesTabsView from '../../partials/EntriesTabsView';
 import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
 import { COLOR_PRIMARY } from '../../../constants';
 
-// noinspection JSUnresolvedFunction
-const styles = StyleSheet.create({
-  buttonAdd: {
-    alignItems: 'center',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginBottom: 24,
-    marginTop: 24,
-  },
-  buttonAddIcon: {
-    marginRight: 5,
-  },
-  buttonAddText: {
-    color: COLOR_PRIMARY,
-    fontFamily: 'JetBrainsMono-Regular',
-    fontSize: 24,
-  },
-  header: {
-    alignItems: 'center',
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
-  headerHeadline: {
-    fontFamily: 'JetBrainsMono-Bold',
-    fontSize: 18,
-    textTransform: 'lowercase',
-  },
-  wrapperAddEntry: {
-    alignItems: 'center',
-    backgroundColor: '#ffffff',
-    justifyContent: 'center',
-  },
-});
+const Day = ({ contacts, locations, timestamp, deleteContactFromDay, deleteLocationFromDay, navigation, vw, __ }) => {
+  // noinspection JSUnresolvedFunction
+  const styles = StyleSheet.create({
+    buttonAdd: {
+      alignItems: 'center',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      marginBottom: vw(7),
+      marginTop: vw(7),
+    },
+    buttonAddIcon: {
+      marginRight: vw(1.5),
+    },
+    buttonAddText: {
+      color: COLOR_PRIMARY,
+      fontFamily: 'JetBrainsMono-Regular',
+      fontSize: vw(5.5),
+    },
+    header: {
+      alignItems: 'center',
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
+    headerHeadline: {
+      fontFamily: 'JetBrainsMono-Bold',
+      fontSize: vw(5),
+      textTransform: 'lowercase',
+    },
+    wrapperAddEntry: {
+      alignItems: 'center',
+      backgroundColor: '#ffffff',
+      justifyContent: 'center',
+    },
+  });
 
-const Day = ({ contacts, locations, timestamp, deleteContactFromDay, deleteLocationFromDay, navigation, __ }) => {
   const today = moment()
     .hours(0)
     .minutes(0)
@@ -61,8 +61,8 @@ const Day = ({ contacts, locations, timestamp, deleteContactFromDay, deleteLocat
     <Layout>
       <Header>
         <View style={styles.header}>
-          <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -10, marginTop: -10 }}>
-            <UilArrowLeft size={40} color={'#000000'} />
+          <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
+            <UilArrowLeft size={vw(12)} color={'#000000'} />
           </TouchableOpacity>
 
           <Text style={styles.headerHeadline}>{__('day-screen.header.headline')}</Text>
@@ -83,7 +83,7 @@ const Day = ({ contacts, locations, timestamp, deleteContactFromDay, deleteLocat
 
       <View style={styles.wrapperAddEntry}>
         <TouchableOpacity onPress={() => goToAddEntry()} style={styles.buttonAdd}>
-          <UilPlus color={COLOR_PRIMARY} size={30} style={styles.buttonAddIcon} />
+          <UilPlus color={COLOR_PRIMARY} size={vw(6)} style={styles.buttonAddIcon} />
           <Text style={styles.buttonAddText}>{__('day-screen.entries.add')}</Text>
         </TouchableOpacity>
       </View>

@@ -1,19 +1,22 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import withViewportUnits from '../../utils/withViewportUnits';
 
-// noinspection JSUnresolvedFunction
-const styles = StyleSheet.create({
-  tabBar: {
-    display: 'flex',
-    flexDirection: 'row',
-    height: 60,
-    paddingLeft: 6,
-    paddingRight: 6,
-    paddingTop: 10,
-    width: '100%',
-  },
+const TabBar = withViewportUnits(({ children, vw }) => {
+  // noinspection JSUnresolvedFunction
+  const styles = StyleSheet.create({
+    tabBar: {
+      display: 'flex',
+      flexDirection: 'row',
+      height: vw(14),
+      paddingLeft: vw(1.8),
+      paddingRight: vw(1.8),
+      paddingTop: vw(2.5),
+      width: '100%',
+    },
+  });
+
+  return <View style={styles.tabBar}>{children}</View>;
 });
-
-const TabBar = ({ children }) => <View style={styles.tabBar}>{children}</View>;
 
 export default TabBar;

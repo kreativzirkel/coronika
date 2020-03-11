@@ -6,48 +6,8 @@ import { Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
+import withViewportUnits from '../../utils/withViewportUnits';
 import screens from '../screens';
-
-// noinspection JSUnresolvedFunction
-const styles = StyleSheet.create({
-  navigationBar: {
-    alignItems: 'center',
-    backgroundColor: '#ffffff',
-    display: 'flex',
-    flexDirection: 'row',
-    height: 90,
-    justifyContent: 'space-evenly',
-  },
-  navigationItem: {
-    alignItems: 'center',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  navigationItemIcon: {
-    color: '#000000',
-  },
-  navigationItemIconFocused: {
-    color: '#ffffff',
-  },
-  navigationItemIconWrapper: {
-    alignItems: 'center',
-    backgroundColor: COLOR_SECONDARY,
-    borderRadius: 10,
-    height: 55,
-    justifyContent: 'center',
-    marginBottom: 5,
-    width: 55,
-  },
-  navigationItemIconWrapperFocused: {
-    backgroundColor: COLOR_PRIMARY,
-  },
-  navigationItemText: {
-    fontFamily: 'JetBrainsMono-Regular',
-    fontSize: 11,
-    textAlign: 'center',
-    textTransform: 'lowercase',
-  },
-});
 
 const onShare = async () => {
   try {
@@ -72,7 +32,40 @@ const onShare = async () => {
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigationItem = withI18n(({ isFocused, key, onPress, routeName, __ }) => {
+const TabNavigationItem = withI18n(withViewportUnits(({ isFocused, key, onPress, routeName, vw, __ }) => {
+  // noinspection JSUnresolvedFunction
+  const styles = StyleSheet.create({
+    navigationItem: {
+      alignItems: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+    },
+    navigationItemIcon: {
+      color: '#000000',
+    },
+    navigationItemIconFocused: {
+      color: '#ffffff',
+    },
+    navigationItemIconWrapper: {
+      alignItems: 'center',
+      backgroundColor: COLOR_SECONDARY,
+      borderRadius: vw(2.3),
+      height: vw(13),
+      justifyContent: 'center',
+      marginBottom: vw(1.5),
+      width: vw(13),
+    },
+    navigationItemIconWrapperFocused: {
+      backgroundColor: COLOR_PRIMARY,
+    },
+    navigationItemText: {
+      fontFamily: 'JetBrainsMono-Regular',
+      fontSize: vw(2.8),
+      textAlign: 'center',
+      textTransform: 'lowercase',
+    },
+  });
+
   let label;
 
   switch (routeName) {
@@ -107,58 +100,74 @@ const TabNavigationItem = withI18n(({ isFocused, key, onPress, routeName, __ }) 
   return (
     <TouchableOpacity key={key} onPress={onPress} style={styles.navigationItem}>
       <View style={{ ...styles.navigationItemIconWrapper, ...(isFocused && styles.navigationItemIconWrapperFocused) }}>
-        <NavigationIcon size={30} color={isFocused ? '#ffffff' : '#000000'} />
+        <NavigationIcon size={vw(8)} color={isFocused ? '#ffffff' : '#000000'} />
       </View>
       <Text numberOfLines={1} style={styles.navigationItemText}>
         {label}
       </Text>
     </TouchableOpacity>
   );
-});
+}));
 
-const AppNavigatorTabBar = ({ state, descriptors, navigation }) => (
-  <View style={styles.navigationBar}>
-    {state.routes.map((route, index) => {
-      const isFocused = state.index === index;
-      const { name: routeName } = route;
+const AppNavigatorTabBar = withViewportUnits(({ state, descriptors, navigation, vw }) => {
+  // noinspection JSUnresolvedFunction
+  const styles = StyleSheet.create({
+    navigationBar: {
+      alignItems: 'center',
+      backgroundColor: '#ffffff',
+      display: 'flex',
+      flexDirection: 'row',
+      height: vw(22),
+      justifyContent: 'space-evenly',
+    },
+  });
 
-      const onPress = () => {
-        if (routeName === 'Share') {
-          // noinspection JSIgnoredPromiseFromCall
-          onShare();
-        } else if (routeName === 'Dashboard' && isFocused) {
-          const subNavigationRouteName = route.state
-            ? route.state.routes[route.state.index].name
-            : route.params?.screen || 'Dashboard';
+  return (
+    <View style={styles.navigationBar}>
+      {state.routes.map((route, index) => {
+        const isFocused = state.index === index;
+        const { name: routeName } = route;
 
-          if (subNavigationRouteName !== 'Dashboard') {
-            //console.log(descriptors);
-            const { navigation: t } = descriptors[route.key];
-            // TODO: reset to dashboard screen if other screen is visible
+        const onPress = () => {
+          if (routeName === 'Share') {
+            // noinspection JSIgnoredPromiseFromCall
+            onShare();
+          } else if (routeName === 'Dashboard' && isFocused) {
+            const subNavigationRouteName = route.state
+              ? route.state.routes[route.state.index].name
+              : route.params?.screen || 'Dashboard';
+
+            if (subNavigationRouteName !== 'Dashboard') {
+              //console.log(descriptors);
+              const { navigation: t } = descriptors[route.key];
+              // TODO: reset to dashboard screen if other screen is visible
+              navigation.navigate(routeName);
+            }
+          } else if (!isFocused) {
             navigation.navigate(routeName);
           }
-        } else if (!isFocused) {
-          navigation.navigate(routeName);
-        }
-      };
+        };
 
-      return (
-        <TabNavigationItem
-          isFocused={isFocused}
-          key={`main-navigation-item-${index}`}
-          onPress={onPress}
-          routeName={routeName}
-        />
-      );
-    })}
-  </View>
-);
+        return (
+          <TabNavigationItem
+            isFocused={isFocused}
+            key={`main-navigation-item-${index}`}
+            onPress={onPress}
+            routeName={routeName}
+          />
+        );
+      })}
+    </View>
+  )
+});
 
+/*
 const isTabBarVisibleOnDashboard = (route) => {
   const routeName = route.state ? route.state.routes[route.state.index].name : route.params?.screen || 'Dashboard';
 
   return true; // routeName === 'Dashboard';
 };
+ */
 
 const AppNavigator = () => (
   <Tab.Navigator

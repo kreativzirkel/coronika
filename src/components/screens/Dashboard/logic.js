@@ -2,6 +2,7 @@ import moment from 'moment';
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
+import withViewportUnits from '../../../utils/withViewportUnits';
 import { setTimestamp as setTimestampDay } from '../Day/actions';
 import { addDay } from './actions';
 import Screen from './ui';
@@ -82,6 +83,6 @@ const Container = container(Screen, {
   },
 });
 
-const Dashboard = withI18n(connect(mapStateToProps, mapDispatchToProps)(Container));
+const Dashboard = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Container)));
 
 export default Dashboard;

@@ -1,20 +1,23 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import withViewportUnits from '../../utils/withViewportUnits';
 
-// noinspection JSUnresolvedFunction
-const styles = StyleSheet.create({
-  header: {
-    alignItems: 'center',
-    flexDirection: 'row',
-    flexGrow: 0,
-    flexShrink: 0,
-    padding: 16,
-    paddingBottom: 30,
-    paddingTop: 24,
-    width: '100%',
-  },
-});
+const Header = ({ children, vw }) => {
+  // noinspection JSUnresolvedFunction
+  const styles = StyleSheet.create({
+    header: {
+      alignItems: 'center',
+      flexDirection: 'row',
+      flexGrow: 0,
+      flexShrink: 0,
+      padding: vw(3.5),
+      paddingBottom: vw(7),
+      paddingTop: vw(5.5),
+      width: '100%',
+    },
+  });
 
-const Header = ({ children }) => <View style={styles.header}>{children}</View>;
+  return <View style={styles.header}>{children}</View>;
+};
 
-export default Header;
+export default withViewportUnits(Header);

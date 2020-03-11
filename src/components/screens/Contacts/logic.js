@@ -3,6 +3,7 @@ import RNContacts from 'react-native-contacts';
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
+import withViewportUnits from '../../../utils/withViewportUnits';
 import { importContacts as importContactsAction, removeContact, removeLocation } from './actions';
 import Screen from './ui';
 
@@ -85,6 +86,6 @@ const Container = container(Screen, {
   componentDidMount() {},
 });
 
-const Contacts = withI18n(connect(mapStateToProps, mapDispatchToProps)(Container));
+const Contacts = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Container)));
 
 export default Contacts;

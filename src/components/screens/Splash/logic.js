@@ -30,12 +30,11 @@ const Container = container(Screen, {
     }
 
     const {
-      app: { version },
-      welcome: { appVersionLastVisited },
+      app: { welcomeScreenShowKey },
+      welcome: { showKey },
     } = getState();
 
-    // TODO: check for major version change
-    const showWelcomeScreen = appVersionLastVisited !== version;
+    const showWelcomeScreen = welcomeScreenShowKey !== showKey;
 
     (async () => {
       await sleep(3000);
