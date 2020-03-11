@@ -5,13 +5,16 @@ import createStore from 'redux/src/createStore';
 import persistStore from 'redux-persist/es/persistStore';
 import purgeStoredState from 'redux-persist/es/purgeStoredState';
 import persistCombineReducers from 'redux-persist/es/persistCombineReducers';
+import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import thunk from 'redux-thunk';
 import { reducers } from './redux';
 
 const storeConfig = {
+  blacklist: ['app', 'day', 'i18n'],
   key: 'coronika',
+  stateReconciler: autoMergeLevel2,
   storage: AsyncStorage,
-  blacklist: ['app', 'contacts', 'dashboard', 'day', 'i18n'],
+  whitelist: ['contacts', 'dashboard', 'welcome'],
 };
 
 const purgeStore = async () => {

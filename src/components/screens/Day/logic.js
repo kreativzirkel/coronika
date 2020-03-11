@@ -1,7 +1,7 @@
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
-import { removeContactFromDay, removeLocationFromDay } from '../../App/actions';
+import { removeContactFromDay, removeLocationFromDay } from '../../screens/Dashboard/actions';
 import Screen from './ui';
 
 const deleteContactFromDay = (contactId) => async (dispatch, getState) => {
@@ -56,7 +56,7 @@ const locationsSortingFunction = (a, b) => {
   return 0;
 };
 
-const mapStateToProps = ({ app: { days }, day: { searchValue, timestamp } }) => {
+const mapStateToProps = ({ dashboard: { days }, day: { searchValue, timestamp } }) => {
   const dayContacts = days[timestamp]?.contacts || [];
   const dayLocations = days[timestamp]?.locations || [];
 

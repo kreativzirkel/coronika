@@ -1,7 +1,7 @@
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
-import { addContactToDay, addLocationToDay } from '../../App/actions';
+import { addContactToDay, addLocationToDay } from '../../screens/Dashboard/actions';
 import Screen from './ui';
 
 const addSelection = (selection, navigation) => async (dispatch, getState) => {
@@ -54,7 +54,7 @@ const locationsSortingFunction = (a, b) => {
   return 0;
 };
 
-const mapStateToProps = ({ app: { days }, contacts: { contacts, locations }, day: { timestamp } }) => {
+const mapStateToProps = ({ contacts: { contacts, locations }, dashboard: { days }, day: { timestamp } }) => {
   contacts.sort((a, b) => contactsSortingFunction(a, b));
   locations.sort((a, b) => locationsSortingFunction(a, b));
 

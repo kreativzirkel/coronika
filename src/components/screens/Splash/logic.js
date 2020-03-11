@@ -19,21 +19,32 @@ const Container = container(Screen, {
   componentDidMount() {
     SplashScreen.hide();
 
+    const {
+      store: { dispatch, getState },
+    } = this.context;
     const { navigation } = this.props;
     const bestAvailableLanguage = RNLocalize.findBestAvailableLanguage(SUPPORTED_LANGUAGES);
 
     if (bestAvailableLanguage) {
-      const {
-        store: { dispatch },
-      } = this.context;
-
       dispatch(changeLanguage(bestAvailableLanguage.languageTag.substring(0, 2)));
     }
 
+    const {
+      app: { version },
+      welcome: { appVersionLastVisited },
+    } = getState();
+
+    // TODO: check for major version change
+    const showWelcomeScreen = appVersionLastVisited !== version;
+
     (async () => {
       await sleep(3000);
-      // TODO: check if onboarding is already completed
-      navigation.navigate('Welcome');
+
+      if (showWelcomeScreen) {
+        navigation.navigate('Welcome');
+      } else {
+        navigation.navigate('App');
+      }
     })();
   },
 });

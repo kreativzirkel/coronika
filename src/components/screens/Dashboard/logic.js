@@ -1,8 +1,32 @@
+import moment from 'moment';
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
 import { setTimestamp as setTimestampDay } from '../Day/actions';
+import { addDay } from './actions';
 import Screen from './ui';
+
+const loadDays = () => async (dispatch, getState) => {
+  const {
+    dashboard: { days },
+  } = getState();
+
+  const today = moment()
+    .hours(0)
+    .minutes(0)
+    .seconds(0)
+    .milliseconds(0);
+
+  // add last 21 days if not already in list
+  for (let i = 0; i < 21; i++) {
+    const currentDay = moment(today).subtract(i, 'days');
+    const currentDayTimestamp = currentDay.valueOf();
+
+    if (!days[currentDayTimestamp]) {
+      dispatch(addDay({ timestamp: currentDayTimestamp }));
+    }
+  }
+};
 
 const daysSortingFunction = (a, b) => {
   if (a < b) {
@@ -21,7 +45,7 @@ const openDay = (timestamp, navigation) => async (dispatch, getState) => {
   navigation.navigate('Day');
 };
 
-const mapStateToProps = ({ app: { days } }) => {
+const mapStateToProps = ({ dashboard: { days } }) => {
   const daysList = Object.keys(days)
     .sort((a, b) => daysSortingFunction(a, b))
     .map((timestamp) => days[timestamp]);
@@ -49,7 +73,13 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 const Container = container(Screen, {
-  componentDidMount() {},
+  componentDidMount() {
+    const {
+      store: { dispatch },
+    } = this.context;
+
+    dispatch(loadDays());
+  },
 });
 
 const Dashboard = withI18n(connect(mapStateToProps, mapDispatchToProps)(Container));
