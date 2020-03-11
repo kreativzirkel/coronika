@@ -66,7 +66,10 @@ const Policy = ({ navigation, vw, __ }) => {
 
   const goBack = () => navigation.dispatch(CommonActions.goBack());
 
-  const visitKreativzirkel = () => Linking.openURL('https://www.kreativzirkel.de/');
+  const visitKreativzirkel = () =>
+    Linking.openURL('https://www.kreativzirkel.de/').catch((err) =>
+      console.log('could not open https://www.kreativzirkel.de/', err)
+    );
 
   return (
     <Layout backgroundColor={COLOR_SECONDARY}>
