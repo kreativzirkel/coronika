@@ -205,10 +205,20 @@ msgstr "Your overview"
 #: src/components/screens/Export/ui.jsx:92
 msgid "export-screen.content.section-1.text"
 msgstr ""
-"Together we can trace infection paths and thus contain the spread of the "
-"disease."
+"Collectively we can reconstruct paths of infection by informing health "
+"authorities and the people around you."
 
 #: src/components/screens/Export/ui.jsx:93
+msgid "export-screen.content.section-2.headline"
+msgstr "With big power comes big responsibility"
+
+#: src/components/screens/Export/ui.jsx:94
+msgid "export-screen.content.section-2.text"
+msgstr ""
+"Keep in mind that the data is very sensitive. We highly recommend to not "
+"share it online or with random people."
+
+#: src/components/screens/Export/ui.jsx:95
 msgid "export-screen.coming-soon"
 msgstr "Coming soon!"
 
@@ -218,58 +228,60 @@ msgstr "Policy"
 
 #: src/components/screens/Policy/ui.jsx:85
 msgid "policy-screen.content.section-1.headline"
-msgstr "Containing the corona virus together."
+msgstr "Containing the spread of the virus together"
 
 #: src/components/screens/Policy/ui.jsx:86
 msgid "policy-screen.content.section-1.text"
-msgstr "By tracing infection routes, we can limit the spread."
+msgstr ""
+"By tracing the paths of infection we can limit further spread of COVID-19."
 
 #: src/components/screens/Policy/ui.jsx:87
 msgid "policy-screen.content.section-2.headline"
-msgstr "Your data is yours."
+msgstr "Your data is yours alone"
 
 #: src/components/screens/Policy/ui.jsx:88
 msgid "policy-screen.content.section-2.text"
 msgstr ""
-"All information you create in Coronika is stored locally. No data is tracked "
-"or passed on."
+"All data created and used by Coronika is stored locally and will not be "
+"tracked or passed on."
 
 #: src/components/screens/Welcome/ui.jsx:14
 msgid "welcome-screen.slides.intro.headline"
-msgstr "Containing the corona virus together."
+msgstr "Fighting corona-virus together"
 
 #: src/components/screens/Welcome/ui.jsx:15
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
-"Together we can trace infection paths and thus contain the spread of the "
-"disease."
+"Log contacts and locations, reconstruct paths of infection and help stopping "
+"the spread."
 
 #: src/components/screens/Welcome/ui.jsx:16
 msgid "welcome-screen.slides.intro.button"
-msgstr "Great, I want to help!"
+msgstr "Great, I want to help, too"
 
 #: src/components/screens/Welcome/ui.jsx:21
 msgid "welcome-screen.slides.how-to.headline"
-msgstr "A diary with locations and contacts"
+msgstr "A diary for our collective health"
 
 #: src/components/screens/Welcome/ui.jsx:22
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
-"Record daily who you met and in which public places (subway, supermarket, "
-"etc.) you were. By spending a few minutes a day you contribute to the health "
-"of everyone. "
+"Write down who you have met, the public places you have visited and make a "
+"contribution to the health of everyone."
 
 #: src/components/screens/Welcome/ui.jsx:23
 msgid "welcome-screen.slides.how-to.button"
-msgstr "Okay"
+msgstr "Okey dokey"
 
 #: src/components/screens/Welcome/ui.jsx:28
 msgid "welcome-screen.slides.local-data.headline"
-msgstr "Your data belongs to you!"
+msgstr "Your data is yours alone"
 
 #: src/components/screens/Welcome/ui.jsx:29
 msgid "welcome-screen.slides.local-data.text"
-msgstr "All information you create in Coronika is stored locally."
+msgstr ""
+"All data created and used by Coronika is stored locally and will not be "
+"tracked or passed on."
 
 #: src/components/screens/Welcome/ui.jsx:30
 msgid "welcome-screen.slides.local-data.button"

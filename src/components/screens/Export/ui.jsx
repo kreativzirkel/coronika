@@ -52,8 +52,8 @@ const Export = ({ navigation, vw, __ }) => {
       flexDirection: 'column',
       height: '100%',
       justifyContent: 'space-between',
-      padding: vw(10),
-      paddingTop: vw(5),
+      padding: vw(8),
+      paddingTop: vw(2),
       width: '100%',
     },
     viewContent: {
@@ -90,6 +90,8 @@ const Export = ({ navigation, vw, __ }) => {
         <View style={styles.viewContent}>
           <Text style={styles.contentHeadline}>{__('export-screen.content.section-1.headline')}</Text>
           <Text style={styles.contentText}>{__('export-screen.content.section-1.text')}</Text>
+          <Text style={styles.contentHeadline}>{__('export-screen.content.section-2.headline')}</Text>
+          <Text style={styles.contentText}>{__('export-screen.content.section-2.text')}</Text>
           <Text style={styles.comingSoon}>{__('export-screen.coming-soon')}</Text>
         </View>
 

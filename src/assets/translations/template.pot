@@ -186,6 +186,14 @@ msgid "export-screen.content.section-1.text"
 msgstr ""
 
 #: src/components/screens/Export/ui.jsx:93
+msgid "export-screen.content.section-2.headline"
+msgstr ""
+
+#: src/components/screens/Export/ui.jsx:94
+msgid "export-screen.content.section-2.text"
+msgstr ""
+
+#: src/components/screens/Export/ui.jsx:95
 msgid "export-screen.coming-soon"
 msgstr ""
 

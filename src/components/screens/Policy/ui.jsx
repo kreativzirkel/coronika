@@ -46,8 +46,8 @@ const Policy = ({ navigation, vw, __ }) => {
       flexDirection: 'column',
       height: '100%',
       justifyContent: 'space-between',
-      padding: vw(10),
-      paddingTop: vw(5),
+      padding: vw(8),
+      paddingTop: vw(2),
       width: '100%',
     },
     viewContent: {

@@ -207,10 +207,20 @@ msgstr "Deine Übersicht"
 #: src/components/screens/Export/ui.jsx:92
 msgid "export-screen.content.section-1.text"
 msgstr ""
-"Zusammen können wir Infektionswege nachvollziehen und so eine Ausbreitung "
-"eindämmen."
+"Zusammen können wir Infektionswege nachvollziehen, indem wir "
+"Gesundheitsbehörden und Menschen in deinem Umfeld informieren"
 
 #: src/components/screens/Export/ui.jsx:93
+msgid "export-screen.content.section-2.headline"
+msgstr "Mit großer Macht kommt große Verantwortung"
+
+#: src/components/screens/Export/ui.jsx:94
+msgid "export-screen.content.section-2.text"
+msgstr ""
+"Bitte bedenke, dass es sich um sensible Daten handelt. Wir empfehlen dir "
+"daher, sie nicht online oder mit Fremden zu teilen."
+
+#: src/components/screens/Export/ui.jsx:95
 msgid "export-screen.coming-soon"
 msgstr "Kommt bald!"
 
@@ -220,7 +230,7 @@ msgstr "Policy"
 
 #: src/components/screens/Policy/ui.jsx:85
 msgid "policy-screen.content.section-1.headline"
-msgstr "Gemeinsam das Corona Virus eindämmen."
+msgstr "Gemeinsam das Corona Virus eindämmen"
 
 #: src/components/screens/Policy/ui.jsx:86
 msgid "policy-screen.content.section-1.text"
@@ -230,7 +240,7 @@ msgstr ""
 
 #: src/components/screens/Policy/ui.jsx:87
 msgid "policy-screen.content.section-2.headline"
-msgstr "Deine Daten gehören dir."
+msgstr "Deine Daten gehören dir"
 
 #: src/components/screens/Policy/ui.jsx:88
 msgid "policy-screen.content.section-2.text"
@@ -259,9 +269,8 @@ msgstr "Ein Tagebuch mit Orten und Personen"
 #: src/components/screens/Welcome/ui.jsx:22
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
-"Trage täglich ein, wen du getroffen hast und an welchen öffentlichen Orten "
-"(U-Bahn, Supermarkt, usw.) du dich aufgehalten hast. Mit wenigen Minuten "
-"täglich leistest du einen Beitrag zur Gesundheit aller. "
+"Trage ein, wen du getroffen hast, an welchen öffentlichen Orten du dich "
+"aufgehalten hast und leiste einen Beitrag zur Gesundheit aller."
 
 #: src/components/screens/Welcome/ui.jsx:23
 msgid "welcome-screen.slides.how-to.button"
@@ -275,6 +284,7 @@ msgstr "Deine Daten gehören dir!"
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 "Alle Informationen, die du in Coronika anlegst werden lokal gespeichert. "
+"Keine Daten werden getrackt oder weitergegeben."
 
 #: src/components/screens/Welcome/ui.jsx:30
 msgid "welcome-screen.slides.local-data.button"

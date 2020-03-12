@@ -25,7 +25,14 @@ const addContactToList = (contacts, contact) => {
       .join(' ')
       .replace(/\s+/g, ' ');
   } else {
-    resultList = cloneDeep(contacts);
+    for (const c of contacts) {
+      if (c.recordID || c.fullName !== importContact.fullName) {
+        resultList.push(c);
+      } else {
+        importContact.id = c.id;
+        importContact.phoneNumbers = [...c.phoneNumbers];
+      }
+    }
   }
 
   if (!importContact.id) {
@@ -75,7 +82,16 @@ export default (state = initialState, action = { type: null }) => {
 
     case 'ADD_LOCATION_CONTACTS': {
       const location = action.location;
-      const locations = cloneDeep(state.locations);
+      const locations = [];
+
+      for (const l of state.locations) {
+        if (l.title !== location.title) {
+          locations.push(l);
+        } else {
+          location.description = l.description;
+          location.id = l.id;
+        }
+      }
 
       if (!location.id) {
         location.id = uuidv4();
