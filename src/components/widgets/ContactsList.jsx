@@ -10,11 +10,13 @@ import ListItem from './ListItem';
 const ContactsList = ({
   allowDelete,
   allowSelection,
+  allowUpdate,
   contacts,
   deleteItem,
   disableDeleteImportedContacts,
   selectedContacts,
   toggleSelection,
+  updateItem,
   vw,
 }) => {
   // noinspection JSUnresolvedFunction
@@ -67,34 +69,48 @@ const ContactsList = ({
       keyExtractor={({ id }) => id}
       renderItem={({ item: { fullName, id, recordID } }) => {
         const allowContactDelete = allowDelete && (recordID !== undefined ? !disableDeleteImportedContacts : true);
+        const allowContactUpdate = allowUpdate && recordID === undefined;
         const isContactSelected = allowSelection && selectedContacts.includes(id);
+
+        const ContactItem = () => (
+          <View style={styles.contact}>
+            <View style={styles.contactTextWrapper}>
+              <Text style={styles.contactText}>{fullName}</Text>
+
+              {recordID !== undefined && (
+                <View style={styles.contactTextIconImported}>
+                  <UilMobileAndroid color={'#b0b0b0'} size={vw(5)} />
+                </View>
+              )}
+            </View>
+
+            {allowSelection && (
+              <TouchableOpacity onPress={() => toggleSelection(id)} style={styles.selectButton}>
+                <View
+                  style={{
+                    ...styles.selectButtonInner,
+                    ...(isContactSelected && styles.selectButtonInnerSelected),
+                  }}>
+                  {isContactSelected ? (
+                    <UilMinus size={vw(7)} color={'#ffffff'} />
+                  ) : (
+                    <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
+                  )}
+                </View>
+              </TouchableOpacity>
+            )}
+          </View>
+        );
 
         return (
           <ListItem allowDelete={allowContactDelete} deleteItem={() => deleteItem(id)}>
-            <View style={styles.contact}>
-              <View style={styles.contactTextWrapper}>
-                <Text style={styles.contactText}>{fullName}</Text>
-
-                {recordID !== undefined && (
-                  <View style={styles.contactTextIconImported}>
-                    <UilMobileAndroid color={'#b0b0b0'} size={vw(5)} />
-                  </View>
-                )}
-              </View>
-
-              {allowSelection && (
-                <TouchableOpacity onPress={() => toggleSelection(id)} style={styles.selectButton}>
-                  <View
-                    style={{ ...styles.selectButtonInner, ...(isContactSelected && styles.selectButtonInnerSelected) }}>
-                    {isContactSelected ? (
-                      <UilMinus size={vw(7)} color={'#ffffff'} />
-                    ) : (
-                      <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
-                    )}
-                  </View>
-                </TouchableOpacity>
-              )}
-            </View>
+            {allowContactUpdate ? (
+              <TouchableOpacity onPress={() => updateItem(id)}>
+                <ContactItem />
+              </TouchableOpacity>
+            ) : (
+              <ContactItem />
+            )}
           </ListItem>
         );
       }}

@@ -10,10 +10,12 @@ import ListItem from './ListItem';
 const LocationsList = ({
   allowDelete,
   allowSelection,
+  allowUpdate,
   deleteItem,
   locations,
   selectedLocations,
   toggleSelection,
+  updateItem,
   vw,
 }) => {
   // noinspection JSUnresolvedFunction
@@ -85,59 +87,69 @@ const LocationsList = ({
           selectedLocationTime = moment(selectedLocation.timestamp || 0).format('LT');
         }
 
-        return (
-          <ListItem allowDelete={allowDelete} deleteItem={() => deleteItem(id, description, timestamp)}>
-            <View style={styles.location}>
-              <View style={styles.locationHeader}>
-                <Text numberOfLines={1} style={styles.locationText}>
-                  {title}
-                </Text>
+        const LocationItem = () => (
+          <View style={styles.location}>
+            <View style={styles.locationHeader}>
+              <Text numberOfLines={1} style={styles.locationText}>
+                {title}
+              </Text>
 
-                {allowSelection && (
-                  <TouchableOpacity onPress={() => toggleSelection(id)} style={styles.selectButton}>
-                    <View
-                      style={{
-                        ...styles.selectButtonInner,
-                        ...(isLocationSelected && styles.selectButtonInnerSelected),
-                      }}>
-                      {isLocationSelected ? (
-                        <UilMinus size={vw(7)} color={'#ffffff'} />
-                      ) : (
-                        <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
-                      )}
-                    </View>
-                  </TouchableOpacity>
-                )}
-              </View>
-
-              {allowSelection && isLocationSelected && (
-                <View style={styles.locationContent}>
-                  {selectedLocationDescription.trim().length > 0 && (
-                    <Text style={{ ...styles.locationContentText, ...styles.locationContentDescription }}>
-                      {selectedLocationDescription}
-                    </Text>
-                  )}
-                  <Text style={{ ...styles.locationContentText, ...styles.locationContentTime }}>
-                    {selectedLocationTime}
-                  </Text>
-                </View>
-              )}
-
-              {allowDelete && (
-                <View style={styles.locationContent}>
-                  {description.trim().length > 0 && (
-                    <Text style={{ ...styles.locationContentText, ...styles.locationContentDescription }}>
-                      {description}
-                    </Text>
-                  )}
-                  {timestamp > 0 && (
-                    <Text style={{ ...styles.locationContentText, ...styles.locationContentTime }}>
-                      {moment(timestamp || 0).format('LT')}
-                    </Text>
-                  )}
-                </View>
+              {allowSelection && (
+                <TouchableOpacity onPress={() => toggleSelection(id)} style={styles.selectButton}>
+                  <View
+                    style={{
+                      ...styles.selectButtonInner,
+                      ...(isLocationSelected && styles.selectButtonInnerSelected),
+                    }}>
+                    {isLocationSelected ? (
+                      <UilMinus size={vw(7)} color={'#ffffff'} />
+                    ) : (
+                      <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
+                    )}
+                  </View>
+                </TouchableOpacity>
               )}
             </View>
+
+            {allowSelection && isLocationSelected && (
+              <View style={styles.locationContent}>
+                {selectedLocationDescription.trim().length > 0 && (
+                  <Text style={{ ...styles.locationContentText, ...styles.locationContentDescription }}>
+                    {selectedLocationDescription}
+                  </Text>
+                )}
+                <Text style={{ ...styles.locationContentText, ...styles.locationContentTime }}>
+                  {selectedLocationTime}
+                </Text>
+              </View>
+            )}
+
+            {allowDelete && (
+              <View style={styles.locationContent}>
+                {description.trim().length > 0 && (
+                  <Text style={{ ...styles.locationContentText, ...styles.locationContentDescription }}>
+                    {description}
+                  </Text>
+                )}
+                {timestamp > 0 && (
+                  <Text style={{ ...styles.locationContentText, ...styles.locationContentTime }}>
+                    {moment(timestamp || 0).format('LT')}
+                  </Text>
+                )}
+              </View>
+            )}
+          </View>
+        );
+
+        return (
+          <ListItem allowDelete={allowDelete} deleteItem={() => deleteItem(id, description, timestamp)}>
+            {allowUpdate ? (
+              <TouchableOpacity onPress={() => updateItem(id)}>
+                <LocationItem />
+              </TouchableOpacity>
+            ) : (
+              <LocationItem />
+            )}
           </ListItem>
         );
       }}

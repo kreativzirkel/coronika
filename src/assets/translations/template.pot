@@ -15,93 +15,109 @@ msgstr ""
 msgid "navigation.share.label"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:431
+#: src/components/partials/EntriesTabsView.jsx:503
 #: src/components/widgets/DayOverview.jsx:91
 msgid "contacts"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:441
+#: src/components/partials/EntriesTabsView.jsx:513
 #: src/components/widgets/DayOverview.jsx:79
 msgid "locations"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:452
+#: src/components/partials/EntriesTabsView.jsx:524
 msgid "entries.contacts.list.new"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:469
+#: src/components/partials/EntriesTabsView.jsx:543
 msgid "entries.search.list.empty"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:476
+#: src/components/partials/EntriesTabsView.jsx:550
 msgid "entries.contacts.list.empty"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:480
+#: src/components/partials/EntriesTabsView.jsx:554
 msgid "entries.contacts.list.import.button"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:499
+#: src/components/partials/EntriesTabsView.jsx:573
 msgid "entries.locations.list.new"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:515
+#: src/components/partials/EntriesTabsView.jsx:591
 msgid "entries.locations.list.empty"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:530
+#: src/components/partials/EntriesTabsView.jsx:606
 msgid "entries.selection.add"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:540
-msgid "entries.modals.new-contact.headline"
-msgstr ""
-
-#: src/components/partials/EntriesTabsView.jsx:550
-msgid "entries.modals.new-contact.placeholder.name"
-msgstr ""
-
-#: src/components/partials/EntriesTabsView.jsx:562
-msgid "entries.modals.new-contact.placeholder.phone-number"
-msgstr ""
-
-#: src/components/partials/EntriesTabsView.jsx:571
-msgid "entries.modals.new-contact.button"
-msgstr ""
-
-#: src/components/partials/EntriesTabsView.jsx:580
-msgid "entries.modals.new-location.headline"
-msgstr ""
-
-#: src/components/partials/EntriesTabsView.jsx:590
-msgid "entries.modals.new-location.placeholder.title"
-msgstr ""
-
-#: src/components/partials/EntriesTabsView.jsx:601
-msgid "entries.modals.new-location.placeholder.description"
-msgstr ""
-
-#: src/components/partials/EntriesTabsView.jsx:610
-msgid "entries.modals.new-location.button"
+#: src/components/partials/EntriesTabsView.jsx:618
+msgid "entries.modals.update-contact.headline"
 msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:619
+msgid "entries.modals.new-contact.headline"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:630
+msgid "entries.modals.new-contact.placeholder.name"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:642
+msgid "entries.modals.new-contact.placeholder.phone-number"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:655
+msgid "entries.modals.update-contact.button"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:656
+msgid "entries.modals.new-contact.button"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:668
+msgid "entries.modals.update-location.headline"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:669
+msgid "entries.modals.new-location.headline"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:680
+msgid "entries.modals.new-location.placeholder.title"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:691
+msgid "entries.modals.new-location.placeholder.description"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:704
+msgid "entries.modals.update-location.button"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:705
+msgid "entries.modals.new-location.button"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView.jsx:715
 msgid "entries.modals.select-location.headline"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:638
+#: src/components/partials/EntriesTabsView.jsx:734
 msgid "entries.modals.select-location.placeholder.description"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:653
+#: src/components/partials/EntriesTabsView.jsx:749
 msgid "Cancel"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:654
+#: src/components/partials/EntriesTabsView.jsx:750
 msgid "Confirm"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:667
+#: src/components/partials/EntriesTabsView.jsx:763
 msgid "entries.modals.select-location.button"
 msgstr ""
 
@@ -109,8 +125,28 @@ msgstr ""
 msgid "add-entry-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/Contacts/ui.jsx:40
+#: src/components/screens/Contacts/ui.jsx:125
+msgid "contacts-screen.header.button.import"
+msgstr ""
+
+#: src/components/screens/Contacts/ui.jsx:128
 msgid "contacts-screen.header.headline"
+msgstr ""
+
+#: src/components/screens/Contacts/ui.jsx:145
+msgid "contacts-screen.modals.import-contacts.headline"
+msgstr ""
+
+#: src/components/screens/Contacts/ui.jsx:151
+msgid "contacts-screen.modals.import-contacts.text"
+msgstr ""
+
+#: src/components/screens/Contacts/ui.jsx:157
+msgid "contacts-screen.modals.import-contacts.button.importing"
+msgstr ""
+
+#: src/components/screens/Contacts/ui.jsx:158
+msgid "contacts-screen.modals.import-contacts.button.default"
 msgstr ""
 
 #: src/components/screens/Dashboard/ui.jsx:76

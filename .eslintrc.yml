@@ -72,7 +72,8 @@ rules:
       allowTemplateLiterals: false
   react/jsx-closing-bracket-location:
     - error
-    - after-props
+    - nonEmpty: after-props
+      selfClosing: tag-aligned
   react/jsx-curly-brace-presence:
     - error
     - props: always

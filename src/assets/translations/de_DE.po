@@ -31,97 +31,113 @@ msgstr "Übersicht"
 msgid "navigation.share.label"
 msgstr "Teilen"
 
-#: src/components/partials/EntriesTabsView.jsx:431
+#: src/components/partials/EntriesTabsView.jsx:503
 #: src/components/widgets/DayOverview.jsx:91
 msgid "contacts"
 msgstr "Kontakte"
 
-#: src/components/partials/EntriesTabsView.jsx:441
+#: src/components/partials/EntriesTabsView.jsx:513
 #: src/components/widgets/DayOverview.jsx:79
 msgid "locations"
 msgstr "Orte"
 
-#: src/components/partials/EntriesTabsView.jsx:452
+#: src/components/partials/EntriesTabsView.jsx:524
 msgid "entries.contacts.list.new"
 msgstr "Neuer Kontakt"
 
-#: src/components/partials/EntriesTabsView.jsx:469
+#: src/components/partials/EntriesTabsView.jsx:543
 msgid "entries.search.list.empty"
 msgstr "Zu deiner Suche konnte nichts gefunden werden."
 
-#: src/components/partials/EntriesTabsView.jsx:476
+#: src/components/partials/EntriesTabsView.jsx:550
 msgid "entries.contacts.list.empty"
 msgstr ""
 "Du hast noch keinen Kontakt angelegt. Um direkt loszulegen, kannst du deine "
 "Kontakte importieren."
 
-#: src/components/partials/EntriesTabsView.jsx:480
+#: src/components/partials/EntriesTabsView.jsx:554
 msgid "entries.contacts.list.import.button"
 msgstr "Jetzt importieren"
 
-#: src/components/partials/EntriesTabsView.jsx:499
+#: src/components/partials/EntriesTabsView.jsx:573
 msgid "entries.locations.list.new"
 msgstr "Neuer Ort"
 
-#: src/components/partials/EntriesTabsView.jsx:515
+#: src/components/partials/EntriesTabsView.jsx:591
 msgid "entries.locations.list.empty"
 msgstr ""
 "Du hast noch keinen Ort angelegt. Beginne jetzt und erstelle deinen ersten "
 "Ort."
 
-#: src/components/partials/EntriesTabsView.jsx:530
+#: src/components/partials/EntriesTabsView.jsx:606
 msgid "entries.selection.add"
 msgstr "Auswahl hinzufügen"
 
-#: src/components/partials/EntriesTabsView.jsx:540
+#: src/components/partials/EntriesTabsView.jsx:618
+msgid "entries.modals.update-contact.headline"
+msgstr "Kontakt bearbeiten"
+
+#: src/components/partials/EntriesTabsView.jsx:619
 msgid "entries.modals.new-contact.headline"
 msgstr "Neuer Kontakt"
 
-#: src/components/partials/EntriesTabsView.jsx:550
+#: src/components/partials/EntriesTabsView.jsx:630
 msgid "entries.modals.new-contact.placeholder.name"
 msgstr "Vorname Nachname"
 
-#: src/components/partials/EntriesTabsView.jsx:562
+#: src/components/partials/EntriesTabsView.jsx:642
 msgid "entries.modals.new-contact.placeholder.phone-number"
 msgstr "Telefon"
 
-#: src/components/partials/EntriesTabsView.jsx:571
+#: src/components/partials/EntriesTabsView.jsx:655
+msgid "entries.modals.update-contact.button"
+msgstr "Speichern"
+
+#: src/components/partials/EntriesTabsView.jsx:656
 msgid "entries.modals.new-contact.button"
 msgstr "Hinzufügen"
 
-#: src/components/partials/EntriesTabsView.jsx:580
+#: src/components/partials/EntriesTabsView.jsx:668
+msgid "entries.modals.update-location.headline"
+msgstr "Ort bearbeiten"
+
+#: src/components/partials/EntriesTabsView.jsx:669
 msgid "entries.modals.new-location.headline"
 msgstr "Neuer Ort"
 
-#: src/components/partials/EntriesTabsView.jsx:590
+#: src/components/partials/EntriesTabsView.jsx:680
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Titel"
 
-#: src/components/partials/EntriesTabsView.jsx:601
+#: src/components/partials/EntriesTabsView.jsx:691
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Beschreibung"
 
-#: src/components/partials/EntriesTabsView.jsx:610
+#: src/components/partials/EntriesTabsView.jsx:704
+msgid "entries.modals.update-location.button"
+msgstr "Speichern"
+
+#: src/components/partials/EntriesTabsView.jsx:705
 msgid "entries.modals.new-location.button"
 msgstr "Hinzufügen"
 
-#: src/components/partials/EntriesTabsView.jsx:619
+#: src/components/partials/EntriesTabsView.jsx:715
 msgid "entries.modals.select-location.headline"
 msgstr "Ort auswählen"
 
-#: src/components/partials/EntriesTabsView.jsx:638
+#: src/components/partials/EntriesTabsView.jsx:734
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Beschreibung"
 
-#: src/components/partials/EntriesTabsView.jsx:653
+#: src/components/partials/EntriesTabsView.jsx:749
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/components/partials/EntriesTabsView.jsx:654
+#: src/components/partials/EntriesTabsView.jsx:750
 msgid "Confirm"
 msgstr "Bestätigen"
 
-#: src/components/partials/EntriesTabsView.jsx:667
+#: src/components/partials/EntriesTabsView.jsx:763
 msgid "entries.modals.select-location.button"
 msgstr "Auswählen"
 
@@ -129,9 +145,32 @@ msgstr "Auswählen"
 msgid "add-entry-screen.header.headline"
 msgstr "Eintrag hinzufügen"
 
-#: src/components/screens/Contacts/ui.jsx:40
+#: src/components/screens/Contacts/ui.jsx:125
+msgid "contacts-screen.header.button.import"
+msgstr "Import"
+
+#: src/components/screens/Contacts/ui.jsx:128
 msgid "contacts-screen.header.headline"
 msgstr "Kontakte verwalten"
+
+#: src/components/screens/Contacts/ui.jsx:145
+msgid "contacts-screen.modals.import-contacts.headline"
+msgstr "Kontakte importieren"
+
+#: src/components/screens/Contacts/ui.jsx:151
+msgid "contacts-screen.modals.import-contacts.text"
+msgstr ""
+"Importiere deine Kontakte, damit du direkt loslegen kannst. Alle deine "
+"Kontakte werden lokal gespeichert. Keine Daten werden getrackt oder "
+"weitergegeben."
+
+#: src/components/screens/Contacts/ui.jsx:157
+msgid "contacts-screen.modals.import-contacts.button.importing"
+msgstr "Importiere..."
+
+#: src/components/screens/Contacts/ui.jsx:158
+msgid "contacts-screen.modals.import-contacts.button.default"
+msgstr "Jetzt importieren"
 
 #: src/components/screens/Dashboard/ui.jsx:76
 msgid "dashboard-screen.header.buttons.policy"

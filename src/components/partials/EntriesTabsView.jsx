@@ -12,7 +12,7 @@ import ReactReduxContext from 'react-redux/lib/components/Context';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
-import { addContact, addLocation } from '../screens/Contacts/actions';
+import { addContact, addLocation, updateContact, updateLocation } from '../screens/Contacts/actions';
 import { importContacts } from '../screens/Contacts/logic';
 import ContactsList from '../widgets/ContactsList';
 import DateTimePickerModal from '../widgets/DateTimePickerModal';
@@ -43,10 +43,14 @@ class EntriesTabsView extends React.PureComponent {
 
     this.state = {
       activeTab: TABS.CONTACTS,
+      editContactId: '',
+      editLocationId: '',
       isModalNewContactVisible: false,
       isModalNewLocationVisible: false,
       isModalSelectLocationVisible: false,
       isModalSelectLocationTimestampVisible: false,
+      isUpdateContactMode: false,
+      isUpdateLocationMode: false,
       newContactName: '',
       newContactPhone: '',
       newLocationDescription: '',
@@ -119,7 +123,12 @@ class EntriesTabsView extends React.PureComponent {
   }
 
   openModalNewContact() {
-    this.setState({ isModalNewContactVisible: true, newContactName: '', newContactPhone: '' });
+    this.setState({
+      isUpdateContactMode: false,
+      isModalNewContactVisible: true,
+      newContactName: '',
+      newContactPhone: '',
+    });
   }
 
   closeModalNewContact() {
@@ -127,7 +136,12 @@ class EntriesTabsView extends React.PureComponent {
   }
 
   openModalNewLocation() {
-    this.setState({ isModalNewLocationVisible: true, newLocationTitle: '' });
+    this.setState({
+      isUpdateLocationMode: false,
+      isModalNewLocationVisible: true,
+      newLocationDescription: '',
+      newLocationTitle: '',
+    });
   }
 
   closeModalNewLocation() {
@@ -233,9 +247,65 @@ class EntriesTabsView extends React.PureComponent {
     this.setState({ isModalSelectLocationVisible: false, selectedEntries: updatedSelectedEntries });
   }
 
+  editContact(editContactId) {
+    const { contacts } = this.props;
+    const { fullName: newContactName, phoneNumbers } = contacts.find(({ id }) => id === editContactId);
+    const newContactPhone = phoneNumbers[0]?.number || '';
+    this.setState({
+      editContactId,
+      isUpdateContactMode: true,
+      isModalNewContactVisible: true,
+      newContactName,
+      newContactPhone,
+    });
+  }
+
+  updateContact() {
+    const {
+      store: { dispatch },
+    } = this.context;
+    const { editContactId, newContactName, newContactPhone } = this.state;
+    const contact = {
+      id: editContactId,
+      fullName: newContactName,
+      phoneNumbers: [{ label: 'phone', number: newContactPhone }],
+    };
+
+    dispatch(updateContact(contact));
+
+    this.setState({ isUpdateContactMode: false, isModalNewContactVisible: false });
+  }
+
+  editLocation(editLocationId) {
+    const { locations } = this.props;
+    const { description: newLocationDescription, title: newLocationTitle } = locations.find(
+      ({ id }) => id === editLocationId
+    );
+    this.setState({
+      editLocationId,
+      isUpdateLocationMode: true,
+      isModalNewLocationVisible: true,
+      newLocationDescription,
+      newLocationTitle,
+    });
+  }
+
+  updateLocation() {
+    const {
+      store: { dispatch },
+    } = this.context;
+    const { editLocationId, newLocationDescription, newLocationTitle } = this.state;
+    const location = { description: newLocationDescription, id: editLocationId, title: newLocationTitle };
+
+    dispatch(updateLocation(location));
+
+    this.setState({ isUpdateLocationMode: false, isModalNewLocationVisible: false });
+  }
+
   render() {
     const {
       allowSelection,
+      allowUpdate,
       contacts,
       customContactsEmptyText,
       customLocationsEmptyText,
@@ -253,6 +323,8 @@ class EntriesTabsView extends React.PureComponent {
       isModalNewLocationVisible,
       isModalSelectLocationVisible,
       isModalSelectLocationTimestampVisible,
+      isUpdateContactMode,
+      isUpdateLocationMode,
       newContactName,
       newContactPhone,
       newLocationDescription,
@@ -457,11 +529,13 @@ class EntriesTabsView extends React.PureComponent {
                 <ContactsList
                   allowDelete={typeof deleteContactItem === 'function'}
                   allowSelection={allowSelection}
+                  allowUpdate={allowUpdate}
                   contacts={filteredContacts}
                   deleteItem={(id) => deleteContactItem(id)}
                   disableDeleteImportedContacts={disableDeleteImportedContacts}
                   selectedContacts={selectedEntries.contacts}
                   toggleSelection={(id) => this.toggleContactSelection(id)}
+                  updateItem={(id) => this.editContact(id)}
                 />
               ) : (
                 <View style={styles.entriesEmptyWrapper}>
@@ -504,10 +578,12 @@ class EntriesTabsView extends React.PureComponent {
                 <LocationsList
                   allowDelete={typeof deleteLocationItem === 'function'}
                   allowSelection={allowSelection}
+                  allowUpdate={allowUpdate}
                   deleteItem={(id, description, time) => deleteLocationItem(id, description, time)}
+                  locations={filteredLocations}
                   selectedLocations={selectedEntries.locations}
                   toggleSelection={(id) => this.toggleLocationSelection(id)}
-                  locations={filteredLocations}
+                  updateItem={(id) => this.editLocation(id)}
                 />
               ) : (
                 <View style={styles.entriesEmptyWrapper}>
@@ -537,7 +613,11 @@ class EntriesTabsView extends React.PureComponent {
         <Modal isVisible={isModalNewContactVisible} style={styles.modal}>
           <KeyboardAvoidingView behavior={'padding'} enabled style={styles.modalContent}>
             <View style={styles.modalHeader}>
-              <Text style={styles.modalHeaderText}>{__('entries.modals.new-contact.headline')}</Text>
+              <Text style={styles.modalHeaderText}>
+                {isUpdateContactMode
+                  ? __('entries.modals.update-contact.headline')
+                  : __('entries.modals.new-contact.headline')}
+              </Text>
               <TouchableOpacity onPress={() => this.closeModalNewContact()}>
                 <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
               </TouchableOpacity>
@@ -566,9 +646,15 @@ class EntriesTabsView extends React.PureComponent {
               value={newContactPhone}
             />
 
-            <TouchableOpacity disabled={buttonAddNewContactDisabled} onPress={() => this.addNewContact()}>
+            <TouchableOpacity
+              disabled={buttonAddNewContactDisabled}
+              onPress={() => (isUpdateContactMode ? this.updateContact() : this.addNewContact())}>
               <View style={{ ...styles.modalButton, ...(buttonAddNewContactDisabled && styles.modalButtonDisabled) }}>
-                <Text style={styles.modalButtonText}>{__('entries.modals.new-contact.button')}</Text>
+                <Text style={styles.modalButtonText}>
+                  {isUpdateContactMode
+                    ? __('entries.modals.update-contact.button')
+                    : __('entries.modals.new-contact.button')}
+                </Text>
               </View>
             </TouchableOpacity>
           </KeyboardAvoidingView>
@@ -577,7 +663,11 @@ class EntriesTabsView extends React.PureComponent {
         <Modal isVisible={isModalNewLocationVisible} style={styles.modal}>
           <KeyboardAvoidingView behavior={'padding'} enabled style={styles.modalContent}>
             <View style={styles.modalHeader}>
-              <Text style={styles.modalHeaderText}>{__('entries.modals.new-location.headline')}</Text>
+              <Text style={styles.modalHeaderText}>
+                {isUpdateLocationMode
+                  ? __('entries.modals.update-location.headline')
+                  : __('entries.modals.new-location.headline')}
+              </Text>
               <TouchableOpacity onPress={() => this.closeModalNewLocation()}>
                 <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
               </TouchableOpacity>
@@ -605,9 +695,15 @@ class EntriesTabsView extends React.PureComponent {
               value={newLocationDescription}
             />
 
-            <TouchableOpacity disabled={buttonAddNewLocationDisabled} onPress={() => this.addNewLocation()}>
+            <TouchableOpacity
+              disabled={buttonAddNewLocationDisabled}
+              onPress={() => (isUpdateLocationMode ? this.updateLocation() : this.addNewLocation())}>
               <View style={{ ...styles.modalButton, ...(buttonAddNewLocationDisabled && styles.modalButtonDisabled) }}>
-                <Text style={styles.modalButtonText}>{__('entries.modals.new-location.button')}</Text>
+                <Text style={styles.modalButtonText}>
+                  {isUpdateLocationMode
+                    ? __('entries.modals.update-location.button')
+                    : __('entries.modals.new-location.button')}
+                </Text>
               </View>
             </TouchableOpacity>
           </KeyboardAvoidingView>

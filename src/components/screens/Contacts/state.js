@@ -3,6 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 const initialState = {
   contacts: [],
+  contactsImporting: false,
+  isImportContactsModalVisible: false,
   locations: [],
 };
 
@@ -56,6 +58,21 @@ export default (state = initialState, action = { type: null }) => {
       return { ...state, contacts };
     }
 
+    case 'UPDATE_CONTACT_CONTACTS': {
+      const contact = action.contact;
+      const contacts = [];
+
+      for (const c of state.contacts) {
+        if (c.id !== contact.id) {
+          contacts.push(c);
+        } else {
+          contacts.push({ ...c, ...contact });
+        }
+      }
+
+      return { ...state, contacts };
+    }
+
     case 'ADD_LOCATION_CONTACTS': {
       const location = action.location;
       const locations = cloneDeep(state.locations);
@@ -82,6 +99,21 @@ export default (state = initialState, action = { type: null }) => {
       return { ...state, locations };
     }
 
+    case 'UPDATE_LOCATION_CONTACTS': {
+      const location = action.location;
+      const locations = [];
+
+      for (const l of state.locations) {
+        if (l.id !== location.id) {
+          locations.push(l);
+        } else {
+          locations.push({ ...l, ...location });
+        }
+      }
+
+      return { ...state, locations };
+    }
+
     case 'IMPORT_CONTACTS_CONTACTS': {
       const importContacts = action.contacts;
       let contacts = cloneDeep(state.contacts);
@@ -96,6 +128,18 @@ export default (state = initialState, action = { type: null }) => {
 
       return { ...state, contacts };
     }
+
+    case 'SHOW_IMPORT_CONTACTS_MODAL_CONTACTS':
+      return { ...state, isImportContactsModalVisible: true };
+
+    case 'HIDE_IMPORT_CONTACTS_MODAL_CONTACTS':
+      return { ...state, isImportContactsModalVisible: false };
+
+    case 'ENABLE_CONTACTS_IMPORTING_CONTACTS':
+      return { ...state, contactsImporting: true };
+
+    case 'DISABLE_CONTACTS_IMPORTING_CONTACTS':
+      return { ...state, contactsImporting: false };
 
     default:
       return state;
