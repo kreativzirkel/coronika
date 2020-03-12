@@ -19,109 +19,109 @@ msgstr ""
 msgid "navigation.share.label"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:503
+#: src/components/partials/EntriesTabsView.jsx:505
 #: src/components/widgets/DayOverview.jsx:91
 msgid "contacts"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:513
+#: src/components/partials/EntriesTabsView.jsx:515
 #: src/components/widgets/DayOverview.jsx:79
 msgid "locations"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:524
+#: src/components/partials/EntriesTabsView.jsx:526
 msgid "entries.contacts.list.new"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:543
+#: src/components/partials/EntriesTabsView.jsx:545
 msgid "entries.search.list.empty"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:550
+#: src/components/partials/EntriesTabsView.jsx:552
 msgid "entries.contacts.list.empty"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:554
+#: src/components/partials/EntriesTabsView.jsx:556
 msgid "entries.contacts.list.import.button"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:573
+#: src/components/partials/EntriesTabsView.jsx:575
 msgid "entries.locations.list.new"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:591
+#: src/components/partials/EntriesTabsView.jsx:593
 msgid "entries.locations.list.empty"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:606
+#: src/components/partials/EntriesTabsView.jsx:608
 msgid "entries.selection.add"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:618
+#: src/components/partials/EntriesTabsView.jsx:620
 msgid "entries.modals.update-contact.headline"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:619
+#: src/components/partials/EntriesTabsView.jsx:621
 msgid "entries.modals.new-contact.headline"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:630
+#: src/components/partials/EntriesTabsView.jsx:632
 msgid "entries.modals.new-contact.placeholder.name"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:642
+#: src/components/partials/EntriesTabsView.jsx:644
 msgid "entries.modals.new-contact.placeholder.phone-number"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:655
+#: src/components/partials/EntriesTabsView.jsx:657
 msgid "entries.modals.update-contact.button"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:656
+#: src/components/partials/EntriesTabsView.jsx:658
 msgid "entries.modals.new-contact.button"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:668
+#: src/components/partials/EntriesTabsView.jsx:670
 msgid "entries.modals.update-location.headline"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:669
+#: src/components/partials/EntriesTabsView.jsx:671
 msgid "entries.modals.new-location.headline"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:680
+#: src/components/partials/EntriesTabsView.jsx:682
 msgid "entries.modals.new-location.placeholder.title"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:691
+#: src/components/partials/EntriesTabsView.jsx:693
 msgid "entries.modals.new-location.placeholder.description"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:704
+#: src/components/partials/EntriesTabsView.jsx:706
 msgid "entries.modals.update-location.button"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:705
+#: src/components/partials/EntriesTabsView.jsx:707
 msgid "entries.modals.new-location.button"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:715
+#: src/components/partials/EntriesTabsView.jsx:717
 msgid "entries.modals.select-location.headline"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:734
+#: src/components/partials/EntriesTabsView.jsx:736
 msgid "entries.modals.select-location.placeholder.description"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:749
+#: src/components/partials/EntriesTabsView.jsx:751
 msgid "Cancel"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:750
+#: src/components/partials/EntriesTabsView.jsx:752
 msgid "Confirm"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView.jsx:763
+#: src/components/partials/EntriesTabsView.jsx:765
 msgid "entries.modals.select-location.button"
 msgstr ""
 

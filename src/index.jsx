@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import React from 'react';
 import { SafeAreaView, View } from 'react-native';
 import { Provider } from 'react-redux';
@@ -13,7 +13,15 @@ import configureStore from './createStore';
 const Stack = createStackNavigator();
 
 const AppNavigator = () => (
-  <Stack.Navigator headerMode={'none'} initialRouteName={'App'}>
+  <Stack.Navigator
+    headerMode={'none'}
+    initialRouteName={'App'}
+    mode={'card'}
+    screenOptions={{
+      cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+      gestureEnabled: true,
+      gestureDirection: 'horizontal',
+    }}>
     <Stack.Screen component={App} name={'App'} />
     <Stack.Screen component={screens.AddEntry} name={'AddEntry'} />
     <Stack.Screen component={screens.Day} name={'Day'} />

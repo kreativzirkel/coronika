@@ -6,7 +6,7 @@ import UilTimes from '@iconscout/react-native-unicons/icons/uil-times';
 import UilUser from '@iconscout/react-native-unicons/icons/uil-user';
 import moment from 'moment';
 import React, { Fragment } from 'react';
-import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Modal from 'react-native-modal';
 import ReactReduxContext from 'react-redux/lib/components/Context';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
@@ -485,6 +485,8 @@ class EntriesTabsView extends React.PureComponent {
       },
     });
 
+    const keyboardAvoidingViewBehavior = Platform.OS === 'ios' ? 'padding' : undefined;
+
     return (
       <Fragment>
         <SearchBar
@@ -611,7 +613,7 @@ class EntriesTabsView extends React.PureComponent {
         </View>
 
         <Modal isVisible={isModalNewContactVisible} style={styles.modal}>
-          <KeyboardAvoidingView behavior={'padding'} enabled style={styles.modalContent}>
+          <KeyboardAvoidingView behavior={keyboardAvoidingViewBehavior} enabled style={styles.modalContent}>
             <View style={styles.modalHeader}>
               <Text style={styles.modalHeaderText}>
                 {isUpdateContactMode
@@ -661,7 +663,7 @@ class EntriesTabsView extends React.PureComponent {
         </Modal>
 
         <Modal isVisible={isModalNewLocationVisible} style={styles.modal}>
-          <KeyboardAvoidingView behavior={'padding'} enabled style={styles.modalContent}>
+          <KeyboardAvoidingView behavior={keyboardAvoidingViewBehavior} enabled style={styles.modalContent}>
             <View style={styles.modalHeader}>
               <Text style={styles.modalHeaderText}>
                 {isUpdateLocationMode
@@ -710,7 +712,7 @@ class EntriesTabsView extends React.PureComponent {
         </Modal>
 
         <Modal isVisible={isModalSelectLocationVisible} style={styles.modal}>
-          <KeyboardAvoidingView behavior={'padding'} enabled style={styles.modalContent}>
+          <KeyboardAvoidingView behavior={keyboardAvoidingViewBehavior} enabled style={styles.modalContent}>
             <View style={styles.modalHeader}>
               <Text style={styles.modalHeaderText}>{__('entries.modals.select-location.headline')}</Text>
               <TouchableOpacity onPress={() => this.closeModalSelectLocation()}>

@@ -42,113 +42,113 @@ msgstr "Übersicht"
 msgid "navigation.share.label"
 msgstr "Teilen"
 
-#: src/components/partials/EntriesTabsView.jsx:503
+#: src/components/partials/EntriesTabsView.jsx:505
 #: src/components/widgets/DayOverview.jsx:91
 msgid "contacts"
 msgstr "Kontakte"
 
-#: src/components/partials/EntriesTabsView.jsx:513
+#: src/components/partials/EntriesTabsView.jsx:515
 #: src/components/widgets/DayOverview.jsx:79
 msgid "locations"
 msgstr "Orte"
 
-#: src/components/partials/EntriesTabsView.jsx:524
+#: src/components/partials/EntriesTabsView.jsx:526
 msgid "entries.contacts.list.new"
 msgstr "Neuer Kontakt"
 
-#: src/components/partials/EntriesTabsView.jsx:543
+#: src/components/partials/EntriesTabsView.jsx:545
 msgid "entries.search.list.empty"
 msgstr "Zu deiner Suche konnte nichts gefunden werden."
 
-#: src/components/partials/EntriesTabsView.jsx:550
+#: src/components/partials/EntriesTabsView.jsx:552
 msgid "entries.contacts.list.empty"
 msgstr ""
 "Du hast noch keinen Kontakt angelegt. Um direkt loszulegen, kannst du deine "
 "Kontakte importieren."
 
-#: src/components/partials/EntriesTabsView.jsx:554
+#: src/components/partials/EntriesTabsView.jsx:556
 msgid "entries.contacts.list.import.button"
 msgstr "Jetzt importieren"
 
-#: src/components/partials/EntriesTabsView.jsx:573
+#: src/components/partials/EntriesTabsView.jsx:575
 msgid "entries.locations.list.new"
 msgstr "Neuer Ort"
 
-#: src/components/partials/EntriesTabsView.jsx:591
+#: src/components/partials/EntriesTabsView.jsx:593
 msgid "entries.locations.list.empty"
 msgstr ""
 "Du hast noch keinen Ort angelegt. Beginne jetzt und erstelle deinen ersten "
 "Ort."
 
-#: src/components/partials/EntriesTabsView.jsx:606
+#: src/components/partials/EntriesTabsView.jsx:608
 msgid "entries.selection.add"
 msgstr "Auswahl hinzufügen"
 
-#: src/components/partials/EntriesTabsView.jsx:618
+#: src/components/partials/EntriesTabsView.jsx:620
 msgid "entries.modals.update-contact.headline"
 msgstr "Kontakt bearbeiten"
 
-#: src/components/partials/EntriesTabsView.jsx:619
+#: src/components/partials/EntriesTabsView.jsx:621
 msgid "entries.modals.new-contact.headline"
 msgstr "Neuer Kontakt"
 
-#: src/components/partials/EntriesTabsView.jsx:630
+#: src/components/partials/EntriesTabsView.jsx:632
 msgid "entries.modals.new-contact.placeholder.name"
 msgstr "Vorname Nachname"
 
-#: src/components/partials/EntriesTabsView.jsx:642
+#: src/components/partials/EntriesTabsView.jsx:644
 msgid "entries.modals.new-contact.placeholder.phone-number"
 msgstr "Telefon"
 
-#: src/components/partials/EntriesTabsView.jsx:655
+#: src/components/partials/EntriesTabsView.jsx:657
 msgid "entries.modals.update-contact.button"
 msgstr "Speichern"
 
-#: src/components/partials/EntriesTabsView.jsx:656
+#: src/components/partials/EntriesTabsView.jsx:658
 msgid "entries.modals.new-contact.button"
 msgstr "Hinzufügen"
 
-#: src/components/partials/EntriesTabsView.jsx:668
+#: src/components/partials/EntriesTabsView.jsx:670
 msgid "entries.modals.update-location.headline"
 msgstr "Ort bearbeiten"
 
-#: src/components/partials/EntriesTabsView.jsx:669
+#: src/components/partials/EntriesTabsView.jsx:671
 msgid "entries.modals.new-location.headline"
 msgstr "Neuer Ort"
 
-#: src/components/partials/EntriesTabsView.jsx:680
+#: src/components/partials/EntriesTabsView.jsx:682
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Titel"
 
-#: src/components/partials/EntriesTabsView.jsx:691
+#: src/components/partials/EntriesTabsView.jsx:693
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Beschreibung"
 
-#: src/components/partials/EntriesTabsView.jsx:704
+#: src/components/partials/EntriesTabsView.jsx:706
 msgid "entries.modals.update-location.button"
 msgstr "Speichern"
 
-#: src/components/partials/EntriesTabsView.jsx:705
+#: src/components/partials/EntriesTabsView.jsx:707
 msgid "entries.modals.new-location.button"
 msgstr "Hinzufügen"
 
-#: src/components/partials/EntriesTabsView.jsx:715
+#: src/components/partials/EntriesTabsView.jsx:717
 msgid "entries.modals.select-location.headline"
 msgstr "Ort auswählen"
 
-#: src/components/partials/EntriesTabsView.jsx:734
+#: src/components/partials/EntriesTabsView.jsx:736
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Beschreibung"
 
-#: src/components/partials/EntriesTabsView.jsx:749
+#: src/components/partials/EntriesTabsView.jsx:751
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/components/partials/EntriesTabsView.jsx:750
+#: src/components/partials/EntriesTabsView.jsx:752
 msgid "Confirm"
 msgstr "Bestätigen"
 
-#: src/components/partials/EntriesTabsView.jsx:763
+#: src/components/partials/EntriesTabsView.jsx:765
 msgid "entries.modals.select-location.button"
 msgstr "Auswählen"
 
