@@ -1,5 +1,5 @@
 const initialState = {
-  welcomeScreenShowKey: '5',
+  welcomeScreenShowKey: '6',
 };
 
 export default (state = initialState, action = { type: null }) => {
