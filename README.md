@@ -13,7 +13,7 @@ Automatic generation using react-native-make.
 
 `react-native set-icon --platform ios --path ./src/assets/images/app_icon.png`
 
-`react-native set-icon --platform android --path ./src/assets/images/app_icon.png`
+`react-native set-icon --platform android --path ./src/assets/images/app_icon_android.png`
 
 ## Splash Screen
 
