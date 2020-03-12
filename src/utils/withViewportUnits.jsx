@@ -5,7 +5,7 @@ let screenWidth = Dimensions.get('window').width;
 let screenHeight = Dimensions.get('window').height;
 
 const withViewportUnits = (WrappedComponent) => {
-  return class extends React.Component {
+  class WithViewportUnits extends React.Component {
     constructor(props) {
       super(props);
     }
@@ -36,15 +36,22 @@ const withViewportUnits = (WrappedComponent) => {
     }
 
     render() {
+      const { forwardedRef, ...props } = this.props;
+
       return (
         <WrappedComponent
-          {...this.props}
+          {...props}
+          ref={forwardedRef}
           vh={(value) => this.viewportHeight(value)}
           vw={(value) => this.viewportWidth(value)}
         />
       );
     }
-  };
+  }
+
+  return React.forwardRef((props, ref) => {
+    return <WithViewportUnits {...props} forwardedRef={ref} />;
+  });
 };
 
 export default withViewportUnits;

@@ -19,109 +19,109 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: src/components/App/ui.jsx:73
+#: src/components/App/ui.jsx:74
 msgid "navigation.contacts.label"
 msgstr "Kontakte"
 
-#: src/components/App/ui.jsx:76
+#: src/components/App/ui.jsx:77
 msgid "navigation.dashboard.label"
 msgstr "Übersicht"
 
-#: src/components/App/ui.jsx:79
+#: src/components/App/ui.jsx:80
 msgid "navigation.share.label"
 msgstr "Teilen"
 
-#: src/components/partials/EntriesTabsView.jsx:429
+#: src/components/partials/EntriesTabsView.jsx:431
 #: src/components/widgets/DayOverview.jsx:91
 msgid "contacts"
 msgstr "Kontakte"
 
-#: src/components/partials/EntriesTabsView.jsx:439
+#: src/components/partials/EntriesTabsView.jsx:441
 #: src/components/widgets/DayOverview.jsx:79
 msgid "locations"
 msgstr "Orte"
 
-#: src/components/partials/EntriesTabsView.jsx:450
+#: src/components/partials/EntriesTabsView.jsx:452
 msgid "entries.contacts.list.new"
 msgstr "Neuer Kontakt"
 
-#: src/components/partials/EntriesTabsView.jsx:467
+#: src/components/partials/EntriesTabsView.jsx:469
 msgid "entries.search.list.empty"
 msgstr "Zu deiner Suche konnte nichts gefunden werden."
 
-#: src/components/partials/EntriesTabsView.jsx:474
+#: src/components/partials/EntriesTabsView.jsx:476
 msgid "entries.contacts.list.empty"
 msgstr ""
 "Du hast noch keinen Kontakt angelegt. Um direkt loszulegen, kannst du deine "
 "Kontakte importieren."
 
-#: src/components/partials/EntriesTabsView.jsx:478
+#: src/components/partials/EntriesTabsView.jsx:480
 msgid "entries.contacts.list.import.button"
 msgstr "Jetzt importieren"
 
-#: src/components/partials/EntriesTabsView.jsx:497
+#: src/components/partials/EntriesTabsView.jsx:499
 msgid "entries.locations.list.new"
 msgstr "Neuer Ort"
 
-#: src/components/partials/EntriesTabsView.jsx:513
+#: src/components/partials/EntriesTabsView.jsx:515
 msgid "entries.locations.list.empty"
 msgstr ""
 "Du hast noch keinen Ort angelegt. Beginne jetzt und erstelle deinen ersten "
 "Ort."
 
-#: src/components/partials/EntriesTabsView.jsx:528
+#: src/components/partials/EntriesTabsView.jsx:530
 msgid "entries.selection.add"
 msgstr "Auswahl hinzufügen"
 
-#: src/components/partials/EntriesTabsView.jsx:538
+#: src/components/partials/EntriesTabsView.jsx:540
 msgid "entries.modals.new-contact.headline"
 msgstr "Neuer Kontakt"
 
-#: src/components/partials/EntriesTabsView.jsx:548
+#: src/components/partials/EntriesTabsView.jsx:550
 msgid "entries.modals.new-contact.placeholder.name"
 msgstr "Vorname Nachname"
 
-#: src/components/partials/EntriesTabsView.jsx:560
+#: src/components/partials/EntriesTabsView.jsx:562
 msgid "entries.modals.new-contact.placeholder.phone-number"
 msgstr "Telefon"
 
-#: src/components/partials/EntriesTabsView.jsx:569
+#: src/components/partials/EntriesTabsView.jsx:571
 msgid "entries.modals.new-contact.button"
 msgstr "Hinzufügen"
 
-#: src/components/partials/EntriesTabsView.jsx:578
+#: src/components/partials/EntriesTabsView.jsx:580
 msgid "entries.modals.new-location.headline"
 msgstr "Neuer Ort"
 
-#: src/components/partials/EntriesTabsView.jsx:588
+#: src/components/partials/EntriesTabsView.jsx:590
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Titel"
 
-#: src/components/partials/EntriesTabsView.jsx:599
+#: src/components/partials/EntriesTabsView.jsx:601
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Beschreibung"
 
-#: src/components/partials/EntriesTabsView.jsx:608
+#: src/components/partials/EntriesTabsView.jsx:610
 msgid "entries.modals.new-location.button"
 msgstr "Hinzufügen"
 
-#: src/components/partials/EntriesTabsView.jsx:617
+#: src/components/partials/EntriesTabsView.jsx:619
 msgid "entries.modals.select-location.headline"
 msgstr "Ort auswählen"
 
-#: src/components/partials/EntriesTabsView.jsx:636
+#: src/components/partials/EntriesTabsView.jsx:638
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Beschreibung"
 
-#: src/components/partials/EntriesTabsView.jsx:651
+#: src/components/partials/EntriesTabsView.jsx:653
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/components/partials/EntriesTabsView.jsx:652
+#: src/components/partials/EntriesTabsView.jsx:654
 msgid "Confirm"
 msgstr "Bestätigen"
 
-#: src/components/partials/EntriesTabsView.jsx:665
+#: src/components/partials/EntriesTabsView.jsx:667
 msgid "entries.modals.select-location.button"
 msgstr "Auswählen"
 
@@ -133,25 +133,47 @@ msgstr "Eintrag hinzufügen"
 msgid "contacts-screen.header.headline"
 msgstr "Kontakte verwalten"
 
-#: src/components/screens/Dashboard/ui.jsx:75
+#: src/components/screens/Dashboard/ui.jsx:76
 msgid "dashboard-screen.header.buttons.policy"
 msgstr "Policy"
 
-#: src/components/screens/Day/ui.jsx:68
+#: src/components/screens/Dashboard/ui.jsx:82
+msgid "dashboard-screen.header.buttons.export"
+msgstr "Export"
+
+#: src/components/screens/Day/ui.jsx:72
 msgid "day-screen.header.headline"
 msgstr "Tagesübersicht"
 
-#: src/components/screens/Day/ui.jsx:76
+#: src/components/screens/Day/ui.jsx:88
 msgid "day-screen.contacts.empty"
 msgstr "Du hast für diesen Tag noch keine Kontakte hinzugefügt."
 
-#: src/components/screens/Day/ui.jsx:77
+#: src/components/screens/Day/ui.jsx:89
 msgid "day-screen.locations.empty"
 msgstr "Du hast für diesen Tag noch keine Orte hinzugefügt."
 
-#: src/components/screens/Day/ui.jsx:87
+#: src/components/screens/Day/ui.jsx:99
 msgid "day-screen.entries.add"
 msgstr "Eintrag hinzufügen"
+
+#: src/components/screens/Export/ui.jsx:85
+msgid "export-screen.header.headline"
+msgstr "Export"
+
+#: src/components/screens/Export/ui.jsx:91
+msgid "export-screen.content.section-1.headline"
+msgstr "Deine Übersicht"
+
+#: src/components/screens/Export/ui.jsx:92
+msgid "export-screen.content.section-1.text"
+msgstr ""
+"Zusammen können wir Infektionswege nachvollziehen und so eine Ausbreitung "
+"eindämmen."
+
+#: src/components/screens/Export/ui.jsx:93
+msgid "export-screen.coming-soon"
+msgstr "Kommt bald!"
 
 #: src/components/screens/Policy/ui.jsx:79
 msgid "policy-screen.header.headline"
@@ -174,8 +196,8 @@ msgstr "Deine Daten gehören dir."
 #: src/components/screens/Policy/ui.jsx:88
 msgid "policy-screen.content.section-2.text"
 msgstr ""
-"Alle Informationen, die du in Coronika anlegst, werden lokal gespeichert. Keine "
-"Daten werden getrackt oder weitergegeben."
+"Alle Informationen, die du in Coronika anlegst, werden lokal gespeichert. "
+"Keine Daten werden getrackt oder weitergegeben."
 
 #: src/components/screens/Welcome/ui.jsx:14
 msgid "welcome-screen.slides.intro.headline"

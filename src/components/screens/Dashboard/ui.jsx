@@ -1,3 +1,4 @@
+import UilFile from '@iconscout/react-native-unicons/icons/uil-file';
 import UilLock from '@iconscout/react-native-unicons/icons/uil-lock';
 import moment from 'moment';
 import React from 'react';
@@ -32,13 +33,14 @@ const Dashboard = ({ days, total, openDay, navigation, vw, __ }) => {
     headerButtonsItem: {
       alignItems: 'center',
       flexDirection: 'row',
+      marginLeft: vw(3),
     },
     headerButtonsItemText: {
       color: '#555555',
       fontFamily: 'JetBrainsMono-Regular',
-      fontSize: vw(3),
+      fontSize: vw(3.2),
       marginLeft: vw(1),
-      textTransform: 'uppercase',
+      textTransform: 'lowercase',
     },
     view: {
       alignItems: 'center',
@@ -57,7 +59,7 @@ const Dashboard = ({ days, total, openDay, navigation, vw, __ }) => {
     .milliseconds(0);
 
   const totalTimespan = moment(today).subtract(21, 'days');
-
+  const goToExport = () => navigation.navigate('Export');
   const goToPolicy = () => navigation.navigate('Policy');
 
   return (
@@ -72,6 +74,12 @@ const Dashboard = ({ days, total, openDay, navigation, vw, __ }) => {
                 <UilLock color={'#000000'} size={vw(4)} />
 
                 <Text style={styles.headerButtonsItemText}>{__('dashboard-screen.header.buttons.policy')}</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity onPress={() => goToExport()} style={styles.headerButtonsItem}>
+                <UilFile color={'#000000'} size={vw(4)} />
+
+                <Text style={styles.headerButtonsItemText}>{__('dashboard-screen.header.buttons.export')}</Text>
               </TouchableOpacity>
             </View>
           </View>
