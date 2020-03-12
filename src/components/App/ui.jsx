@@ -9,10 +9,10 @@ import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 import screens from '../screens';
 
-const onShare = async () => {
+const onShare = async (message) => {
   try {
     const result = await Share.share({
-      message: 'coronika app | https://coronika.app/',
+      message,
       title: 'coronika',
     });
 
@@ -112,57 +112,59 @@ const TabNavigationItem = withI18n(
   })
 );
 
-const AppNavigatorTabBar = withViewportUnits(({ state, descriptors, navigation, vw }) => {
-  // noinspection JSUnresolvedFunction
-  const styles = StyleSheet.create({
-    navigationBar: {
-      alignItems: 'center',
-      backgroundColor: '#ffffff',
-      display: 'flex',
-      flexDirection: 'row',
-      height: vw(22),
-      justifyContent: 'space-evenly',
-    },
-  });
+const AppNavigatorTabBar = withI18n(
+  withViewportUnits(({ state, descriptors, navigation, vw, __ }) => {
+    // noinspection JSUnresolvedFunction
+    const styles = StyleSheet.create({
+      navigationBar: {
+        alignItems: 'center',
+        backgroundColor: '#ffffff',
+        display: 'flex',
+        flexDirection: 'row',
+        height: vw(22),
+        justifyContent: 'space-evenly',
+      },
+    });
 
-  return (
-    <View style={styles.navigationBar}>
-      {state.routes.map((route, index) => {
-        const isFocused = state.index === index;
-        const { name: routeName } = route;
+    return (
+      <View style={styles.navigationBar}>
+        {state.routes.map((route, index) => {
+          const isFocused = state.index === index;
+          const { name: routeName } = route;
 
-        const onPress = () => {
-          if (routeName === 'Share') {
-            // noinspection JSIgnoredPromiseFromCall
-            onShare();
-          } else if (routeName === 'Dashboard' && isFocused) {
-            const subNavigationRouteName = route.state
-              ? route.state.routes[route.state.index].name
-              : route.params?.screen || 'Dashboard';
+          const onPress = () => {
+            if (routeName === 'Share') {
+              // noinspection JSIgnoredPromiseFromCall
+              onShare(__('app.share.message'));
+            } else if (routeName === 'Dashboard' && isFocused) {
+              const subNavigationRouteName = route.state
+                ? route.state.routes[route.state.index].name
+                : route.params?.screen || 'Dashboard';
 
-            if (subNavigationRouteName !== 'Dashboard') {
-              //console.log(descriptors);
+              if (subNavigationRouteName !== 'Dashboard') {
+                //console.log(descriptors);
 
-              // TODO: reset to dashboard screen if other screen is visible
+                // TODO: reset to dashboard screen if other screen is visible
+                navigation.navigate(routeName);
+              }
+            } else if (!isFocused) {
               navigation.navigate(routeName);
             }
-          } else if (!isFocused) {
-            navigation.navigate(routeName);
-          }
-        };
+          };
 
-        return (
-          <TabNavigationItem
-            isFocused={isFocused}
-            key={`main-navigation-item-${index}`}
-            onPress={onPress}
-            routeName={routeName}
-          />
-        );
-      })}
-    </View>
-  );
-});
+          return (
+            <TabNavigationItem
+              isFocused={isFocused}
+              key={`main-navigation-item-${index}`}
+              onPress={onPress}
+              routeName={routeName}
+            />
+          );
+        })}
+      </View>
+    );
+  })
+);
 
 /*
 const isTabBarVisibleOnDashboard = (route) => {

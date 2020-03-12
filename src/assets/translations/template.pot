@@ -3,6 +3,10 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
+#: src/components/App/ui.jsx:138
+msgid "app.share.message"
+msgstr ""
+
 #: src/components/App/ui.jsx:74
 msgid "navigation.contacts.label"
 msgstr ""

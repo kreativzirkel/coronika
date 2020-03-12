@@ -19,6 +19,17 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
+#: src/components/App/ui.jsx:138
+msgid "app.share.message"
+msgstr ""
+"Don't let coronavirus tip you into panic. Stay informed and help the people "
+"around you by…\n"
+"✅…logging contacts and places you have met or stayed at\n"
+"✅…following hygiene tips\n"
+"✅…consume reputable sources of information\n"
+"Stay healthy and remember to wash your hands regularly! ✋😉 https://coronika."
+"app/"
+
 #: src/components/App/ui.jsx:74
 msgid "navigation.contacts.label"
 msgstr "Contacts"
