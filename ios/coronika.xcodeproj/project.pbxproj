@@ -58,6 +58,8 @@
 		1B0B7943E65D4243A8DEDD68 /* JetBrainsMono-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Regular.ttf"; path = "../src/assets/fonts/JetBrainsMono-Regular.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* coronika-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "coronika-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* coronika-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "coronika-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		352B9F0D2419BC96001E8AA4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		352B9F0E2419BCB1001E8AA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		35786470241826C00040C421 /* coronika-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "coronika-Bridging-Header.h"; sourceTree = "<group>"; };
 		35786471241826C00040C421 /* workaround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workaround.swift; sourceTree = "<group>"; };
 		3928A9DB4895EC607E5A9129 /* Pods-coronika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coronika.debug.xcconfig"; path = "Target Support Files/Pods-coronika/Pods-coronika.debug.xcconfig"; sourceTree = "<group>"; };
@@ -332,8 +334,9 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				English,
-				en,
 				Base,
+				de,
+				en,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
@@ -597,6 +600,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				13B07FB21A68108700A75B9A /* Base */,
+				352B9F0D2419BC96001E8AA4 /* de */,
+				352B9F0E2419BCB1001E8AA4 /* en */,
 			);
 			name = LaunchScreen.xib;
 			path = coronika;
