@@ -234,7 +234,8 @@ msgstr "Deine Daten gehören dir!"
 
 #: src/components/screens/Welcome/ui.jsx:29
 msgid "welcome-screen.slides.local-data.text"
-msgstr "Alle Informationen, die in Coronika anlegst werden lokal gespeichert. "
+msgstr ""
+"Alle Informationen, die du in Coronika anlegst werden lokal gespeichert. "
 
 #: src/components/screens/Welcome/ui.jsx:30
 msgid "welcome-screen.slides.local-data.button"
