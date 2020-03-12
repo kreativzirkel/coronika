@@ -7,7 +7,7 @@ import Layout from '../../widgets/Layout';
 
 const slider = React.createRef();
 
-const Welcome = ({ navigation, vw, __ }) => {
+const Welcome = ({ finish, navigation, vw, __ }) => {
   const slides = [
     {
       animation: require('../../../assets/animations/why.json'),
@@ -88,7 +88,7 @@ const Welcome = ({ navigation, vw, __ }) => {
     if (!isFinished) {
       slider.current.goToSlide(nextSlide);
     } else {
-      navigation.navigate('App');
+      finish(navigation);
     }
   };
 
