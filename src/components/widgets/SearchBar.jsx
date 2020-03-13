@@ -16,9 +16,9 @@ const SearchBar = React.forwardRef(({ onPressSearchIcon, searchValue, setSearchV
       justifyContent: 'center',
       margin: 'auto',
       position: 'absolute',
-      right: 20,
+      right: vw(3),
       top: 0,
-      width: 30,
+      width: vw(12),
       zIndex: 2,
     },
     searchInput: {
@@ -31,6 +31,7 @@ const SearchBar = React.forwardRef(({ onPressSearchIcon, searchValue, setSearchV
       marginLeft: vw(2.5),
       marginRight: vw(2.5),
       padding: vw(3.5),
+      paddingRight: vw(12),
       zIndex: 1,
     },
     searchWrapper: {

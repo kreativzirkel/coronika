@@ -309,6 +309,6 @@ msgstr "heute"
 msgid "total"
 msgstr "gesamt"
 
-#: src/components/widgets/SearchBar.jsx:56
+#: src/components/widgets/SearchBar.jsx:57
 msgid "placeholder.search-input"
 msgstr "Suche"
