@@ -18,3 +18,9 @@ Automatic generation using react-native-make.
 ## Splash Screen
 
 `react-native set-splash --path ./src/assets/images/splash_screen.png --resize cover --background "#17d9bd"`
+
+## Build
+
+### Update version number
+
+Update version in `package.json` and run `react-native-version` to update all necessary files.
