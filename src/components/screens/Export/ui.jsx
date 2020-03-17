@@ -38,13 +38,6 @@ const Export = ({ navigation, vw, __ }) => {
       marginLeft: 'auto',
       textTransform: 'lowercase',
     },
-    madeByText: {
-      color: '#909091',
-      fontFamily: 'JetBrainsMono-Regular',
-      fontSize: vw(3.5),
-      marginLeft: vw(2),
-      marginRight: vw(2),
-    },
     view: {
       alignItems: 'center',
       backgroundColor: '#ffffff',
@@ -64,15 +57,9 @@ const Export = ({ navigation, vw, __ }) => {
       justifyContent: 'space-evenly',
       width: '100%',
     },
-    viewMadeBy: {
-      alignItems: 'center',
-      flexDirection: 'row',
-    },
   });
 
   const goBack = () => navigation.dispatch(CommonActions.goBack());
-
-  const visitKreativzirkel = () => Linking.openURL('https://www.kreativzirkel.de/').catch(() => {});
 
   return (
     <Layout backgroundColor={COLOR_SECONDARY}>
@@ -93,14 +80,6 @@ const Export = ({ navigation, vw, __ }) => {
           <Text style={styles.contentHeadline}>{__('export-screen.content.section-2.headline')}</Text>
           <Text style={styles.contentText}>{__('export-screen.content.section-2.text')}</Text>
           <Text style={styles.comingSoon}>{__('export-screen.coming-soon')}</Text>
-        </View>
-
-        <View style={styles.viewMadeBy}>
-          <TouchableOpacity onPress={() => visitKreativzirkel()} style={styles.viewMadeBy}>
-            <Text style={styles.madeByText}>made with</Text>
-            <UilHeart color={'#ed2828'} size={vw(5.5)} />
-            <Text style={styles.madeByText}>by Kreativzirkel</Text>
-          </TouchableOpacity>
         </View>
       </View>
     </Layout>

@@ -1,4 +1,5 @@
 import UilBookOpen from '@iconscout/react-native-unicons/icons/uil-book-open';
+import UilHeartMedical from '@iconscout/react-native-unicons/icons/uil-heart-medical';
 import UilShareAlt from '@iconscout/react-native-unicons/icons/uil-share-alt';
 import UilUserPlus from '@iconscout/react-native-unicons/icons/uil-user-plus';
 import React from 'react';
@@ -79,6 +80,9 @@ const TabNavigationItem = withI18n(
       case 'Share':
         label = __('navigation.share.label');
         break;
+      case 'Tips':
+        label = __('navigation.tips.label');
+        break;
       default:
         label = routeName;
     }
@@ -92,6 +96,8 @@ const TabNavigationItem = withI18n(
           return <UilBookOpen {...props} />;
         case 'Share':
           return <UilShareAlt {...props} />;
+        case 'Tips':
+          return <UilHeartMedical {...props} />;
         default:
           return null;
       }
@@ -179,6 +185,7 @@ const AppNavigator = () => (
     backBehaviour={'none'}
     initialRouteName={'Dashboard'}
     tabBar={(props) => <AppNavigatorTabBar {...props} />}>
+    <Tab.Screen component={screens.Tips} name={'Tips'} />
     <Tab.Screen component={screens.Contacts} name={'Contacts'} />
     <Tab.Screen
       component={screens.Dashboard}

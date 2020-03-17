@@ -19,20 +19,24 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: src/components/App/ui.jsx:138
+#: src/components/App/ui.jsx:144
 msgid "app.share.message"
 msgstr ""
 
-#: src/components/App/ui.jsx:74
+#: src/components/App/ui.jsx:75
 msgid "navigation.contacts.label"
 msgstr ""
 
-#: src/components/App/ui.jsx:77
+#: src/components/App/ui.jsx:78
 msgid "navigation.dashboard.label"
 msgstr ""
 
-#: src/components/App/ui.jsx:80
+#: src/components/App/ui.jsx:81
 msgid "navigation.share.label"
+msgstr ""
+
+#: src/components/App/ui.jsx:84
+msgid "navigation.tips.label"
 msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:505
@@ -193,27 +197,27 @@ msgstr ""
 msgid "day-screen.entries.add"
 msgstr ""
 
-#: src/components/screens/Export/ui.jsx:85
+#: src/components/screens/Export/ui.jsx:72
 msgid "export-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/Export/ui.jsx:91
+#: src/components/screens/Export/ui.jsx:78
 msgid "export-screen.content.section-1.headline"
 msgstr ""
 
-#: src/components/screens/Export/ui.jsx:92
+#: src/components/screens/Export/ui.jsx:79
 msgid "export-screen.content.section-1.text"
 msgstr ""
 
-#: src/components/screens/Export/ui.jsx:93
+#: src/components/screens/Export/ui.jsx:80
 msgid "export-screen.content.section-2.headline"
 msgstr ""
 
-#: src/components/screens/Export/ui.jsx:94
+#: src/components/screens/Export/ui.jsx:81
 msgid "export-screen.content.section-2.text"
 msgstr ""
 
-#: src/components/screens/Export/ui.jsx:95
+#: src/components/screens/Export/ui.jsx:82
 msgid "export-screen.coming-soon"
 msgstr ""
 
@@ -235,6 +239,42 @@ msgstr ""
 
 #: src/components/screens/Policy/ui.jsx:88
 msgid "policy-screen.content.section-2.text"
+msgstr ""
+
+#: src/components/screens/Tips/ui.jsx:101
+msgid "tips-screen.intro.text"
+msgstr ""
+
+#: src/components/screens/Tips/ui.jsx:64
+msgid "tips.washing-hands.headline"
+msgstr ""
+
+#: src/components/screens/Tips/ui.jsx:68
+msgid "tips.avoid-crowds-of-people.headline"
+msgstr ""
+
+#: src/components/screens/Tips/ui.jsx:72
+msgid "tips.mouthguard.headline"
+msgstr ""
+
+#: src/components/screens/Tips/ui.jsx:76
+msgid "tips.coughing-sneezing.headline"
+msgstr ""
+
+#: src/components/screens/Tips/ui.jsx:80
+msgid "tips.not-feeling-well.headline"
+msgstr ""
+
+#: src/components/screens/Tips/ui.jsx:84
+msgid "tips.am-i-infected.headline"
+msgstr ""
+
+#: src/components/screens/Tips/ui.jsx:88
+msgid "tips.reliable-sources.headline"
+msgstr ""
+
+#: src/components/screens/Tips/ui.jsx:96
+msgid "tips-screen.header.headline"
 msgstr ""
 
 #: src/components/screens/Welcome/ui.jsx:14

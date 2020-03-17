@@ -19,7 +19,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: src/components/App/ui.jsx:138
+#: src/components/App/ui.jsx:144
 msgid "app.share.message"
 msgstr ""
 "Don't let coronavirus tip you into panic. Stay informed and help the people "
@@ -30,17 +30,21 @@ msgstr ""
 "Stay healthy and remember to wash your hands regularly! ✋😉 https://coronika."
 "app/"
 
-#: src/components/App/ui.jsx:74
+#: src/components/App/ui.jsx:75
 msgid "navigation.contacts.label"
 msgstr "Contacts"
 
-#: src/components/App/ui.jsx:77
+#: src/components/App/ui.jsx:78
 msgid "navigation.dashboard.label"
 msgstr "Diary"
 
-#: src/components/App/ui.jsx:80
+#: src/components/App/ui.jsx:81
 msgid "navigation.share.label"
 msgstr "Share"
+
+#: src/components/App/ui.jsx:84
+msgid "navigation.tips.label"
+msgstr "Tips"
 
 #: src/components/partials/EntriesTabsView.jsx:505
 #: src/components/widgets/DayOverview.jsx:91
@@ -205,31 +209,31 @@ msgstr "You haven’t added any locations for this day."
 msgid "day-screen.entries.add"
 msgstr "Add entry"
 
-#: src/components/screens/Export/ui.jsx:85
+#: src/components/screens/Export/ui.jsx:72
 msgid "export-screen.header.headline"
 msgstr "Export"
 
-#: src/components/screens/Export/ui.jsx:91
+#: src/components/screens/Export/ui.jsx:78
 msgid "export-screen.content.section-1.headline"
 msgstr "Your overview"
 
-#: src/components/screens/Export/ui.jsx:92
+#: src/components/screens/Export/ui.jsx:79
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "Collectively we can reconstruct paths of infection by informing health "
 "authorities and the people around you."
 
-#: src/components/screens/Export/ui.jsx:93
+#: src/components/screens/Export/ui.jsx:80
 msgid "export-screen.content.section-2.headline"
 msgstr "With big power comes big responsibility"
 
-#: src/components/screens/Export/ui.jsx:94
+#: src/components/screens/Export/ui.jsx:81
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "Keep in mind that the data is very sensitive. We highly recommend to not "
 "share it online or with random people."
 
-#: src/components/screens/Export/ui.jsx:95
+#: src/components/screens/Export/ui.jsx:82
 msgid "export-screen.coming-soon"
 msgstr "Coming soon!"
 
@@ -255,6 +259,44 @@ msgid "policy-screen.content.section-2.text"
 msgstr ""
 "All data created and used by Coronika is stored locally and will not be "
 "tracked or passed on."
+
+#: src/components/screens/Tips/ui.jsx:101
+msgid "tips-screen.intro.text"
+msgstr ""
+"Here you find knowledge that is helping you to reduce the risk of infection "
+"as much as possible and to do the right thing in case of an infection."
+
+#: src/components/screens/Tips/ui.jsx:64
+msgid "tips.washing-hands.headline"
+msgstr "Washing your hands"
+
+#: src/components/screens/Tips/ui.jsx:68
+msgid "tips.avoid-crowds-of-people.headline"
+msgstr "Avoid crowds of people"
+
+#: src/components/screens/Tips/ui.jsx:72
+msgid "tips.mouthguard.headline"
+msgstr "Mouthguard, yes or no?"
+
+#: src/components/screens/Tips/ui.jsx:76
+msgid "tips.coughing-sneezing.headline"
+msgstr "Proper coughing and sneezing"
+
+#: src/components/screens/Tips/ui.jsx:80
+msgid "tips.not-feeling-well.headline"
+msgstr "I don't feel well, do I have the virus?"
+
+#: src/components/screens/Tips/ui.jsx:84
+msgid "tips.am-i-infected.headline"
+msgstr "I'm afraid I got the coronavirus, what can I do?"
+
+#: src/components/screens/Tips/ui.jsx:88
+msgid "tips.reliable-sources.headline"
+msgstr "Where can I find reliable sources?"
+
+#: src/components/screens/Tips/ui.jsx:96
+msgid "tips-screen.header.headline"
+msgstr "Hygiene tips"
 
 #: src/components/screens/Welcome/ui.jsx:14
 msgid "welcome-screen.slides.intro.headline"

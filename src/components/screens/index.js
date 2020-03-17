@@ -5,6 +5,7 @@ import Day from './Day/logic';
 import Export from './Export/logic';
 import Policy from './Policy/logic';
 import Splash from './Splash/logic';
+import Tips from './Tips/logic';
 import Welcome from './Welcome/logic';
 
 export default {
@@ -15,5 +16,6 @@ export default {
   Export,
   Policy,
   Splash,
+  Tips,
   Welcome,
 };

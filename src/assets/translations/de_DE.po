@@ -19,28 +19,32 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: src/components/App/ui.jsx:138
+#: src/components/App/ui.jsx:144
 msgid "app.share.message"
 msgstr ""
-"Lass Coronavirus dich nicht in Panik versetzen. Bleibe informiert und hilf "
-"deinen Mitmenschen, indem du…\n"
+"Lass dich durch das Coronavirus nicht in Panik versetzen. Bleib informiert "
+"und hilf deinen Mitmenschen, indem du…\n"
 "✅…ein Tagebuch über Kontakte und Orte führst\n"
 "✅…auf Hygiene Tipps achtest\n"
 "✅…Updates von seriösen Quellen im Blick behältst\n"
 "Bleib gesund und vergiss nicht dir die Hände regelmäßig zu waschen! ✋😉 "
 "https://coronika.app/"
 
-#: src/components/App/ui.jsx:74
+#: src/components/App/ui.jsx:75
 msgid "navigation.contacts.label"
 msgstr "Kontakte"
 
-#: src/components/App/ui.jsx:77
+#: src/components/App/ui.jsx:78
 msgid "navigation.dashboard.label"
 msgstr "Tagebuch"
 
-#: src/components/App/ui.jsx:80
+#: src/components/App/ui.jsx:81
 msgid "navigation.share.label"
 msgstr "Teilen"
+
+#: src/components/App/ui.jsx:84
+msgid "navigation.tips.label"
+msgstr "Tips"
 
 #: src/components/partials/EntriesTabsView.jsx:505
 #: src/components/widgets/DayOverview.jsx:91
@@ -207,31 +211,31 @@ msgstr "Du hast für diesen Tag noch keine Orte hinzugefügt."
 msgid "day-screen.entries.add"
 msgstr "Eintrag hinzufügen"
 
-#: src/components/screens/Export/ui.jsx:85
+#: src/components/screens/Export/ui.jsx:72
 msgid "export-screen.header.headline"
 msgstr "Export"
 
-#: src/components/screens/Export/ui.jsx:91
+#: src/components/screens/Export/ui.jsx:78
 msgid "export-screen.content.section-1.headline"
 msgstr "Deine Übersicht"
 
-#: src/components/screens/Export/ui.jsx:92
+#: src/components/screens/Export/ui.jsx:79
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "Zusammen können wir Infektionswege nachvollziehen, indem wir "
 "Gesundheitsbehörden und Menschen in deinem Umfeld informieren"
 
-#: src/components/screens/Export/ui.jsx:93
+#: src/components/screens/Export/ui.jsx:80
 msgid "export-screen.content.section-2.headline"
 msgstr "Mit großer Macht kommt große Verantwortung"
 
-#: src/components/screens/Export/ui.jsx:94
+#: src/components/screens/Export/ui.jsx:81
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "Bitte bedenke, dass es sich um sensible Daten handelt. Wir empfehlen dir "
 "daher, sie nicht online oder mit Fremden zu teilen."
 
-#: src/components/screens/Export/ui.jsx:95
+#: src/components/screens/Export/ui.jsx:82
 msgid "export-screen.coming-soon"
 msgstr "Kommt bald!"
 
@@ -258,6 +262,45 @@ msgid "policy-screen.content.section-2.text"
 msgstr ""
 "Alle Informationen, die du in Coronika anlegst, werden lokal gespeichert. "
 "Keine Daten werden getrackt oder weitergegeben."
+
+#: src/components/screens/Tips/ui.jsx:101
+msgid "tips-screen.intro.text"
+msgstr ""
+"Hier findest du Wissen, das dir in der aktuellen Situation helfen sollen das "
+"Infektionsrisiko so gut wie möglich zu reduzieren und im Falle einer "
+"Ansteckung das Richtige zu tun."
+
+#: src/components/screens/Tips/ui.jsx:64
+msgid "tips.washing-hands.headline"
+msgstr "Wasche deine Hände richtig"
+
+#: src/components/screens/Tips/ui.jsx:68
+msgid "tips.avoid-crowds-of-people.headline"
+msgstr "Meide große Menschenmassen"
+
+#: src/components/screens/Tips/ui.jsx:72
+msgid "tips.mouthguard.headline"
+msgstr "Mundschutz, ja oder nein?"
+
+#: src/components/screens/Tips/ui.jsx:76
+msgid "tips.coughing-sneezing.headline"
+msgstr "Richtig Husten und Niesen"
+
+#: src/components/screens/Tips/ui.jsx:80
+msgid "tips.not-feeling-well.headline"
+msgstr "Ich fühle mich nicht wohl, habe ich das Virus?"
+
+#: src/components/screens/Tips/ui.jsx:84
+msgid "tips.am-i-infected.headline"
+msgstr "Ich fürchte erkrankt zu sein, was tun?"
+
+#: src/components/screens/Tips/ui.jsx:88
+msgid "tips.reliable-sources.headline"
+msgstr "Wo finde ich zuverlässige Quellen?"
+
+#: src/components/screens/Tips/ui.jsx:96
+msgid "tips-screen.header.headline"
+msgstr "Hygiene Tips"
 
 #: src/components/screens/Welcome/ui.jsx:14
 msgid "welcome-screen.slides.intro.headline"
