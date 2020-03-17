@@ -145,6 +145,7 @@ android {
     defaultConfig {
         applicationId "de.kreativzirkel.coronika"
         minSdkVersion rootProject.ext.minSdkVersion
+        resConfigs "de", "en"
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 7
         versionName "1.0.0"

@@ -5,7 +5,7 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: en_US\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,297 +15,272 @@ msgstr ""
 "esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: src/components/App/ui.jsx:138
 msgid "app.share.message"
 msgstr ""
-"Don't let coronavirus tip you into panic. Stay informed and help the people "
-"around you by…\n"
-"✅…logging contacts and places you have met or stayed at\n"
-"✅…following hygiene tips\n"
-"✅…consume reputable sources of information\n"
-"Stay healthy and remember to wash your hands regularly! ✋😉 https://coronika."
-"app/"
 
 #: src/components/App/ui.jsx:74
 msgid "navigation.contacts.label"
-msgstr "Contacts"
+msgstr ""
 
 #: src/components/App/ui.jsx:77
 msgid "navigation.dashboard.label"
-msgstr "Diary"
+msgstr ""
 
 #: src/components/App/ui.jsx:80
 msgid "navigation.share.label"
-msgstr "Share"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:505
 #: src/components/widgets/DayOverview.jsx:91
 msgid "contacts"
-msgstr "contacts"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:515
 #: src/components/widgets/DayOverview.jsx:79
 msgid "locations"
-msgstr "locations"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:526
 msgid "entries.contacts.list.new"
-msgstr "New contact"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:545
 msgid "entries.search.list.empty"
-msgstr "Nothing could be found on your search."
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:552
 msgid "entries.contacts.list.empty"
 msgstr ""
-"You have not yet created a contact. To get started right away, you can "
-"import your contacts."
 
 #: src/components/partials/EntriesTabsView.jsx:556
 msgid "entries.contacts.list.import.button"
-msgstr "Import now"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:575
 msgid "entries.locations.list.new"
-msgstr "New location"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:593
 msgid "entries.locations.list.empty"
 msgstr ""
-"You haven’t created a location yet. Start now and create your first location."
 
 #: src/components/partials/EntriesTabsView.jsx:608
 msgid "entries.selection.add"
-msgstr "Add selection"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:620
 msgid "entries.modals.update-contact.headline"
-msgstr "Edit contact"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:621
 msgid "entries.modals.new-contact.headline"
-msgstr "New contact"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:632
 msgid "entries.modals.new-contact.placeholder.name"
-msgstr "Name"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:644
 msgid "entries.modals.new-contact.placeholder.phone-number"
-msgstr "Phone"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:657
 msgid "entries.modals.update-contact.button"
-msgstr "Save"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:658
 msgid "entries.modals.new-contact.button"
-msgstr "Add"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:670
 msgid "entries.modals.update-location.headline"
-msgstr "Edit location"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:671
 msgid "entries.modals.new-location.headline"
-msgstr "New location"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:682
 msgid "entries.modals.new-location.placeholder.title"
-msgstr "Title"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:693
 msgid "entries.modals.new-location.placeholder.description"
-msgstr "Description"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:706
 msgid "entries.modals.update-location.button"
-msgstr "Save"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:707
 msgid "entries.modals.new-location.button"
-msgstr "Add"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:717
 msgid "entries.modals.select-location.headline"
-msgstr "Select location"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:736
 msgid "entries.modals.select-location.placeholder.description"
-msgstr "Description"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:751
 msgid "Cancel"
-msgstr "Cancel"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:752
 msgid "Confirm"
-msgstr "Confirm"
+msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:765
 msgid "entries.modals.select-location.button"
-msgstr "Select"
+msgstr ""
 
 #: src/components/screens/AddEntry/ui.jsx:37
 msgid "add-entry-screen.header.headline"
-msgstr "Add entry"
+msgstr ""
 
 #: src/components/screens/Contacts/ui.jsx:125
 msgid "contacts-screen.header.button.import"
-msgstr "Import"
+msgstr ""
 
 #: src/components/screens/Contacts/ui.jsx:128
 msgid "contacts-screen.header.headline"
-msgstr "Manage contacts"
+msgstr ""
 
 #: src/components/screens/Contacts/ui.jsx:145
 msgid "contacts-screen.modals.import-contacts.headline"
-msgstr "Import contacts"
+msgstr ""
 
 #: src/components/screens/Contacts/ui.jsx:151
 msgid "contacts-screen.modals.import-contacts.text"
 msgstr ""
-"Import your contacts so that you can start right away. All your contacts are "
-"stored locally. No data is tracked or shared."
 
 #: src/components/screens/Contacts/ui.jsx:157
 msgid "contacts-screen.modals.import-contacts.button.importing"
-msgstr "Importing..."
+msgstr ""
 
 #: src/components/screens/Contacts/ui.jsx:158
 msgid "contacts-screen.modals.import-contacts.button.default"
-msgstr "Import now"
+msgstr ""
 
 #: src/components/screens/Dashboard/ui.jsx:76
 msgid "dashboard-screen.header.buttons.policy"
-msgstr "Policy"
+msgstr ""
 
 #: src/components/screens/Dashboard/ui.jsx:82
 msgid "dashboard-screen.header.buttons.export"
-msgstr "Export"
+msgstr ""
 
 #: src/components/screens/Day/ui.jsx:72
 msgid "day-screen.header.headline"
-msgstr "Daily overview"
+msgstr ""
 
 #: src/components/screens/Day/ui.jsx:88
 msgid "day-screen.contacts.empty"
-msgstr "You have not added any contacts for this day."
+msgstr ""
 
 #: src/components/screens/Day/ui.jsx:89
 msgid "day-screen.locations.empty"
-msgstr "You haven’t added any locations for this day."
+msgstr ""
 
 #: src/components/screens/Day/ui.jsx:99
 msgid "day-screen.entries.add"
-msgstr "Add entry"
+msgstr ""
 
 #: src/components/screens/Export/ui.jsx:85
 msgid "export-screen.header.headline"
-msgstr "Export"
+msgstr ""
 
 #: src/components/screens/Export/ui.jsx:91
 msgid "export-screen.content.section-1.headline"
-msgstr "Your overview"
+msgstr ""
 
 #: src/components/screens/Export/ui.jsx:92
 msgid "export-screen.content.section-1.text"
 msgstr ""
-"Collectively we can reconstruct paths of infection by informing health "
-"authorities and the people around you."
 
 #: src/components/screens/Export/ui.jsx:93
 msgid "export-screen.content.section-2.headline"
-msgstr "With big power comes big responsibility"
+msgstr ""
 
 #: src/components/screens/Export/ui.jsx:94
 msgid "export-screen.content.section-2.text"
 msgstr ""
-"Keep in mind that the data is very sensitive. We highly recommend to not "
-"share it online or with random people."
 
 #: src/components/screens/Export/ui.jsx:95
 msgid "export-screen.coming-soon"
-msgstr "Coming soon!"
+msgstr ""
 
 #: src/components/screens/Policy/ui.jsx:79
 msgid "policy-screen.header.headline"
-msgstr "Policy"
+msgstr ""
 
 #: src/components/screens/Policy/ui.jsx:85
 msgid "policy-screen.content.section-1.headline"
-msgstr "Containing the spread of the virus together"
+msgstr ""
 
 #: src/components/screens/Policy/ui.jsx:86
 msgid "policy-screen.content.section-1.text"
 msgstr ""
-"By tracing the paths of infection we can limit further spread of COVID-19."
 
 #: src/components/screens/Policy/ui.jsx:87
 msgid "policy-screen.content.section-2.headline"
-msgstr "Your data is yours alone"
+msgstr ""
 
 #: src/components/screens/Policy/ui.jsx:88
 msgid "policy-screen.content.section-2.text"
 msgstr ""
-"All data created and used by Coronika is stored locally and will not be "
-"tracked or passed on."
 
 #: src/components/screens/Welcome/ui.jsx:14
 msgid "welcome-screen.slides.intro.headline"
-msgstr "Fighting corona-virus together"
+msgstr ""
 
 #: src/components/screens/Welcome/ui.jsx:15
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
-"Log contacts and locations, reconstruct paths of infection and help stopping "
-"the spread."
 
 #: src/components/screens/Welcome/ui.jsx:16
 msgid "welcome-screen.slides.intro.button"
-msgstr "Great, I want to help, too"
+msgstr ""
 
 #: src/components/screens/Welcome/ui.jsx:21
 msgid "welcome-screen.slides.how-to.headline"
-msgstr "A diary for our collective health"
+msgstr ""
 
 #: src/components/screens/Welcome/ui.jsx:22
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
-"Write down who you have met, the public places you have visited and make a "
-"contribution to the health of everyone."
 
 #: src/components/screens/Welcome/ui.jsx:23
 msgid "welcome-screen.slides.how-to.button"
-msgstr "Okey dokey"
+msgstr ""
 
 #: src/components/screens/Welcome/ui.jsx:28
 msgid "welcome-screen.slides.local-data.headline"
-msgstr "Your data is yours alone"
+msgstr ""
 
 #: src/components/screens/Welcome/ui.jsx:29
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
-"All data created and used by Coronika is stored locally and will not be "
-"tracked or passed on."
 
 #: src/components/screens/Welcome/ui.jsx:30
 msgid "welcome-screen.slides.local-data.button"
-msgstr "Start now"
+msgstr ""
 
 #: src/components/widgets/DayOverview.jsx:72
 msgid "today"
-msgstr "today"
+msgstr ""
 
 #: src/components/widgets/DayOverview.jsx:75
 msgid "total"
-msgstr "total"
+msgstr ""
 
 #: src/components/widgets/SearchBar.jsx:57
 msgid "placeholder.search-input"
-msgstr "Search"
+msgstr ""
