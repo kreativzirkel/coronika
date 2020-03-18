@@ -111,6 +111,6 @@ const Container = container(Screen, {
   componentDidMount() {},
 });
 
-const Contacts = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Container)));
+const Directory = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Container)));
 
-export default Contacts;
+export default Directory;

@@ -31,8 +31,8 @@ msgstr ""
 "app/"
 
 #: src/components/App/ui.jsx:75
-msgid "navigation.contacts.label"
-msgstr "Contacts"
+msgid "navigation.directory.label"
+msgstr "Directory"
 
 #: src/components/App/ui.jsx:78
 msgid "navigation.dashboard.label"
@@ -47,6 +47,7 @@ msgid "navigation.tips.label"
 msgstr "Tips"
 
 #: src/components/partials/EntriesTabsView.jsx:505
+#: src/components/widgets/DayOverview.jsx:91
 msgid "persons"
 msgstr "persons"
 
@@ -158,32 +159,6 @@ msgstr "Select"
 msgid "add-entry-screen.header.headline"
 msgstr "Add entry"
 
-#: src/components/screens/Contacts/ui.jsx:125
-msgid "contacts-screen.header.button.import"
-msgstr "Import"
-
-#: src/components/screens/Contacts/ui.jsx:128
-msgid "contacts-screen.header.headline"
-msgstr "Manage contacts"
-
-#: src/components/screens/Contacts/ui.jsx:145
-msgid "contacts-screen.modals.import-persons.headline"
-msgstr "Import persons"
-
-#: src/components/screens/Contacts/ui.jsx:151
-msgid "contacts-screen.modals.import-persons.text"
-msgstr ""
-"Import persons from your phone book so that you can start right away. All "
-"your persons are stored locally. No data is tracked or shared."
-
-#: src/components/screens/Contacts/ui.jsx:157
-msgid "contacts-screen.modals.import-persons.button.importing"
-msgstr "Importing..."
-
-#: src/components/screens/Contacts/ui.jsx:158
-msgid "contacts-screen.modals.import-persons.button.default"
-msgstr "Import now"
-
 #: src/components/screens/Dashboard/ui.jsx:76
 msgid "dashboard-screen.header.buttons.policy"
 msgstr "Policy"
@@ -197,8 +172,8 @@ msgid "day-screen.header.headline"
 msgstr "Daily overview"
 
 #: src/components/screens/Day/ui.jsx:88
-msgid "day-screen.contacts.empty"
-msgstr "You have not added any contacts for this day."
+msgid "day-screen.persons.empty"
+msgstr "You have not added any persons for this day."
 
 #: src/components/screens/Day/ui.jsx:89
 msgid "day-screen.locations.empty"
@@ -207,6 +182,32 @@ msgstr "You haven’t added any locations for this day."
 #: src/components/screens/Day/ui.jsx:99
 msgid "day-screen.entries.add"
 msgstr "Add entry"
+
+#: src/components/screens/Directory/ui.jsx:125
+msgid "contacts-screen.header.button.import"
+msgstr "Import"
+
+#: src/components/screens/Directory/ui.jsx:128
+msgid "contacts-screen.header.headline"
+msgstr "Manage directory"
+
+#: src/components/screens/Directory/ui.jsx:145
+msgid "contacts-screen.modals.import-persons.headline"
+msgstr "Import persons"
+
+#: src/components/screens/Directory/ui.jsx:151
+msgid "contacts-screen.modals.import-persons.text"
+msgstr ""
+"Import persons from your phone book so that you can start right away. All "
+"your persons are stored locally. No data is tracked or shared."
+
+#: src/components/screens/Directory/ui.jsx:157
+msgid "contacts-screen.modals.import-persons.button.importing"
+msgstr "Importing..."
+
+#: src/components/screens/Directory/ui.jsx:158
+msgid "contacts-screen.modals.import-persons.button.default"
+msgstr "Import now"
 
 #: src/components/screens/Export/ui.jsx:72
 msgid "export-screen.header.headline"
@@ -537,10 +538,12 @@ msgstr "today"
 msgid "total"
 msgstr "total"
 
-#: src/components/widgets/DayOverview.jsx:91
-msgid "contacts"
-msgstr "contacts"
-
 #: src/components/widgets/SearchBar.jsx:57
 msgid "placeholder.search-input"
 msgstr "Search"
+
+#~ msgid "navigation.contacts.label"
+#~ msgstr "Contacts"
+
+#~ msgid "contacts"
+#~ msgstr "contacts"

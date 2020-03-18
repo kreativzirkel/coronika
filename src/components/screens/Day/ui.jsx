@@ -85,7 +85,7 @@ const Day = ({ contacts, locations, timestamp, deleteContactFromDay, deleteLocat
 
       <EntriesTabsView
         contacts={contacts}
-        customContactsEmptyText={__('day-screen.contacts.empty')}
+        customContactsEmptyText={__('day-screen.persons.empty')}
         customLocationsEmptyText={__('day-screen.locations.empty')}
         deleteContactItem={(id) => deleteContactFromDay(id)}
         deleteLocationItem={(id, description, time) => deleteLocationFromDay(id, description, time)}

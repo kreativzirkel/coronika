@@ -1,5 +1,5 @@
 import AddEntry from './AddEntry/logic';
-import Contacts from './Contacts/logic';
+import Directory from './Directory/logic';
 import Dashboard from './Dashboard/logic';
 import Day from './Day/logic';
 import Export from './Export/logic';
@@ -17,7 +17,7 @@ import Welcome from './Welcome/logic';
 
 export default {
   AddEntry,
-  Contacts,
+  Directory,
   Dashboard,
   Day,
   Export,

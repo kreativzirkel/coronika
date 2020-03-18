@@ -88,7 +88,7 @@ const DayOverview = ({ contacts, isDark, isTotal, locations, timestamp, today, v
         </Text>
       </View>
       <View style={styles.dayContactsWrapper}>
-        <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('contacts')}</Text>
+        <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('persons')}</Text>
         <Text
           style={{
             ...styles.dayValue,

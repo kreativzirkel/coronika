@@ -8,7 +8,7 @@ msgid "app.share.message"
 msgstr ""
 
 #: src/components/App/ui.jsx:75
-msgid "navigation.contacts.label"
+msgid "navigation.directory.label"
 msgstr ""
 
 #: src/components/App/ui.jsx:78
@@ -24,6 +24,7 @@ msgid "navigation.tips.label"
 msgstr ""
 
 #: src/components/partials/EntriesTabsView.jsx:505
+#: src/components/widgets/DayOverview.jsx:91
 msgid "persons"
 msgstr ""
 
@@ -132,30 +133,6 @@ msgstr ""
 msgid "add-entry-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/Contacts/ui.jsx:125
-msgid "contacts-screen.header.button.import"
-msgstr ""
-
-#: src/components/screens/Contacts/ui.jsx:128
-msgid "contacts-screen.header.headline"
-msgstr ""
-
-#: src/components/screens/Contacts/ui.jsx:145
-msgid "contacts-screen.modals.import-persons.headline"
-msgstr ""
-
-#: src/components/screens/Contacts/ui.jsx:151
-msgid "contacts-screen.modals.import-persons.text"
-msgstr ""
-
-#: src/components/screens/Contacts/ui.jsx:157
-msgid "contacts-screen.modals.import-persons.button.importing"
-msgstr ""
-
-#: src/components/screens/Contacts/ui.jsx:158
-msgid "contacts-screen.modals.import-persons.button.default"
-msgstr ""
-
 #: src/components/screens/Dashboard/ui.jsx:76
 msgid "dashboard-screen.header.buttons.policy"
 msgstr ""
@@ -169,7 +146,7 @@ msgid "day-screen.header.headline"
 msgstr ""
 
 #: src/components/screens/Day/ui.jsx:88
-msgid "day-screen.contacts.empty"
+msgid "day-screen.persons.empty"
 msgstr ""
 
 #: src/components/screens/Day/ui.jsx:89
@@ -178,6 +155,30 @@ msgstr ""
 
 #: src/components/screens/Day/ui.jsx:99
 msgid "day-screen.entries.add"
+msgstr ""
+
+#: src/components/screens/Directory/ui.jsx:125
+msgid "contacts-screen.header.button.import"
+msgstr ""
+
+#: src/components/screens/Directory/ui.jsx:128
+msgid "contacts-screen.header.headline"
+msgstr ""
+
+#: src/components/screens/Directory/ui.jsx:145
+msgid "contacts-screen.modals.import-persons.headline"
+msgstr ""
+
+#: src/components/screens/Directory/ui.jsx:151
+msgid "contacts-screen.modals.import-persons.text"
+msgstr ""
+
+#: src/components/screens/Directory/ui.jsx:157
+msgid "contacts-screen.modals.import-persons.button.importing"
+msgstr ""
+
+#: src/components/screens/Directory/ui.jsx:158
+msgid "contacts-screen.modals.import-persons.button.default"
 msgstr ""
 
 #: src/components/screens/Export/ui.jsx:72
@@ -460,10 +461,6 @@ msgstr ""
 
 #: src/components/widgets/DayOverview.jsx:75
 msgid "total"
-msgstr ""
-
-#: src/components/widgets/DayOverview.jsx:91
-msgid "contacts"
 msgstr ""
 
 #: src/components/widgets/SearchBar.jsx:57

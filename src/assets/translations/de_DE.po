@@ -31,8 +31,8 @@ msgstr ""
 "https://coronika.app/"
 
 #: src/components/App/ui.jsx:75
-msgid "navigation.contacts.label"
-msgstr "Kontakte"
+msgid "navigation.directory.label"
+msgstr "Verzeichnis"
 
 #: src/components/App/ui.jsx:78
 msgid "navigation.dashboard.label"
@@ -47,6 +47,7 @@ msgid "navigation.tips.label"
 msgstr "Tips"
 
 #: src/components/partials/EntriesTabsView.jsx:505
+#: src/components/widgets/DayOverview.jsx:91
 msgid "persons"
 msgstr "Peronen"
 
@@ -159,33 +160,6 @@ msgstr "Auswählen"
 msgid "add-entry-screen.header.headline"
 msgstr "Eintrag hinzufügen"
 
-#: src/components/screens/Contacts/ui.jsx:125
-msgid "contacts-screen.header.button.import"
-msgstr "Import"
-
-#: src/components/screens/Contacts/ui.jsx:128
-msgid "contacts-screen.header.headline"
-msgstr "Kontakte verwalten"
-
-#: src/components/screens/Contacts/ui.jsx:145
-msgid "contacts-screen.modals.import-persons.headline"
-msgstr "Personen importieren"
-
-#: src/components/screens/Contacts/ui.jsx:151
-msgid "contacts-screen.modals.import-persons.text"
-msgstr ""
-"Importiere Personen von Telefonbuch, damit du direkt loslegen kannst. Alle "
-"deine Personen werden lokal gespeichert. Keine Daten werden getrackt oder "
-"weitergegeben."
-
-#: src/components/screens/Contacts/ui.jsx:157
-msgid "contacts-screen.modals.import-persons.button.importing"
-msgstr "Importiere..."
-
-#: src/components/screens/Contacts/ui.jsx:158
-msgid "contacts-screen.modals.import-persons.button.default"
-msgstr "Jetzt importieren"
-
 #: src/components/screens/Dashboard/ui.jsx:76
 msgid "dashboard-screen.header.buttons.policy"
 msgstr "Policy"
@@ -199,8 +173,8 @@ msgid "day-screen.header.headline"
 msgstr "Tagesübersicht"
 
 #: src/components/screens/Day/ui.jsx:88
-msgid "day-screen.contacts.empty"
-msgstr "Du hast für diesen Tag noch keine Kontakte hinzugefügt."
+msgid "day-screen.persons.empty"
+msgstr "Du hast für diesen Tag noch keine Personen hinzugefügt."
 
 #: src/components/screens/Day/ui.jsx:89
 msgid "day-screen.locations.empty"
@@ -209,6 +183,33 @@ msgstr "Du hast für diesen Tag noch keine Orte hinzugefügt."
 #: src/components/screens/Day/ui.jsx:99
 msgid "day-screen.entries.add"
 msgstr "Eintrag hinzufügen"
+
+#: src/components/screens/Directory/ui.jsx:125
+msgid "contacts-screen.header.button.import"
+msgstr "Import"
+
+#: src/components/screens/Directory/ui.jsx:128
+msgid "contacts-screen.header.headline"
+msgstr "Verzeichnis verwalten"
+
+#: src/components/screens/Directory/ui.jsx:145
+msgid "contacts-screen.modals.import-persons.headline"
+msgstr "Personen importieren"
+
+#: src/components/screens/Directory/ui.jsx:151
+msgid "contacts-screen.modals.import-persons.text"
+msgstr ""
+"Importiere Personen von Telefonbuch, damit du direkt loslegen kannst. Alle "
+"deine Personen werden lokal gespeichert. Keine Daten werden getrackt oder "
+"weitergegeben."
+
+#: src/components/screens/Directory/ui.jsx:157
+msgid "contacts-screen.modals.import-persons.button.importing"
+msgstr "Importiere..."
+
+#: src/components/screens/Directory/ui.jsx:158
+msgid "contacts-screen.modals.import-persons.button.default"
+msgstr "Jetzt importieren"
 
 #: src/components/screens/Export/ui.jsx:72
 msgid "export-screen.header.headline"
@@ -535,10 +536,12 @@ msgstr "heute"
 msgid "total"
 msgstr "gesamt"
 
-#: src/components/widgets/DayOverview.jsx:91
-msgid "contacts"
-msgstr "Kontakte"
-
 #: src/components/widgets/SearchBar.jsx:57
 msgid "placeholder.search-input"
 msgstr "Suche"
+
+#~ msgid "navigation.contacts.label"
+#~ msgstr "Kontakte"
+
+#~ msgid "contacts"
+#~ msgstr "Kontakte"

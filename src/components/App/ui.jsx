@@ -71,8 +71,8 @@ const TabNavigationItem = withI18n(
     let label;
 
     switch (routeName) {
-      case 'Contacts':
-        label = __('navigation.contacts.label');
+      case 'Directory':
+        label = __('navigation.directory.label');
         break;
       case 'Dashboard':
         label = __('navigation.dashboard.label');
@@ -90,7 +90,7 @@ const TabNavigationItem = withI18n(
     const NavigationIcon = (props) => {
       /* eslint-disable react/jsx-props-no-spreading */
       switch (routeName) {
-        case 'Contacts':
+        case 'Directory':
           return <UilUserPlus {...props} />;
         case 'Dashboard':
           return <UilBookOpen {...props} />;
@@ -186,7 +186,7 @@ const AppNavigator = () => (
     initialRouteName={'Dashboard'}
     tabBar={(props) => <AppNavigatorTabBar {...props} />}>
     <Tab.Screen component={screens.Tips} name={'Tips'} />
-    <Tab.Screen component={screens.Contacts} name={'Contacts'} />
+    <Tab.Screen component={screens.Directory} name={'Directory'} />
     <Tab.Screen
       component={screens.Dashboard}
       name={'Dashboard'}

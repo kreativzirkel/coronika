@@ -8,7 +8,7 @@ import EntriesTabsView from '../../partials/EntriesTabsView';
 import Header from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 
-const Contacts = ({
+const Directory = ({
   contacts,
   contactsImporting,
   isImportContactsModalVisible,
@@ -165,4 +165,4 @@ const Contacts = ({
   );
 };
 
-export default Contacts;
+export default Directory;
