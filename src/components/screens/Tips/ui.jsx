@@ -4,13 +4,12 @@ import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../../constants';
 import Header from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 
-const Tips = ({ vw, __ }) => {
+const Tips = ({ navigation, vw, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     contentText: {
       fontFamily: 'JetBrainsMono-Regular',
       fontSize: vw(4.5),
-      textAlign: 'center',
     },
     header: {
       alignItems: 'center',
@@ -48,7 +47,6 @@ const Tips = ({ vw, __ }) => {
       width: '100%',
     },
     viewContent: {
-      alignItems: 'center',
       flex: 1,
       flexDirection: 'column',
       width: '100%',
@@ -62,31 +60,31 @@ const Tips = ({ vw, __ }) => {
   const tipsList = [
     {
       headline: __('tips.washing-hands.headline'),
-      routeName: '',
+      routeName: 'TipWashingHands',
     },
     {
       headline: __('tips.avoid-crowds-of-people.headline'),
-      routeName: '',
+      routeName: 'TipAvoidCrowdsOfPeople',
     },
     {
       headline: __('tips.mouthguard.headline'),
-      routeName: '',
+      routeName: 'TipWashingHands',
     },
     {
       headline: __('tips.coughing-sneezing.headline'),
-      routeName: '',
+      routeName: 'TipWashingHands',
     },
     {
       headline: __('tips.not-feeling-well.headline'),
-      routeName: '',
+      routeName: 'TipWashingHands',
     },
     {
       headline: __('tips.am-i-infected.headline'),
-      routeName: '',
+      routeName: 'TipWashingHands',
     },
     {
       headline: __('tips.reliable-sources.headline'),
-      routeName: '',
+      routeName: 'TipWashingHands',
     },
   ];
 
@@ -103,8 +101,8 @@ const Tips = ({ vw, __ }) => {
 
         <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
           {tipsList.map(({ headline, routeName }, index) => (
-            <View key={`tip-${index}`} style={{...styles.tipWrapper, ...(index === 0 && styles.tipWrapperFirst)}}>
-              <TouchableOpacity>
+            <View key={`tip-${index}`} style={{ ...styles.tipWrapper, ...(index === 0 && styles.tipWrapperFirst) }}>
+              <TouchableOpacity onPress={() => navigation.navigate(routeName)}>
                 <Text style={styles.tipText}>{headline}</Text>
               </TouchableOpacity>
             </View>

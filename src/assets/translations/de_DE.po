@@ -263,44 +263,104 @@ msgstr ""
 "Alle Informationen, die du in Coronika anlegst, werden lokal gespeichert. "
 "Keine Daten werden getrackt oder weitergegeben."
 
-#: src/components/screens/Tips/ui.jsx:101
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:102
+#: src/components/screens/Tips/ui.jsx:66
+msgid "tips.avoid-crowds-of-people.headline"
+msgstr "Meide große Menschenmassen"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:103
+msgid "tips.avoid-crowds-of-people.text"
+msgstr ""
+"Im Falle von Großveranstaltungen, aber auch beim Besuch eines Supermarktes "
+"oder der Fahrt mit der Bahn ist das Risiko mit einem infizierten Menschen "
+"(welcher Krankheit auch immer) grundsätzlich höher. Frage dich daher, welche "
+"Dinge du erledigen musst und worauf du möglicher-weise verzichten kannst."
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:79
+msgid "tips.avoid-crowds-of-people.list.item-1"
+msgstr "Großveranstaltungen vermeiden"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:80
+msgid "tips.avoid-crowds-of-people.list.item-2"
+msgstr "Kurze Strecken nicht mit der Bahn zurücklegen"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:81
+msgid "tips.avoid-crowds-of-people.list.item-3"
+msgstr "Oft und gründlich die Hände waschen"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:82
+msgid "tips.avoid-crowds-of-people.list.item-4"
+msgstr "2 Meter Sicherheitsabstand zu erkrankten Personen halten"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:83
+msgid "tips.avoid-crowds-of-people.list.item-5"
+msgstr "Husten- und Nies-Etikette einhalten"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:96
+#: src/components/screens/TipWashingHands.jsx:96
+#: src/components/screens/Tips/ui.jsx:94
+msgid "tips-screen.header.headline"
+msgstr "Hygiene Tips"
+
+#: src/components/screens/TipWashingHands.jsx:102
+#: src/components/screens/Tips/ui.jsx:62
+msgid "tips.washing-hands.headline"
+msgstr "Wasche deine Hände richtig"
+
+#: src/components/screens/TipWashingHands.jsx:103
+msgid "tips.washing-hands.text"
+msgstr ""
+"Eine der wichtigsten zur Verhinderung einer weiteren Ausbreitung von Keimen "
+"ist gründliches Händewaschen:"
+
+#: src/components/screens/TipWashingHands.jsx:79
+msgid "tips.washing-hands.list.item-1"
+msgstr "gründlich einseifen und verreiben"
+
+#: src/components/screens/TipWashingHands.jsx:80
+msgid "tips.washing-hands.list.item-2"
+msgstr "Wasche deine Hände richtig"
+
+#: src/components/screens/TipWashingHands.jsx:81
+msgid "tips.washing-hands.list.item-3"
+msgstr ""
+"Innenflächen, Handrücken, Fingerspitzen, Daumen, Fingernägel, Räume zwischen "
+"den Fingern reinigen"
+
+#: src/components/screens/TipWashingHands.jsx:82
+msgid "tips.washing-hands.list.item-4"
+msgstr "ca. 30 - 60 Sek. lang"
+
+#: src/components/screens/TipWashingHands.jsx:83
+msgid "tips.washing-hands.list.item-5"
+msgstr "Hände abtrocknen"
+
+#: src/components/screens/Tips/ui.jsx:70
+msgid "tips.mouthguard.headline"
+msgstr "Mundschutz, ja oder nein?"
+
+#: src/components/screens/Tips/ui.jsx:74
+msgid "tips.coughing-sneezing.headline"
+msgstr "Richtig Husten und Niesen"
+
+#: src/components/screens/Tips/ui.jsx:78
+msgid "tips.not-feeling-well.headline"
+msgstr "Ich fühle mich nicht wohl, habe ich das Virus?"
+
+#: src/components/screens/Tips/ui.jsx:82
+msgid "tips.am-i-infected.headline"
+msgstr "Ich fürchte erkrankt zu sein, was tun?"
+
+#: src/components/screens/Tips/ui.jsx:86
+msgid "tips.reliable-sources.headline"
+msgstr "Wo finde ich zuverlässige Quellen?"
+
+#: src/components/screens/Tips/ui.jsx:99
 msgid "tips-screen.intro.text"
 msgstr ""
 "Hier findest du Wissen, das dir in der aktuellen Situation helfen sollen das "
 "Infektionsrisiko so gut wie möglich zu reduzieren und im Falle einer "
 "Ansteckung das Richtige zu tun."
-
-#: src/components/screens/Tips/ui.jsx:64
-msgid "tips.washing-hands.headline"
-msgstr "Wasche deine Hände richtig"
-
-#: src/components/screens/Tips/ui.jsx:68
-msgid "tips.avoid-crowds-of-people.headline"
-msgstr "Meide große Menschenmassen"
-
-#: src/components/screens/Tips/ui.jsx:72
-msgid "tips.mouthguard.headline"
-msgstr "Mundschutz, ja oder nein?"
-
-#: src/components/screens/Tips/ui.jsx:76
-msgid "tips.coughing-sneezing.headline"
-msgstr "Richtig Husten und Niesen"
-
-#: src/components/screens/Tips/ui.jsx:80
-msgid "tips.not-feeling-well.headline"
-msgstr "Ich fühle mich nicht wohl, habe ich das Virus?"
-
-#: src/components/screens/Tips/ui.jsx:84
-msgid "tips.am-i-infected.headline"
-msgstr "Ich fürchte erkrankt zu sein, was tun?"
-
-#: src/components/screens/Tips/ui.jsx:88
-msgid "tips.reliable-sources.headline"
-msgstr "Wo finde ich zuverlässige Quellen?"
-
-#: src/components/screens/Tips/ui.jsx:96
-msgid "tips-screen.header.headline"
-msgstr "Hygiene Tips"
 
 #: src/components/screens/Welcome/ui.jsx:14
 msgid "welcome-screen.slides.intro.headline"

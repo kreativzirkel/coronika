@@ -260,43 +260,112 @@ msgstr ""
 "All data created and used by Coronika is stored locally and will not be "
 "tracked or passed on."
 
-#: src/components/screens/Tips/ui.jsx:101
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:102
+#: src/components/screens/Tips/ui.jsx:66
+msgid "tips.avoid-crowds-of-people.headline"
+msgstr "Avoid crowds of people"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:103
+msgid "tips.avoid-crowds-of-people.text"
+msgstr ""
+"If possible, avoid going on trips, using public transport and instead work "
+"from home. In general, any contacts should be reduced to the essentials and "
+"the attendance of events with crowds of people should be avoided. Citizens "
+"who are older than 60 years of age should obtain a vaccine against "
+"pneumococcal infection."
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:79
+msgid "tips.avoid-crowds-of-people.list.item-1"
+msgstr "staying at home when you are unwell"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:80
+msgid "tips.avoid-crowds-of-people.list.item-2"
+msgstr "avoiding large public gatherings if they’re not essential"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:81
+msgid "tips.avoid-crowds-of-people.list.item-3"
+msgstr ""
+"keeping a distance of 2 metres between you and other people whenever possible"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:82
+msgid "tips.avoid-crowds-of-people.list.item-4"
+msgstr "covering your coughs and sneezes with your elbow or a tissue "
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:83
+msgid "tips.avoid-crowds-of-people.list.item-5"
+msgstr ""
+"minimising physical contact, especially with people at higher risk such as "
+"older people and people with existing health conditions"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:96
+#: src/components/screens/TipWashingHands.jsx:96
+#: src/components/screens/Tips/ui.jsx:94
+msgid "tips-screen.header.headline"
+msgstr "Hygiene tips"
+
+#: src/components/screens/TipWashingHands.jsx:102
+#: src/components/screens/Tips/ui.jsx:62
+msgid "tips.washing-hands.headline"
+msgstr "Washing your hands"
+
+#: src/components/screens/TipWashingHands.jsx:103
+msgid "tips.washing-hands.text"
+msgstr ""
+"Washing your hands is easy, and it’s one of the most effective ways to "
+"prevent the spread of germs. Clean hands can stop germs from spreading. "
+"Follow these five steps every time:"
+
+#: src/components/screens/TipWashingHands.jsx:79
+msgid "tips.washing-hands.list.item-1"
+msgstr ""
+"Wet your hands with clean, running water (warm or cold), turn off the tap, "
+"and apply soap."
+
+#: src/components/screens/TipWashingHands.jsx:80
+msgid "tips.washing-hands.list.item-2"
+msgstr ""
+"Lather your hands by rubbing them together with the soap. Lather the backs "
+"of your hands, between your fingers, and under your nails."
+
+#: src/components/screens/TipWashingHands.jsx:81
+msgid "tips.washing-hands.list.item-3"
+msgstr ""
+"Scrub your hands for at least 20 seconds. Need a timer? Hum the “Happy "
+"Birthday” song from beginning to end twice."
+
+#: src/components/screens/TipWashingHands.jsx:82
+msgid "tips.washing-hands.list.item-4"
+msgstr "Rinse your hands well under clean, running water."
+
+#: src/components/screens/TipWashingHands.jsx:83
+msgid "tips.washing-hands.list.item-5"
+msgstr "Dry your hands using a clean towel or air dry them."
+
+#: src/components/screens/Tips/ui.jsx:70
+msgid "tips.mouthguard.headline"
+msgstr "Mouthguard, yes or no?"
+
+#: src/components/screens/Tips/ui.jsx:74
+msgid "tips.coughing-sneezing.headline"
+msgstr "Proper coughing and sneezing"
+
+#: src/components/screens/Tips/ui.jsx:78
+msgid "tips.not-feeling-well.headline"
+msgstr "I don't feel well, do I have the virus?"
+
+#: src/components/screens/Tips/ui.jsx:82
+msgid "tips.am-i-infected.headline"
+msgstr "I'm afraid I got the coronavirus, what can I do?"
+
+#: src/components/screens/Tips/ui.jsx:86
+msgid "tips.reliable-sources.headline"
+msgstr "Where can I find reliable sources?"
+
+#: src/components/screens/Tips/ui.jsx:99
 msgid "tips-screen.intro.text"
 msgstr ""
 "Here you find knowledge that is helping you to reduce the risk of infection "
 "as much as possible and to do the right thing in case of an infection."
-
-#: src/components/screens/Tips/ui.jsx:64
-msgid "tips.washing-hands.headline"
-msgstr "Washing your hands"
-
-#: src/components/screens/Tips/ui.jsx:68
-msgid "tips.avoid-crowds-of-people.headline"
-msgstr "Avoid crowds of people"
-
-#: src/components/screens/Tips/ui.jsx:72
-msgid "tips.mouthguard.headline"
-msgstr "Mouthguard, yes or no?"
-
-#: src/components/screens/Tips/ui.jsx:76
-msgid "tips.coughing-sneezing.headline"
-msgstr "Proper coughing and sneezing"
-
-#: src/components/screens/Tips/ui.jsx:80
-msgid "tips.not-feeling-well.headline"
-msgstr "I don't feel well, do I have the virus?"
-
-#: src/components/screens/Tips/ui.jsx:84
-msgid "tips.am-i-infected.headline"
-msgstr "I'm afraid I got the coronavirus, what can I do?"
-
-#: src/components/screens/Tips/ui.jsx:88
-msgid "tips.reliable-sources.headline"
-msgstr "Where can I find reliable sources?"
-
-#: src/components/screens/Tips/ui.jsx:96
-msgid "tips-screen.header.headline"
-msgstr "Hygiene tips"
 
 #: src/components/screens/Welcome/ui.jsx:14
 msgid "welcome-screen.slides.intro.headline"

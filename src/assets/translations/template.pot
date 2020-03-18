@@ -225,40 +225,92 @@ msgstr ""
 msgid "policy-screen.content.section-2.text"
 msgstr ""
 
-#: src/components/screens/Tips/ui.jsx:101
-msgid "tips-screen.intro.text"
-msgstr ""
-
-#: src/components/screens/Tips/ui.jsx:64
-msgid "tips.washing-hands.headline"
-msgstr ""
-
-#: src/components/screens/Tips/ui.jsx:68
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:102
+#: src/components/screens/Tips/ui.jsx:66
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr ""
 
-#: src/components/screens/Tips/ui.jsx:72
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:103
+msgid "tips.avoid-crowds-of-people.text"
+msgstr ""
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:79
+msgid "tips.avoid-crowds-of-people.list.item-1"
+msgstr ""
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:80
+msgid "tips.avoid-crowds-of-people.list.item-2"
+msgstr ""
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:81
+msgid "tips.avoid-crowds-of-people.list.item-3"
+msgstr ""
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:82
+msgid "tips.avoid-crowds-of-people.list.item-4"
+msgstr ""
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:83
+msgid "tips.avoid-crowds-of-people.list.item-5"
+msgstr ""
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:96
+#: src/components/screens/TipWashingHands.jsx:96
+#: src/components/screens/Tips/ui.jsx:94
+msgid "tips-screen.header.headline"
+msgstr ""
+
+#: src/components/screens/TipWashingHands.jsx:102
+#: src/components/screens/Tips/ui.jsx:62
+msgid "tips.washing-hands.headline"
+msgstr ""
+
+#: src/components/screens/TipWashingHands.jsx:103
+msgid "tips.washing-hands.text"
+msgstr ""
+
+#: src/components/screens/TipWashingHands.jsx:79
+msgid "tips.washing-hands.list.item-1"
+msgstr ""
+
+#: src/components/screens/TipWashingHands.jsx:80
+msgid "tips.washing-hands.list.item-2"
+msgstr ""
+
+#: src/components/screens/TipWashingHands.jsx:81
+msgid "tips.washing-hands.list.item-3"
+msgstr ""
+
+#: src/components/screens/TipWashingHands.jsx:82
+msgid "tips.washing-hands.list.item-4"
+msgstr ""
+
+#: src/components/screens/TipWashingHands.jsx:83
+msgid "tips.washing-hands.list.item-5"
+msgstr ""
+
+#: src/components/screens/Tips/ui.jsx:70
 msgid "tips.mouthguard.headline"
 msgstr ""
 
-#: src/components/screens/Tips/ui.jsx:76
+#: src/components/screens/Tips/ui.jsx:74
 msgid "tips.coughing-sneezing.headline"
 msgstr ""
 
-#: src/components/screens/Tips/ui.jsx:80
+#: src/components/screens/Tips/ui.jsx:78
 msgid "tips.not-feeling-well.headline"
 msgstr ""
 
-#: src/components/screens/Tips/ui.jsx:84
+#: src/components/screens/Tips/ui.jsx:82
 msgid "tips.am-i-infected.headline"
 msgstr ""
 
-#: src/components/screens/Tips/ui.jsx:88
+#: src/components/screens/Tips/ui.jsx:86
 msgid "tips.reliable-sources.headline"
 msgstr ""
 
-#: src/components/screens/Tips/ui.jsx:96
-msgid "tips-screen.header.headline"
+#: src/components/screens/Tips/ui.jsx:99
+msgid "tips-screen.intro.text"
 msgstr ""
 
 #: src/components/screens/Welcome/ui.jsx:14

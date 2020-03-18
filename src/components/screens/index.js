@@ -6,6 +6,8 @@ import Export from './Export/logic';
 import Policy from './Policy/logic';
 import Splash from './Splash/logic';
 import Tips from './Tips/logic';
+import TipAvoidCrowdsOfPeople from './TipAvoidCrowdsOfPeople';
+import TipWashingHands from './TipWashingHands';
 import Welcome from './Welcome/logic';
 
 export default {
@@ -17,5 +19,7 @@ export default {
   Policy,
   Splash,
   Tips,
+  TipAvoidCrowdsOfPeople,
+  TipWashingHands,
   Welcome,
 };
