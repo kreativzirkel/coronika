@@ -245,7 +245,7 @@ msgstr "Policy"
 
 #: src/components/screens/Policy/ui.jsx:86
 msgid "policy-screen.content.section-1.headline"
-msgstr "Gemeinsam das Corona Virus eindämmen"
+msgstr "Gemeinsam das Coronavirus eindämmen"
 
 #: src/components/screens/Policy/ui.jsx:87
 msgid "policy-screen.content.section-1.text"
@@ -482,13 +482,13 @@ msgstr "Hände abtrocknen"
 #: src/components/screens/Tips/ui.jsx:115
 msgid "tips-screen.intro.text"
 msgstr ""
-"Hier findest du Wissen, das dir in der aktuellen Situation helfen sollen das "
+"Hier findest du Wissen, das dir in der aktuellen Situation helfen soll, das "
 "Infektionsrisiko so gut wie möglich zu reduzieren und im Falle einer "
 "Ansteckung das Richtige zu tun."
 
 #: src/components/screens/Welcome/ui.jsx:14
 msgid "welcome-screen.slides.intro.headline"
-msgstr "Gemeinsam das Corona Virus eindämmen."
+msgstr "Gemeinsam das Coronavirus eindämmen."
 
 #: src/components/screens/Welcome/ui.jsx:15
 msgid "welcome-screen.slides.intro.text"
