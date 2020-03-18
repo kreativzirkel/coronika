@@ -8,7 +8,7 @@ import withViewportUnits from '../../utils/withViewportUnits';
 import Header from '../widgets/Header';
 import Layout from '../widgets/Layout';
 
-const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
+const TipMouthguard = ({ navigation, vw, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     contentHeadline: {
@@ -19,6 +19,9 @@ const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
     contentText: {
       fontFamily: 'JetBrainsMono-Regular',
       fontSize: vw(4.5),
+    },
+    contentTextParagraph: {
+      marginTop: vw(3),
     },
     header: {
       alignItems: 'center',
@@ -77,11 +80,10 @@ const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
   });
 
   const steps = [
-    __('tips.avoid-crowds-of-people.list.item-1'),
-    __('tips.avoid-crowds-of-people.list.item-2'),
-    __('tips.avoid-crowds-of-people.list.item-3'),
-    __('tips.avoid-crowds-of-people.list.item-4'),
-    __('tips.avoid-crowds-of-people.list.item-5'),
+    __('tips.mouthguard.list.item-1'),
+    __('tips.mouthguard.list.item-2'),
+    __('tips.mouthguard.list.item-3'),
+    __('tips.mouthguard.list.item-4'),
   ];
 
   const goBack = () => navigation.dispatch(CommonActions.goBack());
@@ -100,11 +102,14 @@ const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
 
       <ScrollView style={styles.view}>
         <View style={styles.viewContent}>
-          <Text style={styles.contentHeadline}>{__('tips.avoid-crowds-of-people.headline')}</Text>
-          <Text style={styles.contentText}>{__('tips.avoid-crowds-of-people.text')}</Text>
+          <Text style={styles.contentHeadline}>{__('tips.mouthguard.headline')}</Text>
+          <Text style={styles.contentText}>{__('tips.mouthguard.text-1')}</Text>
+          <Text style={{ ...styles.contentText, ...styles.contentTextParagraph }}>{__('tips.mouthguard.text-2')}</Text>
         </View>
 
         <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
+          <Text style={styles.contentText}>{__('tips.mouthguard.list.intro')}</Text>
+
           {steps.map((stepText, index) => (
             <View key={`tip-list-item-${index}`} style={styles.listItem}>
               <View style={styles.listItemNumber}>
@@ -120,4 +125,4 @@ const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
   );
 };
 
-export default withI18n(withViewportUnits(TipAvoidCrowdsOfPeople));
+export default withI18n(withViewportUnits(TipMouthguard));

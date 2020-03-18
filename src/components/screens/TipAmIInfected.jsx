@@ -8,7 +8,7 @@ import withViewportUnits from '../../utils/withViewportUnits';
 import Header from '../widgets/Header';
 import Layout from '../widgets/Layout';
 
-const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
+const TipAmIInfected = ({ navigation, vw, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     contentHeadline: {
@@ -77,11 +77,9 @@ const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
   });
 
   const steps = [
-    __('tips.avoid-crowds-of-people.list.item-1'),
-    __('tips.avoid-crowds-of-people.list.item-2'),
-    __('tips.avoid-crowds-of-people.list.item-3'),
-    __('tips.avoid-crowds-of-people.list.item-4'),
-    __('tips.avoid-crowds-of-people.list.item-5'),
+    __('tips.am-i-infected.list.item-1'),
+    __('tips.am-i-infected.list.item-2'),
+    __('tips.am-i-infected.list.item-3'),
   ];
 
   const goBack = () => navigation.dispatch(CommonActions.goBack());
@@ -100,8 +98,8 @@ const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
 
       <ScrollView style={styles.view}>
         <View style={styles.viewContent}>
-          <Text style={styles.contentHeadline}>{__('tips.avoid-crowds-of-people.headline')}</Text>
-          <Text style={styles.contentText}>{__('tips.avoid-crowds-of-people.text')}</Text>
+          <Text style={styles.contentHeadline}>{__('tips.am-i-infected.headline')}</Text>
+          <Text style={styles.contentText}>{__('tips.am-i-infected.text')}</Text>
         </View>
 
         <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
@@ -120,4 +118,4 @@ const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
   );
 };
 
-export default withI18n(withViewportUnits(TipAvoidCrowdsOfPeople));
+export default withI18n(withViewportUnits(TipAmIInfected));

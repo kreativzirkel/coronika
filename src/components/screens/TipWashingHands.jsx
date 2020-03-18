@@ -55,6 +55,7 @@ const TipWashingHands = ({ navigation, vw, __ }) => {
     listItemText: {
       fontFamily: 'JetBrainsMono-Regular',
       fontSize: vw(4.5),
+      marginTop: vw(2),
     },
     view: {
       backgroundColor: '#ffffff',

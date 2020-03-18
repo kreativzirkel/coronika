@@ -142,20 +142,20 @@ const Contacts = ({
       <Modal isVisible={isImportContactsModalVisible} style={styles.modal}>
         <View style={styles.modalContent}>
           <View style={styles.modalHeader}>
-            <Text style={styles.modalHeaderText}>{__('contacts-screen.modals.import-contacts.headline')}</Text>
+            <Text style={styles.modalHeaderText}>{__('contacts-screen.modals.import-persons.headline')}</Text>
             <TouchableOpacity onPress={() => hideImportContactsModal()}>
               <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
             </TouchableOpacity>
           </View>
 
-          <Text style={styles.modalText}>{__('contacts-screen.modals.import-contacts.text')}</Text>
+          <Text style={styles.modalText}>{__('contacts-screen.modals.import-persons.text')}</Text>
 
           <TouchableOpacity disabled={contactsImporting} onPress={() => importContacts()}>
             <View style={{ ...styles.modalButton, ...(contactsImporting && styles.modalButtonDisabled) }}>
               <Text style={styles.modalButtonText}>
                 {contactsImporting
-                  ? __('contacts-screen.modals.import-contacts.button.importing')
-                  : __('contacts-screen.modals.import-contacts.button.default')}
+                  ? __('contacts-screen.modals.import-persons.button.importing')
+                  : __('contacts-screen.modals.import-persons.button.default')}
               </Text>
             </View>
           </TouchableOpacity>

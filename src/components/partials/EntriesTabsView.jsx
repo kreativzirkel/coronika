@@ -502,7 +502,7 @@ class EntriesTabsView extends React.PureComponent {
             counter={filteredContacts.length}
             counterVisible={isSearchFilled}
             icon={UilUser}
-            label={__('contacts')}
+            label={__('persons')}
             onPress={() => this.setActiveTab(TABS.CONTACTS)}
           />
           {/* groups are disabled for the moment */}
@@ -523,7 +523,7 @@ class EntriesTabsView extends React.PureComponent {
               {!hideCreateButton && (
                 <TouchableOpacity onPress={() => this.openModalNewContact()} style={styles.buttonCreateNew}>
                   <UilPlus color={COLOR_PRIMARY} size={vw(5.5)} style={styles.buttonCreateNewIcon} />
-                  <Text style={styles.buttonCreateNewText}>{__('entries.contacts.list.new')}</Text>
+                  <Text style={styles.buttonCreateNewText}>{__('entries.persons.list.new')}</Text>
                 </TouchableOpacity>
               )}
 
@@ -549,11 +549,11 @@ class EntriesTabsView extends React.PureComponent {
                         <Text style={styles.entriesEmptyText}>{customContactsEmptyText}</Text>
                       ) : (
                         <Fragment>
-                          <Text style={styles.entriesEmptyText}>{__('entries.contacts.list.empty')}</Text>
+                          <Text style={styles.entriesEmptyText}>{__('entries.persons.list.empty')}</Text>
                           <TouchableOpacity onPress={() => this.importContacts()} style={styles.contactsImportButton}>
                             <UilImport color={COLOR_PRIMARY} size={vw(5.5)} style={styles.contactsImportButtonIcon} />
                             <Text style={styles.contactsImportButtonText}>
-                              {__('entries.contacts.list.import.button')}
+                              {__('entries.persons.list.import.button')}
                             </Text>
                           </TouchableOpacity>
                         </Fragment>
@@ -617,8 +617,8 @@ class EntriesTabsView extends React.PureComponent {
             <View style={styles.modalHeader}>
               <Text style={styles.modalHeaderText}>
                 {isUpdateContactMode
-                  ? __('entries.modals.update-contact.headline')
-                  : __('entries.modals.new-contact.headline')}
+                  ? __('entries.modals.update-person.headline')
+                  : __('entries.modals.new-person.headline')}
               </Text>
               <TouchableOpacity onPress={() => this.closeModalNewContact()}>
                 <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
@@ -629,7 +629,7 @@ class EntriesTabsView extends React.PureComponent {
               autoCompleteType={'off'}
               autoCorrect={false}
               onChangeText={(value) => this.setNewContactName(value)}
-              placeholder={__('entries.modals.new-contact.placeholder.name').toLowerCase()}
+              placeholder={__('entries.modals.new-person.placeholder.name').toLowerCase()}
               placeholderTextColor={'#B0B0B1'}
               style={styles.modalTextInput}
               textContentType={'none'}
@@ -641,7 +641,7 @@ class EntriesTabsView extends React.PureComponent {
               autoCorrect={false}
               onChangeText={(value) => this.setNewContactPhone(value)}
               keyboardType={'phone-pad'}
-              placeholder={__('entries.modals.new-contact.placeholder.phone-number').toLowerCase()}
+              placeholder={__('entries.modals.new-person.placeholder.phone-number').toLowerCase()}
               placeholderTextColor={'#B0B0B1'}
               style={styles.modalTextInput}
               textContentType={'none'}
@@ -654,8 +654,8 @@ class EntriesTabsView extends React.PureComponent {
               <View style={{ ...styles.modalButton, ...(buttonAddNewContactDisabled && styles.modalButtonDisabled) }}>
                 <Text style={styles.modalButtonText}>
                   {isUpdateContactMode
-                    ? __('entries.modals.update-contact.button')
-                    : __('entries.modals.new-contact.button')}
+                    ? __('entries.modals.update-person.button')
+                    : __('entries.modals.new-person.button')}
                 </Text>
               </View>
             </TouchableOpacity>

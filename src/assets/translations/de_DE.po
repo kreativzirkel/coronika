@@ -47,9 +47,8 @@ msgid "navigation.tips.label"
 msgstr "Tips"
 
 #: src/components/partials/EntriesTabsView.jsx:505
-#: src/components/widgets/DayOverview.jsx:91
-msgid "contacts"
-msgstr "Kontakte"
+msgid "persons"
+msgstr "Peronen"
 
 #: src/components/partials/EntriesTabsView.jsx:515
 #: src/components/widgets/DayOverview.jsx:79
@@ -57,21 +56,21 @@ msgid "locations"
 msgstr "Orte"
 
 #: src/components/partials/EntriesTabsView.jsx:526
-msgid "entries.contacts.list.new"
-msgstr "Neuer Kontakt"
+msgid "entries.persons.list.new"
+msgstr "Neue Person"
 
 #: src/components/partials/EntriesTabsView.jsx:545
 msgid "entries.search.list.empty"
 msgstr "Zu deiner Suche konnte nichts gefunden werden."
 
 #: src/components/partials/EntriesTabsView.jsx:552
-msgid "entries.contacts.list.empty"
+msgid "entries.persons.list.empty"
 msgstr ""
-"Du hast noch keinen Kontakt angelegt. Um direkt loszulegen, kannst du deine "
-"Kontakte importieren."
+"Du hast noch keine Person angelegt. Um direkt loszulegen, kannst du Personen "
+"aus deinem Telefonbuch importieren."
 
 #: src/components/partials/EntriesTabsView.jsx:556
-msgid "entries.contacts.list.import.button"
+msgid "entries.persons.list.import.button"
 msgstr "Jetzt importieren"
 
 #: src/components/partials/EntriesTabsView.jsx:575
@@ -89,27 +88,27 @@ msgid "entries.selection.add"
 msgstr "Auswahl hinzufügen"
 
 #: src/components/partials/EntriesTabsView.jsx:620
-msgid "entries.modals.update-contact.headline"
-msgstr "Kontakt bearbeiten"
+msgid "entries.modals.update-person.headline"
+msgstr "Person bearbeiten"
 
 #: src/components/partials/EntriesTabsView.jsx:621
-msgid "entries.modals.new-contact.headline"
-msgstr "Neuer Kontakt"
+msgid "entries.modals.new-person.headline"
+msgstr "Neue Person"
 
 #: src/components/partials/EntriesTabsView.jsx:632
-msgid "entries.modals.new-contact.placeholder.name"
+msgid "entries.modals.new-person.placeholder.name"
 msgstr "Vorname Nachname"
 
 #: src/components/partials/EntriesTabsView.jsx:644
-msgid "entries.modals.new-contact.placeholder.phone-number"
+msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Telefon"
 
 #: src/components/partials/EntriesTabsView.jsx:657
-msgid "entries.modals.update-contact.button"
+msgid "entries.modals.update-person.button"
 msgstr "Speichern"
 
 #: src/components/partials/EntriesTabsView.jsx:658
-msgid "entries.modals.new-contact.button"
+msgid "entries.modals.new-person.button"
 msgstr "Hinzufügen"
 
 #: src/components/partials/EntriesTabsView.jsx:670
@@ -169,22 +168,22 @@ msgid "contacts-screen.header.headline"
 msgstr "Kontakte verwalten"
 
 #: src/components/screens/Contacts/ui.jsx:145
-msgid "contacts-screen.modals.import-contacts.headline"
-msgstr "Kontakte importieren"
+msgid "contacts-screen.modals.import-persons.headline"
+msgstr "Personen importieren"
 
 #: src/components/screens/Contacts/ui.jsx:151
-msgid "contacts-screen.modals.import-contacts.text"
+msgid "contacts-screen.modals.import-persons.text"
 msgstr ""
-"Importiere deine Kontakte, damit du direkt loslegen kannst. Alle deine "
-"Kontakte werden lokal gespeichert. Keine Daten werden getrackt oder "
+"Importiere Personen von Telefonbuch, damit du direkt loslegen kannst. Alle "
+"deine Personen werden lokal gespeichert. Keine Daten werden getrackt oder "
 "weitergegeben."
 
 #: src/components/screens/Contacts/ui.jsx:157
-msgid "contacts-screen.modals.import-contacts.button.importing"
+msgid "contacts-screen.modals.import-persons.button.importing"
 msgstr "Importiere..."
 
 #: src/components/screens/Contacts/ui.jsx:158
-msgid "contacts-screen.modals.import-contacts.button.default"
+msgid "contacts-screen.modals.import-persons.button.default"
 msgstr "Jetzt importieren"
 
 #: src/components/screens/Dashboard/ui.jsx:76
@@ -263,97 +262,221 @@ msgstr ""
 "Alle Informationen, die du in Coronika anlegst, werden lokal gespeichert. "
 "Keine Daten werden getrackt oder weitergegeben."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:102
-#: src/components/screens/Tips/ui.jsx:66
-msgid "tips.avoid-crowds-of-people.headline"
-msgstr "Meide große Menschenmassen"
+#: src/components/screens/TipAmIInfected.jsx:101
+#: src/components/screens/Tips/ui.jsx:82
+msgid "tips.am-i-infected.headline"
+msgstr "Ich fürchte erkrankt zu sein, was tun?"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:103
-msgid "tips.avoid-crowds-of-people.text"
+#: src/components/screens/TipAmIInfected.jsx:102
+msgid "tips.am-i-infected.text"
 msgstr ""
-"Im Falle von Großveranstaltungen, aber auch beim Besuch eines Supermarktes "
-"oder der Fahrt mit der Bahn ist das Risiko mit einem infizierten Menschen "
-"(welcher Krankheit auch immer) grundsätzlich höher. Frage dich daher, welche "
-"Dinge du erledigen musst und worauf du möglicher-weise verzichten kannst."
+"Bei Verdacht auf eine Infektion, bleib unbedingt zu Hause, um keinen "
+"weiteren Mitmenschen anzustecken. Kontaktiere telefonisch deinen Hausarzt "
+"oder die Gesundheitsämter. Erzähle deinem Arzt und den Gesundheitsämtern im "
+"Falle einer Corona Erkankung unbedingt von deinem Coronika Tagebuch, um die "
+"Krankheit einzudämmen. Du kannst in diesem Falle dein Tagebuch einfach "
+"exportieren und an die verantwortlichen Stellen senden."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:79
-msgid "tips.avoid-crowds-of-people.list.item-1"
-msgstr "Großveranstaltungen vermeiden"
+#: src/components/screens/TipAmIInfected.jsx:80
+msgid "tips.am-i-infected.list.item-1"
+msgstr "Bleib Zuhause"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:80
-msgid "tips.avoid-crowds-of-people.list.item-2"
-msgstr "Kurze Strecken nicht mit der Bahn zurücklegen"
+#: src/components/screens/TipAmIInfected.jsx:81
+msgid "tips.am-i-infected.list.item-2"
+msgstr "Rufe deinen Arzt an"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:81
-msgid "tips.avoid-crowds-of-people.list.item-3"
-msgstr "Oft und gründlich die Hände waschen"
+#: src/components/screens/TipAmIInfected.jsx:82
+msgid "tips.am-i-infected.list.item-3"
+msgstr "Erzähle von deinem Coronika Tagebuch"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:82
-msgid "tips.avoid-crowds-of-people.list.item-4"
-msgstr "2 Meter Sicherheitsabstand zu erkrankten Personen halten"
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:83
-msgid "tips.avoid-crowds-of-people.list.item-5"
-msgstr "Husten- und Nies-Etikette einhalten"
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:96
-#: src/components/screens/TipWashingHands.jsx:96
+#: src/components/screens/TipAmIInfected.jsx:95
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:97
+#: src/components/screens/TipCoughingSneezing.jsx:97
+#: src/components/screens/TipMouthguard.jsx:99
+#: src/components/screens/TipNotFeelingWell.jsx:96
+#: src/components/screens/TipReliableSources.jsx:89
+#: src/components/screens/TipWashingHands.jsx:97
 #: src/components/screens/Tips/ui.jsx:94
 msgid "tips-screen.header.headline"
 msgstr "Hygiene Tips"
 
-#: src/components/screens/TipWashingHands.jsx:102
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:103
+#: src/components/screens/Tips/ui.jsx:66
+msgid "tips.avoid-crowds-of-people.headline"
+msgstr "Meide große Menschenmassen"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:104
+msgid "tips.avoid-crowds-of-people.text"
+msgstr ""
+"Im Falle von Großveranstaltungen, aber auch beim Besuch eines Supermarktes "
+"oder der Fahrt mit der Bahn ist das Risiko mit einem infizierten Menschen "
+"(welcher Krankheit auch immer) in Kontakt zu kommen grundsätzlich höher. "
+"Frage dich daher, welche Dinge du erledigen musst und worauf du "
+"möglicherweise verzichten kannst."
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:80
+msgid "tips.avoid-crowds-of-people.list.item-1"
+msgstr "Großveranstaltungen vermeiden"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:81
+msgid "tips.avoid-crowds-of-people.list.item-2"
+msgstr "Kurze Strecken zu Fuß zurücklegen"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:82
+msgid "tips.avoid-crowds-of-people.list.item-3"
+msgstr "Oft und gründlich die Hände waschen"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:83
+msgid "tips.avoid-crowds-of-people.list.item-4"
+msgstr "2 Meter Sicherheitsabstand zu erkrankten Personen halten"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:84
+msgid "tips.avoid-crowds-of-people.list.item-5"
+msgstr "Husten- und Nies-Etikette einhalten"
+
+#: src/components/screens/TipCoughingSneezing.jsx:103
+#: src/components/screens/Tips/ui.jsx:74
+msgid "tips.coughing-sneezing.headline"
+msgstr "Richtig Husten und Niesen"
+
+#: src/components/screens/TipCoughingSneezing.jsx:104
+msgid "tips.coughing-sneezing.text"
+msgstr ""
+"Um keine Krankheitserreger weiterzuverbreiten und andere vor Ansteckung zu "
+"schützen, gilt es folgendes zu beachten:"
+
+#: src/components/screens/TipCoughingSneezing.jsx:80
+msgid "tips.coughing-sneezing.list.item-1"
+msgstr "Halte mindestens 1 Meter Abstand zu anderen Personen"
+
+#: src/components/screens/TipCoughingSneezing.jsx:81
+msgid "tips.coughing-sneezing.list.item-2"
+msgstr "Drehe dich von anderen Personen weg"
+
+#: src/components/screens/TipCoughingSneezing.jsx:82
+msgid "tips.coughing-sneezing.list.item-3"
+msgstr "Huste oder niese in ein Einweghandtuch oder Armbeuge"
+
+#: src/components/screens/TipCoughingSneezing.jsx:83
+msgid "tips.coughing-sneezing.list.item-4"
+msgstr "Taschentücher nicht herumliegen lassen, sondern im Mülleimer entsorgen"
+
+#: src/components/screens/TipCoughingSneezing.jsx:84
+msgid "tips.coughing-sneezing.list.item-5"
+msgstr "Danach gründlich die Hände waschen"
+
+#: src/components/screens/TipMouthguard.jsx:105
+#: src/components/screens/Tips/ui.jsx:70
+msgid "tips.mouthguard.headline"
+msgstr "Mundschutz, ja oder nein?"
+
+#: src/components/screens/TipMouthguard.jsx:106
+msgid "tips.mouthguard.text-1"
+msgstr ""
+"Mundschutz und andere Masken werden im medizinischen Bereich dringend "
+"benötigt. Bereits erkrankte Menschen können eine Maske zum Schutze anderer "
+"tragen. Trage diese Hilfsmittel also nur bei Empfehlung deines Arztes und "
+"beachte stattdessen die anderen Hygiene Tipps."
+
+#: src/components/screens/TipMouthguard.jsx:107
+msgid "tips.mouthguard.text-2"
+msgstr ""
+"Ärzte tragen Masken als Spritzschutz, der Feuchtigkeit und Speicheltröpfchen "
+"zurückhält, so gelangen die Keime des Arztes nicht so leicht in die Umgebung."
+
+#: src/components/screens/TipMouthguard.jsx:111
+msgid "tips.mouthguard.list.intro"
+msgstr "Außerhalb des OPs bringen Masken wenig, wenn sie:"
+
+#: src/components/screens/TipMouthguard.jsx:83
+msgid "tips.mouthguard.list.item-1"
+msgstr "nur aus Papier sind"
+
+#: src/components/screens/TipMouthguard.jsx:84
+msgid "tips.mouthguard.list.item-2"
+msgstr "nicht eng anliegen oder undicht sind"
+
+#: src/components/screens/TipMouthguard.jsx:85
+msgid "tips.mouthguard.list.item-3"
+msgstr "durch Atemluft feucht geworden sind"
+
+#: src/components/screens/TipMouthguard.jsx:86
+msgid "tips.mouthguard.list.item-4"
+msgstr "nicht mehrmals täglich gewechselt werden"
+
+#: src/components/screens/TipNotFeelingWell.jsx:102
+#: src/components/screens/Tips/ui.jsx:78
+msgid "tips.not-feeling-well.headline"
+msgstr "Ich fühle mich nicht wohl, habe ich das Virus?"
+
+#: src/components/screens/TipNotFeelingWell.jsx:103
+msgid "tips.not-feeling-well.text"
+msgstr ""
+"Nicht jeder Patient mit Erkältungssymptomen ist auch ein Träger von Sars-"
+"CoV-2. Du solltest dich bei Symptomen in jedem Falle informieren und danach "
+"deinen Arzt anrufen."
+
+#: src/components/screens/TipNotFeelingWell.jsx:107
+msgid "tips.not-feeling-well.list.intro"
+msgstr "Typische Symptome von COVID-19 laut WHO sind:"
+
+#: src/components/screens/TipNotFeelingWell.jsx:80
+msgid "tips.not-feeling-well.list.item-1"
+msgstr "Atemwegsbeschwerden"
+
+#: src/components/screens/TipNotFeelingWell.jsx:81
+msgid "tips.not-feeling-well.list.item-2"
+msgstr "Fieber"
+
+#: src/components/screens/TipNotFeelingWell.jsx:82
+msgid "tips.not-feeling-well.list.item-3"
+msgstr "Husten"
+
+#: src/components/screens/TipNotFeelingWell.jsx:83
+msgid "tips.not-feeling-well.list.item-4"
+msgstr "Kurzatmigkeit"
+
+#: src/components/screens/TipReliableSources.jsx:95
+#: src/components/screens/Tips/ui.jsx:86
+msgid "tips.reliable-sources.headline"
+msgstr "Wo finde ich zuverlässige Quellen?"
+
+#: src/components/screens/TipReliableSources.jsx:96
+msgid "tips.reliable-sources.text"
+msgstr "Informative Webseiten"
+
+#: src/components/screens/TipWashingHands.jsx:103
 #: src/components/screens/Tips/ui.jsx:62
 msgid "tips.washing-hands.headline"
 msgstr "Wasche deine Hände richtig"
 
-#: src/components/screens/TipWashingHands.jsx:103
+#: src/components/screens/TipWashingHands.jsx:104
 msgid "tips.washing-hands.text"
 msgstr ""
-"Eine der wichtigsten zur Verhinderung einer weiteren Ausbreitung von Keimen "
-"ist gründliches Händewaschen:"
-
-#: src/components/screens/TipWashingHands.jsx:79
-msgid "tips.washing-hands.list.item-1"
-msgstr "gründlich einseifen und verreiben"
+"Eine der effizientesten Maßnahmen zur Verhinderung einer weiteren "
+"Ausbreitung von Keimen ist gründliches Händewaschen:"
 
 #: src/components/screens/TipWashingHands.jsx:80
-msgid "tips.washing-hands.list.item-2"
-msgstr "Wasche deine Hände richtig"
+msgid "tips.washing-hands.list.item-1"
+msgstr "Hände unter fließendes Wasser halten"
 
 #: src/components/screens/TipWashingHands.jsx:81
+msgid "tips.washing-hands.list.item-2"
+msgstr "gründlich einseifen und verreiben"
+
+#: src/components/screens/TipWashingHands.jsx:82
 msgid "tips.washing-hands.list.item-3"
 msgstr ""
 "Innenflächen, Handrücken, Fingerspitzen, Daumen, Fingernägel, Räume zwischen "
 "den Fingern reinigen"
 
-#: src/components/screens/TipWashingHands.jsx:82
+#: src/components/screens/TipWashingHands.jsx:83
 msgid "tips.washing-hands.list.item-4"
 msgstr "ca. 30 - 60 Sek. lang"
 
-#: src/components/screens/TipWashingHands.jsx:83
+#: src/components/screens/TipWashingHands.jsx:84
 msgid "tips.washing-hands.list.item-5"
 msgstr "Hände abtrocknen"
-
-#: src/components/screens/Tips/ui.jsx:70
-msgid "tips.mouthguard.headline"
-msgstr "Mundschutz, ja oder nein?"
-
-#: src/components/screens/Tips/ui.jsx:74
-msgid "tips.coughing-sneezing.headline"
-msgstr "Richtig Husten und Niesen"
-
-#: src/components/screens/Tips/ui.jsx:78
-msgid "tips.not-feeling-well.headline"
-msgstr "Ich fühle mich nicht wohl, habe ich das Virus?"
-
-#: src/components/screens/Tips/ui.jsx:82
-msgid "tips.am-i-infected.headline"
-msgstr "Ich fürchte erkrankt zu sein, was tun?"
-
-#: src/components/screens/Tips/ui.jsx:86
-msgid "tips.reliable-sources.headline"
-msgstr "Wo finde ich zuverlässige Quellen?"
 
 #: src/components/screens/Tips/ui.jsx:99
 msgid "tips-screen.intro.text"
@@ -411,6 +534,10 @@ msgstr "heute"
 #: src/components/widgets/DayOverview.jsx:75
 msgid "total"
 msgstr "gesamt"
+
+#: src/components/widgets/DayOverview.jsx:91
+msgid "contacts"
+msgstr "Kontakte"
 
 #: src/components/widgets/SearchBar.jsx:57
 msgid "placeholder.search-input"

@@ -8,7 +8,7 @@ import withViewportUnits from '../../utils/withViewportUnits';
 import Header from '../widgets/Header';
 import Layout from '../widgets/Layout';
 
-const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
+const TipReliableSources = ({ navigation, vw, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     contentHeadline: {
@@ -76,14 +76,6 @@ const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
     },
   });
 
-  const steps = [
-    __('tips.avoid-crowds-of-people.list.item-1'),
-    __('tips.avoid-crowds-of-people.list.item-2'),
-    __('tips.avoid-crowds-of-people.list.item-3'),
-    __('tips.avoid-crowds-of-people.list.item-4'),
-    __('tips.avoid-crowds-of-people.list.item-5'),
-  ];
-
   const goBack = () => navigation.dispatch(CommonActions.goBack());
 
   return (
@@ -100,24 +92,12 @@ const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
 
       <ScrollView style={styles.view}>
         <View style={styles.viewContent}>
-          <Text style={styles.contentHeadline}>{__('tips.avoid-crowds-of-people.headline')}</Text>
-          <Text style={styles.contentText}>{__('tips.avoid-crowds-of-people.text')}</Text>
-        </View>
-
-        <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
-          {steps.map((stepText, index) => (
-            <View key={`tip-list-item-${index}`} style={styles.listItem}>
-              <View style={styles.listItemNumber}>
-                <Text style={styles.listItemNumberText}>{index + 1}</Text>
-              </View>
-
-              <Text style={styles.listItemText}>{stepText}</Text>
-            </View>
-          ))}
+          <Text style={styles.contentHeadline}>{__('tips.reliable-sources.headline')}</Text>
+          <Text style={styles.contentText}>{__('tips.reliable-sources.text')}</Text>
         </View>
       </ScrollView>
     </Layout>
   );
 };
 
-export default withI18n(withViewportUnits(TipAvoidCrowdsOfPeople));
+export default withI18n(withViewportUnits(TipReliableSources));

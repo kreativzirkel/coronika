@@ -6,7 +6,12 @@ import Export from './Export/logic';
 import Policy from './Policy/logic';
 import Splash from './Splash/logic';
 import Tips from './Tips/logic';
+import TipAmIInfected from './TipAmIInfected';
 import TipAvoidCrowdsOfPeople from './TipAvoidCrowdsOfPeople';
+import TipCoughingSneezing from './TipCoughingSneezing';
+import TipMouthguard from './TipMouthguard';
+import TipNotFeelingWell from './TipNotFeelingWell';
+import TipReliableSources from './TipReliableSources';
 import TipWashingHands from './TipWashingHands';
 import Welcome from './Welcome/logic';
 
@@ -19,7 +24,12 @@ export default {
   Policy,
   Splash,
   Tips,
+  TipAmIInfected,
   TipAvoidCrowdsOfPeople,
+  TipCoughingSneezing,
+  TipMouthguard,
+  TipNotFeelingWell,
+  TipReliableSources,
   TipWashingHands,
   Welcome,
 };

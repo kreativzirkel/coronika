@@ -68,23 +68,23 @@ const Tips = ({ navigation, vw, __ }) => {
     },
     {
       headline: __('tips.mouthguard.headline'),
-      routeName: 'TipWashingHands',
+      routeName: 'TipMouthguard',
     },
     {
       headline: __('tips.coughing-sneezing.headline'),
-      routeName: 'TipWashingHands',
+      routeName: 'TipCoughingSneezing',
     },
     {
       headline: __('tips.not-feeling-well.headline'),
-      routeName: 'TipWashingHands',
+      routeName: 'TipNotFeelingWell',
     },
     {
       headline: __('tips.am-i-infected.headline'),
-      routeName: 'TipWashingHands',
+      routeName: 'TipAmIInfected',
     },
     {
       headline: __('tips.reliable-sources.headline'),
-      routeName: 'TipWashingHands',
+      routeName: 'TipReliableSources',
     },
   ];
 
