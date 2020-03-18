@@ -19,6 +19,7 @@ const TipAmIInfected = ({ navigation, vw, __ }) => {
     contentText: {
       fontFamily: 'JetBrainsMono-Regular',
       fontSize: vw(4.5),
+      lineHeight: vw(7),
     },
     header: {
       alignItems: 'center',
@@ -44,7 +45,7 @@ const TipAmIInfected = ({ navigation, vw, __ }) => {
       borderRadius: 50,
       height: vw(10),
       justifyContent: 'center',
-      marginRight: vw(3),
+      marginRight: vw(6),
       width: vw(10),
     },
     listItemNumberText: {
@@ -56,6 +57,7 @@ const TipAmIInfected = ({ navigation, vw, __ }) => {
       fontFamily: 'JetBrainsMono-Regular',
       fontSize: vw(4.5),
       marginTop: vw(2),
+      lineHeight: vw(7),
     },
     view: {
       backgroundColor: '#ffffff',

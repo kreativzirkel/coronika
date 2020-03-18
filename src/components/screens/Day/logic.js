@@ -2,15 +2,15 @@ import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
 import withViewportUnits from '../../../utils/withViewportUnits';
-import { removeContactFromDay, removeLocationFromDay } from '../../screens/Dashboard/actions';
+import { removePersonFromDay, removeLocationFromDay } from '../../screens/Dashboard/actions';
 import Screen from './ui';
 
-const deleteContactFromDay = (contactId) => async (dispatch, getState) => {
+const deletePersonFromDay = (personId) => async (dispatch, getState) => {
   const {
     day: { timestamp },
   } = getState();
 
-  dispatch(removeContactFromDay(timestamp, contactId));
+  dispatch(removePersonFromDay(timestamp, personId));
 };
 
 const deleteLocationFromDay = (locationId, description, locationTimestamp) => async (dispatch, getState) => {
@@ -21,7 +21,7 @@ const deleteLocationFromDay = (locationId, description, locationTimestamp) => as
   dispatch(removeLocationFromDay(timestamp, locationId, description, locationTimestamp));
 };
 
-const contactsSortingFunction = (a, b) => {
+const personsSortingFunction = (a, b) => {
   const fullNameA = a.fullName.toLowerCase();
   const fullNameB = b.fullName.toLowerCase();
   if (fullNameA < fullNameB) {
@@ -58,14 +58,14 @@ const locationsSortingFunction = (a, b) => {
 };
 
 const mapStateToProps = ({ dashboard: { days }, day: { searchValue, timestamp } }) => {
-  const dayContacts = days[timestamp]?.contacts || [];
+  const dayPersons = days[timestamp]?.persons || [];
   const dayLocations = days[timestamp]?.locations || [];
 
-  dayContacts.sort((a, b) => contactsSortingFunction(a, b));
+  dayPersons.sort((a, b) => personsSortingFunction(a, b));
   dayLocations.sort((a, b) => locationsSortingFunction(a, b));
 
   return {
-    contacts: dayContacts,
+    persons: dayPersons,
     locations: dayLocations,
     searchValue,
     timestamp,
@@ -74,7 +74,7 @@ const mapStateToProps = ({ dashboard: { days }, day: { searchValue, timestamp } 
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    deleteContactFromDay: (contactId) => dispatch(deleteContactFromDay(contactId)),
+    deletePersonFromDay: (personId) => dispatch(deletePersonFromDay(personId)),
     deleteLocationFromDay: (locationId, description, time) =>
       dispatch(deleteLocationFromDay(locationId, description, time)),
   };

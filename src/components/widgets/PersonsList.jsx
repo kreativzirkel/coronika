@@ -7,21 +7,21 @@ import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withViewportUnits from '../../utils/withViewportUnits';
 import ListItem from './ListItem';
 
-const ContactsList = ({
+const PersonsList = ({
   allowDelete,
   allowSelection,
   allowUpdate,
-  contacts,
+  persons,
   deleteItem,
-  disableDeleteImportedContacts,
-  selectedContacts,
+  disableDeleteImportedPersons,
+  selectedPersons,
   toggleSelection,
   updateItem,
   vw,
 }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
-    contact: {
+    person: {
       backgroundColor: COLOR_SECONDARY,
       borderRadius: vw(2.3),
       flexDirection: 'row',
@@ -33,18 +33,18 @@ const ContactsList = ({
       paddingBottom: vw(3.8),
       paddingTop: vw(3.8),
     },
-    contactText: {
+    personText: {
       fontFamily: 'JetBrainsMono-Regular',
       fontSize: vw(4.2),
     },
-    contactTextIconImported: {
+    personTextIconImported: {
       marginLeft: vw(1.5),
     },
-    contactTextWrapper: {
+    personTextWrapper: {
       alignItems: 'center',
       flexDirection: 'row',
     },
-    contactsList: {
+    personsList: {
       flex: 1,
       paddingBottom: vw(2.3),
       width: '100%',
@@ -63,60 +63,64 @@ const ContactsList = ({
     },
   });
 
-  return contacts ? (
+  return persons ? (
     <FlatList
-      data={contacts}
+      data={persons}
       keyExtractor={({ id }) => id}
       renderItem={({ item: { fullName, id, recordID } }) => {
-        const allowContactDelete = allowDelete && (recordID !== undefined ? !disableDeleteImportedContacts : true);
-        const allowContactUpdate = allowUpdate && recordID === undefined;
-        const isContactSelected = allowSelection && selectedContacts.includes(id);
+        const allowPersonDelete = allowDelete && (recordID !== undefined ? !disableDeleteImportedPersons : true);
+        const allowPersonUpdate = allowUpdate && recordID === undefined;
+        const isPersonSelected = allowSelection && selectedPersons.includes(id);
 
-        const ContactItem = () => (
-          <View style={styles.contact}>
-            <View style={styles.contactTextWrapper}>
-              <Text style={styles.contactText}>{fullName}</Text>
+        const PersonItem = () => (
+          <View style={styles.person}>
+            <View style={styles.personTextWrapper}>
+              <Text style={styles.personText}>{fullName}</Text>
 
               {recordID !== undefined && (
-                <View style={styles.contactTextIconImported}>
+                <View style={styles.personTextIconImported}>
                   <UilMobileAndroid color={'#b0b0b0'} size={vw(5)} />
                 </View>
               )}
             </View>
 
             {allowSelection && (
-              <TouchableOpacity onPress={() => toggleSelection(id)} style={styles.selectButton}>
+              <View style={styles.selectButton}>
                 <View
                   style={{
                     ...styles.selectButtonInner,
-                    ...(isContactSelected && styles.selectButtonInnerSelected),
+                    ...(isPersonSelected && styles.selectButtonInnerSelected),
                   }}>
-                  {isContactSelected ? (
+                  {isPersonSelected ? (
                     <UilMinus size={vw(7)} color={'#ffffff'} />
                   ) : (
                     <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
                   )}
                 </View>
-              </TouchableOpacity>
+              </View>
             )}
           </View>
         );
 
         return (
-          <ListItem allowDelete={allowContactDelete} deleteItem={() => deleteItem(id)}>
-            {allowContactUpdate ? (
+          <ListItem allowDelete={allowPersonDelete} deleteItem={() => deleteItem(id)}>
+            {allowPersonUpdate ? (
               <TouchableOpacity onPress={() => updateItem(id)}>
-                <ContactItem />
+                <PersonItem />
+              </TouchableOpacity>
+            ) : allowSelection ? (
+              <TouchableOpacity onPress={() => toggleSelection(id)}>
+                <PersonItem />
               </TouchableOpacity>
             ) : (
-              <ContactItem />
+              <PersonItem />
             )}
           </ListItem>
         );
       }}
-      style={styles.contactsList}
+      style={styles.personsList}
     />
   ) : null;
 };
 
-export default withViewportUnits(ContactsList);
+export default withViewportUnits(PersonsList);

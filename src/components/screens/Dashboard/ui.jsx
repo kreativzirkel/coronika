@@ -91,11 +91,12 @@ const Dashboard = ({ days, total, openDay, navigation, vw, __ }) => {
               data={days}
               inverted
               keyExtractor={({ timestamp }) => timestamp.toString()}
-              renderItem={({ index, item: { contacts, locations, timestamp } }) => (
+              renderItem={({ index, item: { locations, persons, timestamp } }) => (
                 <TouchableOpacity onPress={() => openDay(timestamp, navigation)}>
                   <DayOverview
-                    contacts={contacts.length}
+                    isEmphasized={timestamp === today.valueOf()}
                     locations={locations.length}
+                    persons={persons.length}
                     timestamp={timestamp}
                     today={today}
                   />
@@ -106,10 +107,10 @@ const Dashboard = ({ days, total, openDay, navigation, vw, __ }) => {
           )}
 
           <DayOverview
-            contacts={total.contacts}
             isDark
             isTotal
             locations={total.locations}
+            persons={total.persons}
             timestamp={totalTimespan.valueOf()}
             today={today}
           />

@@ -2,85 +2,85 @@ import cloneDeep from 'lodash/cloneDeep';
 import { v4 as uuidv4 } from 'uuid';
 
 const initialState = {
-  contacts: [],
-  contactsImporting: false,
-  isImportContactsModalVisible: false,
+  persons: [],
+  personsImporting: false,
+  isImportPersonsModalVisible: false,
   locations: [],
 };
 
-const addContactToList = (contacts, contact) => {
-  const importContact = cloneDeep(contact);
+const addPersonToList = (persons, person) => {
+  const importPerson = cloneDeep(person);
   let resultList = [];
 
-  if ('recordID' in importContact) {
-    for (const c of contacts) {
-      if (c.recordID !== importContact.recordID) {
+  if ('recordID' in importPerson) {
+    for (const c of persons) {
+      if (c.recordID !== importPerson.recordID) {
         resultList.push(c);
       } else {
-        importContact.id = c.id;
+        importPerson.id = c.id;
       }
     }
 
-    importContact.fullName = [importContact.givenName, importContact.middleName, importContact.familyName]
+    importPerson.fullName = [importPerson.givenName, importPerson.middleName, importPerson.familyName]
       .join(' ')
       .replace(/\s+/g, ' ');
   } else {
-    for (const c of contacts) {
-      if (c.recordID || c.fullName !== importContact.fullName) {
+    for (const c of persons) {
+      if (c.recordID || c.fullName !== importPerson.fullName) {
         resultList.push(c);
       } else {
-        importContact.id = c.id;
-        importContact.phoneNumbers = [...c.phoneNumbers];
+        importPerson.id = c.id;
+        importPerson.phoneNumbers = [...c.phoneNumbers];
       }
     }
   }
 
-  if (!importContact.id) {
-    importContact.id = uuidv4();
+  if (!importPerson.id) {
+    importPerson.id = uuidv4();
   }
 
-  resultList.push(importContact);
+  resultList.push(importPerson);
 
   return resultList;
 };
 
 export default (state = initialState, action = { type: null }) => {
   switch (action.type) {
-    case 'ADD_CONTACT_CONTACTS': {
-      const contacts = addContactToList(state.contacts, action.contact);
+    case 'ADD_PERSON_DIRECTORY': {
+      const persons = addPersonToList(state.persons, action.person);
 
-      return { ...state, contacts };
+      return { ...state, persons };
     }
 
-    case 'REMOVE_CONTACT_CONTACTS': {
-      const contactId = action.contactId;
-      const contacts = [];
+    case 'REMOVE_PERSON_DIRECTORY': {
+      const personId = action.personId;
+      const persons = [];
 
-      for (const c of state.contacts) {
-        if (c.id !== contactId) {
-          contacts.push(c);
+      for (const c of state.persons) {
+        if (c.id !== personId) {
+          persons.push(c);
         }
       }
 
-      return { ...state, contacts };
+      return { ...state, persons };
     }
 
-    case 'UPDATE_CONTACT_CONTACTS': {
-      const contact = action.contact;
-      const contacts = [];
+    case 'UPDATE_PERSON_DIRECTORY': {
+      const person = action.person;
+      const persons = [];
 
-      for (const c of state.contacts) {
-        if (c.id !== contact.id) {
-          contacts.push(c);
+      for (const c of state.persons) {
+        if (c.id !== person.id) {
+          persons.push(c);
         } else {
-          contacts.push({ ...c, ...contact });
+          persons.push({ ...c, ...person });
         }
       }
 
-      return { ...state, contacts };
+      return { ...state, persons };
     }
 
-    case 'ADD_LOCATION_CONTACTS': {
+    case 'ADD_LOCATION_DIRECTORY': {
       const location = action.location;
       const locations = [];
 
@@ -102,7 +102,7 @@ export default (state = initialState, action = { type: null }) => {
       return { ...state, locations };
     }
 
-    case 'REMOVE_LOCATION_CONTACTS': {
+    case 'REMOVE_LOCATION_DIRECTORY': {
       const locationId = action.locationId;
       const locations = [];
 
@@ -115,7 +115,7 @@ export default (state = initialState, action = { type: null }) => {
       return { ...state, locations };
     }
 
-    case 'UPDATE_LOCATION_CONTACTS': {
+    case 'UPDATE_LOCATION_DIRECTORY': {
       const location = action.location;
       const locations = [];
 
@@ -130,32 +130,32 @@ export default (state = initialState, action = { type: null }) => {
       return { ...state, locations };
     }
 
-    case 'IMPORT_CONTACTS_CONTACTS': {
-      const importContacts = action.contacts;
-      let contacts = cloneDeep(state.contacts);
+    case 'IMPORT_PERSONS_DIRECTORY': {
+      const importPersons = action.persons;
+      let persons = cloneDeep(state.persons);
 
-      for (const contact of importContacts) {
-        contacts = addContactToList(contacts, contact);
+      for (const person of importPersons) {
+        persons = addPersonToList(persons, person);
       }
 
-      const importedRecordIDs = importContacts.map(({ recordID }) => recordID);
+      const importedRecordIDs = importPersons.map(({ recordID }) => recordID);
 
-      contacts = contacts.filter(({ recordID }) => recordID === undefined || importedRecordIDs.includes(recordID));
+      persons = persons.filter(({ recordID }) => recordID === undefined || importedRecordIDs.includes(recordID));
 
-      return { ...state, contacts };
+      return { ...state, persons };
     }
 
-    case 'SHOW_IMPORT_CONTACTS_MODAL_CONTACTS':
-      return { ...state, isImportContactsModalVisible: true };
+    case 'SHOW_IMPORT_PERSONS_MODAL_DIRECTORY':
+      return { ...state, isImportPersonsModalVisible: true };
 
-    case 'HIDE_IMPORT_CONTACTS_MODAL_CONTACTS':
-      return { ...state, isImportContactsModalVisible: false };
+    case 'HIDE_IMPORT_PERSONS_MODAL_DIRECTORY':
+      return { ...state, isImportPersonsModalVisible: false };
 
-    case 'ENABLE_CONTACTS_IMPORTING_CONTACTS':
-      return { ...state, contactsImporting: true };
+    case 'ENABLE_PERSONS_IMPORTING_DIRECTORY':
+      return { ...state, personsImporting: true };
 
-    case 'DISABLE_CONTACTS_IMPORTING_CONTACTS':
-      return { ...state, contactsImporting: false };
+    case 'DISABLE_PERSONS_IMPORTING_DIRECTORY':
+      return { ...state, personsImporting: false };
 
     default:
       return state;

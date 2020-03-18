@@ -95,7 +95,7 @@ const LocationsList = ({
               </Text>
 
               {allowSelection && (
-                <TouchableOpacity onPress={() => toggleSelection(id)} style={styles.selectButton}>
+                <View style={styles.selectButton}>
                   <View
                     style={{
                       ...styles.selectButtonInner,
@@ -107,7 +107,7 @@ const LocationsList = ({
                       <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
                     )}
                   </View>
-                </TouchableOpacity>
+                </View>
               )}
             </View>
 
@@ -145,6 +145,10 @@ const LocationsList = ({
           <ListItem allowDelete={allowDelete} deleteItem={() => deleteItem(id, description, timestamp)}>
             {allowUpdate ? (
               <TouchableOpacity onPress={() => updateItem(id)}>
+                <LocationItem />
+              </TouchableOpacity>
+            ) : allowSelection ? (
+              <TouchableOpacity onPress={() => toggleSelection(id)}>
                 <LocationItem />
               </TouchableOpacity>
             ) : (

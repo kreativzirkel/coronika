@@ -2,20 +2,20 @@ import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
 import withViewportUnits from '../../../utils/withViewportUnits';
-import { addContactToDay, addLocationToDay } from '../../screens/Dashboard/actions';
+import { addPersonToDay, addLocationToDay } from '../../screens/Dashboard/actions';
 import Screen from './ui';
 
 const addSelection = (selection, navigation) => async (dispatch, getState) => {
   const {
-    contacts: { contacts, locations },
+    directory: { persons, locations },
     day: { timestamp },
   } = getState();
 
-  selection.contacts.forEach((contactId) => {
-    const contact = contacts.find(({ id }) => id === contactId);
+  selection.persons.forEach((personId) => {
+    const person = persons.find(({ id }) => id === personId);
 
-    if (contact) {
-      dispatch(addContactToDay(timestamp, contact));
+    if (person) {
+      dispatch(addPersonToDay(timestamp, person));
     }
   });
 
@@ -29,7 +29,7 @@ const addSelection = (selection, navigation) => async (dispatch, getState) => {
   navigation.navigate('Day');
 };
 
-const contactsSortingFunction = (a, b) => {
+const personsSortingFunction = (a, b) => {
   const fullNameA = a.fullName.toLowerCase();
   const fullNameB = b.fullName.toLowerCase();
   if (fullNameA < fullNameB) {
@@ -55,17 +55,17 @@ const locationsSortingFunction = (a, b) => {
   return 0;
 };
 
-const mapStateToProps = ({ contacts: { contacts, locations }, dashboard: { days }, day: { timestamp } }) => {
-  contacts.sort((a, b) => contactsSortingFunction(a, b));
+const mapStateToProps = ({ directory: { persons, locations }, dashboard: { days }, day: { timestamp } }) => {
+  persons.sort((a, b) => personsSortingFunction(a, b));
   locations.sort((a, b) => locationsSortingFunction(a, b));
 
-  const dayContacts = days[timestamp]?.contacts || [];
-  const availableContacts = contacts.filter(
-    ({ id }) => dayContacts.find(({ id: dayContactId }) => id === dayContactId) === undefined
+  const dayPersons = days[timestamp]?.persons || [];
+  const availablePersons = persons.filter(
+    ({ id }) => dayPersons.find(({ id: dayPersonId }) => id === dayPersonId) === undefined
   );
 
   return {
-    contacts: availableContacts,
+    persons: availablePersons,
     locations,
     timestamp,
   };

@@ -10,7 +10,7 @@ import EntriesTabsView from '../../partials/EntriesTabsView';
 import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
 import { COLOR_PRIMARY } from '../../../constants';
 
-const Day = ({ contacts, locations, timestamp, deleteContactFromDay, deleteLocationFromDay, navigation, vw, __ }) => {
+const Day = ({ locations, persons, timestamp, deleteLocationFromDay, deletePersonFromDay, navigation, vw, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     buttonAdd: {
@@ -74,23 +74,17 @@ const Day = ({ contacts, locations, timestamp, deleteContactFromDay, deleteLocat
       </Header>
 
       <View style={styles.dayOverviewWrapper}>
-        <DayOverview
-          contacts={contacts.length}
-          isDark
-          locations={locations.length}
-          timestamp={timestamp}
-          today={today}
-        />
+        <DayOverview isDark locations={locations.length} persons={persons.length} timestamp={timestamp} today={today} />
       </View>
 
       <EntriesTabsView
-        contacts={contacts}
-        customContactsEmptyText={__('day-screen.persons.empty')}
         customLocationsEmptyText={__('day-screen.locations.empty')}
-        deleteContactItem={(id) => deleteContactFromDay(id)}
+        customPersonsEmptyText={__('day-screen.persons.empty')}
+        deletePersonItem={(id) => deletePersonFromDay(id)}
         deleteLocationItem={(id, description, time) => deleteLocationFromDay(id, description, time)}
         hideCreateButton
         locations={locations}
+        persons={persons}
       />
 
       <View style={styles.wrapperAddEntry}>

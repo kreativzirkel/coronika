@@ -8,7 +8,7 @@ export default (state = initialState, action = { type: null }) => {
   switch (action.type) {
     case 'ADD_DAY_DASHBOARD': {
       const day = {
-        contacts: [],
+        persons: [],
         locations: [],
         ...action.day,
       };
@@ -19,25 +19,25 @@ export default (state = initialState, action = { type: null }) => {
       return { ...state, days };
     }
 
-    case 'ADD_CONTACT_TO_DAY_DASHBOARD': {
+    case 'ADD_PERSON_TO_DAY_DASHBOARD': {
       const timestamp = action.timestamp;
-      const contact = action.contact;
+      const person = action.person;
       const days = cloneDeep(state.days);
 
-      if (!days[timestamp].contacts.find(({ id }) => id === contact.id)) {
-        days[timestamp].contacts.push(contact);
+      if (!days[timestamp].persons.find(({ id }) => id === person.id)) {
+        days[timestamp].persons.push(person);
       }
 
       return { ...state, days };
     }
 
-    case 'REMOVE_CONTACT_FROM_DAY_DASHBOARD': {
+    case 'REMOVE_PERSON_FROM_DAY_DASHBOARD': {
       const timestamp = action.timestamp;
-      const contactId = action.contactId;
+      const personId = action.personId;
       const days = cloneDeep(state.days);
 
-      if (days[timestamp].contacts.find(({ id }) => id === contactId)) {
-        days[timestamp].contacts = days[timestamp].contacts.filter(({ id }) => id !== contactId);
+      if (days[timestamp].persons.find(({ id }) => id === personId)) {
+        days[timestamp].persons = days[timestamp].persons.filter(({ id }) => id !== personId);
       }
 
       return { ...state, days };

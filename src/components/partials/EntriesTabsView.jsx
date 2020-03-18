@@ -12,9 +12,9 @@ import ReactReduxContext from 'react-redux/lib/components/Context';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
-import { addContact, addLocation, updateContact, updateLocation } from '../screens/Directory/actions';
-import { importContacts } from '../screens/Directory/logic';
-import ContactsList from '../widgets/ContactsList';
+import { addPerson, addLocation, updatePerson, updateLocation } from '../screens/Directory/actions';
+import { importPersons } from '../screens/Directory/logic';
+import PersonsList from '../widgets/PersonsList';
 import DateTimePickerModal from '../widgets/DateTimePickerModal';
 import LocationsList from '../widgets/LocationsList';
 import SearchBar from '../widgets/SearchBar';
@@ -22,7 +22,7 @@ import TabBar from '../widgets/TabBar';
 import TabBarItem from '../widgets/TabBarItem';
 
 const TABS = {
-  CONTACTS: 0,
+  PERSONS: 0,
   GROUPS: 1,
   LOCATIONS: 2,
 };
@@ -42,22 +42,22 @@ class EntriesTabsView extends React.PureComponent {
       .valueOf();
 
     this.state = {
-      activeTab: TABS.CONTACTS,
-      editContactId: '',
+      activeTab: TABS.PERSONS,
+      editPersonId: '',
       editLocationId: '',
-      isModalNewContactVisible: false,
+      isModalNewPersonVisible: false,
       isModalNewLocationVisible: false,
       isModalSelectLocationVisible: false,
       isModalSelectLocationTimestampVisible: false,
-      isUpdateContactMode: false,
+      isUpdatePersonMode: false,
       isUpdateLocationMode: false,
-      newContactName: '',
-      newContactPhone: '',
+      newPersonName: '',
+      newPersonPhone: '',
       newLocationDescription: '',
       newLocationTitle: '',
       searchValue: '',
       selectedEntries: {
-        contacts: [],
+        persons: [],
         groups: [],
         locations: [],
       },
@@ -78,19 +78,19 @@ class EntriesTabsView extends React.PureComponent {
     }
   }
 
-  addNewContact() {
+  addNewPerson() {
     const {
       store: { dispatch },
     } = this.context;
-    const { newContactName, newContactPhone } = this.state;
-    const contact = {
-      fullName: newContactName,
-      phoneNumbers: [{ label: 'phone', number: newContactPhone }],
+    const { newPersonName, newPersonPhone } = this.state;
+    const person = {
+      fullName: newPersonName,
+      phoneNumbers: [{ label: 'phone', number: newPersonPhone }],
     };
 
-    dispatch(addContact(contact));
+    dispatch(addPerson(person));
 
-    this.closeModalNewContact();
+    this.closeModalNewPerson();
   }
 
   addNewLocation() {
@@ -114,25 +114,25 @@ class EntriesTabsView extends React.PureComponent {
     }
   }
 
-  importContacts() {
+  importPersons() {
     const {
       store: { dispatch },
     } = this.context;
 
-    dispatch(importContacts());
+    dispatch(importPersons());
   }
 
-  openModalNewContact() {
+  openModalNewPerson() {
     this.setState({
-      isUpdateContactMode: false,
-      isModalNewContactVisible: true,
-      newContactName: '',
-      newContactPhone: '',
+      isUpdatePersonMode: false,
+      isModalNewPersonVisible: true,
+      newPersonName: '',
+      newPersonPhone: '',
     });
   }
 
-  closeModalNewContact() {
-    this.setState({ isModalNewContactVisible: false });
+  closeModalNewPerson() {
+    this.setState({ isModalNewPersonVisible: false });
   }
 
   openModalNewLocation() {
@@ -164,12 +164,12 @@ class EntriesTabsView extends React.PureComponent {
     this.setState({ activeTab });
   }
 
-  setNewContactName(newContactName) {
-    this.setState({ newContactName });
+  setNewPersonName(newPersonName) {
+    this.setState({ newPersonName });
   }
 
-  setNewContactPhone(newContactPhone) {
-    this.setState({ newContactPhone });
+  setNewPersonPhone(newPersonPhone) {
+    this.setState({ newPersonPhone });
   }
 
   setNewLocationDescription(newLocationDescription) {
@@ -199,17 +199,17 @@ class EntriesTabsView extends React.PureComponent {
     this.closeModalSelectLocationTimestamp();
   }
 
-  toggleContactSelection(id) {
+  togglePersonSelection(id) {
     const { selectedEntries } = this.state;
     let updatedSelection;
 
-    if (selectedEntries.contacts.includes(id)) {
-      updatedSelection = selectedEntries.contacts.filter((item) => item !== id);
+    if (selectedEntries.persons.includes(id)) {
+      updatedSelection = selectedEntries.persons.filter((item) => item !== id);
     } else {
-      updatedSelection = [...selectedEntries.contacts, id];
+      updatedSelection = [...selectedEntries.persons, id];
     }
 
-    const updatedSelectedEntries = { ...selectedEntries, contacts: updatedSelection };
+    const updatedSelectedEntries = { ...selectedEntries, persons: updatedSelection };
 
     this.setState({ selectedEntries: updatedSelectedEntries });
   }
@@ -247,33 +247,33 @@ class EntriesTabsView extends React.PureComponent {
     this.setState({ isModalSelectLocationVisible: false, selectedEntries: updatedSelectedEntries });
   }
 
-  editContact(editContactId) {
-    const { contacts } = this.props;
-    const { fullName: newContactName, phoneNumbers } = contacts.find(({ id }) => id === editContactId);
-    const newContactPhone = phoneNumbers[0]?.number || '';
+  editPerson(editPersonId) {
+    const { persons } = this.props;
+    const { fullName: newPersonName, phoneNumbers } = persons.find(({ id }) => id === editPersonId);
+    const newPersonPhone = phoneNumbers[0]?.number || '';
     this.setState({
-      editContactId,
-      isUpdateContactMode: true,
-      isModalNewContactVisible: true,
-      newContactName,
-      newContactPhone,
+      editPersonId,
+      isUpdatePersonMode: true,
+      isModalNewPersonVisible: true,
+      newPersonName,
+      newPersonPhone,
     });
   }
 
-  updateContact() {
+  updatePerson() {
     const {
       store: { dispatch },
     } = this.context;
-    const { editContactId, newContactName, newContactPhone } = this.state;
-    const contact = {
-      id: editContactId,
-      fullName: newContactName,
-      phoneNumbers: [{ label: 'phone', number: newContactPhone }],
+    const { editPersonId, newPersonName, newPersonPhone } = this.state;
+    const person = {
+      id: editPersonId,
+      fullName: newPersonName,
+      phoneNumbers: [{ label: 'phone', number: newPersonPhone }],
     };
 
-    dispatch(updateContact(contact));
+    dispatch(updatePerson(person));
 
-    this.setState({ isUpdateContactMode: false, isModalNewContactVisible: false });
+    this.setState({ isUpdatePersonMode: false, isModalNewPersonVisible: false });
   }
 
   editLocation(editLocationId) {
@@ -306,12 +306,12 @@ class EntriesTabsView extends React.PureComponent {
     const {
       allowSelection,
       allowUpdate,
-      contacts,
-      customContactsEmptyText,
+      persons,
+      customPersonsEmptyText,
       customLocationsEmptyText,
-      deleteContactItem,
+      deletePersonItem,
       deleteLocationItem,
-      disableDeleteImportedContacts,
+      disableDeleteImportedPersons,
       hideCreateButton,
       locations,
       vw,
@@ -319,14 +319,14 @@ class EntriesTabsView extends React.PureComponent {
     } = this.props;
     const {
       activeTab,
-      isModalNewContactVisible,
+      isModalNewPersonVisible,
       isModalNewLocationVisible,
       isModalSelectLocationVisible,
       isModalSelectLocationTimestampVisible,
-      isUpdateContactMode,
+      isUpdatePersonMode,
       isUpdateLocationMode,
-      newContactName,
-      newContactPhone,
+      newPersonName,
+      newPersonPhone,
       newLocationDescription,
       newLocationTitle,
       searchValue,
@@ -336,21 +336,21 @@ class EntriesTabsView extends React.PureComponent {
       selectLocationTitle,
     } = this.state;
 
-    const buttonAddNewContactDisabled = newContactName.length < 3;
+    const buttonAddNewPersonDisabled = newPersonName.length < 3;
     const buttonAddNewLocationDisabled = newLocationTitle.length < 3;
     const buttonAddSelectionDisabled =
       allowSelection &&
-      selectedEntries.contacts.length === 0 &&
+      selectedEntries.persons.length === 0 &&
       selectedEntries.groups.length === 0 &&
       selectedEntries.locations.length === 0;
 
     const selectionCounter =
-      selectedEntries.contacts.length + selectedEntries.groups.length + selectedEntries.locations.length;
+      selectedEntries.persons.length + selectedEntries.groups.length + selectedEntries.locations.length;
 
     const isSearchFilled = searchValue.trim().length > 0;
-    const filteredContacts = isSearchFilled
-      ? contacts.filter(({ fullName }) => fullName.toLowerCase().indexOf(searchValue.trim().toLowerCase()) !== -1)
-      : contacts;
+    const filteredPersons = isSearchFilled
+      ? persons.filter(({ fullName }) => fullName.toLowerCase().indexOf(searchValue.trim().toLowerCase()) !== -1)
+      : persons;
     const filteredLocations = isSearchFilled
       ? locations.filter(({ title }) => title.toLowerCase().indexOf(searchValue.trim().toLowerCase()) !== -1)
       : locations;
@@ -377,15 +377,15 @@ class EntriesTabsView extends React.PureComponent {
         fontSize: vw(4.8),
         textTransform: 'lowercase',
       },
-      contactsImportButton: {
+      personsImportButton: {
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'center',
       },
-      contactsImportButtonIcon: {
+      personsImportButtonIcon: {
         marginRight: vw(1.5),
       },
-      contactsImportButtonText: {
+      personsImportButtonText: {
         color: COLOR_PRIMARY,
         fontFamily: 'JetBrainsMono-Regular',
         fontSize: vw(4.5),
@@ -498,12 +498,12 @@ class EntriesTabsView extends React.PureComponent {
 
         <TabBar>
           <TabBarItem
-            active={activeTab === TABS.CONTACTS}
-            counter={filteredContacts.length}
+            active={activeTab === TABS.PERSONS}
+            counter={filteredPersons.length}
             counterVisible={isSearchFilled}
             icon={UilUser}
             label={__('persons')}
-            onPress={() => this.setActiveTab(TABS.CONTACTS)}
+            onPress={() => this.setActiveTab(TABS.PERSONS)}
           />
           {/* groups are disabled for the moment */}
           {/* <TabBarItem active={activeTab === TABS.GROUPS} icon={UilUsersAlt} label={__('groups')} onPress={() => this.setActiveTab(TABS.GROUPS)} /> */}
@@ -518,26 +518,26 @@ class EntriesTabsView extends React.PureComponent {
         </TabBar>
 
         <View style={styles.tabContentWrapper}>
-          {activeTab === TABS.CONTACTS && (
+          {activeTab === TABS.PERSONS && (
             <Fragment>
               {!hideCreateButton && (
-                <TouchableOpacity onPress={() => this.openModalNewContact()} style={styles.buttonCreateNew}>
+                <TouchableOpacity onPress={() => this.openModalNewPerson()} style={styles.buttonCreateNew}>
                   <UilPlus color={COLOR_PRIMARY} size={vw(5.5)} style={styles.buttonCreateNewIcon} />
                   <Text style={styles.buttonCreateNewText}>{__('entries.persons.list.new')}</Text>
                 </TouchableOpacity>
               )}
 
-              {filteredContacts && filteredContacts.length ? (
-                <ContactsList
-                  allowDelete={typeof deleteContactItem === 'function'}
+              {filteredPersons && filteredPersons.length ? (
+                <PersonsList
+                  allowDelete={typeof deletePersonItem === 'function'}
                   allowSelection={allowSelection}
                   allowUpdate={allowUpdate}
-                  contacts={filteredContacts}
-                  deleteItem={(id) => deleteContactItem(id)}
-                  disableDeleteImportedContacts={disableDeleteImportedContacts}
-                  selectedContacts={selectedEntries.contacts}
-                  toggleSelection={(id) => this.toggleContactSelection(id)}
-                  updateItem={(id) => this.editContact(id)}
+                  persons={filteredPersons}
+                  deleteItem={(id) => deletePersonItem(id)}
+                  disableDeleteImportedPersons={disableDeleteImportedPersons}
+                  selectedPersons={selectedEntries.persons}
+                  toggleSelection={(id) => this.togglePersonSelection(id)}
+                  updateItem={(id) => this.editPerson(id)}
                 />
               ) : (
                 <View style={styles.entriesEmptyWrapper}>
@@ -545,14 +545,14 @@ class EntriesTabsView extends React.PureComponent {
                     <Text style={styles.entriesEmptyText}>{__('entries.search.list.empty')}</Text>
                   ) : (
                     <Fragment>
-                      {customContactsEmptyText ? (
-                        <Text style={styles.entriesEmptyText}>{customContactsEmptyText}</Text>
+                      {customPersonsEmptyText ? (
+                        <Text style={styles.entriesEmptyText}>{customPersonsEmptyText}</Text>
                       ) : (
                         <Fragment>
                           <Text style={styles.entriesEmptyText}>{__('entries.persons.list.empty')}</Text>
-                          <TouchableOpacity onPress={() => this.importContacts()} style={styles.contactsImportButton}>
-                            <UilImport color={COLOR_PRIMARY} size={vw(5.5)} style={styles.contactsImportButtonIcon} />
-                            <Text style={styles.contactsImportButtonText}>
+                          <TouchableOpacity onPress={() => this.importPersons()} style={styles.personsImportButton}>
+                            <UilImport color={COLOR_PRIMARY} size={vw(5.5)} style={styles.personsImportButtonIcon} />
+                            <Text style={styles.personsImportButtonText}>
                               {__('entries.persons.list.import.button')}
                             </Text>
                           </TouchableOpacity>
@@ -612,15 +612,15 @@ class EntriesTabsView extends React.PureComponent {
           )}
         </View>
 
-        <Modal isVisible={isModalNewContactVisible} style={styles.modal}>
+        <Modal isVisible={isModalNewPersonVisible} style={styles.modal}>
           <KeyboardAvoidingView behavior={keyboardAvoidingViewBehavior} enabled style={styles.modalContent}>
             <View style={styles.modalHeader}>
               <Text style={styles.modalHeaderText}>
-                {isUpdateContactMode
+                {isUpdatePersonMode
                   ? __('entries.modals.update-person.headline')
                   : __('entries.modals.new-person.headline')}
               </Text>
-              <TouchableOpacity onPress={() => this.closeModalNewContact()}>
+              <TouchableOpacity onPress={() => this.closeModalNewPerson()}>
                 <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
               </TouchableOpacity>
             </View>
@@ -628,32 +628,32 @@ class EntriesTabsView extends React.PureComponent {
             <TextInput
               autoCompleteType={'off'}
               autoCorrect={false}
-              onChangeText={(value) => this.setNewContactName(value)}
+              onChangeText={(value) => this.setNewPersonName(value)}
               placeholder={__('entries.modals.new-person.placeholder.name').toLowerCase()}
               placeholderTextColor={'#B0B0B1'}
               style={styles.modalTextInput}
               textContentType={'none'}
-              value={newContactName}
+              value={newPersonName}
             />
 
             <TextInput
               autoCompleteType={'off'}
               autoCorrect={false}
-              onChangeText={(value) => this.setNewContactPhone(value)}
+              onChangeText={(value) => this.setNewPersonPhone(value)}
               keyboardType={'phone-pad'}
               placeholder={__('entries.modals.new-person.placeholder.phone-number').toLowerCase()}
               placeholderTextColor={'#B0B0B1'}
               style={styles.modalTextInput}
               textContentType={'none'}
-              value={newContactPhone}
+              value={newPersonPhone}
             />
 
             <TouchableOpacity
-              disabled={buttonAddNewContactDisabled}
-              onPress={() => (isUpdateContactMode ? this.updateContact() : this.addNewContact())}>
-              <View style={{ ...styles.modalButton, ...(buttonAddNewContactDisabled && styles.modalButtonDisabled) }}>
+              disabled={buttonAddNewPersonDisabled}
+              onPress={() => (isUpdatePersonMode ? this.updatePerson() : this.addNewPerson())}>
+              <View style={{ ...styles.modalButton, ...(buttonAddNewPersonDisabled && styles.modalButtonDisabled) }}>
                 <Text style={styles.modalButtonText}>
-                  {isUpdateContactMode
+                  {isUpdatePersonMode
                     ? __('entries.modals.update-person.button')
                     : __('entries.modals.new-person.button')}
                 </Text>

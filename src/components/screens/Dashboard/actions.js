@@ -1,11 +1,11 @@
 export const addDay = (day) => ({ type: 'ADD_DAY_DASHBOARD', day });
 
-export const addContactToDay = (timestamp, contact) => ({ type: 'ADD_CONTACT_TO_DAY_DASHBOARD', timestamp, contact });
+export const addPersonToDay = (timestamp, person) => ({ type: 'ADD_PERSON_TO_DAY_DASHBOARD', timestamp, person });
 
-export const removeContactFromDay = (timestamp, contactId) => ({
-  type: 'REMOVE_CONTACT_FROM_DAY_DASHBOARD',
+export const removePersonFromDay = (timestamp, personId) => ({
+  type: 'REMOVE_PERSON_FROM_DAY_DASHBOARD',
   timestamp,
-  contactId,
+  personId,
 });
 
 export const addLocationToDay = (timestamp, location) => ({

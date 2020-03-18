@@ -19,6 +19,7 @@ const TipMouthguard = ({ navigation, vw, __ }) => {
     contentText: {
       fontFamily: 'JetBrainsMono-Regular',
       fontSize: vw(4.5),
+      lineHeight: vw(7),
     },
     contentTextParagraph: {
       marginTop: vw(3),
@@ -47,7 +48,7 @@ const TipMouthguard = ({ navigation, vw, __ }) => {
       borderRadius: 50,
       height: vw(10),
       justifyContent: 'center',
-      marginRight: vw(3),
+      marginRight: vw(6),
       width: vw(10),
     },
     listItemNumberText: {
@@ -58,6 +59,7 @@ const TipMouthguard = ({ navigation, vw, __ }) => {
     listItemText: {
       fontFamily: 'JetBrainsMono-Regular',
       fontSize: vw(4.5),
+      lineHeight: vw(7),
       marginTop: vw(2),
     },
     view: {

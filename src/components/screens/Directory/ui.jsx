@@ -9,15 +9,15 @@ import Header from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 
 const Directory = ({
-  contacts,
-  contactsImporting,
-  isImportContactsModalVisible,
+  isImportPersonsModalVisible,
   locations,
-  deleteContact,
+  persons,
+  personsImporting,
   deleteLocation,
-  showImportContactsModal,
-  hideImportContactsModal,
-  importContacts,
+  deletePerson,
+  showImportPersonsModal,
+  hideImportPersonsModal,
+  importPersons,
   vw,
   __,
 }) => {
@@ -119,43 +119,43 @@ const Directory = ({
       <View style={styles.view}>
         <Header>
           <View style={styles.header}>
-            <TouchableOpacity onPress={() => showImportContactsModal()} style={styles.headerButton}>
+            <TouchableOpacity onPress={() => showImportPersonsModal()} style={styles.headerButton}>
               <UilImport size={vw(4)} color={'#000000'} />
 
-              <Text style={styles.headerButtonText}>{__('contacts-screen.header.button.import')}</Text>
+              <Text style={styles.headerButtonText}>{__('directory-screen.header.button.import')}</Text>
             </TouchableOpacity>
 
-            <Text style={styles.headerHeadline}>{__('contacts-screen.header.headline')}</Text>
+            <Text style={styles.headerHeadline}>{__('directory-screen.header.headline')}</Text>
           </View>
         </Header>
 
         <EntriesTabsView
           allowUpdate
-          contacts={contacts}
-          deleteContactItem={(id) => deleteContact(id)}
+          persons={persons}
           deleteLocationItem={(id) => deleteLocation(id)}
-          disableDeleteImportedContacts
+          deletePersonItem={(id) => deletePerson(id)}
+          disableDeleteImportedPersons
           locations={locations}
         />
       </View>
 
-      <Modal isVisible={isImportContactsModalVisible} style={styles.modal}>
+      <Modal isVisible={isImportPersonsModalVisible} style={styles.modal}>
         <View style={styles.modalContent}>
           <View style={styles.modalHeader}>
-            <Text style={styles.modalHeaderText}>{__('contacts-screen.modals.import-persons.headline')}</Text>
-            <TouchableOpacity onPress={() => hideImportContactsModal()}>
+            <Text style={styles.modalHeaderText}>{__('directory-screen.modals.import-persons.headline')}</Text>
+            <TouchableOpacity onPress={() => hideImportPersonsModal()}>
               <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
             </TouchableOpacity>
           </View>
 
-          <Text style={styles.modalText}>{__('contacts-screen.modals.import-persons.text')}</Text>
+          <Text style={styles.modalText}>{__('directory-screen.modals.import-persons.text')}</Text>
 
-          <TouchableOpacity disabled={contactsImporting} onPress={() => importContacts()}>
-            <View style={{ ...styles.modalButton, ...(contactsImporting && styles.modalButtonDisabled) }}>
+          <TouchableOpacity disabled={personsImporting} onPress={() => importPersons()}>
+            <View style={{ ...styles.modalButton, ...(personsImporting && styles.modalButtonDisabled) }}>
               <Text style={styles.modalButtonText}>
-                {contactsImporting
-                  ? __('contacts-screen.modals.import-persons.button.importing')
-                  : __('contacts-screen.modals.import-persons.button.default')}
+                {personsImporting
+                  ? __('directory-screen.modals.import-persons.button.importing')
+                  : __('directory-screen.modals.import-persons.button.default')}
               </Text>
             </View>
           </TouchableOpacity>

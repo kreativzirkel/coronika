@@ -5,23 +5,23 @@ import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import {
-  importContacts as importContactsAction,
-  removeContact,
+  importPersons as importPersonsAction,
+  removePerson,
   removeLocation,
-  showImportContactsModal,
-  hideImportContactsModal,
-  enableContactsImporting,
-  disableContactsImporting,
+  showImportPersonsModal,
+  hideImportPersonsModal,
+  enablePersonsImporting,
+  disablePersonsImporting,
 } from './actions';
 import Screen from './ui';
 
-export const importContacts = (closeImportContactsModal = false) => async (dispatch) => {
-  dispatch(enableContactsImporting());
+export const importPersons = (closeImportPersonsModal = false) => async (dispatch) => {
+  dispatch(enablePersonsImporting());
 
   // noinspection JSCheckFunctionSignatures,JSUnresolvedFunction,JSUnresolvedVariable
   PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_CONTACTS, {
     title: 'Contacts',
-    message: 'This app would like to view your contacts.',
+    message: 'This app would like to view your contacts.', // TODO: add translations
     buttonPositive: 'Please accept',
   })
     .then(() => {
@@ -29,12 +29,12 @@ export const importContacts = (closeImportContactsModal = false) => async (dispa
         if (err === 'denied') {
           // error
         } else {
-          const contactsToImport = [];
+          const personsToImport = [];
 
           contacts.forEach(({ familyName, givenName, middleName, phoneNumbers, recordID }) => {
             // ignore company contacts
             if (givenName.trim() !== '') {
-              contactsToImport.push({
+              personsToImport.push({
                 givenName,
                 middleName,
                 familyName,
@@ -44,22 +44,22 @@ export const importContacts = (closeImportContactsModal = false) => async (dispa
             }
           });
 
-          dispatch(importContactsAction(contactsToImport));
+          dispatch(importPersonsAction(personsToImport));
 
-          if (closeImportContactsModal) {
-            dispatch(hideImportContactsModal());
+          if (closeImportPersonsModal) {
+            dispatch(hideImportPersonsModal());
           }
 
-          dispatch(disableContactsImporting());
+          dispatch(disablePersonsImporting());
         }
       });
     })
     .catch(() => {
-      dispatch(disableContactsImporting());
+      dispatch(disablePersonsImporting());
     });
 };
 
-const contactsSortingFunction = (a, b) => {
+const personsSortingFunction = (a, b) => {
   const fullNameA = a.fullName.toLowerCase();
   const fullNameB = b.fullName.toLowerCase();
   if (fullNameA < fullNameB) {
@@ -85,25 +85,25 @@ const locationsSortingFunction = (a, b) => {
   return 0;
 };
 
-const mapStateToProps = ({ contacts: { contacts, contactsImporting, isImportContactsModalVisible, locations } }) => {
-  contacts.sort((a, b) => contactsSortingFunction(a, b));
+const mapStateToProps = ({ directory: { persons, personsImporting, isImportPersonsModalVisible, locations } }) => {
+  persons.sort((a, b) => personsSortingFunction(a, b));
   locations.sort((a, b) => locationsSortingFunction(a, b));
 
   return {
-    contacts,
-    contactsImporting,
-    isImportContactsModalVisible,
+    persons,
+    personsImporting,
+    isImportPersonsModalVisible,
     locations,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    deleteContact: (contactId) => dispatch(removeContact(contactId)),
+    deletePerson: (personId) => dispatch(removePerson(personId)),
     deleteLocation: (locationId) => dispatch(removeLocation(locationId)),
-    showImportContactsModal: () => dispatch(showImportContactsModal()),
-    hideImportContactsModal: () => dispatch(hideImportContactsModal()),
-    importContacts: () => dispatch(importContacts(true)),
+    showImportPersonsModal: () => dispatch(showImportPersonsModal()),
+    hideImportPersonsModal: () => dispatch(hideImportPersonsModal()),
+    importPersons: () => dispatch(importPersons(true)),
   };
 };
 

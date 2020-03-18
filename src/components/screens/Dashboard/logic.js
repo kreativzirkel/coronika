@@ -52,13 +52,13 @@ const mapStateToProps = ({ dashboard: { days } }) => {
     .map((timestamp) => days[timestamp]);
 
   const total = Object.values(days)
-    .map(({ contacts, locations }) => ({ contacts: contacts.length, locations: locations.length }))
+    .map(({ persons, locations }) => ({ persons: persons.length, locations: locations.length }))
     .reduce(
       (accumulator, currentValue) => ({
-        contacts: accumulator.contacts + currentValue.contacts,
+        persons: accumulator.persons + currentValue.persons,
         locations: accumulator.locations + currentValue.locations,
       }),
-      { contacts: 0, locations: 0 }
+      { persons: 0, locations: 0 }
     );
 
   return {

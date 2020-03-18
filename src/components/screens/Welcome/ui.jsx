@@ -45,6 +45,7 @@ const Welcome = ({ finish, navigation, vw, __ }) => {
     text: {
       fontFamily: 'JetBrainsMono-Regular',
       fontSize: vw(4.5),
+      lineHeight: vw(7),
       textAlign: 'center',
     },
     button: {

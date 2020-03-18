@@ -7,7 +7,7 @@ import EntriesTabsView from '../../partials/EntriesTabsView';
 import Header from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 
-const AddEntry = ({ contacts, locations, timestamp, addSelection, navigation, vw, __ }) => {
+const AddEntry = ({ locations, persons, timestamp, addSelection, navigation, vw, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     header: {
@@ -41,8 +41,8 @@ const AddEntry = ({ contacts, locations, timestamp, addSelection, navigation, vw
       <EntriesTabsView
         allowSelection
         addSelection={(selection) => addSelection(selection, navigation)}
-        contacts={contacts}
         locations={locations}
+        persons={persons}
         timestamp={timestamp}
       />
     </Layout>

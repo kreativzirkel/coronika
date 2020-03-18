@@ -5,7 +5,7 @@ import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 
-const DayOverview = ({ contacts, isDark, isTotal, locations, timestamp, today, vw, __ }) => {
+const DayOverview = ({ isDark, isEmphasized, isTotal, locations, persons, timestamp, today, vw, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     day: {
@@ -23,9 +23,16 @@ const DayOverview = ({ contacts, isDark, isTotal, locations, timestamp, today, v
     dayDark: {
       backgroundColor: '#000000',
     },
+    dayEmphasized: {
+      borderColor: COLOR_PRIMARY,
+      borderWidth: vw(0.5),
+      padding: vw(2.5),
+      paddingBottom: vw(2),
+      paddingTop: vw(2),
+    },
     dayValue: {
       fontFamily: 'JetBrainsMono-Bold',
-      fontSize: vw(8),
+      fontSize: vw(7.5),
       textTransform: 'lowercase',
     },
     dayValueNumber: {
@@ -41,7 +48,7 @@ const DayOverview = ({ contacts, isDark, isTotal, locations, timestamp, today, v
     dayValueCaption: {
       color: '#707070',
       fontFamily: 'JetBrainsMono-Regular',
-      fontSize: vw(3.5),
+      fontSize: vw(3.2),
       marginBottom: vw(0.5),
       textTransform: 'lowercase',
     },
@@ -51,14 +58,14 @@ const DayOverview = ({ contacts, isDark, isTotal, locations, timestamp, today, v
     dayDateWrapper: {
       flex: 1,
     },
-    dayContactsWrapper: {
+    dayPersonsWrapper: {
       flexGrow: 0,
       flexShrink: 0,
     },
     dayLocationsWrapper: {
       flexGrow: 0,
       flexShrink: 0,
-      marginRight: vw(5),
+      marginRight: vw(3),
     },
   });
 
@@ -66,13 +73,13 @@ const DayOverview = ({ contacts, isDark, isTotal, locations, timestamp, today, v
   const isToday = currentDay.diff(today) === 0;
 
   return (
-    <View style={{ ...styles.day, ...(isDark && styles.dayDark) }}>
+    <View style={{ ...styles.day, ...(isDark && styles.dayDark), ...(isEmphasized && styles.dayEmphasized) }}>
       <View style={styles.dayDateWrapper}>
         <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>
           {isToday ? __('today') : moment(timestamp).from(today, isTotal)}
         </Text>
         <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark) }}>
-          {isTotal ? __('total') : moment(timestamp).format('DD. MMM')}
+          {isTotal ? __('total') : moment(timestamp).format('dd DD. MMM')}
         </Text>
       </View>
       <View style={styles.dayLocationsWrapper}>
@@ -87,16 +94,16 @@ const DayOverview = ({ contacts, isDark, isTotal, locations, timestamp, today, v
           {locations || '-'}
         </Text>
       </View>
-      <View style={styles.dayContactsWrapper}>
+      <View style={styles.dayPersonsWrapper}>
         <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('persons')}</Text>
         <Text
           style={{
             ...styles.dayValue,
             ...styles.dayValueNumber,
-            ...(!contacts && styles.dayValueNumberEmpty),
+            ...(!persons && styles.dayValueNumberEmpty),
             ...(isDark && styles.dayValueNumberDark),
           }}>
-          {contacts || '-'}
+          {persons || '-'}
         </Text>
       </View>
     </View>
