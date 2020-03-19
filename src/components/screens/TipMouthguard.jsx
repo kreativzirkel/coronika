@@ -1,7 +1,7 @@
 import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import { CommonActions } from '@react-navigation/native';
 import React from 'react';
-import { Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Linking, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
@@ -29,7 +29,7 @@ const TipMouthguard = ({ navigation, vw, __ }) => {
       alignItems: 'center',
       flex: 1,
       flexDirection: 'row',
-      justifyContent: 'space-between',
+      justifyContent: Platform.OS === 'ios' ? 'space-between' : 'flex-end',
     },
     headerHeadline: {
       fontFamily: 'JetBrainsMono-Bold',
@@ -121,9 +121,11 @@ const TipMouthguard = ({ navigation, vw, __ }) => {
     <Layout backgroundColor={COLOR_SECONDARY}>
       <Header>
         <View style={styles.header}>
-          <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
-            <UilArrowLeft size={vw(12)} color={'#000000'} />
-          </TouchableOpacity>
+          {Platform.OS === 'ios' && (
+            <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
+              <UilArrowLeft size={vw(12)} color={'#000000'} />
+            </TouchableOpacity>
+          )}
 
           <Text style={styles.headerHeadline}>{__('tips-screen.header.headline')}</Text>
         </View>

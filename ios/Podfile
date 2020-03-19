@@ -38,6 +38,10 @@ target 'coronika' do
 
   pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
 
+  pod 'RNScreens', :path => '../node_modules/react-native-screens'
+
+  pod 'lottie-ios', :path => '../node_modules/lottie-ios'
+
   target 'coronikaTests' do
     inherit! :search_paths
     # Pods for testing

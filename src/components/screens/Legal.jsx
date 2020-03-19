@@ -3,7 +3,7 @@ import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 import { COLOR_SECONDARY } from '../../constants';
 import Header from '../widgets/Header';
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import Layout from '../widgets/Layout';
 import { CommonActions } from '@react-navigation/native';
@@ -52,7 +52,7 @@ class Legal extends React.PureComponent {
         alignItems: 'center',
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: Platform.OS === 'ios' ? 'space-between' : 'flex-end',
       },
       headerHeadline: {
         fontFamily: 'JetBrainsMono-Bold',
@@ -75,9 +75,11 @@ class Legal extends React.PureComponent {
       <Layout backgroundColor={COLOR_SECONDARY}>
         <Header>
           <View style={styles.header}>
-            <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
-              <UilArrowLeft size={vw(12)} color={'#000000'} />
-            </TouchableOpacity>
+            {Platform.OS === 'ios' && (
+              <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
+                <UilArrowLeft size={vw(12)} color={'#000000'} />
+              </TouchableOpacity>
+            )}
 
             <Text style={styles.headerHeadline}>{__('legal-screen.header.headline')}</Text>
           </View>

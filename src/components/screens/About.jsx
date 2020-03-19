@@ -2,7 +2,7 @@ import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import { CommonActions } from '@react-navigation/native';
 import LottieView from 'lottie-react-native';
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
@@ -46,7 +46,7 @@ const About = ({ navigation, vw, __ }) => {
       alignItems: 'center',
       flex: 1,
       flexDirection: 'row',
-      justifyContent: 'space-between',
+      justifyContent: Platform.OS === 'ios' ? 'space-between' : 'flex-end',
     },
     headerHeadline: {
       fontFamily: 'JetBrainsMono-Bold',
@@ -117,9 +117,11 @@ const About = ({ navigation, vw, __ }) => {
     <Layout backgroundColor={COLOR_SECONDARY}>
       <Header>
         <View style={styles.header}>
-          <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
-            <UilArrowLeft size={vw(12)} color={'#000000'} />
-          </TouchableOpacity>
+          {Platform.OS === 'ios' && (
+            <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
+              <UilArrowLeft size={vw(12)} color={'#000000'} />
+            </TouchableOpacity>
+          )}
 
           <Text style={styles.headerHeadline}>{__('about-screen.header.headline')}</Text>
         </View>

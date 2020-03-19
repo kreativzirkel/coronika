@@ -1,7 +1,7 @@
 import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import { CommonActions } from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_SECONDARY } from '../../../constants';
 import EntriesTabsView from '../../partials/EntriesTabsView';
 import Header from '../../widgets/Header';
@@ -14,7 +14,7 @@ const AddEntry = ({ locations, persons, timestamp, addSelection, navigation, vw,
       alignItems: 'center',
       flex: 1,
       flexDirection: 'row',
-      justifyContent: 'space-between',
+      justifyContent: Platform.OS === 'ios' ? 'space-between' : 'flex-end',
     },
     headerHeadline: {
       fontFamily: 'JetBrainsMono-Bold',
@@ -30,9 +30,11 @@ const AddEntry = ({ locations, persons, timestamp, addSelection, navigation, vw,
     <Layout backgroundColor={COLOR_SECONDARY}>
       <Header>
         <View style={styles.header}>
-          <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
-            <UilArrowLeft size={vw(12)} color={'#000000'} />
-          </TouchableOpacity>
+          {Platform.OS === 'ios' && (
+            <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
+              <UilArrowLeft size={vw(12)} color={'#000000'} />
+            </TouchableOpacity>
+          )}
 
           <Text style={styles.headerHeadline}>{__('add-entry-screen.header.headline')}</Text>
         </View>

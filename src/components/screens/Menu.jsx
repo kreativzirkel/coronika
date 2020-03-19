@@ -1,6 +1,6 @@
 import UilArrowRight from '@iconscout/react-native-unicons/icons/uil-arrow-right';
 import React from 'react';
-import { Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Linking, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { version } from '../../config';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
@@ -29,7 +29,7 @@ const Menu = ({ navigation, vw, __ }) => {
       alignItems: 'center',
       flex: 1,
       flexDirection: 'row',
-      justifyContent: 'space-between',
+      justifyContent: Platform.OS === 'ios' ? 'space-between' : 'flex-end',
     },
     headerHeadline: {
       fontFamily: 'JetBrainsMono-Bold',
@@ -114,11 +114,11 @@ const Menu = ({ navigation, vw, __ }) => {
     {
       headline: __('about-screen.header.headline'),
       routeName: 'About',
-    },/*
+    } /*
     {
       headline: __('settings-screen.header.headline'),
       routeName: 'Settings',
-    },*/
+    },*/,
     {
       headline: __('legal-screen.header.headline'),
       routeName: 'Legal',
@@ -135,9 +135,11 @@ const Menu = ({ navigation, vw, __ }) => {
     <Layout backgroundColor={COLOR_SECONDARY}>
       <Header>
         <View style={styles.header}>
-          <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
-            <UilArrowLeft size={vw(12)} color={'#000000'} />
-          </TouchableOpacity>
+          {Platform.OS === 'ios' && (
+            <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
+              <UilArrowLeft size={vw(12)} color={'#000000'} />
+            </TouchableOpacity>
+          )}
 
           <Text style={styles.headerHeadline}>{__('menu-screen.header.headline')}</Text>
         </View>
