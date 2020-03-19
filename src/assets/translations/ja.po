@@ -149,11 +149,7 @@ msgstr ""
 msgid "add-entry-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/Dashboard/ui.jsx:76
-msgid "dashboard-screen.header.buttons.policy"
-msgstr ""
-
-#: src/components/screens/Dashboard/ui.jsx:82
+#: src/components/screens/Dashboard/ui.jsx:75
 #: src/components/screens/Menu.jsx:142
 msgid "menu-screen.header.headline"
 msgstr ""
@@ -240,26 +236,6 @@ msgstr ""
 
 #: src/components/screens/Menu.jsx:183
 msgid "menu-screen.button.send-feedback"
-msgstr ""
-
-#: src/components/screens/Policy/ui.jsx:80
-msgid "policy-screen.header.headline"
-msgstr ""
-
-#: src/components/screens/Policy/ui.jsx:86
-msgid "policy-screen.content.section-1.headline"
-msgstr ""
-
-#: src/components/screens/Policy/ui.jsx:87
-msgid "policy-screen.content.section-1.text"
-msgstr ""
-
-#: src/components/screens/Policy/ui.jsx:88
-msgid "policy-screen.content.section-2.headline"
-msgstr ""
-
-#: src/components/screens/Policy/ui.jsx:89
-msgid "policy-screen.content.section-2.text"
 msgstr ""
 
 #: src/components/screens/TipAmIInfected.jsx:103

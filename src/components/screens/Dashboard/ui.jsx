@@ -60,7 +60,6 @@ const Dashboard = ({ days, total, openDay, navigation, vw, __ }) => {
     .milliseconds(0);
 
   const totalTimespan = moment(today).subtract(21, 'days');
-  const goToPolicy = () => navigation.navigate('Policy');
 
   return (
     <Layout>
@@ -70,12 +69,6 @@ const Dashboard = ({ days, total, openDay, navigation, vw, __ }) => {
             <Text style={styles.headerHeadline}>coronika</Text>
 
             <View style={styles.headerButtons}>
-              <TouchableOpacity onPress={() => goToPolicy()} style={styles.headerButtonsItem}>
-                <UilLock color={'#000000'} size={vw(4)} />
-
-                <Text style={styles.headerButtonsItemText}>{__('dashboard-screen.header.buttons.policy')}</Text>
-              </TouchableOpacity>
-
               <TouchableOpacity onPress={() => navigation.navigate('Menu')} style={styles.headerButtonsItem}>
                 <UilBars color={'#000000'} size={vw(4)} />
 

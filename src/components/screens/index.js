@@ -4,7 +4,6 @@ import Dashboard from './Dashboard/logic';
 import Day from './Day/logic';
 import Export from './Export/logic';
 import Menu from './Menu';
-import Policy from './Policy/logic';
 import Splash from './Splash/logic';
 import Tips from './Tips/logic';
 import TipAmIInfected from './TipAmIInfected';
@@ -23,7 +22,6 @@ export default {
   Day,
   Export,
   Menu,
-  Policy,
   Splash,
   Tips,
   TipAmIInfected,

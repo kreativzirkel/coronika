@@ -159,11 +159,7 @@ msgstr "Select"
 msgid "add-entry-screen.header.headline"
 msgstr "Add entry"
 
-#: src/components/screens/Dashboard/ui.jsx:76
-msgid "dashboard-screen.header.buttons.policy"
-msgstr "Policy"
-
-#: src/components/screens/Dashboard/ui.jsx:82
+#: src/components/screens/Dashboard/ui.jsx:75
 #: src/components/screens/Menu.jsx:142
 msgid "menu-screen.header.headline"
 msgstr "Menu"
@@ -259,29 +255,6 @@ msgstr ""
 #: src/components/screens/Menu.jsx:183
 msgid "menu-screen.button.send-feedback"
 msgstr "Send feedback"
-
-#: src/components/screens/Policy/ui.jsx:80
-msgid "policy-screen.header.headline"
-msgstr "Policy"
-
-#: src/components/screens/Policy/ui.jsx:86
-msgid "policy-screen.content.section-1.headline"
-msgstr "Containing the spread of the virus together"
-
-#: src/components/screens/Policy/ui.jsx:87
-msgid "policy-screen.content.section-1.text"
-msgstr ""
-"By tracing the paths of infection we can limit further spread of COVID-19."
-
-#: src/components/screens/Policy/ui.jsx:88
-msgid "policy-screen.content.section-2.headline"
-msgstr "Your data is yours alone"
-
-#: src/components/screens/Policy/ui.jsx:89
-msgid "policy-screen.content.section-2.text"
-msgstr ""
-"All data created and used by Coronika is stored locally and will not be "
-"tracked or passed on."
 
 #: src/components/screens/TipAmIInfected.jsx:103
 #: src/components/screens/Tips/ui.jsx:97
@@ -564,6 +537,27 @@ msgstr "total"
 #: src/components/widgets/SearchBar.jsx:57
 msgid "placeholder.search-input"
 msgstr "Search"
+
+#~ msgid "dashboard-screen.header.buttons.policy"
+#~ msgstr "Policy"
+
+#~ msgid "policy-screen.header.headline"
+#~ msgstr "Policy"
+
+#~ msgid "policy-screen.content.section-1.headline"
+#~ msgstr "Containing the spread of the virus together"
+
+#~ msgid "policy-screen.content.section-1.text"
+#~ msgstr ""
+#~ "By tracing the paths of infection we can limit further spread of COVID-19."
+
+#~ msgid "policy-screen.content.section-2.headline"
+#~ msgstr "Your data is yours alone"
+
+#~ msgid "policy-screen.content.section-2.text"
+#~ msgstr ""
+#~ "All data created and used by Coronika is stored locally and will not be "
+#~ "tracked or passed on."
 
 #~ msgid "dashboard-screen.header.buttons.menu"
 #~ msgstr "Menu"

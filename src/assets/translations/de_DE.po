@@ -160,11 +160,7 @@ msgstr "Auswählen"
 msgid "add-entry-screen.header.headline"
 msgstr "Eintrag hinzufügen"
 
-#: src/components/screens/Dashboard/ui.jsx:76
-msgid "dashboard-screen.header.buttons.policy"
-msgstr "Policy"
-
-#: src/components/screens/Dashboard/ui.jsx:82
+#: src/components/screens/Dashboard/ui.jsx:75
 #: src/components/screens/Menu.jsx:142
 msgid "menu-screen.header.headline"
 msgstr "Menü"
@@ -261,30 +257,6 @@ msgstr ""
 #: src/components/screens/Menu.jsx:183
 msgid "menu-screen.button.send-feedback"
 msgstr "Feedback senden"
-
-#: src/components/screens/Policy/ui.jsx:80
-msgid "policy-screen.header.headline"
-msgstr "Policy"
-
-#: src/components/screens/Policy/ui.jsx:86
-msgid "policy-screen.content.section-1.headline"
-msgstr "Gemeinsam das Coronavirus eindämmen"
-
-#: src/components/screens/Policy/ui.jsx:87
-msgid "policy-screen.content.section-1.text"
-msgstr ""
-"Indem wir Infektionswege nachvollziehen, können wir eine Ausbreitung "
-"eindämmen."
-
-#: src/components/screens/Policy/ui.jsx:88
-msgid "policy-screen.content.section-2.headline"
-msgstr "Deine Daten gehören dir"
-
-#: src/components/screens/Policy/ui.jsx:89
-msgid "policy-screen.content.section-2.text"
-msgstr ""
-"Alle Informationen, die du in Coronika anlegst, werden lokal gespeichert. "
-"Keine Daten werden getrackt oder weitergegeben."
 
 #: src/components/screens/TipAmIInfected.jsx:103
 #: src/components/screens/Tips/ui.jsx:97
@@ -562,6 +534,28 @@ msgstr "gesamt"
 #: src/components/widgets/SearchBar.jsx:57
 msgid "placeholder.search-input"
 msgstr "Suche"
+
+#~ msgid "dashboard-screen.header.buttons.policy"
+#~ msgstr "Policy"
+
+#~ msgid "policy-screen.header.headline"
+#~ msgstr "Policy"
+
+#~ msgid "policy-screen.content.section-1.headline"
+#~ msgstr "Gemeinsam das Coronavirus eindämmen"
+
+#~ msgid "policy-screen.content.section-1.text"
+#~ msgstr ""
+#~ "Indem wir Infektionswege nachvollziehen, können wir eine Ausbreitung "
+#~ "eindämmen."
+
+#~ msgid "policy-screen.content.section-2.headline"
+#~ msgstr "Deine Daten gehören dir"
+
+#~ msgid "policy-screen.content.section-2.text"
+#~ msgstr ""
+#~ "Alle Informationen, die du in Coronika anlegst, werden lokal gespeichert. "
+#~ "Keine Daten werden getrackt oder weitergegeben."
 
 #~ msgid "dashboard-screen.header.buttons.menu"
 #~ msgstr "Menü"
