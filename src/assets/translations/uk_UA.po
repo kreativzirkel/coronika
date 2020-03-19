@@ -154,7 +154,8 @@ msgid "dashboard-screen.header.buttons.policy"
 msgstr ""
 
 #: src/components/screens/Dashboard/ui.jsx:82
-msgid "dashboard-screen.header.buttons.export"
+#: src/components/screens/Menu.jsx:142
+msgid "menu-screen.header.headline"
 msgstr ""
 
 #: src/components/screens/Day/ui.jsx:72
@@ -221,6 +222,26 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr ""
 
+#: src/components/screens/Menu.jsx:115
+msgid "about-screen.header.headline"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:119
+msgid "settings-screen.header.headline"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:123
+msgid "legal-screen.header.headline"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:149
+msgid "menu-screen.intro.text"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:183
+msgid "menu-screen.button.send-feedback"
+msgstr ""
+
 #: src/components/screens/Policy/ui.jsx:80
 msgid "policy-screen.header.headline"
 msgstr ""
@@ -242,7 +263,7 @@ msgid "policy-screen.content.section-2.text"
 msgstr ""
 
 #: src/components/screens/TipAmIInfected.jsx:103
-#: src/components/screens/Tips/ui.jsx:98
+#: src/components/screens/Tips/ui.jsx:97
 msgid "tips.am-i-infected.headline"
 msgstr ""
 
@@ -269,12 +290,12 @@ msgstr ""
 #: src/components/screens/TipNotFeelingWell.jsx:98
 #: src/components/screens/TipReliableSources.jsx:91
 #: src/components/screens/TipWashingHands.jsx:99
-#: src/components/screens/Tips/ui.jsx:110
+#: src/components/screens/Tips/ui.jsx:109
 msgid "tips-screen.header.headline"
 msgstr ""
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:105
-#: src/components/screens/Tips/ui.jsx:82
+#: src/components/screens/Tips/ui.jsx:81
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr ""
 
@@ -303,7 +324,7 @@ msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr ""
 
 #: src/components/screens/TipCoughingSneezing.jsx:105
-#: src/components/screens/Tips/ui.jsx:90
+#: src/components/screens/Tips/ui.jsx:89
 msgid "tips.coughing-sneezing.headline"
 msgstr ""
 
@@ -332,7 +353,7 @@ msgid "tips.coughing-sneezing.list.item-5"
 msgstr ""
 
 #: src/components/screens/TipMouthguard.jsx:107
-#: src/components/screens/Tips/ui.jsx:86
+#: src/components/screens/Tips/ui.jsx:85
 msgid "tips.mouthguard.headline"
 msgstr ""
 
@@ -365,7 +386,7 @@ msgid "tips.mouthguard.list.item-4"
 msgstr ""
 
 #: src/components/screens/TipNotFeelingWell.jsx:104
-#: src/components/screens/Tips/ui.jsx:94
+#: src/components/screens/Tips/ui.jsx:93
 msgid "tips.not-feeling-well.headline"
 msgstr ""
 
@@ -394,7 +415,7 @@ msgid "tips.not-feeling-well.list.item-4"
 msgstr ""
 
 #: src/components/screens/TipReliableSources.jsx:97
-#: src/components/screens/Tips/ui.jsx:102
+#: src/components/screens/Tips/ui.jsx:101
 msgid "tips.reliable-sources.headline"
 msgstr ""
 
@@ -403,7 +424,7 @@ msgid "tips.reliable-sources.text"
 msgstr ""
 
 #: src/components/screens/TipWashingHands.jsx:105
-#: src/components/screens/Tips/ui.jsx:78
+#: src/components/screens/Tips/ui.jsx:77
 msgid "tips.washing-hands.headline"
 msgstr ""
 
@@ -431,7 +452,7 @@ msgstr ""
 msgid "tips.washing-hands.list.item-5"
 msgstr ""
 
-#: src/components/screens/Tips/ui.jsx:115
+#: src/components/screens/Tips/ui.jsx:114
 msgid "tips-screen.intro.text"
 msgstr ""
 

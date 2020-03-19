@@ -5,12 +5,13 @@
   "scripts": {
     "analyze-bundle": "react-native-bundle-visualizer",
     "android": "react-native run-android",
+    "createConfig": "node ./src/utils/createConfigFile.js",
     "exportTranslations": "node ./src/utils/exportTranslations.js",
     "generateTranslationFiles": "node ./src/utils/generateTranslationFiles.js",
     "ios": "react-native run-ios",
+    "lint": "eslint ./ --ext js,jsx --ignore-pattern 'node_modules'",
     "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ./ --ext js,jsx --ignore-pattern 'node_modules'"
+    "test": "jest"
   },
   "dependencies": {
     "@iconscout/react-native-unicons": "0.0.5",

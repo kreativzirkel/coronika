@@ -4,7 +4,6 @@ import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-nati
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../../constants';
 import Header from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
-import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 
 const Tips = ({ navigation, vw, __ }) => {
   // noinspection JSUnresolvedFunction

@@ -165,8 +165,9 @@ msgid "dashboard-screen.header.buttons.policy"
 msgstr "Policy"
 
 #: src/components/screens/Dashboard/ui.jsx:82
-msgid "dashboard-screen.header.buttons.export"
-msgstr "Export"
+#: src/components/screens/Menu.jsx:142
+msgid "menu-screen.header.headline"
+msgstr "Menü"
 
 #: src/components/screens/Day/ui.jsx:72
 msgid "day-screen.header.headline"
@@ -239,6 +240,28 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr "Kommt bald!"
 
+#: src/components/screens/Menu.jsx:115
+msgid "about-screen.header.headline"
+msgstr "Über Coronika"
+
+#: src/components/screens/Menu.jsx:119
+msgid "settings-screen.header.headline"
+msgstr "Einstellungen"
+
+#: src/components/screens/Menu.jsx:123
+msgid "legal-screen.header.headline"
+msgstr "Rechtliches"
+
+#: src/components/screens/Menu.jsx:149
+msgid "menu-screen.intro.text"
+msgstr ""
+"Wichtig ist es keine Panik zu verbreiten sondern Klarheit zu schaffen und "
+"richtige Informationen zu verbreiten."
+
+#: src/components/screens/Menu.jsx:183
+msgid "menu-screen.button.send-feedback"
+msgstr "Feedback senden"
+
 #: src/components/screens/Policy/ui.jsx:80
 msgid "policy-screen.header.headline"
 msgstr "Policy"
@@ -264,7 +287,7 @@ msgstr ""
 "Keine Daten werden getrackt oder weitergegeben."
 
 #: src/components/screens/TipAmIInfected.jsx:103
-#: src/components/screens/Tips/ui.jsx:98
+#: src/components/screens/Tips/ui.jsx:97
 msgid "tips.am-i-infected.headline"
 msgstr "Ich fürchte erkrankt zu sein, was tun?"
 
@@ -297,12 +320,12 @@ msgstr "Erzähle von deinem Coronika Tagebuch"
 #: src/components/screens/TipNotFeelingWell.jsx:98
 #: src/components/screens/TipReliableSources.jsx:91
 #: src/components/screens/TipWashingHands.jsx:99
-#: src/components/screens/Tips/ui.jsx:110
+#: src/components/screens/Tips/ui.jsx:109
 msgid "tips-screen.header.headline"
 msgstr "Hygiene Tips"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:105
-#: src/components/screens/Tips/ui.jsx:82
+#: src/components/screens/Tips/ui.jsx:81
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Meide große Menschenmassen"
 
@@ -336,7 +359,7 @@ msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "Husten- und Nies-Etikette einhalten"
 
 #: src/components/screens/TipCoughingSneezing.jsx:105
-#: src/components/screens/Tips/ui.jsx:90
+#: src/components/screens/Tips/ui.jsx:89
 msgid "tips.coughing-sneezing.headline"
 msgstr "Richtig Husten und Niesen"
 
@@ -367,7 +390,7 @@ msgid "tips.coughing-sneezing.list.item-5"
 msgstr "Danach gründlich die Hände waschen"
 
 #: src/components/screens/TipMouthguard.jsx:107
-#: src/components/screens/Tips/ui.jsx:86
+#: src/components/screens/Tips/ui.jsx:85
 msgid "tips.mouthguard.headline"
 msgstr "Mundschutz, ja oder nein?"
 
@@ -406,7 +429,7 @@ msgid "tips.mouthguard.list.item-4"
 msgstr "nicht mehrmals täglich gewechselt werden"
 
 #: src/components/screens/TipNotFeelingWell.jsx:104
-#: src/components/screens/Tips/ui.jsx:94
+#: src/components/screens/Tips/ui.jsx:93
 msgid "tips.not-feeling-well.headline"
 msgstr "Ich fühle mich nicht wohl, habe ich das Virus?"
 
@@ -438,7 +461,7 @@ msgid "tips.not-feeling-well.list.item-4"
 msgstr "Kurzatmigkeit"
 
 #: src/components/screens/TipReliableSources.jsx:97
-#: src/components/screens/Tips/ui.jsx:102
+#: src/components/screens/Tips/ui.jsx:101
 msgid "tips.reliable-sources.headline"
 msgstr "Wo finde ich zuverlässige Quellen?"
 
@@ -447,7 +470,7 @@ msgid "tips.reliable-sources.text"
 msgstr "Informative Webseiten"
 
 #: src/components/screens/TipWashingHands.jsx:105
-#: src/components/screens/Tips/ui.jsx:78
+#: src/components/screens/Tips/ui.jsx:77
 msgid "tips.washing-hands.headline"
 msgstr "Wasche deine Hände richtig"
 
@@ -479,7 +502,7 @@ msgstr "ca. 30 - 60 Sek. lang"
 msgid "tips.washing-hands.list.item-5"
 msgstr "Hände abtrocknen"
 
-#: src/components/screens/Tips/ui.jsx:115
+#: src/components/screens/Tips/ui.jsx:114
 msgid "tips-screen.intro.text"
 msgstr ""
 "Hier findest du Wissen, das dir in der aktuellen Situation helfen soll, das "
@@ -539,6 +562,9 @@ msgstr "gesamt"
 #: src/components/widgets/SearchBar.jsx:57
 msgid "placeholder.search-input"
 msgstr "Suche"
+
+#~ msgid "dashboard-screen.header.buttons.menu"
+#~ msgstr "Menü"
 
 #~ msgid "contacts-screen.header.headline"
 #~ msgstr "Verzeichnis verwalten"

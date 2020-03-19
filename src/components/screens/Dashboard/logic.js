@@ -18,8 +18,10 @@ const loadDays = () => async (dispatch, getState) => {
     .seconds(0)
     .milliseconds(0);
 
-  // add last 21 days if not already in list
-  for (let i = 0; i < 21; i++) {
+  // add last 7 days if not already in list
+  const daysInPast = 7;
+
+  for (let i = 0; i < daysInPast; i++) {
     const currentDay = moment(today).subtract(i, 'days');
     const currentDayTimestamp = currentDay.valueOf();
 

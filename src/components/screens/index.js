@@ -3,6 +3,7 @@ import Directory from './Directory/logic';
 import Dashboard from './Dashboard/logic';
 import Day from './Day/logic';
 import Export from './Export/logic';
+import Menu from './Menu';
 import Policy from './Policy/logic';
 import Splash from './Splash/logic';
 import Tips from './Tips/logic';
@@ -21,6 +22,7 @@ export default {
   Dashboard,
   Day,
   Export,
+  Menu,
   Policy,
   Splash,
   Tips,

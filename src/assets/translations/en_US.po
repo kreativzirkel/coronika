@@ -164,8 +164,9 @@ msgid "dashboard-screen.header.buttons.policy"
 msgstr "Policy"
 
 #: src/components/screens/Dashboard/ui.jsx:82
-msgid "dashboard-screen.header.buttons.export"
-msgstr "Export"
+#: src/components/screens/Menu.jsx:142
+msgid "menu-screen.header.headline"
+msgstr "Menu"
 
 #: src/components/screens/Day/ui.jsx:72
 msgid "day-screen.header.headline"
@@ -237,6 +238,28 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr "Coming soon!"
 
+#: src/components/screens/Menu.jsx:115
+msgid "about-screen.header.headline"
+msgstr "About Coronika"
+
+#: src/components/screens/Menu.jsx:119
+msgid "settings-screen.header.headline"
+msgstr "Settings"
+
+#: src/components/screens/Menu.jsx:123
+msgid "legal-screen.header.headline"
+msgstr "Legal"
+
+#: src/components/screens/Menu.jsx:149
+msgid "menu-screen.intro.text"
+msgstr ""
+"It is important not to spread panic but to create clarity and spread correct "
+"information."
+
+#: src/components/screens/Menu.jsx:183
+msgid "menu-screen.button.send-feedback"
+msgstr "Send feedback"
+
 #: src/components/screens/Policy/ui.jsx:80
 msgid "policy-screen.header.headline"
 msgstr "Policy"
@@ -261,7 +284,7 @@ msgstr ""
 "tracked or passed on."
 
 #: src/components/screens/TipAmIInfected.jsx:103
-#: src/components/screens/Tips/ui.jsx:98
+#: src/components/screens/Tips/ui.jsx:97
 msgid "tips.am-i-infected.headline"
 msgstr "I'm afraid I got the coronavirus, what can I do?"
 
@@ -294,12 +317,12 @@ msgstr "Tell about your Coronika diary"
 #: src/components/screens/TipNotFeelingWell.jsx:98
 #: src/components/screens/TipReliableSources.jsx:91
 #: src/components/screens/TipWashingHands.jsx:99
-#: src/components/screens/Tips/ui.jsx:110
+#: src/components/screens/Tips/ui.jsx:109
 msgid "tips-screen.header.headline"
 msgstr "Hygiene tips"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:105
-#: src/components/screens/Tips/ui.jsx:82
+#: src/components/screens/Tips/ui.jsx:81
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Avoid crowds of people"
 
@@ -336,7 +359,7 @@ msgstr ""
 "older people and people with existing health conditions"
 
 #: src/components/screens/TipCoughingSneezing.jsx:105
-#: src/components/screens/Tips/ui.jsx:90
+#: src/components/screens/Tips/ui.jsx:89
 msgid "tips.coughing-sneezing.headline"
 msgstr "Proper coughing and sneezing"
 
@@ -365,7 +388,7 @@ msgid "tips.coughing-sneezing.list.item-5"
 msgstr "wash your hands afterwards"
 
 #: src/components/screens/TipMouthguard.jsx:107
-#: src/components/screens/Tips/ui.jsx:86
+#: src/components/screens/Tips/ui.jsx:85
 msgid "tips.mouthguard.headline"
 msgstr "Mouthguard, yes or no?"
 
@@ -404,7 +427,7 @@ msgid "tips.mouthguard.list.item-4"
 msgstr "not changed daily"
 
 #: src/components/screens/TipNotFeelingWell.jsx:104
-#: src/components/screens/Tips/ui.jsx:94
+#: src/components/screens/Tips/ui.jsx:93
 msgid "tips.not-feeling-well.headline"
 msgstr "I don't feel well, do I have the virus?"
 
@@ -436,7 +459,7 @@ msgid "tips.not-feeling-well.list.item-4"
 msgstr "shortness of breath"
 
 #: src/components/screens/TipReliableSources.jsx:97
-#: src/components/screens/Tips/ui.jsx:102
+#: src/components/screens/Tips/ui.jsx:101
 msgid "tips.reliable-sources.headline"
 msgstr "Where can I find reliable sources?"
 
@@ -445,7 +468,7 @@ msgid "tips.reliable-sources.text"
 msgstr "Informative websites"
 
 #: src/components/screens/TipWashingHands.jsx:105
-#: src/components/screens/Tips/ui.jsx:78
+#: src/components/screens/Tips/ui.jsx:77
 msgid "tips.washing-hands.headline"
 msgstr "Washing your hands"
 
@@ -482,7 +505,7 @@ msgstr "Rinse your hands well under clean, running water."
 msgid "tips.washing-hands.list.item-5"
 msgstr "Dry your hands using a clean towel or air dry them."
 
-#: src/components/screens/Tips/ui.jsx:115
+#: src/components/screens/Tips/ui.jsx:114
 msgid "tips-screen.intro.text"
 msgstr ""
 "Here you find knowledge that is helping you to reduce the risk of infection "
@@ -541,6 +564,9 @@ msgstr "total"
 #: src/components/widgets/SearchBar.jsx:57
 msgid "placeholder.search-input"
 msgstr "Search"
+
+#~ msgid "dashboard-screen.header.buttons.menu"
+#~ msgstr "Menu"
 
 #~ msgid "contacts-screen.header.headline"
 #~ msgstr "Manage directory"

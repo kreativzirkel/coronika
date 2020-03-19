@@ -1,3 +1,4 @@
+import UilBars from '@iconscout/react-native-unicons/icons/uil-bars';
 import UilFile from '@iconscout/react-native-unicons/icons/uil-file';
 import UilLock from '@iconscout/react-native-unicons/icons/uil-lock';
 import moment from 'moment';
@@ -59,7 +60,6 @@ const Dashboard = ({ days, total, openDay, navigation, vw, __ }) => {
     .milliseconds(0);
 
   const totalTimespan = moment(today).subtract(21, 'days');
-  const goToExport = () => navigation.navigate('Export');
   const goToPolicy = () => navigation.navigate('Policy');
 
   return (
@@ -76,10 +76,10 @@ const Dashboard = ({ days, total, openDay, navigation, vw, __ }) => {
                 <Text style={styles.headerButtonsItemText}>{__('dashboard-screen.header.buttons.policy')}</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity onPress={() => goToExport()} style={styles.headerButtonsItem}>
-                <UilFile color={'#000000'} size={vw(4)} />
+              <TouchableOpacity onPress={() => navigation.navigate('Menu')} style={styles.headerButtonsItem}>
+                <UilBars color={'#000000'} size={vw(4)} />
 
-                <Text style={styles.headerButtonsItemText}>{__('dashboard-screen.header.buttons.export')}</Text>
+                <Text style={styles.headerButtonsItemText}>{__('menu-screen.header.headline')}</Text>
               </TouchableOpacity>
             </View>
           </View>
