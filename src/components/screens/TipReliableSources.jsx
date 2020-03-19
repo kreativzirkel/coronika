@@ -1,7 +1,7 @@
 import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import { CommonActions } from '@react-navigation/native';
 import React from 'react';
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
@@ -64,7 +64,6 @@ const TipReliableSources = ({ navigation, vw, __ }) => {
       flex: 1,
       flexDirection: 'column',
       padding: vw(8),
-      paddingBottom: vw(10),
       width: '100%',
     },
     viewContent: {
@@ -73,8 +72,16 @@ const TipReliableSources = ({ navigation, vw, __ }) => {
       width: '100%',
     },
     viewContentList: {
-      paddingBottom: vw(18),
       marginTop: vw(4),
+    },
+    link: {
+      marginTop: vw(3),
+    },
+    linkText: {
+      fontFamily: 'JetBrainsMono-Regular',
+      fontSize: vw(4.5),
+      lineHeight: vw(7),
+      textDecorationLine: 'underline',
     },
   });
 
@@ -92,10 +99,27 @@ const TipReliableSources = ({ navigation, vw, __ }) => {
         </View>
       </Header>
 
-      <ScrollView style={styles.view}>
-        <View style={styles.viewContent}>
-          <Text style={styles.contentHeadline}>{__('tips.reliable-sources.headline')}</Text>
-          <Text style={styles.contentText}>{__('tips.reliable-sources.text')}</Text>
+      <ScrollView>
+        <View style={styles.view}>
+          <View style={styles.viewContent}>
+            <Text style={styles.contentHeadline}>{__('tips.reliable-sources.headline')}</Text>
+            <Text style={styles.contentText}>{__('tips.reliable-sources.text')}</Text>
+            <TouchableOpacity
+              onPress={() => Linking.openURL('https://www.rki.de/').catch(() => {})}
+              style={styles.link}>
+              <Text style={styles.linkText}>www.rki.de</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => Linking.openURL('https://www.bzga.de/').catch(() => {})}
+              style={styles.link}>
+              <Text style={styles.linkText}>www.bzga.de</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => Linking.openURL('https://www.mags.nrw/').catch(() => {})}
+              style={styles.link}>
+              <Text style={styles.linkText}>www.mags.nrw</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </ScrollView>
     </Layout>

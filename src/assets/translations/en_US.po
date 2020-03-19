@@ -453,12 +453,35 @@ msgstr ""
 msgid "menu-screen.button.send-feedback"
 msgstr "Send feedback"
 
-#: src/components/screens/TipAmIInfected.jsx:103
+#: src/components/screens/TipAmIInfected.jsx:109
+msgid "tips.am-i-infected.list.item-1"
+msgstr "Stay at home"
+
+#: src/components/screens/TipAmIInfected.jsx:110
+msgid "tips.am-i-infected.list.item-2"
+msgstr "Call your doctor"
+
+#: src/components/screens/TipAmIInfected.jsx:111
+msgid "tips.am-i-infected.list.item-3"
+msgstr "Tell about your Coronika diary"
+
+#: src/components/screens/TipAmIInfected.jsx:124
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:126
+#: src/components/screens/TipCoughingSneezing.jsx:126
+#: src/components/screens/TipMouthguard.jsx:128
+#: src/components/screens/TipNotFeelingWell.jsx:125
+#: src/components/screens/TipReliableSources.jsx:98
+#: src/components/screens/TipWashingHands.jsx:126
+#: src/components/screens/Tips/ui.jsx:109
+msgid "tips-screen.header.headline"
+msgstr "Hygiene tips"
+
+#: src/components/screens/TipAmIInfected.jsx:131
 #: src/components/screens/Tips/ui.jsx:97
 msgid "tips.am-i-infected.headline"
 msgstr "I'm afraid I got the coronavirus, what can I do?"
 
-#: src/components/screens/TipAmIInfected.jsx:104
+#: src/components/screens/TipAmIInfected.jsx:132
 msgid "tips.am-i-infected.text"
 msgstr ""
 "If you are worried that you might have been infected, stay at home so that "
@@ -468,35 +491,53 @@ msgstr ""
 "contain the spread of the disease. In this case you can simply export your "
 "diary and send it to the responsible authorities."
 
-#: src/components/screens/TipAmIInfected.jsx:82
-msgid "tips.am-i-infected.list.item-1"
-msgstr "Stay at home"
+#: src/components/screens/TipAmIInfected.jsx:148
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:150
+#: src/components/screens/TipCoughingSneezing.jsx:150
+#: src/components/screens/TipMouthguard.jsx:157
+#: src/components/screens/TipNotFeelingWell.jsx:151
+#: src/components/screens/TipWashingHands.jsx:150
+msgid "tips.sources.headline"
+msgstr "Sources"
 
-#: src/components/screens/TipAmIInfected.jsx:83
-msgid "tips.am-i-infected.list.item-2"
-msgstr "Call your doctor"
+#: src/components/screens/TipAmIInfected.jsx:157
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:161
+#: src/components/screens/TipCoughingSneezing.jsx:170
+#: src/components/screens/TipMouthguard.jsx:175
+#: src/components/screens/TipNotFeelingWell.jsx:158
+#: src/components/screens/TipWashingHands.jsx:164
+msgid "tips.sources.last-updated"
+msgstr "Last updated:"
 
-#: src/components/screens/TipAmIInfected.jsx:84
-msgid "tips.am-i-infected.list.item-3"
-msgstr "Tell about your Coronika diary"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:109
+msgid "tips.avoid-crowds-of-people.list.item-1"
+msgstr "avoiding large public gatherings if they’re not essential"
 
-#: src/components/screens/TipAmIInfected.jsx:97
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:99
-#: src/components/screens/TipCoughingSneezing.jsx:99
-#: src/components/screens/TipMouthguard.jsx:101
-#: src/components/screens/TipNotFeelingWell.jsx:98
-#: src/components/screens/TipReliableSources.jsx:91
-#: src/components/screens/TipWashingHands.jsx:99
-#: src/components/screens/Tips/ui.jsx:109
-msgid "tips-screen.header.headline"
-msgstr "Hygiene tips"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:110
+msgid "tips.avoid-crowds-of-people.list.item-2"
+msgstr "prefer walking instead of public transport to cover short distances"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:105
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:111
+msgid "tips.avoid-crowds-of-people.list.item-3"
+msgstr ""
+"keeping a distance of 2 metres between you and other people whenever possible"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:112
+msgid "tips.avoid-crowds-of-people.list.item-4"
+msgstr "covering your coughs and sneezes with your elbow or a tissue"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:113
+msgid "tips.avoid-crowds-of-people.list.item-5"
+msgstr ""
+"minimizing physical contact, especially with people at higher risk such as "
+"older people and people with existing health conditions"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:133
 #: src/components/screens/Tips/ui.jsx:81
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Avoid crowds of people"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:106
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:134
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
 "If possible, avoid going on trips, using public transport and instead work "
@@ -505,64 +546,57 @@ msgstr ""
 "who are older than 60 years of age should obtain a vaccine against "
 "pneumococcal infection."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:82
-msgid "tips.avoid-crowds-of-people.list.item-1"
-msgstr "avoiding large public gatherings if they’re not essential"
+#: src/components/screens/TipCoughingSneezing.jsx:109
+msgid "tips.coughing-sneezing.list.item-1"
+msgstr "stay more than 1 meter away from people"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:83
-msgid "tips.avoid-crowds-of-people.list.item-2"
-msgstr "prefer walking instead of public transport to cover short distances"
+#: src/components/screens/TipCoughingSneezing.jsx:110
+msgid "tips.coughing-sneezing.list.item-2"
+msgstr "turn away from people"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:84
-msgid "tips.avoid-crowds-of-people.list.item-3"
-msgstr ""
-"keeping a distance of 2 metres between you and other people whenever possible"
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:85
-msgid "tips.avoid-crowds-of-people.list.item-4"
+#: src/components/screens/TipCoughingSneezing.jsx:111
+msgid "tips.coughing-sneezing.list.item-3"
 msgstr "covering your coughs and sneezes with your elbow or a tissue"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:86
-msgid "tips.avoid-crowds-of-people.list.item-5"
-msgstr ""
-"minimizing physical contact, especially with people at higher risk such as "
-"older people and people with existing health conditions"
+#: src/components/screens/TipCoughingSneezing.jsx:112
+msgid "tips.coughing-sneezing.list.item-4"
+msgstr "disposing of tissues properly"
 
-#: src/components/screens/TipCoughingSneezing.jsx:105
+#: src/components/screens/TipCoughingSneezing.jsx:113
+msgid "tips.coughing-sneezing.list.item-5"
+msgstr "wash your hands afterwards"
+
+#: src/components/screens/TipCoughingSneezing.jsx:133
 #: src/components/screens/Tips/ui.jsx:89
 msgid "tips.coughing-sneezing.headline"
 msgstr "Proper coughing and sneezing"
 
-#: src/components/screens/TipCoughingSneezing.jsx:106
+#: src/components/screens/TipCoughingSneezing.jsx:134
 msgid "tips.coughing-sneezing.text"
 msgstr "To prevent the spread of viruses,  please pay attention to:"
 
-#: src/components/screens/TipCoughingSneezing.jsx:82
-msgid "tips.coughing-sneezing.list.item-1"
-msgstr "stay more than 1 meter away from people"
+#: src/components/screens/TipMouthguard.jsx:112
+msgid "tips.mouthguard.list.item-1"
+msgstr "the mask is made from paper"
 
-#: src/components/screens/TipCoughingSneezing.jsx:83
-msgid "tips.coughing-sneezing.list.item-2"
-msgstr "turn away from people"
+#: src/components/screens/TipMouthguard.jsx:113
+msgid "tips.mouthguard.list.item-2"
+msgstr "the mask does not fit tight to the face or is leaking"
 
-#: src/components/screens/TipCoughingSneezing.jsx:84
-msgid "tips.coughing-sneezing.list.item-3"
-msgstr "covering your coughs and sneezes with your elbow or a tissue"
+#: src/components/screens/TipMouthguard.jsx:114
+msgid "tips.mouthguard.list.item-3"
+msgstr "gets wet through breathing"
 
-#: src/components/screens/TipCoughingSneezing.jsx:85
-msgid "tips.coughing-sneezing.list.item-4"
-msgstr "disposing of tissues properly"
+#: src/components/screens/TipMouthguard.jsx:115
+msgid "tips.mouthguard.list.item-4"
+msgstr "not changed daily"
 
-#: src/components/screens/TipCoughingSneezing.jsx:86
-msgid "tips.coughing-sneezing.list.item-5"
-msgstr "wash your hands afterwards"
-
-#: src/components/screens/TipMouthguard.jsx:107
+#: src/components/screens/TipMouthguard.jsx:135
 #: src/components/screens/Tips/ui.jsx:85
 msgid "tips.mouthguard.headline"
 msgstr "Mouthguard, yes or no?"
 
-#: src/components/screens/TipMouthguard.jsx:108
+#: src/components/screens/TipMouthguard.jsx:136
 msgid "tips.mouthguard.text-1"
 msgstr ""
 "Masks are essential for all health sectors. For Sick people or people with "
@@ -570,110 +604,94 @@ msgstr ""
 "and control measures. Please just wear a mask if your health care provider "
 "may recommend to you in other cases make sure to follow the hygiene rules."
 
-#: src/components/screens/TipMouthguard.jsx:109
+#: src/components/screens/TipMouthguard.jsx:138
 msgid "tips.mouthguard.text-2"
 msgstr ""
 "Health care provider wearing masks as a barrier and it helps to stop the "
 "tiny droplets from spreading when you cough or sneeze."
 
-#: src/components/screens/TipMouthguard.jsx:113
+#: src/components/screens/TipMouthguard.jsx:143
 msgid "tips.mouthguard.list.intro"
 msgstr "Wearing a mask outside of surgery has no effect if:"
 
-#: src/components/screens/TipMouthguard.jsx:85
-msgid "tips.mouthguard.list.item-1"
-msgstr "the mask is made from paper"
+#: src/components/screens/TipNotFeelingWell.jsx:109
+msgid "tips.not-feeling-well.list.item-1"
+msgstr "respiratory symptoms"
 
-#: src/components/screens/TipMouthguard.jsx:86
-msgid "tips.mouthguard.list.item-2"
-msgstr "the mask does not fit tight to the face or is leaking"
+#: src/components/screens/TipNotFeelingWell.jsx:110
+msgid "tips.not-feeling-well.list.item-2"
+msgstr "fever"
 
-#: src/components/screens/TipMouthguard.jsx:87
-msgid "tips.mouthguard.list.item-3"
-msgstr "gets wet through breathing"
+#: src/components/screens/TipNotFeelingWell.jsx:111
+msgid "tips.not-feeling-well.list.item-3"
+msgstr "cough"
 
-#: src/components/screens/TipMouthguard.jsx:88
-msgid "tips.mouthguard.list.item-4"
-msgstr "not changed daily"
+#: src/components/screens/TipNotFeelingWell.jsx:112
+msgid "tips.not-feeling-well.list.item-4"
+msgstr "shortness of breath"
 
-#: src/components/screens/TipNotFeelingWell.jsx:104
+#: src/components/screens/TipNotFeelingWell.jsx:132
 #: src/components/screens/Tips/ui.jsx:93
 msgid "tips.not-feeling-well.headline"
 msgstr "I don't feel well, do I have the virus?"
 
-#: src/components/screens/TipNotFeelingWell.jsx:105
+#: src/components/screens/TipNotFeelingWell.jsx:133
 msgid "tips.not-feeling-well.text"
 msgstr ""
 "Not every patient with flu-like symptoms is also a carrier of the SARS-CoV-2 "
 "virus. You should always inform yourself about your symptoms and call your "
 "doctor."
 
-#: src/components/screens/TipNotFeelingWell.jsx:109
+#: src/components/screens/TipNotFeelingWell.jsx:137
 msgid "tips.not-feeling-well.list.intro"
 msgstr "Typical symptoms of COVID-19 according to the WHO are:"
 
-#: src/components/screens/TipNotFeelingWell.jsx:82
-msgid "tips.not-feeling-well.list.item-1"
-msgstr "respiratory symptoms"
-
-#: src/components/screens/TipNotFeelingWell.jsx:83
-msgid "tips.not-feeling-well.list.item-2"
-msgstr "fever"
-
-#: src/components/screens/TipNotFeelingWell.jsx:84
-msgid "tips.not-feeling-well.list.item-3"
-msgstr "cough"
-
-#: src/components/screens/TipNotFeelingWell.jsx:85
-msgid "tips.not-feeling-well.list.item-4"
-msgstr "shortness of breath"
-
-#: src/components/screens/TipReliableSources.jsx:97
+#: src/components/screens/TipReliableSources.jsx:105
 #: src/components/screens/Tips/ui.jsx:101
 msgid "tips.reliable-sources.headline"
 msgstr "Where can I find reliable sources?"
 
-#: src/components/screens/TipReliableSources.jsx:98
+#: src/components/screens/TipReliableSources.jsx:106
 msgid "tips.reliable-sources.text"
 msgstr "Informative websites"
 
-#: src/components/screens/TipWashingHands.jsx:105
-#: src/components/screens/Tips/ui.jsx:77
-msgid "tips.washing-hands.headline"
-msgstr "Washing your hands"
-
-#: src/components/screens/TipWashingHands.jsx:106
-msgid "tips.washing-hands.text"
-msgstr ""
-"Washing your hands is easy, and it’s one of the most effective ways to "
-"prevent the spread of germs. Clean hands can stop germs from spreading. "
-"Follow these five steps every time:"
-
-#: src/components/screens/TipWashingHands.jsx:82
+#: src/components/screens/TipWashingHands.jsx:109
 msgid "tips.washing-hands.list.item-1"
 msgstr ""
 "Wet your hands with clean, running water (warm or cold), turn off the tap, "
 "and apply soap."
 
-#: src/components/screens/TipWashingHands.jsx:83
+#: src/components/screens/TipWashingHands.jsx:110
 msgid "tips.washing-hands.list.item-2"
 msgstr ""
 "Lather your hands by rubbing them together with the soap. Lather the backs "
 "of your hands, between your fingers, and under your nails."
 
-#: src/components/screens/TipWashingHands.jsx:84
+#: src/components/screens/TipWashingHands.jsx:111
 msgid "tips.washing-hands.list.item-3"
 msgstr ""
 "Scrub your hands for at least 20 seconds. Need a timer? Hum the “Happy "
 "Birthday” song from beginning to end twice."
 
-#: src/components/screens/TipWashingHands.jsx:85
+#: src/components/screens/TipWashingHands.jsx:112
 msgid "tips.washing-hands.list.item-4"
 msgstr "Rinse your hands well under clean, running water."
 
-#: src/components/screens/TipWashingHands.jsx:86
+#: src/components/screens/TipWashingHands.jsx:113
 msgid "tips.washing-hands.list.item-5"
 msgstr "Dry your hands using a clean towel or air dry them."
+
+#: src/components/screens/TipWashingHands.jsx:133
+#: src/components/screens/Tips/ui.jsx:77
+msgid "tips.washing-hands.headline"
+msgstr "Washing your hands"
+
+#: src/components/screens/TipWashingHands.jsx:134
+msgid "tips.washing-hands.text"
+msgstr ""
+"Washing your hands is easy, and it’s one of the most effective ways to "
+"prevent the spread of germs. Clean hands can stop germs from spreading. "
+"Follow these five steps every time:"
 
 #: src/components/screens/Tips/ui.jsx:114
 msgid "tips-screen.intro.text"

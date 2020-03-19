@@ -1,12 +1,13 @@
 import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import { CommonActions } from '@react-navigation/native';
 import React from 'react';
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 import Header from '../widgets/Header';
 import Layout from '../widgets/Layout';
+import moment from 'moment';
 
 const TipAmIInfected = ({ navigation, vw, __ }) => {
   // noinspection JSUnresolvedFunction
@@ -64,7 +65,6 @@ const TipAmIInfected = ({ navigation, vw, __ }) => {
       flex: 1,
       flexDirection: 'column',
       padding: vw(8),
-      paddingBottom: vw(10),
       width: '100%',
     },
     viewContent: {
@@ -73,8 +73,35 @@ const TipAmIInfected = ({ navigation, vw, __ }) => {
       width: '100%',
     },
     viewContentList: {
-      paddingBottom: vw(18),
       marginTop: vw(4),
+    },
+    viewSources: {
+      backgroundColor: COLOR_SECONDARY,
+      borderRadius: vw(2.3),
+      marginTop: vw(14),
+      padding: vw(4),
+    },
+    viewSourcesHeadline: {
+      color: '#B0B0B1',
+      fontFamily: 'JetBrainsMono-Regular',
+      fontSize: vw(4.5),
+      lineHeight: vw(7),
+    },
+    viewSourcesText: {
+      fontFamily: 'JetBrainsMono-Regular',
+      fontSize: vw(3.5),
+      lineHeight: vw(5.5),
+      textDecorationLine: 'underline',
+    },
+    viewSourcesButton: {
+      marginTop: vw(2),
+    },
+    viewSourcesLastUpdated: {
+      color: COLOR_PRIMARY,
+      fontFamily: 'JetBrainsMono-Regular',
+      fontSize: vw(3.5),
+      lineHeight: vw(5.5),
+      marginTop: vw(2.5),
     },
   });
 
@@ -98,22 +125,38 @@ const TipAmIInfected = ({ navigation, vw, __ }) => {
         </View>
       </Header>
 
-      <ScrollView style={styles.view}>
-        <View style={styles.viewContent}>
-          <Text style={styles.contentHeadline}>{__('tips.am-i-infected.headline')}</Text>
-          <Text style={styles.contentText}>{__('tips.am-i-infected.text')}</Text>
-        </View>
+      <ScrollView>
+        <View style={styles.view}>
+          <View style={styles.viewContent}>
+            <Text style={styles.contentHeadline}>{__('tips.am-i-infected.headline')}</Text>
+            <Text style={styles.contentText}>{__('tips.am-i-infected.text')}</Text>
+          </View>
 
-        <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
-          {steps.map((stepText, index) => (
-            <View key={`tip-list-item-${index}`} style={styles.listItem}>
-              <View style={styles.listItemNumber}>
-                <Text style={styles.listItemNumberText}>{index + 1}</Text>
+          <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
+            {steps.map((stepText, index) => (
+              <View key={`tip-list-item-${index}`} style={styles.listItem}>
+                <View style={styles.listItemNumber}>
+                  <Text style={styles.listItemNumberText}>{index + 1}</Text>
+                </View>
+
+                <Text style={styles.listItemText}>{stepText}</Text>
               </View>
+            ))}
+          </View>
 
-              <Text style={styles.listItemText}>{stepText}</Text>
-            </View>
-          ))}
+          <View style={styles.viewSources}>
+            <Text style={styles.viewSourcesHeadline}>{__('tips.sources.headline')}</Text>
+            <TouchableOpacity
+              onPress={() =>
+                Linking.openURL('https://www.rki.de/SharedDocs/FAQ/NCOV2019/FAQ_Liste.html').catch(() => {})
+              }
+              style={styles.viewSourcesButton}>
+              <Text style={styles.viewSourcesText}>www.rki.de</Text>
+            </TouchableOpacity>
+            <Text style={styles.viewSourcesLastUpdated}>
+              {`${__('tips.sources.last-updated')} ${moment(1584489600000).format('L')}`}
+            </Text>
+          </View>
         </View>
       </ScrollView>
     </Layout>
