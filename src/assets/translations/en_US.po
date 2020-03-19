@@ -155,6 +155,52 @@ msgstr "Confirm"
 msgid "entries.modals.select-location.button"
 msgstr "Select"
 
+#: src/components/screens/About.jsx:124 src/components/screens/Menu.jsx:115
+msgid "about-screen.header.headline"
+msgstr "About Coronika"
+
+#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:14
+msgid "welcome-screen.slides.intro.headline"
+msgstr "Fighting corona-virus together"
+
+#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:15
+msgid "welcome-screen.slides.intro.text"
+msgstr ""
+"Log contacts and locations, reconstruct paths of infection and help stopping "
+"the spread."
+
+#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:16
+msgid "welcome-screen.slides.intro.button"
+msgstr "Great, I want to help, too"
+
+#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:21
+msgid "welcome-screen.slides.how-to.headline"
+msgstr "A diary for our collective health"
+
+#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:22
+msgid "welcome-screen.slides.how-to.text"
+msgstr ""
+"Write down who you have met, the public places you have visited and make a "
+"contribution to the health of everyone."
+
+#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:23
+msgid "welcome-screen.slides.how-to.button"
+msgstr "Okey dokey"
+
+#: src/components/screens/About.jsx:33 src/components/screens/Welcome/ui.jsx:28
+msgid "welcome-screen.slides.local-data.headline"
+msgstr "Your data is yours alone"
+
+#: src/components/screens/About.jsx:34 src/components/screens/Welcome/ui.jsx:29
+msgid "welcome-screen.slides.local-data.text"
+msgstr ""
+"All data created and used by Coronika is stored locally and will not be "
+"tracked or passed on."
+
+#: src/components/screens/About.jsx:35 src/components/screens/Welcome/ui.jsx:30
+msgid "welcome-screen.slides.local-data.button"
+msgstr "Start now"
+
 #: src/components/screens/AddEntry/ui.jsx:37
 msgid "add-entry-screen.header.headline"
 msgstr "Add entry"
@@ -233,10 +279,6 @@ msgstr ""
 #: src/components/screens/Export/ui.jsx:83
 msgid "export-screen.coming-soon"
 msgstr "Coming soon!"
-
-#: src/components/screens/Menu.jsx:115
-msgid "about-screen.header.headline"
-msgstr "About Coronika"
 
 #: src/components/screens/Menu.jsx:119
 msgid "settings-screen.header.headline"
@@ -483,48 +525,6 @@ msgid "tips-screen.intro.text"
 msgstr ""
 "Here you find knowledge that is helping you to reduce the risk of infection "
 "as much as possible and to do the right thing in case of an infection."
-
-#: src/components/screens/Welcome/ui.jsx:14
-msgid "welcome-screen.slides.intro.headline"
-msgstr "Fighting corona-virus together"
-
-#: src/components/screens/Welcome/ui.jsx:15
-msgid "welcome-screen.slides.intro.text"
-msgstr ""
-"Log contacts and locations, reconstruct paths of infection and help stopping "
-"the spread."
-
-#: src/components/screens/Welcome/ui.jsx:16
-msgid "welcome-screen.slides.intro.button"
-msgstr "Great, I want to help, too"
-
-#: src/components/screens/Welcome/ui.jsx:21
-msgid "welcome-screen.slides.how-to.headline"
-msgstr "A diary for our collective health"
-
-#: src/components/screens/Welcome/ui.jsx:22
-msgid "welcome-screen.slides.how-to.text"
-msgstr ""
-"Write down who you have met, the public places you have visited and make a "
-"contribution to the health of everyone."
-
-#: src/components/screens/Welcome/ui.jsx:23
-msgid "welcome-screen.slides.how-to.button"
-msgstr "Okey dokey"
-
-#: src/components/screens/Welcome/ui.jsx:28
-msgid "welcome-screen.slides.local-data.headline"
-msgstr "Your data is yours alone"
-
-#: src/components/screens/Welcome/ui.jsx:29
-msgid "welcome-screen.slides.local-data.text"
-msgstr ""
-"All data created and used by Coronika is stored locally and will not be "
-"tracked or passed on."
-
-#: src/components/screens/Welcome/ui.jsx:30
-msgid "welcome-screen.slides.local-data.button"
-msgstr "Start now"
 
 #: src/components/widgets/DayOverview.jsx:79
 msgid "today"

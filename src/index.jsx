@@ -23,6 +23,7 @@ const AppNavigator = () => (
       gestureDirection: 'horizontal',
     }}>
     <Stack.Screen component={App} name={'App'} />
+    <Stack.Screen component={screens.About} name={'About'} />
     <Stack.Screen component={screens.AddEntry} name={'AddEntry'} />
     <Stack.Screen component={screens.Day} name={'Day'} />
     <Stack.Screen component={screens.Export} name={'Export'} />

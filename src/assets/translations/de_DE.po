@@ -156,6 +156,52 @@ msgstr "Bestätigen"
 msgid "entries.modals.select-location.button"
 msgstr "Auswählen"
 
+#: src/components/screens/About.jsx:124 src/components/screens/Menu.jsx:115
+msgid "about-screen.header.headline"
+msgstr "Über Coronika"
+
+#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:14
+msgid "welcome-screen.slides.intro.headline"
+msgstr "Gemeinsam das Coronavirus eindämmen."
+
+#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:15
+msgid "welcome-screen.slides.intro.text"
+msgstr ""
+"Zusammen können wir Infektionswege nachvollziehen und so eine Ausbreitung "
+"eindämmen."
+
+#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:16
+msgid "welcome-screen.slides.intro.button"
+msgstr "Super, ich will mithelfen!"
+
+#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:21
+msgid "welcome-screen.slides.how-to.headline"
+msgstr "Ein Tagebuch mit Orten und Personen"
+
+#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:22
+msgid "welcome-screen.slides.how-to.text"
+msgstr ""
+"Trage ein, wen du getroffen hast, an welchen öffentlichen Orten du dich "
+"aufgehalten hast und leiste einen Beitrag zur Gesundheit aller."
+
+#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:23
+msgid "welcome-screen.slides.how-to.button"
+msgstr "Alles klar"
+
+#: src/components/screens/About.jsx:33 src/components/screens/Welcome/ui.jsx:28
+msgid "welcome-screen.slides.local-data.headline"
+msgstr "Deine Daten gehören dir!"
+
+#: src/components/screens/About.jsx:34 src/components/screens/Welcome/ui.jsx:29
+msgid "welcome-screen.slides.local-data.text"
+msgstr ""
+"Alle Informationen, die du in Coronika anlegst werden lokal gespeichert. "
+"Keine Daten werden getrackt oder weitergegeben."
+
+#: src/components/screens/About.jsx:35 src/components/screens/Welcome/ui.jsx:30
+msgid "welcome-screen.slides.local-data.button"
+msgstr "Jetzt anfangen"
+
 #: src/components/screens/AddEntry/ui.jsx:37
 msgid "add-entry-screen.header.headline"
 msgstr "Eintrag hinzufügen"
@@ -235,10 +281,6 @@ msgstr ""
 #: src/components/screens/Export/ui.jsx:83
 msgid "export-screen.coming-soon"
 msgstr "Kommt bald!"
-
-#: src/components/screens/Menu.jsx:115
-msgid "about-screen.header.headline"
-msgstr "Über Coronika"
 
 #: src/components/screens/Menu.jsx:119
 msgid "settings-screen.header.headline"
@@ -480,48 +522,6 @@ msgstr ""
 "Hier findest du Wissen, das dir in der aktuellen Situation helfen soll, das "
 "Infektionsrisiko so gut wie möglich zu reduzieren und im Falle einer "
 "Ansteckung das Richtige zu tun."
-
-#: src/components/screens/Welcome/ui.jsx:14
-msgid "welcome-screen.slides.intro.headline"
-msgstr "Gemeinsam das Coronavirus eindämmen."
-
-#: src/components/screens/Welcome/ui.jsx:15
-msgid "welcome-screen.slides.intro.text"
-msgstr ""
-"Zusammen können wir Infektionswege nachvollziehen und so eine Ausbreitung "
-"eindämmen."
-
-#: src/components/screens/Welcome/ui.jsx:16
-msgid "welcome-screen.slides.intro.button"
-msgstr "Super, ich will mithelfen!"
-
-#: src/components/screens/Welcome/ui.jsx:21
-msgid "welcome-screen.slides.how-to.headline"
-msgstr "Ein Tagebuch mit Orten und Personen"
-
-#: src/components/screens/Welcome/ui.jsx:22
-msgid "welcome-screen.slides.how-to.text"
-msgstr ""
-"Trage ein, wen du getroffen hast, an welchen öffentlichen Orten du dich "
-"aufgehalten hast und leiste einen Beitrag zur Gesundheit aller."
-
-#: src/components/screens/Welcome/ui.jsx:23
-msgid "welcome-screen.slides.how-to.button"
-msgstr "Alles klar"
-
-#: src/components/screens/Welcome/ui.jsx:28
-msgid "welcome-screen.slides.local-data.headline"
-msgstr "Deine Daten gehören dir!"
-
-#: src/components/screens/Welcome/ui.jsx:29
-msgid "welcome-screen.slides.local-data.text"
-msgstr ""
-"Alle Informationen, die du in Coronika anlegst werden lokal gespeichert. "
-"Keine Daten werden getrackt oder weitergegeben."
-
-#: src/components/screens/Welcome/ui.jsx:30
-msgid "welcome-screen.slides.local-data.button"
-msgstr "Jetzt anfangen"
 
 #: src/components/widgets/DayOverview.jsx:79
 msgid "today"

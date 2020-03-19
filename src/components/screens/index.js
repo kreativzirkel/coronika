@@ -1,3 +1,4 @@
+import About from './About';
 import AddEntry from './AddEntry/logic';
 import Directory from './Directory/logic';
 import Dashboard from './Dashboard/logic';
@@ -16,6 +17,7 @@ import TipWashingHands from './TipWashingHands';
 import Welcome from './Welcome/logic';
 
 export default {
+  About,
   AddEntry,
   Directory,
   Dashboard,
