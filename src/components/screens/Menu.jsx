@@ -114,11 +114,11 @@ const Menu = ({ navigation, vw, __ }) => {
     {
       headline: __('about-screen.header.headline'),
       routeName: 'About',
-    },
+    },/*
     {
       headline: __('settings-screen.header.headline'),
       routeName: 'Settings',
-    },
+    },*/
     {
       headline: __('legal-screen.header.headline'),
       routeName: 'Legal',

@@ -282,13 +282,175 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr "Kommt bald!"
 
-#: src/components/screens/Menu.jsx:119
-msgid "settings-screen.header.headline"
-msgstr "Einstellungen"
+#: src/components/screens/Legal.jsx:106
+msgid "legal-screen.privacy.section-1.headline"
+msgstr "Datenverarbeitung der App"
 
-#: src/components/screens/Menu.jsx:123
+#: src/components/screens/Legal.jsx:107
+msgid "legal-screen.privacy.section-1.text"
+msgstr ""
+"Die App Coronika verarbeitet personen- und ortsbezogene Daten ausschließlich "
+"lokal auf dem Smartphone des Nutzers."
+
+#: src/components/screens/Legal.jsx:108
+msgid "legal-screen.privacy.section-2.headline"
+msgstr "Personenbezogene Daten"
+
+#: src/components/screens/Legal.jsx:109
+msgid "legal-screen.privacy.section-2.text"
+msgstr ""
+"Der Nutzer kann innerhalb der App Personen anlegen. Dabei wird der Name und "
+"eine Telefonnummer gespeichert. Darüberhinaus besteht die Möglichkeit das "
+"Telefonbuch des Smartphones zu importieren. Dabei werden die Namen und "
+"Telefonnummern der Einträge des Telefonbuchs in die App übertragen. Alle "
+"diese Daten bleiben lokal auf dem Smartphone und damit in der Hand des "
+"Nutzers. Eine Übermittlung der Daten an den App-Anbieter oder dritte "
+"Parteien findet zu keiner Zeit statt."
+
+#: src/components/screens/Legal.jsx:110
+msgid "legal-screen.privacy.section-3.headline"
+msgstr "Ortsbezogene Daten"
+
+#: src/components/screens/Legal.jsx:111
+msgid "legal-screen.privacy.section-3.text"
+msgstr ""
+"Der Nutzer kann innerhalb der App Orte anlegen. Dabei werden der Name des "
+"Ortes und eine Beschreibung gespeichert. Auf den Standort des Nutzers über "
+"Positionsdienste (z.B. GPS o.ä.) wird zu keiner Zeit zugegriffen. Auch "
+"bleiben die ortsbezogenen Daten lokal auf dem Smartphone des Nutzers und "
+"werden nicht an den App-Anbieter oder dritte Parteien übermittelt."
+
+#: src/components/screens/Legal.jsx:112
+msgid "legal-screen.privacy.section-4.headline"
+msgstr "Tagebuch"
+
+#: src/components/screens/Legal.jsx:113
+msgid "legal-screen.privacy.section-4.text"
+msgstr ""
+"Im Rahmen des Tagebuchs ordnet der Nutzer auf täglicher Basis Personen und "
+"Orte einzelnen Tagen zu. Abgesehen von den bereits erhobenen Daten wird bei "
+"den Orten noch eine Uhrzeit gespeichert. Das Tagebuch und sämtliche Einträge "
+"bleiben ebenfalls lokal auf dem Smartphone des Nutzers und werden nicht an "
+"den App-Anbieter oder an dritte Parteien übermittelt."
+
+#: src/components/screens/Legal.jsx:114
+msgid "legal-screen.privacy.section-5.headline"
+msgstr "Export"
+
+#: src/components/screens/Legal.jsx:115
+msgid "legal-screen.privacy.section-5.text"
+msgstr ""
+"Innerhalb der App steht dem Nutzer eine Export-Funktion zur Verfügung um "
+"einen Ausschnitt des Tagebuchs als PDF Datei zu exportieren. Die Erstellung "
+"der PDF Datei findet dabei lokal auf dem Smartphone des Nutzers statt. Diese "
+"PDF Datei kann dafür genutzt werden Gesundheitsämtern oder anderen "
+"offiziellen Stellen auf einfache Weise eine Liste der Kontakte in einem "
+"ausgewählten Zeitraum zur Verfügung zu stellen, um Infektionspfade "
+"nachzuvollziehen und ggf. andere Personen über eine potenzielle Infektion zu "
+"informieren. Der Nutzer ist dafür verantwortlich die PDF Datei und die darin "
+"enthaltenen Daten verantwortlich zu behandeln und diese nicht unbedacht "
+"weiterzugeben."
+
+#: src/components/screens/Legal.jsx:116
+msgid "legal-screen.privacy.section-6.headline"
+msgstr "Datenweitergabe und Tracking"
+
+#: src/components/screens/Legal.jsx:117
+msgid "legal-screen.privacy.section-6.text"
+msgstr ""
+"Die App bietet keine automatisierte Trackingfunktion sowie Datenweitergabe "
+"an den App-Anbieter oder dritte Parteien. Die einzige Ausnahme bildet die "
+"Export-Funktion. Dort entscheidet aber ausschließlich der Nutzer an wen er "
+"die Daten weitergibt. Ansonsten bleiben alle Daten lokal auf dem Smartphone "
+"des Nutzers."
+
+#: src/components/screens/Legal.jsx:125
+msgid "legal-screen.imprint.section-1.headline"
+msgstr "Diese App 'Coronika' wird betrieben von"
+
+#: src/components/screens/Legal.jsx:126
+msgid "legal-screen.imprint.section-1.text"
+msgstr ""
+"Kreativzirkel UG (haftungsbeschränkt)\n"
+"Schirmerstraße 61\n"
+"40211 Düsseldorf\n"
+"\n"
+"Telefon +49 174 811 1212\n"
+"E-Mail info@kreativzirkel.de\n"
+"\n"
+"Geschäftsführer Alexander Braden\n"
+"\n"
+"Registergericht: AG Düsseldorf\n"
+"Registernummer: HRB 82252\n"
+"USt-IdNr.: DE 300 611 389"
+
+#: src/components/screens/Legal.jsx:127
+msgid "legal-screen.imprint.section-2.headline"
+msgstr "Haftung für Inhalte"
+
+#: src/components/screens/Legal.jsx:128
+msgid "legal-screen.imprint.section-2.text"
+msgstr ""
+"Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf "
+"diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 "
+"TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte "
+"oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu "
+"forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen "
+"zur Entfernung oder Sperrung der Nutzung von Informationen nach den "
+"allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung "
+"ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten "
+"Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden "
+"Rechtsverletzungen werden wir diese Inhalte umgehend entfernen."
+
+#: src/components/screens/Legal.jsx:129
+msgid "legal-screen.imprint.section-3.headline"
+msgstr "Haftung für Links"
+
+#: src/components/screens/Legal.jsx:130
+msgid "legal-screen.imprint.section-3.text"
+msgstr ""
+"Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte "
+"wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch "
+"keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der "
+"jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten "
+"Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße "
+"überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht "
+"erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist "
+"jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. "
+"Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend "
+"entfernen."
+
+#: src/components/screens/Legal.jsx:131
+msgid "legal-screen.imprint.section-4.headline"
+msgstr "Urheberrecht"
+
+#: src/components/screens/Legal.jsx:132
+msgid "legal-screen.imprint.section-4.text"
+msgstr ""
+"Die durch die Betreiber erstellten Inhalte und Werke auf diesen Seiten "
+"unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, "
+"Verbreitung und jede Art der Verwertung außerhalb der Grenzen des "
+"Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors "
+"bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den "
+"privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf "
+"dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte "
+"Dritter beachtet. Insbesondere werden Inhalte Dritter als solche "
+"gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung "
+"aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei "
+"Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend "
+"entfernen."
+
+#: src/components/screens/Legal.jsx:82 src/components/screens/Menu.jsx:123
 msgid "legal-screen.header.headline"
 msgstr "Rechtliches"
+
+#: src/components/screens/Legal.jsx:91
+msgid "legal-screen.tabs.privacy.label"
+msgstr "Datenschutz"
+
+#: src/components/screens/Legal.jsx:96
+msgid "legal-screen.tabs.imprint.label"
+msgstr "Impressum"
 
 #: src/components/screens/Menu.jsx:149
 msgid "menu-screen.intro.text"
@@ -534,6 +696,9 @@ msgstr "gesamt"
 #: src/components/widgets/SearchBar.jsx:57
 msgid "placeholder.search-input"
 msgstr "Suche"
+
+#~ msgid "settings-screen.header.headline"
+#~ msgstr "Einstellungen"
 
 #~ msgid "dashboard-screen.header.buttons.policy"
 #~ msgstr "Policy"

@@ -63,6 +63,12 @@ const PersonsList = ({
     },
   });
 
+  const handleOnPressToggleSelection = (id) => {
+    requestAnimationFrame(() => {
+      toggleSelection(id);
+    });
+  };
+
   return persons ? (
     <FlatList
       data={persons}
@@ -109,7 +115,7 @@ const PersonsList = ({
                 <PersonItem />
               </TouchableOpacity>
             ) : allowSelection ? (
-              <TouchableOpacity onPress={() => toggleSelection(id)}>
+              <TouchableOpacity onPress={() => handleOnPressToggleSelection(id)}>
                 <PersonItem />
               </TouchableOpacity>
             ) : (

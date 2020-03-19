@@ -39,7 +39,7 @@ const Dashboard = ({ days, total, openDay, navigation, vw, __ }) => {
     headerButtonsItemText: {
       color: '#555555',
       fontFamily: 'JetBrainsMono-Regular',
-      fontSize: vw(3.2),
+      fontSize: vw(4),
       marginLeft: vw(1),
       textTransform: 'lowercase',
     },
@@ -70,7 +70,7 @@ const Dashboard = ({ days, total, openDay, navigation, vw, __ }) => {
 
             <View style={styles.headerButtons}>
               <TouchableOpacity onPress={() => navigation.navigate('Menu')} style={styles.headerButtonsItem}>
-                <UilBars color={'#000000'} size={vw(4)} />
+                <UilBars color={'#000000'} size={vw(5)} style={{ marginTop: vw(0.4) }} />
 
                 <Text style={styles.headerButtonsItemText}>{__('menu-screen.header.headline')}</Text>
               </TouchableOpacity>

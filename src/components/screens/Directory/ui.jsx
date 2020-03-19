@@ -35,7 +35,7 @@ const Directory = ({
     headerButtonText: {
       color: '#555555',
       fontFamily: 'JetBrainsMono-Regular',
-      fontSize: vw(3.2),
+      fontSize: vw(4),
       marginLeft: vw(1),
       textTransform: 'lowercase',
     },
@@ -120,7 +120,7 @@ const Directory = ({
         <Header>
           <View style={styles.header}>
             <TouchableOpacity onPress={() => showImportPersonsModal()} style={styles.headerButton}>
-              <UilImport size={vw(4)} color={'#000000'} />
+              <UilImport size={vw(5)} color={'#000000'} />
 
               <Text style={styles.headerButtonText}>{__('directory-screen.header.button.import')}</Text>
             </TouchableOpacity>
