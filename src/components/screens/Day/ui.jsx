@@ -4,7 +4,7 @@ import moment from 'moment';
 import React from 'react';
 import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import DayOverview from '../../widgets/DayOverview';
-import Header from '../../widgets/Header';
+import Header, { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 import EntriesTabsView from '../../partials/EntriesTabsView';
 import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
@@ -57,23 +57,11 @@ const Day = ({ locations, persons, timestamp, deleteLocationFromDay, deletePerso
     .seconds(0)
     .milliseconds(0);
 
-  const goBack = () => navigation.dispatch(CommonActions.goBack());
-
   const goToAddEntry = () => navigation.navigate('AddEntry');
 
   return (
     <Layout>
-      <Header>
-        <View style={styles.header}>
-          {Platform.OS === 'ios' && (
-            <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
-              <UilArrowLeft size={vw(12)} color={'#000000'} />
-            </TouchableOpacity>
-          )}
-
-          <Text style={styles.headerHeadline}>{__('day-screen.header.headline')}</Text>
-        </View>
-      </Header>
+      <HeaderBack headline={__('day-screen.header.headline')} navigation={navigation} />
 
       <View style={styles.dayOverviewWrapper}>
         <DayOverview isDark locations={locations.length} persons={persons.length} timestamp={timestamp} today={today} />

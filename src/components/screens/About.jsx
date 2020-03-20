@@ -8,7 +8,7 @@ import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 import Layout from '../widgets/Layout';
-import Header from '../widgets/Header';
+import Header, { HeaderBack } from '../widgets/Header';
 
 const slider = React.createRef();
 
@@ -115,17 +115,7 @@ const About = ({ navigation, vw, __ }) => {
 
   return (
     <Layout backgroundColor={COLOR_SECONDARY}>
-      <Header>
-        <View style={styles.header}>
-          {Platform.OS === 'ios' && (
-            <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
-              <UilArrowLeft size={vw(12)} color={'#000000'} />
-            </TouchableOpacity>
-          )}
-
-          <Text style={styles.headerHeadline}>{__('about-screen.header.headline')}</Text>
-        </View>
-      </Header>
+      <HeaderBack headline={__('about-screen.header.headline')} navigation={navigation} />
 
       <View style={styles.view}>
         <AppIntroSlider

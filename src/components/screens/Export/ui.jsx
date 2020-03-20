@@ -4,7 +4,7 @@ import { CommonActions } from '@react-navigation/native';
 import React from 'react';
 import { Linking, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_SECONDARY } from '../../../constants';
-import Header from '../../widgets/Header';
+import Header, { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 
 const Export = ({ navigation, vw, __ }) => {
@@ -60,21 +60,9 @@ const Export = ({ navigation, vw, __ }) => {
     },
   });
 
-  const goBack = () => navigation.dispatch(CommonActions.goBack());
-
   return (
     <Layout backgroundColor={COLOR_SECONDARY}>
-      <Header>
-        <View style={styles.header}>
-          {Platform.OS === 'ios' && (
-            <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
-              <UilArrowLeft size={vw(12)} color={'#000000'} />
-            </TouchableOpacity>
-          )}
-
-          <Text style={styles.headerHeadline}>{__('export-screen.header.headline')}</Text>
-        </View>
-      </Header>
+      <HeaderBack headline={__('export-screen.header.headline')} navigation={navigation} />
 
       <View style={styles.view}>
         <View style={styles.viewContent}>

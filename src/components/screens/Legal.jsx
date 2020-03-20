@@ -2,7 +2,7 @@ import React from 'react';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 import { COLOR_SECONDARY } from '../../constants';
-import Header from '../widgets/Header';
+import Header, { HeaderBack } from '../widgets/Header';
 import { Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import Layout from '../widgets/Layout';
@@ -32,7 +32,6 @@ class Legal extends React.PureComponent {
   render() {
     const { navigation, vw, __ } = this.props;
     const { activeTab } = this.state;
-    const goBack = () => navigation.dispatch(CommonActions.goBack());
 
     // noinspection JSUnresolvedFunction
     const styles = StyleSheet.create({
@@ -73,17 +72,7 @@ class Legal extends React.PureComponent {
 
     return (
       <Layout backgroundColor={COLOR_SECONDARY}>
-        <Header>
-          <View style={styles.header}>
-            {Platform.OS === 'ios' && (
-              <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
-                <UilArrowLeft size={vw(12)} color={'#000000'} />
-              </TouchableOpacity>
-            )}
-
-            <Text style={styles.headerHeadline}>{__('legal-screen.header.headline')}</Text>
-          </View>
-        </Header>
+        <HeaderBack headline={__('legal-screen.header.headline')} navigation={navigation} />
 
         <View style={styles.view}>
           <View style={{ backgroundColor: COLOR_SECONDARY }}>

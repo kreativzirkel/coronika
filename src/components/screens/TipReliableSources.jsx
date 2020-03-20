@@ -5,7 +5,7 @@ import { Linking, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
-import Header from '../widgets/Header';
+import Header, { HeaderBack } from '../widgets/Header';
 import Layout from '../widgets/Layout';
 
 const TipReliableSources = ({ navigation, vw, __ }) => {
@@ -85,21 +85,9 @@ const TipReliableSources = ({ navigation, vw, __ }) => {
     },
   });
 
-  const goBack = () => navigation.dispatch(CommonActions.goBack());
-
   return (
     <Layout backgroundColor={COLOR_SECONDARY}>
-      <Header>
-        <View style={styles.header}>
-          {Platform.OS === 'ios' && (
-            <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
-              <UilArrowLeft size={vw(12)} color={'#000000'} />
-            </TouchableOpacity>
-          )}
-
-          <Text style={styles.headerHeadline}>{__('tips-screen.header.headline')}</Text>
-        </View>
-      </Header>
+      <HeaderBack headline={__('tips-screen.header.headline')} navigation={navigation} />
 
       <ScrollView>
         <View style={styles.view}>

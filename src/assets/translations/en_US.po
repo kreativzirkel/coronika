@@ -155,7 +155,7 @@ msgstr "Confirm"
 msgid "entries.modals.select-location.button"
 msgstr "Select"
 
-#: src/components/screens/About.jsx:126 src/components/screens/Menu.jsx:115
+#: src/components/screens/About.jsx:118 src/components/screens/Menu.jsx:115
 msgid "about-screen.header.headline"
 msgstr "About Coronika"
 
@@ -201,28 +201,28 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Start now"
 
-#: src/components/screens/AddEntry/ui.jsx:39
+#: src/components/screens/AddEntry/ui.jsx:29
 msgid "add-entry-screen.header.headline"
 msgstr "Add entry"
 
 #: src/components/screens/Dashboard/ui.jsx:75
-#: src/components/screens/Menu.jsx:144
+#: src/components/screens/Menu.jsx:134
 msgid "menu-screen.header.headline"
 msgstr "Menu"
 
-#: src/components/screens/Day/ui.jsx:74
+#: src/components/screens/Day/ui.jsx:64
 msgid "day-screen.header.headline"
 msgstr "Daily overview"
 
-#: src/components/screens/Day/ui.jsx:83
+#: src/components/screens/Day/ui.jsx:71
 msgid "day-screen.locations.empty"
 msgstr "You haven’t added any locations for this day."
 
-#: src/components/screens/Day/ui.jsx:84
+#: src/components/screens/Day/ui.jsx:72
 msgid "day-screen.persons.empty"
 msgstr "You have not added any persons for this day."
 
-#: src/components/screens/Day/ui.jsx:95
+#: src/components/screens/Day/ui.jsx:83
 msgid "day-screen.entries.add"
 msgstr "Add entry"
 
@@ -252,49 +252,35 @@ msgstr "Importing..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Import now"
 
-#: src/components/screens/Export/ui.jsx:75
+#: src/components/screens/Export/ui.jsx:65
 msgid "export-screen.header.headline"
 msgstr "Export"
 
-#: src/components/screens/Export/ui.jsx:81
+#: src/components/screens/Export/ui.jsx:69
 msgid "export-screen.content.section-1.headline"
 msgstr "Your overview"
 
-#: src/components/screens/Export/ui.jsx:82
+#: src/components/screens/Export/ui.jsx:70
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "Collectively we can reconstruct paths of infection by informing health "
 "authorities and the people around you."
 
-#: src/components/screens/Export/ui.jsx:83
+#: src/components/screens/Export/ui.jsx:71
 msgid "export-screen.content.section-2.headline"
 msgstr "With big power comes big responsibility"
 
-#: src/components/screens/Export/ui.jsx:84
+#: src/components/screens/Export/ui.jsx:72
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "Keep in mind that the data is very sensitive. We highly recommend to not "
 "share it online or with random people."
 
-#: src/components/screens/Export/ui.jsx:85
+#: src/components/screens/Export/ui.jsx:73
 msgid "export-screen.coming-soon"
 msgstr "Coming soon!"
 
-#: src/components/screens/Legal.jsx:108
-msgid "legal-screen.privacy.section-1.headline"
-msgstr "Data processing of the app"
-
-#: src/components/screens/Legal.jsx:109
-msgid "legal-screen.privacy.section-1.text"
-msgstr ""
-"App Coronika processes personal and location-related data exclusively "
-"locally on the smartphone of the user."
-
-#: src/components/screens/Legal.jsx:110
-msgid "legal-screen.privacy.section-2.headline"
-msgstr "Personal data"
-
-#: src/components/screens/Legal.jsx:111
+#: src/components/screens/Legal.jsx:100
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
 "The user can create persons within the app. The name and a telephone number "
@@ -304,11 +290,11 @@ msgstr ""
 "therefore in the hands of the user. The data is never transferred to the app "
 "provider or third parties. "
 
-#: src/components/screens/Legal.jsx:112
+#: src/components/screens/Legal.jsx:101
 msgid "legal-screen.privacy.section-3.headline"
 msgstr "Location-based data"
 
-#: src/components/screens/Legal.jsx:113
+#: src/components/screens/Legal.jsx:102
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
 "The user can create locations within the app. The name of the location and a "
@@ -317,11 +303,11 @@ msgstr ""
 "remains local on the user's smartphone and is not transmitted to the app "
 "provider or third parties."
 
-#: src/components/screens/Legal.jsx:114
+#: src/components/screens/Legal.jsx:103
 msgid "legal-screen.privacy.section-4.headline"
 msgstr "Diary"
 
-#: src/components/screens/Legal.jsx:115
+#: src/components/screens/Legal.jsx:104
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
 "Within the diary, the user assigns persons and places to individual days on "
@@ -330,11 +316,11 @@ msgstr ""
 "user's smartphone and are not transmitted to the app provider or third "
 "parties."
 
-#: src/components/screens/Legal.jsx:116
+#: src/components/screens/Legal.jsx:105
 msgid "legal-screen.privacy.section-5.headline"
 msgstr "Export"
 
-#: src/components/screens/Legal.jsx:117
+#: src/components/screens/Legal.jsx:106
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
 "Within the app the user has an export function to export a section of the "
@@ -346,11 +332,11 @@ msgstr ""
 "PDF file and the data contained in it responsibly and not to pass it on "
 "carelessly."
 
-#: src/components/screens/Legal.jsx:118
+#: src/components/screens/Legal.jsx:107
 msgid "legal-screen.privacy.section-6.headline"
 msgstr "Data transfer and tracking"
 
-#: src/components/screens/Legal.jsx:119
+#: src/components/screens/Legal.jsx:108
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
 "The app does not provide automated tracking or data transfer to the app "
@@ -358,11 +344,11 @@ msgstr ""
 "however, only the user decides to whom the data is passed on. Otherwise, all "
 "data remains locally on the user's smartphone."
 
-#: src/components/screens/Legal.jsx:127
+#: src/components/screens/Legal.jsx:116
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "This app 'Coronika' is operated by"
 
-#: src/components/screens/Legal.jsx:128
+#: src/components/screens/Legal.jsx:117
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -379,11 +365,11 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:129
+#: src/components/screens/Legal.jsx:118
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "Liability for contents"
 
-#: src/components/screens/Legal.jsx:130
+#: src/components/screens/Legal.jsx:119
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "As a service provider, we are responsible for our own content on these pages "
@@ -396,11 +382,11 @@ msgstr ""
 "infringement. If we become aware of any such infringements, we will remove "
 "such content immediately."
 
-#: src/components/screens/Legal.jsx:131
+#: src/components/screens/Legal.jsx:120
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Liability for links"
 
-#: src/components/screens/Legal.jsx:132
+#: src/components/screens/Legal.jsx:121
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Our offer contains links to external websites of third parties, on whose "
@@ -413,11 +399,11 @@ msgstr ""
 "concrete evidence of a violation of the law. If we become aware of any "
 "infringements, we will remove such links immediately."
 
-#: src/components/screens/Legal.jsx:133
+#: src/components/screens/Legal.jsx:122
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "Copyright"
 
-#: src/components/screens/Legal.jsx:134
+#: src/components/screens/Legal.jsx:123
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "The contents and works on these pages created by the operators are subject "
@@ -431,25 +417,39 @@ msgstr ""
 "accordingly. If we become aware of any infringements, we will remove such "
 "contents immediately."
 
-#: src/components/screens/Legal.jsx:84 src/components/screens/Menu.jsx:123
+#: src/components/screens/Legal.jsx:75 src/components/screens/Menu.jsx:123
 msgid "legal-screen.header.headline"
 msgstr "Legal"
 
-#: src/components/screens/Legal.jsx:93
+#: src/components/screens/Legal.jsx:82
 msgid "legal-screen.tabs.privacy.label"
 msgstr "Privacy"
 
-#: src/components/screens/Legal.jsx:98
+#: src/components/screens/Legal.jsx:87
 msgid "legal-screen.tabs.imprint.label"
 msgstr "Imprint"
 
-#: src/components/screens/Menu.jsx:151
+#: src/components/screens/Legal.jsx:97
+msgid "legal-screen.privacy.section-1.headline"
+msgstr "Data processing of the app"
+
+#: src/components/screens/Legal.jsx:98
+msgid "legal-screen.privacy.section-1.text"
+msgstr ""
+"App Coronika processes personal and location-related data exclusively "
+"locally on the smartphone of the user."
+
+#: src/components/screens/Legal.jsx:99
+msgid "legal-screen.privacy.section-2.headline"
+msgstr "Personal data"
+
+#: src/components/screens/Menu.jsx:139
 msgid "menu-screen.intro.text"
 msgstr ""
 "It is important not to spread panic but to create clarity and spread correct "
 "information."
 
-#: src/components/screens/Menu.jsx:185
+#: src/components/screens/Menu.jsx:173
 msgid "menu-screen.button.send-feedback"
 msgstr "Send feedback"
 
@@ -465,23 +465,23 @@ msgstr "Call your doctor"
 msgid "tips.am-i-infected.list.item-3"
 msgstr "Tell about your Coronika diary"
 
-#: src/components/screens/TipAmIInfected.jsx:126
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:128
-#: src/components/screens/TipCoughingSneezing.jsx:128
-#: src/components/screens/TipMouthguard.jsx:130
-#: src/components/screens/TipNotFeelingWell.jsx:127
-#: src/components/screens/TipReliableSources.jsx:100
-#: src/components/screens/TipWashingHands.jsx:128
+#: src/components/screens/TipAmIInfected.jsx:116
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:118
+#: src/components/screens/TipCoughingSneezing.jsx:118
+#: src/components/screens/TipMouthguard.jsx:120
+#: src/components/screens/TipNotFeelingWell.jsx:117
+#: src/components/screens/TipReliableSources.jsx:90
+#: src/components/screens/TipWashingHands.jsx:118
 #: src/components/screens/Tips/ui.jsx:109
 msgid "tips-screen.header.headline"
 msgstr "Hygiene tips"
 
-#: src/components/screens/TipAmIInfected.jsx:133
+#: src/components/screens/TipAmIInfected.jsx:121
 #: src/components/screens/Tips/ui.jsx:97
 msgid "tips.am-i-infected.headline"
 msgstr "I'm afraid I got the coronavirus, what can I do?"
 
-#: src/components/screens/TipAmIInfected.jsx:134
+#: src/components/screens/TipAmIInfected.jsx:122
 msgid "tips.am-i-infected.text"
 msgstr ""
 "If you are worried that you might have been infected, stay at home so that "
@@ -491,21 +491,21 @@ msgstr ""
 "contain the spread of the disease. In this case you can simply export your "
 "diary and send it to the responsible authorities."
 
-#: src/components/screens/TipAmIInfected.jsx:150
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:152
-#: src/components/screens/TipCoughingSneezing.jsx:152
-#: src/components/screens/TipMouthguard.jsx:159
-#: src/components/screens/TipNotFeelingWell.jsx:153
-#: src/components/screens/TipWashingHands.jsx:152
+#: src/components/screens/TipAmIInfected.jsx:138
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:140
+#: src/components/screens/TipCoughingSneezing.jsx:140
+#: src/components/screens/TipMouthguard.jsx:147
+#: src/components/screens/TipNotFeelingWell.jsx:141
+#: src/components/screens/TipWashingHands.jsx:140
 msgid "tips.sources.headline"
 msgstr "Sources"
 
-#: src/components/screens/TipAmIInfected.jsx:159
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:163
-#: src/components/screens/TipCoughingSneezing.jsx:172
-#: src/components/screens/TipMouthguard.jsx:177
-#: src/components/screens/TipNotFeelingWell.jsx:160
-#: src/components/screens/TipWashingHands.jsx:166
+#: src/components/screens/TipAmIInfected.jsx:147
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:151
+#: src/components/screens/TipCoughingSneezing.jsx:160
+#: src/components/screens/TipMouthguard.jsx:165
+#: src/components/screens/TipNotFeelingWell.jsx:148
+#: src/components/screens/TipWashingHands.jsx:154
 msgid "tips.sources.last-updated"
 msgstr "Last updated:"
 
@@ -532,12 +532,12 @@ msgstr ""
 "minimizing physical contact, especially with people at higher risk such as "
 "older people and people with existing health conditions"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:135
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:123
 #: src/components/screens/Tips/ui.jsx:81
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Avoid crowds of people"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:136
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:124
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
 "If possible, avoid going on trips, using public transport and instead work "
@@ -566,12 +566,12 @@ msgstr "disposing of tissues properly"
 msgid "tips.coughing-sneezing.list.item-5"
 msgstr "wash your hands afterwards"
 
-#: src/components/screens/TipCoughingSneezing.jsx:135
+#: src/components/screens/TipCoughingSneezing.jsx:123
 #: src/components/screens/Tips/ui.jsx:89
 msgid "tips.coughing-sneezing.headline"
 msgstr "Proper coughing and sneezing"
 
-#: src/components/screens/TipCoughingSneezing.jsx:136
+#: src/components/screens/TipCoughingSneezing.jsx:124
 msgid "tips.coughing-sneezing.text"
 msgstr "To prevent the spread of viruses,  please pay attention to:"
 
@@ -591,12 +591,12 @@ msgstr "gets wet through breathing"
 msgid "tips.mouthguard.list.item-4"
 msgstr "not changed daily"
 
-#: src/components/screens/TipMouthguard.jsx:137
+#: src/components/screens/TipMouthguard.jsx:125
 #: src/components/screens/Tips/ui.jsx:85
 msgid "tips.mouthguard.headline"
 msgstr "Mouthguard, yes or no?"
 
-#: src/components/screens/TipMouthguard.jsx:138
+#: src/components/screens/TipMouthguard.jsx:126
 msgid "tips.mouthguard.text-1"
 msgstr ""
 "Masks are essential for all health sectors. For Sick people or people with "
@@ -604,13 +604,13 @@ msgstr ""
 "and control measures. Please just wear a mask if your health care provider "
 "may recommend to you in other cases make sure to follow the hygiene rules."
 
-#: src/components/screens/TipMouthguard.jsx:140
+#: src/components/screens/TipMouthguard.jsx:128
 msgid "tips.mouthguard.text-2"
 msgstr ""
 "Health care provider wearing masks as a barrier and it helps to stop the "
 "tiny droplets from spreading when you cough or sneeze."
 
-#: src/components/screens/TipMouthguard.jsx:145
+#: src/components/screens/TipMouthguard.jsx:133
 msgid "tips.mouthguard.list.intro"
 msgstr "Wearing a mask outside of surgery has no effect if:"
 
@@ -630,28 +630,28 @@ msgstr "cough"
 msgid "tips.not-feeling-well.list.item-4"
 msgstr "shortness of breath"
 
-#: src/components/screens/TipNotFeelingWell.jsx:134
+#: src/components/screens/TipNotFeelingWell.jsx:122
 #: src/components/screens/Tips/ui.jsx:93
 msgid "tips.not-feeling-well.headline"
 msgstr "I don't feel well, do I have the virus?"
 
-#: src/components/screens/TipNotFeelingWell.jsx:135
+#: src/components/screens/TipNotFeelingWell.jsx:123
 msgid "tips.not-feeling-well.text"
 msgstr ""
 "Not every patient with flu-like symptoms is also a carrier of the SARS-CoV-2 "
 "virus. You should always inform yourself about your symptoms and call your "
 "doctor."
 
-#: src/components/screens/TipNotFeelingWell.jsx:139
+#: src/components/screens/TipNotFeelingWell.jsx:127
 msgid "tips.not-feeling-well.list.intro"
 msgstr "Typical symptoms of COVID-19 according to the WHO are:"
 
-#: src/components/screens/TipReliableSources.jsx:107
+#: src/components/screens/TipReliableSources.jsx:95
 #: src/components/screens/Tips/ui.jsx:101
 msgid "tips.reliable-sources.headline"
 msgstr "Where can I find reliable sources?"
 
-#: src/components/screens/TipReliableSources.jsx:108
+#: src/components/screens/TipReliableSources.jsx:96
 msgid "tips.reliable-sources.text"
 msgstr "Informative websites"
 
@@ -681,12 +681,12 @@ msgstr "Rinse your hands well under clean, running water."
 msgid "tips.washing-hands.list.item-5"
 msgstr "Dry your hands using a clean towel or air dry them."
 
-#: src/components/screens/TipWashingHands.jsx:135
+#: src/components/screens/TipWashingHands.jsx:123
 #: src/components/screens/Tips/ui.jsx:77
 msgid "tips.washing-hands.headline"
 msgstr "Washing your hands"
 
-#: src/components/screens/TipWashingHands.jsx:136
+#: src/components/screens/TipWashingHands.jsx:124
 msgid "tips.washing-hands.text"
 msgstr ""
 "Washing your hands is easy, and it’s one of the most effective ways to "

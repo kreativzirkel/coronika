@@ -19,6 +19,30 @@ Automatic generation using react-native-make.
 
 `react-native set-splash --path ./src/assets/images/splash_screen.png --resize cover --background "#17d9bd"`
 
+## Platform specific steps
+
+### Android
+
+Link necessary packages:
+
+`react-native link @react-native-community/datetimepicker`
+
+`react-native link lottie-ios`
+
+`react-native link lottie-react-native`
+
+`react-native link react-native-interactable`
+
+`react-native link react-native-safe-area-context`
+
+`react-native link react-native-screens`
+
+`react-native link react-native-splash-screen`
+
+### iOS
+
+`cd ios && pod install`
+
 ## Build
 
 ### Update version number

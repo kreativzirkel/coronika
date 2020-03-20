@@ -4,7 +4,7 @@ import React from 'react';
 import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_SECONDARY } from '../../../constants';
 import EntriesTabsView from '../../partials/EntriesTabsView';
-import Header from '../../widgets/Header';
+import Header, { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 
 const AddEntry = ({ locations, persons, timestamp, addSelection, navigation, vw, __ }) => {
@@ -24,21 +24,9 @@ const AddEntry = ({ locations, persons, timestamp, addSelection, navigation, vw,
     },
   });
 
-  const goBack = () => navigation.dispatch(CommonActions.goBack());
-
   return (
     <Layout backgroundColor={COLOR_SECONDARY}>
-      <Header>
-        <View style={styles.header}>
-          {Platform.OS === 'ios' && (
-            <TouchableOpacity onPress={() => goBack()} style={{ marginBottom: -vw(3), marginTop: -vw(3) }}>
-              <UilArrowLeft size={vw(12)} color={'#000000'} />
-            </TouchableOpacity>
-          )}
-
-          <Text style={styles.headerHeadline}>{__('add-entry-screen.header.headline')}</Text>
-        </View>
-      </Header>
+      <HeaderBack headline={__('add-entry-screen.header.headline')} navigation={navigation} />
 
       <EntriesTabsView
         allowSelection
