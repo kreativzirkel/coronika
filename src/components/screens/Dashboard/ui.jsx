@@ -1,6 +1,4 @@
 import UilBars from '@iconscout/react-native-unicons/icons/uil-bars';
-import UilFile from '@iconscout/react-native-unicons/icons/uil-file';
-import UilLock from '@iconscout/react-native-unicons/icons/uil-lock';
 import moment from 'moment';
 import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';

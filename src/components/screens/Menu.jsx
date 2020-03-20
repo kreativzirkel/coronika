@@ -1,15 +1,13 @@
 import UilArrowRight from '@iconscout/react-native-unicons/icons/uil-arrow-right';
+import UilHeart from '@iconscout/react-native-unicons/icons/uil-heart';
 import React from 'react';
-import { Linking, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { version } from '../../config';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 import { HeaderBack } from '../widgets/Header';
 import Layout from '../widgets/Layout';
-import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
-import { CommonActions } from '@react-navigation/native';
-import UilHeart from '@iconscout/react-native-unicons/icons/uil-heart';
 
 const Menu = ({ navigation, vw, __ }) => {
   // noinspection JSUnresolvedFunction
@@ -24,18 +22,6 @@ const Menu = ({ navigation, vw, __ }) => {
       fontFamily: 'JetBrainsMono-Bold',
       fontSize: vw(7),
       textAlign: 'center',
-    },
-    header: {
-      alignItems: 'center',
-      flex: 1,
-      flexDirection: 'row',
-      justifyContent: Platform.OS === 'ios' ? 'space-between' : 'flex-end',
-    },
-    headerHeadline: {
-      fontFamily: 'JetBrainsMono-Bold',
-      fontSize: vw(5),
-      marginLeft: 'auto',
-      textTransform: 'lowercase',
     },
     madeByButton: {
       alignItems: 'center',

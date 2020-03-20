@@ -1,12 +1,10 @@
 import React from 'react';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
-import { COLOR_SECONDARY } from '../../constants';
-import Header, { HeaderBack } from '../widgets/Header';
-import { Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
+import { HeaderBack } from '../widgets/Header';
 import Layout from '../widgets/Layout';
-import { CommonActions } from '@react-navigation/native';
 import TabBar from '../widgets/TabBar';
 import TabBarItem from '../widgets/TabBarItem';
 
@@ -46,18 +44,6 @@ class Legal extends React.PureComponent {
         lineHeight: vw(7),
         marginBottom: vw(1),
         marginTop: vw(2),
-      },
-      header: {
-        alignItems: 'center',
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: Platform.OS === 'ios' ? 'space-between' : 'flex-end',
-      },
-      headerHeadline: {
-        fontFamily: 'JetBrainsMono-Bold',
-        fontSize: vw(5),
-        marginLeft: 'auto',
-        textTransform: 'lowercase',
       },
       view: {
         backgroundColor: '#ffffff',

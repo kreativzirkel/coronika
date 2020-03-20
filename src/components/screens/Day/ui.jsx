@@ -1,10 +1,8 @@
-import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
-import { CommonActions } from '@react-navigation/native';
 import moment from 'moment';
 import React from 'react';
-import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import DayOverview from '../../widgets/DayOverview';
-import Header, { HeaderBack } from '../../widgets/Header';
+import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 import EntriesTabsView from '../../partials/EntriesTabsView';
 import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
@@ -32,17 +30,6 @@ const Day = ({ locations, persons, timestamp, deleteLocationFromDay, deletePerso
     },
     dayOverviewWrapper: {
       marginBottom: vw(0.7),
-    },
-    header: {
-      alignItems: 'center',
-      flex: 1,
-      flexDirection: 'row',
-      justifyContent: Platform.OS === 'ios' ? 'space-between' : 'flex-end',
-    },
-    headerHeadline: {
-      fontFamily: 'JetBrainsMono-Bold',
-      fontSize: vw(5),
-      textTransform: 'lowercase',
     },
     wrapperAddEntry: {
       alignItems: 'center',

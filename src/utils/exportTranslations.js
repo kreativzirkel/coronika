@@ -33,7 +33,7 @@ const exportTranslations = (translationsDir) => {
             translations[language][id] = content.locale_data.messages[id][1];
           });
 
-        //console.log(translations);
+        // console.log(translations);
       }
     }
   }
@@ -60,7 +60,7 @@ const exportTranslations = (translationsDir) => {
   });
 
   stringify(result, { delimiter: ';', recordDelimiter: '\r\n', eof: false }, (error, output) => {
-    console.log(result);
+    // console.log(result);
     const file = path.resolve(translationsDir, 'export.csv');
     fs.writeFileSync(file, output, { encoding: 'utf8' });
   });

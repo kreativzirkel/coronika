@@ -10,7 +10,7 @@ const initialState = {
 
 const addPersonToList = (persons, person) => {
   const importPerson = cloneDeep(person);
-  let resultList = [];
+  const resultList = [];
 
   if ('recordID' in importPerson) {
     for (const c of persons) {

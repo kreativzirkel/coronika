@@ -1,14 +1,13 @@
-import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import { CommonActions } from '@react-navigation/native';
 import LottieView from 'lottie-react-native';
 import React from 'react';
-import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 import Layout from '../widgets/Layout';
-import Header, { HeaderBack } from '../widgets/Header';
+import { HeaderBack } from '../widgets/Header';
 
 const slider = React.createRef();
 
@@ -41,18 +40,6 @@ const About = ({ navigation, vw, __ }) => {
   const styles = StyleSheet.create({
     animation: {
       width: vw(55),
-    },
-    header: {
-      alignItems: 'center',
-      flex: 1,
-      flexDirection: 'row',
-      justifyContent: Platform.OS === 'ios' ? 'space-between' : 'flex-end',
-    },
-    headerHeadline: {
-      fontFamily: 'JetBrainsMono-Bold',
-      fontSize: vw(5),
-      marginLeft: 'auto',
-      textTransform: 'lowercase',
     },
     headline: {
       fontFamily: 'JetBrainsMono-Bold',

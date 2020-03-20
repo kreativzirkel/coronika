@@ -5,6 +5,7 @@ import DateTimePickerModalBase from 'react-native-modal-datetime-picker';
 const DateTimePickerModal = (props) => {
   const isDarkMode = useDarkMode();
 
+  /* eslint-disable-next-line react/jsx-props-no-spreading */
   return <DateTimePickerModalBase {...{ ...props, isDarkModeEnabled: isDarkMode }} />;
 };
 

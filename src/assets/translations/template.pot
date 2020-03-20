@@ -129,78 +129,78 @@ msgstr ""
 msgid "entries.modals.select-location.button"
 msgstr ""
 
-#: src/components/screens/About.jsx:118
-#: src/components/screens/Menu.jsx:115
+#: src/components/screens/About.jsx:105
+#: src/components/screens/Menu.jsx:101
 msgid "about-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/About.jsx:19
+#: src/components/screens/About.jsx:18
 #: src/components/screens/Welcome/ui.jsx:14
 msgid "welcome-screen.slides.intro.headline"
 msgstr ""
 
-#: src/components/screens/About.jsx:20
+#: src/components/screens/About.jsx:19
 #: src/components/screens/Welcome/ui.jsx:15
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
 
-#: src/components/screens/About.jsx:21
+#: src/components/screens/About.jsx:20
 #: src/components/screens/Welcome/ui.jsx:16
 msgid "welcome-screen.slides.intro.button"
 msgstr ""
 
-#: src/components/screens/About.jsx:26
+#: src/components/screens/About.jsx:25
 #: src/components/screens/Welcome/ui.jsx:21
 msgid "welcome-screen.slides.how-to.headline"
 msgstr ""
 
-#: src/components/screens/About.jsx:27
+#: src/components/screens/About.jsx:26
 #: src/components/screens/Welcome/ui.jsx:22
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
 
-#: src/components/screens/About.jsx:28
+#: src/components/screens/About.jsx:27
 #: src/components/screens/Welcome/ui.jsx:23
 msgid "welcome-screen.slides.how-to.button"
 msgstr ""
 
-#: src/components/screens/About.jsx:33
+#: src/components/screens/About.jsx:32
 #: src/components/screens/Welcome/ui.jsx:28
 msgid "welcome-screen.slides.local-data.headline"
 msgstr ""
 
-#: src/components/screens/About.jsx:34
+#: src/components/screens/About.jsx:33
 #: src/components/screens/Welcome/ui.jsx:29
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 
-#: src/components/screens/About.jsx:35
+#: src/components/screens/About.jsx:34
 #: src/components/screens/Welcome/ui.jsx:30
 msgid "welcome-screen.slides.local-data.button"
 msgstr ""
 
-#: src/components/screens/AddEntry/ui.jsx:29
+#: src/components/screens/AddEntry/ui.jsx:10
 msgid "add-entry-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/Dashboard/ui.jsx:75
-#: src/components/screens/Menu.jsx:134
+#: src/components/screens/Dashboard/ui.jsx:73
+#: src/components/screens/Menu.jsx:120
 msgid "menu-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/Day/ui.jsx:64
+#: src/components/screens/Day/ui.jsx:51
 msgid "day-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/Day/ui.jsx:71
+#: src/components/screens/Day/ui.jsx:58
 msgid "day-screen.locations.empty"
 msgstr ""
 
-#: src/components/screens/Day/ui.jsx:72
+#: src/components/screens/Day/ui.jsx:59
 msgid "day-screen.persons.empty"
 msgstr ""
 
-#: src/components/screens/Day/ui.jsx:83
+#: src/components/screens/Day/ui.jsx:70
 msgid "day-screen.entries.add"
 msgstr ""
 
@@ -228,337 +228,337 @@ msgstr ""
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr ""
 
-#: src/components/screens/Export/ui.jsx:65
+#: src/components/screens/Export/ui.jsx:50
 msgid "export-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/Export/ui.jsx:69
+#: src/components/screens/Export/ui.jsx:54
 msgid "export-screen.content.section-1.headline"
 msgstr ""
 
-#: src/components/screens/Export/ui.jsx:70
+#: src/components/screens/Export/ui.jsx:55
 msgid "export-screen.content.section-1.text"
 msgstr ""
 
-#: src/components/screens/Export/ui.jsx:71
+#: src/components/screens/Export/ui.jsx:56
 msgid "export-screen.content.section-2.headline"
 msgstr ""
 
-#: src/components/screens/Export/ui.jsx:72
+#: src/components/screens/Export/ui.jsx:57
 msgid "export-screen.content.section-2.text"
 msgstr ""
 
-#: src/components/screens/Export/ui.jsx:73
+#: src/components/screens/Export/ui.jsx:58
 msgid "export-screen.coming-soon"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:100
-msgid "legal-screen.privacy.section-2.text"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:101
-msgid "legal-screen.privacy.section-3.headline"
-msgstr ""
-
 #: src/components/screens/Legal.jsx:102
-msgid "legal-screen.privacy.section-3.text"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:103
-msgid "legal-screen.privacy.section-4.headline"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:104
-msgid "legal-screen.privacy.section-4.text"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:105
-msgid "legal-screen.privacy.section-5.headline"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:106
-msgid "legal-screen.privacy.section-5.text"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:107
-msgid "legal-screen.privacy.section-6.headline"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:108
-msgid "legal-screen.privacy.section-6.text"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:116
 msgid "legal-screen.imprint.section-1.headline"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:117
+#: src/components/screens/Legal.jsx:103
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:118
+#: src/components/screens/Legal.jsx:104
 msgid "legal-screen.imprint.section-2.headline"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:119
+#: src/components/screens/Legal.jsx:105
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:120
+#: src/components/screens/Legal.jsx:106
 msgid "legal-screen.imprint.section-3.headline"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:121
+#: src/components/screens/Legal.jsx:107
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:122
+#: src/components/screens/Legal.jsx:108
 msgid "legal-screen.imprint.section-4.headline"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:123
+#: src/components/screens/Legal.jsx:109
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:75
-#: src/components/screens/Menu.jsx:123
+#: src/components/screens/Legal.jsx:61
+#: src/components/screens/Menu.jsx:109
 msgid "legal-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:82
+#: src/components/screens/Legal.jsx:68
 msgid "legal-screen.tabs.privacy.label"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:87
+#: src/components/screens/Legal.jsx:73
 msgid "legal-screen.tabs.imprint.label"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:97
+#: src/components/screens/Legal.jsx:83
 msgid "legal-screen.privacy.section-1.headline"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:98
+#: src/components/screens/Legal.jsx:84
 msgid "legal-screen.privacy.section-1.text"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:99
+#: src/components/screens/Legal.jsx:85
 msgid "legal-screen.privacy.section-2.headline"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:139
+#: src/components/screens/Legal.jsx:86
+msgid "legal-screen.privacy.section-2.text"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:87
+msgid "legal-screen.privacy.section-3.headline"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:88
+msgid "legal-screen.privacy.section-3.text"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:89
+msgid "legal-screen.privacy.section-4.headline"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:90
+msgid "legal-screen.privacy.section-4.text"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:91
+msgid "legal-screen.privacy.section-5.headline"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:92
+msgid "legal-screen.privacy.section-5.text"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:93
+msgid "legal-screen.privacy.section-6.headline"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:94
+msgid "legal-screen.privacy.section-6.text"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:125
 msgid "menu-screen.intro.text"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:173
+#: src/components/screens/Menu.jsx:159
 msgid "menu-screen.button.send-feedback"
 msgstr ""
 
-#: src/components/screens/TipAmIInfected.jsx:109
-msgid "tips.am-i-infected.list.item-1"
-msgstr ""
-
-#: src/components/screens/TipAmIInfected.jsx:110
-msgid "tips.am-i-infected.list.item-2"
-msgstr ""
-
-#: src/components/screens/TipAmIInfected.jsx:111
-msgid "tips.am-i-infected.list.item-3"
-msgstr ""
-
-#: src/components/screens/TipAmIInfected.jsx:116
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:118
-#: src/components/screens/TipCoughingSneezing.jsx:118
-#: src/components/screens/TipMouthguard.jsx:120
-#: src/components/screens/TipNotFeelingWell.jsx:117
-#: src/components/screens/TipReliableSources.jsx:90
-#: src/components/screens/TipWashingHands.jsx:118
+#: src/components/screens/TipAmIInfected.jsx:102
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:104
+#: src/components/screens/TipCoughingSneezing.jsx:104
+#: src/components/screens/TipMouthguard.jsx:106
+#: src/components/screens/TipNotFeelingWell.jsx:103
+#: src/components/screens/TipReliableSources.jsx:76
+#: src/components/screens/TipWashingHands.jsx:104
 #: src/components/screens/Tips/ui.jsx:109
 msgid "tips-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/TipAmIInfected.jsx:121
+#: src/components/screens/TipAmIInfected.jsx:107
 #: src/components/screens/Tips/ui.jsx:97
 msgid "tips.am-i-infected.headline"
 msgstr ""
 
-#: src/components/screens/TipAmIInfected.jsx:122
+#: src/components/screens/TipAmIInfected.jsx:108
 msgid "tips.am-i-infected.text"
 msgstr ""
 
-#: src/components/screens/TipAmIInfected.jsx:138
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:140
-#: src/components/screens/TipCoughingSneezing.jsx:140
-#: src/components/screens/TipMouthguard.jsx:147
-#: src/components/screens/TipNotFeelingWell.jsx:141
-#: src/components/screens/TipWashingHands.jsx:140
+#: src/components/screens/TipAmIInfected.jsx:124
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:126
+#: src/components/screens/TipCoughingSneezing.jsx:126
+#: src/components/screens/TipMouthguard.jsx:133
+#: src/components/screens/TipNotFeelingWell.jsx:127
+#: src/components/screens/TipWashingHands.jsx:126
 msgid "tips.sources.headline"
 msgstr ""
 
-#: src/components/screens/TipAmIInfected.jsx:147
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:151
-#: src/components/screens/TipCoughingSneezing.jsx:160
-#: src/components/screens/TipMouthguard.jsx:165
-#: src/components/screens/TipNotFeelingWell.jsx:148
-#: src/components/screens/TipWashingHands.jsx:154
+#: src/components/screens/TipAmIInfected.jsx:133
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:137
+#: src/components/screens/TipCoughingSneezing.jsx:146
+#: src/components/screens/TipMouthguard.jsx:151
+#: src/components/screens/TipNotFeelingWell.jsx:134
+#: src/components/screens/TipWashingHands.jsx:140
 msgid "tips.sources.last-updated"
 msgstr ""
 
+#: src/components/screens/TipAmIInfected.jsx:95
+msgid "tips.am-i-infected.list.item-1"
+msgstr ""
+
+#: src/components/screens/TipAmIInfected.jsx:96
+msgid "tips.am-i-infected.list.item-2"
+msgstr ""
+
+#: src/components/screens/TipAmIInfected.jsx:97
+msgid "tips.am-i-infected.list.item-3"
+msgstr ""
+
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:109
-msgid "tips.avoid-crowds-of-people.list.item-1"
-msgstr ""
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:110
-msgid "tips.avoid-crowds-of-people.list.item-2"
-msgstr ""
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:111
-msgid "tips.avoid-crowds-of-people.list.item-3"
-msgstr ""
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:112
-msgid "tips.avoid-crowds-of-people.list.item-4"
-msgstr ""
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:113
-msgid "tips.avoid-crowds-of-people.list.item-5"
-msgstr ""
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:123
 #: src/components/screens/Tips/ui.jsx:81
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr ""
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:124
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:110
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
 
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:95
+msgid "tips.avoid-crowds-of-people.list.item-1"
+msgstr ""
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:96
+msgid "tips.avoid-crowds-of-people.list.item-2"
+msgstr ""
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:97
+msgid "tips.avoid-crowds-of-people.list.item-3"
+msgstr ""
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:98
+msgid "tips.avoid-crowds-of-people.list.item-4"
+msgstr ""
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:99
+msgid "tips.avoid-crowds-of-people.list.item-5"
+msgstr ""
+
 #: src/components/screens/TipCoughingSneezing.jsx:109
-msgid "tips.coughing-sneezing.list.item-1"
-msgstr ""
-
-#: src/components/screens/TipCoughingSneezing.jsx:110
-msgid "tips.coughing-sneezing.list.item-2"
-msgstr ""
-
-#: src/components/screens/TipCoughingSneezing.jsx:111
-msgid "tips.coughing-sneezing.list.item-3"
-msgstr ""
-
-#: src/components/screens/TipCoughingSneezing.jsx:112
-msgid "tips.coughing-sneezing.list.item-4"
-msgstr ""
-
-#: src/components/screens/TipCoughingSneezing.jsx:113
-msgid "tips.coughing-sneezing.list.item-5"
-msgstr ""
-
-#: src/components/screens/TipCoughingSneezing.jsx:123
 #: src/components/screens/Tips/ui.jsx:89
 msgid "tips.coughing-sneezing.headline"
 msgstr ""
 
-#: src/components/screens/TipCoughingSneezing.jsx:124
+#: src/components/screens/TipCoughingSneezing.jsx:110
 msgid "tips.coughing-sneezing.text"
 msgstr ""
 
-#: src/components/screens/TipMouthguard.jsx:112
-msgid "tips.mouthguard.list.item-1"
+#: src/components/screens/TipCoughingSneezing.jsx:95
+msgid "tips.coughing-sneezing.list.item-1"
 msgstr ""
 
-#: src/components/screens/TipMouthguard.jsx:113
-msgid "tips.mouthguard.list.item-2"
+#: src/components/screens/TipCoughingSneezing.jsx:96
+msgid "tips.coughing-sneezing.list.item-2"
 msgstr ""
 
-#: src/components/screens/TipMouthguard.jsx:114
+#: src/components/screens/TipCoughingSneezing.jsx:97
+msgid "tips.coughing-sneezing.list.item-3"
+msgstr ""
+
+#: src/components/screens/TipCoughingSneezing.jsx:98
+msgid "tips.coughing-sneezing.list.item-4"
+msgstr ""
+
+#: src/components/screens/TipCoughingSneezing.jsx:99
+msgid "tips.coughing-sneezing.list.item-5"
+msgstr ""
+
+#: src/components/screens/TipMouthguard.jsx:100
 msgid "tips.mouthguard.list.item-3"
 msgstr ""
 
-#: src/components/screens/TipMouthguard.jsx:115
+#: src/components/screens/TipMouthguard.jsx:101
 msgid "tips.mouthguard.list.item-4"
 msgstr ""
 
-#: src/components/screens/TipMouthguard.jsx:125
+#: src/components/screens/TipMouthguard.jsx:111
 #: src/components/screens/Tips/ui.jsx:85
 msgid "tips.mouthguard.headline"
 msgstr ""
 
-#: src/components/screens/TipMouthguard.jsx:126
+#: src/components/screens/TipMouthguard.jsx:112
 msgid "tips.mouthguard.text-1"
 msgstr ""
 
-#: src/components/screens/TipMouthguard.jsx:128
+#: src/components/screens/TipMouthguard.jsx:114
 msgid "tips.mouthguard.text-2"
 msgstr ""
 
-#: src/components/screens/TipMouthguard.jsx:133
+#: src/components/screens/TipMouthguard.jsx:119
 msgid "tips.mouthguard.list.intro"
 msgstr ""
 
-#: src/components/screens/TipNotFeelingWell.jsx:109
-msgid "tips.not-feeling-well.list.item-1"
+#: src/components/screens/TipMouthguard.jsx:98
+msgid "tips.mouthguard.list.item-1"
 msgstr ""
 
-#: src/components/screens/TipNotFeelingWell.jsx:110
-msgid "tips.not-feeling-well.list.item-2"
+#: src/components/screens/TipMouthguard.jsx:99
+msgid "tips.mouthguard.list.item-2"
 msgstr ""
 
-#: src/components/screens/TipNotFeelingWell.jsx:111
-msgid "tips.not-feeling-well.list.item-3"
-msgstr ""
-
-#: src/components/screens/TipNotFeelingWell.jsx:112
-msgid "tips.not-feeling-well.list.item-4"
-msgstr ""
-
-#: src/components/screens/TipNotFeelingWell.jsx:122
+#: src/components/screens/TipNotFeelingWell.jsx:108
 #: src/components/screens/Tips/ui.jsx:93
 msgid "tips.not-feeling-well.headline"
 msgstr ""
 
-#: src/components/screens/TipNotFeelingWell.jsx:123
+#: src/components/screens/TipNotFeelingWell.jsx:109
 msgid "tips.not-feeling-well.text"
 msgstr ""
 
-#: src/components/screens/TipNotFeelingWell.jsx:127
+#: src/components/screens/TipNotFeelingWell.jsx:113
 msgid "tips.not-feeling-well.list.intro"
 msgstr ""
 
-#: src/components/screens/TipReliableSources.jsx:95
+#: src/components/screens/TipNotFeelingWell.jsx:95
+msgid "tips.not-feeling-well.list.item-1"
+msgstr ""
+
+#: src/components/screens/TipNotFeelingWell.jsx:96
+msgid "tips.not-feeling-well.list.item-2"
+msgstr ""
+
+#: src/components/screens/TipNotFeelingWell.jsx:97
+msgid "tips.not-feeling-well.list.item-3"
+msgstr ""
+
+#: src/components/screens/TipNotFeelingWell.jsx:98
+msgid "tips.not-feeling-well.list.item-4"
+msgstr ""
+
+#: src/components/screens/TipReliableSources.jsx:81
 #: src/components/screens/Tips/ui.jsx:101
 msgid "tips.reliable-sources.headline"
 msgstr ""
 
-#: src/components/screens/TipReliableSources.jsx:96
+#: src/components/screens/TipReliableSources.jsx:82
 msgid "tips.reliable-sources.text"
 msgstr ""
 
 #: src/components/screens/TipWashingHands.jsx:109
-msgid "tips.washing-hands.list.item-1"
-msgstr ""
-
-#: src/components/screens/TipWashingHands.jsx:110
-msgid "tips.washing-hands.list.item-2"
-msgstr ""
-
-#: src/components/screens/TipWashingHands.jsx:111
-msgid "tips.washing-hands.list.item-3"
-msgstr ""
-
-#: src/components/screens/TipWashingHands.jsx:112
-msgid "tips.washing-hands.list.item-4"
-msgstr ""
-
-#: src/components/screens/TipWashingHands.jsx:113
-msgid "tips.washing-hands.list.item-5"
-msgstr ""
-
-#: src/components/screens/TipWashingHands.jsx:123
 #: src/components/screens/Tips/ui.jsx:77
 msgid "tips.washing-hands.headline"
 msgstr ""
 
-#: src/components/screens/TipWashingHands.jsx:124
+#: src/components/screens/TipWashingHands.jsx:110
 msgid "tips.washing-hands.text"
+msgstr ""
+
+#: src/components/screens/TipWashingHands.jsx:95
+msgid "tips.washing-hands.list.item-1"
+msgstr ""
+
+#: src/components/screens/TipWashingHands.jsx:96
+msgid "tips.washing-hands.list.item-2"
+msgstr ""
+
+#: src/components/screens/TipWashingHands.jsx:97
+msgid "tips.washing-hands.list.item-3"
+msgstr ""
+
+#: src/components/screens/TipWashingHands.jsx:98
+msgid "tips.washing-hands.list.item-4"
+msgstr ""
+
+#: src/components/screens/TipWashingHands.jsx:99
+msgid "tips.washing-hands.list.item-5"
 msgstr ""
 
 #: src/components/screens/Tips/ui.jsx:114

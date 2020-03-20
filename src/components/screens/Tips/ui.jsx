@@ -69,7 +69,7 @@ const Tips = ({ navigation, vw, __ }) => {
       paddingLeft: vw(2.5),
       paddingRight: vw(2.5),
       paddingTop: vw(2.5),
-    }
+    },
   });
 
   const tipsList = [
@@ -110,7 +110,7 @@ const Tips = ({ navigation, vw, __ }) => {
       </Header>
 
       <ScrollView style={styles.view}>
-        <View style={{...styles.viewContent, ...styles.viewContentText}}>
+        <View style={{ ...styles.viewContent, ...styles.viewContentText }}>
           <Text style={styles.contentText}>{__('tips-screen.intro.text')}</Text>
         </View>
 

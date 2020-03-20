@@ -1,12 +1,10 @@
-import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
-import { CommonActions } from '@react-navigation/native';
 import moment from 'moment';
 import React from 'react';
-import { Linking, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
-import Header, { HeaderBack } from '../widgets/Header';
+import { HeaderBack } from '../widgets/Header';
 import Layout from '../widgets/Layout';
 
 const TipWashingHands = ({ navigation, vw, __ }) => {
@@ -21,18 +19,6 @@ const TipWashingHands = ({ navigation, vw, __ }) => {
       fontFamily: 'JetBrainsMono-Regular',
       fontSize: vw(4.5),
       lineHeight: vw(7),
-    },
-    header: {
-      alignItems: 'center',
-      flex: 1,
-      flexDirection: 'row',
-      justifyContent: Platform.OS === 'ios' ? 'space-between' : 'flex-end',
-    },
-    headerHeadline: {
-      fontFamily: 'JetBrainsMono-Bold',
-      fontSize: vw(5),
-      marginLeft: 'auto',
-      textTransform: 'lowercase',
     },
     listItem: {
       alignItems: 'flex-start',

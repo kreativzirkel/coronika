@@ -184,6 +184,7 @@ const AppNavigator = () => (
   <Tab.Navigator
     backBehaviour={'none'}
     initialRouteName={'Dashboard'}
+    /* eslint-disable-next-line react/jsx-props-no-spreading */
     tabBar={(props) => <AppNavigatorTabBar {...props} />}>
     <Tab.Screen component={screens.Tips} name={'Tips'} />
     <Tab.Screen component={screens.Directory} name={'Directory'} />

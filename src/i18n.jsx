@@ -129,6 +129,7 @@ const withI18n = (WrappedComponent) => {
   I18n.contextType = ReactReduxContext;
 
   return React.forwardRef((props, ref) => {
+    /* eslint-disable-next-line react/jsx-props-no-spreading */
     return <I18n {...props} forwardedRef={ref} />;
   });
 };
