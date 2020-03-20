@@ -173,15 +173,15 @@ msgstr ""
 msgid "welcome-screen.slides.how-to.button"
 msgstr ""
 
-#: src/components/screens/About.jsx:32 src/components/screens/Welcome/ui.jsx:28
+#: src/components/screens/About.jsx:32 src/components/screens/Welcome/ui.jsx:36
 msgid "welcome-screen.slides.local-data.headline"
 msgstr ""
 
-#: src/components/screens/About.jsx:33 src/components/screens/Welcome/ui.jsx:29
+#: src/components/screens/About.jsx:33 src/components/screens/Welcome/ui.jsx:37
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 
-#: src/components/screens/About.jsx:34 src/components/screens/Welcome/ui.jsx:30
+#: src/components/screens/About.jsx:34 src/components/screens/Welcome/ui.jsx:38
 msgid "welcome-screen.slides.local-data.button"
 msgstr ""
 
@@ -350,12 +350,49 @@ msgstr ""
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
 
+#: src/components/screens/Menu.jsx:105
+#: src/components/screens/Settings/ui.jsx:73
+msgid "settings-screen.header.headline"
+msgstr ""
+
 #: src/components/screens/Menu.jsx:125
 msgid "menu-screen.intro.text"
 msgstr ""
 
 #: src/components/screens/Menu.jsx:159
 msgid "menu-screen.button.send-feedback"
+msgstr ""
+
+#: src/components/screens/Settings/ui.jsx:105
+msgid "settings-screen.notifications.diary.headline"
+msgstr ""
+
+#: src/components/screens/Settings/ui.jsx:107
+msgid "settings-screen.notifications.diary.option.label"
+msgstr ""
+
+#: src/components/screens/Settings/ui.jsx:78
+msgid "settings-screen.notifications.headline"
+msgstr ""
+
+#: src/components/screens/Settings/ui.jsx:82
+msgid "settings-screen.notifications.washing-hands.headline"
+msgstr ""
+
+#: src/components/screens/Settings/ui.jsx:85
+msgid "settings-screen.notifications.washing-hands.option-1.label"
+msgstr ""
+
+#: src/components/screens/Settings/ui.jsx:89
+msgid "settings-screen.notifications.washing-hands.option-2.label"
+msgstr ""
+
+#: src/components/screens/Settings/ui.jsx:96
+msgid "settings-screen.notifications.disinfect-smartphone.headline"
+msgstr ""
+
+#: src/components/screens/Settings/ui.jsx:99
+msgid "settings-screen.notifications.disinfect-smartphone.option.label"
 msgstr ""
 
 #: src/components/screens/TipAmIInfected.jsx:102
@@ -568,6 +605,22 @@ msgstr ""
 
 #: src/components/screens/Tips/ui.jsx:114
 msgid "tips-screen.intro.text"
+msgstr ""
+
+#: src/components/screens/Welcome/ui.jsx:28
+msgid "welcome-screen.slides.notifications.headline"
+msgstr ""
+
+#: src/components/screens/Welcome/ui.jsx:29
+msgid "welcome-screen.slides.notifications.text"
+msgstr ""
+
+#: src/components/screens/Welcome/ui.jsx:30
+msgid "welcome-screen.slides.notifications.button"
+msgstr ""
+
+#: src/components/screens/Welcome/ui.jsx:31
+msgid "welcome-screen.slides.notifications.button-skip"
 msgstr ""
 
 #: src/components/widgets/DayOverview.jsx:79

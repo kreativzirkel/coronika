@@ -24,11 +24,19 @@ const Welcome = ({ finish, navigation, vw, __ }) => {
       key: 'welcome-slide-1',
     },
     {
+      animation: require('../../../assets/animations/what.json'),
+      headline: __('welcome-screen.slides.notifications.headline'),
+      text: __('welcome-screen.slides.notifications.text'),
+      buttonText: __('welcome-screen.slides.notifications.button'),
+      buttonSkipText: __('welcome-screen.slides.notifications.button-skip'),
+      key: 'welcome-slide-2',
+    },
+    {
       animation: require('../../../assets/animations/how.json'),
       headline: __('welcome-screen.slides.local-data.headline'),
       text: __('welcome-screen.slides.local-data.text'),
       buttonText: __('welcome-screen.slides.local-data.button'),
-      key: 'welcome-slide-2',
+      key: 'welcome-slide-3',
     },
   ];
 

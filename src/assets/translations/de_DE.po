@@ -188,17 +188,17 @@ msgstr ""
 msgid "welcome-screen.slides.how-to.button"
 msgstr "Alles klar"
 
-#: src/components/screens/About.jsx:32 src/components/screens/Welcome/ui.jsx:28
+#: src/components/screens/About.jsx:32 src/components/screens/Welcome/ui.jsx:36
 msgid "welcome-screen.slides.local-data.headline"
 msgstr "Deine Daten gehören dir!"
 
-#: src/components/screens/About.jsx:33 src/components/screens/Welcome/ui.jsx:29
+#: src/components/screens/About.jsx:33 src/components/screens/Welcome/ui.jsx:37
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 "Alle Informationen, die du in Coronika anlegst werden lokal gespeichert. "
 "Keine Daten werden getrackt oder weitergegeben."
 
-#: src/components/screens/About.jsx:34 src/components/screens/Welcome/ui.jsx:30
+#: src/components/screens/About.jsx:34 src/components/screens/Welcome/ui.jsx:38
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Jetzt anfangen"
 
@@ -452,6 +452,11 @@ msgstr ""
 "die Daten weitergibt. Ansonsten bleiben alle Daten lokal auf dem Smartphone "
 "des Nutzers."
 
+#: src/components/screens/Menu.jsx:105
+#: src/components/screens/Settings/ui.jsx:73
+msgid "settings-screen.header.headline"
+msgstr "Einstellungen"
+
 #: src/components/screens/Menu.jsx:125
 msgid "menu-screen.intro.text"
 msgstr ""
@@ -461,6 +466,38 @@ msgstr ""
 #: src/components/screens/Menu.jsx:159
 msgid "menu-screen.button.send-feedback"
 msgstr "Feedback senden"
+
+#: src/components/screens/Settings/ui.jsx:105
+msgid "settings-screen.notifications.diary.headline"
+msgstr "Tagebuch nutzen"
+
+#: src/components/screens/Settings/ui.jsx:107
+msgid "settings-screen.notifications.diary.option.label"
+msgstr "täglich erinnern"
+
+#: src/components/screens/Settings/ui.jsx:78
+msgid "settings-screen.notifications.headline"
+msgstr "Benachrichtigungen"
+
+#: src/components/screens/Settings/ui.jsx:82
+msgid "settings-screen.notifications.washing-hands.headline"
+msgstr "Händewaschen"
+
+#: src/components/screens/Settings/ui.jsx:85
+msgid "settings-screen.notifications.washing-hands.option-1.label"
+msgstr "3x täglich erinnern"
+
+#: src/components/screens/Settings/ui.jsx:89
+msgid "settings-screen.notifications.washing-hands.option-2.label"
+msgstr "6x täglich erinnern"
+
+#: src/components/screens/Settings/ui.jsx:96
+msgid "settings-screen.notifications.disinfect-smartphone.headline"
+msgstr "Smartphone desinfizieren"
+
+#: src/components/screens/Settings/ui.jsx:99
+msgid "settings-screen.notifications.disinfect-smartphone.option.label"
+msgstr "täglich erinnern"
 
 #: src/components/screens/TipAmIInfected.jsx:102
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:104
@@ -546,7 +583,7 @@ msgstr "Oft und gründlich die Hände waschen"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:98
 msgid "tips.avoid-crowds-of-people.list.item-4"
-msgstr "2 Meter Sicherheitsabstand zu erkrankten Personen halten"
+msgstr "Halte ca. 1–2 Meter Abstand zu anderen Personen"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:99
 msgid "tips.avoid-crowds-of-people.list.item-5"
@@ -565,7 +602,7 @@ msgstr ""
 
 #: src/components/screens/TipCoughingSneezing.jsx:95
 msgid "tips.coughing-sneezing.list.item-1"
-msgstr "Halte mindestens 1 Meter Abstand zu anderen Personen"
+msgstr "Halte ca. 1–2 Meter Abstand zu anderen Personen"
 
 #: src/components/screens/TipCoughingSneezing.jsx:96
 msgid "tips.coughing-sneezing.list.item-2"
@@ -686,11 +723,11 @@ msgstr "gründlich einseifen und verreiben"
 msgid "tips.washing-hands.list.item-3"
 msgstr ""
 "Innenflächen, Handrücken, Fingerspitzen, Daumen, Fingernägel, Räume zwischen "
-"den Fingern reinigen"
+"den Fingern ca. 30 - 60 Sek. lang reinigen"
 
 #: src/components/screens/TipWashingHands.jsx:98
 msgid "tips.washing-hands.list.item-4"
-msgstr "ca. 30 - 60 Sek. lang"
+msgstr "Danach unter sauberem fließendem Wasser gründlich abspülen"
 
 #: src/components/screens/TipWashingHands.jsx:99
 msgid "tips.washing-hands.list.item-5"
@@ -703,6 +740,24 @@ msgstr ""
 "Infektionsrisiko so gut wie möglich zu reduzieren und im Falle einer "
 "Ansteckung das Richtige zu tun."
 
+#: src/components/screens/Welcome/ui.jsx:28
+msgid "welcome-screen.slides.notifications.headline"
+msgstr "Hände gewaschen?"
+
+#: src/components/screens/Welcome/ui.jsx:29
+msgid "welcome-screen.slides.notifications.text"
+msgstr ""
+"Aktiviere deine Benachrichtigungen und werde so regelmäßig ans Händewaschen "
+"erinnert, um einer Infektion vorzubeugen."
+
+#: src/components/screens/Welcome/ui.jsx:30
+msgid "welcome-screen.slides.notifications.button"
+msgstr "Jetzt aktivieren"
+
+#: src/components/screens/Welcome/ui.jsx:31
+msgid "welcome-screen.slides.notifications.button-skip"
+msgstr "Überspringen"
+
 #: src/components/widgets/DayOverview.jsx:79
 msgid "today"
 msgstr "heute"
@@ -714,9 +769,6 @@ msgstr "gesamt"
 #: src/components/widgets/SearchBar.jsx:57
 msgid "placeholder.search-input"
 msgstr "Suche"
-
-#~ msgid "settings-screen.header.headline"
-#~ msgstr "Einstellungen"
 
 #~ msgid "dashboard-screen.header.buttons.policy"
 #~ msgstr "Policy"

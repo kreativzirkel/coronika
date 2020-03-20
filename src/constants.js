@@ -1,5 +1,5 @@
 const COLOR_PRIMARY = '#17d9bd';
-const COLOR_SECONDARY = '#f8f7f8';
+const COLOR_SECONDARY = '#f7f7f7';
 const DEFAULT_LANGUAGE = 'en';
 const SUPPORTED_LANGUAGES = ['de', 'en'];
 

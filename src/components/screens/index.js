@@ -6,6 +6,7 @@ import Day from './Day/logic';
 import Export from './Export/logic';
 import Legal from './Legal';
 import Menu from './Menu';
+import Settings from './Settings/logic';
 import Splash from './Splash/logic';
 import Tips from './Tips/logic';
 import TipAmIInfected from './TipAmIInfected';
@@ -26,6 +27,7 @@ export default {
   Export,
   Legal,
   Menu,
+  Settings,
   Splash,
   Tips,
   TipAmIInfected,
