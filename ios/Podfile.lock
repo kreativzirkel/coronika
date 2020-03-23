@@ -243,7 +243,7 @@ PODS:
     - React
   - RNDateTimePicker (2.3.0):
     - React
-  - RNGestureHandler (1.6.0):
+  - RNGestureHandler (1.6.1):
     - React
   - RNLocalize (1.3.4):
     - React
@@ -434,13 +434,13 @@ SPEC CHECKSUMS:
   RNCMaskedView: 90dd32f5b786bd562e876e1421ea77c700cbf71e
   RNCPushNotificationIOS: de54f074e577e684c0619d4271a5b451e8a37ee1
   RNDateTimePicker: d7d3dde9497b4bd4b3ea84881c41d3f0ece481f5
-  RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a
+  RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
   RNLocalize: d8025bb1ac74c0ad54155ea9862538624ebf74d8
   RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
   RNScreens: b5c0e1b2b04512919e78bd3898e144a157ce2363
   RNSVG: 7e16ddfc6e00d5aa69c9eb83e699bcce5dcb85d4
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: 9ce206d28f30a8ae77dec7960fa35a13d19605fe
+PODFILE CHECKSUM: 0ea2e54703c681a5da6e9d40aff8ffd472cbd172
 
 COCOAPODS: 1.9.1

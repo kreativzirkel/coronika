@@ -204,7 +204,6 @@ android {
 dependencies {
     implementation project(':react-native-push-notification')
     implementation project(':react-native-safe-area-context')
-    implementation project(':@react-native-community_datetimepicker')
     implementation project(':react-native-screens')
     implementation project(':react-native-splash-screen')
     implementation project(':lottie-react-native')

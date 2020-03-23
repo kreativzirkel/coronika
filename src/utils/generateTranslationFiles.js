@@ -7,7 +7,7 @@ const recursiveReadSync = require('recursive-sync-readdir');
 
 const generateTranslationFiles = (translationsDir) => {
   try {
-    spawnSync('babel', ['src']);
+    spawnSync('babel', ['./src', '--config-file', './babel-translations.config.js']);
   } catch (e) {
     /* eslint-disable no-console */
     console.log('');

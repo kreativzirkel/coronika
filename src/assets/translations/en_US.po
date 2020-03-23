@@ -475,30 +475,42 @@ msgstr "📱🧽 Clean your smartphone screen"
 msgid "notifications.desinfect-smartphone.variant-1.text"
 msgstr "Remove germs by cleaning your screen with a disinfectant wipe."
 
+#: src/components/screens/Settings/logic.js:172
+#: src/components/screens/Settings/logic.js:205
 #: src/components/screens/Settings/logic.js:220
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "If you've been out wash your hands thoroughly."
 
+#: src/components/screens/Settings/logic.js:173
+#: src/components/screens/Settings/logic.js:206
 #: src/components/screens/Settings/logic.js:221
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 Wash your hands"
 
+#: src/components/screens/Settings/logic.js:177
+#: src/components/screens/Settings/logic.js:210
 #: src/components/screens/Settings/logic.js:225
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Washing your hands is one of the simplest ways you can protect yourself and "
 "others from illnesses."
 
+#: src/components/screens/Settings/logic.js:178
+#: src/components/screens/Settings/logic.js:211
 #: src/components/screens/Settings/logic.js:226
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Did you wash your hands?"
 
+#: src/components/screens/Settings/logic.js:182
+#: src/components/screens/Settings/logic.js:215
 #: src/components/screens/Settings/logic.js:230
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Practice mindful hand washing and don't forget to clean your finger tips and "
 "the space between fingers."
 
+#: src/components/screens/Settings/logic.js:183
+#: src/components/screens/Settings/logic.js:216
 #: src/components/screens/Settings/logic.js:231
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 Don't forget your tips!"
@@ -734,6 +746,13 @@ msgstr "Where can I find reliable sources?"
 msgid "tips.reliable-sources.text"
 msgstr "Informative websites"
 
+#: src/components/screens/Tips/ui.jsx:114
+msgid "tips-screen.intro.text"
+msgstr ""
+"Here you will find knowledge that is helping you to reduce the risk of "
+"infection as much as possible and to enable you to do the right thing in "
+"case of an infection."
+
 #: src/components/screens/TipWashingHands.jsx:109
 #: src/components/screens/Tips/ui.jsx:77
 msgid "tips.washing-hands.headline"
@@ -771,13 +790,6 @@ msgstr "Rinse your hands well under clean, running water."
 #: src/components/screens/TipWashingHands.jsx:99
 msgid "tips.washing-hands.list.item-5"
 msgstr "Dry your hands using a clean towel or air dry them."
-
-#: src/components/screens/Tips/ui.jsx:114
-msgid "tips-screen.intro.text"
-msgstr ""
-"Here you will find knowledge that is helping you to reduce the risk of "
-"infection as much as possible and to enable you to do the right thing in "
-"case of an infection."
 
 #: src/components/screens/Welcome/ui.jsx:28
 msgid "welcome-screen.slides.notifications.headline"

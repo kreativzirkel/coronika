@@ -484,31 +484,43 @@ msgstr "📱🧽 Reinige dein Smartphone"
 msgid "notifications.desinfect-smartphone.variant-1.text"
 msgstr "Befreie dein Handy von möglichen Keimen mit einem Desinfiktionstuch."
 
+#: src/components/screens/Settings/logic.js:172
+#: src/components/screens/Settings/logic.js:205
 #: src/components/screens/Settings/logic.js:220
 msgid "notifications.washing-hands.variant-1.text"
 msgstr ""
 "Wenn du unterwegs warst, solltest du zunächst deine Hände gründlich waschen."
 
+#: src/components/screens/Settings/logic.js:173
+#: src/components/screens/Settings/logic.js:206
 #: src/components/screens/Settings/logic.js:221
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧Händewaschen"
 
+#: src/components/screens/Settings/logic.js:177
+#: src/components/screens/Settings/logic.js:210
 #: src/components/screens/Settings/logic.js:225
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Regelmäßiges Händewaschen ist die einfachste Maßnahme, um einer Infektion "
 "vorzubeugen."
 
+#: src/components/screens/Settings/logic.js:178
+#: src/components/screens/Settings/logic.js:211
 #: src/components/screens/Settings/logic.js:226
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧Hände gewaschen? "
 
+#: src/components/screens/Settings/logic.js:182
+#: src/components/screens/Settings/logic.js:215
 #: src/components/screens/Settings/logic.js:230
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Wasche deine Hände bewusst und denke auch an die Kuppen und Stellen zwischen "
 "den Fingern. "
 
+#: src/components/screens/Settings/logic.js:183
+#: src/components/screens/Settings/logic.js:216
 #: src/components/screens/Settings/logic.js:231
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧Fingerkuppen nicht vergessen!"
@@ -746,6 +758,13 @@ msgstr "Wo finde ich zuverlässige Quellen?"
 msgid "tips.reliable-sources.text"
 msgstr "Informative Webseiten"
 
+#: src/components/screens/Tips/ui.jsx:114
+msgid "tips-screen.intro.text"
+msgstr ""
+"Hier findest du Wissen, das dir in der aktuellen Situation helfen soll, das "
+"Infektionsrisiko so gut wie möglich zu reduzieren und im Falle einer "
+"Ansteckung das Richtige zu tun."
+
 #: src/components/screens/TipWashingHands.jsx:109
 #: src/components/screens/Tips/ui.jsx:77
 msgid "tips.washing-hands.headline"
@@ -778,13 +797,6 @@ msgstr "Danach unter sauberem fließendem Wasser gründlich abspülen"
 #: src/components/screens/TipWashingHands.jsx:99
 msgid "tips.washing-hands.list.item-5"
 msgstr "Hände abtrocknen"
-
-#: src/components/screens/Tips/ui.jsx:114
-msgid "tips-screen.intro.text"
-msgstr ""
-"Hier findest du Wissen, das dir in der aktuellen Situation helfen soll, das "
-"Infektionsrisiko so gut wie möglich zu reduzieren und im Falle einer "
-"Ansteckung das Richtige zu tun."
 
 #: src/components/screens/Welcome/ui.jsx:28
 msgid "welcome-screen.slides.notifications.headline"

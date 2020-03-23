@@ -25,8 +25,6 @@ Automatic generation using react-native-make.
 
 Link necessary packages:
 
-`react-native link @react-native-community/datetimepicker`
-
 `react-native link lottie-ios`
 
 `react-native link lottie-react-native`

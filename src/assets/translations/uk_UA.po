@@ -379,26 +379,38 @@ msgstr ""
 msgid "notifications.desinfect-smartphone.variant-1.text"
 msgstr ""
 
+#: src/components/screens/Settings/logic.js:172
+#: src/components/screens/Settings/logic.js:205
 #: src/components/screens/Settings/logic.js:220
 msgid "notifications.washing-hands.variant-1.text"
 msgstr ""
 
+#: src/components/screens/Settings/logic.js:173
+#: src/components/screens/Settings/logic.js:206
 #: src/components/screens/Settings/logic.js:221
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr ""
 
+#: src/components/screens/Settings/logic.js:177
+#: src/components/screens/Settings/logic.js:210
 #: src/components/screens/Settings/logic.js:225
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 
+#: src/components/screens/Settings/logic.js:178
+#: src/components/screens/Settings/logic.js:211
 #: src/components/screens/Settings/logic.js:226
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr ""
 
+#: src/components/screens/Settings/logic.js:182
+#: src/components/screens/Settings/logic.js:215
 #: src/components/screens/Settings/logic.js:230
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 
+#: src/components/screens/Settings/logic.js:183
+#: src/components/screens/Settings/logic.js:216
 #: src/components/screens/Settings/logic.js:231
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr ""
@@ -614,6 +626,10 @@ msgstr ""
 msgid "tips.reliable-sources.text"
 msgstr ""
 
+#: src/components/screens/Tips/ui.jsx:114
+msgid "tips-screen.intro.text"
+msgstr ""
+
 #: src/components/screens/TipWashingHands.jsx:109
 #: src/components/screens/Tips/ui.jsx:77
 msgid "tips.washing-hands.headline"
@@ -641,10 +657,6 @@ msgstr ""
 
 #: src/components/screens/TipWashingHands.jsx:99
 msgid "tips.washing-hands.list.item-5"
-msgstr ""
-
-#: src/components/screens/Tips/ui.jsx:114
-msgid "tips-screen.intro.text"
 msgstr ""
 
 #: src/components/screens/Welcome/ui.jsx:28
