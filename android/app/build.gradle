@@ -145,6 +145,7 @@ android {
     defaultConfig {
         applicationId "de.kreativzirkel.coronika"
         minSdkVersion rootProject.ext.minSdkVersion
+        multiDexEnabled true
         resConfigs "de", "en"
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 10
@@ -201,6 +202,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-push-notification')
     implementation project(':react-native-safe-area-context')
     implementation project(':@react-native-community_datetimepicker')
     implementation project(':react-native-screens')
@@ -208,6 +210,7 @@ dependencies {
     implementation project(':lottie-react-native')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation "com.android.support:multidex:2.0.1"
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";

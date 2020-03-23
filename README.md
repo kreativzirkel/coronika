@@ -33,6 +33,8 @@ Link necessary packages:
 
 `react-native link react-native-interactable`
 
+`react-native link react-native-push-notification`
+
 `react-native link react-native-safe-area-context`
 
 `react-native link react-native-screens`

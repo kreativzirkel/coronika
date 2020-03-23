@@ -165,17 +165,17 @@ msgid "welcome-screen.slides.how-to.button"
 msgstr ""
 
 #: src/components/screens/About.jsx:32
-#: src/components/screens/Welcome/ui.jsx:36
+#: src/components/screens/Welcome/ui.jsx:37
 msgid "welcome-screen.slides.local-data.headline"
 msgstr ""
 
 #: src/components/screens/About.jsx:33
-#: src/components/screens/Welcome/ui.jsx:37
+#: src/components/screens/Welcome/ui.jsx:38
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 
 #: src/components/screens/About.jsx:34
-#: src/components/screens/Welcome/ui.jsx:38
+#: src/components/screens/Welcome/ui.jsx:39
 msgid "welcome-screen.slides.local-data.button"
 msgstr ""
 
@@ -346,7 +346,7 @@ msgid "legal-screen.privacy.section-6.text"
 msgstr ""
 
 #: src/components/screens/Menu.jsx:105
-#: src/components/screens/Settings/ui.jsx:73
+#: src/components/screens/Settings/ui.jsx:92
 msgid "settings-screen.header.headline"
 msgstr ""
 
@@ -358,36 +358,76 @@ msgstr ""
 msgid "menu-screen.button.send-feedback"
 msgstr ""
 
-#: src/components/screens/Settings/ui.jsx:105
-msgid "settings-screen.notifications.diary.headline"
+#: src/components/screens/Settings/logic.js:147
+msgid "notifications.diary.headline"
 msgstr ""
 
-#: src/components/screens/Settings/ui.jsx:107
-msgid "settings-screen.notifications.diary.option.label"
+#: src/components/screens/Settings/logic.js:148
+msgid "notifications.diary.text"
 msgstr ""
 
-#: src/components/screens/Settings/ui.jsx:78
-msgid "settings-screen.notifications.headline"
+#: src/components/screens/Settings/logic.js:160
+msgid "notifications.desinfect-smartphone.variant-1.headline"
 msgstr ""
 
-#: src/components/screens/Settings/ui.jsx:82
+#: src/components/screens/Settings/logic.js:161
+msgid "notifications.desinfect-smartphone.variant-1.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:220
+msgid "notifications.washing-hands.variant-1.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:221
+msgid "notifications.washing-hands.variant-1.headline"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:225
+msgid "notifications.washing-hands.variant-2.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:226
+msgid "notifications.washing-hands.variant-2.headline"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:230
+msgid "notifications.washing-hands.variant-3.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:231
+msgid "notifications.washing-hands.variant-3.headline"
+msgstr ""
+
+#: src/components/screens/Settings/ui.jsx:101
 msgid "settings-screen.notifications.washing-hands.headline"
 msgstr ""
 
-#: src/components/screens/Settings/ui.jsx:85
+#: src/components/screens/Settings/ui.jsx:105
 msgid "settings-screen.notifications.washing-hands.option-1.label"
 msgstr ""
 
-#: src/components/screens/Settings/ui.jsx:89
+#: src/components/screens/Settings/ui.jsx:114
 msgid "settings-screen.notifications.washing-hands.option-2.label"
 msgstr ""
 
-#: src/components/screens/Settings/ui.jsx:96
+#: src/components/screens/Settings/ui.jsx:125
 msgid "settings-screen.notifications.disinfect-smartphone.headline"
 msgstr ""
 
-#: src/components/screens/Settings/ui.jsx:99
+#: src/components/screens/Settings/ui.jsx:129
 msgid "settings-screen.notifications.disinfect-smartphone.option.label"
+msgstr ""
+
+#: src/components/screens/Settings/ui.jsx:139
+msgid "settings-screen.notifications.diary.headline"
+msgstr ""
+
+#: src/components/screens/Settings/ui.jsx:142
+msgid "settings-screen.notifications.diary.option.label"
+msgstr ""
+
+#: src/components/screens/Settings/ui.jsx:97
+msgid "settings-screen.notifications.headline"
 msgstr ""
 
 #: src/components/screens/TipAmIInfected.jsx:102
@@ -611,11 +651,11 @@ msgid "welcome-screen.slides.notifications.text"
 msgstr ""
 
 #: src/components/screens/Welcome/ui.jsx:30
-msgid "welcome-screen.slides.notifications.button"
+msgid "welcome-screen.slides.notifications.button-skip"
 msgstr ""
 
 #: src/components/screens/Welcome/ui.jsx:31
-msgid "welcome-screen.slides.notifications.button-skip"
+msgid "welcome-screen.slides.notifications.button"
 msgstr ""
 
 #: src/components/widgets/DayOverview.jsx:79

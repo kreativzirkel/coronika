@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 import com.reactcommunity.rndatetimepicker.RNDateTimePickerPackage;
 import com.swmansion.rnscreens.RNScreensPackage;
@@ -32,6 +33,7 @@ public class MainApplication extends Application implements ReactApplication {
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
           // packages.add(new ReactNativeContacts());
+          // packages.add(new ReactNativePushNotificationPackage());
           return packages;
         }
 

@@ -14,7 +14,7 @@ const storeConfig = {
   key: 'coronika',
   stateReconciler: autoMergeLevel2,
   storage: AsyncStorage,
-  whitelist: ['dashboard', 'directory', 'welcome'],
+  whitelist: ['dashboard', 'directory', 'settings', 'welcome'],
 };
 
 const purgeStore = async () => {

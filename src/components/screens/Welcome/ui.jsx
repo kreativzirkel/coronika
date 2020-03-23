@@ -7,7 +7,7 @@ import Layout from '../../widgets/Layout';
 
 const slider = React.createRef();
 
-const Welcome = ({ finish, navigation, vw, __ }) => {
+const Welcome = ({ activateNotifications, finish, navigation, vw, __ }) => {
   const slides = [
     {
       animation: require('../../../assets/animations/why.json'),
@@ -24,12 +24,13 @@ const Welcome = ({ finish, navigation, vw, __ }) => {
       key: 'welcome-slide-1',
     },
     {
-      animation: require('../../../assets/animations/what.json'),
+      animation: require('../../../assets/animations/wash.json'),
       headline: __('welcome-screen.slides.notifications.headline'),
       text: __('welcome-screen.slides.notifications.text'),
-      buttonText: __('welcome-screen.slides.notifications.button'),
       buttonSkipText: __('welcome-screen.slides.notifications.button-skip'),
+      buttonText: __('welcome-screen.slides.notifications.button'),
       key: 'welcome-slide-2',
+      requestPushNotificationsPermissions: true,
     },
     {
       animation: require('../../../assets/animations/how.json'),
@@ -61,6 +62,15 @@ const Welcome = ({ finish, navigation, vw, __ }) => {
       fontFamily: 'JetBrainsMono-Bold',
       fontSize: vw(7),
       textAlign: 'center',
+    },
+    buttonSkip: {
+      marginTop: vw(2),
+    },
+    buttonSkipText: {
+      fontFamily: 'JetBrainsMono-Regular',
+      fontSize: vw(3.5),
+      textAlign: 'center',
+      textDecorationLine: 'underline',
     },
     sliderPagination: {
       bottom: vw(2),
@@ -101,6 +111,12 @@ const Welcome = ({ finish, navigation, vw, __ }) => {
     }
   };
 
+  const requestPushPermissions = (index) => {
+    activateNotifications(__, () => {
+      next(index);
+    });
+  };
+
   return (
     <Layout backgroundColor={'#ffffff'} statusBarHidden>
       <View style={styles.view}>
@@ -109,18 +125,29 @@ const Welcome = ({ finish, navigation, vw, __ }) => {
           dotStyle={styles.sliderPaginationDot}
           paginationStyle={styles.sliderPagination}
           ref={slider}
-          renderItem={({ item: { animation, headline, text, buttonText, key }, index }) => {
+          renderDoneButton={() => <View />}
+          renderItem={({
+            item: { animation, headline, text, buttonSkipText, buttonText, key, requestPushNotificationsPermissions },
+            index,
+          }) => {
             return (
               <View key={key} style={{ ...styles.view, ...styles.viewSlide }}>
                 <LottieView autoPlay loop source={animation} style={styles.animation} />
                 <Text style={styles.headline}>{headline}</Text>
                 <Text style={styles.text}>{text}</Text>
-                <TouchableOpacity onPress={() => next(index)}>
+                <TouchableOpacity
+                  onPress={() => (requestPushNotificationsPermissions ? requestPushPermissions(index) : next(index))}>
                   <Text style={styles.button}>{buttonText}</Text>
                 </TouchableOpacity>
+                {buttonSkipText && (
+                  <TouchableOpacity onPress={() => next(index)} style={styles.buttonSkip}>
+                    <Text style={styles.buttonSkipText}>{buttonSkipText}</Text>
+                  </TouchableOpacity>
+                )}
               </View>
             );
           }}
+          renderNextButton={() => <View />}
           slides={slides}
         />
       </View>

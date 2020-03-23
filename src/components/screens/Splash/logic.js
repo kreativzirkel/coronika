@@ -5,6 +5,7 @@ import { SUPPORTED_LANGUAGES } from '../../../constants';
 import withI18n, { changeLanguage } from '../../../i18n';
 import { container } from '../../../utils/react';
 import sleep from '../../../utils/sleep';
+import { configurePushNotifications } from '../Settings/logic';
 import Screen from './ui';
 
 const mapStateToProps = () => {
@@ -28,6 +29,8 @@ const Container = container(Screen, {
     if (bestAvailableLanguage) {
       dispatch(changeLanguage(bestAvailableLanguage.languageTag.substring(0, 2)));
     }
+
+    dispatch(configurePushNotifications(navigation));
 
     const {
       app: { welcomeScreenShowKey },

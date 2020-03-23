@@ -5,7 +5,22 @@ import Layout from '../../widgets/Layout';
 import { HeaderBack } from '../../widgets/Header';
 import Toggle from '../../widgets/Toggle';
 
-const Settings = ({ navigation, vw, __ }) => {
+const Settings = ({
+  notificationDiaryEnabled,
+  notificationDisinfectSmartphoneEnabled,
+  notificationWashingHandsOption1Enabled,
+  notificationWashingHandsOption2Enabled,
+  disableNotificationDiary,
+  disableNotificationDisinfectSmartphone,
+  disableNotificationWashingHands,
+  enableNotificationDiary,
+  enableNotificationDisinfectSmartphone,
+  enableNotificationWashingHandsOption1,
+  enableNotificationWashingHandsOption2,
+  navigation,
+  vw,
+  __,
+}) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     contentText: {
@@ -15,15 +30,19 @@ const Settings = ({ navigation, vw, __ }) => {
     },
     contentTextHeadline: {
       fontFamily: 'JetBrainsMono-Bold',
-      fontSize: vw(5.5),
+      fontSize: vw(5.1),
       lineHeight: vw(7),
       marginBottom: vw(1),
+      paddingLeft: vw(2),
+      paddingRight: vw(2),
       textTransform: 'lowercase',
     },
     headline: {
       fontFamily: 'JetBrainsMono-Bold',
       fontSize: vw(7),
       marginBottom: vw(4),
+      paddingLeft: vw(2),
+      paddingRight: vw(2),
       textTransform: 'lowercase',
     },
     setting: {
@@ -82,12 +101,22 @@ const Settings = ({ navigation, vw, __ }) => {
                 {__('settings-screen.notifications.washing-hands.headline')}
               </Text>
               <Setting
+                active={notificationWashingHandsOption1Enabled}
                 label={__('settings-screen.notifications.washing-hands.option-1.label')}
-                onPress={() => console.log('test')}
+                onPress={() =>
+                  notificationWashingHandsOption1Enabled
+                    ? disableNotificationWashingHands(__)
+                    : enableNotificationWashingHandsOption1(__)
+                }
               />
               <Setting
+                active={notificationWashingHandsOption2Enabled}
                 label={__('settings-screen.notifications.washing-hands.option-2.label')}
-                onPress={() => console.log('test')}
+                onPress={() =>
+                  notificationWashingHandsOption2Enabled
+                    ? disableNotificationWashingHands(__)
+                    : enableNotificationWashingHandsOption2(__)
+                }
               />
             </View>
 
@@ -96,16 +125,22 @@ const Settings = ({ navigation, vw, __ }) => {
                 {__('settings-screen.notifications.disinfect-smartphone.headline')}
               </Text>
               <Setting
+                active={notificationDisinfectSmartphoneEnabled}
                 label={__('settings-screen.notifications.disinfect-smartphone.option.label')}
-                onPress={() => console.log('test')}
+                onPress={() =>
+                  notificationDisinfectSmartphoneEnabled
+                    ? disableNotificationDisinfectSmartphone(__)
+                    : enableNotificationDisinfectSmartphone(__)
+                }
               />
             </View>
 
             <View style={styles.viewSetting}>
               <Text style={styles.contentTextHeadline}>{__('settings-screen.notifications.diary.headline')}</Text>
               <Setting
+                active={notificationDiaryEnabled}
                 label={__('settings-screen.notifications.diary.option.label')}
-                onPress={() => console.log('test')}
+                onPress={() => (notificationDiaryEnabled ? disableNotificationDiary(__) : enableNotificationDiary(__))}
               />
             </View>
           </View>
