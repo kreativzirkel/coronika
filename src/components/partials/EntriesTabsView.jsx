@@ -124,31 +124,62 @@ class EntriesTabsView extends React.PureComponent {
     }
   }
 
-  addNewPerson() {
+  async addNewPerson() {
     const {
-      store: { dispatch },
+      store: { dispatch, getState },
     } = this.context;
+    const { allowSelection } = this.props;
     const { newPersonName, newPersonPhone } = this.state;
     const person = {
       fullName: newPersonName,
       phoneNumbers: [{ label: 'phone', number: newPersonPhone }],
     };
 
-    dispatch(addPerson(person));
+    await dispatch(await addPerson(person));
+
+    if (allowSelection) {
+      const {
+        directory: { persons },
+      } = getState();
+
+      const addedPerson = persons.find(
+        ({ fullName, phoneNumbers }) => fullName === newPersonName && phoneNumbers[0].number === newPersonPhone
+      );
+
+      if (addedPerson) {
+        this.togglePersonSelection(addedPerson.id);
+      }
+    }
 
     this.closeModalNewPerson();
   }
 
-  addNewLocation() {
+  async addNewLocation() {
     const {
-      store: { dispatch },
+      store: { dispatch, getState },
     } = this.context;
+    const { allowSelection } = this.props;
     const { newLocationDescription, newLocationTitle } = this.state;
     const location = { description: newLocationDescription, title: newLocationTitle };
 
-    dispatch(addLocation(location));
+    await dispatch(await addLocation(location));
 
     this.closeModalNewLocation();
+
+    if (allowSelection) {
+      const {
+        directory: { locations },
+      } = getState();
+
+      const addedLocation = locations.find(
+        ({ description, title }) => description === newLocationDescription && title === newLocationTitle
+      );
+
+      if (addedLocation) {
+        // timeout is necessary because of waiting for other modal to close before opening a new one
+        setTimeout(() => this.toggleLocationSelection(addedLocation.id), 500);
+      }
+    }
   }
 
   addSelection() {
