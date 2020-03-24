@@ -148,7 +148,7 @@ android {
         multiDexEnabled true
         resConfigs "de", "en"
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 12
+        versionCode 13
         versionName "1.2.0"
     }
     splits {

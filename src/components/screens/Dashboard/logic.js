@@ -86,13 +86,13 @@ const mapDispatchToProps = (dispatch) => {
 
 const Container = container(Screen, {
   componentDidMount() {
-    const {
-      store: { dispatch, getState },
-    } = this.context;
+    (async () => {
+      const {
+        store: { dispatch, getState },
+      } = this.context;
 
-    dispatch(loadDays());
+      await dispatch(await loadDays());
 
-    setTimeout(() => {
       const {
         dashboard: { days, firstStartHintConfirmed },
       } = getState();
@@ -112,7 +112,7 @@ const Container = container(Screen, {
           dispatch(showFirstStartHint());
         }
       }
-    }, 1000);
+    })();
   },
 });
 

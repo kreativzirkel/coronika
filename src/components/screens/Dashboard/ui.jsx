@@ -157,6 +157,7 @@ const Dashboard = ({ days, firstStartHintVisible, total, closeFirstStartHint, op
             <DayOverview
               isDark
               isTotal
+              isTranslucent={firstStartHintVisible}
               locations={total.locations}
               persons={total.persons}
               timestamp={totalTimespan.valueOf()}
