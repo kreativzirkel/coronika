@@ -28,13 +28,11 @@ const NOTIFICATION_KEY = {
 export const configurePushNotifications = (navigation, requestPermissions = false) => async (dispatch, getState) => {
   PushNotification.configure({
     onNotification: (notification) => {
-      console.log('NOTIFICATION:', notification);
+      // console.log('NOTIFICATION:', notification);
 
       const tag = notification?.data?.tag || notification?.tag || undefined;
 
       if (tag) {
-        console.log('TAG', tag);
-
         switch (tag) {
           case NOTIFICATION_KEY.DIARY:
             navigation.navigate('Dashboard');

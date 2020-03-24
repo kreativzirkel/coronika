@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../../constants';
+import { COLOR_SECONDARY } from '../../../constants';
 import Layout from '../../widgets/Layout';
 import { HeaderBack } from '../../widgets/Header';
 import Toggle from '../../widgets/Toggle';

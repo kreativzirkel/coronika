@@ -1,3 +1,5 @@
+import UilLocationPinAlt from '@iconscout/react-native-unicons/icons/uil-location-pin-alt';
+import UilSmile from '@iconscout/react-native-unicons/icons/uil-smile';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import moment from 'moment';
@@ -5,7 +7,19 @@ import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 
-const DayOverview = ({ isDark, isEmphasized, isTotal, locations, persons, timestamp, today, vw, __ }) => {
+const DayOverview = ({
+  isDark,
+  isEmphasized,
+  isTotal,
+  isTranslucent,
+  locations,
+  persons,
+  showIcons,
+  timestamp,
+  today,
+  vw,
+  __,
+}) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     day: {
@@ -29,6 +43,9 @@ const DayOverview = ({ isDark, isEmphasized, isTotal, locations, persons, timest
       padding: vw(2.5),
       paddingBottom: vw(2),
       paddingTop: vw(2),
+    },
+    dayTranslucent: {
+      opacity: 0.4,
     },
     dayValue: {
       fontFamily: 'JetBrainsMono-Bold',
@@ -73,7 +90,13 @@ const DayOverview = ({ isDark, isEmphasized, isTotal, locations, persons, timest
   const isToday = currentDay.diff(today) === 0;
 
   return (
-    <View style={{ ...styles.day, ...(isDark && styles.dayDark), ...(isEmphasized && styles.dayEmphasized) }}>
+    <View
+      style={{
+        ...styles.day,
+        ...(isDark && styles.dayDark),
+        ...(isEmphasized && styles.dayEmphasized),
+        ...(isTranslucent && styles.dayTranslucent),
+      }}>
       <View style={styles.dayDateWrapper}>
         <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>
           {isToday ? __('today') : moment(timestamp).from(today, isTotal)}
@@ -84,27 +107,35 @@ const DayOverview = ({ isDark, isEmphasized, isTotal, locations, persons, timest
       </View>
       <View style={styles.dayLocationsWrapper}>
         <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('locations')}</Text>
-        <Text
-          style={{
-            ...styles.dayValue,
-            ...styles.dayValueNumber,
-            ...(!locations && styles.dayValueNumberEmpty),
-            ...(isDark && styles.dayValueNumberDark),
-          }}>
-          {locations || '-'}
-        </Text>
+        {showIcons ? (
+          <UilLocationPinAlt color={'#000000'} size={vw(8.2)} style={{ alignSelf: 'flex-end' }} />
+        ) : (
+          <Text
+            style={{
+              ...styles.dayValue,
+              ...styles.dayValueNumber,
+              ...(!locations && styles.dayValueNumberEmpty),
+              ...(isDark && styles.dayValueNumberDark),
+            }}>
+            {locations || '-'}
+          </Text>
+        )}
       </View>
       <View style={styles.dayPersonsWrapper}>
         <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('persons')}</Text>
-        <Text
-          style={{
-            ...styles.dayValue,
-            ...styles.dayValueNumber,
-            ...(!persons && styles.dayValueNumberEmpty),
-            ...(isDark && styles.dayValueNumberDark),
-          }}>
-          {persons || '-'}
-        </Text>
+        {showIcons ? (
+          <UilSmile color={'#000000'} size={vw(8.2)} style={{ alignSelf: 'flex-end' }} />
+        ) : (
+          <Text
+            style={{
+              ...styles.dayValue,
+              ...styles.dayValueNumber,
+              ...(!persons && styles.dayValueNumberEmpty),
+              ...(isDark && styles.dayValueNumberDark),
+            }}>
+            {persons || '-'}
+          </Text>
+        )}
       </View>
     </View>
   );

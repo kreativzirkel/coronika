@@ -47,12 +47,12 @@ msgid "navigation.tips.label"
 msgstr "Tips"
 
 #: src/components/partials/EntriesTabsView.jsx:505
-#: src/components/widgets/DayOverview.jsx:98
+#: src/components/widgets/DayOverview.jsx:125
 msgid "persons"
 msgstr "persons"
 
 #: src/components/partials/EntriesTabsView.jsx:515
-#: src/components/widgets/DayOverview.jsx:86
+#: src/components/widgets/DayOverview.jsx:109
 msgid "locations"
 msgstr "locations"
 
@@ -205,10 +205,18 @@ msgstr "Start now"
 msgid "add-entry-screen.header.headline"
 msgstr "Add entry"
 
-#: src/components/screens/Dashboard/ui.jsx:73
+#: src/components/screens/Dashboard/ui.jsx:116
 #: src/components/screens/Menu.jsx:120
 msgid "menu-screen.header.headline"
 msgstr "Menu"
+
+#: src/components/screens/Dashboard/ui.jsx:126
+msgid "dashboard-screen.first-start.hint"
+msgstr "Click on todays date to enter your first persons or locations."
+
+#: src/components/screens/Dashboard/ui.jsx:128
+msgid "Close"
+msgstr "Close"
 
 #: src/components/screens/Day/ui.jsx:51
 msgid "day-screen.header.headline"
@@ -458,60 +466,60 @@ msgstr ""
 msgid "menu-screen.button.send-feedback"
 msgstr "Send feedback"
 
-#: src/components/screens/Settings/logic.js:147
+#: src/components/screens/Settings/logic.js:145
 msgid "notifications.diary.headline"
 msgstr "📒 Log your contacts"
 
-#: src/components/screens/Settings/logic.js:148
+#: src/components/screens/Settings/logic.js:146
 msgid "notifications.diary.text"
 msgstr ""
 "Log your close contacts and help slowing down the spread of the coronavirus."
 
-#: src/components/screens/Settings/logic.js:160
+#: src/components/screens/Settings/logic.js:158
 msgid "notifications.desinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Clean your smartphone screen"
 
-#: src/components/screens/Settings/logic.js:161
+#: src/components/screens/Settings/logic.js:159
 msgid "notifications.desinfect-smartphone.variant-1.text"
 msgstr "Remove germs by cleaning your screen with a disinfectant wipe."
 
-#: src/components/screens/Settings/logic.js:172
-#: src/components/screens/Settings/logic.js:205
-#: src/components/screens/Settings/logic.js:220
+#: src/components/screens/Settings/logic.js:170
+#: src/components/screens/Settings/logic.js:203
+#: src/components/screens/Settings/logic.js:218
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "If you've been out wash your hands thoroughly."
 
-#: src/components/screens/Settings/logic.js:173
-#: src/components/screens/Settings/logic.js:206
-#: src/components/screens/Settings/logic.js:221
+#: src/components/screens/Settings/logic.js:171
+#: src/components/screens/Settings/logic.js:204
+#: src/components/screens/Settings/logic.js:219
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 Wash your hands"
 
-#: src/components/screens/Settings/logic.js:177
-#: src/components/screens/Settings/logic.js:210
-#: src/components/screens/Settings/logic.js:225
+#: src/components/screens/Settings/logic.js:175
+#: src/components/screens/Settings/logic.js:208
+#: src/components/screens/Settings/logic.js:223
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Washing your hands is one of the simplest ways you can protect yourself and "
 "others from illnesses."
 
-#: src/components/screens/Settings/logic.js:178
-#: src/components/screens/Settings/logic.js:211
-#: src/components/screens/Settings/logic.js:226
+#: src/components/screens/Settings/logic.js:176
+#: src/components/screens/Settings/logic.js:209
+#: src/components/screens/Settings/logic.js:224
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Did you wash your hands?"
 
-#: src/components/screens/Settings/logic.js:182
-#: src/components/screens/Settings/logic.js:215
-#: src/components/screens/Settings/logic.js:230
+#: src/components/screens/Settings/logic.js:180
+#: src/components/screens/Settings/logic.js:213
+#: src/components/screens/Settings/logic.js:228
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Practice mindful hand washing and don't forget to clean your finger tips and "
 "the space between fingers."
 
-#: src/components/screens/Settings/logic.js:183
-#: src/components/screens/Settings/logic.js:216
-#: src/components/screens/Settings/logic.js:231
+#: src/components/screens/Settings/logic.js:181
+#: src/components/screens/Settings/logic.js:214
+#: src/components/screens/Settings/logic.js:229
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 Don't forget your tips!"
 
@@ -809,11 +817,11 @@ msgstr "Skip"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Activate now"
 
-#: src/components/widgets/DayOverview.jsx:79
+#: src/components/widgets/DayOverview.jsx:102
 msgid "today"
 msgstr "today"
 
-#: src/components/widgets/DayOverview.jsx:82
+#: src/components/widgets/DayOverview.jsx:105
 msgid "total"
 msgstr "total"
 
@@ -841,9 +849,6 @@ msgstr "Search"
 #~ msgstr ""
 #~ "All data created and used by Coronika is stored locally and will not be "
 #~ "tracked or passed on."
-
-#~ msgid "dashboard-screen.header.buttons.menu"
-#~ msgstr "Menu"
 
 #~ msgid "contacts-screen.header.headline"
 #~ msgstr "Manage directory"

@@ -4,7 +4,7 @@ import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import { setTimestamp as setTimestampDay } from '../Day/actions';
-import { addDay } from './actions';
+import { addDay, hideFirstStartHint, confirmFirstStartHint, showFirstStartHint } from './actions';
 import Screen from './ui';
 
 const loadDays = () => async (dispatch, getState) => {
@@ -44,11 +44,18 @@ const daysSortingFunction = (a, b) => {
 
 const openDay = (timestamp, navigation) => async (dispatch, getState) => {
   dispatch(setTimestampDay(timestamp));
+  dispatch(hideFirstStartHint());
+  dispatch(confirmFirstStartHint());
 
   navigation.navigate('Day');
 };
 
-const mapStateToProps = ({ dashboard: { days } }) => {
+const closeFirstStartHint = () => async (dispatch, getState) => {
+  dispatch(hideFirstStartHint());
+  dispatch(confirmFirstStartHint());
+};
+
+const mapStateToProps = ({ dashboard: { days, firstStartHintVisible } }) => {
   const daysList = Object.keys(days)
     .sort((a, b) => daysSortingFunction(a, b))
     .map((timestamp) => days[timestamp]);
@@ -65,12 +72,14 @@ const mapStateToProps = ({ dashboard: { days } }) => {
 
   return {
     days: daysList,
+    firstStartHintVisible,
     total,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    closeFirstStartHint: () => dispatch(closeFirstStartHint()),
     openDay: (timestamp, navigation) => dispatch(openDay(timestamp, navigation)),
   };
 };
@@ -78,10 +87,32 @@ const mapDispatchToProps = (dispatch) => {
 const Container = container(Screen, {
   componentDidMount() {
     const {
-      store: { dispatch },
+      store: { dispatch, getState },
     } = this.context;
 
     dispatch(loadDays());
+
+    setTimeout(() => {
+      const {
+        dashboard: { days, firstStartHintConfirmed },
+      } = getState();
+
+      if (!firstStartHintConfirmed) {
+        const total = Object.values(days)
+          .map(({ persons, locations }) => ({ persons: persons.length, locations: locations.length }))
+          .reduce(
+            (accumulator, currentValue) => ({
+              persons: accumulator.persons + currentValue.persons,
+              locations: accumulator.locations + currentValue.locations,
+            }),
+            { persons: 0, locations: 0 }
+          );
+
+        if (total.persons === 0 && total.locations === 0) {
+          dispatch(showFirstStartHint());
+        }
+      }
+    }, 1000);
   },
 });
 

@@ -2,6 +2,8 @@ import cloneDeep from 'lodash/cloneDeep';
 
 const initialState = {
   days: {},
+  firstStartHintConfirmed: false,
+  firstStartHintVisible: false,
 };
 
 export default (state = initialState, action = { type: null }) => {
@@ -82,6 +84,15 @@ export default (state = initialState, action = { type: null }) => {
 
       return { ...state, days };
     }
+
+    case 'CONFIRM_FIRST_START_HINT_DASHBOARD':
+      return { ...state, firstStartHintConfirmed: true };
+
+    case 'SHOW_FIRST_START_HINT_DASHBOARD':
+      return { ...state, firstStartHintVisible: true };
+
+    case 'HIDE_FIRST_START_HINT_DASHBOARD':
+      return { ...state, firstStartHintVisible: false };
 
     default:
       return state;

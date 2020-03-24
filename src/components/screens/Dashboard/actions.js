@@ -21,3 +21,9 @@ export const removeLocationFromDay = (timestamp, locationId, locationDescription
   locationDescription,
   locationTimestamp,
 });
+
+export const confirmFirstStartHint = () => ({ type: 'CONFIRM_FIRST_START_HINT_DASHBOARD' });
+
+export const showFirstStartHint = () => ({ type: 'SHOW_FIRST_START_HINT_DASHBOARD' });
+
+export const hideFirstStartHint = () => ({ type: 'HIDE_FIRST_START_HINT_DASHBOARD' });
