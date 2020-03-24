@@ -14,6 +14,7 @@ const LocationsList = ({
   deleteItem,
   locations,
   selectedLocations,
+  showCounter,
   toggleSelection,
   updateItem,
   vw,
@@ -70,13 +71,22 @@ const LocationsList = ({
     selectButtonInnerSelected: {
       backgroundColor: COLOR_PRIMARY,
     },
+    viewCounter: {
+      marginBottom: -vw(1.2),
+      marginTop: -vw(1.2),
+    },
+    viewCounterText: {
+      color: COLOR_PRIMARY,
+      fontFamily: 'JetBrainsMono-Bold',
+      fontSize: vw(6),
+    },
   });
 
   return locations ? (
     <FlatList
       data={locations}
       keyExtractor={({ description, id, timestamp }) => `location-${id}-${description}-${timestamp}`}
-      renderItem={({ item: { description, id, timestamp, title } }) => {
+      renderItem={({ item: { counter, description, id, timestamp, title } }) => {
         const selectedLocation = selectedLocations.find(({ id: locationId }) => locationId === id);
         const isLocationSelected = allowSelection && selectedLocation;
         let selectedLocationDescription = '';
@@ -107,6 +117,12 @@ const LocationsList = ({
                       <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
                     )}
                   </View>
+                </View>
+              )}
+
+              {showCounter && (
+                <View style={styles.viewCounter}>
+                  <Text style={styles.viewCounterText}>{counter}</Text>
                 </View>
               )}
             </View>

@@ -29,6 +29,7 @@ const AppNavigator = () => (
     <Stack.Screen component={screens.Export} name={'Export'} />
     <Stack.Screen component={screens.Legal} name={'Legal'} />
     <Stack.Screen component={screens.Menu} name={'Menu'} />
+    <Stack.Screen component={screens.Overview} name={'Overview'} />
     <Stack.Screen component={screens.Settings} name={'Settings'} />
     <Stack.Screen component={screens.TipAmIInfected} name={'TipAmIInfected'} />
     <Stack.Screen component={screens.TipAvoidCrowdsOfPeople} name={'TipAvoidCrowdsOfPeople'} />

@@ -15,6 +15,7 @@ const PersonsList = ({
   deleteItem,
   disableDeleteImportedPersons,
   selectedPersons,
+  showCounter,
   toggleSelection,
   updateItem,
   vw,
@@ -61,6 +62,15 @@ const PersonsList = ({
     selectButtonInnerSelected: {
       backgroundColor: COLOR_PRIMARY,
     },
+    viewCounter: {
+      marginBottom: -vw(1.2),
+      marginTop: -vw(1.2),
+    },
+    viewCounterText: {
+      color: COLOR_PRIMARY,
+      fontFamily: 'JetBrainsMono-Bold',
+      fontSize: vw(6),
+    },
   });
 
   const handleOnPressToggleSelection = (id) => {
@@ -73,7 +83,7 @@ const PersonsList = ({
     <FlatList
       data={persons}
       keyExtractor={({ id }) => id}
-      renderItem={({ item: { fullName, id, recordID } }) => {
+      renderItem={({ item: { counter, fullName, id, recordID } }) => {
         const allowPersonDelete = allowDelete && (recordID !== undefined ? !disableDeleteImportedPersons : true);
         const allowPersonUpdate = allowUpdate && recordID === undefined;
         const isPersonSelected = allowSelection && selectedPersons.includes(id);
@@ -103,6 +113,12 @@ const PersonsList = ({
                     <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
                   )}
                 </View>
+              </View>
+            )}
+
+            {showCounter && (
+              <View style={styles.viewCounter}>
+                <Text style={styles.viewCounterText}>{counter}</Text>
               </View>
             )}
           </View>

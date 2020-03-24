@@ -314,6 +314,7 @@ class EntriesTabsView extends React.PureComponent {
       disableDeleteImportedPersons,
       hideCreateButton,
       locations,
+      showCounter,
       vw,
       __,
     } = this.props;
@@ -536,6 +537,7 @@ class EntriesTabsView extends React.PureComponent {
                   deleteItem={(id) => deletePersonItem(id)}
                   disableDeleteImportedPersons={disableDeleteImportedPersons}
                   selectedPersons={selectedEntries.persons}
+                  showCounter={showCounter}
                   toggleSelection={(id) => this.togglePersonSelection(id)}
                   updateItem={(id) => this.editPerson(id)}
                 />
@@ -584,14 +586,19 @@ class EntriesTabsView extends React.PureComponent {
                   deleteItem={(id, description, time) => deleteLocationItem(id, description, time)}
                   locations={filteredLocations}
                   selectedLocations={selectedEntries.locations}
+                  showCounter={showCounter}
                   toggleSelection={(id) => this.toggleLocationSelection(id)}
                   updateItem={(id) => this.editLocation(id)}
                 />
               ) : (
                 <View style={styles.entriesEmptyWrapper}>
-                  <Text style={styles.entriesEmptyText}>
-                    {customLocationsEmptyText ? customLocationsEmptyText : __('entries.locations.list.empty')}
-                  </Text>
+                  {isSearchFilled ? (
+                    <Text style={styles.entriesEmptyText}>{__('entries.search.list.empty')}</Text>
+                  ) : (
+                    <Text style={styles.entriesEmptyText}>
+                      {customLocationsEmptyText ? customLocationsEmptyText : __('entries.locations.list.empty')}
+                    </Text>
+                  )}
                 </View>
               )}
             </Fragment>

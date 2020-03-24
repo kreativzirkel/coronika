@@ -5,7 +5,7 @@ import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native
 import DayOverview from '../../widgets/DayOverview';
 import Layout from '../../widgets/Layout';
 import Header from '../../widgets/Header';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../../constants';
+import { COLOR_PRIMARY, COLOR_SECONDARY, DAYS_OVERVIEW } from '../../../constants';
 
 const Dashboard = ({ days, firstStartHintVisible, total, closeFirstStartHint, openDay, navigation, vw, __ }) => {
   // noinspection JSUnresolvedFunction
@@ -98,7 +98,7 @@ const Dashboard = ({ days, firstStartHintVisible, total, closeFirstStartHint, op
     .seconds(0)
     .milliseconds(0);
 
-  const totalTimespan = moment(today).subtract(21, 'days');
+  const totalTimespan = moment(today).subtract(DAYS_OVERVIEW, 'days');
 
   //const firstStartHintVisible = true;
 
@@ -153,14 +153,16 @@ const Dashboard = ({ days, firstStartHintVisible, total, closeFirstStartHint, op
             />
           )}
 
-          <DayOverview
-            isDark
-            isTotal
-            locations={total.locations}
-            persons={total.persons}
-            timestamp={totalTimespan.valueOf()}
-            today={today}
-          />
+          <TouchableOpacity onPress={() => navigation.navigate('Overview')} style={{ width: '100%' }}>
+            <DayOverview
+              isDark
+              isTotal
+              locations={total.locations}
+              persons={total.persons}
+              timestamp={totalTimespan.valueOf()}
+              today={today}
+            />
+          </TouchableOpacity>
         </View>
       </View>
     </Layout>

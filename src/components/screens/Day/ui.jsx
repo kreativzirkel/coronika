@@ -30,6 +30,7 @@ const Day = ({ locations, persons, timestamp, deleteLocationFromDay, deletePerso
     },
     dayOverviewWrapper: {
       marginBottom: vw(0.7),
+      width: '100%',
     },
     wrapperAddEntry: {
       alignItems: 'center',

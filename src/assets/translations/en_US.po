@@ -46,112 +46,113 @@ msgstr "Share"
 msgid "navigation.tips.label"
 msgstr "Tips"
 
-#: src/components/partials/EntriesTabsView.jsx:505
+#: src/components/partials/EntriesTabsView.jsx:506
 #: src/components/widgets/DayOverview.jsx:125
 msgid "persons"
 msgstr "persons"
 
-#: src/components/partials/EntriesTabsView.jsx:515
+#: src/components/partials/EntriesTabsView.jsx:516
 #: src/components/widgets/DayOverview.jsx:109
 msgid "locations"
 msgstr "locations"
 
-#: src/components/partials/EntriesTabsView.jsx:526
+#: src/components/partials/EntriesTabsView.jsx:527
 msgid "entries.persons.list.new"
 msgstr "New person"
 
-#: src/components/partials/EntriesTabsView.jsx:545
+#: src/components/partials/EntriesTabsView.jsx:547
+#: src/components/partials/EntriesTabsView.jsx:596
 msgid "entries.search.list.empty"
 msgstr "Nothing could be found on your search."
 
-#: src/components/partials/EntriesTabsView.jsx:552
+#: src/components/partials/EntriesTabsView.jsx:554
 msgid "entries.persons.list.empty"
 msgstr ""
 "You have not yet created a person. To get started right away, you can import "
 "persons from your phone book."
 
-#: src/components/partials/EntriesTabsView.jsx:556
+#: src/components/partials/EntriesTabsView.jsx:558
 msgid "entries.persons.list.import.button"
 msgstr "Import now"
 
-#: src/components/partials/EntriesTabsView.jsx:575
+#: src/components/partials/EntriesTabsView.jsx:577
 msgid "entries.locations.list.new"
 msgstr "New location"
 
-#: src/components/partials/EntriesTabsView.jsx:593
+#: src/components/partials/EntriesTabsView.jsx:599
 msgid "entries.locations.list.empty"
 msgstr ""
 "You haven’t created a location yet. Start now and create your first location."
 
-#: src/components/partials/EntriesTabsView.jsx:608
+#: src/components/partials/EntriesTabsView.jsx:615
 msgid "entries.selection.add"
 msgstr "Add selection"
 
-#: src/components/partials/EntriesTabsView.jsx:620
+#: src/components/partials/EntriesTabsView.jsx:627
 msgid "entries.modals.update-person.headline"
 msgstr "Edit person"
 
-#: src/components/partials/EntriesTabsView.jsx:621
+#: src/components/partials/EntriesTabsView.jsx:628
 msgid "entries.modals.new-person.headline"
 msgstr "New person"
 
-#: src/components/partials/EntriesTabsView.jsx:632
+#: src/components/partials/EntriesTabsView.jsx:639
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Name"
 
-#: src/components/partials/EntriesTabsView.jsx:644
+#: src/components/partials/EntriesTabsView.jsx:651
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Phone"
 
-#: src/components/partials/EntriesTabsView.jsx:657
+#: src/components/partials/EntriesTabsView.jsx:664
 msgid "entries.modals.update-person.button"
 msgstr "Save"
 
-#: src/components/partials/EntriesTabsView.jsx:658
+#: src/components/partials/EntriesTabsView.jsx:665
 msgid "entries.modals.new-person.button"
 msgstr "Add"
 
-#: src/components/partials/EntriesTabsView.jsx:670
+#: src/components/partials/EntriesTabsView.jsx:677
 msgid "entries.modals.update-location.headline"
 msgstr "Edit location"
 
-#: src/components/partials/EntriesTabsView.jsx:671
+#: src/components/partials/EntriesTabsView.jsx:678
 msgid "entries.modals.new-location.headline"
 msgstr "New location"
 
-#: src/components/partials/EntriesTabsView.jsx:682
+#: src/components/partials/EntriesTabsView.jsx:689
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Title"
 
-#: src/components/partials/EntriesTabsView.jsx:693
+#: src/components/partials/EntriesTabsView.jsx:700
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Description"
 
-#: src/components/partials/EntriesTabsView.jsx:706
+#: src/components/partials/EntriesTabsView.jsx:713
 msgid "entries.modals.update-location.button"
 msgstr "Save"
 
-#: src/components/partials/EntriesTabsView.jsx:707
+#: src/components/partials/EntriesTabsView.jsx:714
 msgid "entries.modals.new-location.button"
 msgstr "Add"
 
-#: src/components/partials/EntriesTabsView.jsx:717
+#: src/components/partials/EntriesTabsView.jsx:724
 msgid "entries.modals.select-location.headline"
 msgstr "Select location"
 
-#: src/components/partials/EntriesTabsView.jsx:736
+#: src/components/partials/EntriesTabsView.jsx:743
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Description"
 
-#: src/components/partials/EntriesTabsView.jsx:751
+#: src/components/partials/EntriesTabsView.jsx:758
 msgid "Cancel"
 msgstr "Cancel"
 
-#: src/components/partials/EntriesTabsView.jsx:752
+#: src/components/partials/EntriesTabsView.jsx:759
 msgid "Confirm"
 msgstr "Confirm"
 
-#: src/components/partials/EntriesTabsView.jsx:765
+#: src/components/partials/EntriesTabsView.jsx:772
 msgid "entries.modals.select-location.button"
 msgstr "Select"
 
@@ -218,19 +219,19 @@ msgstr "Click on todays date to enter your first persons or locations."
 msgid "Close"
 msgstr "Close"
 
-#: src/components/screens/Day/ui.jsx:51
+#: src/components/screens/Day/ui.jsx:52
 msgid "day-screen.header.headline"
 msgstr "Daily overview"
 
-#: src/components/screens/Day/ui.jsx:58
+#: src/components/screens/Day/ui.jsx:59
 msgid "day-screen.locations.empty"
 msgstr "You haven’t added any locations for this day."
 
-#: src/components/screens/Day/ui.jsx:59
+#: src/components/screens/Day/ui.jsx:60
 msgid "day-screen.persons.empty"
 msgstr "You have not added any persons for this day."
 
-#: src/components/screens/Day/ui.jsx:70
+#: src/components/screens/Day/ui.jsx:71
 msgid "day-screen.entries.add"
 msgstr "Add entry"
 
@@ -465,6 +466,14 @@ msgstr ""
 #: src/components/screens/Menu.jsx:159
 msgid "menu-screen.button.send-feedback"
 msgstr "Send feedback"
+
+#: src/components/screens/Overview/ui.jsx:118
+msgid "overview-screen.export.button"
+msgstr "Export overview"
+
+#: src/components/screens/Overview/ui.jsx:92
+msgid "overview-screen.header.headline"
+msgstr "Overview"
 
 #: src/components/screens/Settings/logic.js:145
 msgid "notifications.diary.headline"
