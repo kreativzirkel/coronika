@@ -27,13 +27,29 @@ const TABS = {
   LOCATIONS: 2,
 };
 
+const setActiveTabAction = (activeTab) => ({ type: 'SET_ACTIVE_TAB_ENTRIES_TABS_VIEW', activeTab });
+
+const initialState = {
+  activeTab: TABS.PERSONS,
+};
+
+export const reducer = (state = initialState, action = { type: null }) => {
+  switch (action.type) {
+    case 'SET_ACTIVE_TAB_ENTRIES_TABS_VIEW':
+      return { ...state, activeTab: action.activeTab };
+
+    default:
+      return state;
+  }
+};
+
 class EntriesTabsView extends React.PureComponent {
   constructor(props) {
     super(props);
 
     this.searchInput = React.createRef();
 
-    const { timestamp } = this.props;
+    const { timestamp, showLocationsOnly, showPersonsOnly } = this.props;
 
     const now = moment();
     const selectLocationTimestamp = moment(timestamp || 0)
@@ -41,8 +57,18 @@ class EntriesTabsView extends React.PureComponent {
       .minutes(now.minutes())
       .valueOf();
 
+    let activeTab = TABS.PERSONS;
+
+    if (showLocationsOnly) {
+      activeTab = TABS.LOCATIONS;
+    }
+
+    if (showPersonsOnly) {
+      activeTab = TABS.PERSONS;
+    }
+
     this.state = {
-      activeTab: TABS.PERSONS,
+      activeTab,
       editPersonId: '',
       editLocationId: '',
       isModalNewPersonVisible: false,
@@ -66,6 +92,26 @@ class EntriesTabsView extends React.PureComponent {
       selectLocationTimestamp,
       selectLocationTitle: '',
     };
+  }
+
+  componentDidMount() {
+    const { showLocationsOnly, showPersonsOnly } = this.props;
+
+    if (!showLocationsOnly && !showPersonsOnly) {
+      const {
+        store: { getState },
+      } = this.context;
+
+      const {
+        entriesTabsView: { activeTab },
+      } = getState();
+
+      this.setActiveTab(activeTab);
+    } else {
+      const { activeTab } = this.state;
+
+      this.setActiveTab(activeTab);
+    }
   }
 
   onPressSearchIcon() {
@@ -162,6 +208,12 @@ class EntriesTabsView extends React.PureComponent {
 
   setActiveTab(activeTab) {
     this.setState({ activeTab });
+
+    const {
+      store: { dispatch },
+    } = this.context;
+
+    dispatch(setActiveTabAction(activeTab));
   }
 
   setNewPersonName(newPersonName) {
@@ -313,13 +365,13 @@ class EntriesTabsView extends React.PureComponent {
       deleteLocationItem,
       disableDeleteImportedPersons,
       hideCreateButton,
+      hideTabBar,
       locations,
       showCounter,
       vw,
       __,
     } = this.props;
     const {
-      activeTab,
       isModalNewPersonVisible,
       isModalNewLocationVisible,
       isModalSelectLocationVisible,
@@ -336,6 +388,14 @@ class EntriesTabsView extends React.PureComponent {
       selectLocationTimestamp,
       selectLocationTitle,
     } = this.state;
+
+    const {
+      store: { getState },
+    } = this.context;
+
+    const {
+      entriesTabsView: { activeTab },
+    } = getState();
 
     const buttonAddNewPersonDisabled = newPersonName.length < 3;
     const buttonAddNewLocationDisabled = newLocationTitle.length < 3;
@@ -497,26 +557,28 @@ class EntriesTabsView extends React.PureComponent {
           setSearchValue={(value) => this.setSearchValue(value)}
         />
 
-        <TabBar>
-          <TabBarItem
-            active={activeTab === TABS.PERSONS}
-            counter={filteredPersons.length}
-            counterVisible={isSearchFilled}
-            icon={UilUser}
-            label={__('persons')}
-            onPress={() => this.setActiveTab(TABS.PERSONS)}
-          />
-          {/* groups are disabled for the moment */}
-          {/* <TabBarItem active={activeTab === TABS.GROUPS} icon={UilUsersAlt} label={__('groups')} onPress={() => this.setActiveTab(TABS.GROUPS)} /> */}
-          <TabBarItem
-            active={activeTab === TABS.LOCATIONS}
-            counter={filteredLocations.length}
-            counterVisible={isSearchFilled}
-            icon={UilLocationPinAlt}
-            label={__('locations')}
-            onPress={() => this.setActiveTab(TABS.LOCATIONS)}
-          />
-        </TabBar>
+        {!hideTabBar && (
+          <TabBar>
+            <TabBarItem
+              active={activeTab === TABS.PERSONS}
+              counter={filteredPersons.length}
+              counterVisible={isSearchFilled}
+              icon={UilUser}
+              label={__('persons')}
+              onPress={() => this.setActiveTab(TABS.PERSONS)}
+            />
+            {/* groups are disabled for the moment */}
+            {/* <TabBarItem active={activeTab === TABS.GROUPS} icon={UilUsersAlt} label={__('groups')} onPress={() => this.setActiveTab(TABS.GROUPS)} /> */}
+            <TabBarItem
+              active={activeTab === TABS.LOCATIONS}
+              counter={filteredLocations.length}
+              counterVisible={isSearchFilled}
+              icon={UilLocationPinAlt}
+              label={__('locations')}
+              onPress={() => this.setActiveTab(TABS.LOCATIONS)}
+            />
+          </TabBar>
+        )}
 
         <View style={styles.tabContentWrapper}>
           {activeTab === TABS.PERSONS && (
