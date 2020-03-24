@@ -13,6 +13,7 @@ const AddEntry = ({ locations, persons, timestamp, addSelection, navigation, vw,
         allowSelection
         addSelection={(selection) => addSelection(selection, navigation)}
         locations={locations}
+        orderByLastUsage
         persons={persons}
         timestamp={timestamp}
       />

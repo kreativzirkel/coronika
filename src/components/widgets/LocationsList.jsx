@@ -1,11 +1,12 @@
 import UilMinus from '@iconscout/react-native-unicons/icons/uil-minus';
 import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
 import moment from 'moment';
-import React from 'react';
+import React, { Fragment } from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withViewportUnits from '../../utils/withViewportUnits';
 import ListItem from './ListItem';
+import ListItemSeparator from './ListItemSeparator';
 
 const LocationsList = ({
   allowDelete,
@@ -13,6 +14,7 @@ const LocationsList = ({
   allowUpdate,
   deleteItem,
   locations,
+  orderByLastUsage,
   selectedLocations,
   showCounter,
   toggleSelection,
@@ -82,19 +84,53 @@ const LocationsList = ({
     },
   });
 
+  if (orderByLastUsage && locations) {
+    locations.sort((a, b) => {
+      const lastUsedA = a.lastUsed || 0;
+      const lastUsedB = b.lastUsed || 0;
+
+      if (lastUsedA > lastUsedB) {
+        return -1;
+      }
+
+      if (lastUsedA < lastUsedB) {
+        return 1;
+      }
+
+      const titleA = a.title.toLowerCase();
+      const titleB = b.title.toLowerCase();
+      if (titleA < titleB) {
+        return -1;
+      }
+      if (titleA > titleB) {
+        return 1;
+      }
+
+      return 0;
+    });
+  }
+
+  let firstItemWithoutLastUsage = true;
+
   return locations ? (
     <FlatList
       data={locations}
       keyExtractor={({ description, id, timestamp }) => `location-${id}-${description}-${timestamp}`}
-      renderItem={({ item: { counter, description, id, timestamp, title } }) => {
+      renderItem={({ index, item: { counter, description, id, lastUsed, timestamp, title } }) => {
         const selectedLocation = selectedLocations.find(({ id: locationId }) => locationId === id);
         const isLocationSelected = allowSelection && selectedLocation;
         let selectedLocationDescription = '';
         let selectedLocationTime = '';
+        let showSeperator = false;
 
         if (isLocationSelected) {
           selectedLocationDescription = selectedLocation.description;
           selectedLocationTime = moment(selectedLocation.timestamp || 0).format('LT');
+        }
+
+        if (!lastUsed && firstItemWithoutLastUsage) {
+          firstItemWithoutLastUsage = false;
+          showSeperator = index > 0;
         }
 
         const LocationItem = () => (
@@ -158,19 +194,22 @@ const LocationsList = ({
         );
 
         return (
-          <ListItem allowDelete={allowDelete} deleteItem={() => deleteItem(id, description, timestamp)}>
-            {allowUpdate ? (
-              <TouchableOpacity onPress={() => updateItem(id)}>
+          <Fragment>
+            {showSeperator && <ListItemSeparator />}
+            <ListItem allowDelete={allowDelete} deleteItem={() => deleteItem(id, description, timestamp)}>
+              {allowUpdate ? (
+                <TouchableOpacity onPress={() => updateItem(id)}>
+                  <LocationItem />
+                </TouchableOpacity>
+              ) : allowSelection ? (
+                <TouchableOpacity onPress={() => toggleSelection(id)}>
+                  <LocationItem />
+                </TouchableOpacity>
+              ) : (
                 <LocationItem />
-              </TouchableOpacity>
-            ) : allowSelection ? (
-              <TouchableOpacity onPress={() => toggleSelection(id)}>
-                <LocationItem />
-              </TouchableOpacity>
-            ) : (
-              <LocationItem />
-            )}
-          </ListItem>
+              )}
+            </ListItem>
+          </Fragment>
         );
       }}
       style={styles.locationsList}

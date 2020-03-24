@@ -398,6 +398,7 @@ class EntriesTabsView extends React.PureComponent {
       hideCreateButton,
       hideTabBar,
       locations,
+      orderByLastUsage,
       showCounter,
       vw,
       __,
@@ -629,6 +630,7 @@ class EntriesTabsView extends React.PureComponent {
                   persons={filteredPersons}
                   deleteItem={(id) => deletePersonItem(id)}
                   disableDeleteImportedPersons={disableDeleteImportedPersons}
+                  orderByLastUsage={orderByLastUsage}
                   selectedPersons={selectedEntries.persons}
                   showCounter={showCounter}
                   toggleSelection={(id) => this.togglePersonSelection(id)}
@@ -678,6 +680,7 @@ class EntriesTabsView extends React.PureComponent {
                   allowUpdate={allowUpdate}
                   deleteItem={(id, description, time) => deleteLocationItem(id, description, time)}
                   locations={filteredLocations}
+                  orderByLastUsage={orderByLastUsage}
                   selectedLocations={selectedEntries.locations}
                   showCounter={showCounter}
                   toggleSelection={(id) => this.toggleLocationSelection(id)}

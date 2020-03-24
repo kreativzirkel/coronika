@@ -19,3 +19,7 @@ export const hideImportPersonsModal = () => ({ type: 'HIDE_IMPORT_PERSONS_MODAL_
 export const enablePersonsImporting = () => ({ type: 'ENABLE_PERSONS_IMPORTING_DIRECTORY' });
 
 export const disablePersonsImporting = () => ({ type: 'DISABLE_PERSONS_IMPORTING_DIRECTORY' });
+
+export const updateLastUsageOfLocation = (id) => ({ type: 'UPDATE_LAST_USAGE_OF_LOCATION_DIRECTORY', id });
+
+export const updateLastUsageOfPerson = (id) => ({ type: 'UPDATE_LAST_USAGE_OF_PERSON_DIRECTORY', id });

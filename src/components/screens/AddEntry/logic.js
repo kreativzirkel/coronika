@@ -3,6 +3,7 @@ import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import { addPersonToDay, addLocationToDay } from '../../screens/Dashboard/actions';
+import { updateLastUsageOfLocation, updateLastUsageOfPerson } from '../Directory/actions';
 import Screen from './ui';
 
 const addSelection = (selection, navigation) => async (dispatch, getState) => {
@@ -16,6 +17,7 @@ const addSelection = (selection, navigation) => async (dispatch, getState) => {
 
     if (person) {
       dispatch(addPersonToDay(timestamp, person));
+      dispatch(updateLastUsageOfPerson(personId));
     }
   });
 
@@ -24,6 +26,7 @@ const addSelection = (selection, navigation) => async (dispatch, getState) => {
     const newLocation = { ...location, description, timestamp: locationTimestamp };
 
     dispatch(addLocationToDay(timestamp, newLocation));
+    dispatch(updateLastUsageOfLocation(locationId));
   });
 
   navigation.navigate('Day');

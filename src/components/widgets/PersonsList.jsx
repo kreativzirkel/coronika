@@ -1,11 +1,12 @@
 import UilMinus from '@iconscout/react-native-unicons/icons/uil-minus';
 import UilMobileAndroid from '@iconscout/react-native-unicons/icons/uil-mobile-android';
 import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
-import React from 'react';
+import React, { Fragment } from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withViewportUnits from '../../utils/withViewportUnits';
 import ListItem from './ListItem';
+import ListItemSeparator from './ListItemSeparator';
 
 const PersonsList = ({
   allowDelete,
@@ -14,6 +15,7 @@ const PersonsList = ({
   persons,
   deleteItem,
   disableDeleteImportedPersons,
+  orderByLastUsage,
   selectedPersons,
   showCounter,
   toggleSelection,
@@ -79,14 +81,50 @@ const PersonsList = ({
     });
   };
 
+  if (orderByLastUsage && persons) {
+    persons.sort((a, b) => {
+      const lastUsedA = a.lastUsed || 0;
+      const lastUsedB = b.lastUsed || 0;
+
+      if (lastUsedA > lastUsedB) {
+        return -1;
+      }
+
+      if (lastUsedA < lastUsedB) {
+        return 1;
+      }
+
+      const fullNameA = a.fullName.toLowerCase();
+      const fullNameB = b.fullName.toLowerCase();
+
+      if (fullNameA < fullNameB) {
+        return -1;
+      }
+
+      if (fullNameA > fullNameB) {
+        return 1;
+      }
+
+      return 0;
+    });
+  }
+
+  let firstItemWithoutLastUsage = true;
+
   return persons ? (
     <FlatList
       data={persons}
       keyExtractor={({ id }) => id}
-      renderItem={({ item: { counter, fullName, id, recordID } }) => {
+      renderItem={({ index, item: { counter, fullName, id, lastUsed, recordID } }) => {
         const allowPersonDelete = allowDelete && (recordID !== undefined ? !disableDeleteImportedPersons : true);
         const allowPersonUpdate = allowUpdate && recordID === undefined;
         const isPersonSelected = allowSelection && selectedPersons.includes(id);
+        let showSeperator = false;
+
+        if (!lastUsed && firstItemWithoutLastUsage) {
+          firstItemWithoutLastUsage = false;
+          showSeperator = index > 0;
+        }
 
         const PersonItem = () => (
           <View style={styles.person}>
@@ -125,19 +163,23 @@ const PersonsList = ({
         );
 
         return (
-          <ListItem allowDelete={allowPersonDelete} deleteItem={() => deleteItem(id)}>
-            {allowPersonUpdate ? (
-              <TouchableOpacity onPress={() => updateItem(id)}>
+          <Fragment>
+            {showSeperator && <ListItemSeparator />}
+
+            <ListItem allowDelete={allowPersonDelete} deleteItem={() => deleteItem(id)}>
+              {allowPersonUpdate ? (
+                <TouchableOpacity onPress={() => updateItem(id)}>
+                  <PersonItem />
+                </TouchableOpacity>
+              ) : allowSelection ? (
+                <TouchableOpacity onPress={() => handleOnPressToggleSelection(id)}>
+                  <PersonItem />
+                </TouchableOpacity>
+              ) : (
                 <PersonItem />
-              </TouchableOpacity>
-            ) : allowSelection ? (
-              <TouchableOpacity onPress={() => handleOnPressToggleSelection(id)}>
-                <PersonItem />
-              </TouchableOpacity>
-            ) : (
-              <PersonItem />
-            )}
-          </ListItem>
+              )}
+            </ListItem>
+          </Fragment>
         );
       }}
       style={styles.personsList}
