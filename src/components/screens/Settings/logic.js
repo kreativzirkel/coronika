@@ -46,6 +46,8 @@ export const configurePushNotifications = (navigation, requestPermissions = fals
         }
       }
 
+      PushNotification.clearAllNotifications();
+
       notification.finish(PushNotificationIOS.FetchResult.NoData);
     },
     popInitialNotification: false,
@@ -152,7 +154,7 @@ const setNotifications = (notifications, __, cb) => {
 
   if (notificationDisinfectSmartphoneEnabled) {
     const tag = NOTIFICATION_KEY.DISINFECT_SMARTPHONE;
-    const timestamp = getDailyNotificationTimestamp(17, 30);
+    const timestamp = getDailyNotificationTimestamp(14, 43);
     PushNotification.localNotificationSchedule({
       ...defaultNotificationOptions,
       title: __('notifications.desinfect-smartphone.variant-1.headline'),

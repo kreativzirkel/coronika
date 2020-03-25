@@ -489,62 +489,62 @@ msgstr "Aperçu des exportations"
 msgid "overview-screen.header.headline"
 msgstr "Vue d'ensemble"
 
-#: src/components/screens/Settings/logic.js:145
+#: src/components/screens/Settings/logic.js:147
 msgid "notifications.diary.headline"
 msgstr "📒 Enregistre vos contacts"
 
-#: src/components/screens/Settings/logic.js:146
+#: src/components/screens/Settings/logic.js:148
 msgid "notifications.diary.text"
 msgstr ""
 "Enregistre tes contacts proches et contribue à ralentir la propagation du "
 "coronavirus."
 
-#: src/components/screens/Settings/logic.js:158
+#: src/components/screens/Settings/logic.js:160
 msgid "notifications.desinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Nettoie l'écran de ton smartphone"
 
-#: src/components/screens/Settings/logic.js:159
+#: src/components/screens/Settings/logic.js:161
 msgid "notifications.desinfect-smartphone.variant-1.text"
 msgstr ""
 "Elimine les germes en nettoyant ton écran avec une lingette désinfectante."
 
-#: src/components/screens/Settings/logic.js:170
-#: src/components/screens/Settings/logic.js:203
-#: src/components/screens/Settings/logic.js:218
+#: src/components/screens/Settings/logic.js:172
+#: src/components/screens/Settings/logic.js:205
+#: src/components/screens/Settings/logic.js:220
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "Si tu es sorti, lave-toi soigneusement les mains."
 
-#: src/components/screens/Settings/logic.js:171
-#: src/components/screens/Settings/logic.js:204
-#: src/components/screens/Settings/logic.js:219
+#: src/components/screens/Settings/logic.js:173
+#: src/components/screens/Settings/logic.js:206
+#: src/components/screens/Settings/logic.js:221
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 Lave-toi les mains"
 
-#: src/components/screens/Settings/logic.js:175
-#: src/components/screens/Settings/logic.js:208
-#: src/components/screens/Settings/logic.js:223
+#: src/components/screens/Settings/logic.js:177
+#: src/components/screens/Settings/logic.js:210
+#: src/components/screens/Settings/logic.js:225
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Se laver les mains est l'un des moyens les plus simples de se protéger et de "
 "protéger les autres contre les maladies."
 
-#: src/components/screens/Settings/logic.js:176
-#: src/components/screens/Settings/logic.js:209
-#: src/components/screens/Settings/logic.js:224
+#: src/components/screens/Settings/logic.js:178
+#: src/components/screens/Settings/logic.js:211
+#: src/components/screens/Settings/logic.js:226
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Tu es-toi lavé les mains ?"
 
-#: src/components/screens/Settings/logic.js:180
-#: src/components/screens/Settings/logic.js:213
-#: src/components/screens/Settings/logic.js:228
+#: src/components/screens/Settings/logic.js:182
+#: src/components/screens/Settings/logic.js:215
+#: src/components/screens/Settings/logic.js:230
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Pratique le lavage des mains en faisant attention et n'oublie pas de "
 "nettoyer le bout de vos doigts et l'espace entre vos doigts."
 
-#: src/components/screens/Settings/logic.js:181
-#: src/components/screens/Settings/logic.js:214
-#: src/components/screens/Settings/logic.js:229
+#: src/components/screens/Settings/logic.js:183
+#: src/components/screens/Settings/logic.js:216
+#: src/components/screens/Settings/logic.js:231
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 N'oublie pas tes conseils !"
 
@@ -668,8 +668,7 @@ msgstr "se laver les mains régulièrement et soigneusement"
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:98
 msgid "tips.avoid-crowds-of-people.list.item-4"
 msgstr ""
-"maintenir une distance d'environ 1 à 2 mètres entre toi et les autres "
-"personnes"
+"maintenir une distance d'environ 2 mètres entre toi et les autres personnes"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:99
 msgid "tips.avoid-crowds-of-people.list.item-5"
@@ -687,8 +686,7 @@ msgstr "Pour prévenir la propagation des virus, veuille faire attention à"
 #: src/components/screens/TipCoughingSneezing.jsx:95
 msgid "tips.coughing-sneezing.list.item-1"
 msgstr ""
-"maintenir une distance d'environ 1 à 2 mètres entre toi et les autres "
-"personnes"
+"maintenir une distance d'environ 2 mètres entre toi et les autres personnes"
 
 #: src/components/screens/TipCoughingSneezing.jsx:96
 msgid "tips.coughing-sneezing.list.item-2"

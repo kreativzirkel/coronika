@@ -1,9 +1,10 @@
 import * as RNLocalize from 'react-native-localize';
 import { BackHandler } from 'react-native';
+import PushNotification from 'react-native-push-notification';
 import SplashScreen from 'react-native-splash-screen';
 import connect from 'react-redux/lib/connect/connect';
 import { SUPPORTED_LANGUAGES } from '../../../constants';
-import withI18n, { changeLanguage } from '../../../i18n';
+import { changeLanguage } from '../../../i18n';
 import { container } from '../../../utils/react';
 import sleep from '../../../utils/sleep';
 import { configurePushNotifications } from '../Settings/logic';
@@ -13,7 +14,7 @@ const mapStateToProps = () => {
   return {};
 };
 
-const mapDispatchToProps = (/* dispatch */) => {
+const mapDispatchToProps = () => {
   return {};
 };
 
@@ -55,6 +56,8 @@ const Container = container(Screen, {
         }
       });
     })();
+
+    PushNotification.clearAllNotifications();
   },
 
   componentWillUnmount() {
@@ -64,6 +67,6 @@ const Container = container(Screen, {
   },
 });
 
-const Splash = withI18n(connect(mapStateToProps, mapDispatchToProps)(Container));
+const Splash = connect(mapStateToProps, mapDispatchToProps)(Container);
 
 export default Splash;

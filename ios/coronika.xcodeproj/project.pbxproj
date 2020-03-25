@@ -21,10 +21,10 @@
 		7E38248B0E5DD439F44FB63E /* libPods-coronika-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E24DCBE8D3A93D9972ECABD /* libPods-coronika-tvOS.a */; };
 		8A11597F6BFC46F2AE246DCA /* JetBrainsMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93633654320429E99519F9C /* JetBrainsMono-Bold.ttf */; };
 		8A4CED2BB5AC22E18AA8E183 /* libPods-coronika.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B22CCCF3C31CE49548DDE7C7 /* libPods-coronika.a */; };
-		D09638AC333EE4FE96CB158B /* libPods-coronika-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5D6547647F8E2E8C2DFB94 /* libPods-coronika-tvOSTests.a */; };
-		E7FEF051A81948CCAFB2799A /* JetBrainsMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B7943E65D4243A8DEDD68 /* JetBrainsMono-Regular.ttf */; };
 		9776B8B6A30A45D9AC8FB068 /* DejaVuSansMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA396BC9B7B44BE8A71E57FB /* DejaVuSansMono-Bold.ttf */; };
+		D09638AC333EE4FE96CB158B /* libPods-coronika-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5D6547647F8E2E8C2DFB94 /* libPods-coronika-tvOSTests.a */; };
 		D934181FDD244AD3B8E41A59 /* DejaVuSansMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 938D1A0B91F543BA8CF2BFA0 /* DejaVuSansMono.ttf */; };
+		E7FEF051A81948CCAFB2799A /* JetBrainsMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B7943E65D4243A8DEDD68 /* JetBrainsMono-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +63,14 @@
 		352B9F0D2419BC96001E8AA4 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		352B9F0E2419BCB1001E8AA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		354DDD9F2428F9A400C791F6 /* coronika.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = coronika.entitlements; path = coronika/coronika.entitlements; sourceTree = "<group>"; };
+		354DDDA0242B8DE100C791F6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		354DDDA1242B8DF100C791F6 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		354DDDA2242B8DF800C791F6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		354DDDA3242B8DFF00C791F6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		354DDDA4242B8E0500C791F6 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		354DDDA5242B8E0F00C791F6 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		354DDDA6242B8E1900C791F6 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		354DDDA7242B8E2000C791F6 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		35786470241826C00040C421 /* coronika-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "coronika-Bridging-Header.h"; sourceTree = "<group>"; };
 		35786471241826C00040C421 /* workaround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workaround.swift; sourceTree = "<group>"; };
 		3928A9DB4895EC607E5A9129 /* Pods-coronika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coronika.debug.xcconfig"; path = "Target Support Files/Pods-coronika/Pods-coronika.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +78,8 @@
 		3EFBA826E4224CE7AE58BAC6 /* Pods-coronika.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coronika.release.xcconfig"; path = "Target Support Files/Pods-coronika/Pods-coronika.release.xcconfig"; sourceTree = "<group>"; };
 		43CE13F3A3123DDE96AB3E6B /* Pods-coronikaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coronikaTests.debug.xcconfig"; path = "Target Support Files/Pods-coronikaTests/Pods-coronikaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		560C856D41D112E95D51B09E /* Pods-coronika-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coronika-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-coronika-tvOSTests/Pods-coronika-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		938D1A0B91F543BA8CF2BFA0 /* DejaVuSansMono.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = DejaVuSansMono.ttf; path = ../src/assets/fonts/DejaVuSansMono.ttf; sourceTree = "<group>"; };
+		AA396BC9B7B44BE8A71E57FB /* DejaVuSansMono-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DejaVuSansMono-Bold.ttf"; path = "../src/assets/fonts/DejaVuSansMono-Bold.ttf"; sourceTree = "<group>"; };
 		B22CCCF3C31CE49548DDE7C7 /* libPods-coronika.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coronika.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C301D9AD108250B98EFBA123 /* Pods-coronikaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coronikaTests.release.xcconfig"; path = "Target Support Files/Pods-coronikaTests/Pods-coronikaTests.release.xcconfig"; sourceTree = "<group>"; };
 		C93633654320429E99519F9C /* JetBrainsMono-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "JetBrainsMono-Bold.ttf"; path = "../src/assets/fonts/JetBrainsMono-Bold.ttf"; sourceTree = "<group>"; };
@@ -79,8 +89,6 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F32A88BDF55331171DCE2250 /* libPods-coronikaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coronikaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA396BC9B7B44BE8A71E57FB /* DejaVuSansMono-Bold.ttf */ = {isa = PBXFileReference; name = "DejaVuSansMono-Bold.ttf"; path = "../src/assets/fonts/DejaVuSansMono-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		938D1A0B91F543BA8CF2BFA0 /* DejaVuSansMono.ttf */ = {isa = PBXFileReference; name = "DejaVuSansMono.ttf"; path = "../src/assets/fonts/DejaVuSansMono.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +353,14 @@
 				Base,
 				de,
 				en,
+				"zh-Hans",
+				ro,
+				es,
+				fr,
+				it,
+				nl,
+				fi,
+				pl,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
@@ -612,6 +628,14 @@
 				13B07FB21A68108700A75B9A /* Base */,
 				352B9F0D2419BC96001E8AA4 /* de */,
 				352B9F0E2419BCB1001E8AA4 /* en */,
+				354DDDA0242B8DE100C791F6 /* zh-Hans */,
+				354DDDA1242B8DF100C791F6 /* ro */,
+				354DDDA2242B8DF800C791F6 /* es */,
+				354DDDA3242B8DFF00C791F6 /* fr */,
+				354DDDA4242B8E0500C791F6 /* it */,
+				354DDDA5242B8E0F00C791F6 /* nl */,
+				354DDDA6242B8E1900C791F6 /* fi */,
+				354DDDA7242B8E2000C791F6 /* pl */,
 			);
 			name = LaunchScreen.xib;
 			path = coronika;
