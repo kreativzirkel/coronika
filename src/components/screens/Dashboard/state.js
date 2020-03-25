@@ -8,15 +8,29 @@ const initialState = {
 
 export default (state = initialState, action = { type: null }) => {
   switch (action.type) {
-    case 'ADD_DAY_DASHBOARD': {
-      const day = {
-        persons: [],
-        locations: [],
-        ...action.day,
-      };
+    case 'INITIALIZE_DAYS_DASHBOARD': {
+      const addTimestamps = action.addTimestamps;
+      const minTimestamp = action.minTimestamp;
 
-      const days = state.days;
-      days[day.timestamp] = day;
+      const daysInitial = cloneDeep(state.days);
+
+      addTimestamps.forEach((timestamp) => {
+        if (!daysInitial[timestamp]) {
+          daysInitial[timestamp] = {
+            persons: [],
+            locations: [],
+            timestamp,
+          };
+        }
+      });
+
+      const days = {};
+
+      Object.keys(daysInitial).forEach((timestamp) => {
+        if (parseInt(timestamp, 10) > minTimestamp) {
+          days[timestamp] = daysInitial[timestamp];
+        }
+      });
 
       return { ...state, days };
     }

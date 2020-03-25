@@ -4,6 +4,7 @@ import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
 import UilTimes from '@iconscout/react-native-unicons/icons/uil-times';
 // import UilUsersAlt from '@iconscout/react-native-unicons/icons/uil-users-alt';
 import UilUser from '@iconscout/react-native-unicons/icons/uil-user';
+import deepEqual from 'fast-deep-equal/es6';
 import moment from 'moment';
 import React, { Fragment } from 'react';
 import { KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
@@ -43,7 +44,7 @@ export const reducer = (state = initialState, action = { type: null }) => {
   }
 };
 
-class EntriesTabsView extends React.PureComponent {
+class EntriesTabsView extends React.Component {
   constructor(props) {
     super(props);
 
@@ -112,6 +113,24 @@ class EntriesTabsView extends React.PureComponent {
 
       this.setActiveTab(activeTab);
     }
+  }
+
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    if (this.state.activeTab !== nextState.activeTab) return true;
+
+    if (this.props.persons !== nextProps.persons) return true;
+
+    if (this.props.locations !== nextProps.locations) return true;
+
+    if (this.props.customPersonsEmptyText !== nextProps.customPersonsEmptyText) return true;
+
+    if (this.props.customLocationsEmptyText !== nextProps.customLocationsEmptyText) return true;
+
+    if (!deepEqual(this.state, nextState)) return true;
+
+    if (!deepEqual(this.props, nextProps)) return true;
+
+    return false;
   }
 
   onPressSearchIcon() {

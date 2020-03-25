@@ -1,6 +1,6 @@
 import UilToggleOff from '@iconscout/react-native-unicons/icons/uil-toggle-off';
 import UilToggleOn from '@iconscout/react-native-unicons/icons/uil-toggle-on';
-import React from 'react';
+import React, { memo } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY } from '../../constants';
 import withViewportUnits from '../../utils/withViewportUnits';
@@ -31,4 +31,4 @@ const Toggle = ({ active, onPress, style, vw }) => {
   );
 };
 
-export default withViewportUnits(Toggle);
+export default memo(withViewportUnits(Toggle));

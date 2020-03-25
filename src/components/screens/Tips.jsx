@@ -1,9 +1,11 @@
 import UilArrowRight from '@iconscout/react-native-unicons/icons/uil-arrow-right';
-import React from 'react';
+import React, { memo } from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../../constants';
-import Header from '../../widgets/Header';
-import Layout from '../../widgets/Layout';
+import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import Header from '../widgets/Header';
+import Layout from '../widgets/Layout';
+import withI18n from '../../i18n';
+import withViewportUnits from '../../utils/withViewportUnits';
 
 const Tips = ({ navigation, vw, __ }) => {
   // noinspection JSUnresolvedFunction
@@ -135,4 +137,4 @@ const Tips = ({ navigation, vw, __ }) => {
   );
 };
 
-export default Tips;
+export default memo(withI18n(withViewportUnits(Tips)));

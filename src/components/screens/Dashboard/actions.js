@@ -1,4 +1,8 @@
-export const addDay = (day) => ({ type: 'ADD_DAY_DASHBOARD', day });
+export const initializeDays = (addTimestamps, minTimestamp) => ({
+  type: 'INITIALIZE_DAYS_DASHBOARD',
+  addTimestamps,
+  minTimestamp,
+});
 
 export const addPersonToDay = (timestamp, person) => ({ type: 'ADD_PERSON_TO_DAY_DASHBOARD', timestamp, person });
 

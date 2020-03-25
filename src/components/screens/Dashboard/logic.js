@@ -1,10 +1,11 @@
 import moment from 'moment';
 import connect from 'react-redux/lib/connect/connect';
+import { DAYS_OVERVIEW } from '../../../constants';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import { setTimestamp as setTimestampDay } from '../Day/actions';
-import { addDay, hideFirstStartHint, confirmFirstStartHint, showFirstStartHint } from './actions';
+import { initializeDays, hideFirstStartHint, confirmFirstStartHint, showFirstStartHint } from './actions';
 import Screen from './ui';
 
 const loadDays = () => async (dispatch, getState) => {
@@ -18,17 +19,27 @@ const loadDays = () => async (dispatch, getState) => {
     .seconds(0)
     .milliseconds(0);
 
+  let differenceToLastDay = 0;
+
+  if (Object.keys(days).length > 0) {
+    const lastDay = Math.max(...Object.keys(days).map((timestamp) => parseInt(timestamp, 10)));
+    differenceToLastDay = moment(lastDay).diff(today);
+  }
+
   // add last 7 days if not already in list
-  const daysInPast = 7;
+  const daysInPast = Math.max(differenceToLastDay, 7);
+  const addTimestamps = [];
 
   for (let i = 0; i < daysInPast; i++) {
     const currentDay = moment(today).subtract(i, 'days');
     const currentDayTimestamp = currentDay.valueOf();
-
-    if (!days[currentDayTimestamp]) {
-      dispatch(addDay({ timestamp: currentDayTimestamp }));
-    }
+    addTimestamps.push(currentDayTimestamp);
   }
+
+  const maxTimestamp = moment(today)
+    .subtract(DAYS_OVERVIEW, 'days')
+    .valueOf();
+  dispatch(initializeDays(addTimestamps, maxTimestamp));
 };
 
 const daysSortingFunction = (a, b) => {

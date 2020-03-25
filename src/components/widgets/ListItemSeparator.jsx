@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { COLOR_SECONDARY } from '../../constants';
 import withViewportUnits from '../../utils/withViewportUnits';
@@ -14,7 +14,7 @@ const ListItemSeparator = ({ vw }) => {
     viewWrapper: {
       alignItems: 'center',
       flex: 1,
-      height: vw(6),
+      height: vw(12.8),
       justifyContent: 'center',
       marginTop: vw(2.3),
       paddingLeft: vw(2.5),
@@ -30,4 +30,4 @@ const ListItemSeparator = ({ vw }) => {
   );
 };
 
-export default withViewportUnits(ListItemSeparator);
+export default memo(withViewportUnits(ListItemSeparator));

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY } from '../../constants';
 import withViewportUnits from '../../utils/withViewportUnits';
@@ -72,4 +72,4 @@ const TabBarItem = withViewportUnits(({ active, counter, counterVisible, icon: I
   );
 });
 
-export default TabBarItem;
+export default memo(TabBarItem);

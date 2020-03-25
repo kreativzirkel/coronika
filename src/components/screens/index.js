@@ -9,7 +9,7 @@ import Menu from './Menu';
 import Overview from './Overview/logic';
 import Settings from './Settings/logic';
 import Splash from './Splash/logic';
-import Tips from './Tips/logic';
+import Tips from './Tips';
 import TipAmIInfected from './TipAmIInfected';
 import TipAvoidCrowdsOfPeople from './TipAvoidCrowdsOfPeople';
 import TipCoughingSneezing from './TipCoughingSneezing';

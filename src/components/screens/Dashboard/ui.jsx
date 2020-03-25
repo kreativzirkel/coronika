@@ -92,6 +92,8 @@ const Dashboard = ({ days, firstStartHintVisible, total, closeFirstStartHint, op
     },
   });
 
+  const listItemHeight = vw(20.9);
+
   const today = moment()
     .hours(0)
     .minutes(0)
@@ -134,9 +136,10 @@ const Dashboard = ({ days, firstStartHintVisible, total, closeFirstStartHint, op
           {days.length > 0 && (
             <FlatList
               data={days}
+              getItemLayout={(data, index) => ({ length: listItemHeight, offset: listItemHeight * index, index })}
               inverted
               keyExtractor={({ timestamp }) => timestamp.toString()}
-              renderItem={({ index, item: { locations, persons, timestamp } }) => (
+              renderItem={({ item: { locations, persons, timestamp } }) => (
                 <TouchableOpacity onPress={() => openDay(timestamp, navigation)}>
                   <DayOverview
                     isEmphasized={timestamp === today.valueOf()}

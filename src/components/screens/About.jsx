@@ -1,6 +1,6 @@
 import { CommonActions } from '@react-navigation/native';
 import LottieView from 'lottie-react-native';
-import React from 'react';
+import React, { memo } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
@@ -129,4 +129,4 @@ const About = ({ navigation, vw, __ }) => {
   );
 };
 
-export default withI18n(withViewportUnits(About));
+export default memo(withI18n(withViewportUnits(About)));

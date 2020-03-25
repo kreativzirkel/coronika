@@ -1,6 +1,6 @@
 import UilSearch from '@iconscout/react-native-unicons/icons/uil-search';
 import UilTimes from '@iconscout/react-native-unicons/icons/uil-times';
-import React from 'react';
+import React, { memo } from 'react';
 import { StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
@@ -66,4 +66,4 @@ const SearchBar = React.forwardRef(({ onPressSearchIcon, searchValue, setSearchV
   );
 });
 
-export default withI18n(withViewportUnits(SearchBar));
+export default memo(withI18n(withViewportUnits(SearchBar)));

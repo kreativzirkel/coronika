@@ -1,6 +1,8 @@
+import formatDistance from 'date-fns/formatDistance';
+import { de as dateFnsDe, enUS as dateFnsEnUs } from 'date-fns/locale';
 import moment from 'moment';
-import de from 'moment/locale/de';
-import en from 'moment/locale/en-gb';
+import momentDe from 'moment/locale/de';
+import momentEnGb from 'moment/locale/en-gb';
 import React from 'react';
 import { ReactReduxContext } from 'react-redux';
 import de_DE from './assets/translations/de_DE';
@@ -55,10 +57,10 @@ export const reducer = (state = initialState, action = { type: null }) => {
 
         switch (language) {
           case 'de':
-            moment.updateLocale('de', de);
+            moment.updateLocale('de', momentDe);
             break;
           default:
-            moment.updateLocale('en', en);
+            moment.updateLocale('en', momentEnGb);
         }
 
         return { ...state, currentLanguage: action.language, messages };
@@ -104,6 +106,21 @@ const withI18n = (WrappedComponent) => {
       if (this.unsubscribeStore) this.unsubscribeStore();
     }
 
+    formatTimeDistance(start, end) {
+      const { currentLanguage } = this.state;
+      let locale;
+
+      switch (currentLanguage) {
+        case 'de':
+          locale = dateFnsDe;
+          break;
+        default:
+          locale = dateFnsEnUs;
+      }
+
+      return formatDistance(start, end, { locale });
+    }
+
     __(text) {
       const { currentLanguage, messages } = this.state;
 
@@ -120,7 +137,12 @@ const withI18n = (WrappedComponent) => {
 
       return (
         /* eslint-disable react/jsx-props-no-spreading */
-        <WrappedComponent {...{ ...props, currentLanguage }} ref={forwardedRef} __={(text) => this.__(text)} />
+        <WrappedComponent
+          {...{ ...props, currentLanguage }}
+          formatTimeDistance={(start, end) => this.formatTimeDistance(start, end)}
+          ref={forwardedRef}
+          __={(text) => this.__(text)}
+        />
         /* eslint-enable react/jsx-props-no-spreading */
       );
     }

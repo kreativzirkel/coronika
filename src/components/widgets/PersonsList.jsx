@@ -1,12 +1,152 @@
 import UilMinus from '@iconscout/react-native-unicons/icons/uil-minus';
 import UilMobileAndroid from '@iconscout/react-native-unicons/icons/uil-mobile-android';
 import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
-import React, { Fragment } from 'react';
+import cloneDeep from 'lodash/cloneDeep';
+import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withViewportUnits from '../../utils/withViewportUnits';
 import ListItem from './ListItem';
 import ListItemSeparator from './ListItemSeparator';
+
+class PersonListItemClass extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    if (this.props.isPersonSelected !== nextProps.isPersonSelected) return true;
+
+    if (this.props.fullName !== nextProps.fullName) return true;
+
+    return false;
+  }
+
+  render() {
+    const {
+      allowPersonDelete,
+      allowPersonUpdate,
+      allowSelection,
+      counter,
+      deleteItem,
+      fullName,
+      id,
+      isPersonSelected,
+      recordID,
+      showCounter,
+      toggleSelection,
+      updateItem,
+      vw,
+    } = this.props;
+
+    const styles = StyleSheet.create({
+      person: {
+        backgroundColor: COLOR_SECONDARY,
+        borderRadius: vw(2.3),
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginLeft: vw(2.5),
+        marginRight: vw(2.5),
+        marginTop: vw(2.3),
+        padding: vw(3),
+        paddingBottom: vw(3.8),
+        paddingTop: vw(3.8),
+      },
+      personText: {
+        fontFamily: 'JetBrainsMono-Regular',
+        fontSize: vw(4.2),
+      },
+      personTextIconImported: {
+        marginLeft: vw(1.5),
+      },
+      personTextWrapper: {
+        alignItems: 'center',
+        flexDirection: 'row',
+      },
+      selectButton: {
+        alignItems: 'center',
+        flexDirection: 'row',
+        marginBottom: -vw(1.25),
+        marginTop: -vw(1.25),
+      },
+      selectButtonInner: {
+        borderRadius: 50,
+      },
+      selectButtonInnerSelected: {
+        backgroundColor: COLOR_PRIMARY,
+      },
+      viewCounter: {
+        marginBottom: -vw(1.2),
+        marginTop: -vw(1.2),
+      },
+      viewCounterText: {
+        color: COLOR_PRIMARY,
+        fontFamily: 'JetBrainsMono-Bold',
+        fontSize: vw(6),
+      },
+    });
+
+    const handleOnPressToggleSelection = (personId) => {
+      requestAnimationFrame(() => {
+        toggleSelection(personId);
+      });
+    };
+
+    const PersonItem = () => (
+      <View style={styles.person}>
+        <View style={styles.personTextWrapper}>
+          <Text style={styles.personText}>{fullName}</Text>
+
+          {recordID !== undefined && (
+            <View style={styles.personTextIconImported}>
+              <UilMobileAndroid color={'#b0b0b0'} size={vw(5)} />
+            </View>
+          )}
+        </View>
+
+        {allowSelection && (
+          <View style={styles.selectButton}>
+            <View
+              style={{
+                ...styles.selectButtonInner,
+                ...(isPersonSelected && styles.selectButtonInnerSelected),
+              }}>
+              {isPersonSelected ? (
+                <UilMinus size={vw(7)} color={'#ffffff'} />
+              ) : (
+                <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
+              )}
+            </View>
+          </View>
+        )}
+
+        {showCounter && (
+          <View style={styles.viewCounter}>
+            <Text style={styles.viewCounterText}>{counter}</Text>
+          </View>
+        )}
+      </View>
+    );
+
+    return (
+      <ListItem allowDelete={allowPersonDelete} deleteItem={() => deleteItem(id)}>
+        {allowPersonUpdate ? (
+          <TouchableOpacity onPress={() => updateItem(id)}>
+            <PersonItem />
+          </TouchableOpacity>
+        ) : allowSelection ? (
+          <TouchableOpacity onPress={() => handleOnPressToggleSelection(id)}>
+            <PersonItem />
+          </TouchableOpacity>
+        ) : (
+          <PersonItem />
+        )}
+      </ListItem>
+    );
+  }
+}
+
+const PersonsListItem = withViewportUnits(PersonListItemClass);
 
 const PersonsList = ({
   allowDelete,
@@ -24,62 +164,14 @@ const PersonsList = ({
 }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
-    person: {
-      backgroundColor: COLOR_SECONDARY,
-      borderRadius: vw(2.3),
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginLeft: vw(2.5),
-      marginRight: vw(2.5),
-      marginTop: vw(2.3),
-      padding: vw(3),
-      paddingBottom: vw(3.8),
-      paddingTop: vw(3.8),
-    },
-    personText: {
-      fontFamily: 'JetBrainsMono-Regular',
-      fontSize: vw(4.2),
-    },
-    personTextIconImported: {
-      marginLeft: vw(1.5),
-    },
-    personTextWrapper: {
-      alignItems: 'center',
-      flexDirection: 'row',
-    },
     personsList: {
       flex: 1,
       paddingBottom: vw(2.3),
       width: '100%',
     },
-    selectButton: {
-      alignItems: 'center',
-      flexDirection: 'row',
-      marginBottom: -vw(1.25),
-      marginTop: -vw(1.25),
-    },
-    selectButtonInner: {
-      borderRadius: 50,
-    },
-    selectButtonInnerSelected: {
-      backgroundColor: COLOR_PRIMARY,
-    },
-    viewCounter: {
-      marginBottom: -vw(1.2),
-      marginTop: -vw(1.2),
-    },
-    viewCounterText: {
-      color: COLOR_PRIMARY,
-      fontFamily: 'JetBrainsMono-Bold',
-      fontSize: vw(6),
-    },
   });
 
-  const handleOnPressToggleSelection = (id) => {
-    requestAnimationFrame(() => {
-      toggleSelection(id);
-    });
-  };
+  const listItemHeight = vw(15.4);
 
   if (orderByLastUsage && persons) {
     persons.sort((a, b) => {
@@ -107,79 +199,51 @@ const PersonsList = ({
 
       return 0;
     });
-  }
 
-  let firstItemWithoutLastUsage = true;
+    if (!persons.find(({ separatorItem }) => separatorItem === true)) {
+      persons = cloneDeep(persons);
+      for (const i in persons) {
+        if (Object.prototype.hasOwnProperty.call(persons, i)) {
+          const p = persons[i];
+          const index = parseInt(i, 10);
+
+          if (index === 0 && !p.lastUsed) break;
+
+          if (index > 0 && !p.lastUsed) {
+            persons.splice(i, 0, { fullName: '', id: `persons-separator-${i}`, separatorItem: true });
+            break;
+          }
+        }
+      }
+    }
+  }
 
   return persons ? (
     <FlatList
       data={persons}
+      getItemLayout={(data, index) => ({ length: listItemHeight, offset: listItemHeight * index, index })}
+      initialNumToRender={50}
       keyExtractor={({ id }) => id}
-      renderItem={({ index, item: { counter, fullName, id, lastUsed, recordID } }) => {
-        const allowPersonDelete = allowDelete && (recordID !== undefined ? !disableDeleteImportedPersons : true);
-        const allowPersonUpdate = allowUpdate && recordID === undefined;
-        const isPersonSelected = allowSelection && selectedPersons.includes(id);
-        let showSeperator = false;
-
-        if (!lastUsed && firstItemWithoutLastUsage) {
-          firstItemWithoutLastUsage = false;
-          showSeperator = index > 0;
+      renderItem={({ item: { counter, fullName, id, recordID, separatorItem } }) => {
+        if (separatorItem) {
+          return <ListItemSeparator />;
         }
 
-        const PersonItem = () => (
-          <View style={styles.person}>
-            <View style={styles.personTextWrapper}>
-              <Text style={styles.personText}>{fullName}</Text>
-
-              {recordID !== undefined && (
-                <View style={styles.personTextIconImported}>
-                  <UilMobileAndroid color={'#b0b0b0'} size={vw(5)} />
-                </View>
-              )}
-            </View>
-
-            {allowSelection && (
-              <View style={styles.selectButton}>
-                <View
-                  style={{
-                    ...styles.selectButtonInner,
-                    ...(isPersonSelected && styles.selectButtonInnerSelected),
-                  }}>
-                  {isPersonSelected ? (
-                    <UilMinus size={vw(7)} color={'#ffffff'} />
-                  ) : (
-                    <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
-                  )}
-                </View>
-              </View>
-            )}
-
-            {showCounter && (
-              <View style={styles.viewCounter}>
-                <Text style={styles.viewCounterText}>{counter}</Text>
-              </View>
-            )}
-          </View>
-        );
-
         return (
-          <Fragment>
-            {showSeperator && <ListItemSeparator />}
-
-            <ListItem allowDelete={allowPersonDelete} deleteItem={() => deleteItem(id)}>
-              {allowPersonUpdate ? (
-                <TouchableOpacity onPress={() => updateItem(id)}>
-                  <PersonItem />
-                </TouchableOpacity>
-              ) : allowSelection ? (
-                <TouchableOpacity onPress={() => handleOnPressToggleSelection(id)}>
-                  <PersonItem />
-                </TouchableOpacity>
-              ) : (
-                <PersonItem />
-              )}
-            </ListItem>
-          </Fragment>
+          <PersonsListItem
+            allowPersonDelete={allowDelete && (recordID !== undefined ? !disableDeleteImportedPersons : true)}
+            allowPersonUpdate={allowUpdate && recordID === undefined}
+            allowSelection={allowSelection}
+            counter={counter}
+            deleteItem={() => deleteItem(id)}
+            fullName={fullName}
+            id={id}
+            isPersonSelected={allowSelection && selectedPersons.includes(id)}
+            recordID={recordID}
+            showCounter={showCounter}
+            toggleSelection={() => toggleSelection(id)}
+            updateItem={() => updateItem(id)}
+          />
         );
       }}
       style={styles.personsList}

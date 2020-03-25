@@ -1,6 +1,6 @@
 import UilLocationPinAlt from '@iconscout/react-native-unicons/icons/uil-location-pin-alt';
 import UilSmile from '@iconscout/react-native-unicons/icons/uil-smile';
-import React from 'react';
+import React, { memo } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import moment from 'moment';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
@@ -17,6 +17,7 @@ const DayOverview = ({
   showIcons,
   timestamp,
   today,
+  formatTimeDistance,
   vw,
   __,
 }) => {
@@ -98,9 +99,22 @@ const DayOverview = ({
         ...(isTranslucent && styles.dayTranslucent),
       }}>
       <View style={styles.dayDateWrapper}>
-        <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>
-          {isToday ? __('today') : moment(timestamp).from(today, isTotal)}
-        </Text>
+        {isTotal && (
+          <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>
+            {formatTimeDistance(
+              moment(timestamp)
+                .add(1, 'minute')
+                .valueOf(),
+              today.valueOf()
+            )}
+          </Text>
+        )}
+
+        {!isTotal && (
+          <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>
+            {isToday ? __('today') : moment(timestamp).from(today)}
+          </Text>
+        )}
         <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark) }}>
           {isTotal ? __('total') : moment(timestamp).format('dd DD. MMM')}
         </Text>
@@ -141,4 +155,4 @@ const DayOverview = ({
   );
 };
 
-export default withI18n(withViewportUnits(DayOverview));
+export default memo(withI18n(withViewportUnits(DayOverview)));

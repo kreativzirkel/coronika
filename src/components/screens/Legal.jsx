@@ -35,8 +35,8 @@ class Legal extends React.PureComponent {
     const styles = StyleSheet.create({
       contentText: {
         fontFamily: 'JetBrainsMono-Regular',
-        fontSize: vw(4.5),
-        lineHeight: vw(7),
+        fontSize: vw(4),
+        lineHeight: vw(6),
       },
       contentTextHeadline: {
         fontFamily: 'JetBrainsMono-Bold',

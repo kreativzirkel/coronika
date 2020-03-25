@@ -1,5 +1,5 @@
 import moment from 'moment';
-import React from 'react';
+import React, { memo } from 'react';
 import { Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
@@ -146,4 +146,4 @@ const TipWashingHands = ({ navigation, vw, __ }) => {
   );
 };
 
-export default withI18n(withViewportUnits(TipWashingHands));
+export default memo(withI18n(withViewportUnits(TipWashingHands)));

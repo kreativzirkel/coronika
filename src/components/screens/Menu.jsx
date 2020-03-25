@@ -1,6 +1,6 @@
 import UilArrowRight from '@iconscout/react-native-unicons/icons/uil-arrow-right';
 import UilHeart from '@iconscout/react-native-unicons/icons/uil-heart';
-import React from 'react';
+import React, { memo } from 'react';
 import { Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { version } from '../../config';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
@@ -164,4 +164,4 @@ const Menu = ({ navigation, vw, __ }) => {
   );
 };
 
-export default withI18n(withViewportUnits(Menu));
+export default memo(withI18n(withViewportUnits(Menu)));
