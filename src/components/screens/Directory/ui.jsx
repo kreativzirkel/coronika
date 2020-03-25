@@ -44,6 +44,10 @@ const Directory = ({
       fontSize: vw(5),
       marginLeft: 'auto',
       textTransform: 'lowercase',
+      textAlign: 'right',
+    },
+    headerHeadlineWrapper: {
+      flex: 1,
     },
     modal: {
       justifyContent: 'flex-end',
@@ -125,7 +129,9 @@ const Directory = ({
               <Text style={styles.headerButtonText}>{__('directory-screen.header.button.import')}</Text>
             </TouchableOpacity>
 
-            <Text style={styles.headerHeadline}>{__('directory-screen.header.headline')}</Text>
+            <View style={styles.headerHeadlineWrapper}>
+              <Text style={styles.headerHeadline}>{__('directory-screen.header.headline')}</Text>
+            </View>
           </View>
         </Header>
 

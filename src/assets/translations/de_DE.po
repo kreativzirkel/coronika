@@ -207,17 +207,17 @@ msgstr "Jetzt anfangen"
 msgid "add-entry-screen.header.headline"
 msgstr "Eintrag hinzufügen"
 
-#: src/components/screens/Dashboard/ui.jsx:118
+#: src/components/screens/Dashboard/ui.jsx:116
 #: src/components/screens/Menu.jsx:120
 msgid "menu-screen.header.headline"
 msgstr "Menü"
 
-#: src/components/screens/Dashboard/ui.jsx:128
+#: src/components/screens/Dashboard/ui.jsx:126
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Klicke auf den heutigen Tag, um deine ersten Personen oder Orte einzutragen."
 
-#: src/components/screens/Dashboard/ui.jsx:130
+#: src/components/screens/Dashboard/ui.jsx:128
 msgid "Close"
 msgstr "Schließen"
 
@@ -237,30 +237,30 @@ msgstr "Du hast für diesen Tag noch keine Personen hinzugefügt."
 msgid "day-screen.entries.add"
 msgstr "Eintrag hinzufügen"
 
-#: src/components/screens/Directory/ui.jsx:125
+#: src/components/screens/Directory/ui.jsx:129
 msgid "directory-screen.header.button.import"
 msgstr "Import"
 
-#: src/components/screens/Directory/ui.jsx:128
+#: src/components/screens/Directory/ui.jsx:133
 msgid "directory-screen.header.headline"
 msgstr "Verzeichnis verwalten"
 
-#: src/components/screens/Directory/ui.jsx:145
+#: src/components/screens/Directory/ui.jsx:151
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Personen importieren"
 
-#: src/components/screens/Directory/ui.jsx:151
+#: src/components/screens/Directory/ui.jsx:157
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Importiere Personen von Telefonbuch, damit du direkt loslegen kannst. Alle "
 "deine Personen werden lokal gespeichert. Keine Daten werden getrackt oder "
 "weitergegeben."
 
-#: src/components/screens/Directory/ui.jsx:157
+#: src/components/screens/Directory/ui.jsx:163
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Importiere..."
 
-#: src/components/screens/Directory/ui.jsx:158
+#: src/components/screens/Directory/ui.jsx:164
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Jetzt importieren"
 

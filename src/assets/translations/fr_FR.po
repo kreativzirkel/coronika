@@ -22,447 +22,563 @@ msgstr ""
 #: src/components/App/ui.jsx:144
 msgid "app.share.message"
 msgstr ""
+"Ne laisse pas le coronavirus te faire basculer dans la panique. Reste "
+"informé et aide ton entourage en... \n"
+"✅...enregistrant tes contacts et les endroits où vous vous êtes rencontrés "
+"ou avez séjourné \n"
+"✅...suivant des conseils d'hygiène \n"
+"✅...consommant des sources d'information fiables \n"
+"Reste en bonne santé et n'oublie pas de te laver les mains régulièrement ! ✋"
+"😉 https://coronika.app/"
 
 #: src/components/App/ui.jsx:75
 msgid "navigation.directory.label"
-msgstr ""
+msgstr "Répertoire"
 
 #: src/components/App/ui.jsx:78
 msgid "navigation.dashboard.label"
-msgstr ""
+msgstr "Journal intime"
 
 #: src/components/App/ui.jsx:81
 msgid "navigation.share.label"
-msgstr ""
+msgstr "Partager"
 
 #: src/components/App/ui.jsx:84
 msgid "navigation.tips.label"
-msgstr ""
+msgstr "Conseils"
 
 #: src/components/partials/EntriesTabsView.jsx:618
 #: src/components/widgets/DayOverview.jsx:139
 msgid "persons"
-msgstr ""
+msgstr "personnes"
 
 #: src/components/partials/EntriesTabsView.jsx:628
 #: src/components/widgets/DayOverview.jsx:123
 msgid "locations"
-msgstr ""
+msgstr "lieux"
 
 #: src/components/partials/EntriesTabsView.jsx:640
 msgid "entries.persons.list.new"
-msgstr ""
+msgstr "Nouvelle personne"
 
 #: src/components/partials/EntriesTabsView.jsx:661
 #: src/components/partials/EntriesTabsView.jsx:711
 msgid "entries.search.list.empty"
-msgstr ""
+msgstr "Rien n'a pu être trouvé lors de ta recherche."
 
 #: src/components/partials/EntriesTabsView.jsx:668
 msgid "entries.persons.list.empty"
 msgstr ""
+"Tu n'as pas encore créé une personne. Pour commencer tout de suite, tu peut "
+"importer des personnes à partir de ton annuaire téléphonique."
 
 #: src/components/partials/EntriesTabsView.jsx:672
 msgid "entries.persons.list.import.button"
-msgstr ""
+msgstr "Importer maintenant"
 
 #: src/components/partials/EntriesTabsView.jsx:691
 msgid "entries.locations.list.new"
-msgstr ""
+msgstr "Nouvelle localisation"
 
 #: src/components/partials/EntriesTabsView.jsx:714
 msgid "entries.locations.list.empty"
 msgstr ""
+"Tu n'as pas encore créé de lieu. Commence maintenant et crée ton premier "
+"lieu."
 
 #: src/components/partials/EntriesTabsView.jsx:730
 msgid "entries.selection.add"
-msgstr ""
+msgstr "Ajouter une sélection"
 
 #: src/components/partials/EntriesTabsView.jsx:742
 msgid "entries.modals.update-person.headline"
-msgstr ""
+msgstr "modifier la personne"
 
 #: src/components/partials/EntriesTabsView.jsx:743
 msgid "entries.modals.new-person.headline"
-msgstr ""
+msgstr "Nouvelle personne"
 
 #: src/components/partials/EntriesTabsView.jsx:754
 msgid "entries.modals.new-person.placeholder.name"
-msgstr ""
+msgstr "Nom"
 
 #: src/components/partials/EntriesTabsView.jsx:766
 msgid "entries.modals.new-person.placeholder.phone-number"
-msgstr ""
+msgstr "Téléphone"
 
 #: src/components/partials/EntriesTabsView.jsx:779
 msgid "entries.modals.update-person.button"
-msgstr ""
+msgstr "Sauvegarder"
 
 #: src/components/partials/EntriesTabsView.jsx:780
 msgid "entries.modals.new-person.button"
-msgstr ""
+msgstr "Ajouter"
 
 #: src/components/partials/EntriesTabsView.jsx:792
 msgid "entries.modals.update-location.headline"
-msgstr ""
+msgstr "Modifier le lieu"
 
 #: src/components/partials/EntriesTabsView.jsx:793
 msgid "entries.modals.new-location.headline"
-msgstr ""
+msgstr "Nouvelle localisation"
 
 #: src/components/partials/EntriesTabsView.jsx:804
 msgid "entries.modals.new-location.placeholder.title"
-msgstr ""
+msgstr "Titre"
 
 #: src/components/partials/EntriesTabsView.jsx:815
 msgid "entries.modals.new-location.placeholder.description"
-msgstr ""
+msgstr "Description"
 
 #: src/components/partials/EntriesTabsView.jsx:828
 msgid "entries.modals.update-location.button"
-msgstr ""
+msgstr "Sauvegarder"
 
 #: src/components/partials/EntriesTabsView.jsx:829
 msgid "entries.modals.new-location.button"
-msgstr ""
+msgstr "Ajouter"
 
 #: src/components/partials/EntriesTabsView.jsx:839
 msgid "entries.modals.select-location.headline"
-msgstr ""
+msgstr "Sélectionne un lieu"
 
 #: src/components/partials/EntriesTabsView.jsx:858
 msgid "entries.modals.select-location.placeholder.description"
-msgstr ""
+msgstr "Description"
 
 #: src/components/partials/EntriesTabsView.jsx:873
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: src/components/partials/EntriesTabsView.jsx:874
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmer"
 
 #: src/components/partials/EntriesTabsView.jsx:887
 msgid "entries.modals.select-location.button"
-msgstr ""
+msgstr "Sélectionne"
 
 #: src/components/screens/About.jsx:105 src/components/screens/Menu.jsx:101
 msgid "about-screen.header.headline"
-msgstr ""
+msgstr "À propos de Coronika"
 
 #: src/components/screens/About.jsx:18 src/components/screens/Welcome/ui.jsx:14
 msgid "welcome-screen.slides.intro.headline"
-msgstr ""
+msgstr "Lutter ensemble contre le corona-virus"
 
 #: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:15
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
+"Enregistre les personnes et les lieux, reconstitue les voies d'infection et "
+"contribue à arrêter la propagation."
 
 #: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:16
 msgid "welcome-screen.slides.intro.button"
-msgstr ""
+msgstr "Super, je veux aussi aider"
 
 #: src/components/screens/About.jsx:25 src/components/screens/Welcome/ui.jsx:21
 msgid "welcome-screen.slides.how-to.headline"
-msgstr ""
+msgstr "Un journal intime pour notre santé collective"
 
 #: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:22
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
+"Note les personnes que tu as rencontrées, les lieux publics que tu as "
+"visités et contribue à la santé de tous."
 
 #: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:23
 msgid "welcome-screen.slides.how-to.button"
-msgstr ""
+msgstr "D'accord"
 
 #: src/components/screens/About.jsx:32 src/components/screens/Welcome/ui.jsx:37
 msgid "welcome-screen.slides.local-data.headline"
-msgstr ""
+msgstr "Tes données sont les tiens"
 
 #: src/components/screens/About.jsx:33 src/components/screens/Welcome/ui.jsx:38
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
+"Toutes les données créées et utilisées par Coronika sont stockées localement "
+"et ne seront ni suivies ni transmises."
 
 #: src/components/screens/About.jsx:34 src/components/screens/Welcome/ui.jsx:39
 msgid "welcome-screen.slides.local-data.button"
-msgstr ""
+msgstr "Commencer maintenant"
 
 #: src/components/screens/AddEntry/ui.jsx:10
 msgid "add-entry-screen.header.headline"
-msgstr ""
+msgstr "Ajouter une entrée"
 
-#: src/components/screens/Dashboard/ui.jsx:118
+#: src/components/screens/Dashboard/ui.jsx:116
 #: src/components/screens/Menu.jsx:120
 msgid "menu-screen.header.headline"
-msgstr ""
+msgstr "Menu"
 
-#: src/components/screens/Dashboard/ui.jsx:128
+#: src/components/screens/Dashboard/ui.jsx:126
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
+"Cliquer sur la date d'aujourd'hui pour entrer tes premières personnes ou "
+"lieux."
 
-#: src/components/screens/Dashboard/ui.jsx:130
+#: src/components/screens/Dashboard/ui.jsx:128
 msgid "Close"
-msgstr ""
+msgstr "Fermer"
 
 #: src/components/screens/Day/ui.jsx:52
 msgid "day-screen.header.headline"
-msgstr ""
+msgstr "Aperçu quotidien"
 
 #: src/components/screens/Day/ui.jsx:59
 msgid "day-screen.locations.empty"
-msgstr ""
+msgstr "Tu n'as pas ajouté de lieux pour cette journée."
 
 #: src/components/screens/Day/ui.jsx:60
 msgid "day-screen.persons.empty"
-msgstr ""
+msgstr "Tu n'as ajouté aucune personne pour cette journée."
 
 #: src/components/screens/Day/ui.jsx:71
 msgid "day-screen.entries.add"
-msgstr ""
+msgstr "Ajouter une entrée"
 
-#: src/components/screens/Directory/ui.jsx:125
+#: src/components/screens/Directory/ui.jsx:129
 msgid "directory-screen.header.button.import"
-msgstr ""
+msgstr "Importation"
 
-#: src/components/screens/Directory/ui.jsx:128
+#: src/components/screens/Directory/ui.jsx:133
 msgid "directory-screen.header.headline"
-msgstr ""
-
-#: src/components/screens/Directory/ui.jsx:145
-msgid "directory-screen.modals.import-persons.headline"
-msgstr ""
+msgstr "Gérer le répertoire"
 
 #: src/components/screens/Directory/ui.jsx:151
-msgid "directory-screen.modals.import-persons.text"
-msgstr ""
+msgid "directory-screen.modals.import-persons.headline"
+msgstr "Importation de personnes"
 
 #: src/components/screens/Directory/ui.jsx:157
-msgid "directory-screen.modals.import-persons.button.importing"
+msgid "directory-screen.modals.import-persons.text"
 msgstr ""
+"Importe des personnes de ton annuaire téléphonique afin de pouvoir commencer "
+"immédiatement. Toutes tes personnes sont stockées sur place. Aucune donnée "
+"n'est tracée ou partagée."
 
-#: src/components/screens/Directory/ui.jsx:158
+#: src/components/screens/Directory/ui.jsx:163
+msgid "directory-screen.modals.import-persons.button.importing"
+msgstr "Importer..."
+
+#: src/components/screens/Directory/ui.jsx:164
 msgid "directory-screen.modals.import-persons.button.default"
-msgstr ""
+msgstr "Importer maintenant"
 
 #: src/components/screens/Export/ui.jsx:50
 msgid "export-screen.header.headline"
-msgstr ""
+msgstr "Exporter"
 
 #: src/components/screens/Export/ui.jsx:54
 msgid "export-screen.content.section-1.headline"
-msgstr ""
+msgstr "Ton aperçu"
 
 #: src/components/screens/Export/ui.jsx:55
 msgid "export-screen.content.section-1.text"
 msgstr ""
+"Collectivement, nous pouvons reconstituer les voies d'infection en informant "
+"les autorités sanitaires et les personnes qui vous entourent."
 
 #: src/components/screens/Export/ui.jsx:56
 msgid "export-screen.content.section-2.headline"
-msgstr ""
+msgstr "Un grand pouvoir s'accompagne d'une grande responsabilité"
 
 #: src/components/screens/Export/ui.jsx:57
 msgid "export-screen.content.section-2.text"
 msgstr ""
+"N'oublie pas que les données sont très sensibles. Nous te recommandons "
+"vivement de ne pas les partager en ligne ou avec des personnes choisies au "
+"hasard."
 
 #: src/components/screens/Export/ui.jsx:58
 msgid "export-screen.coming-soon"
-msgstr ""
+msgstr "Bientôt disponible!"
 
 #: src/components/screens/Legal.jsx:102
 msgid "legal-screen.imprint.section-1.headline"
-msgstr ""
+msgstr "Cette application \"Coronika\" est exploitée par"
 
 #: src/components/screens/Legal.jsx:103
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
+"Kreativzirkel UG (haftungsbeschränkt)\n"
+"Schirmerstrasse 61\n"
+"40211 Düsseldorf\n"
+"\n"
+"Phone +49 174 811 1212\n"
+"\n"
+"E-mail info@kreativzirkel.de\n"
+"\n"
+"Managing Director Alexander Braden\n"
+"\n"
+"Register court: AG Düsseldorf\n"
+"Registration number: HRB 82252\n"
+"VAT ID: DE 300 611 389"
 
 #: src/components/screens/Legal.jsx:104
 msgid "legal-screen.imprint.section-2.headline"
-msgstr ""
+msgstr "Responsabilité du contenu"
 
 #: src/components/screens/Legal.jsx:105
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
+"En tant que prestataire de services, nous sommes responsables de nos propres "
+"contenus sur ces pages, conformément à l'article 7, paragraphe 1, de la loi "
+"allemande sur les télémédias (TMG) et aux lois générales. Conformément aux "
+"articles 8 à 10 TMG, nous ne sommes pas tenus de surveiller les informations "
+"externes transmises ou stockées ni d'enquêter sur les circonstances qui "
+"indiquent une activité illégale. Les obligations de supprimer ou de bloquer "
+"l'utilisation d'informations conformément aux lois générales restent "
+"inchangées. Toutefois, la responsabilité à cet égard n'est possible qu'à "
+"partir du moment où l'on a connaissance d'une infraction concrète. Si nous "
+"avons connaissance de telles infractions, nous retirerons immédiatement ces "
+"contenus."
 
 #: src/components/screens/Legal.jsx:106
 msgid "legal-screen.imprint.section-3.headline"
-msgstr ""
+msgstr "Responsabilité pour les liens"
 
 #: src/components/screens/Legal.jsx:107
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
+"Notre offre contient des liens vers des sites web externes de tiers, sur le "
+"contenu desquels nous n'avons aucune influence. Nous ne pouvons donc pas "
+"assumer de responsabilité pour ces contenus externes. Le fournisseur ou "
+"l'exploitant respectif des sites est toujours responsable du contenu des "
+"sites liés. Les pages liées ont été vérifiées au moment de la mise en place "
+"des liens afin de détecter d'éventuelles violations de la loi. Les contenus "
+"illégaux n'étaient pas reconnaissables au moment de la création des liens. "
+"Un contrôle permanent du contenu des pages liées n'est toutefois pas "
+"raisonnable sans preuve concrète d'une violation de la loi. Si nous prenons "
+"connaissance d'infractions, nous supprimerons immédiatement ces liens."
 
 #: src/components/screens/Legal.jsx:108
 msgid "legal-screen.imprint.section-4.headline"
-msgstr ""
+msgstr "Copyright"
 
 #: src/components/screens/Legal.jsx:109
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
+"Le contenu et les œuvres de ces pages créées par les opérateurs sont soumis "
+"à la loi allemande sur le droit d'auteur. La reproduction, l'édition, la "
+"diffusion et toute forme d'utilisation en dehors des limites du droit "
+"d'auteur nécessitent l'accord écrit de l'auteur ou du créateur respectif. "
+"Les téléchargements et les copies de ces pages ne sont autorisés que pour un "
+"usage privé et non commercial. Dans la mesure où le contenu de ce site n'a "
+"pas été créé par l'opérateur, les droits d'auteur de tiers sont respectés. "
+"En particulier, les contenus de tiers sont marqués comme tels. Si tu dois "
+"néanmoins avoir connaissance d'une violation des droits d'auteur, veuille "
+"nous en informer. Si nous avons connaissance d'une infraction, nous "
+"retirerons immédiatement ces contenus."
 
 #: src/components/screens/Legal.jsx:61 src/components/screens/Menu.jsx:109
 msgid "legal-screen.header.headline"
-msgstr ""
+msgstr "Juridique"
 
 #: src/components/screens/Legal.jsx:68
 msgid "legal-screen.tabs.privacy.label"
-msgstr ""
+msgstr "Vie privée"
 
 #: src/components/screens/Legal.jsx:73
 msgid "legal-screen.tabs.imprint.label"
-msgstr ""
+msgstr "Mentions légales"
 
 #: src/components/screens/Legal.jsx:83
 msgid "legal-screen.privacy.section-1.headline"
-msgstr ""
+msgstr "Traitement des données de l'application"
 
 #: src/components/screens/Legal.jsx:84
 msgid "legal-screen.privacy.section-1.text"
 msgstr ""
+"L'App Coronika traite les données personnelles et de localisation "
+"exclusivement localement sur le smartphone de l'utilisateur."
 
 #: src/components/screens/Legal.jsx:85
 msgid "legal-screen.privacy.section-2.headline"
-msgstr ""
+msgstr "Données personnelles"
 
 #: src/components/screens/Legal.jsx:86
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
+"L'utilisateur peut créer des personnes dans l'application. Le nom et un "
+"numéro de téléphone sont enregistrés. De plus, il est possible d'importer "
+"l'annuaire du smartphone. Les noms et les numéros de téléphone des entrées "
+"du répertoire sont transférés dans l'application. Toutes les données restent "
+"localement sur le smartphone et donc entre les mains de l'utilisateur. Les "
+"données ne sont jamais transférées au fournisseur de l'application ou à des "
+"tiers."
 
 #: src/components/screens/Legal.jsx:87
 msgid "legal-screen.privacy.section-3.headline"
-msgstr ""
+msgstr "Données de localisation"
 
 #: src/components/screens/Legal.jsx:88
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
+"L'utilisateur peut créer des emplacements dans l'application. Le nom de "
+"l'emplacement et une description sont enregistrés. La localisation de "
+"l'utilisateur via des services de positionnement (par exemple, GPS ou autre) "
+"n'est pas accessible à tout moment. Les données relatives à la localisation "
+"restent également locales sur le smartphone de l'utilisateur et ne sont pas "
+"transmises au fournisseur de l'application ou à des tiers."
 
 #: src/components/screens/Legal.jsx:89
 msgid "legal-screen.privacy.section-4.headline"
-msgstr ""
+msgstr "Journal intime"
 
 #: src/components/screens/Legal.jsx:90
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
+"Dans l'agenda, l'utilisateur assigne quotidiennement des personnes et des "
+"lieux à des jours individuels. En plus des données déjà collectées, une "
+"heure est également enregistrée pour les lieux. L'agenda et toutes les "
+"entrées restent également localement sur le smartphone de l'utilisateur et "
+"ne sont pas transmises au fournisseur d'applications ou à des tiers."
 
 #: src/components/screens/Legal.jsx:91
 msgid "legal-screen.privacy.section-5.headline"
-msgstr ""
+msgstr "Exportation"
 
 #: src/components/screens/Legal.jsx:92
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
+"Dans l'application, l'utilisateur dispose d'une fonction d'exportation pour "
+"exporter une section de l'agenda sous forme de fichier PDF. Le fichier PDF "
+"est créé localement sur le smartphone de l'utilisateur. Ce fichier PDF peut "
+"être utilisé pour fournir facilement aux autorités sanitaires ou à d'autres "
+"organismes officiels une liste de contacts dans une période donnée afin de "
+"retracer les voies d'infection et, si nécessaire, d'informer d'autres "
+"personnes sur une infection potentielle. L'utilisateur est tenu de manipuler "
+"le fichier PDF et les données qu'il contient de manière responsable et de ne "
+"pas le transmettre de manière imprudente."
 
 #: src/components/screens/Legal.jsx:93
 msgid "legal-screen.privacy.section-6.headline"
-msgstr ""
+msgstr "Transfert et suivi des données"
 
 #: src/components/screens/Legal.jsx:94
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
+"L'application ne fournit pas de suivi automatisé ou de transfert de données "
+"au fournisseur de l'application ou à des tiers. La seule exception est la "
+"fonction d'exportation. Dans ce cas, seul l'utilisateur décide à qui les "
+"données sont transmises. Sinon, toutes les données restent en local sur le "
+"smartphone de l'utilisateur."
 
 #: src/components/screens/Menu.jsx:105
 #: src/components/screens/Settings/ui.jsx:92
 msgid "settings-screen.header.headline"
-msgstr ""
+msgstr "Paramètres"
 
 #: src/components/screens/Menu.jsx:125
 msgid "menu-screen.intro.text"
 msgstr ""
+"Il est important de ne pas semer la panique, mais de créer la clarté et de "
+"diffuser des informations correctes."
 
 #: src/components/screens/Menu.jsx:159
 msgid "menu-screen.button.send-feedback"
-msgstr ""
+msgstr "Envoie tes commentaires"
 
 #: src/components/screens/Overview/ui.jsx:118
 msgid "overview-screen.export.button"
-msgstr ""
+msgstr "Aperçu des exportations"
 
 #: src/components/screens/Overview/ui.jsx:92
 msgid "overview-screen.header.headline"
-msgstr ""
+msgstr "Vue d'ensemble"
 
 #: src/components/screens/Settings/logic.js:145
 msgid "notifications.diary.headline"
-msgstr ""
+msgstr "📒 Enregistre vos contacts"
 
 #: src/components/screens/Settings/logic.js:146
 msgid "notifications.diary.text"
 msgstr ""
+"Enregistre tes contacts proches et contribue à ralentir la propagation du "
+"coronavirus."
 
 #: src/components/screens/Settings/logic.js:158
 msgid "notifications.desinfect-smartphone.variant-1.headline"
-msgstr ""
+msgstr "📱🧽 Nettoie l'écran de ton smartphone"
 
 #: src/components/screens/Settings/logic.js:159
 msgid "notifications.desinfect-smartphone.variant-1.text"
 msgstr ""
+"Elimine les germes en nettoyant ton écran avec une lingette désinfectante."
 
 #: src/components/screens/Settings/logic.js:170
 #: src/components/screens/Settings/logic.js:203
 #: src/components/screens/Settings/logic.js:218
 msgid "notifications.washing-hands.variant-1.text"
-msgstr ""
+msgstr "Si tu es sorti, lave-toi soigneusement les mains."
 
 #: src/components/screens/Settings/logic.js:171
 #: src/components/screens/Settings/logic.js:204
 #: src/components/screens/Settings/logic.js:219
 msgid "notifications.washing-hands.variant-1.headline"
-msgstr ""
+msgstr "🤚💧 Lave-toi les mains"
 
 #: src/components/screens/Settings/logic.js:175
 #: src/components/screens/Settings/logic.js:208
 #: src/components/screens/Settings/logic.js:223
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
+"Se laver les mains est l'un des moyens les plus simples de se protéger et de "
+"protéger les autres contre les maladies."
 
 #: src/components/screens/Settings/logic.js:176
 #: src/components/screens/Settings/logic.js:209
 #: src/components/screens/Settings/logic.js:224
 msgid "notifications.washing-hands.variant-2.headline"
-msgstr ""
+msgstr "🤚💧 Tu es-toi lavé les mains ?"
 
 #: src/components/screens/Settings/logic.js:180
 #: src/components/screens/Settings/logic.js:213
 #: src/components/screens/Settings/logic.js:228
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
+"Pratique le lavage des mains en faisant attention et n'oublie pas de "
+"nettoyer le bout de vos doigts et l'espace entre vos doigts."
 
 #: src/components/screens/Settings/logic.js:181
 #: src/components/screens/Settings/logic.js:214
 #: src/components/screens/Settings/logic.js:229
 msgid "notifications.washing-hands.variant-3.headline"
-msgstr ""
+msgstr "🤚💧 N'oublie pas tes conseils !"
 
 #: src/components/screens/Settings/ui.jsx:101
 msgid "settings-screen.notifications.washing-hands.headline"
-msgstr ""
+msgstr "Rappel sur le lavage des mains"
 
 #: src/components/screens/Settings/ui.jsx:105
 msgid "settings-screen.notifications.washing-hands.option-1.label"
-msgstr ""
+msgstr "rappeler 3 fois par jour"
 
 #: src/components/screens/Settings/ui.jsx:114
 msgid "settings-screen.notifications.washing-hands.option-2.label"
-msgstr ""
+msgstr "rappeler 6 fois par jour"
 
 #: src/components/screens/Settings/ui.jsx:125
 msgid "settings-screen.notifications.disinfect-smartphone.headline"
-msgstr ""
+msgstr "Rappel de désinfecter le téléphone"
 
 #: src/components/screens/Settings/ui.jsx:129
 msgid "settings-screen.notifications.disinfect-smartphone.option.label"
-msgstr ""
+msgstr "rappeler quotidiennement"
 
 #: src/components/screens/Settings/ui.jsx:139
 msgid "settings-screen.notifications.diary.headline"
-msgstr ""
+msgstr "Rappel d'utiliser le journal intime"
 
 #: src/components/screens/Settings/ui.jsx:142
 msgid "settings-screen.notifications.diary.option.label"
-msgstr ""
+msgstr "rappeler quotidiennement"
 
 #: src/components/screens/Settings/ui.jsx:97
 msgid "settings-screen.notifications.headline"
-msgstr ""
+msgstr "Notifications"
 
 #: src/components/screens/TipAmIInfected.jsx:102
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:104
@@ -473,16 +589,22 @@ msgstr ""
 #: src/components/screens/TipWashingHands.jsx:104
 #: src/components/screens/Tips.jsx:111
 msgid "tips-screen.header.headline"
-msgstr ""
+msgstr "Conseils d'hygiène"
 
 #: src/components/screens/TipAmIInfected.jsx:107
 #: src/components/screens/Tips.jsx:99
 msgid "tips.am-i-infected.headline"
-msgstr ""
+msgstr "J'ai peur d'avoir attrapé le coronavirus, que puis-je faire ?"
 
 #: src/components/screens/TipAmIInfected.jsx:108
 msgid "tips.am-i-infected.text"
 msgstr ""
+"Si tu crains d'avoir été infecté, reste chez toi afin de ne pas infecter "
+"d'autres personnes. Contacte ton médecin de famille ou les autorités "
+"sanitaires par téléphone. Si tu es effectivement infecté par le coronavirus, "
+"informe ton médecin et les autorités sanitaires de ton journal Coronika afin "
+"de limiter la propagation de la maladie. Dans ce cas, tu peut simplement "
+"exporter ton journal et l'envoyer aux autorités responsables."
 
 #: src/components/screens/TipAmIInfected.jsx:124
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:126
@@ -491,7 +613,7 @@ msgstr ""
 #: src/components/screens/TipNotFeelingWell.jsx:127
 #: src/components/screens/TipWashingHands.jsx:126
 msgid "tips.sources.headline"
-msgstr ""
+msgstr "Sources"
 
 #: src/components/screens/TipAmIInfected.jsx:133
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:137
@@ -500,206 +622,259 @@ msgstr ""
 #: src/components/screens/TipNotFeelingWell.jsx:134
 #: src/components/screens/TipWashingHands.jsx:140
 msgid "tips.sources.last-updated"
-msgstr ""
+msgstr "Dernière mise à jour:"
 
 #: src/components/screens/TipAmIInfected.jsx:95
 msgid "tips.am-i-infected.list.item-1"
-msgstr ""
+msgstr "Reste chez toi"
 
 #: src/components/screens/TipAmIInfected.jsx:96
 msgid "tips.am-i-infected.list.item-2"
-msgstr ""
+msgstr "Appelle ton médecin"
 
 #: src/components/screens/TipAmIInfected.jsx:97
 msgid "tips.am-i-infected.list.item-3"
-msgstr ""
+msgstr "Parle de ton journal Coronika"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:109
 #: src/components/screens/Tips.jsx:83
 msgid "tips.avoid-crowds-of-people.headline"
-msgstr ""
+msgstr "Évite les foules de personnes"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:110
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
+"Si possible, évite de faire des voyages, d'utiliser les transports publics "
+"et travaille plutôt à domicile. D'une manière générale, il convient de "
+"réduire à l'essentiel les contacts et d'éviter la participation à des "
+"manifestations où il y a beaucoup de monde. Les citoyens âgés de plus de 60 "
+"ans doivent se faire vacciner contre les infections à pneumocoques."
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:95
 msgid "tips.avoid-crowds-of-people.list.item-1"
 msgstr ""
+"éviter les grands rassemblements publics s'ils ne sont pas indispensables"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:96
 msgid "tips.avoid-crowds-of-people.list.item-2"
 msgstr ""
+"préférer la marche à pied aux transports publics pour couvrir de courtes "
+"distances"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:97
 msgid "tips.avoid-crowds-of-people.list.item-3"
-msgstr ""
+msgstr "se laver les mains régulièrement et soigneusement"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:98
 msgid "tips.avoid-crowds-of-people.list.item-4"
 msgstr ""
+"maintenir une distance d'environ 1 à 2 mètres entre toi et les autres "
+"personnes"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:99
 msgid "tips.avoid-crowds-of-people.list.item-5"
-msgstr ""
+msgstr "couvrir sa toux et ses éternuements avec son coude ou un mouchoir"
 
 #: src/components/screens/TipCoughingSneezing.jsx:109
 #: src/components/screens/Tips.jsx:91
 msgid "tips.coughing-sneezing.headline"
-msgstr ""
+msgstr "Toux et éternuements corrects"
 
 #: src/components/screens/TipCoughingSneezing.jsx:110
 msgid "tips.coughing-sneezing.text"
-msgstr ""
+msgstr "Pour prévenir la propagation des virus, veuille faire attention à"
 
 #: src/components/screens/TipCoughingSneezing.jsx:95
 msgid "tips.coughing-sneezing.list.item-1"
 msgstr ""
+"maintenir une distance d'environ 1 à 2 mètres entre toi et les autres "
+"personnes"
 
 #: src/components/screens/TipCoughingSneezing.jsx:96
 msgid "tips.coughing-sneezing.list.item-2"
-msgstr ""
+msgstr "se détourner des gens"
 
 #: src/components/screens/TipCoughingSneezing.jsx:97
 msgid "tips.coughing-sneezing.list.item-3"
-msgstr ""
+msgstr "couvrir sa toux et ses éternuements avec son coude ou un mouchoir"
 
 #: src/components/screens/TipCoughingSneezing.jsx:98
 msgid "tips.coughing-sneezing.list.item-4"
-msgstr ""
+msgstr "l'élimination correcte des tissus"
 
 #: src/components/screens/TipCoughingSneezing.jsx:99
 msgid "tips.coughing-sneezing.list.item-5"
-msgstr ""
+msgstr "se laver les mains après"
 
 #: src/components/screens/TipMouthguard.jsx:100
 msgid "tips.mouthguard.list.item-3"
-msgstr ""
+msgstr "se mouille en respirant"
 
 #: src/components/screens/TipMouthguard.jsx:101
 msgid "tips.mouthguard.list.item-4"
-msgstr ""
+msgstr "pas changé quotidiennement"
 
 #: src/components/screens/TipMouthguard.jsx:111
 #: src/components/screens/Tips.jsx:87
 msgid "tips.mouthguard.headline"
-msgstr ""
+msgstr "Le protège-dents, oui ou non ?"
 
 #: src/components/screens/TipMouthguard.jsx:112
 msgid "tips.mouthguard.text-1"
 msgstr ""
+"Les masques sont essentiels pour tous les secteurs de la santé. Pour les "
+"personnes malades ou présentant des symptômes de la COVID-19, les masques "
+"sont un élément approprié des mesures de prévention et de contrôle des "
+"infections. Veuille simplement porter un masque si ton prestataire de soins "
+"de santé peut te recommander de suivre les règles d'hygiène dans les autres "
+"cas."
 
 #: src/components/screens/TipMouthguard.jsx:114
 msgid "tips.mouthguard.text-2"
 msgstr ""
+"Le port d'un masque par les professionnels de la santé constitue une "
+"barrière qui empêche les petites gouttelettes de se répandre lorsque tu "
+"tousses ou éternues."
 
 #: src/components/screens/TipMouthguard.jsx:119
 msgid "tips.mouthguard.list.intro"
-msgstr ""
+msgstr "Le port d'un masque en dehors de la chirurgie n'a aucun effet si :"
 
 #: src/components/screens/TipMouthguard.jsx:98
 msgid "tips.mouthguard.list.item-1"
-msgstr ""
+msgstr "le masque est en papier"
 
 #: src/components/screens/TipMouthguard.jsx:99
 msgid "tips.mouthguard.list.item-2"
-msgstr ""
+msgstr "le masque n'est pas bien ajusté au visage ou fuit"
 
 #: src/components/screens/TipNotFeelingWell.jsx:108
 #: src/components/screens/Tips.jsx:95
 msgid "tips.not-feeling-well.headline"
-msgstr ""
+msgstr "Je ne me sens pas bien, est-ce que j'ai le virus ?"
 
 #: src/components/screens/TipNotFeelingWell.jsx:109
 msgid "tips.not-feeling-well.text"
 msgstr ""
+"Tous les patients présentant des symptômes de type grippal ne sont pas "
+"également porteurs du virus du SRAS-CoV-2. Tu dois toujours t'informer sur "
+"tes symptômes et appeler ton médecin."
 
 #: src/components/screens/TipNotFeelingWell.jsx:113
 msgid "tips.not-feeling-well.list.intro"
-msgstr ""
+msgstr "Selon l'OMS, les symptômes typiques de la COVID-19 sont les suivants"
 
 #: src/components/screens/TipNotFeelingWell.jsx:95
 msgid "tips.not-feeling-well.list.item-1"
-msgstr ""
+msgstr "symptômes respiratoires"
 
 #: src/components/screens/TipNotFeelingWell.jsx:96
 msgid "tips.not-feeling-well.list.item-2"
-msgstr ""
+msgstr "fièvre"
 
 #: src/components/screens/TipNotFeelingWell.jsx:97
 msgid "tips.not-feeling-well.list.item-3"
-msgstr ""
+msgstr "toux"
 
 #: src/components/screens/TipNotFeelingWell.jsx:98
 msgid "tips.not-feeling-well.list.item-4"
-msgstr ""
+msgstr "l'essoufflement"
 
 #: src/components/screens/TipReliableSources.jsx:81
 #: src/components/screens/Tips.jsx:103
 msgid "tips.reliable-sources.headline"
-msgstr ""
+msgstr "Où puis-je trouver des sources fiables ?"
 
 #: src/components/screens/TipReliableSources.jsx:82
 msgid "tips.reliable-sources.text"
-msgstr ""
+msgstr "Sites web d'information"
 
 #: src/components/screens/Tips.jsx:116
 msgid "tips-screen.intro.text"
 msgstr ""
+"Tu trouves ici des connaissances qui t'aident à réduire le plus possible le "
+"risque d'infection et à faire ce qu'il faut en cas d'infection."
 
 #: src/components/screens/TipWashingHands.jsx:109
 #: src/components/screens/Tips.jsx:79
 msgid "tips.washing-hands.headline"
-msgstr ""
+msgstr "Se laver les mains"
 
 #: src/components/screens/TipWashingHands.jsx:110
 msgid "tips.washing-hands.text"
 msgstr ""
+"Se laver les mains est facile, et c'est l'un des moyens les plus efficaces "
+"de prévenir la propagation des germes. Des mains propres peuvent empêcher la "
+"propagation des germes. Suit ces cinq étapes à chaque fois :"
 
 #: src/components/screens/TipWashingHands.jsx:95
 msgid "tips.washing-hands.list.item-1"
 msgstr ""
+"Mouille-toi les mains avec de l'eau courante propre (chaude ou froide), "
+"ferme le robinet et applique du savon."
 
 #: src/components/screens/TipWashingHands.jsx:96
 msgid "tips.washing-hands.list.item-2"
 msgstr ""
+"Fais mousser tes mains en les frottant l'une contre l'autre avec le savon. "
+"Fais mousser le dos de tes mains, entre tes doigts et sous tes ongles."
 
 #: src/components/screens/TipWashingHands.jsx:97
 msgid "tips.washing-hands.list.item-3"
 msgstr ""
+"Frotte le dos de tes mains, tes pouces, entre tes doigts et sous tes ongles "
+"pendant environ 30 à 60 secondes."
 
 #: src/components/screens/TipWashingHands.jsx:98
 msgid "tips.washing-hands.list.item-4"
-msgstr ""
+msgstr "Rince bien tes mains à l'eau courante."
 
 #: src/components/screens/TipWashingHands.jsx:99
 msgid "tips.washing-hands.list.item-5"
-msgstr ""
+msgstr "Sèche-toi les mains à l'aide d'une serviette propre ou à l'air libre."
 
 #: src/components/screens/Welcome/ui.jsx:28
 msgid "welcome-screen.slides.notifications.headline"
-msgstr ""
+msgstr "Tu es-toi lavé les mains ?"
 
 #: src/components/screens/Welcome/ui.jsx:29
 msgid "welcome-screen.slides.notifications.text"
 msgstr ""
+"Active tes notifications et fais-toi rappeler régulièrement de te laver les "
+"mains pour éviter toute infection."
 
 #: src/components/screens/Welcome/ui.jsx:30
 msgid "welcome-screen.slides.notifications.button-skip"
-msgstr ""
+msgstr "Sauter"
 
 #: src/components/screens/Welcome/ui.jsx:31
 msgid "welcome-screen.slides.notifications.button"
-msgstr ""
+msgstr "Activer maintenant"
 
 #: src/components/widgets/DayOverview.jsx:115
 msgid "today"
-msgstr ""
+msgstr "aujourd'hui"
 
 #: src/components/widgets/DayOverview.jsx:119
 msgid "total"
-msgstr ""
+msgstr "total"
 
 #: src/components/widgets/SearchBar.jsx:57
 msgid "placeholder.search-input"
-msgstr ""
+msgstr "Recherche"
+
+#~ msgid "notifications.desinfect-smartphone.variant-2.headline"
+#~ msgstr "📱🧽 Garde ton écran propre"
+
+#~ msgid "notifications.desinfect-smartphone.variant-2.text"
+#~ msgstr ""
+#~ "Libère votre écran de nombreux germes, bactéries et autres agents "
+#~ "pathogènes."
+
+#~ msgid "notifications.desinfect-smartphone.variant-3.headline"
+#~ msgstr "📱🧽 Désinfecter ton téléphone"
+
+#~ msgid "notifications.desinfect-smartphone.variant-3.text"
+#~ msgstr ""
+#~ "L'aseptisation de ton téléphone est un autre moyen intelligent d'éloigner "
+#~ "les germes du bout de tes doigts."

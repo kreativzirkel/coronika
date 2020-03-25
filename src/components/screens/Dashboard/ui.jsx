@@ -92,7 +92,7 @@ const Dashboard = ({ days, firstStartHintVisible, total, closeFirstStartHint, op
     },
   });
 
-  const listItemHeight = vw(20.9);
+  const listItemHeight = vw(19.6);
 
   const today = moment()
     .hours(0)
@@ -101,8 +101,6 @@ const Dashboard = ({ days, firstStartHintVisible, total, closeFirstStartHint, op
     .milliseconds(0);
 
   const totalTimespan = moment(today).subtract(DAYS_OVERVIEW, 'days');
-
-  //const firstStartHintVisible = true;
 
   return (
     <Layout>

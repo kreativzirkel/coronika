@@ -206,16 +206,16 @@ msgstr "Start now"
 msgid "add-entry-screen.header.headline"
 msgstr "Add entry"
 
-#: src/components/screens/Dashboard/ui.jsx:118
+#: src/components/screens/Dashboard/ui.jsx:116
 #: src/components/screens/Menu.jsx:120
 msgid "menu-screen.header.headline"
 msgstr "Menu"
 
-#: src/components/screens/Dashboard/ui.jsx:128
+#: src/components/screens/Dashboard/ui.jsx:126
 msgid "dashboard-screen.first-start.hint"
 msgstr "Click on todays date to enter your first persons or locations."
 
-#: src/components/screens/Dashboard/ui.jsx:130
+#: src/components/screens/Dashboard/ui.jsx:128
 msgid "Close"
 msgstr "Close"
 
@@ -235,29 +235,29 @@ msgstr "You have not added any person for this day."
 msgid "day-screen.entries.add"
 msgstr "Add entry"
 
-#: src/components/screens/Directory/ui.jsx:125
+#: src/components/screens/Directory/ui.jsx:129
 msgid "directory-screen.header.button.import"
 msgstr "Import"
 
-#: src/components/screens/Directory/ui.jsx:128
+#: src/components/screens/Directory/ui.jsx:133
 msgid "directory-screen.header.headline"
 msgstr "Manage directory"
 
-#: src/components/screens/Directory/ui.jsx:145
+#: src/components/screens/Directory/ui.jsx:151
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Import persons"
 
-#: src/components/screens/Directory/ui.jsx:151
+#: src/components/screens/Directory/ui.jsx:157
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Import persons from your phone book so that you can start right away. All "
 "your persons are stored locally. No data is tracked or shared."
 
-#: src/components/screens/Directory/ui.jsx:157
+#: src/components/screens/Directory/ui.jsx:163
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Importing..."
 
-#: src/components/screens/Directory/ui.jsx:158
+#: src/components/screens/Directory/ui.jsx:164
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Import now"
 

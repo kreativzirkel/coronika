@@ -50,7 +50,7 @@ const DayOverview = ({
     },
     dayValue: {
       fontFamily: 'JetBrainsMono-Bold',
-      fontSize: vw(7.5),
+      fontSize: vw(7),
       textTransform: 'lowercase',
     },
     dayValueNumber: {
@@ -66,7 +66,7 @@ const DayOverview = ({
     dayValueCaption: {
       color: '#707070',
       fontFamily: 'JetBrainsMono-Regular',
-      fontSize: vw(3.2),
+      fontSize: vw(2.7),
       marginBottom: vw(0.5),
       textTransform: 'lowercase',
     },
@@ -83,7 +83,7 @@ const DayOverview = ({
     dayLocationsWrapper: {
       flexGrow: 0,
       flexShrink: 0,
-      marginRight: vw(3),
+      marginRight: vw(1.5),
     },
   });
 
@@ -116,7 +116,7 @@ const DayOverview = ({
           </Text>
         )}
         <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark) }}>
-          {isTotal ? __('total') : moment(timestamp).format('dd DD. MMM')}
+          {isTotal ? __('total') : moment(timestamp).format('dd DD.MMM')}
         </Text>
       </View>
       <View style={styles.dayLocationsWrapper}>

@@ -1,12 +1,39 @@
 import formatDistance from 'date-fns/formatDistance';
-import { de as dateFnsDe, enUS as dateFnsEnUs } from 'date-fns/locale';
+import {
+  de as dateFnsDe,
+  enUS as dateFnsEnUs,
+  es as dateFnsEs,
+  fi as dateFnsFi,
+  fr as dateFnsFr,
+  it as dateFnsIt,
+  nl as dateFnsNl,
+  pl as dateFnsPl,
+  ro as dateFnsRo,
+  zhCN as dateFnsZhCn,
+} from 'date-fns/locale';
 import moment from 'moment';
 import momentDe from 'moment/locale/de';
 import momentEnGb from 'moment/locale/en-gb';
+import momentEs from 'moment/locale/es';
+import momentFi from 'moment/locale/fi';
+import momentFr from 'moment/locale/fr';
+import momentIt from 'moment/locale/it';
+import momentNl from 'moment/locale/nl';
+import momentPl from 'moment/locale/pl';
+import momentRo from 'moment/locale/ro';
+import momentZhCn from 'moment/locale/zh-cn';
 import React from 'react';
 import { ReactReduxContext } from 'react-redux';
 import de_DE from './assets/translations/de_DE';
 import en_US from './assets/translations/en_US';
+import es_ES from './assets/translations/es_ES';
+import fi_FI from './assets/translations/fi_FI';
+import fr_FR from './assets/translations/fr_FR';
+import it_IT from './assets/translations/it_IT';
+import nl_NL from './assets/translations/nl_NL';
+import pl_PL from './assets/translations/pl_PL';
+import ro_RO from './assets/translations/ro_RO';
+import zh_CN from './assets/translations/zh_CN';
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from './constants';
 
 const getMessages = (language) => {
@@ -20,6 +47,30 @@ const getMessages = (language) => {
         break;
       case 'en':
         messagesList = en_US.locale_data.messages;
+        break;
+      case 'es':
+        messagesList = es_ES.locale_data.messages;
+        break;
+      case 'fi':
+        messagesList = fi_FI.locale_data.messages;
+        break;
+      case 'fr':
+        messagesList = fr_FR.locale_data.messages;
+        break;
+      case 'it':
+        messagesList = it_IT.locale_data.messages;
+        break;
+      case 'nl':
+        messagesList = nl_NL.locale_data.messages;
+        break;
+      case 'pl':
+        messagesList = pl_PL.locale_data.messages;
+        break;
+      case 'ro':
+        messagesList = ro_RO.locale_data.messages;
+        break;
+      case 'zh':
+        messagesList = zh_CN.locale_data.messages;
         break;
     }
 
@@ -58,6 +109,30 @@ export const reducer = (state = initialState, action = { type: null }) => {
         switch (language) {
           case 'de':
             moment.updateLocale('de', momentDe);
+            break;
+          case 'es':
+            moment.updateLocale('es', momentEs);
+            break;
+          case 'fi':
+            moment.updateLocale('fi', momentFi);
+            break;
+          case 'fr':
+            moment.updateLocale('fr', momentFr);
+            break;
+          case 'it':
+            moment.updateLocale('it', momentIt);
+            break;
+          case 'nl':
+            moment.updateLocale('nl', momentNl);
+            break;
+          case 'pl':
+            moment.updateLocale('pl', momentPl);
+            break;
+          case 'ro':
+            moment.updateLocale('ro', momentRo);
+            break;
+          case 'zh':
+            moment.updateLocale('zh-cn', momentZhCn);
             break;
           default:
             moment.updateLocale('en', momentEnGb);
@@ -113,6 +188,30 @@ const withI18n = (WrappedComponent) => {
       switch (currentLanguage) {
         case 'de':
           locale = dateFnsDe;
+          break;
+        case 'es':
+          locale = dateFnsEs;
+          break;
+        case 'fi':
+          locale = dateFnsFi;
+          break;
+        case 'fr':
+          locale = dateFnsFr;
+          break;
+        case 'it':
+          locale = dateFnsIt;
+          break;
+        case 'nl':
+          locale = dateFnsNl;
+          break;
+        case 'pl':
+          locale = dateFnsPl;
+          break;
+        case 'ro':
+          locale = dateFnsRo;
+          break;
+        case 'zh':
+          locale = dateFnsZhCn;
           break;
         default:
           locale = dateFnsEnUs;

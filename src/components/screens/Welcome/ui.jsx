@@ -94,7 +94,7 @@ const Welcome = ({ activateNotifications, finish, navigation, vw, __ }) => {
     },
     viewSlide: {
       justifyContent: 'space-between',
-      padding: vw(10),
+      padding: vw(5),
       paddingBottom: vw(20),
       paddingTop: vw(5),
     },
