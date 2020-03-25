@@ -48,3 +48,11 @@ Link necessary packages:
 ### Update version number
 
 Update version in `package.json` and run `react-native-version` to update all necessary files.
+
+## Translations
+
+Download translations from Google sheet with three columns: location (empty), source (identifier), target (translation).
+Wrap column headlines with `"`. Use `csv2po` for conversion.
+
+Run `csv2po -i input.csv -o output.po` to create PO-file. Replace header section with existing PO-file of this language.
+Copy new PO-file to the translation folder. 
