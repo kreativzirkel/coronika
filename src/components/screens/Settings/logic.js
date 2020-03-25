@@ -154,7 +154,7 @@ const setNotifications = (notifications, __, cb) => {
 
   if (notificationDisinfectSmartphoneEnabled) {
     const tag = NOTIFICATION_KEY.DISINFECT_SMARTPHONE;
-    const timestamp = getDailyNotificationTimestamp(14, 43);
+    const timestamp = getDailyNotificationTimestamp(17, 30);
     PushNotification.localNotificationSchedule({
       ...defaultNotificationOptions,
       title: __('notifications.desinfect-smartphone.variant-1.headline'),
