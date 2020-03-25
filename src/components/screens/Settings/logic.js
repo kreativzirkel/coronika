@@ -46,7 +46,8 @@ export const configurePushNotifications = (navigation, requestPermissions = fals
         }
       }
 
-      PushNotification.clearAllNotifications();
+      // TODO: find solution for android
+      if (Platform.OS === 'ios') PushNotification.clearAllNotifications();
 
       notification.finish(PushNotificationIOS.FetchResult.NoData);
     },
