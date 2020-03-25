@@ -17,14 +17,20 @@ const sortByCounter = (a, b) => {
 
 const mapStateToProps = ({ dashboard: { days } }) => {
   const total = Object.values(days)
-    .map(({ persons, locations }) => ({ persons: persons.length, locations: locations.length }))
+    .map(({ persons, locations }) => ({
+      persons: persons.map(({ id }) => id),
+      locations: locations.map(({ id }) => id),
+    }))
     .reduce(
       (accumulator, currentValue) => ({
-        persons: accumulator.persons + currentValue.persons,
-        locations: accumulator.locations + currentValue.locations,
+        persons: [...accumulator.persons, ...currentValue.persons],
+        locations: [...accumulator.locations, ...currentValue.locations],
       }),
-      { persons: 0, locations: 0 }
+      { persons: [], locations: [] }
     );
+
+  total.locations = [...new Set(total.locations)].length;
+  total.persons = [...new Set(total.persons)].length;
 
   const locations = {};
   const persons = {};
