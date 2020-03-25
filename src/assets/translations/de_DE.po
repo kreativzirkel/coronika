@@ -46,114 +46,114 @@ msgstr "Teilen"
 msgid "navigation.tips.label"
 msgstr "Tipps"
 
-#: src/components/partials/EntriesTabsView.jsx:599
-#: src/components/widgets/DayOverview.jsx:125
+#: src/components/partials/EntriesTabsView.jsx:618
+#: src/components/widgets/DayOverview.jsx:139
 msgid "persons"
 msgstr "Personen"
 
-#: src/components/partials/EntriesTabsView.jsx:609
-#: src/components/widgets/DayOverview.jsx:109
+#: src/components/partials/EntriesTabsView.jsx:628
+#: src/components/widgets/DayOverview.jsx:123
 msgid "locations"
 msgstr "Orte"
 
-#: src/components/partials/EntriesTabsView.jsx:621
+#: src/components/partials/EntriesTabsView.jsx:640
 msgid "entries.persons.list.new"
 msgstr "Neue Person"
 
-#: src/components/partials/EntriesTabsView.jsx:642
-#: src/components/partials/EntriesTabsView.jsx:692
+#: src/components/partials/EntriesTabsView.jsx:661
+#: src/components/partials/EntriesTabsView.jsx:711
 msgid "entries.search.list.empty"
 msgstr "Zu deiner Suche konnte nichts gefunden werden."
 
-#: src/components/partials/EntriesTabsView.jsx:649
+#: src/components/partials/EntriesTabsView.jsx:668
 msgid "entries.persons.list.empty"
 msgstr ""
 "Du hast noch keine Person angelegt. Um direkt loszulegen, kannst du Personen "
 "aus deinem Telefonbuch importieren."
 
-#: src/components/partials/EntriesTabsView.jsx:653
+#: src/components/partials/EntriesTabsView.jsx:672
 msgid "entries.persons.list.import.button"
 msgstr "Jetzt importieren"
 
-#: src/components/partials/EntriesTabsView.jsx:672
+#: src/components/partials/EntriesTabsView.jsx:691
 msgid "entries.locations.list.new"
 msgstr "Neuer Ort"
 
-#: src/components/partials/EntriesTabsView.jsx:695
+#: src/components/partials/EntriesTabsView.jsx:714
 msgid "entries.locations.list.empty"
 msgstr ""
 "Du hast noch keinen Ort angelegt. Beginne jetzt und erstelle deinen ersten "
 "Ort."
 
-#: src/components/partials/EntriesTabsView.jsx:711
+#: src/components/partials/EntriesTabsView.jsx:730
 msgid "entries.selection.add"
 msgstr "Auswahl hinzufügen"
 
-#: src/components/partials/EntriesTabsView.jsx:723
+#: src/components/partials/EntriesTabsView.jsx:742
 msgid "entries.modals.update-person.headline"
 msgstr "Person bearbeiten"
 
-#: src/components/partials/EntriesTabsView.jsx:724
+#: src/components/partials/EntriesTabsView.jsx:743
 msgid "entries.modals.new-person.headline"
 msgstr "Neue Person"
 
-#: src/components/partials/EntriesTabsView.jsx:735
+#: src/components/partials/EntriesTabsView.jsx:754
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Vorname Nachname"
 
-#: src/components/partials/EntriesTabsView.jsx:747
+#: src/components/partials/EntriesTabsView.jsx:766
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Telefon"
 
-#: src/components/partials/EntriesTabsView.jsx:760
+#: src/components/partials/EntriesTabsView.jsx:779
 msgid "entries.modals.update-person.button"
 msgstr "Speichern"
 
-#: src/components/partials/EntriesTabsView.jsx:761
+#: src/components/partials/EntriesTabsView.jsx:780
 msgid "entries.modals.new-person.button"
 msgstr "Hinzufügen"
 
-#: src/components/partials/EntriesTabsView.jsx:773
+#: src/components/partials/EntriesTabsView.jsx:792
 msgid "entries.modals.update-location.headline"
 msgstr "Ort bearbeiten"
 
-#: src/components/partials/EntriesTabsView.jsx:774
+#: src/components/partials/EntriesTabsView.jsx:793
 msgid "entries.modals.new-location.headline"
 msgstr "Neuer Ort"
 
-#: src/components/partials/EntriesTabsView.jsx:785
+#: src/components/partials/EntriesTabsView.jsx:804
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Titel"
 
-#: src/components/partials/EntriesTabsView.jsx:796
+#: src/components/partials/EntriesTabsView.jsx:815
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Beschreibung"
 
-#: src/components/partials/EntriesTabsView.jsx:809
+#: src/components/partials/EntriesTabsView.jsx:828
 msgid "entries.modals.update-location.button"
 msgstr "Speichern"
 
-#: src/components/partials/EntriesTabsView.jsx:810
+#: src/components/partials/EntriesTabsView.jsx:829
 msgid "entries.modals.new-location.button"
 msgstr "Hinzufügen"
 
-#: src/components/partials/EntriesTabsView.jsx:820
+#: src/components/partials/EntriesTabsView.jsx:839
 msgid "entries.modals.select-location.headline"
 msgstr "Ort auswählen"
 
-#: src/components/partials/EntriesTabsView.jsx:839
+#: src/components/partials/EntriesTabsView.jsx:858
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Beschreibung"
 
-#: src/components/partials/EntriesTabsView.jsx:854
+#: src/components/partials/EntriesTabsView.jsx:873
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/components/partials/EntriesTabsView.jsx:855
+#: src/components/partials/EntriesTabsView.jsx:874
 msgid "Confirm"
 msgstr "Bestätigen"
 
-#: src/components/partials/EntriesTabsView.jsx:868
+#: src/components/partials/EntriesTabsView.jsx:887
 msgid "entries.modals.select-location.button"
 msgstr "Auswählen"
 
@@ -207,17 +207,17 @@ msgstr "Jetzt anfangen"
 msgid "add-entry-screen.header.headline"
 msgstr "Eintrag hinzufügen"
 
-#: src/components/screens/Dashboard/ui.jsx:116
+#: src/components/screens/Dashboard/ui.jsx:118
 #: src/components/screens/Menu.jsx:120
 msgid "menu-screen.header.headline"
 msgstr "Menü"
 
-#: src/components/screens/Dashboard/ui.jsx:126
+#: src/components/screens/Dashboard/ui.jsx:128
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Klicke auf den heutigen Tag, um deine ersten Personen oder Orte einzutragen."
 
-#: src/components/screens/Dashboard/ui.jsx:128
+#: src/components/screens/Dashboard/ui.jsx:130
 msgid "Close"
 msgstr "Schließen"
 
@@ -582,12 +582,12 @@ msgstr "Benachrichtigungen"
 #: src/components/screens/TipNotFeelingWell.jsx:103
 #: src/components/screens/TipReliableSources.jsx:76
 #: src/components/screens/TipWashingHands.jsx:104
-#: src/components/screens/Tips/ui.jsx:109
+#: src/components/screens/Tips.jsx:111
 msgid "tips-screen.header.headline"
 msgstr "Hygiene Tipps"
 
 #: src/components/screens/TipAmIInfected.jsx:107
-#: src/components/screens/Tips/ui.jsx:97
+#: src/components/screens/Tips.jsx:99
 msgid "tips.am-i-infected.headline"
 msgstr "Ich fürchte erkrankt zu sein, was tun?"
 
@@ -632,7 +632,7 @@ msgid "tips.am-i-infected.list.item-3"
 msgstr "Erzähle von deinem Coronika Tagebuch"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:109
-#: src/components/screens/Tips/ui.jsx:81
+#: src/components/screens/Tips.jsx:83
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Meide große Menschenmassen"
 
@@ -666,7 +666,7 @@ msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "Husten- und Nies-Etikette einhalten"
 
 #: src/components/screens/TipCoughingSneezing.jsx:109
-#: src/components/screens/Tips/ui.jsx:89
+#: src/components/screens/Tips.jsx:91
 msgid "tips.coughing-sneezing.headline"
 msgstr "Richtig Husten und Niesen"
 
@@ -705,7 +705,7 @@ msgid "tips.mouthguard.list.item-4"
 msgstr "nicht mehrmals täglich gewechselt werden"
 
 #: src/components/screens/TipMouthguard.jsx:111
-#: src/components/screens/Tips/ui.jsx:85
+#: src/components/screens/Tips.jsx:87
 msgid "tips.mouthguard.headline"
 msgstr "Mundschutz, ja oder nein?"
 
@@ -736,7 +736,7 @@ msgid "tips.mouthguard.list.item-2"
 msgstr "nicht eng anliegen oder undicht sind"
 
 #: src/components/screens/TipNotFeelingWell.jsx:108
-#: src/components/screens/Tips/ui.jsx:93
+#: src/components/screens/Tips.jsx:95
 msgid "tips.not-feeling-well.headline"
 msgstr "Ich fühle mich nicht wohl, habe ich das Virus?"
 
@@ -768,7 +768,7 @@ msgid "tips.not-feeling-well.list.item-4"
 msgstr "Kurzatmigkeit"
 
 #: src/components/screens/TipReliableSources.jsx:81
-#: src/components/screens/Tips/ui.jsx:101
+#: src/components/screens/Tips.jsx:103
 msgid "tips.reliable-sources.headline"
 msgstr "Wo finde ich zuverlässige Quellen?"
 
@@ -776,7 +776,7 @@ msgstr "Wo finde ich zuverlässige Quellen?"
 msgid "tips.reliable-sources.text"
 msgstr "Informative Webseiten"
 
-#: src/components/screens/Tips/ui.jsx:114
+#: src/components/screens/Tips.jsx:116
 msgid "tips-screen.intro.text"
 msgstr ""
 "Hier findest du Wissen, das dir in der aktuellen Situation helfen soll, das "
@@ -784,7 +784,7 @@ msgstr ""
 "Ansteckung das Richtige zu tun."
 
 #: src/components/screens/TipWashingHands.jsx:109
-#: src/components/screens/Tips/ui.jsx:77
+#: src/components/screens/Tips.jsx:79
 msgid "tips.washing-hands.headline"
 msgstr "Wasche deine Hände richtig"
 
@@ -834,11 +834,11 @@ msgstr "Überspringen"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Jetzt aktivieren"
 
-#: src/components/widgets/DayOverview.jsx:102
+#: src/components/widgets/DayOverview.jsx:115
 msgid "today"
 msgstr "heute"
 
-#: src/components/widgets/DayOverview.jsx:105
+#: src/components/widgets/DayOverview.jsx:119
 msgid "total"
 msgstr "gesamt"
 

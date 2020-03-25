@@ -1,4 +1,5 @@
 import * as RNLocalize from 'react-native-localize';
+import { BackHandler } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import connect from 'react-redux/lib/connect/connect';
 import { SUPPORTED_LANGUAGES } from '../../../constants';
@@ -47,7 +48,19 @@ const Container = container(Screen, {
       } else {
         navigation.navigate('App');
       }
+
+      this._unsubscribe = navigation.addListener('state', (e) => {
+        if (e?.data?.state?.history?.length === 1) {
+          BackHandler.exitApp();
+        }
+      });
     })();
+  },
+
+  componentWillUnmount() {
+    if (this._unsubscribe) {
+      this._unsubscribe();
+    }
   },
 });
 
