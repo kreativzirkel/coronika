@@ -432,55 +432,55 @@ msgstr "导出概要"
 msgid "overview-screen.header.headline"
 msgstr "概要"
 
-#: src/components/screens/Settings/logic.js:147
+#: src/components/screens/Settings/logic.js:148
 msgid "notifications.diary.headline"
 msgstr "📒 添加您的联系人"
 
-#: src/components/screens/Settings/logic.js:148
+#: src/components/screens/Settings/logic.js:149
 msgid "notifications.diary.text"
 msgstr "添加您的亲密联系人，并帮助减缓新冠病毒的传播。"
 
-#: src/components/screens/Settings/logic.js:160
-msgid "notifications.desinfect-smartphone.variant-1.headline"
+#: src/components/screens/Settings/logic.js:161
+msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 清洁您的智能手机屏幕"
 
-#: src/components/screens/Settings/logic.js:161
-msgid "notifications.desinfect-smartphone.variant-1.text"
+#: src/components/screens/Settings/logic.js:162
+msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "用消毒湿巾清洁屏幕以清除细菌。"
-
-#: src/components/screens/Settings/logic.js:172
-#: src/components/screens/Settings/logic.js:205
-#: src/components/screens/Settings/logic.js:220
-msgid "notifications.washing-hands.variant-1.text"
-msgstr "如果您出门在外，请认真彻底的洗手。"
 
 #: src/components/screens/Settings/logic.js:173
 #: src/components/screens/Settings/logic.js:206
 #: src/components/screens/Settings/logic.js:221
+msgid "notifications.washing-hands.variant-1.text"
+msgstr "如果您出门在外，请认真彻底的洗手。"
+
+#: src/components/screens/Settings/logic.js:174
+#: src/components/screens/Settings/logic.js:207
+#: src/components/screens/Settings/logic.js:222
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧洗手"
-
-#: src/components/screens/Settings/logic.js:177
-#: src/components/screens/Settings/logic.js:210
-#: src/components/screens/Settings/logic.js:225
-msgid "notifications.washing-hands.variant-2.text"
-msgstr "洗手是保护自己和他人免受疾病侵害的最简单方法之一。"
 
 #: src/components/screens/Settings/logic.js:178
 #: src/components/screens/Settings/logic.js:211
 #: src/components/screens/Settings/logic.js:226
+msgid "notifications.washing-hands.variant-2.text"
+msgstr "洗手是保护自己和他人免受疾病侵害的最简单方法之一。"
+
+#: src/components/screens/Settings/logic.js:179
+#: src/components/screens/Settings/logic.js:212
+#: src/components/screens/Settings/logic.js:227
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 你洗手了吗？"
-
-#: src/components/screens/Settings/logic.js:182
-#: src/components/screens/Settings/logic.js:215
-#: src/components/screens/Settings/logic.js:230
-msgid "notifications.washing-hands.variant-3.text"
-msgstr "洗手的时候不要忘记清洁指尖和手指之间的缝隙。"
 
 #: src/components/screens/Settings/logic.js:183
 #: src/components/screens/Settings/logic.js:216
 #: src/components/screens/Settings/logic.js:231
+msgid "notifications.washing-hands.variant-3.text"
+msgstr "洗手的时候不要忘记清洁指尖和手指之间的缝隙。"
+
+#: src/components/screens/Settings/logic.js:184
+#: src/components/screens/Settings/logic.js:217
+#: src/components/screens/Settings/logic.js:232
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 不要忘记您的提示！"
 
@@ -770,14 +770,14 @@ msgstr "合计"
 msgid "placeholder.search-input"
 msgstr "搜索"
 
-#~ msgid "notifications.desinfect-smartphone.variant-2.headline"
+#~ msgid "notifications.disinfect-smartphone.variant-2.headline"
 #~ msgstr "📱🧽保持屏幕清洁"
 
-#~ msgid "notifications.desinfect-smartphone.variant-2.text"
+#~ msgid "notifications.disinfect-smartphone.variant-2.text"
 #~ msgstr "使您的屏幕摆脱各种细菌，病菌和其他病原体的侵害。"
 
-#~ msgid "notifications.desinfect-smartphone.variant-3.headline"
+#~ msgid "notifications.disinfect-smartphone.variant-3.headline"
 #~ msgstr "📱🧽 对手机进行消毒"
 
-#~ msgid "notifications.desinfect-smartphone.variant-3.text"
+#~ msgid "notifications.disinfect-smartphone.variant-3.text"
 #~ msgstr "保持手机清洁是防止细菌滋生的另一种好方法。"

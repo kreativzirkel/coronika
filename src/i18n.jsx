@@ -45,9 +45,6 @@ const getMessages = (language) => {
       case 'de':
         messagesList = de_DE.locale_data.messages;
         break;
-      case 'en':
-        messagesList = en_US.locale_data.messages;
-        break;
       case 'es':
         messagesList = es_ES.locale_data.messages;
         break;
@@ -72,6 +69,8 @@ const getMessages = (language) => {
       case 'zh':
         messagesList = zh_CN.locale_data.messages;
         break;
+      default:
+        messagesList = en_US.locale_data.messages;
     }
 
     if (messagesList) {

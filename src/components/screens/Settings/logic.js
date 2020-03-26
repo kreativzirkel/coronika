@@ -158,8 +158,8 @@ const setNotifications = (notifications, __, cb) => {
     const timestamp = getDailyNotificationTimestamp(17, 30);
     PushNotification.localNotificationSchedule({
       ...defaultNotificationOptions,
-      title: __('notifications.desinfect-smartphone.variant-1.headline'),
-      message: __('notifications.desinfect-smartphone.variant-1.text'),
+      title: __('notifications.disinfect-smartphone.variant-1.headline'),
+      message: __('notifications.disinfect-smartphone.variant-1.text'),
       date: new Date(timestamp),
       tag,
       userInfo: { tag },

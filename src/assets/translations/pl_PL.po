@@ -479,61 +479,61 @@ msgstr "Eksportuj Przegląd"
 msgid "overview-screen.header.headline"
 msgstr "Przegląd"
 
-#: src/components/screens/Settings/logic.js:147
+#: src/components/screens/Settings/logic.js:148
 msgid "notifications.diary.headline"
 msgstr "📒Podaj swóje kontakty"
 
-#: src/components/screens/Settings/logic.js:148
+#: src/components/screens/Settings/logic.js:149
 msgid "notifications.diary.text"
 msgstr ""
 "Zaloguj swoje bliskie kontakty i pomóż spowolnić rozprzestrzenianie się "
 "koronaawirusa."
 
-#: src/components/screens/Settings/logic.js:160
-msgid "notifications.desinfect-smartphone.variant-1.headline"
+#: src/components/screens/Settings/logic.js:161
+msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Wyczyść ekran swojego smartfonu"
 
-#: src/components/screens/Settings/logic.js:161
-msgid "notifications.desinfect-smartphone.variant-1.text"
+#: src/components/screens/Settings/logic.js:162
+msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "Usuń zarazki, czyszcząc ekran ściereczką dezynfekującą."
-
-#: src/components/screens/Settings/logic.js:172
-#: src/components/screens/Settings/logic.js:205
-#: src/components/screens/Settings/logic.js:220
-msgid "notifications.washing-hands.variant-1.text"
-msgstr "Jeśli byłeś na zewnątrz, umyj dokładnie ręce."
 
 #: src/components/screens/Settings/logic.js:173
 #: src/components/screens/Settings/logic.js:206
 #: src/components/screens/Settings/logic.js:221
+msgid "notifications.washing-hands.variant-1.text"
+msgstr "Jeśli byłeś na zewnątrz, umyj dokładnie ręce."
+
+#: src/components/screens/Settings/logic.js:174
+#: src/components/screens/Settings/logic.js:207
+#: src/components/screens/Settings/logic.js:222
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 Umyj ręce"
 
-#: src/components/screens/Settings/logic.js:177
-#: src/components/screens/Settings/logic.js:210
-#: src/components/screens/Settings/logic.js:225
+#: src/components/screens/Settings/logic.js:178
+#: src/components/screens/Settings/logic.js:211
+#: src/components/screens/Settings/logic.js:226
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Mycie rąk jest jednym z najprostszych sposobów, aby chronić siebie i innych "
 "przed chorobami."
 
-#: src/components/screens/Settings/logic.js:178
-#: src/components/screens/Settings/logic.js:211
-#: src/components/screens/Settings/logic.js:226
+#: src/components/screens/Settings/logic.js:179
+#: src/components/screens/Settings/logic.js:212
+#: src/components/screens/Settings/logic.js:227
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Czy umyłeś ręce?"
 
-#: src/components/screens/Settings/logic.js:182
-#: src/components/screens/Settings/logic.js:215
-#: src/components/screens/Settings/logic.js:230
+#: src/components/screens/Settings/logic.js:183
+#: src/components/screens/Settings/logic.js:216
+#: src/components/screens/Settings/logic.js:231
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Ćwiczcie uważne mycie rąk i nie zapomnijcie umyć końcówek palców i "
 "przestrzeni między palcami."
 
-#: src/components/screens/Settings/logic.js:183
-#: src/components/screens/Settings/logic.js:216
-#: src/components/screens/Settings/logic.js:231
+#: src/components/screens/Settings/logic.js:184
+#: src/components/screens/Settings/logic.js:217
+#: src/components/screens/Settings/logic.js:232
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 Nie zapomnij o swoich wskazówkach!"
 
@@ -843,17 +843,17 @@ msgstr "Łącznie"
 msgid "placeholder.search-input"
 msgstr "Szukaj"
 
-#~ msgid "notifications.desinfect-smartphone.variant-2.headline"
+#~ msgid "notifications.disinfect-smartphone.variant-2.headline"
 #~ msgstr "📱🧽 Utrzymuj swój ekran w czystości"
 
-#~ msgid "notifications.desinfect-smartphone.variant-2.text"
+#~ msgid "notifications.disinfect-smartphone.variant-2.text"
 #~ msgstr ""
 #~ "Uwolnij swój ekran od licznych zarazków, bakterii i innych patogenów."
 
-#~ msgid "notifications.desinfect-smartphone.variant-3.headline"
+#~ msgid "notifications.disinfect-smartphone.variant-3.headline"
 #~ msgstr "📱🧽 Odezynfekuj swój telefon"
 
-#~ msgid "notifications.desinfect-smartphone.variant-3.text"
+#~ msgid "notifications.disinfect-smartphone.variant-3.text"
 #~ msgstr ""
 #~ "Utrzymywanie telefonu w czystości to kolejny sprytny sposób na trzymanie "
 #~ "zarazków z dala od palców."
