@@ -252,9 +252,9 @@ msgstr "Personen importieren"
 #: src/components/screens/Directory/ui.jsx:157
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
-"Importiere Personen von Telefonbuch, damit du direkt loslegen kannst. Alle "
-"deine Personen werden lokal gespeichert. Keine Daten werden getrackt oder "
-"weitergegeben."
+"Importiere Personen aus deinem Telefonbuch, damit du direkt loslegen kannst. "
+"Alle deine Personen werden lokal gespeichert. Keine Daten werden getrackt "
+"oder weitergegeben."
 
 #: src/components/screens/Directory/ui.jsx:163
 msgid "directory-screen.modals.import-persons.button.importing"
@@ -500,7 +500,7 @@ msgstr "📱🧽 Reinige dein Smartphone"
 
 #: src/components/screens/Settings/logic.js:162
 msgid "notifications.disinfect-smartphone.variant-1.text"
-msgstr "Befreie dein Handy von möglichen Keimen mit einem Desinfiktionstuch."
+msgstr "Befreie dein Handy von möglichen Keimen mit einem Desinfektionstuch."
 
 #: src/components/screens/Settings/logic.js:173
 #: src/components/screens/Settings/logic.js:206

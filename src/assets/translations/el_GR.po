@@ -22,447 +22,561 @@ msgstr ""
 #: src/components/App/ui.jsx:144
 msgid "app.share.message"
 msgstr ""
+"Μην αφήνεις τον κορονοϊό να σου προκαλέσει πανικό. Μείνε ενημερωμένος και "
+"βοήθησε τους ανθρώπους γύρω σου…\n"
+"✅…καταγράφωντας επαφές και τοποθεσίες τις οποίες επισκέφτηκες\n"
+"✅…ακολουθώντας τις συμβουλές υγιεινής\n"
+"✅…ψάχνοντας αξιόπιστες πηγές πληροφοριών\n"
+"Μείνε υγιείς και θυμήσου να πλένεις τακτικά τα χέρια σου! ✋😉 https://"
+"coronika.app/"
 
 #: src/components/App/ui.jsx:75
 msgid "navigation.directory.label"
-msgstr ""
+msgstr "Κατάλογος"
 
 #: src/components/App/ui.jsx:78
 msgid "navigation.dashboard.label"
-msgstr ""
+msgstr "Ημερολόγιο"
 
 #: src/components/App/ui.jsx:81
 msgid "navigation.share.label"
-msgstr ""
+msgstr "Κοινοποίηση"
 
 #: src/components/App/ui.jsx:84
 msgid "navigation.tips.label"
-msgstr ""
+msgstr "Συμβουλές"
 
 #: src/components/partials/EntriesTabsView.jsx:618
 #: src/components/widgets/DayOverview.jsx:139
 msgid "persons"
-msgstr ""
+msgstr "επαφές"
 
 #: src/components/partials/EntriesTabsView.jsx:628
 #: src/components/widgets/DayOverview.jsx:123
 msgid "locations"
-msgstr ""
+msgstr "τοποθεσίες"
 
 #: src/components/partials/EntriesTabsView.jsx:640
 msgid "entries.persons.list.new"
-msgstr ""
+msgstr "Νέα επαφή"
 
 #: src/components/partials/EntriesTabsView.jsx:661
 #: src/components/partials/EntriesTabsView.jsx:711
 msgid "entries.search.list.empty"
-msgstr ""
+msgstr "Δεν βρέθηκε τίποτα στην αναζήτησή σου."
 
 #: src/components/partials/EntriesTabsView.jsx:668
 msgid "entries.persons.list.empty"
 msgstr ""
+"Δεν έχεις δημιουργήσει καμία επαφή εως τώρα. Για να ξεκινήσεις, μπορείς να "
+"εισάγεις άτομα από τον τηλεφωνικό σου κατάλογο."
 
 #: src/components/partials/EntriesTabsView.jsx:672
 msgid "entries.persons.list.import.button"
-msgstr ""
+msgstr "Εισαγωγή τώρα"
 
 #: src/components/partials/EntriesTabsView.jsx:691
 msgid "entries.locations.list.new"
-msgstr ""
+msgstr "Νέα τοποθεσία"
 
 #: src/components/partials/EntriesTabsView.jsx:714
 msgid "entries.locations.list.empty"
 msgstr ""
+"Δεν έχεις δημιουργήσει καμία τοποθεσία εως τώρα. Ξεκίνησε τώρα και "
+"δημιούργησε την πρώτη σου τοποθεσία."
 
 #: src/components/partials/EntriesTabsView.jsx:730
 msgid "entries.selection.add"
-msgstr ""
+msgstr "Προσθήκη επιλογής"
 
 #: src/components/partials/EntriesTabsView.jsx:742
 msgid "entries.modals.update-person.headline"
-msgstr ""
+msgstr "Επεξεργασία προσώπου"
 
 #: src/components/partials/EntriesTabsView.jsx:743
 msgid "entries.modals.new-person.headline"
-msgstr ""
+msgstr "Νέα επαφή"
 
 #: src/components/partials/EntriesTabsView.jsx:754
 msgid "entries.modals.new-person.placeholder.name"
-msgstr ""
+msgstr "Όνομα"
 
 #: src/components/partials/EntriesTabsView.jsx:766
 msgid "entries.modals.new-person.placeholder.phone-number"
-msgstr ""
+msgstr "Τηλέφωνο"
 
 #: src/components/partials/EntriesTabsView.jsx:779
 msgid "entries.modals.update-person.button"
-msgstr ""
+msgstr "Αποθήκευση"
 
 #: src/components/partials/EntriesTabsView.jsx:780
 msgid "entries.modals.new-person.button"
-msgstr ""
+msgstr "Προσθήκη"
 
 #: src/components/partials/EntriesTabsView.jsx:792
 msgid "entries.modals.update-location.headline"
-msgstr ""
+msgstr "Επεξεργασία τοποθεσίας"
 
 #: src/components/partials/EntriesTabsView.jsx:793
 msgid "entries.modals.new-location.headline"
-msgstr ""
+msgstr "Νέα τοποθεσία"
 
 #: src/components/partials/EntriesTabsView.jsx:804
 msgid "entries.modals.new-location.placeholder.title"
-msgstr ""
+msgstr "Τίτλος"
 
 #: src/components/partials/EntriesTabsView.jsx:815
 msgid "entries.modals.new-location.placeholder.description"
-msgstr ""
+msgstr "Περιγραφή"
 
 #: src/components/partials/EntriesTabsView.jsx:828
 msgid "entries.modals.update-location.button"
-msgstr ""
+msgstr "Αποθήκευση"
 
 #: src/components/partials/EntriesTabsView.jsx:829
 msgid "entries.modals.new-location.button"
-msgstr ""
+msgstr "Προσθήκη"
 
 #: src/components/partials/EntriesTabsView.jsx:839
 msgid "entries.modals.select-location.headline"
-msgstr ""
+msgstr "Επέλεξε τοποθεσία"
 
 #: src/components/partials/EntriesTabsView.jsx:858
 msgid "entries.modals.select-location.placeholder.description"
-msgstr ""
+msgstr "Περιγραφή"
 
 #: src/components/partials/EntriesTabsView.jsx:873
 msgid "Cancel"
-msgstr ""
+msgstr "Ματαίωση"
 
 #: src/components/partials/EntriesTabsView.jsx:874
 msgid "Confirm"
-msgstr ""
+msgstr "Επιβεβαίωση"
 
 #: src/components/partials/EntriesTabsView.jsx:887
 msgid "entries.modals.select-location.button"
-msgstr ""
+msgstr "Επιλογή"
 
 #: src/components/screens/About.jsx:105 src/components/screens/Menu.jsx:101
 msgid "about-screen.header.headline"
-msgstr ""
+msgstr "Σχετικά με τη Coronika"
 
 #: src/components/screens/About.jsx:18 src/components/screens/Welcome/ui.jsx:14
 msgid "welcome-screen.slides.intro.headline"
-msgstr ""
+msgstr "Καταπολέμηση του κορωνοϊού μαζί"
 
 #: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:15
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
+"Κατέγραψε άτομα και τοποθεσίες, ανακατασκεύασε τις διαδρομές μόλυνσης και "
+"βοήθησε να σταματήσει η διάδοση."
 
 #: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:16
 msgid "welcome-screen.slides.intro.button"
-msgstr ""
+msgstr "Τέλεια, θέλω να βοηθήσω κι εγώ"
 
 #: src/components/screens/About.jsx:25 src/components/screens/Welcome/ui.jsx:21
 msgid "welcome-screen.slides.how-to.headline"
-msgstr ""
+msgstr "Ένα ημερολόγιο για τη υγεία μας"
 
 #: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:22
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
+"Σημειώσε ποιον έχεις συναντήσει, τους δημόσιους χώρους που έχεις επισκεφθεί "
+"και σύμβαλλε στην υγεία όλων."
 
 #: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:23
 msgid "welcome-screen.slides.how-to.button"
-msgstr ""
+msgstr "εντάξει"
 
 #: src/components/screens/About.jsx:32 src/components/screens/Welcome/ui.jsx:37
 msgid "welcome-screen.slides.local-data.headline"
-msgstr ""
+msgstr "Τα δεδομένα σου είναι μόνο δικά σου"
 
 #: src/components/screens/About.jsx:33 src/components/screens/Welcome/ui.jsx:38
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
+"Όλα τα δεδομένα που δημιουργούνται και χρησιμοποιούνται από την Coronika "
+"αποθηκεύονται τοπικά και δεν παρακολουθούνται ούτε διαβιβάζονται."
 
 #: src/components/screens/About.jsx:34 src/components/screens/Welcome/ui.jsx:39
 msgid "welcome-screen.slides.local-data.button"
-msgstr ""
+msgstr "Ξεκίνα τώρα"
 
 #: src/components/screens/AddEntry/ui.jsx:10
 msgid "add-entry-screen.header.headline"
-msgstr ""
+msgstr "Προσθήκη καταχώρησης"
 
 #: src/components/screens/Dashboard/ui.jsx:116
 #: src/components/screens/Menu.jsx:120
 msgid "menu-screen.header.headline"
-msgstr ""
+msgstr "Μενού"
 
 #: src/components/screens/Dashboard/ui.jsx:126
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
+"Κάνε κλικ στη σημερινή ημερομηνία για να εισάγεις τα πρώτα σου άτομα ή "
+"τοποθεσίες."
 
 #: src/components/screens/Dashboard/ui.jsx:128
 msgid "Close"
-msgstr ""
+msgstr "Κλείσιμο"
 
 #: src/components/screens/Day/ui.jsx:52
 msgid "day-screen.header.headline"
-msgstr ""
+msgstr "Ημερήσια επισκόπηση"
 
 #: src/components/screens/Day/ui.jsx:59
 msgid "day-screen.locations.empty"
-msgstr ""
+msgstr "Δεν έχεις προσθέσει τοποθεσίες για αυτήν την ημέρα."
 
 #: src/components/screens/Day/ui.jsx:60
 msgid "day-screen.persons.empty"
-msgstr ""
+msgstr "Δεν έχεις προσθέσει καμία επαφή για αυτήν την ημέρα."
 
 #: src/components/screens/Day/ui.jsx:71
 msgid "day-screen.entries.add"
-msgstr ""
+msgstr "Προσθήκη καταχώρησης"
 
 #: src/components/screens/Directory/ui.jsx:129
 msgid "directory-screen.header.button.import"
-msgstr ""
+msgstr "Εισαγωγή"
 
 #: src/components/screens/Directory/ui.jsx:133
 msgid "directory-screen.header.headline"
-msgstr ""
+msgstr "Διαχείριση καταλόγου"
 
 #: src/components/screens/Directory/ui.jsx:151
 msgid "directory-screen.modals.import-persons.headline"
-msgstr ""
+msgstr "Εισαγωγή επαφών"
 
 #: src/components/screens/Directory/ui.jsx:157
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
+"Κάνε εισαγωγή επαφών από τον τηλεφωνικό σου κατάλογο, ώστε να μπορείς να "
+"ξεκινήσεις αμέσως. Όλες οι επαφές σου αποθηκεύονται σε τοπικό επίπεδο. Δεν "
+"παρακολουθούνται και δεν κοινοποιούνται δεδομένα."
 
 #: src/components/screens/Directory/ui.jsx:163
 msgid "directory-screen.modals.import-persons.button.importing"
-msgstr ""
+msgstr "Εισαγωγή ..."
 
 #: src/components/screens/Directory/ui.jsx:164
 msgid "directory-screen.modals.import-persons.button.default"
-msgstr ""
+msgstr "Εισαγωγή τώρα"
 
 #: src/components/screens/Export/ui.jsx:50
 msgid "export-screen.header.headline"
-msgstr ""
+msgstr "Εξαγωγή"
 
 #: src/components/screens/Export/ui.jsx:54
 msgid "export-screen.content.section-1.headline"
-msgstr ""
+msgstr "Η σύνοψή σου"
 
 #: src/components/screens/Export/ui.jsx:55
 msgid "export-screen.content.section-1.text"
 msgstr ""
+"Μαζί μπορούμε να κατανοήσουμε τις διαδρομές μόλυνσης ενημερώνοντας τις "
+"υγειονομικές αρχές και τους ανθρώπους γύρω σου."
 
 #: src/components/screens/Export/ui.jsx:56
 msgid "export-screen.content.section-2.headline"
-msgstr ""
+msgstr "Με μεγάλη δύναμη έρχεται μεγάλη ευθύνη"
 
 #: src/components/screens/Export/ui.jsx:57
 msgid "export-screen.content.section-2.text"
 msgstr ""
+"Λάβετε υπόψη ότι τα δεδομένα είναι πολύ ευαίσθητα. Συνιστάται ιδιαίτερα να "
+"μην τα μοιράζεσαι ηλεκτρονικά ή με τυχαίους ανθρώπους."
 
 #: src/components/screens/Export/ui.jsx:58
 msgid "export-screen.coming-soon"
-msgstr ""
+msgstr "Έρχεται συντομα!"
 
 #: src/components/screens/Legal.jsx:102
 msgid "legal-screen.imprint.section-1.headline"
-msgstr ""
+msgstr "Η διαχείριση της εφαρμογής \"Coronika\" γίνεται από"
 
 #: src/components/screens/Legal.jsx:103
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
+"Kreativzirkel UG (haftungsbeschränkt)\n"
+"Schirmerstrasse 61\n"
+"40211 Düsseldorf\n"
+"\n"
+"Phone +49 174 811 1212\n"
+"\n"
+"E-mail info@kreativzirkel.de\n"
+"\n"
+"Managing Director Alexander Braden\n"
+"\n"
+"Register court: AG Düsseldorf\n"
+"Registration number: HRB 82252\n"
+"VAT ID: DE 300 611 389"
 
 #: src/components/screens/Legal.jsx:104
 msgid "legal-screen.imprint.section-2.headline"
-msgstr ""
+msgstr "Ευθύνη για το περιεχόμενο"
 
 #: src/components/screens/Legal.jsx:105
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
+"Ως πάροχος υπηρεσιών, είμαστε υπεύθυνοι για το δικό μας περιεχόμενο σε αυτές "
+"τις σελίδες, σύμφωνα με το άρθρο 7 παράγραφος 1 TMG (German Telemedia Act) "
+"και τους γενικούς νόμους. Σύμφωνα με τις §§ 8 έως 10 TMG, δεν είμαστε "
+"υποχρεωμένοι να παρακολουθούμε μεταδιδόμενες ή αποθηκευμένες εξωτερικές "
+"πληροφορίες ή να διερευνώνται περιστάσεις που υποδεικνύουν παράνομη "
+"δραστηριότητα. Οι υποχρεώσεις κατάργησης ή παρεμπόδισης της χρήσης "
+"πληροφοριών σύμφωνα με τους γενικούς νόμους παραμένουν ανεπηρέαστες. Ωστόσο, "
+"η ευθύνη από την άποψη αυτή είναι δυνατή μόνο από τη στιγμή της γνώσης μιας "
+"συγκεκριμένης παράβασης. Εάν διαπιστώσουμε τέτοιες παραβάσεις, θα "
+"καταργήσουμε αμέσως αυτό το περιεχόμενο."
 
 #: src/components/screens/Legal.jsx:106
 msgid "legal-screen.imprint.section-3.headline"
-msgstr ""
+msgstr "Ευθύνη για συνδέσμους"
 
 #: src/components/screens/Legal.jsx:107
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
+"Η προσφορά μας περιέχει συνδέσμους προς εξωτερικούς ιστότοπους τρίτων, για "
+"το περιεχόμενο των οποίων δεν έχουμε καμία επιρροή. Επομένως δεν μπορούμε να "
+"αναλάβουμε καμία ευθύνη για αυτά τα εξωτερικά περιεχόμενα. Ο αντίστοιχος "
+"πάροχος ή χειριστής των τοποθεσιών είναι πάντα υπεύθυνος για το περιεχόμενο "
+"των συνδεδεμένων ιστότοπων. Οι συνδεδεμένες σελίδες ελέγχθηκαν για πιθανές "
+"νομικές παραβάσεις κατά τη σύνδεση. Το παράνομο περιεχόμενο δεν ήταν "
+"αναγνωρίσιμο κατά τη σύνδεση. Ωστόσο, ο μόνιμος έλεγχος του περιεχομένου των "
+"συνδεδεμένων σελίδων δεν είναι λογικό χωρίς συγκεκριμένες ενδείξεις "
+"παραβίασης του νόμου. Εάν διαπιστώσουμε τυχόν παραβάσεις, θα καταργήσουμε "
+"αμέσως αυτούς τους συνδέσμους."
 
 #: src/components/screens/Legal.jsx:108
 msgid "legal-screen.imprint.section-4.headline"
-msgstr ""
+msgstr "Πνευματική ιδιοκτησία"
 
 #: src/components/screens/Legal.jsx:109
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
+"Το περιεχόμενο και οι εργασίες σε αυτές τις σελίδες που δημιουργούνται από "
+"τους φορείς εκμετάλλευσης υπόκεινται στη γερμανική νομοθεσία περί "
+"πνευματικών δικαιωμάτων. Η αναπαραγωγή, επεξεργασία, διανομή και οποιαδήποτε "
+"χρήση εκτός των ορίων της νομοθεσίας περί πνευματικής ιδιοκτησίας απαιτεί τη "
+"γραπτή συγκατάθεση του αντίστοιχου συγγραφέα ή δημιουργού. Οι λήψεις και τα "
+"αντίγραφα αυτών των σελίδων επιτρέπονται μόνο για ιδιωτική, μη εμπορική "
+"χρήση. Εφόσον το περιεχόμενο σε αυτόν τον ιστότοπο δεν δημιουργήθηκε από τον "
+"χειριστή, τηρούνται τα πνευματικά δικαιώματα τρίτων. Συγκεκριμένα, το "
+"περιεχόμενο τρίτου μέρους επισημαίνεται ως τέτοιο. Σε περίπτωση που "
+"διαπιστώσετε παραβίαση πνευματικών δικαιωμάτων, ενημερώστε μας σχετικά. Εάν "
+"διαπιστώσουμε τυχόν παραβάσεις, θα καταργήσουμε αμέσως αυτά τα περιεχόμενα."
 
 #: src/components/screens/Legal.jsx:61 src/components/screens/Menu.jsx:109
 msgid "legal-screen.header.headline"
-msgstr ""
+msgstr "Νομικά"
 
 #: src/components/screens/Legal.jsx:68
 msgid "legal-screen.tabs.privacy.label"
-msgstr ""
+msgstr "Προστασία δεδομένων "
 
 #: src/components/screens/Legal.jsx:73
 msgid "legal-screen.tabs.imprint.label"
-msgstr ""
+msgstr "Στοιχεία έκδοσης "
 
 #: src/components/screens/Legal.jsx:83
 msgid "legal-screen.privacy.section-1.headline"
-msgstr ""
+msgstr "Επεξεργασία δεδομένων της εφαρμογής"
 
 #: src/components/screens/Legal.jsx:84
 msgid "legal-screen.privacy.section-1.text"
 msgstr ""
+"Το App Coronika επεξεργάζεται προσωπικά δεδομένα και δεδομένα σχετικά με τη "
+"τοποθεσία αποκλειστικά τοπικά στο smartphone του χρήστη."
 
 #: src/components/screens/Legal.jsx:85
 msgid "legal-screen.privacy.section-2.headline"
-msgstr ""
+msgstr "Προσωπικά δεδομένα"
 
 #: src/components/screens/Legal.jsx:86
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
+"Ο χρήστης μπορεί να καταχωρήσει άτομα μέσα στην εφαρμογή. Το όνομα και ο "
+"αριθμός τηλεφώνου αποθηκεύονται. Επιπλέον, είναι δυνατή η εισαγωγή του "
+"τηλεφωνικού καταλόγου του smartphone. Τα ονόματα και οι αριθμοί τηλεφώνου "
+"των καταχωρήσεων του τηλεφωνικού καταλόγου μεταφέρονται στην εφαρμογή. Όλα "
+"τα δεδομένα παραμένουν τοπικά στο smartphone και επομένως στα χέρια του "
+"χρήστη. Τα δεδομένα δεν μεταβιβάζονται ποτέ στον πάροχο της εφαρμογής ή σε "
+"τρίτους."
 
 #: src/components/screens/Legal.jsx:87
 msgid "legal-screen.privacy.section-3.headline"
-msgstr ""
+msgstr "Τοπικά δεδομένα"
 
 #: src/components/screens/Legal.jsx:88
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
+"Ο χρήστης μπορεί να δημιουργήσει τοποθεσίες εντός της εφαρμογής. Το όνομα "
+"της τοποθεσίας και μια περιγραφή αποθηκεύονται. Η τοποθεσία του χρήστη μέσω "
+"υπηρεσιών εντοπισμού θέσης (π.χ. GPS ή παρόμοιου) δεν είναι προσβάσιμη σε "
+"καμία περίπτωση. Τα δεδομένα σχετικά με τη θέση παραμένουν επίσης τοπικά στο "
+"smartphone του χρήστη και δεν μεταδίδονται στον πάροχο της εφαρμογής ή σε "
+"τρίτους."
 
 #: src/components/screens/Legal.jsx:89
 msgid "legal-screen.privacy.section-4.headline"
-msgstr ""
+msgstr "Ημερολόγιο"
 
 #: src/components/screens/Legal.jsx:90
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
+"Μέσα στο ημερολόγιο, ο χρήστης κατατάσσει καθημερινά άτομα και μέρη σε "
+"μεμονωμένες ημέρες. Εκτός από τα δεδομένα που έχουν ήδη συλλεχθεί, "
+"αποθηκεύεται επίσης μια ώρα για τις τοποθεσίες. Το ημερολόγιο και όλες οι "
+"καταχωρήσεις παραμένουν επίσης τοπικά στο smartphone του χρήστη και δεν "
+"μεταδίδονται στον πάροχο της εφαρμογής ή σε τρίτους."
 
 #: src/components/screens/Legal.jsx:91
 msgid "legal-screen.privacy.section-5.headline"
-msgstr ""
+msgstr "Εξαγωγή"
 
 #: src/components/screens/Legal.jsx:92
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
+"Μέσα στην εφαρμογή ο χρήστης έχει τη δυνατότητα να εξάγει ένα τμήμα του "
+"ημερολογίου ως αρχείο PDF. Το αρχείο PDF δημιουργείται τοπικά στο smartphone "
+"του χρήστη. Αυτό το αρχείο PDF μπορεί να χρησιμοποιηθεί για να παρέχει στις "
+"υγειονομικές αρχές ή σε άλλους επίσημους οργανισμούς έναν κατάλογο επαφών σε "
+"μια επιλεγμένη χρονική περίοδο για την ανίχνευση διαδρομών μόλυνσης και, εάν "
+"είναι απαραίτητο, για την ενημέρωση άλλων ατόμων για πιθανή μόλυνση. Ο "
+"χρήστης είναι υπεύθυνος για το υπεύθυνο χειρισμό και την προσεκτική μετάδοση "
+"του αρχείου PDF και των δεδομένων που περιέχονται σε αυτό."
 
 #: src/components/screens/Legal.jsx:93
 msgid "legal-screen.privacy.section-6.headline"
-msgstr ""
+msgstr "Μεταφορά δεδομένων και παρακολούθηση"
 
 #: src/components/screens/Legal.jsx:94
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
+"Η εφαρμογή δεν παρέχει αυτοματοποιημένη παρακολούθηση ή μεταφορά δεδομένων "
+"στον πάροχο της ή σε τρίτους. Η μόνη εξαίρεση είναι η λειτουργία εξαγωγής. "
+"Ωστόσο, μόνο ο χρήστης αποφασίζει σε ποιον διαβιβάζονται τα δεδομένα. "
+"Διαφορετικά, όλα τα δεδομένα παραμένουν τοπικά στο smartphone του χρήστη."
 
 #: src/components/screens/Menu.jsx:105
 #: src/components/screens/Settings/ui.jsx:92
 msgid "settings-screen.header.headline"
-msgstr ""
+msgstr "Ρυθμίσεις"
 
 #: src/components/screens/Menu.jsx:125
 msgid "menu-screen.intro.text"
 msgstr ""
+"Είναι σημαντικό να μην εξαπλωθεί πανικός, αλλά να δημιουργηθεί σαφήνεια και "
+"να διαδοθούν σωστές πληροφορίες."
 
 #: src/components/screens/Menu.jsx:159
 msgid "menu-screen.button.send-feedback"
-msgstr ""
+msgstr "Στείλε τα σχόλιά σου"
 
 #: src/components/screens/Overview/ui.jsx:118
 msgid "overview-screen.export.button"
-msgstr ""
+msgstr "Σύνοψη εξαγωγών"
 
 #: src/components/screens/Overview/ui.jsx:92
 msgid "overview-screen.header.headline"
-msgstr ""
+msgstr "Σύνοψη "
 
 #: src/components/screens/Settings/logic.js:148
 msgid "notifications.diary.headline"
-msgstr ""
+msgstr "📒 Κατέγραψε τις επαφές σου"
 
 #: src/components/screens/Settings/logic.js:149
 msgid "notifications.diary.text"
 msgstr ""
+"Κατέγραψε τις στενές επαφές σου και κάνε μια συμβολή στην επιβράδυνση της "
+"εξάπλωσης του κορωνοϊού."
 
 #: src/components/screens/Settings/logic.js:161
+#, fuzzy
 msgid "notifications.disinfect-smartphone.variant-1.headline"
-msgstr ""
+msgstr "📱🧽 Καθάρισε την οθόνη του smartphone σου"
 
 #: src/components/screens/Settings/logic.js:162
+#, fuzzy
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr ""
+"Απομάκρυνε τα μικρόβια καθαρίζοντας την οθόνη σου με ένα απολυμαντικό "
+"καθαριστικό."
 
 #: src/components/screens/Settings/logic.js:173
 #: src/components/screens/Settings/logic.js:206
 #: src/components/screens/Settings/logic.js:221
 msgid "notifications.washing-hands.variant-1.text"
-msgstr ""
+msgstr "Εάν έχεις βγεί έξω, καθάρισε τα χέρια σου καλά."
 
 #: src/components/screens/Settings/logic.js:174
 #: src/components/screens/Settings/logic.js:207
 #: src/components/screens/Settings/logic.js:222
 msgid "notifications.washing-hands.variant-1.headline"
-msgstr ""
+msgstr "🤚💧 Πλύνε τα χέρια σου"
 
 #: src/components/screens/Settings/logic.js:178
 #: src/components/screens/Settings/logic.js:211
 #: src/components/screens/Settings/logic.js:226
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
+"Το πλύσιμο των χεριών σου είναι ένας από τους απλούστερους τρόπους για να "
+"προστατέψεις τον εαυτό σου και τους άλλους από ασθένειες."
 
 #: src/components/screens/Settings/logic.js:179
 #: src/components/screens/Settings/logic.js:212
 #: src/components/screens/Settings/logic.js:227
 msgid "notifications.washing-hands.variant-2.headline"
-msgstr ""
+msgstr "🤚💧 Έπλυνες τα χέρια σου;"
 
 #: src/components/screens/Settings/logic.js:183
 #: src/components/screens/Settings/logic.js:216
 #: src/components/screens/Settings/logic.js:231
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
+"Πλείνε τα χέρια σου με προσοχή και μην ξεχάσεις να καθαρίσεις τις άκρες των "
+"δακτύλων σου και το διάστημα μεταξύ των δακτύλων."
 
 #: src/components/screens/Settings/logic.js:184
 #: src/components/screens/Settings/logic.js:217
 #: src/components/screens/Settings/logic.js:232
 msgid "notifications.washing-hands.variant-3.headline"
-msgstr ""
+msgstr "🤚💧 Μην ξεχάσεις τις άκρες των δαχτύλων σου!"
 
 #: src/components/screens/Settings/ui.jsx:101
 msgid "settings-screen.notifications.washing-hands.headline"
-msgstr ""
+msgstr "Υπενθύμιση για το πλύσιμο των χεριών"
 
 #: src/components/screens/Settings/ui.jsx:105
 msgid "settings-screen.notifications.washing-hands.option-1.label"
-msgstr ""
+msgstr "Υπενθύμιση 3 φορές την ημέρα"
 
 #: src/components/screens/Settings/ui.jsx:114
 msgid "settings-screen.notifications.washing-hands.option-2.label"
-msgstr ""
+msgstr "Υπενθύμιση 6 φορές την ημέρα"
 
 #: src/components/screens/Settings/ui.jsx:125
 msgid "settings-screen.notifications.disinfect-smartphone.headline"
-msgstr ""
+msgstr "Υπενθύμιση για την απολύμανση του τηλεφώνου"
 
 #: src/components/screens/Settings/ui.jsx:129
 msgid "settings-screen.notifications.disinfect-smartphone.option.label"
-msgstr ""
+msgstr "καθημερινή υπενθύμιση "
 
 #: src/components/screens/Settings/ui.jsx:139
 msgid "settings-screen.notifications.diary.headline"
-msgstr ""
+msgstr "Υπενθύμιση για χρήση ημερολογίου"
 
 #: src/components/screens/Settings/ui.jsx:142
 msgid "settings-screen.notifications.diary.option.label"
-msgstr ""
+msgstr "καθημερινή υπενθύμιση "
 
 #: src/components/screens/Settings/ui.jsx:97
 msgid "settings-screen.notifications.headline"
-msgstr ""
+msgstr "Ειδοποιήσεις"
 
 #: src/components/screens/TipAmIInfected.jsx:102
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:104
@@ -473,16 +587,23 @@ msgstr ""
 #: src/components/screens/TipWashingHands.jsx:104
 #: src/components/screens/Tips.jsx:111
 msgid "tips-screen.header.headline"
-msgstr ""
+msgstr "Συμβουλές υγιεινής"
 
 #: src/components/screens/TipAmIInfected.jsx:107
 #: src/components/screens/Tips.jsx:99
 msgid "tips.am-i-infected.headline"
-msgstr ""
+msgstr "Φοβάμαι ότι έχω κολλήσει τον κορονοιὸ, τι μπορώ να κάνω;"
 
 #: src/components/screens/TipAmIInfected.jsx:108
 msgid "tips.am-i-infected.text"
 msgstr ""
+"Εάν ανησυχείς ότι μπορεί να έχεις μολυνθεί, μείνε στο σπίτι για να μην "
+"μολύνεις άλλους ανθρώπους. Επικοινώνησε με τον οικογενειακό γιατρό ή τις "
+"υγειονομικές αρχές τηλεφωνικά. Εάν είσαι πράγματι μολυσμένος με κορονοϊό, "
+"ενημέρωσε το γιατρό σου και τις υγειονομικές αρχές σχετικά με το ημερολόγιο "
+"Coronika για να περιορίσεις την εξάπλωση της νόσου. Σε αυτή την περίπτωση "
+"μπορείς απλά να εξάγεις το ημερολόγιό σου και να το στείλεις στις αρμόδιες "
+"αρχές."
 
 #: src/components/screens/TipAmIInfected.jsx:124
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:126
@@ -491,7 +612,7 @@ msgstr ""
 #: src/components/screens/TipNotFeelingWell.jsx:127
 #: src/components/screens/TipWashingHands.jsx:126
 msgid "tips.sources.headline"
-msgstr ""
+msgstr "Πηγές"
 
 #: src/components/screens/TipAmIInfected.jsx:133
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:137
@@ -500,206 +621,249 @@ msgstr ""
 #: src/components/screens/TipNotFeelingWell.jsx:134
 #: src/components/screens/TipWashingHands.jsx:140
 msgid "tips.sources.last-updated"
-msgstr ""
+msgstr "Τελευταία ενημέρωση:"
 
 #: src/components/screens/TipAmIInfected.jsx:95
 msgid "tips.am-i-infected.list.item-1"
-msgstr ""
+msgstr "Μείνε σπίτι"
 
 #: src/components/screens/TipAmIInfected.jsx:96
 msgid "tips.am-i-infected.list.item-2"
-msgstr ""
+msgstr "Επικοινώνησε με το γιατρό σου"
 
 #: src/components/screens/TipAmIInfected.jsx:97
 msgid "tips.am-i-infected.list.item-3"
-msgstr ""
+msgstr "Πες για το ημερολόγιό σου από τη Coronika"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:109
 #: src/components/screens/Tips.jsx:83
 msgid "tips.avoid-crowds-of-people.headline"
-msgstr ""
+msgstr "Απέφευγε πλήθη ανθρώπων"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:110
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
+"Εάν είναι δυνατό, μη χρησιμοποιείς τα μέσα μαζικής μεταφοράς και αντ 'αυτού "
+"εργάσου από το σπίτι. Σε γενικές γραμμές, οι επαφές με άλλους ανθρώπους "
+"πρέπει να μειωθούν όσο το δυνατό περισσότερο."
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:95
 msgid "tips.avoid-crowds-of-people.list.item-1"
-msgstr ""
+msgstr "Απέφευγε μεγάλες δημόσιες συναντήσεις εάν δεν είναι απαραίτητες"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:96
 msgid "tips.avoid-crowds-of-people.list.item-2"
 msgstr ""
+"Για μικρές αποστάσεις προτίμησε να περπατάς αντί να χρησιμοποιείς τα μέσα "
+"μαζικής μεταφοράς"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:97
 msgid "tips.avoid-crowds-of-people.list.item-3"
-msgstr ""
+msgstr "πλύνε τα χέρια σου τακτικά και σχολαστικά"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:98
 msgid "tips.avoid-crowds-of-people.list.item-4"
-msgstr ""
+msgstr "διατήρησε απόσταση περίπου 2 μέτρων μεταξύ εσού και άλλων ανθρώπων"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:99
 msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr ""
+"κάλυψε τον βήχα και το φτάρνισμά σου με ένα χαρτομάντιλο ή με την μασχάλη σου"
 
 #: src/components/screens/TipCoughingSneezing.jsx:109
 #: src/components/screens/Tips.jsx:91
 msgid "tips.coughing-sneezing.headline"
-msgstr ""
+msgstr "Βήχας και φτάρνισμα όπως αρμόζει"
 
 #: src/components/screens/TipCoughingSneezing.jsx:110
 msgid "tips.coughing-sneezing.text"
-msgstr ""
+msgstr "Για να αποτρέψεις την εξάπλωση ιών, δώσε προσοχή στα παρακάτω:"
 
 #: src/components/screens/TipCoughingSneezing.jsx:95
 msgid "tips.coughing-sneezing.list.item-1"
-msgstr ""
+msgstr "διατήρησε απόσταση περίπου 2 μέτρων μεταξύ εσού και άλλων ανθρώπων"
 
 #: src/components/screens/TipCoughingSneezing.jsx:96
 msgid "tips.coughing-sneezing.list.item-2"
-msgstr ""
+msgstr "Γύρισε την πλάτη σε άλλους ανθρώπους"
 
 #: src/components/screens/TipCoughingSneezing.jsx:97
 msgid "tips.coughing-sneezing.list.item-3"
 msgstr ""
+"κάλυψε τον βήχα και το φτάρνισμά σου με ένα χαρτομάντιλο ή με την μασχάλη σου"
 
 #: src/components/screens/TipCoughingSneezing.jsx:98
 msgid "tips.coughing-sneezing.list.item-4"
-msgstr ""
+msgstr "Πέταξε χρησιμοποιημένα χαρτομάντιλα στα σκουπίδια"
 
 #: src/components/screens/TipCoughingSneezing.jsx:99
 msgid "tips.coughing-sneezing.list.item-5"
-msgstr ""
+msgstr "πλύνε στη συνέχεια τα χέρια σου "
 
 #: src/components/screens/TipMouthguard.jsx:100
 msgid "tips.mouthguard.list.item-3"
-msgstr ""
+msgstr "γίνεται υγρή μέσω της αναπνοής"
 
 #: src/components/screens/TipMouthguard.jsx:101
 msgid "tips.mouthguard.list.item-4"
-msgstr ""
+msgstr "δεν ανανεώνεται περισσότερες φορές καθημερινά"
 
 #: src/components/screens/TipMouthguard.jsx:111
 #: src/components/screens/Tips.jsx:87
 msgid "tips.mouthguard.headline"
-msgstr ""
+msgstr "Επιστόμιο, ναι ή όχι;"
 
 #: src/components/screens/TipMouthguard.jsx:112
 msgid "tips.mouthguard.text-1"
 msgstr ""
+"Οι μάσκες είναι απαραίτητες για όλους τους τομείς της υγείας. Για τους "
+"ασθενείς ή άτομα με συμπτώματα COVID-19 οι μάσκες αποτελούν ένα από τα "
+"σημαντικότερα μέτρα πρόληψης και ελέγχου λοιμώξεων. Φόρεσε μια μάσκα μόνο "
+"εάν ο γιατρός σου στο συνιστήσει. Διαφορετικά απλά ακολούθησε τους κανόνες "
+"υγιεινής."
 
 #: src/components/screens/TipMouthguard.jsx:114
 msgid "tips.mouthguard.text-2"
 msgstr ""
+"Οι Γιατροί φοράνε μάσκες για να μειώσουν την εξάπλωση μικροσκοπικών "
+"σταγονιδίων όταν βήχουν ή φταρνίζονται."
 
 #: src/components/screens/TipMouthguard.jsx:119
 msgid "tips.mouthguard.list.intro"
-msgstr ""
+msgstr "Η χρήση μιας μάσκας έξω από το χειρουργίο δεν έχει καμία επίδραση εαν:"
 
 #: src/components/screens/TipMouthguard.jsx:98
 msgid "tips.mouthguard.list.item-1"
-msgstr ""
+msgstr "η μάσκα είναι κατασκευασμένη από χαρτί"
 
 #: src/components/screens/TipMouthguard.jsx:99
 msgid "tips.mouthguard.list.item-2"
-msgstr ""
+msgstr "η μάσκα δεν ταιριάζει σφιχτά στο πρόσωπο ή παρουσιάζει διαρροή"
 
 #: src/components/screens/TipNotFeelingWell.jsx:108
 #: src/components/screens/Tips.jsx:95
 msgid "tips.not-feeling-well.headline"
-msgstr ""
+msgstr "Δεν αισθάνομαι καλά, έχω τον κορονοιό;"
 
 #: src/components/screens/TipNotFeelingWell.jsx:109
 msgid "tips.not-feeling-well.text"
 msgstr ""
+"Ασθενείς με συμπτώματα γρίπης δεν είναι απαραίτητα φορείς του ιού SARS-"
+"CoV-2. Θα πρέπει πάντα να ενημερώνεσε για τα συμπτώματά σου και να "
+"επικοινωνείς με το γιατρό σου."
 
 #: src/components/screens/TipNotFeelingWell.jsx:113
 msgid "tips.not-feeling-well.list.intro"
-msgstr ""
+msgstr "Τα τυπικά συμπτώματα του COVID-19 σύμφωνα με την WHO είναι:"
 
 #: src/components/screens/TipNotFeelingWell.jsx:95
 msgid "tips.not-feeling-well.list.item-1"
-msgstr ""
+msgstr "αναπνευστικά συμπτώματα"
 
 #: src/components/screens/TipNotFeelingWell.jsx:96
 msgid "tips.not-feeling-well.list.item-2"
-msgstr ""
+msgstr "πυρετός"
 
 #: src/components/screens/TipNotFeelingWell.jsx:97
 msgid "tips.not-feeling-well.list.item-3"
-msgstr ""
+msgstr "βήχας"
 
 #: src/components/screens/TipNotFeelingWell.jsx:98
 msgid "tips.not-feeling-well.list.item-4"
-msgstr ""
+msgstr "δυσκολία στην αναπνοή"
 
 #: src/components/screens/TipReliableSources.jsx:81
 #: src/components/screens/Tips.jsx:103
 msgid "tips.reliable-sources.headline"
-msgstr ""
+msgstr "Πού μπορώ να βρω αξιόπιστες πηγές;"
 
 #: src/components/screens/TipReliableSources.jsx:82
 msgid "tips.reliable-sources.text"
-msgstr ""
+msgstr "Ενημερωτικές ιστοσελίδες"
 
 #: src/components/screens/Tips.jsx:116
 msgid "tips-screen.intro.text"
 msgstr ""
+"Εδώ θα βρείς πληροφορείες που θα σε βοηθήσουν να μειώσεις όσο το δυνατό "
+"περισσότερο τον κίνδυνο μόλυνσης και να κάνεις το σωστό σε περίπτωση "
+"μόλυνσης."
 
 #: src/components/screens/TipWashingHands.jsx:109
 #: src/components/screens/Tips.jsx:79
 msgid "tips.washing-hands.headline"
-msgstr ""
+msgstr "Πλένοντας τα χέρια σου"
 
 #: src/components/screens/TipWashingHands.jsx:110
 msgid "tips.washing-hands.text"
 msgstr ""
+"Το πλύσιμο των χεριών σου είναι εύκολο και είναι ένας από τους πιο "
+"αποτελεσματικούς τρόπους για την αποτροπή εξάπλωσης μικροβίων. Τα καθαρά "
+"χέρια μπορούν να σταματήσουν τη διάδοση μικροβίων. Απλά ακολούθησε αυτά τα "
+"πέντε βήματα:"
 
 #: src/components/screens/TipWashingHands.jsx:95
 msgid "tips.washing-hands.list.item-1"
-msgstr ""
+msgstr "Βρέξε τα χέρια σου με καθαρό, τρεχούμενο νερό (ζεστό ή κρύο)"
 
 #: src/components/screens/TipWashingHands.jsx:96
 msgid "tips.washing-hands.list.item-2"
-msgstr ""
+msgstr "εφάρμοσε σαπούνι και τρίψε καλά τα χέρια σου."
 
 #: src/components/screens/TipWashingHands.jsx:97
 msgid "tips.washing-hands.list.item-3"
 msgstr ""
+"Τρίψε το πίσω μέρος των χεριών, τους αντίχειρες, τα νύχια και το μέρος "
+"ανάμεσα στα δάχτυλά σου για περίπου 30-60 δευτερόλεπτα."
 
 #: src/components/screens/TipWashingHands.jsx:98
 msgid "tips.washing-hands.list.item-4"
-msgstr ""
+msgstr "Ξέπλυνε τα χέρια σου καλά κάτω από καθαρό, τρεχούμενο νερό."
 
 #: src/components/screens/TipWashingHands.jsx:99
 msgid "tips.washing-hands.list.item-5"
-msgstr ""
+msgstr "Στέγνωσε τα χέρια σου χρησιμοποιώντας μια καθαρή πετσέτα ή στεγνωτήρα."
 
 #: src/components/screens/Welcome/ui.jsx:28
 msgid "welcome-screen.slides.notifications.headline"
-msgstr ""
+msgstr "Έπλυνες τα χέρια σου;"
 
 #: src/components/screens/Welcome/ui.jsx:29
 msgid "welcome-screen.slides.notifications.text"
 msgstr ""
+"Ενεργοποίησε τις ειδοποιήσεις σου και θα υπενθυμίζεσε τακτικά να πλένεις τα "
+"χέρια σου για να αποφύγεις τη μόλυνση."
 
 #: src/components/screens/Welcome/ui.jsx:30
 msgid "welcome-screen.slides.notifications.button-skip"
-msgstr ""
+msgstr "Παράλειψη"
 
 #: src/components/screens/Welcome/ui.jsx:31
 msgid "welcome-screen.slides.notifications.button"
-msgstr ""
+msgstr "Ενεργοποίηση τώρα"
 
 #: src/components/widgets/DayOverview.jsx:115
 msgid "today"
-msgstr ""
+msgstr "σήμερα"
 
 #: src/components/widgets/DayOverview.jsx:119
 msgid "total"
-msgstr ""
+msgstr "σύνολο"
 
 #: src/components/widgets/SearchBar.jsx:57
 msgid "placeholder.search-input"
-msgstr ""
+msgstr "Αναζήτηση"
+
+#~ msgid "notifications.desinfect-smartphone.variant-2.headline"
+#~ msgstr "📱🧽 Κράτα την οθόνη σου καθαρή"
+
+#~ msgid "notifications.desinfect-smartphone.variant-2.text"
+#~ msgstr ""
+#~ "Απομάκρυνε από την οθόνη σου διάφορα μικρόβια, βακτήρια και άλλα παθογόνα."
+
+#~ msgid "notifications.desinfect-smartphone.variant-3.headline"
+#~ msgstr "📱🧽 Καθάρισε το τηλέφωνό σου"
+
+#~ msgid "notifications.desinfect-smartphone.variant-3.text"
+#~ msgstr ""
+#~ "Κρατώντας το τηλέφωνο σου καθαρό είναι άλλος ένας έξυπνος τρόπος για να "
+#~ "κρατήσεις τα μικρόβια μακριά από τα δάχτυλά σου."

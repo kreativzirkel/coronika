@@ -1,0 +1,818 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: coronika\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: si_LK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
+"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: src/components/App/ui.jsx:144
+msgid "app.share.message"
+msgstr ""
+"කිරීටක වෛරසය ඔබව කලබලයට පත් කිරීමට ඉඩ නොදෙන්න. කොරෝනා වෛරසය ගැන දැන ගැනීමට සහ අනෙක් "
+"අයටද උපකාර කිරීමට පහත පියවර අනුගමනය කරන්න…\n"
+"✅…ඔබ හමු වූ පුද්ගලයින් සහ ඔබ නැවතී සිටි ස්ථාන පිළිබඳ විස්තර ඇතුළත් කරන්න\n"
+"✅…සනීපාරක්ෂක උපදෙස් අනුගමනය කිරීම සඳහා\n"
+"✅…පිළිගත් තොරතුරු ප්‍රභවයන් භාවිතා කරන්න\n"
+"නිරෝගීව සිටින්න, නිතිපතා අත් සේදීමට මතක තබා ගන්න! ✋😉 https://coronika.app/"
+
+#: src/components/App/ui.jsx:75
+msgid "navigation.directory.label"
+msgstr "නාමාවලිය"
+
+#: src/components/App/ui.jsx:78
+msgid "navigation.dashboard.label"
+msgstr "දිනපොත"
+
+#: src/components/App/ui.jsx:81
+msgid "navigation.share.label"
+msgstr "බෙදාගන්න"
+
+#: src/components/App/ui.jsx:84
+msgid "navigation.tips.label"
+msgstr "ඉඟි"
+
+#: src/components/partials/EntriesTabsView.jsx:618
+#: src/components/widgets/DayOverview.jsx:139
+msgid "persons"
+msgstr "පුද්ගලයන්"
+
+#: src/components/partials/EntriesTabsView.jsx:628
+#: src/components/widgets/DayOverview.jsx:123
+msgid "locations"
+msgstr "ස්ථාන"
+
+#: src/components/partials/EntriesTabsView.jsx:640
+msgid "entries.persons.list.new"
+msgstr "නව පුද්ගලයෙක්"
+
+#: src/components/partials/EntriesTabsView.jsx:661
+#: src/components/partials/EntriesTabsView.jsx:711
+msgid "entries.search.list.empty"
+msgstr "ඔබගේ සෙවුමෙන් කිසිවක් සොයාගත නොහැකි විය."
+
+#: src/components/partials/EntriesTabsView.jsx:668
+msgid "entries.persons.list.empty"
+msgstr ""
+"ඔබ තවම පුද්ගලයෙකු නිර්මාණය කර නැත. වහාම ආරම්භ කිරීම සඳහා, ඔබට ඔබගේ දුරකථන පොතෙන් "
+"පුද්ගලයින් ආනයනය කළ හැකිය."
+
+#: src/components/partials/EntriesTabsView.jsx:672
+msgid "entries.persons.list.import.button"
+msgstr "දැන් ආයාත කරන්න"
+
+#: src/components/partials/EntriesTabsView.jsx:691
+msgid "entries.locations.list.new"
+msgstr "නව ස්ථානය"
+
+#: src/components/partials/EntriesTabsView.jsx:714
+msgid "entries.locations.list.empty"
+msgstr "ඔබ තවම ස්ථානයක් නිර්මාණය කර නැත. දැන් ආරම්භ කර ඔබේ පළමු ස්ථානය සාදන්න."
+
+#: src/components/partials/EntriesTabsView.jsx:730
+msgid "entries.selection.add"
+msgstr "තේරීම එක් කරන්න"
+
+#: src/components/partials/EntriesTabsView.jsx:742
+msgid "entries.modals.update-person.headline"
+msgstr "පුද්ගල විස්තර සංස්කරණය කරන්න"
+
+#: src/components/partials/EntriesTabsView.jsx:743
+msgid "entries.modals.new-person.headline"
+msgstr "නව පුද්ගලයෙක්"
+
+#: src/components/partials/EntriesTabsView.jsx:754
+msgid "entries.modals.new-person.placeholder.name"
+msgstr "නම"
+
+#: src/components/partials/EntriesTabsView.jsx:766
+msgid "entries.modals.new-person.placeholder.phone-number"
+msgstr "දුරකතන අංකය"
+
+#: src/components/partials/EntriesTabsView.jsx:779
+msgid "entries.modals.update-person.button"
+msgstr "සුරකින්න"
+
+#: src/components/partials/EntriesTabsView.jsx:780
+msgid "entries.modals.new-person.button"
+msgstr "එකතු කරන්න"
+
+#: src/components/partials/EntriesTabsView.jsx:792
+msgid "entries.modals.update-location.headline"
+msgstr "ස්ථානය සංස්කරණය කරන්න"
+
+#: src/components/partials/EntriesTabsView.jsx:793
+msgid "entries.modals.new-location.headline"
+msgstr "නව ස්ථානය"
+
+#: src/components/partials/EntriesTabsView.jsx:804
+msgid "entries.modals.new-location.placeholder.title"
+msgstr "ශීර්ෂය"
+
+#: src/components/partials/EntriesTabsView.jsx:815
+msgid "entries.modals.new-location.placeholder.description"
+msgstr "විස්තර"
+
+#: src/components/partials/EntriesTabsView.jsx:828
+msgid "entries.modals.update-location.button"
+msgstr "සුරකින්න"
+
+#: src/components/partials/EntriesTabsView.jsx:829
+msgid "entries.modals.new-location.button"
+msgstr "එකතු කරන්න"
+
+#: src/components/partials/EntriesTabsView.jsx:839
+msgid "entries.modals.select-location.headline"
+msgstr "ස්ථානය තෝරන්න"
+
+#: src/components/partials/EntriesTabsView.jsx:858
+msgid "entries.modals.select-location.placeholder.description"
+msgstr "විස්තර"
+
+#: src/components/partials/EntriesTabsView.jsx:873
+msgid "Cancel"
+msgstr "අවලංගු කරන්න"
+
+#: src/components/partials/EntriesTabsView.jsx:874
+msgid "Confirm"
+msgstr "තහවුරු කරන්න"
+
+#: src/components/partials/EntriesTabsView.jsx:887
+msgid "entries.modals.select-location.button"
+msgstr "තෝරන්න"
+
+#: src/components/screens/About.jsx:105 src/components/screens/Menu.jsx:101
+msgid "about-screen.header.headline"
+msgstr "කොරොනිකා තතු"
+
+#: src/components/screens/About.jsx:18 src/components/screens/Welcome/ui.jsx:14
+msgid "welcome-screen.slides.intro.headline"
+msgstr "කොරෝනා වෛරසයට එරෙහිව සටන් කිරීම"
+
+#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:15
+msgid "welcome-screen.slides.intro.text"
+msgstr ""
+"පුද්ගලයින් සහ ස්ථාන ලොග් කරන්න, ආසාදන මාර්ග ප්‍රතිනිර්මාණය කිරීම සහ පැතිරීම නැවැත්වීමට උදව් කරන්න."
+
+#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:16
+msgid "welcome-screen.slides.intro.button"
+msgstr "නියමයි, මටත් උදව් කරන්න ඕන"
+
+#: src/components/screens/About.jsx:25 src/components/screens/Welcome/ui.jsx:21
+msgid "welcome-screen.slides.how-to.headline"
+msgstr "අපගේ සාමූහික සෞඛ්‍යය සඳහා දිනපොතක්"
+
+#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:22
+msgid "welcome-screen.slides.how-to.text"
+msgstr "ඔබ මුණගැසුණු අය, ඔබ සංචාරය කළ පොදු ස්ථාන ලියා සියලු දෙනාගේ සෞඛ්‍යයට දායක වන්න."
+
+#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:23
+msgid "welcome-screen.slides.how-to.button"
+msgstr "හරි"
+
+#: src/components/screens/About.jsx:32 src/components/screens/Welcome/ui.jsx:37
+msgid "welcome-screen.slides.local-data.headline"
+msgstr "ඔබගේ දත්ත ඔබගේ පමණි"
+
+#: src/components/screens/About.jsx:33 src/components/screens/Welcome/ui.jsx:38
+msgid "welcome-screen.slides.local-data.text"
+msgstr ""
+"කොරොනිකා විසින් නිර්මාණය කරන ලද සහ භාවිතා කරන සියලුම දත්ත දේශීයව ගබඩා කර ඇති අතර ඒවා "
+"සොයා ගැනීමට හෝ සම්මත කිරීමට නොහැකි වනු ඇත."
+
+#: src/components/screens/About.jsx:34 src/components/screens/Welcome/ui.jsx:39
+msgid "welcome-screen.slides.local-data.button"
+msgstr "දැන් පටන් ගන්න"
+
+#: src/components/screens/AddEntry/ui.jsx:10
+msgid "add-entry-screen.header.headline"
+msgstr "ප්‍රවේශය එක් කරන්න"
+
+#: src/components/screens/Dashboard/ui.jsx:116
+#: src/components/screens/Menu.jsx:120
+msgid "menu-screen.header.headline"
+msgstr "මෙනුව"
+
+#: src/components/screens/Dashboard/ui.jsx:126
+msgid "dashboard-screen.first-start.hint"
+msgstr "ඔබගේ පළමු පුද්ගලයින් හෝ ස්ථාන ඇතුළත් කිරීමට අද දිනය තෝරන්න"
+
+#: src/components/screens/Dashboard/ui.jsx:128
+msgid "Close"
+msgstr "වසන්න"
+
+#: src/components/screens/Day/ui.jsx:52
+msgid "day-screen.header.headline"
+msgstr "දෛනික දළ විශ්ලේෂණය"
+
+#: src/components/screens/Day/ui.jsx:59
+msgid "day-screen.locations.empty"
+msgstr "ඔබ මේ දිනය සඳහා කිසිදු ස්ථානයක් එකතු කර නැත."
+
+#: src/components/screens/Day/ui.jsx:60
+msgid "day-screen.persons.empty"
+msgstr "ඔබ මේ දිනය සඳහා කිසිදු පුද්ගලයෙකු එකතු කර නැත."
+
+#: src/components/screens/Day/ui.jsx:71
+msgid "day-screen.entries.add"
+msgstr "ප්‍රවේශය එක් කරන්න"
+
+#: src/components/screens/Directory/ui.jsx:129
+msgid "directory-screen.header.button.import"
+msgstr "ආනයන"
+
+#: src/components/screens/Directory/ui.jsx:133
+msgid "directory-screen.header.headline"
+msgstr "නාමාවලිය කළමනාකරණය කරන්න"
+
+#: src/components/screens/Directory/ui.jsx:151
+msgid "directory-screen.modals.import-persons.headline"
+msgstr "පුද්ගලයින් ආනයනය කරන්න"
+
+#: src/components/screens/Directory/ui.jsx:157
+msgid "directory-screen.modals.import-persons.text"
+msgstr ""
+"ඔබගේ දුරකථන පොතෙන් පුද්ගලයින් ආනයනය කරන්න එවිට ඔබට වහාම ආරම්භ කළ හැකිය. ඔබගේ සියලු "
+"පුද්ගලයින් දේශීයව ගබඩා කර ඇත. දත්ත කිසිවක් නිරීක්ෂණය කර හෝ බෙදාගෙන නොමැත."
+
+#: src/components/screens/Directory/ui.jsx:163
+msgid "directory-screen.modals.import-persons.button.importing"
+msgstr "ආනයනය ..."
+
+#: src/components/screens/Directory/ui.jsx:164
+msgid "directory-screen.modals.import-persons.button.default"
+msgstr "දැන් ආයාත කරන්න"
+
+#: src/components/screens/Export/ui.jsx:50
+msgid "export-screen.header.headline"
+msgstr "අපනයන"
+
+#: src/components/screens/Export/ui.jsx:54
+msgid "export-screen.content.section-1.headline"
+msgstr "ඔබේ දළ විශ්ලේෂණය"
+
+#: src/components/screens/Export/ui.jsx:55
+msgid "export-screen.content.section-1.text"
+msgstr ""
+"සෞඛ්‍ය බලධාරීන් සහ ඔබ අවට සිටින පුද්ගලයින් දැනුවත් කිරීමෙන් අපට සාමූහිකව ආසාදන මාර්ග ප්‍රතිනිර්මාණය "
+"කළ හැකිය."
+
+#: src/components/screens/Export/ui.jsx:56
+msgid "export-screen.content.section-2.headline"
+msgstr "විශාල බලයක් සමඟ විශාල වගකීමක් පැමිණේ"
+
+#: src/components/screens/Export/ui.jsx:57
+msgid "export-screen.content.section-2.text"
+msgstr ""
+"දත්ත ඉතා සංවේදී බව මතක තබා ගන්න. එය සබැඳිව හෝ අහඹු පුද්ගලයින් සමඟ බෙදා නොගන්නා ලෙස අපි "
+"තරයේ නිර්දේශ කරමු."
+
+#: src/components/screens/Export/ui.jsx:58
+msgid "export-screen.coming-soon"
+msgstr "ළඟදීම!"
+
+#: src/components/screens/Legal.jsx:102
+msgid "legal-screen.imprint.section-1.headline"
+msgstr "This app 'Coronika' is operated by"
+
+#: src/components/screens/Legal.jsx:103
+msgid "legal-screen.imprint.section-1.text"
+msgstr ""
+"Kreativzirkel UG (haftungsbeschränkt)\n"
+"Schirmerstrasse 61\n"
+"40211 Düsseldorf\n"
+"\n"
+"Phone +49 174 811 1212\n"
+"\n"
+"E-mail info@kreativzirkel.de\n"
+"\n"
+"Managing Director Alexander Braden\n"
+"\n"
+"Register court: AG Düsseldorf\n"
+"Registration number: HRB 82252\n"
+"VAT ID: DE 300 611 389"
+
+#: src/components/screens/Legal.jsx:104
+msgid "legal-screen.imprint.section-2.headline"
+msgstr "අන්තර්ගතය සඳහා වගකීම"
+
+#: src/components/screens/Legal.jsx:105
+msgid "legal-screen.imprint.section-2.text"
+msgstr ""
+"සේවා සපයන්නෙකු ලෙස, § 7 ඡේද 1 TMG (ජර්මානු ටෙලිමීඩියා පනත) සහ සාමාන්‍ය නීති වලට අනුව මෙම "
+"පිටුවල අපගේ අන්තර්ගතයන් සඳහා වගකීම දරන්නෙමු. §§ 8 සිට 10 TMG ට අනුව, සම්ප්‍රේෂණය කරන ලද "
+"හෝ ගබඩා කර ඇති බාහිර තොරතුරු අධීක්ෂණය කිරීමට හෝ නීති විරෝධී ක්‍රියාකාරකම් පෙන්නුම් කරන තත්වයන් "
+"විමර්ශනය කිරීමට අප බැඳී නොමැත. සම්ප්‍රේෂණය කරන ලද හෝ ගබඩා කරන ලද බාහිර තොරතුරු අධීක්ෂණය "
+"කිරීමට හෝ නීති විරෝධී ක්‍රියාකාරකම් පෙන්නුම් කරන තත්වයන් විමර්ශනය කිරීමට අප බැඳී නොමැත. සාමාන්‍ය "
+"නීතිවලට අනුව තොරතුරු ඉවත් කිරීම හෝ අවහිර කිරීම සඳහා වන බැඳීම් කිසිදු බලපෑමකින් තොරව පවතී. කෙසේ "
+"වෙතත්, මේ සම්බන්ධයෙන් වගකීම පැවතිය හැක්කේ නිශ්චිත උල්ලංගනයක්  පිළිගත් අවස්ථාවේ සිට පමණි. එවැනි "
+"උල්ලංගනයන් පිළිබඳව අප දැනුවත්වුවහොත්, අපි වහාම එවැනි අන්තර්ගතයන් ඉවත් කරන්නෙමු."
+
+#: src/components/screens/Legal.jsx:106
+msgid "legal-screen.imprint.section-3.headline"
+msgstr "සබැඳි සඳහා වගකීම"
+
+#: src/components/screens/Legal.jsx:107
+msgid "legal-screen.imprint.section-3.text"
+msgstr ""
+"අපගේ ඉල්ලුමට තෙවන පාර්ශවයන්ගේ බාහිර වෙබ් අඩවි වලට සබැඳි අඩංගු වන අතර ඒවායේ අන්තර්ගතය "
+"අපට පාලනය කළ නොහැක. එබැවින් මෙම බාහිර අන්තර්ගතයන් සඳහා අපට කිසිදු වගකීමක් භාර ගත නොහැක. "
+"සම්බන්ධිත අඩවි වල අන්තර්ගතය සඳහා අදාළ සැපයුම්කරු හෝ අඩවි වල ක්‍රියාකරු සැමවිටම වගකිව යුතුය."
+"සම්බන්ධ කරන විට සිදුවිය හැකි නීතිමය උල්ලංගනයන් සඳහා සම්බන්ධිත පිටු පරීක්ෂා කරන ලදි. සම්බන්ධ කරන "
+"අවස්ථාවේදී නීති විරෝධී අන්තර්ගතයන් හඳුනාගත නොහැකි විය. කෙසේ වෙතත්, නීතිය උල්ලංගනය කිරීමක් පිළිබඳ "
+"නිශ්චිත සාක්ෂි නොමැතිව සම්බන්ධිත පිටුවල අන්තර්ගතය ස්ථිර ලෙස පාලනය කිරීම සාධාරණ නොවේ. කිසියම් "
+"උල්ලංගනයක් පිළිබඳව අප දැනුවත්වුවහොත්, අපි වහාම එවැනි සබැඳි ඉවත් කරන්නෙමු."
+
+#: src/components/screens/Legal.jsx:108
+msgid "legal-screen.imprint.section-4.headline"
+msgstr "කතුහිමිකම"
+
+#: src/components/screens/Legal.jsx:109
+msgid "legal-screen.imprint.section-4.text"
+msgstr ""
+"ක්‍රියාකරුවන් විසින් නිර්මාණය කරන ලද මෙම පිටුවල අන්තර්ගතය සහ කෘතීන් ජර්මානු ප්‍රකාශන හිමිකම් නීතියට "
+"යටත් වේ. ප්‍රකාශන හිමිකම් නීතියේ සීමාවෙන් ඔබ්බට ප්‍රතිනිෂ්පාදනය, සංස්කරණය, බෙදා හැරීම සහ ඕනෑම "
+"ආකාරයක භාවිතය සඳහා අදාළ කතුවරයාගේ හෝ නිර්මාණකරුගේ ලිඛිත අවසරය අවශ්‍ය වේ. මෙම පිටුවල "
+"බාගත කිරීම් සහ පිටපත් කිරීමට අවසර ඇත්තේ පුද්ගලික, වාණිජ නොවන භාවිතය සඳහා පමණි. මෙම වෙබ් "
+"අඩවියේ අන්තර්ගතය ක්‍රියාකරු විසින් නිර්මාණය කර නොමැති බැවින්, අන්තර්ගත ප්‍රකාශන හිමිකම තෙවන "
+"පාර්ශවයේ ප්‍රකාශන හිමිකම යටතේ පවතී. විශේෂයෙන් තෙවන පාර්ශවීය අන්තර්ගතයන් එසේ සලකුණු කර ඇත. "
+"කෙසේ වෙතත්, ප්‍රකාශන හිමිකම් උල්ලංගනය කිරීමක් පිළිබඳව ඔබ දැනුවත් නම්, කරුණාකර අපට දන්වන්න. "
+"කිසියම් උල්ලංගනයක් පිළිබඳව අප දැනුවත්වුවහොත්, අපි වහාම එවැනි අන්තර්ගතයන් ඉවත් කරන්නෙමු. "
+
+#: src/components/screens/Legal.jsx:61 src/components/screens/Menu.jsx:109
+msgid "legal-screen.header.headline"
+msgstr "නීතිමය"
+
+#: src/components/screens/Legal.jsx:68
+msgid "legal-screen.tabs.privacy.label"
+msgstr "පෞද්ගලිකත්වය"
+
+#: src/components/screens/Legal.jsx:73
+msgid "legal-screen.tabs.imprint.label"
+msgstr "මුද්‍රණය"
+
+#: src/components/screens/Legal.jsx:83
+msgid "legal-screen.privacy.section-1.headline"
+msgstr "යෙදුමේ දත්ත සැකසීම"
+
+#: src/components/screens/Legal.jsx:84
+msgid "legal-screen.privacy.section-1.text"
+msgstr ""
+"ඇප් කොරොනිකා පුද්ගලික සහ ස්ථාන සම්බන්ධ දත්ත පරිශීලකයාගේ ස්මාර්ට් ජංගම දුරකතනයෙන් පමණක් දේශීයව "
+"සකසයි."
+
+#: src/components/screens/Legal.jsx:85
+msgid "legal-screen.privacy.section-2.headline"
+msgstr "පෞද්ගලික දත්ත"
+
+#: src/components/screens/Legal.jsx:86
+msgid "legal-screen.privacy.section-2.text"
+msgstr ""
+"පරිශීලකයාට යෙදුම තුළ පුද්ගලයින් නිර්මාණය කළ හැකිය. නම සහ දුරකථන අංකයක් සුරකින ලදි. තවද, "
+"ස්මාර්ට් ජංගම දුරකතනයේ දුරකථන පොත ආනයනය කළ හැකිය. දුරකථන පොතේ ඇතුළත් කිරීම්වල නම් සහ "
+"දුරකථන අංක යෙදුමට මාරු කරනු ලැබේ. සියලුම දත්ත දේශීයව ස්මාර්ට් ජංගම දුරකතනයේ පවතින අතර එම "
+"නිසා එය පරිශීලකයාගේ අතේ ඇත. දත්ත කිසි විටෙකත් යෙදුම් සැපයුම්කරුට හෝ තෙවන පාර්ශවයකට මාරු "
+"නොකෙරේ."
+
+#: src/components/screens/Legal.jsx:87
+msgid "legal-screen.privacy.section-3.headline"
+msgstr "ස්ථානය පදනම් කරගත් දත්ත"
+
+#: src/components/screens/Legal.jsx:88
+msgid "legal-screen.privacy.section-3.text"
+msgstr ""
+"පරිශීලකයාට යෙදුම තුළ ස්ථාන නිර්මාණය කළ හැකිය. ස්ථානයේ නම සහ විස්තරයක් සුරකින ලදි. ස්ථානගත "
+"කිරීමේ සේවා හරහා පරිශීලකයා සිටින ස්ථානය (උදා: ජීපීඑස් හෝ ඊට සමාන) ඕනෑම වේලාවක ප්‍රවේශ "
+"නොවේ. ස්ථානය සම්බන්ධ දත්ත පරිශීලකයාගේ ස්මාර්ට් ජංගම දුරකතනයේ ද දේශීයව පවතින අතර එය යෙදුම් "
+"සැපයුම්කරුට හෝ තෙවන පාර්ශවයකට සම්ප්‍රේෂණය නොවේ."
+
+#: src/components/screens/Legal.jsx:89
+msgid "legal-screen.privacy.section-4.headline"
+msgstr "දිනපොත"
+
+#: src/components/screens/Legal.jsx:90
+msgid "legal-screen.privacy.section-4.text"
+msgstr ""
+"දිනපොත තුළ, පරිශීලකයා දිනපතා පුද්ගල හා ස්ථාන තනි දිනවලට පවරයි. දැනටමත් එකතු කර ඇති දත්ත වලට "
+"අමතරව, ස්ථාන සඳහා කාලයක් ද ගබඩා කර ඇත. දිනපොත සහ සියලුම ඇතුළත් කිරීම් පරිශීලකයාගේ ස්මාර්ට් "
+"ජංගම දුරකතනයේ දේශීයව පවතින අතර ඒවා යෙදුම් සැපයුම්කරුට හෝ තෙවන පාර්ශවයකට සම්ප්‍රේෂණය නොවේ."
+
+#: src/components/screens/Legal.jsx:91
+msgid "legal-screen.privacy.section-5.headline"
+msgstr "අපනයන"
+
+#: src/components/screens/Legal.jsx:92
+msgid "legal-screen.privacy.section-5.text"
+msgstr ""
+"යෙදුම තුළ පරිශීලකයාට දිනපොතේ කොටසක් පී.ඩී.එෆ් ගොනුවක් ලෙස අපනයනය කිරීමට අපනයන කාර්යයක් ඇත. "
+"පී.ඩී.එෆ් ගොනුව පරිශීලකයාගේ ස්මාර්ට් ජංගම දුරකතනයේ දේශීයව නිර්මාණය කර ඇත. මෙම පී.ඩී.එෆ් ගොනුව "
+"මඟින් සෞඛ්‍ය බලධාරීන්ට හෝ වෙනත් නිල ආයතනවලට තෝරාගත් කාල සීමාවක් තුළ සම්බන්ධතා ලැයිස්තුවක් "
+"පහසුවෙන් ලබා දිය හැකි අතර ආසාදනයේ මාර්ග සොයා ගැනීමටත්, අවශ්‍ය නම්, ආසාදනයක් ඇතිවිය හැකි "
+"බවට වෙනත් පුද්ගලයින් දැනුවත් කිරීමටත් හැකි වේ. පී.ඩී.එෆ් ගොනුව සහ එහි අඩංගු දත්ත වගකීමෙන් යුතුව "
+"හැසිරවීමේ වගකීම පරිශීලකයා සතු වන අතර එය නොසැලකිලිමත් ලෙස නොයැවිය යුතුය."
+
+#: src/components/screens/Legal.jsx:93
+msgid "legal-screen.privacy.section-6.headline"
+msgstr "දත්ත හුවමාරුව සහ ලුහුබැඳීම"
+
+#: src/components/screens/Legal.jsx:94
+msgid "legal-screen.privacy.section-6.text"
+msgstr ""
+"යෙදුම සැපයුම්කරුට හෝ තෙවන පාර්ශවයකට ස්වයංක්‍රීයව ලුහුබැඳීම හෝ දත්ත හුවමාරුව ලබා නොදේ. එකම "
+"ව්යතිරේකය වන්නේ අපනයන ක්රියාකාරිත්වයයි. කෙසේ වෙතත්, එහිදී දත්ත ලබා දිය යුත්තේ කාටද යන්න තීරණය "
+"කරන්නේ පරිශීලකයා පමණි. එසේ නොමැතිනම්, සියලු දත්ත පරිශීලකයාගේ ස්මාර්ට් ජංගම දුරකතනයේ දේශීයව "
+"පවතී."
+
+#: src/components/screens/Menu.jsx:105
+#: src/components/screens/Settings/ui.jsx:92
+msgid "settings-screen.header.headline"
+msgstr "සැකසුම්"
+
+#: src/components/screens/Menu.jsx:125
+msgid "menu-screen.intro.text"
+msgstr "වැදගත් වන්නේ භීතිකාව පැතිරවීම නොව පැහැදිලි බවක් ඇති කිරීම සහ නිවැරදි තොරතුරු පැතිරවීම ය."
+
+#: src/components/screens/Menu.jsx:159
+msgid "menu-screen.button.send-feedback"
+msgstr "ප්‍රතිචාරය යවන්න"
+
+#: src/components/screens/Overview/ui.jsx:118
+msgid "overview-screen.export.button"
+msgstr "දළ විශ්ලේෂණය අපනයනය"
+
+#: src/components/screens/Overview/ui.jsx:92
+msgid "overview-screen.header.headline"
+msgstr "දළ විශ්ලේෂණය"
+
+#: src/components/screens/Settings/logic.js:148
+msgid "notifications.diary.headline"
+msgstr "📒 ඔබගේ සම්බන්ධතා ලොග් කරන්න"
+
+#: src/components/screens/Settings/logic.js:149
+msgid "notifications.diary.text"
+msgstr "ඔබගේ සමීප සම්බන්ධතා සටහන් කර කොරෝනා වෛරසය පැතිරීම මන්දගාමී කිරීමට උදව් කරන්න."
+
+#: src/components/screens/Settings/logic.js:161
+#, fuzzy
+msgid "notifications.disinfect-smartphone.variant-1.headline"
+msgstr "📱🧽 ඔබගේ ස්මාර්ට්ෆෝන් තිරය පිරිසිදු කරන්න"
+
+#: src/components/screens/Settings/logic.js:162
+#, fuzzy
+msgid "notifications.disinfect-smartphone.variant-1.text"
+msgstr "පිරිසිදු පිසදැමීමකින් ඔබේ තිරය පිරිසිදු කිරීමෙන් විෂබීජ ඉවත් කරන්න."
+
+#: src/components/screens/Settings/logic.js:173
+#: src/components/screens/Settings/logic.js:206
+#: src/components/screens/Settings/logic.js:221
+msgid "notifications.washing-hands.variant-1.text"
+msgstr "ඔබ පිටතට ගොස් ඇත්නම් හොඳින් අත් සේදීම."
+
+#: src/components/screens/Settings/logic.js:174
+#: src/components/screens/Settings/logic.js:207
+#: src/components/screens/Settings/logic.js:222
+msgid "notifications.washing-hands.variant-1.headline"
+msgstr "🤚💧 ඔබේ අත් සෝදන්න"
+
+#: src/components/screens/Settings/logic.js:178
+#: src/components/screens/Settings/logic.js:211
+#: src/components/screens/Settings/logic.js:226
+msgid "notifications.washing-hands.variant-2.text"
+msgstr "ඔබේ අත් සේදීම ඔබට සහ අනෙක් අයට රෝගවලින් ආරක්ෂා කර ගත හැකි සරලම ක්‍රමයකි."
+
+#: src/components/screens/Settings/logic.js:179
+#: src/components/screens/Settings/logic.js:212
+#: src/components/screens/Settings/logic.js:227
+msgid "notifications.washing-hands.variant-2.headline"
+msgstr "🤚💧 ඔබ අත් සෝදා ගත්තාද?"
+
+#: src/components/screens/Settings/logic.js:183
+#: src/components/screens/Settings/logic.js:216
+#: src/components/screens/Settings/logic.js:231
+msgid "notifications.washing-hands.variant-3.text"
+msgstr ""
+"සිහියෙන් යුතුව අත් සේදීම පුහුණු වන්න. ඔබේ ඇඟිලි තුඩු සහ ඇඟිලි අතර ඇති ඉඩ පිරිසිදු කිරීමට අමතක නොකරන්න."
+
+#: src/components/screens/Settings/logic.js:184
+#: src/components/screens/Settings/logic.js:217
+#: src/components/screens/Settings/logic.js:232
+msgid "notifications.washing-hands.variant-3.headline"
+msgstr "🤚💧 ඔබේ ඉඟි අමතක නොකරන්න!"
+
+#: src/components/screens/Settings/ui.jsx:101
+msgid "settings-screen.notifications.washing-hands.headline"
+msgstr "අත් සේදීමට මතක් කරන්න"
+
+#: src/components/screens/Settings/ui.jsx:105
+msgid "settings-screen.notifications.washing-hands.option-1.label"
+msgstr "දිනකට 3x ​​ක් මතක් කරන්න"
+
+#: src/components/screens/Settings/ui.jsx:114
+msgid "settings-screen.notifications.washing-hands.option-2.label"
+msgstr "දිනකට 6x මතක් කරන්න"
+
+#: src/components/screens/Settings/ui.jsx:125
+msgid "settings-screen.notifications.disinfect-smartphone.headline"
+msgstr "දුරකථනය විෂබීජහරණය කිරීමට මතක් කිරීම"
+
+#: src/components/screens/Settings/ui.jsx:129
+msgid "settings-screen.notifications.disinfect-smartphone.option.label"
+msgstr "දිනපතා මතක් කරන්න"
+
+#: src/components/screens/Settings/ui.jsx:139
+msgid "settings-screen.notifications.diary.headline"
+msgstr "දිනපොත භාවිතා කිරීමට මතක් කිරීම"
+
+#: src/components/screens/Settings/ui.jsx:142
+msgid "settings-screen.notifications.diary.option.label"
+msgstr "දිනපතා මතක් කරන්න"
+
+#: src/components/screens/Settings/ui.jsx:97
+msgid "settings-screen.notifications.headline"
+msgstr "දැනුම්දීම්"
+
+#: src/components/screens/TipAmIInfected.jsx:102
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:104
+#: src/components/screens/TipCoughingSneezing.jsx:104
+#: src/components/screens/TipMouthguard.jsx:106
+#: src/components/screens/TipNotFeelingWell.jsx:103
+#: src/components/screens/TipReliableSources.jsx:76
+#: src/components/screens/TipWashingHands.jsx:104
+#: src/components/screens/Tips.jsx:111
+msgid "tips-screen.header.headline"
+msgstr "සනීපාරක්ෂක ඉඟි"
+
+#: src/components/screens/TipAmIInfected.jsx:107
+#: src/components/screens/Tips.jsx:99
+msgid "tips.am-i-infected.headline"
+msgstr "මට කිරීටක වෛරසය ආසාදනය වී ඇතැයි මම බිය වෙමි, මට කුමක් කළ හැකිද?"
+
+#: src/components/screens/TipAmIInfected.jsx:108
+msgid "tips.am-i-infected.text"
+msgstr ""
+"ඔබ ආසාදනය වී ඇතැයි ඔබ කනස්සල්ලට පත්ව සිටී නම්, ඔබ වෙනත් පුද්ගලයින්ට ආසාදනය නොවන පරිදි නිවසේ "
+"රැඳී සිටින්න. ඔබේ පවුලේ වෛද්‍යවරයා හෝ සෞඛ්‍ය බලධාරීන් දුරකථනයෙන් අමතන්න. ඔබ සැබවින්ම කොරොන "
+"වයිරස් ආසාදනය වී ඇත්නම්, රෝගය පැතිරීම පාලනය කිරීම සඳහා ඔබේ වෛද්‍යවරයාට සහ සෞඛ්‍ය බලධාරීන්ට "
+"ඔබේ කොරොනිකා දිනපොත ගැන කියන්න. මෙම අවස්ථාවේදී ඔබට ඔබේ දිනපොත අපනයනය කර වගකිවයුතු "
+"බලධාරීන්ට යැවිය හැකිය."
+
+#: src/components/screens/TipAmIInfected.jsx:124
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:126
+#: src/components/screens/TipCoughingSneezing.jsx:126
+#: src/components/screens/TipMouthguard.jsx:133
+#: src/components/screens/TipNotFeelingWell.jsx:127
+#: src/components/screens/TipWashingHands.jsx:126
+msgid "tips.sources.headline"
+msgstr "මුලාශ්‍ර"
+
+#: src/components/screens/TipAmIInfected.jsx:133
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:137
+#: src/components/screens/TipCoughingSneezing.jsx:146
+#: src/components/screens/TipMouthguard.jsx:151
+#: src/components/screens/TipNotFeelingWell.jsx:134
+#: src/components/screens/TipWashingHands.jsx:140
+msgid "tips.sources.last-updated"
+msgstr "අවසන් වරට යාවත්කාලීන කරන ලද්දේ:"
+
+#: src/components/screens/TipAmIInfected.jsx:95
+msgid "tips.am-i-infected.list.item-1"
+msgstr "ගෙදර ඉන්න"
+
+#: src/components/screens/TipAmIInfected.jsx:96
+msgid "tips.am-i-infected.list.item-2"
+msgstr "ඔබේ වෛද්‍යවරයා අමතන්න"
+
+#: src/components/screens/TipAmIInfected.jsx:97
+msgid "tips.am-i-infected.list.item-3"
+msgstr "ඔබේ කොරොනිකා දිනපොත ගැන කියන්න"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:109
+#: src/components/screens/Tips.jsx:83
+msgid "tips.avoid-crowds-of-people.headline"
+msgstr "සෙනග අතරට යාමෙන් වළකින්න"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:110
+msgid "tips.avoid-crowds-of-people.text"
+msgstr ""
+"හැකි නම්, චාරිකා කිරීමෙන් වළකින්න, පොදු ප්‍රවාහනය භාවිතා කර නිවසේ සිට වැඩ කරන්න. පොදුවේ ගත් "
+"කල, ඕනෑම සම්බන්ධතාවයක් අත්‍යවශ්‍ය ඒවා දක්වා අඩු කළ යුතු අතර මිනිසුන් සමූහයක් සමඟ සිදුවීම් වලට "
+"සහභාගී වීම වළක්වා ගත යුතුය."
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:95
+msgid "tips.avoid-crowds-of-people.list.item-1"
+msgstr "අනවශ්‍ය විශාල රැස්වීම් වලින් වළකින්න"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:96
+msgid "tips.avoid-crowds-of-people.list.item-2"
+msgstr "කෙටි දුර ආවරණය කිරීම සඳහා පොදු ප්‍රවාහනය වෙනුවට ඇවිදීම තෝරන්න"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:97
+msgid "tips.avoid-crowds-of-people.list.item-3"
+msgstr "ඔබේ අත් හොඳින් හා නිතිපතා සෝදන්න"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:98
+msgid "tips.avoid-crowds-of-people.list.item-4"
+msgstr "ඔබ සහ අනෙක් පුද්ගලයින් අතර දළ වශයෙන් මීටර් 2 ක දුරක් පවත්වා ගන්න"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:99
+msgid "tips.avoid-crowds-of-people.list.item-5"
+msgstr "ඔබේ වැලමිට හෝ ටිෂු එකක් භාවිතයෙන් කැස්ස සහ කිවිසුම් ආවරණය කරන්න"
+
+#: src/components/screens/TipCoughingSneezing.jsx:109
+#: src/components/screens/Tips.jsx:91
+msgid "tips.coughing-sneezing.headline"
+msgstr "කැස්ස සහ කිවිසුම් යාම සඳහා නිසි ක්‍රමය"
+
+#: src/components/screens/TipCoughingSneezing.jsx:110
+msgid "tips.coughing-sneezing.text"
+msgstr "වෛරස් පැතිරීම වැළැක්වීම සඳහා කරුණාකර පහත සඳහන් කරුණු කෙරෙහි අවධානය යොමු කරන්න:"
+
+#: src/components/screens/TipCoughingSneezing.jsx:95
+msgid "tips.coughing-sneezing.list.item-1"
+msgstr "ඔබ සහ අනෙක් පුද්ගලයින් අතර දළ වශයෙන් මීටර් 2 ක දුරක් පවත්වා ගන්න"
+
+#: src/components/screens/TipCoughingSneezing.jsx:96
+msgid "tips.coughing-sneezing.list.item-2"
+msgstr "මිනිසුන්ගෙන් පිටතට හැරෙන්න"
+
+#: src/components/screens/TipCoughingSneezing.jsx:97
+msgid "tips.coughing-sneezing.list.item-3"
+msgstr "ඔබේ වැලමිට හෝ ටිෂු එකක් භාවිතයෙන් කැස්ස සහ කිවිසුම් ආවරණය කරන්න"
+
+#: src/components/screens/TipCoughingSneezing.jsx:98
+msgid "tips.coughing-sneezing.list.item-4"
+msgstr "ටිෂු නිසි ලෙස බැහැර කිරීම"
+
+#: src/components/screens/TipCoughingSneezing.jsx:99
+msgid "tips.coughing-sneezing.list.item-5"
+msgstr "පසුව ඔබේ අත් සෝදන්න"
+
+#: src/components/screens/TipMouthguard.jsx:100
+msgid "tips.mouthguard.list.item-3"
+msgstr "හුස්ම ගැනීමෙන් තෙත් වේ"
+
+#: src/components/screens/TipMouthguard.jsx:101
+msgid "tips.mouthguard.list.item-4"
+msgstr "එය සෑම දිනකම කිහිප වතාවක් ප්‍රතිස්ථාපනය නොවේ"
+
+#: src/components/screens/TipMouthguard.jsx:111
+#: src/components/screens/Tips.jsx:87
+msgid "tips.mouthguard.headline"
+msgstr "මුඛාරක්ෂකය, ඔව් හෝ නැත?"
+
+#: src/components/screens/TipMouthguard.jsx:112
+msgid "tips.mouthguard.text-1"
+msgstr ""
+"සියලුම සෞඛ්‍ය අංශ සඳහා මුක ආවරණ අත්‍යවශ්‍ය වේ. රෝගී පුද්ගලයින් හෝ COVID-19 මුක ආවරණ වල රෝග "
+"ලක්ෂණ ඇති පුද්ගලයින් සඳහා ආසාදන වැළැක්වීමේ සුදුසු කොටසකි. ඔබේ සෞඛ්‍ය සේවා සැපයුම්කරු ඔබෙන් "
+"ඉල්ලා සිටින්නේ නම් පමණක් මුක ආවරණයක් පැළඳීමට අපි ඔබට නිර්දේශ කරමු. සනීපාරක්ෂක නීති අනුගමනය "
+"කිරීමට වග බලා ගන්න."
+
+#: src/components/screens/TipMouthguard.jsx:114
+msgid "tips.mouthguard.text-2"
+msgstr ""
+"සෞඛ්‍ය සේවා සපයන්නන් මුක ආවරණ බාධකයක් ලෙස පැළඳ සිටින අතර කැස්ස හෝ කිවිසුම් යාමේදී කුඩා ජල "
+"බිඳිති පැතිරීම වැළැක්වීමට එය උපකාරී වේ."
+
+#: src/components/screens/TipMouthguard.jsx:119
+msgid "tips.mouthguard.list.intro"
+msgstr "ශල්‍යකර්මයෙන් පිටත මුක ආවරණය පැළඳීමෙන් කිසිදු බලපෑමක් නැත:"
+
+#: src/components/screens/TipMouthguard.jsx:98
+msgid "tips.mouthguard.list.item-1"
+msgstr "මුක ආවරණය කඩදාසි වලින් සාදා ඇත"
+
+#: src/components/screens/TipMouthguard.jsx:99
+msgid "tips.mouthguard.list.item-2"
+msgstr "මුක ආවරණය මුහුණට නොගැලපේ හෝ කාන්දු වේ"
+
+#: src/components/screens/TipNotFeelingWell.jsx:108
+#: src/components/screens/Tips.jsx:95
+msgid "tips.not-feeling-well.headline"
+msgstr "මට සනීප නැහැ, මට කොරෝනා වයිරස් තිබේද?"
+
+#: src/components/screens/TipNotFeelingWell.jsx:109
+msgid "tips.not-feeling-well.text"
+msgstr ""
+"උණ වැනි රෝග ලක්ෂණ ඇති සෑම රෝගියෙකුම SARS-CoV-2 වෛරසයේ වාහකයෙකු නොවේ. ඔබේ රෝග ලක්ෂණ "
+"පිළිබඳව ඔබ සැමවිටම ඔබව දැනුවත් කර ඔබේ වෛද්‍යවරයා අමතන්න."
+
+#: src/components/screens/TipNotFeelingWell.jsx:113
+msgid "tips.not-feeling-well.list.intro"
+msgstr "ලෝක සෞඛ්‍ය සංවිධානයට අනුව COVID-19 හි සාමාන්‍ය රෝග ලක්ෂණ:"
+
+#: src/components/screens/TipNotFeelingWell.jsx:95
+msgid "tips.not-feeling-well.list.item-1"
+msgstr "ශ්වසන රෝග ලක්ෂණ"
+
+#: src/components/screens/TipNotFeelingWell.jsx:96
+msgid "tips.not-feeling-well.list.item-2"
+msgstr "උණ"
+
+#: src/components/screens/TipNotFeelingWell.jsx:97
+msgid "tips.not-feeling-well.list.item-3"
+msgstr "කැස්ස"
+
+#: src/components/screens/TipNotFeelingWell.jsx:98
+msgid "tips.not-feeling-well.list.item-4"
+msgstr "හුස්ම හිරවීම"
+
+#: src/components/screens/TipReliableSources.jsx:81
+#: src/components/screens/Tips.jsx:103
+msgid "tips.reliable-sources.headline"
+msgstr "මට විශ්වාසදායක ප්‍රභවයන් සොයාගත හැක්කේ කොතැනින්ද?"
+
+#: src/components/screens/TipReliableSources.jsx:82
+msgid "tips.reliable-sources.text"
+msgstr "තොරතුරු සහිත වෙබ් අඩවි"
+
+#: src/components/screens/Tips.jsx:116
+msgid "tips-screen.intro.text"
+msgstr ""
+"ආසාදනය වීමේ අවදානම හැකිතාක් දුරට අඩු කිරීමට සහ ආසාදනයක් ඇති වූ විට නිවැරදි දේ කිරීමට ඔබට "
+"උපකාර වන දැනුම මෙහිදී ඔබට හමුවනු ඇත."
+
+#: src/components/screens/TipWashingHands.jsx:109
+#: src/components/screens/Tips.jsx:79
+msgid "tips.washing-hands.headline"
+msgstr "ඔබේ අත් සේදීමෙන්"
+
+#: src/components/screens/TipWashingHands.jsx:110
+msgid "tips.washing-hands.text"
+msgstr ""
+"ඔබේ අත් සේදීම පහසුය, එය විෂබීජ පැතිරීම වැළැක්වීමට හොඳම ක්‍රමයකි. පිරිසිදු අත් මගින් විෂබීජ පැතිරීම "
+"වළක්වා ගත හැකිය. මෙම පියවර පහ අනුගමනය කරන්න:"
+
+#: src/components/screens/TipWashingHands.jsx:95
+msgid "tips.washing-hands.list.item-1"
+msgstr "පිරිසිදු, ගලා යන ජලය (උණුසුම් හෝ සීතල) වලින් ඔබේ දෑත් තෙත් කරන්න"
+
+#: src/components/screens/TipWashingHands.jsx:96
+msgid "tips.washing-hands.list.item-2"
+msgstr "සබන් ආලේප කර ඔබේ දෑත් එකට අතුල්ලන්න"
+
+#: src/components/screens/TipWashingHands.jsx:97
+msgid "tips.washing-hands.list.item-3"
+msgstr "තත්පර 30-60 අතර කාලයක් ඔබේ අත්, මාපටැඟිලි, ඔබේ ඇඟිලි අතර සහ නියපොතු යට සෝදන්න."
+
+#: src/components/screens/TipWashingHands.jsx:98
+msgid "tips.washing-hands.list.item-4"
+msgstr "පිරිසිදු හා ගලා යන ජලයෙන් ඔබේ දෑත් හොඳින් සේදීම."
+
+#: src/components/screens/TipWashingHands.jsx:99
+msgid "tips.washing-hands.list.item-5"
+msgstr "පිරිසිදු තුවායක් හෝ වාතය භාවිතයෙන් ඔබේ දෑත් වියළා ගන්න."
+
+#: src/components/screens/Welcome/ui.jsx:28
+msgid "welcome-screen.slides.notifications.headline"
+msgstr "ඔබ අත් සෝදා ගත්තාද?"
+
+#: src/components/screens/Welcome/ui.jsx:29
+msgid "welcome-screen.slides.notifications.text"
+msgstr "ඔබේ දැනුම්දීම් සක්‍රිය කර ආසාදනය වැළැක්වීම සඳහා අත් සේදීම සඳහා නිතරම මතක් කරන්න."
+
+#: src/components/screens/Welcome/ui.jsx:30
+msgid "welcome-screen.slides.notifications.button-skip"
+msgstr "මඟ හරින්න"
+
+#: src/components/screens/Welcome/ui.jsx:31
+msgid "welcome-screen.slides.notifications.button"
+msgstr "දැන් ක්‍රියාත්මක කරන්න"
+
+#: src/components/widgets/DayOverview.jsx:115
+msgid "today"
+msgstr "අද"
+
+#: src/components/widgets/DayOverview.jsx:119
+msgid "total"
+msgstr "සමස්ත"
+
+#: src/components/widgets/SearchBar.jsx:57
+msgid "placeholder.search-input"
+msgstr "සොයන්න"
+
+#~ msgid "notifications.desinfect-smartphone.variant-2.headline"
+#~ msgstr "📱🧽 ඔබගේ තිරය පිරිසිදුව තබා ගන්න"
+
+#~ msgid "notifications.desinfect-smartphone.variant-2.text"
+#~ msgstr "විෂබීජ, බැක්ටීරියා සහ වෙනත් රෝග කාරක වලින් ඔබේ තිරය නිදහස් කරන්න."
+
+#~ msgid "notifications.desinfect-smartphone.variant-3.headline"
+#~ msgstr "📱🧽ඔබගේ දුරකථනය විෂබීජහරණය කරන්න"
+
+#~ msgid "notifications.desinfect-smartphone.variant-3.text"
+#~ msgstr ""
+#~ "ඔබගේ දුරකථනය සනීපාරක්ෂාව තබා ගැනීමෙන් විෂබීජ ඔබගේ ඇඟිලි තුඩු වලින් වළක්වා ගත හැකිය."

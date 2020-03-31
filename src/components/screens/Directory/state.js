@@ -21,7 +21,7 @@ const addPersonToList = (persons, person) => {
       }
     }
 
-    importPerson.fullName = [importPerson.givenName, importPerson.middleName, importPerson.familyName]
+    importPerson.fullName = [importPerson.givenName || '', importPerson.middleName || '', importPerson.familyName || '']
       .join(' ')
       .replace(/\s+/g, ' ');
   } else {

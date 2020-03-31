@@ -33,7 +33,7 @@ export const importPersons = (closeImportPersonsModal = false) => async (dispatc
 
           contacts.forEach(({ familyName, givenName, middleName, phoneNumbers, recordID }) => {
             // ignore company contacts
-            if (givenName.trim() !== '') {
+            if (givenName && givenName.trim() !== '') {
               personsToImport.push({
                 givenName,
                 middleName,
