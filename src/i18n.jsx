@@ -1,38 +1,55 @@
 import formatDistance from 'date-fns/formatDistance';
 import {
   de as dateFnsDe,
+  el as dateFnsEl,
   enUS as dateFnsEnUs,
   es as dateFnsEs,
   fi as dateFnsFi,
   fr as dateFnsFr,
   it as dateFnsIt,
+  ja as dateFnsJa,
   nl as dateFnsNl,
   pl as dateFnsPl,
   ro as dateFnsRo,
+  ru as dateFnsRu,
+  tr as dateFnsTr,
+  uk as dateFnsUk,
   zhCN as dateFnsZhCn,
 } from 'date-fns/locale';
 import moment from 'moment';
 import momentDe from 'moment/locale/de';
+import momentEl from 'moment/locale/el';
 import momentEnGb from 'moment/locale/en-gb';
 import momentEs from 'moment/locale/es';
 import momentFi from 'moment/locale/fi';
 import momentFr from 'moment/locale/fr';
 import momentIt from 'moment/locale/it';
+import momentJa from 'moment/locale/ja';
 import momentNl from 'moment/locale/nl';
 import momentPl from 'moment/locale/pl';
 import momentRo from 'moment/locale/ro';
+import momentRu from 'moment/locale/ru';
+import momentSi from 'moment/locale/si';
+import momentTr from 'moment/locale/tr';
+import momentUk from 'moment/locale/uk';
 import momentZhCn from 'moment/locale/zh-cn';
 import React from 'react';
 import { ReactReduxContext } from 'react-redux';
 import de_DE from './assets/translations/de_DE';
+import el_GR from './assets/translations/el_GR';
 import en_US from './assets/translations/en_US';
 import es_ES from './assets/translations/es_ES';
 import fi_FI from './assets/translations/fi_FI';
 import fr_FR from './assets/translations/fr_FR';
 import it_IT from './assets/translations/it_IT';
+import ja from './assets/translations/ja';
 import nl_NL from './assets/translations/nl_NL';
 import pl_PL from './assets/translations/pl_PL';
 import ro_RO from './assets/translations/ro_RO';
+import ru_RU from './assets/translations/ru_RU';
+import si_LK from './assets/translations/si_LK';
+import tr_TR from './assets/translations/tr_TR';
+import uk_UA from './assets/translations/uk_UA';
 import zh_CN from './assets/translations/zh_CN';
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from './constants';
 
@@ -44,6 +61,9 @@ const getMessages = (language) => {
     switch (language) {
       case 'de':
         messagesList = de_DE.locale_data.messages;
+        break;
+      case 'el':
+        messagesList = el_GR.locale_data.messages;
         break;
       case 'es':
         messagesList = es_ES.locale_data.messages;
@@ -57,6 +77,9 @@ const getMessages = (language) => {
       case 'it':
         messagesList = it_IT.locale_data.messages;
         break;
+      case 'ja':
+        messagesList = ja.locale_data.messages;
+        break;
       case 'nl':
         messagesList = nl_NL.locale_data.messages;
         break;
@@ -66,12 +89,27 @@ const getMessages = (language) => {
       case 'ro':
         messagesList = ro_RO.locale_data.messages;
         break;
+      case 'ru':
+        messagesList = ru_RU.locale_data.messages;
+        break;
+      case 'si':
+        messagesList = si_LK.locale_data.messages;
+        break;
+      case 'tr':
+        messagesList = tr_TR.locale_data.messages;
+        break;
+      case 'uk':
+        messagesList = uk_UA.locale_data.messages;
+        break;
       case 'zh':
         messagesList = zh_CN.locale_data.messages;
         break;
       default:
         messagesList = en_US.locale_data.messages;
     }
+
+    // TODO: remove!!
+    // messagesList = si_LK.locale_data.messages;
 
     if (messagesList) {
       Object.keys(messagesList).forEach((key) => {
@@ -109,6 +147,9 @@ export const reducer = (state = initialState, action = { type: null }) => {
           case 'de':
             moment.updateLocale('de', momentDe);
             break;
+          case 'el':
+            moment.updateLocale('el', momentEl);
+            break;
           case 'es':
             moment.updateLocale('es', momentEs);
             break;
@@ -121,6 +162,9 @@ export const reducer = (state = initialState, action = { type: null }) => {
           case 'it':
             moment.updateLocale('it', momentIt);
             break;
+          case 'ja':
+            moment.updateLocale('ja', momentJa);
+            break;
           case 'nl':
             moment.updateLocale('nl', momentNl);
             break;
@@ -130,12 +174,27 @@ export const reducer = (state = initialState, action = { type: null }) => {
           case 'ro':
             moment.updateLocale('ro', momentRo);
             break;
+          case 'ru':
+            moment.updateLocale('ru', momentRu);
+            break;
+          case 'si':
+            moment.updateLocale('si', momentSi);
+            break;
+          case 'tr':
+            moment.updateLocale('tr', momentTr);
+            break;
+          case 'uk':
+            moment.updateLocale('uk', momentUk);
+            break;
           case 'zh':
             moment.updateLocale('zh-cn', momentZhCn);
             break;
           default:
             moment.updateLocale('en', momentEnGb);
         }
+
+        // TODO: remove!!
+        // moment.updateLocale('si', momentSi);
 
         return { ...state, currentLanguage: action.language, messages };
       }
@@ -188,6 +247,9 @@ const withI18n = (WrappedComponent) => {
         case 'de':
           locale = dateFnsDe;
           break;
+        case 'el':
+          locale = dateFnsEl;
+          break;
         case 'es':
           locale = dateFnsEs;
           break;
@@ -200,6 +262,9 @@ const withI18n = (WrappedComponent) => {
         case 'it':
           locale = dateFnsIt;
           break;
+        case 'ja':
+          locale = dateFnsJa;
+          break;
         case 'nl':
           locale = dateFnsNl;
           break;
@@ -209,12 +274,27 @@ const withI18n = (WrappedComponent) => {
         case 'ro':
           locale = dateFnsRo;
           break;
+        case 'ru':
+          locale = dateFnsRu;
+          break;
+        case 'si':
+          locale = dateFnsEnUs;
+          break;
+        case 'tr':
+          locale = dateFnsTr;
+          break;
+        case 'uk':
+          locale = dateFnsUk;
+          break;
         case 'zh':
           locale = dateFnsZhCn;
           break;
         default:
           locale = dateFnsEnUs;
       }
+
+      // TODO: remove!!
+      // locale = dateFnsEnUs;
 
       return formatDistance(start, end, { locale });
     }

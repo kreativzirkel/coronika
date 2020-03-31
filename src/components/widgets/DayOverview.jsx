@@ -53,6 +53,9 @@ const DayOverview = ({
       fontSize: vw(7),
       textTransform: 'lowercase',
     },
+    dayValueDay: {
+      marginRight: vw(2.5),
+    },
     dayValueNumber: {
       color: COLOR_PRIMARY,
       textAlign: 'right',
@@ -73,6 +76,10 @@ const DayOverview = ({
     dayValueCaptionDark: {
       color: '#ffffff',
     },
+    dayValueWrapper: {
+      flex: 1,
+      flexDirection: 'row',
+    },
     dayDateWrapper: {
       flex: 1,
     },
@@ -83,7 +90,7 @@ const DayOverview = ({
     dayLocationsWrapper: {
       flexGrow: 0,
       flexShrink: 0,
-      marginRight: vw(1.5),
+      marginRight: vw(1.8),
     },
   });
 
@@ -115,9 +122,23 @@ const DayOverview = ({
             {isToday ? __('today') : moment(timestamp).from(today)}
           </Text>
         )}
-        <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark) }}>
-          {isTotal ? __('total') : moment(timestamp).format('dd DD.MMM')}
-        </Text>
+
+        {isTotal && (
+          <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark) }}>
+            {isTotal ? __('total') : moment(timestamp).format('dd DD.MMM')}
+          </Text>
+        )}
+
+        {!isTotal && (
+          <View style={styles.dayValueWrapper}>
+            <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark), ...styles.dayValueDay }}>
+              {moment(timestamp).format('dd')}
+            </Text>
+            <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark) }}>
+              {moment(timestamp).format('DD.MMM')}
+            </Text>
+          </View>
+        )}
       </View>
       <View style={styles.dayLocationsWrapper}>
         <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('locations')}</Text>

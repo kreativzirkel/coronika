@@ -73,6 +73,12 @@
 		354DDDA7242B8E2000C791F6 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		35786470241826C00040C421 /* coronika-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "coronika-Bridging-Header.h"; sourceTree = "<group>"; };
 		35786471241826C00040C421 /* workaround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workaround.swift; sourceTree = "<group>"; };
+		35EBE24424333CFB00F5D28B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		35EBE24524333D0500F5D28B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		35EBE24624333D0D00F5D28B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		35EBE24724333D1B00F5D28B /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		35EBE24824333D2800F5D28B /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		35EBE24924333D7900F5D28B /* si-LK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "si-LK"; path = "si-LK.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		3928A9DB4895EC607E5A9129 /* Pods-coronika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coronika.debug.xcconfig"; path = "Target Support Files/Pods-coronika/Pods-coronika.debug.xcconfig"; sourceTree = "<group>"; };
 		3E24DCBE8D3A93D9972ECABD /* libPods-coronika-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coronika-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EFBA826E4224CE7AE58BAC6 /* Pods-coronika.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-coronika.release.xcconfig"; path = "Target Support Files/Pods-coronika/Pods-coronika.release.xcconfig"; sourceTree = "<group>"; };
@@ -361,6 +367,12 @@
 				nl,
 				fi,
 				pl,
+				ru,
+				ja,
+				tr,
+				el,
+				uk,
+				"si-LK",
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
@@ -636,6 +648,12 @@
 				354DDDA5242B8E0F00C791F6 /* nl */,
 				354DDDA6242B8E1900C791F6 /* fi */,
 				354DDDA7242B8E2000C791F6 /* pl */,
+				35EBE24424333CFB00F5D28B /* ru */,
+				35EBE24524333D0500F5D28B /* ja */,
+				35EBE24624333D0D00F5D28B /* tr */,
+				35EBE24724333D1B00F5D28B /* el */,
+				35EBE24824333D2800F5D28B /* uk */,
+				35EBE24924333D7900F5D28B /* si-LK */,
 			);
 			name = LaunchScreen.xib;
 			path = coronika;

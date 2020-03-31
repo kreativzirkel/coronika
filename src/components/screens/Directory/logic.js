@@ -28,6 +28,7 @@ export const importPersons = (closeImportPersonsModal = false) => async (dispatc
       RNContacts.getAll((err, contacts) => {
         if (err === 'denied') {
           // error
+          dispatch(disablePersonsImporting());
         } else {
           const personsToImport = [];
 
