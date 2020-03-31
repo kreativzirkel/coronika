@@ -14,6 +14,7 @@ const storeConfig = {
   key: 'coronika',
   stateReconciler: autoMergeLevel2,
   storage: AsyncStorage,
+  timeout: 0,
   whitelist: ['dashboard', 'directory', 'settings', 'welcome'],
 };
 

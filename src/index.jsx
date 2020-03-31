@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import App from './components/App/logic';
 import screens from './components/screens';
-import { COLOR_SECONDARY } from './constants';
+import { COLOR_PRIMARY, COLOR_SECONDARY } from './constants';
 import configureStore from './createStore';
 
 const Stack = createStackNavigator();
@@ -76,11 +76,13 @@ const Navigator = () => (
   </NavigationContainer>
 );
 
+const Loading = () => <View style={{ backgroundColor: COLOR_PRIMARY, height: '100%', width: '100%' }} />;
+
 export default () => {
   const { persistor, store } = configureStore();
 
   return (
-    <PersistGate loading={null} persistor={persistor}>
+    <PersistGate loading={<Loading />} persistor={persistor}>
       <Provider store={store}>
         <Navigator />
       </Provider>
