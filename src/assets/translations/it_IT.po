@@ -487,61 +487,61 @@ msgstr "Panoramica delle esportazioni"
 msgid "overview-screen.header.headline"
 msgstr "Panoramica"
 
-#: src/components/screens/Settings/logic.js:148
+#: src/components/screens/Settings/logic.js:153
 msgid "notifications.diary.headline"
 msgstr "📒 Registra i tuoi contatti"
 
-#: src/components/screens/Settings/logic.js:149
+#: src/components/screens/Settings/logic.js:154
 msgid "notifications.diary.text"
 msgstr ""
 "Registra i tuoi contatti più stretti e aiuta a rallentare la diffusione del "
 "coronavirus."
 
-#: src/components/screens/Settings/logic.js:161
+#: src/components/screens/Settings/logic.js:166
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Pulisci lo schermo del tuo smartphone"
 
-#: src/components/screens/Settings/logic.js:162
+#: src/components/screens/Settings/logic.js:167
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "Rimuovi i germi pulendo lo schermo con un panno disinfettante."
-
-#: src/components/screens/Settings/logic.js:173
-#: src/components/screens/Settings/logic.js:206
-#: src/components/screens/Settings/logic.js:221
-msgid "notifications.washing-hands.variant-1.text"
-msgstr "Se sei stato fuori, lavati bene le mani."
-
-#: src/components/screens/Settings/logic.js:174
-#: src/components/screens/Settings/logic.js:207
-#: src/components/screens/Settings/logic.js:222
-msgid "notifications.washing-hands.variant-1.headline"
-msgstr "🤚💧 Lavare le mani"
 
 #: src/components/screens/Settings/logic.js:178
 #: src/components/screens/Settings/logic.js:211
 #: src/components/screens/Settings/logic.js:226
+msgid "notifications.washing-hands.variant-1.text"
+msgstr "Se sei stato fuori, lavati bene le mani."
+
+#: src/components/screens/Settings/logic.js:179
+#: src/components/screens/Settings/logic.js:212
+#: src/components/screens/Settings/logic.js:227
+msgid "notifications.washing-hands.variant-1.headline"
+msgstr "🤚💧 Lavare le mani"
+
+#: src/components/screens/Settings/logic.js:183
+#: src/components/screens/Settings/logic.js:216
+#: src/components/screens/Settings/logic.js:231
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Lavarsi le mani è uno dei modi più semplici per proteggere se stessi e gli "
 "altri dalle malattie."
 
-#: src/components/screens/Settings/logic.js:179
-#: src/components/screens/Settings/logic.js:212
-#: src/components/screens/Settings/logic.js:227
+#: src/components/screens/Settings/logic.js:184
+#: src/components/screens/Settings/logic.js:217
+#: src/components/screens/Settings/logic.js:232
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Ti sei lavato le mani?"
 
-#: src/components/screens/Settings/logic.js:183
-#: src/components/screens/Settings/logic.js:216
-#: src/components/screens/Settings/logic.js:231
+#: src/components/screens/Settings/logic.js:188
+#: src/components/screens/Settings/logic.js:221
+#: src/components/screens/Settings/logic.js:236
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Esercitatevi a lavarvi le mani con attenzione e non dimenticate di pulire le "
 "punte delle dita e lo spazio tra le dita."
 
-#: src/components/screens/Settings/logic.js:184
-#: src/components/screens/Settings/logic.js:217
-#: src/components/screens/Settings/logic.js:232
+#: src/components/screens/Settings/logic.js:189
+#: src/components/screens/Settings/logic.js:222
+#: src/components/screens/Settings/logic.js:237
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 Non dimenticate i vostri consigli!"
 

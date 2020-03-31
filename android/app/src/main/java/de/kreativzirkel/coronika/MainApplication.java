@@ -1,6 +1,7 @@
 package de.kreativzirkel.coronika;
 
 import android.app.Application;
+import androidx.multidex.MultiDex;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
@@ -54,6 +55,12 @@ public class MainApplication extends Application implements ReactApplication {
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this); // Remove this line if you don't want Flipper enabled
   }
+
+  @Override
+    protected void attachBaseContext(Context context) {
+        super.attachBaseContext(context);
+        MultiDex.install(this);
+    }
 
   /**
    * Loads Flipper in React Native templates.

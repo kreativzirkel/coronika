@@ -1,6 +1,5 @@
 import * as RNLocalize from 'react-native-localize';
-import { BackHandler, Platform } from 'react-native';
-import PushNotification from 'react-native-push-notification';
+import { BackHandler } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import connect from 'react-redux/lib/connect/connect';
 import { SUPPORTED_LANGUAGES } from '../../../constants';
@@ -56,9 +55,6 @@ const Container = container(Screen, {
         }
       });
     })();
-
-    // TODO: find solution for android
-    if (Platform.OS === 'ios') PushNotification.clearAllNotifications();
   },
 
   componentWillUnmount() {

@@ -34,6 +34,7 @@ import momentTr from 'moment/locale/tr';
 import momentUk from 'moment/locale/uk';
 import momentZhCn from 'moment/locale/zh-cn';
 import React from 'react';
+import * as RNLocalize from 'react-native-localize';
 import { ReactReduxContext } from 'react-redux';
 import de_DE from './assets/translations/de_DE';
 import el_GR from './assets/translations/el_GR';
@@ -207,6 +208,26 @@ export const reducer = (state = initialState, action = { type: null }) => {
   }
 };
 
+export const __ = (text, language, messages) => {
+  let translationLanguage = language;
+  let translationMessages = messages;
+
+  if (!translationLanguage) {
+    const bestAvailableLanguage = RNLocalize.findBestAvailableLanguage(SUPPORTED_LANGUAGES);
+    translationLanguage = bestAvailableLanguage?.languageTag?.substring(0, 2) || DEFAULT_LANGUAGE;
+  }
+
+  if (!SUPPORTED_LANGUAGES.includes(translationLanguage)) {
+    translationLanguage = DEFAULT_LANGUAGE;
+  }
+
+  if (!translationMessages) {
+    translationMessages = translations[translationLanguage];
+  }
+
+  return translationMessages?.[text] || text;
+};
+
 const withI18n = (WrappedComponent) => {
   class I18n extends React.Component {
     unsubscribeStore;
@@ -299,14 +320,10 @@ const withI18n = (WrappedComponent) => {
       return formatDistance(start, end, { locale });
     }
 
-    __(text) {
+    __i18n(text) {
       const { currentLanguage, messages } = this.state;
 
-      if (!SUPPORTED_LANGUAGES.includes(currentLanguage)) {
-        return text;
-      }
-
-      return messages?.[text] || text;
+      return __(text, currentLanguage, messages);
     }
 
     render() {
@@ -319,7 +336,7 @@ const withI18n = (WrappedComponent) => {
           {...{ ...props, currentLanguage }}
           formatTimeDistance={(start, end) => this.formatTimeDistance(start, end)}
           ref={forwardedRef}
-          __={(text) => this.__(text)}
+          __={(text) => this.__i18n(text)}
         />
         /* eslint-enable react/jsx-props-no-spreading */
       );

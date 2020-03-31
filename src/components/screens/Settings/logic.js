@@ -1,8 +1,9 @@
 import PushNotificationIOS from '@react-native-community/push-notification-ios';
 import moment from 'moment';
+import { Platform } from 'react-native';
 import PushNotification from 'react-native-push-notification';
 import connect from 'react-redux/lib/connect/connect';
-import withI18n from '../../../i18n';
+import withI18n, { __ as __i18n } from '../../../i18n';
 import { container } from '../../../utils/react';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import {
@@ -15,7 +16,6 @@ import {
   enableNotificationWashingHandsOption2,
 } from './actions';
 import Screen from './ui';
-import { Platform } from 'react-native';
 
 const NOTIFICATION_KEY = {
   DIARY: 'coronika.notification.diary.daily',
@@ -24,6 +24,8 @@ const NOTIFICATION_KEY = {
   WASHING_HANDS_OPTION_1: 'coronika.notification.washing-hands.option-1',
   WASHING_HANDS_OPTION_2: 'coronika.notification.washing-hands.option-2',
 };
+
+let timeoutSetupNotifications;
 
 export const configurePushNotifications = (navigation, requestPermissions = false) => async (dispatch, getState) => {
   PushNotification.configure({
@@ -46,14 +48,15 @@ export const configurePushNotifications = (navigation, requestPermissions = fals
         }
       }
 
-      // TODO: find solution for android
-      if (Platform.OS === 'ios') PushNotification.clearAllNotifications();
+      if (Platform.OS === 'ios') PushNotificationIOS.removeAllDeliveredNotifications();
 
       notification.finish(PushNotificationIOS.FetchResult.NoData);
     },
     popInitialNotification: false,
     requestPermissions,
   });
+
+  dispatch(resetNotifications(__i18n));
 };
 
 const setDefaultNotifications = (__, cb) => async (dispatch, getState) => {
@@ -88,7 +91,8 @@ const setDefaultNotifications = (__, cb) => async (dispatch, getState) => {
       notificationWashingHandsOption2Enabled,
     },
     __,
-    cb
+    cb,
+    0
   );
 };
 
@@ -125,6 +129,7 @@ const getDailyNotificationTimestamp = (hours, minutes = 0) => {
 };
 
 const setNotifications = (notifications, __, cb) => {
+  if (Platform.OS === 'ios') PushNotificationIOS.removeAllDeliveredNotifications();
   PushNotification.cancelAllLocalNotifications();
 
   const {
@@ -252,21 +257,55 @@ const setNotifications = (notifications, __, cb) => {
   }
 };
 
-const setupNotifications = (notifications, __, cb) => {
-  if (Platform.OS === 'ios') {
-    PushNotification.requestPermissions().then((grant) => {
-      if (Platform.OS === 'ios' && !grant.alert && !grant.badge && !grant.sound) {
-        if (cb) {
-          cb();
+const setupNotifications = (notifications, __, cb, timeout = 1000) => {
+  if (timeoutSetupNotifications) clearTimeout(timeoutSetupNotifications);
+
+  timeoutSetupNotifications = setTimeout(() => {
+    if (Platform.OS === 'ios') {
+      PushNotification.requestPermissions().then((grant) => {
+        if (Platform.OS === 'ios' && !grant.alert && !grant.badge && !grant.sound) {
+          if (cb) {
+            cb();
+          }
+
+          return;
         }
 
-        return;
-      }
-
+        setNotifications(notifications, __, cb);
+      });
+    } else {
       setNotifications(notifications, __, cb);
-    });
-  } else {
-    setNotifications(notifications, __, cb);
+    }
+  }, timeout);
+};
+
+const resetNotifications = (__, cb) => async (dispatch, getState) => {
+  const {
+    settings: {
+      notificationDiaryEnabled,
+      notificationDisinfectSmartphoneEnabled,
+      notificationWashingHandsOption1Enabled,
+      notificationWashingHandsOption2Enabled,
+    },
+  } = getState();
+
+  if (
+    notificationDiaryEnabled ||
+    notificationDisinfectSmartphoneEnabled ||
+    notificationWashingHandsOption1Enabled ||
+    notificationWashingHandsOption2Enabled
+  ) {
+    setupNotifications(
+      {
+        notificationDiaryEnabled,
+        notificationDisinfectSmartphoneEnabled,
+        notificationWashingHandsOption1Enabled,
+        notificationWashingHandsOption2Enabled,
+      },
+      __,
+      cb,
+      0
+    );
   }
 };
 
