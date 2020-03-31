@@ -8,10 +8,13 @@ import withViewportUnits from '../../utils/withViewportUnits';
 import ListItem from './ListItem';
 import ListItemSeparator from './ListItemSeparator';
 import cloneDeep from 'lodash/cloneDeep';
+import UilEllipsisV from '@iconscout/react-native-unicons/icons/uil-ellipsis-v';
 
 class LocationsListItemClass extends React.Component {
   constructor(props) {
     super(props);
+
+    this.swipeable = React.createRef();
   }
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
@@ -24,6 +27,12 @@ class LocationsListItemClass extends React.Component {
     if (this.props.timestamp !== nextProps.timestamp) return true;
 
     return false;
+  }
+
+  openMore() {
+    if (this.swipeable.current.openRight) {
+      this.swipeable.current.openRight();
+    }
   }
 
   render() {
@@ -80,6 +89,16 @@ class LocationsListItemClass extends React.Component {
         fontSize: vw(3.5),
       },
       locationContentTime: {},
+      moreButton: {
+        alignItems: 'center',
+        bottom: 0,
+        flexDirection: 'row',
+        padding: vw(2),
+        position: 'absolute',
+        right: 0,
+        top: 0,
+        zIndex: 1,
+      },
       selectButton: {
         alignItems: 'center',
         flexDirection: 'row',
@@ -156,11 +175,20 @@ class LocationsListItemClass extends React.Component {
             )}
           </View>
         )}
+
+        {allowDelete && (
+          <TouchableOpacity onPress={() => this.openMore()} style={styles.moreButton}>
+            <UilEllipsisV size={vw(7)} color={COLOR_PRIMARY} />
+          </TouchableOpacity>
+        )}
       </View>
     );
 
     return (
-      <ListItem allowDelete={allowDelete} deleteItem={() => deleteItem(id, description, timestamp)}>
+      <ListItem
+        allowDelete={allowDelete}
+        deleteItem={() => deleteItem(id, description, timestamp)}
+        ref={this.swipeable}>
         {allowUpdate ? (
           <TouchableOpacity onPress={() => updateItem(id)}>
             <LocationItem />

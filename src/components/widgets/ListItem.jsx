@@ -38,10 +38,11 @@ const renderRightActions = (progress, deleteItem, vw) => {
   );
 };
 
-const ListItem = ({ allowDelete, children, deleteItem, vw }) => {
+const ListItem = React.forwardRef(({ allowDelete, children, deleteItem, vw }, ref) => {
   return allowDelete ? (
     <Swipeable
       friction={1.5}
+      ref={ref}
       renderRightActions={(progress) => renderRightActions(progress, deleteItem, vw)}
       rightTreshold={40}>
       {children}
@@ -49,6 +50,6 @@ const ListItem = ({ allowDelete, children, deleteItem, vw }) => {
   ) : (
     <Fragment>{children}</Fragment>
   );
-};
+});
 
 export default withViewportUnits(ListItem);

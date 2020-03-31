@@ -1,3 +1,4 @@
+import UilEllipsisV from '@iconscout/react-native-unicons/icons/uil-ellipsis-v';
 import UilMinus from '@iconscout/react-native-unicons/icons/uil-minus';
 import UilMobileAndroid from '@iconscout/react-native-unicons/icons/uil-mobile-android';
 import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
@@ -12,6 +13,8 @@ import ListItemSeparator from './ListItemSeparator';
 class PersonListItemClass extends React.Component {
   constructor(props) {
     super(props);
+
+    this.swipeable = React.createRef();
   }
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
@@ -20,6 +23,12 @@ class PersonListItemClass extends React.Component {
     if (this.props.fullName !== nextProps.fullName) return true;
 
     return false;
+  }
+
+  openMore() {
+    if (this.swipeable.current.openRight) {
+      this.swipeable.current.openRight();
+    }
   }
 
   render() {
@@ -40,6 +49,16 @@ class PersonListItemClass extends React.Component {
     } = this.props;
 
     const styles = StyleSheet.create({
+      moreButton: {
+        alignItems: 'center',
+        bottom: 0,
+        flexDirection: 'row',
+        padding: vw(2),
+        position: 'absolute',
+        right: 0,
+        top: 0,
+        zIndex: 1,
+      },
       person: {
         backgroundColor: COLOR_SECONDARY,
         borderRadius: vw(2.3),
@@ -120,6 +139,12 @@ class PersonListItemClass extends React.Component {
           </View>
         )}
 
+        {allowPersonDelete && (
+          <TouchableOpacity onPress={() => this.openMore()} style={styles.moreButton}>
+            <UilEllipsisV size={vw(7)} color={COLOR_PRIMARY} />
+          </TouchableOpacity>
+        )}
+
         {showCounter && (
           <View style={styles.viewCounter}>
             <Text style={styles.viewCounterText}>{counter}</Text>
@@ -129,7 +154,7 @@ class PersonListItemClass extends React.Component {
     );
 
     return (
-      <ListItem allowDelete={allowPersonDelete} deleteItem={() => deleteItem(id)}>
+      <ListItem allowDelete={allowPersonDelete} deleteItem={() => deleteItem(id)} ref={this.swipeable}>
         {allowPersonUpdate ? (
           <TouchableOpacity onPress={() => updateItem(id)}>
             <PersonItem />
