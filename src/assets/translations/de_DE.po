@@ -47,12 +47,12 @@ msgid "navigation.tips.label"
 msgstr "Tipps"
 
 #: src/components/partials/EntriesTabsView.jsx:618
-#: src/components/widgets/DayOverview.jsx:139
+#: src/components/widgets/DayOverview.jsx:160
 msgid "persons"
 msgstr "Personen"
 
 #: src/components/partials/EntriesTabsView.jsx:628
-#: src/components/widgets/DayOverview.jsx:123
+#: src/components/widgets/DayOverview.jsx:144
 msgid "locations"
 msgstr "Orte"
 
@@ -207,19 +207,23 @@ msgstr "Jetzt anfangen"
 msgid "add-entry-screen.header.headline"
 msgstr "Eintrag hinzufügen"
 
-#: src/components/screens/Dashboard/ui.jsx:116
+#: src/components/screens/Dashboard/ui.jsx:144
 #: src/components/screens/Menu.jsx:120
 msgid "menu-screen.header.headline"
 msgstr "Menü"
 
-#: src/components/screens/Dashboard/ui.jsx:126
+#: src/components/screens/Dashboard/ui.jsx:154
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Klicke auf den heutigen Tag, um deine ersten Personen oder Orte einzutragen."
 
-#: src/components/screens/Dashboard/ui.jsx:128
+#: src/components/screens/Dashboard/ui.jsx:156
 msgid "Close"
 msgstr "Schließen"
+
+#: src/components/screens/Dashboard/ui.jsx:173
+msgid "dashboard-screen.list.load-more"
+msgstr "mehr laden"
 
 #: src/components/screens/Day/ui.jsx:52
 msgid "day-screen.header.headline"
@@ -834,11 +838,11 @@ msgstr "Überspringen"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Jetzt aktivieren"
 
-#: src/components/widgets/DayOverview.jsx:115
+#: src/components/widgets/DayOverview.jsx:122
 msgid "today"
 msgstr "heute"
 
-#: src/components/widgets/DayOverview.jsx:119
+#: src/components/widgets/DayOverview.jsx:128
 msgid "total"
 msgstr "gesamt"
 

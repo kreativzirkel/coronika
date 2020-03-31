@@ -46,12 +46,12 @@ msgid "navigation.tips.label"
 msgstr "ヒント"
 
 #: src/components/partials/EntriesTabsView.jsx:618
-#: src/components/widgets/DayOverview.jsx:139
+#: src/components/widgets/DayOverview.jsx:160
 msgid "persons"
 msgstr "連絡先"
 
 #: src/components/partials/EntriesTabsView.jsx:628
-#: src/components/widgets/DayOverview.jsx:123
+#: src/components/widgets/DayOverview.jsx:144
 msgid "locations"
 msgstr "場所"
 
@@ -203,18 +203,22 @@ msgstr "今すぐ始める"
 msgid "add-entry-screen.header.headline"
 msgstr "エントリを追加"
 
-#: src/components/screens/Dashboard/ui.jsx:116
+#: src/components/screens/Dashboard/ui.jsx:144
 #: src/components/screens/Menu.jsx:120
 msgid "menu-screen.header.headline"
 msgstr "メニュー"
 
-#: src/components/screens/Dashboard/ui.jsx:126
+#: src/components/screens/Dashboard/ui.jsx:154
 msgid "dashboard-screen.first-start.hint"
 msgstr "今日の日付をクリックして、最初の人や場所を入力します。"
 
-#: src/components/screens/Dashboard/ui.jsx:128
+#: src/components/screens/Dashboard/ui.jsx:156
 msgid "Close"
 msgstr "閉じる"
+
+#: src/components/screens/Dashboard/ui.jsx:173
+msgid "dashboard-screen.list.load-more"
+msgstr "もっと読み込む"
 
 #: src/components/screens/Day/ui.jsx:52
 msgid "day-screen.header.headline"
@@ -801,11 +805,11 @@ msgstr "スキップ"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "今すぐ活性化する"
 
-#: src/components/widgets/DayOverview.jsx:115
+#: src/components/widgets/DayOverview.jsx:122
 msgid "today"
 msgstr "今日"
 
-#: src/components/widgets/DayOverview.jsx:119
+#: src/components/widgets/DayOverview.jsx:128
 msgid "total"
 msgstr "合計"
 

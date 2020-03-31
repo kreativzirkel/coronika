@@ -7,7 +7,19 @@ import Layout from '../../widgets/Layout';
 import Header from '../../widgets/Header';
 import { COLOR_PRIMARY, COLOR_SECONDARY, DAYS_OVERVIEW } from '../../../constants';
 
-const Dashboard = ({ days, firstStartHintVisible, total, closeFirstStartHint, openDay, navigation, vw, __ }) => {
+const Dashboard = ({
+  days,
+  firstStartHintVisible,
+  total,
+  closeFirstStartHint,
+  loadMoreDays,
+  openDay,
+  navigation,
+  vw,
+  __,
+}) => {
+  const listItemHeight = vw(19.6);
+
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     daysList: {
@@ -41,6 +53,20 @@ const Dashboard = ({ days, firstStartHintVisible, total, closeFirstStartHint, op
       fontSize: vw(3.8),
       marginLeft: vw(1),
       textTransform: 'lowercase',
+    },
+    loadMoreText: {
+      color: COLOR_PRIMARY,
+      fontFamily: 'JetBrainsMono-Regular',
+      fontSize: vw(4.8),
+      textTransform: 'lowercase',
+    },
+    loadMoreWrapper: {
+      alignItems: 'center',
+      flex: 1,
+      flexDirection: 'row',
+      height: listItemHeight,
+      justifyContent: 'center',
+      width: '100%',
     },
     view: {
       alignItems: 'center',
@@ -92,8 +118,6 @@ const Dashboard = ({ days, firstStartHintVisible, total, closeFirstStartHint, op
     },
   });
 
-  const listItemHeight = vw(19.6);
-
   const today = moment()
     .hours(0)
     .minutes(0)
@@ -101,6 +125,10 @@ const Dashboard = ({ days, firstStartHintVisible, total, closeFirstStartHint, op
     .milliseconds(0);
 
   const totalTimespan = moment(today).subtract(DAYS_OVERVIEW, 'days');
+
+  if (days.length > 0 && days.length < 30) {
+    days = [...days, { loadMore: true, timestamp: 'load-more' }];
+  }
 
   return (
     <Layout>
@@ -137,19 +165,31 @@ const Dashboard = ({ days, firstStartHintVisible, total, closeFirstStartHint, op
               getItemLayout={(data, index) => ({ length: listItemHeight, offset: listItemHeight * index, index })}
               inverted
               keyExtractor={({ timestamp }) => timestamp.toString()}
-              renderItem={({ item: { locations, persons, timestamp } }) => (
-                <TouchableOpacity onPress={() => openDay(timestamp, navigation)}>
-                  <DayOverview
-                    isEmphasized={timestamp === today.valueOf()}
-                    isTranslucent={firstStartHintVisible && timestamp !== today.valueOf()}
-                    locations={locations.length}
-                    persons={persons.length}
-                    showIcons={firstStartHintVisible && timestamp === today.valueOf()}
-                    timestamp={timestamp}
-                    today={today}
-                  />
-                </TouchableOpacity>
-              )}
+              renderItem={({ item: { loadMore, locations, persons, timestamp } }) => {
+                if (loadMore) {
+                  return (
+                    <View style={styles.loadMoreWrapper}>
+                      <TouchableOpacity onPress={() => loadMoreDays()}>
+                        <Text style={styles.loadMoreText}>{__('dashboard-screen.list.load-more')}</Text>
+                      </TouchableOpacity>
+                    </View>
+                  );
+                }
+
+                return (
+                  <TouchableOpacity onPress={() => openDay(timestamp, navigation)}>
+                    <DayOverview
+                      isEmphasized={timestamp === today.valueOf()}
+                      isTranslucent={firstStartHintVisible && timestamp !== today.valueOf()}
+                      locations={locations.length}
+                      persons={persons.length}
+                      showIcons={firstStartHintVisible && timestamp === today.valueOf()}
+                      timestamp={timestamp}
+                      today={today}
+                    />
+                  </TouchableOpacity>
+                );
+              }}
               style={styles.daysList}
             />
           )}

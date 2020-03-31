@@ -45,12 +45,12 @@ msgid "navigation.tips.label"
 msgstr "Поради"
 
 #: src/components/partials/EntriesTabsView.jsx:618
-#: src/components/widgets/DayOverview.jsx:139
+#: src/components/widgets/DayOverview.jsx:160
 msgid "persons"
 msgstr "осіб"
 
 #: src/components/partials/EntriesTabsView.jsx:628
-#: src/components/widgets/DayOverview.jsx:123
+#: src/components/widgets/DayOverview.jsx:144
 msgid "locations"
 msgstr "локації"
 
@@ -205,20 +205,24 @@ msgstr "Розпочати зараз"
 msgid "add-entry-screen.header.headline"
 msgstr "Додати запис"
 
-#: src/components/screens/Dashboard/ui.jsx:116
+#: src/components/screens/Dashboard/ui.jsx:144
 #: src/components/screens/Menu.jsx:120
 msgid "menu-screen.header.headline"
 msgstr "Меню"
 
-#: src/components/screens/Dashboard/ui.jsx:126
+#: src/components/screens/Dashboard/ui.jsx:154
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Клацніть на сьогоднішню дату, щоб ввести своїх перших людей або "
 "місцеположення."
 
-#: src/components/screens/Dashboard/ui.jsx:128
+#: src/components/screens/Dashboard/ui.jsx:156
 msgid "Close"
 msgstr "Закрити"
+
+#: src/components/screens/Dashboard/ui.jsx:173
+msgid "dashboard-screen.list.load-more"
+msgstr "завантажити ще"
 
 #: src/components/screens/Day/ui.jsx:52
 msgid "day-screen.header.headline"
@@ -828,11 +832,11 @@ msgstr "Пропустити"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Активуйте зараз"
 
-#: src/components/widgets/DayOverview.jsx:115
+#: src/components/widgets/DayOverview.jsx:122
 msgid "today"
 msgstr "сьогодні"
 
-#: src/components/widgets/DayOverview.jsx:119
+#: src/components/widgets/DayOverview.jsx:128
 msgid "total"
 msgstr "всього"
 

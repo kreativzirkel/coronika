@@ -42,6 +42,28 @@ const loadDays = () => async (dispatch, getState) => {
   dispatch(initializeDays(addTimestamps, maxTimestamp));
 };
 
+const loadMoreDays = () => async (dispatch, getState) => {
+  const {
+    dashboard: { days },
+  } = getState();
+
+  const firstDay = Math.min(...Object.keys(days).map((timestamp) => parseInt(timestamp, 10)));
+
+  const daysToAdd = 7;
+  const addTimestamps = [];
+
+  for (let i = 1; i <= daysToAdd; i++) {
+    const currentDay = moment(firstDay).subtract(i, 'days');
+    const currentDayTimestamp = currentDay.valueOf();
+    addTimestamps.push(currentDayTimestamp);
+  }
+
+  const maxTimestamp = moment(firstDay)
+    .subtract(DAYS_OVERVIEW, 'days')
+    .valueOf();
+  dispatch(initializeDays(addTimestamps, maxTimestamp));
+};
+
 const daysSortingFunction = (a, b) => {
   if (a < b) {
     return 1;
@@ -97,6 +119,7 @@ const mapStateToProps = ({ dashboard: { days, firstStartHintVisible } }) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     closeFirstStartHint: () => dispatch(closeFirstStartHint()),
+    loadMoreDays: () => dispatch(loadMoreDays()),
     openDay: (timestamp, navigation) => dispatch(openDay(timestamp, navigation)),
   };
 };

@@ -46,12 +46,12 @@ msgid "navigation.tips.label"
 msgstr "ඉඟි"
 
 #: src/components/partials/EntriesTabsView.jsx:618
-#: src/components/widgets/DayOverview.jsx:139
+#: src/components/widgets/DayOverview.jsx:160
 msgid "persons"
 msgstr "පුද්ගලයන්"
 
 #: src/components/partials/EntriesTabsView.jsx:628
-#: src/components/widgets/DayOverview.jsx:123
+#: src/components/widgets/DayOverview.jsx:144
 msgid "locations"
 msgstr "ස්ථාන"
 
@@ -201,18 +201,22 @@ msgstr "දැන් පටන් ගන්න"
 msgid "add-entry-screen.header.headline"
 msgstr "ප්‍රවේශය එක් කරන්න"
 
-#: src/components/screens/Dashboard/ui.jsx:116
+#: src/components/screens/Dashboard/ui.jsx:144
 #: src/components/screens/Menu.jsx:120
 msgid "menu-screen.header.headline"
 msgstr "මෙනුව"
 
-#: src/components/screens/Dashboard/ui.jsx:126
+#: src/components/screens/Dashboard/ui.jsx:154
 msgid "dashboard-screen.first-start.hint"
 msgstr "ඔබගේ පළමු පුද්ගලයින් හෝ ස්ථාන ඇතුළත් කිරීමට අද දිනය තෝරන්න"
 
-#: src/components/screens/Dashboard/ui.jsx:128
+#: src/components/screens/Dashboard/ui.jsx:156
 msgid "Close"
 msgstr "වසන්න"
+
+#: src/components/screens/Dashboard/ui.jsx:173
+msgid "dashboard-screen.list.load-more"
+msgstr "තවත් පටවන්න"
 
 #: src/components/screens/Day/ui.jsx:52
 msgid "day-screen.header.headline"
@@ -792,11 +796,11 @@ msgstr "මඟ හරින්න"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "දැන් ක්‍රියාත්මක කරන්න"
 
-#: src/components/widgets/DayOverview.jsx:115
+#: src/components/widgets/DayOverview.jsx:122
 msgid "today"
 msgstr "අද"
 
-#: src/components/widgets/DayOverview.jsx:119
+#: src/components/widgets/DayOverview.jsx:128
 msgid "total"
 msgstr "සමස්ත"
 
