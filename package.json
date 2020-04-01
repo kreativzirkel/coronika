@@ -5,7 +5,8 @@
   "scripts": {
     "analyze-bundle": "react-native-bundle-visualizer",
     "android": "react-native run-android",
-    "createConfig": "node ./src/utils/createConfigFile.js",
+    "createConfigFile": "node ./src/utils/createConfigFile.js",
+    "createLicensesFile": "npm-license-crawler --onlyDirectDependencies --json ./src/licenses.json",
     "exportTranslations": "node ./src/utils/exportTranslations.js",
     "generateTranslationFiles": "node ./src/utils/generateTranslationFiles.js",
     "ios": "react-native run-ios",
@@ -70,6 +71,7 @@
     "eslint-plugin-react": "^7.19.0",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
+    "npm-license-crawler": "0.2.1",
     "po2json": "0.4.5",
     "prettier": "^1.19.1",
     "react-native-bundle-visualizer": "2.1.1",

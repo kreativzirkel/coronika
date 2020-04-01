@@ -293,11 +293,105 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr "In curand!"
 
-#: src/components/screens/Legal.jsx:102
+#: src/components/screens/Legal.jsx:151 src/components/screens/Menu.jsx:109
+msgid "legal-screen.header.headline"
+msgstr "legal"
+
+#: src/components/screens/Legal.jsx:158
+msgid "legal-screen.tabs.privacy.label"
+msgstr "Confidentialitate"
+
+#: src/components/screens/Legal.jsx:163
+msgid "legal-screen.tabs.imprint.label"
+msgstr "Imprima"
+
+#: src/components/screens/Legal.jsx:168
+msgid "legal-screen.tabs.licenses.label"
+msgstr "Licențe"
+
+#: src/components/screens/Legal.jsx:178
+msgid "legal-screen.privacy.section-1.headline"
+msgstr "Prelucrarea datelor a aplicației"
+
+#: src/components/screens/Legal.jsx:179
+msgid "legal-screen.privacy.section-1.text"
+msgstr ""
+"Aplicația Coronika prelucrează date personale și legate de locație exclusiv "
+"local pe smartphone-ul utilizatorului."
+
+#: src/components/screens/Legal.jsx:180
+msgid "legal-screen.privacy.section-2.headline"
+msgstr "Date personale"
+
+#: src/components/screens/Legal.jsx:181
+msgid "legal-screen.privacy.section-2.text"
+msgstr ""
+"Utilizatorul poate crea persoane în cadrul aplicației. Numele și un număr de "
+"telefon sunt salvate. În plus, este posibil să importați agenda telefonică a "
+"smartphone-ului. Numele și numerele de telefon ale intrărilor din agenda "
+"telefonică sunt transferate în aplicație. Toate datele rămân local pe "
+"smartphone și, prin urmare, în mâinile utilizatorului. Datele nu sunt "
+"transferate niciodată furnizorului de aplicații sau terților."
+
+#: src/components/screens/Legal.jsx:182
+msgid "legal-screen.privacy.section-3.headline"
+msgstr "Date bazate pe locație"
+
+#: src/components/screens/Legal.jsx:183
+msgid "legal-screen.privacy.section-3.text"
+msgstr ""
+"Utilizatorul poate crea locații în cadrul aplicației. Numele locației și o "
+"descriere sunt salvate. Locația utilizatorului prin intermediul serviciilor "
+"de poziționare (de exemplu, GPS sau similar) nu este accesată în niciun "
+"moment. Datele legate de locație rămân de asemenea locale pe smartphone-ul "
+"utilizatorului și nu sunt transmise furnizorului de aplicații sau terților."
+
+#: src/components/screens/Legal.jsx:184
+msgid "legal-screen.privacy.section-4.headline"
+msgstr "Jurnal"
+
+#: src/components/screens/Legal.jsx:185
+msgid "legal-screen.privacy.section-4.text"
+msgstr ""
+"În jurnal, utilizatorul atribuie zilnic persoane și locuri zilnic. Pe lângă "
+"datele deja colectate, un timp este memorat și pentru locuri. Jurnalul și "
+"toate intrările rămân și la nivel local pe smartphone-ul utilizatorului și "
+"nu sunt transmise furnizorului de aplicații sau terților."
+
+#: src/components/screens/Legal.jsx:186
+msgid "legal-screen.privacy.section-5.headline"
+msgstr "Export"
+
+#: src/components/screens/Legal.jsx:187
+msgid "legal-screen.privacy.section-5.text"
+msgstr ""
+"În cadrul aplicației, utilizatorul are o funcție de export pentru a exporta "
+"o secțiune a jurnalului ca fișier PDF. Fișierul PDF este creat local pe "
+"smartphone-ul utilizatorului. Acest fișier PDF poate fi utilizat pentru a "
+"oferi cu ușurință autorităților de sănătate sau altor organe oficiale o "
+"listă de contacte într-o perioadă de timp selectată pentru a urmări căile de "
+"infecție și, dacă este necesar, pentru a informa alte persoane despre o "
+"posibilă infecție. Utilizatorul este responsabil de gestionarea fișierului "
+"PDF și a datelor conținute în acesta în mod responsabil și de a nu le "
+"transmite nepăsător."
+
+#: src/components/screens/Legal.jsx:188
+msgid "legal-screen.privacy.section-6.headline"
+msgstr "Transfer de date și urmărire"
+
+#: src/components/screens/Legal.jsx:189
+msgid "legal-screen.privacy.section-6.text"
+msgstr ""
+"Aplicația nu oferă urmărire automată sau transfer de date furnizorului de "
+"aplicații sau terților. Singura excepție este funcția de export. Totuși, "
+"numai utilizatorul decide cui cui sunt transmise datele. În caz contrar, "
+"toate datele rămân local pe smartphone-ul utilizatorului."
+
+#: src/components/screens/Legal.jsx:197
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "Această aplicație „Coronika” este operată de"
 
-#: src/components/screens/Legal.jsx:103
+#: src/components/screens/Legal.jsx:198
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -314,11 +408,11 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:104
+#: src/components/screens/Legal.jsx:199
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "Răspunderea pentru conținut"
 
-#: src/components/screens/Legal.jsx:105
+#: src/components/screens/Legal.jsx:200
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "În calitate de furnizor de servicii, suntem responsabili pentru propriul "
@@ -331,11 +425,11 @@ msgstr ""
 "din momentul cunoașterii unei încălcări concrete. Dacă vom lua cunoștință de "
 "astfel de încălcări, vom elimina imediat acest conținut."
 
-#: src/components/screens/Legal.jsx:106
+#: src/components/screens/Legal.jsx:201
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Răspundere pentru linkuri"
 
-#: src/components/screens/Legal.jsx:107
+#: src/components/screens/Legal.jsx:202
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Oferta noastră conține link-uri către site-uri web externe ale terților, pe "
@@ -349,11 +443,11 @@ msgstr ""
 "a legii. Dacă vom lua cunoștință de orice încălcare, vom elimina aceste "
 "legături imediat."
 
-#: src/components/screens/Legal.jsx:108
+#: src/components/screens/Legal.jsx:203
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "Drepturi de autor"
 
-#: src/components/screens/Legal.jsx:109
+#: src/components/screens/Legal.jsx:204
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "Conținutul și lucrările pe aceste pagini create de operatori sunt supuse "
@@ -367,96 +461,6 @@ msgstr ""
 "cunoașteți o încălcare a dreptului de autor, vă rugăm să ne informați în "
 "consecință. Dacă vom lua cunoștință de orice încălcare, vom elimina imediat "
 "acest conținut."
-
-#: src/components/screens/Legal.jsx:61 src/components/screens/Menu.jsx:109
-msgid "legal-screen.header.headline"
-msgstr "legal"
-
-#: src/components/screens/Legal.jsx:68
-msgid "legal-screen.tabs.privacy.label"
-msgstr "Confidentialitate"
-
-#: src/components/screens/Legal.jsx:73
-msgid "legal-screen.tabs.imprint.label"
-msgstr "Imprima"
-
-#: src/components/screens/Legal.jsx:83
-msgid "legal-screen.privacy.section-1.headline"
-msgstr "Prelucrarea datelor a aplicației"
-
-#: src/components/screens/Legal.jsx:84
-msgid "legal-screen.privacy.section-1.text"
-msgstr ""
-"Aplicația Coronika prelucrează date personale și legate de locație exclusiv "
-"local pe smartphone-ul utilizatorului."
-
-#: src/components/screens/Legal.jsx:85
-msgid "legal-screen.privacy.section-2.headline"
-msgstr "Date personale"
-
-#: src/components/screens/Legal.jsx:86
-msgid "legal-screen.privacy.section-2.text"
-msgstr ""
-"Utilizatorul poate crea persoane în cadrul aplicației. Numele și un număr de "
-"telefon sunt salvate. În plus, este posibil să importați agenda telefonică a "
-"smartphone-ului. Numele și numerele de telefon ale intrărilor din agenda "
-"telefonică sunt transferate în aplicație. Toate datele rămân local pe "
-"smartphone și, prin urmare, în mâinile utilizatorului. Datele nu sunt "
-"transferate niciodată furnizorului de aplicații sau terților."
-
-#: src/components/screens/Legal.jsx:87
-msgid "legal-screen.privacy.section-3.headline"
-msgstr "Date bazate pe locație"
-
-#: src/components/screens/Legal.jsx:88
-msgid "legal-screen.privacy.section-3.text"
-msgstr ""
-"Utilizatorul poate crea locații în cadrul aplicației. Numele locației și o "
-"descriere sunt salvate. Locația utilizatorului prin intermediul serviciilor "
-"de poziționare (de exemplu, GPS sau similar) nu este accesată în niciun "
-"moment. Datele legate de locație rămân de asemenea locale pe smartphone-ul "
-"utilizatorului și nu sunt transmise furnizorului de aplicații sau terților."
-
-#: src/components/screens/Legal.jsx:89
-msgid "legal-screen.privacy.section-4.headline"
-msgstr "Jurnal"
-
-#: src/components/screens/Legal.jsx:90
-msgid "legal-screen.privacy.section-4.text"
-msgstr ""
-"În jurnal, utilizatorul atribuie zilnic persoane și locuri zilnic. Pe lângă "
-"datele deja colectate, un timp este memorat și pentru locuri. Jurnalul și "
-"toate intrările rămân și la nivel local pe smartphone-ul utilizatorului și "
-"nu sunt transmise furnizorului de aplicații sau terților."
-
-#: src/components/screens/Legal.jsx:91
-msgid "legal-screen.privacy.section-5.headline"
-msgstr "Export"
-
-#: src/components/screens/Legal.jsx:92
-msgid "legal-screen.privacy.section-5.text"
-msgstr ""
-"În cadrul aplicației, utilizatorul are o funcție de export pentru a exporta "
-"o secțiune a jurnalului ca fișier PDF. Fișierul PDF este creat local pe "
-"smartphone-ul utilizatorului. Acest fișier PDF poate fi utilizat pentru a "
-"oferi cu ușurință autorităților de sănătate sau altor organe oficiale o "
-"listă de contacte într-o perioadă de timp selectată pentru a urmări căile de "
-"infecție și, dacă este necesar, pentru a informa alte persoane despre o "
-"posibilă infecție. Utilizatorul este responsabil de gestionarea fișierului "
-"PDF și a datelor conținute în acesta în mod responsabil și de a nu le "
-"transmite nepăsător."
-
-#: src/components/screens/Legal.jsx:93
-msgid "legal-screen.privacy.section-6.headline"
-msgstr "Transfer de date și urmărire"
-
-#: src/components/screens/Legal.jsx:94
-msgid "legal-screen.privacy.section-6.text"
-msgstr ""
-"Aplicația nu oferă urmărire automată sau transfer de date furnizorului de "
-"aplicații sau terților. Singura excepție este funcția de export. Totuși, "
-"numai utilizatorul decide cui cui sunt transmise datele. În caz contrar, "
-"toate datele rămân local pe smartphone-ul utilizatorului."
 
 #: src/components/screens/Menu.jsx:105
 #: src/components/screens/Settings/ui.jsx:92

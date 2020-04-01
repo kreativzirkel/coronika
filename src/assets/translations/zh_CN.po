@@ -278,11 +278,92 @@ msgstr "请注意，数据涉及到敏感信息。 我们强烈建议不要在�
 msgid "export-screen.coming-soon"
 msgstr "即将推出！"
 
-#: src/components/screens/Legal.jsx:102
+#: src/components/screens/Legal.jsx:151 src/components/screens/Menu.jsx:109
+msgid "legal-screen.header.headline"
+msgstr "法律方面"
+
+#: src/components/screens/Legal.jsx:158
+msgid "legal-screen.tabs.privacy.label"
+msgstr "隐私政策"
+
+#: src/components/screens/Legal.jsx:163
+msgid "legal-screen.tabs.imprint.label"
+msgstr "版本说明"
+
+#: src/components/screens/Legal.jsx:168
+msgid "legal-screen.tabs.licenses.label"
+msgstr "许可证"
+
+#: src/components/screens/Legal.jsx:178
+msgid "legal-screen.privacy.section-1.headline"
+msgstr "应用程序的数据处理"
+
+#: src/components/screens/Legal.jsx:179
+msgid "legal-screen.privacy.section-1.text"
+msgstr "应用程序Coronika只在用户的智能手机上本地处理个人和位置相关的数据。"
+
+#: src/components/screens/Legal.jsx:180
+msgid "legal-screen.privacy.section-2.headline"
+msgstr "个人资料"
+
+#: src/components/screens/Legal.jsx:181
+msgid "legal-screen.privacy.section-2.text"
+msgstr ""
+"用户可以在APP内创建联系人。姓名和电话号码都可以保存。此外，它还可以导入智能手"
+"机的电话簿。电话簿中的姓名和电话号码会被传输到应用程序中。所有的数据都保留在"
+"智能手机的本地，因此是在用户的手中。这些数据永远不会被传输给应用程序提供商或"
+"第三方。"
+
+#: src/components/screens/Legal.jsx:182
+msgid "legal-screen.privacy.section-3.headline"
+msgstr "基于位置的数据"
+
+#: src/components/screens/Legal.jsx:183
+msgid "legal-screen.privacy.section-3.text"
+msgstr ""
+"用户可以在APP内创建位置。位置的名称和描述会被保存下来。用户通过定位服务（如"
+"GPS或类似的定位服务）的位置不会在任何时候被访问。与位置相关的数据也会保留在用"
+"户的智能手机上，不会传输给应用提供商或第三方。"
+
+#: src/components/screens/Legal.jsx:184
+msgid "legal-screen.privacy.section-4.headline"
+msgstr "日记"
+
+#: src/components/screens/Legal.jsx:185
+msgid "legal-screen.privacy.section-4.text"
+msgstr ""
+"在日记中，用户每天都可以将人和地点相对应记录到不同的日子。除了已经收集到的数"
+"据外，还可以记录时间。日记和所有条目也会保存在用户的智能手机上，不会被传送给"
+"应用程序提供商或第三方。"
+
+#: src/components/screens/Legal.jsx:186
+msgid "legal-screen.privacy.section-5.headline"
+msgstr "导出"
+
+#: src/components/screens/Legal.jsx:187
+msgid "legal-screen.privacy.section-5.text"
+msgstr ""
+"在该应用程序中，用户可以将日记的一部分导出为PDF文件。该PDF文件是在用户的智能"
+"手机本地创建的。该PDF文件可用于向卫生部门或其他官方机构提供选定时间段内的联系"
+"人名单，以便追踪感染路径，必要时，将潜在的感染情况通知其他人。用户有责任负责"
+"任地处理该PDF文件及其中包含的数据，不得随意传递。"
+
+#: src/components/screens/Legal.jsx:188
+msgid "legal-screen.privacy.section-6.headline"
+msgstr "数据传输和跟踪"
+
+#: src/components/screens/Legal.jsx:189
+msgid "legal-screen.privacy.section-6.text"
+msgstr ""
+"该应用不提供自动跟踪或数据传输给应用提供商或第三方的功能。唯一的例外是导出功"
+"能。然而，在这里，只有用户才能决定将数据传递给谁。否则，所有的数据都保留在用"
+"户的智能手机里。"
+
+#: src/components/screens/Legal.jsx:197
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "这款应用 \"Coronika \"是由以下公司运营的"
 
-#: src/components/screens/Legal.jsx:103
+#: src/components/screens/Legal.jsx:198
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -299,11 +380,11 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:104
+#: src/components/screens/Legal.jsx:199
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "关于内容的责任"
 
-#: src/components/screens/Legal.jsx:105
+#: src/components/screens/Legal.jsx:200
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "作为服务提供者，根据§7第1段TMG（德国电信媒体法）和一般法律，我们对这些网页上"
@@ -312,11 +393,11 @@ msgstr ""
 "用信息的权力不受影响。只有在知道有具体的侵权行为时，我们才会承担相应的责任。"
 "如果我们知道有任何此类侵权行为，我们将立即删除这些内容。"
 
-#: src/components/screens/Legal.jsx:106
+#: src/components/screens/Legal.jsx:201
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "关于链接的责任"
 
-#: src/components/screens/Legal.jsx:107
+#: src/components/screens/Legal.jsx:202
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "我们提供的包含了第三方网站的外部链接，我们对其内容没有任何影响。因此，我们对"
@@ -325,11 +406,11 @@ msgstr ""
 "接时，非法内容是无法识别的。但是，在没有具体的违法证据的情况下，永久控制链接"
 "页面的内容是不合理的。如果我们发现有侵权行为，我们将立即删除此类链接。"
 
-#: src/components/screens/Legal.jsx:108
+#: src/components/screens/Legal.jsx:203
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "版权"
 
-#: src/components/screens/Legal.jsx:109
+#: src/components/screens/Legal.jsx:204
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "这些网页上的内容和由经营者创建的作品受德国版权法的保护。复制、编辑、传播和任"
@@ -337,83 +418,6 @@ msgstr ""
 "私人、非商业性的使用。只要本网站上的内容不是由经营者创建的，则尊重第三方的版"
 "权。特别是，第三方的内容都会被标明。如果您发现有侵犯版权的情况，请及时通知我"
 "们。如果我们发现任何侵权行为，我们将立即删除这些内容。"
-
-#: src/components/screens/Legal.jsx:61 src/components/screens/Menu.jsx:109
-msgid "legal-screen.header.headline"
-msgstr "法律方面"
-
-#: src/components/screens/Legal.jsx:68
-msgid "legal-screen.tabs.privacy.label"
-msgstr "隐私政策"
-
-#: src/components/screens/Legal.jsx:73
-msgid "legal-screen.tabs.imprint.label"
-msgstr "版本说明"
-
-#: src/components/screens/Legal.jsx:83
-msgid "legal-screen.privacy.section-1.headline"
-msgstr "应用程序的数据处理"
-
-#: src/components/screens/Legal.jsx:84
-msgid "legal-screen.privacy.section-1.text"
-msgstr "应用程序Coronika只在用户的智能手机上本地处理个人和位置相关的数据。"
-
-#: src/components/screens/Legal.jsx:85
-msgid "legal-screen.privacy.section-2.headline"
-msgstr "个人资料"
-
-#: src/components/screens/Legal.jsx:86
-msgid "legal-screen.privacy.section-2.text"
-msgstr ""
-"用户可以在APP内创建联系人。姓名和电话号码都可以保存。此外，它还可以导入智能手"
-"机的电话簿。电话簿中的姓名和电话号码会被传输到应用程序中。所有的数据都保留在"
-"智能手机的本地，因此是在用户的手中。这些数据永远不会被传输给应用程序提供商或"
-"第三方。"
-
-#: src/components/screens/Legal.jsx:87
-msgid "legal-screen.privacy.section-3.headline"
-msgstr "基于位置的数据"
-
-#: src/components/screens/Legal.jsx:88
-msgid "legal-screen.privacy.section-3.text"
-msgstr ""
-"用户可以在APP内创建位置。位置的名称和描述会被保存下来。用户通过定位服务（如"
-"GPS或类似的定位服务）的位置不会在任何时候被访问。与位置相关的数据也会保留在用"
-"户的智能手机上，不会传输给应用提供商或第三方。"
-
-#: src/components/screens/Legal.jsx:89
-msgid "legal-screen.privacy.section-4.headline"
-msgstr "日记"
-
-#: src/components/screens/Legal.jsx:90
-msgid "legal-screen.privacy.section-4.text"
-msgstr ""
-"在日记中，用户每天都可以将人和地点相对应记录到不同的日子。除了已经收集到的数"
-"据外，还可以记录时间。日记和所有条目也会保存在用户的智能手机上，不会被传送给"
-"应用程序提供商或第三方。"
-
-#: src/components/screens/Legal.jsx:91
-msgid "legal-screen.privacy.section-5.headline"
-msgstr "导出"
-
-#: src/components/screens/Legal.jsx:92
-msgid "legal-screen.privacy.section-5.text"
-msgstr ""
-"在该应用程序中，用户可以将日记的一部分导出为PDF文件。该PDF文件是在用户的智能"
-"手机本地创建的。该PDF文件可用于向卫生部门或其他官方机构提供选定时间段内的联系"
-"人名单，以便追踪感染路径，必要时，将潜在的感染情况通知其他人。用户有责任负责"
-"任地处理该PDF文件及其中包含的数据，不得随意传递。"
-
-#: src/components/screens/Legal.jsx:93
-msgid "legal-screen.privacy.section-6.headline"
-msgstr "数据传输和跟踪"
-
-#: src/components/screens/Legal.jsx:94
-msgid "legal-screen.privacy.section-6.text"
-msgstr ""
-"该应用不提供自动跟踪或数据传输给应用提供商或第三方的功能。唯一的例外是导出功"
-"能。然而，在这里，只有用户才能决定将数据传递给谁。否则，所有的数据都保留在用"
-"户的智能手机里。"
 
 #: src/components/screens/Menu.jsx:105
 #: src/components/screens/Settings/ui.jsx:92

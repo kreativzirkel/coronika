@@ -293,11 +293,107 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr "Tulossa pian!"
 
-#: src/components/screens/Legal.jsx:102
+#: src/components/screens/Legal.jsx:151 src/components/screens/Menu.jsx:109
+msgid "legal-screen.header.headline"
+msgstr "oikeudellinen"
+
+#: src/components/screens/Legal.jsx:158
+msgid "legal-screen.tabs.privacy.label"
+msgstr "Yksityisyys"
+
+#: src/components/screens/Legal.jsx:163
+msgid "legal-screen.tabs.imprint.label"
+msgstr "Jälki"
+
+#: src/components/screens/Legal.jsx:168
+msgid "legal-screen.tabs.licenses.label"
+msgstr "lisenssit"
+
+#: src/components/screens/Legal.jsx:178
+msgid "legal-screen.privacy.section-1.headline"
+msgstr "Sovelluksen tiedonkäsittely"
+
+#: src/components/screens/Legal.jsx:179
+msgid "legal-screen.privacy.section-1.text"
+msgstr ""
+"App Coronika käsittelee henkilökohtaisia ja sijaintiin liittyviä tietoja "
+"yksinomaan paikallisesti käyttäjän älypuhelimella."
+
+#: src/components/screens/Legal.jsx:180
+msgid "legal-screen.privacy.section-2.headline"
+msgstr "Henkilökohtaiset tiedot"
+
+#: src/components/screens/Legal.jsx:181
+msgid "legal-screen.privacy.section-2.text"
+msgstr ""
+"Käyttäjä voi luoda yhteystietoja sovelluksen sisällä. Nimi ja puhelinnumero "
+"tallennetaan. Lisäksi on mahdollista tuoda älypuhelimen yhteystietoluettelo. "
+"Yhteystietoluettelon merkintöjen nimet ja puhelinnumerot siirretään "
+"sovellukseen. Kaikki tiedot pysyvät paikallisesti älypuhelimessa ja siten "
+"käyttäjän käsissä. Tietoja ei koskaan siirretä sovelluksen tarjoajalle tai "
+"kolmansille osapuolille."
+
+#: src/components/screens/Legal.jsx:182
+msgid "legal-screen.privacy.section-3.headline"
+msgstr "Sijaintiin perustuvat tiedot"
+
+#: src/components/screens/Legal.jsx:183
+msgid "legal-screen.privacy.section-3.text"
+msgstr ""
+"Käyttäjä voi luoda sijainteja sovelluksessa. Paikan nimi ja kuvaus "
+"tallennetaan. Muiden kuin käyttäjän itsensä ei ole mahdollista saada "
+"tietoonsa käyttäjän sijaintia paikannuspalvelujen (esim. GPS tai vastaava) "
+"kautta. Paikkaan liittyvät tiedot pysyvät myös paikallisina käyttäjän "
+"älypuhelimessa, eikä niitä välitetä sovelluksen tarjoajalle tai kolmansille "
+"osapuolille."
+
+#: src/components/screens/Legal.jsx:184
+msgid "legal-screen.privacy.section-4.headline"
+msgstr "Päiväkirja"
+
+#: src/components/screens/Legal.jsx:185
+msgid "legal-screen.privacy.section-4.text"
+msgstr ""
+"Päiväkirjassa käyttäjä määrittää päivittäin henkilöt ja paikat yksittäisiin "
+"päiviin. Jo kerättyjen tietojen lisäksi paikoille tallennetaan myös aika. "
+"Päiväkirja ja kaikki merkinnät pysyvät paikallisesti käyttäjän "
+"älypuhelimella, eikä niitä välitetä sovelluksen tarjoajalle tai kolmansille "
+"osapuolille."
+
+#: src/components/screens/Legal.jsx:186
+msgid "legal-screen.privacy.section-5.headline"
+msgstr "Vie"
+
+#: src/components/screens/Legal.jsx:187
+msgid "legal-screen.privacy.section-5.text"
+msgstr ""
+"Sovelluksessa on vientitoiminto, jotta käyttäjä voi viedä osan päiväkirjasta "
+"PDF-tiedostona. PDF-tiedosto luodaan paikallisesti käyttäjän älypuhelimella. "
+"Tätä PDF-tiedostoa voidaan käyttää helposti toimittamaan "
+"terveysviranomaisille tai muille virallisille tahoille luettelo "
+"yhteyshenkilöistä valitun ajanjakson ajan tartuntareittien jäljittämiseksi "
+"ja tarvittaessa muille ihmisille tiedottamiseksi mahdollisesta tartunnasta. "
+"Käyttäjä on vastuussa PDF-tiedostosta ja siihen sisältyvien tietojen "
+"vastuuntuntoisesta käsittelystä, eikä tämän pidä välittää sitä "
+"huolimattomasti."
+
+#: src/components/screens/Legal.jsx:188
+msgid "legal-screen.privacy.section-6.headline"
+msgstr "Tiedonsiirto ja seuranta"
+
+#: src/components/screens/Legal.jsx:189
+msgid "legal-screen.privacy.section-6.text"
+msgstr ""
+"Sovellus ei tarjoa automaattista seurantaa tai tiedonsiirtoa sovelluksen "
+"tarjoajalle tai kolmansille osapuolille. Ainoa poikkeus on vientitoiminto. "
+"Kuitenkin, silloinkin vain käyttäjä päättää kenelle tiedot siirretään. "
+"Muuten kaikki tiedot pysyvät paikallisesti käyttäjän älypuhelimella."
+
+#: src/components/screens/Legal.jsx:197
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "Coronika'-sovellusta ylläpitää"
 
-#: src/components/screens/Legal.jsx:103
+#: src/components/screens/Legal.jsx:198
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -314,11 +410,11 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:104
+#: src/components/screens/Legal.jsx:199
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "Vastuu sisällöstä"
 
-#: src/components/screens/Legal.jsx:105
+#: src/components/screens/Legal.jsx:200
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "Palveluntarjoajana olemme vastuussa omasta sisällöstämme näillä sivuilla "
@@ -331,11 +427,11 @@ msgstr ""
 "konkreettinen rikkomus. Jos saamme tietoomme tällaisia rikkomuksia, "
 "poistamme tällaisen sisällön heti."
 
-#: src/components/screens/Legal.jsx:106
+#: src/components/screens/Legal.jsx:201
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Vastuu linkeistä"
 
-#: src/components/screens/Legal.jsx:107
+#: src/components/screens/Legal.jsx:202
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Tarjouksemme sisältää linkkejä kolmansien osapuolien ulkopuolisille "
@@ -348,11 +444,11 @@ msgstr ""
 "järkeenkäypää ilman konkreettisia todisteita lain rikkomuksesta. Jos saamme "
 "tietoomme rikkomuksista, poistamme nämä linkit välittömästi."
 
-#: src/components/screens/Legal.jsx:108
+#: src/components/screens/Legal.jsx:203
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "Tekijänoikeudet"
 
-#: src/components/screens/Legal.jsx:109
+#: src/components/screens/Legal.jsx:204
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "Operaattorien luomaan sisältöön näillä sivuilla sovelletaan Saksan "
@@ -365,98 +461,6 @@ msgstr ""
 "sisältö on merkitty sellaiseksi. Jos saat kuitenkin tietoosi "
 "tekijänoikeusloukkauksia, ilmoita meille siitä. Jos saamme tietoomme "
 "rikkomuksia, poistamme tällaisen sisällön heti."
-
-#: src/components/screens/Legal.jsx:61 src/components/screens/Menu.jsx:109
-msgid "legal-screen.header.headline"
-msgstr "oikeudellinen"
-
-#: src/components/screens/Legal.jsx:68
-msgid "legal-screen.tabs.privacy.label"
-msgstr "Yksityisyys"
-
-#: src/components/screens/Legal.jsx:73
-msgid "legal-screen.tabs.imprint.label"
-msgstr "Jälki"
-
-#: src/components/screens/Legal.jsx:83
-msgid "legal-screen.privacy.section-1.headline"
-msgstr "Sovelluksen tiedonkäsittely"
-
-#: src/components/screens/Legal.jsx:84
-msgid "legal-screen.privacy.section-1.text"
-msgstr ""
-"App Coronika käsittelee henkilökohtaisia ja sijaintiin liittyviä tietoja "
-"yksinomaan paikallisesti käyttäjän älypuhelimella."
-
-#: src/components/screens/Legal.jsx:85
-msgid "legal-screen.privacy.section-2.headline"
-msgstr "Henkilökohtaiset tiedot"
-
-#: src/components/screens/Legal.jsx:86
-msgid "legal-screen.privacy.section-2.text"
-msgstr ""
-"Käyttäjä voi luoda yhteystietoja sovelluksen sisällä. Nimi ja puhelinnumero "
-"tallennetaan. Lisäksi on mahdollista tuoda älypuhelimen yhteystietoluettelo. "
-"Yhteystietoluettelon merkintöjen nimet ja puhelinnumerot siirretään "
-"sovellukseen. Kaikki tiedot pysyvät paikallisesti älypuhelimessa ja siten "
-"käyttäjän käsissä. Tietoja ei koskaan siirretä sovelluksen tarjoajalle tai "
-"kolmansille osapuolille."
-
-#: src/components/screens/Legal.jsx:87
-msgid "legal-screen.privacy.section-3.headline"
-msgstr "Sijaintiin perustuvat tiedot"
-
-#: src/components/screens/Legal.jsx:88
-msgid "legal-screen.privacy.section-3.text"
-msgstr ""
-"Käyttäjä voi luoda sijainteja sovelluksessa. Paikan nimi ja kuvaus "
-"tallennetaan. Muiden kuin käyttäjän itsensä ei ole mahdollista saada "
-"tietoonsa käyttäjän sijaintia paikannuspalvelujen (esim. GPS tai vastaava) "
-"kautta. Paikkaan liittyvät tiedot pysyvät myös paikallisina käyttäjän "
-"älypuhelimessa, eikä niitä välitetä sovelluksen tarjoajalle tai kolmansille "
-"osapuolille."
-
-#: src/components/screens/Legal.jsx:89
-msgid "legal-screen.privacy.section-4.headline"
-msgstr "Päiväkirja"
-
-#: src/components/screens/Legal.jsx:90
-msgid "legal-screen.privacy.section-4.text"
-msgstr ""
-"Päiväkirjassa käyttäjä määrittää päivittäin henkilöt ja paikat yksittäisiin "
-"päiviin. Jo kerättyjen tietojen lisäksi paikoille tallennetaan myös aika. "
-"Päiväkirja ja kaikki merkinnät pysyvät paikallisesti käyttäjän "
-"älypuhelimella, eikä niitä välitetä sovelluksen tarjoajalle tai kolmansille "
-"osapuolille."
-
-#: src/components/screens/Legal.jsx:91
-msgid "legal-screen.privacy.section-5.headline"
-msgstr "Vie"
-
-#: src/components/screens/Legal.jsx:92
-msgid "legal-screen.privacy.section-5.text"
-msgstr ""
-"Sovelluksessa on vientitoiminto, jotta käyttäjä voi viedä osan päiväkirjasta "
-"PDF-tiedostona. PDF-tiedosto luodaan paikallisesti käyttäjän älypuhelimella. "
-"Tätä PDF-tiedostoa voidaan käyttää helposti toimittamaan "
-"terveysviranomaisille tai muille virallisille tahoille luettelo "
-"yhteyshenkilöistä valitun ajanjakson ajan tartuntareittien jäljittämiseksi "
-"ja tarvittaessa muille ihmisille tiedottamiseksi mahdollisesta tartunnasta. "
-"Käyttäjä on vastuussa PDF-tiedostosta ja siihen sisältyvien tietojen "
-"vastuuntuntoisesta käsittelystä, eikä tämän pidä välittää sitä "
-"huolimattomasti."
-
-#: src/components/screens/Legal.jsx:93
-msgid "legal-screen.privacy.section-6.headline"
-msgstr "Tiedonsiirto ja seuranta"
-
-#: src/components/screens/Legal.jsx:94
-msgid "legal-screen.privacy.section-6.text"
-msgstr ""
-"Sovellus ei tarjoa automaattista seurantaa tai tiedonsiirtoa sovelluksen "
-"tarjoajalle tai kolmansille osapuolille. Ainoa poikkeus on vientitoiminto. "
-"Kuitenkin, silloinkin vain käyttäjä päättää kenelle tiedot siirretään. "
-"Muuten kaikki tiedot pysyvät paikallisesti käyttäjän älypuhelimella."
 
 #: src/components/screens/Menu.jsx:105
 #: src/components/screens/Settings/ui.jsx:92

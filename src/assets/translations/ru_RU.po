@@ -296,11 +296,107 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr "Скоро!"
 
-#: src/components/screens/Legal.jsx:102
+#: src/components/screens/Legal.jsx:151 src/components/screens/Menu.jsx:109
+msgid "legal-screen.header.headline"
+msgstr "Юридический"
+
+#: src/components/screens/Legal.jsx:158
+msgid "legal-screen.tabs.privacy.label"
+msgstr "Конфиденциальность"
+
+#: src/components/screens/Legal.jsx:163
+msgid "legal-screen.tabs.imprint.label"
+msgstr "Вывод"
+
+#: src/components/screens/Legal.jsx:168
+msgid "legal-screen.tabs.licenses.label"
+msgstr "Лицензии"
+
+#: src/components/screens/Legal.jsx:178
+msgid "legal-screen.privacy.section-1.headline"
+msgstr "Обработка данных приложения"
+
+#: src/components/screens/Legal.jsx:179
+msgid "legal-screen.privacy.section-1.text"
+msgstr ""
+"App Coronika обрабатывает персональные данные и данные, связанные с "
+"местоположением, исключительно локально на смартфоне пользователя."
+
+#: src/components/screens/Legal.jsx:180
+msgid "legal-screen.privacy.section-2.headline"
+msgstr "Личные данные"
+
+#: src/components/screens/Legal.jsx:181
+msgid "legal-screen.privacy.section-2.text"
+msgstr ""
+"Пользователь может создавать людей внутри приложения. Имя и номер телефона "
+"будут сохранены. Кроме того, возможно импортировать телефонную книгу "
+"смартфона. Имена и телефонные номера записей в телефонной книге переносятся "
+"в приложение. Все данные остаются на смартфоне и, следовательно, в руках "
+"пользователя. Данные никогда не передаются провайдеру приложения или третьим "
+"лицам."
+
+#: src/components/screens/Legal.jsx:182
+msgid "legal-screen.privacy.section-3.headline"
+msgstr "Данные о местоположении"
+
+#: src/components/screens/Legal.jsx:183
+msgid "legal-screen.privacy.section-3.text"
+msgstr ""
+"Пользователь может создавать локации внутри приложения. Название и описание "
+"места сохраняются. Доступ к местоположению пользователя через сервисы "
+"определения местоположения (например, GPS или аналогичные) не "
+"предоставляется в любое время. Данные о местоположении также остаются "
+"локальными на смартфоне пользователя и не передаются провайдеру приложения "
+"или третьим лицам."
+
+#: src/components/screens/Legal.jsx:184
+msgid "legal-screen.privacy.section-4.headline"
+msgstr "Дневник"
+
+#: src/components/screens/Legal.jsx:185
+msgid "legal-screen.privacy.section-4.text"
+msgstr ""
+"В дневнике пользователь ежедневно назначает лиц и места на отдельные дни. В "
+"дополнение к уже собранным данным, сохраняется также время и место. Дневник "
+"и все записи сохраняются также локально на смартфоне пользователя и не "
+"передаются провайдеру приложений или третьим лицам."
+
+#: src/components/screens/Legal.jsx:186
+msgid "legal-screen.privacy.section-5.headline"
+msgstr "Экспорт"
+
+#: src/components/screens/Legal.jsx:187
+msgid "legal-screen.privacy.section-5.text"
+msgstr ""
+"Внутри приложения пользователь имеет функцию экспорта для экспорта раздела "
+"дневника в виде PDF-файла. PDF файл создается локально на смартфоне "
+"пользователя. Этот PDF-файл может быть использован, чтобы легко предоставить "
+"органам здравоохранения или другим официальным органам список контактов в "
+"выбранный период времени, чтобы проследить пути заражения и, при "
+"необходимости, информировать других людей о потенциальной инфекции. "
+"Пользователь несет ответственность за ответственное обращение с PDF-файлом и "
+"содержащимися в нем данными, а также за то, чтобы не передавать их по "
+"неосторожности."
+
+#: src/components/screens/Legal.jsx:188
+msgid "legal-screen.privacy.section-6.headline"
+msgstr "Передача данных и отслеживание"
+
+#: src/components/screens/Legal.jsx:189
+msgid "legal-screen.privacy.section-6.text"
+msgstr ""
+"Приложение не обеспечивает автоматического отслеживания или передачи данных "
+"поставщику приложения или третьим лицам. Единственным исключением является "
+"функция экспорта. Там, однако, только пользователь решает, кому будут "
+"переданы данные. В противном случае все данные остаются локально на "
+"смартфоне пользователя."
+
+#: src/components/screens/Legal.jsx:197
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "Это приложение \"Короника\" управляется"
 
-#: src/components/screens/Legal.jsx:103
+#: src/components/screens/Legal.jsx:198
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -317,11 +413,11 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:104
+#: src/components/screens/Legal.jsx:199
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "Ответственность за содержание"
 
-#: src/components/screens/Legal.jsx:105
+#: src/components/screens/Legal.jsx:200
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "Как поставщик услуг мы несем ответственность за наше собственное содержание "
@@ -335,11 +431,11 @@ msgstr ""
 "известно о конкретном нарушении. Если нам станет известно о таких "
 "нарушениях, мы немедленно удалим такую информацию."
 
-#: src/components/screens/Legal.jsx:106
+#: src/components/screens/Legal.jsx:201
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Ответственность за ссылки"
 
-#: src/components/screens/Legal.jsx:107
+#: src/components/screens/Legal.jsx:202
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Наше предложение содержит ссылки на внешние сайты третьих лиц, на содержание "
@@ -353,11 +449,11 @@ msgstr ""
 "не имеет смысла без конкретных доказательств нарушения закона. Если нам "
 "станет известно о каких-либо нарушениях, мы немедленно удалим такие ссылки."
 
-#: src/components/screens/Legal.jsx:108
+#: src/components/screens/Legal.jsx:203
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "Авторское право"
 
-#: src/components/screens/Legal.jsx:109
+#: src/components/screens/Legal.jsx:204
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "Содержание и работы на этих страницах, созданные операторами, подпадают под "
@@ -371,98 +467,6 @@ msgstr ""
 "о нарушении авторских прав, пожалуйста, сообщите нам об этом. Если нам "
 "станет известно о каких-либо нарушениях, мы немедленно удалим такое "
 "содержание."
-
-#: src/components/screens/Legal.jsx:61 src/components/screens/Menu.jsx:109
-msgid "legal-screen.header.headline"
-msgstr "Юридический"
-
-#: src/components/screens/Legal.jsx:68
-msgid "legal-screen.tabs.privacy.label"
-msgstr "Конфиденциальность"
-
-#: src/components/screens/Legal.jsx:73
-msgid "legal-screen.tabs.imprint.label"
-msgstr "Вывод"
-
-#: src/components/screens/Legal.jsx:83
-msgid "legal-screen.privacy.section-1.headline"
-msgstr "Обработка данных приложения"
-
-#: src/components/screens/Legal.jsx:84
-msgid "legal-screen.privacy.section-1.text"
-msgstr ""
-"App Coronika обрабатывает персональные данные и данные, связанные с "
-"местоположением, исключительно локально на смартфоне пользователя."
-
-#: src/components/screens/Legal.jsx:85
-msgid "legal-screen.privacy.section-2.headline"
-msgstr "Личные данные"
-
-#: src/components/screens/Legal.jsx:86
-msgid "legal-screen.privacy.section-2.text"
-msgstr ""
-"Пользователь может создавать людей внутри приложения. Имя и номер телефона "
-"будут сохранены. Кроме того, возможно импортировать телефонную книгу "
-"смартфона. Имена и телефонные номера записей в телефонной книге переносятся "
-"в приложение. Все данные остаются на смартфоне и, следовательно, в руках "
-"пользователя. Данные никогда не передаются провайдеру приложения или третьим "
-"лицам."
-
-#: src/components/screens/Legal.jsx:87
-msgid "legal-screen.privacy.section-3.headline"
-msgstr "Данные о местоположении"
-
-#: src/components/screens/Legal.jsx:88
-msgid "legal-screen.privacy.section-3.text"
-msgstr ""
-"Пользователь может создавать локации внутри приложения. Название и описание "
-"места сохраняются. Доступ к местоположению пользователя через сервисы "
-"определения местоположения (например, GPS или аналогичные) не "
-"предоставляется в любое время. Данные о местоположении также остаются "
-"локальными на смартфоне пользователя и не передаются провайдеру приложения "
-"или третьим лицам."
-
-#: src/components/screens/Legal.jsx:89
-msgid "legal-screen.privacy.section-4.headline"
-msgstr "Дневник"
-
-#: src/components/screens/Legal.jsx:90
-msgid "legal-screen.privacy.section-4.text"
-msgstr ""
-"В дневнике пользователь ежедневно назначает лиц и места на отдельные дни. В "
-"дополнение к уже собранным данным, сохраняется также время и место. Дневник "
-"и все записи сохраняются также локально на смартфоне пользователя и не "
-"передаются провайдеру приложений или третьим лицам."
-
-#: src/components/screens/Legal.jsx:91
-msgid "legal-screen.privacy.section-5.headline"
-msgstr "Экспорт"
-
-#: src/components/screens/Legal.jsx:92
-msgid "legal-screen.privacy.section-5.text"
-msgstr ""
-"Внутри приложения пользователь имеет функцию экспорта для экспорта раздела "
-"дневника в виде PDF-файла. PDF файл создается локально на смартфоне "
-"пользователя. Этот PDF-файл может быть использован, чтобы легко предоставить "
-"органам здравоохранения или другим официальным органам список контактов в "
-"выбранный период времени, чтобы проследить пути заражения и, при "
-"необходимости, информировать других людей о потенциальной инфекции. "
-"Пользователь несет ответственность за ответственное обращение с PDF-файлом и "
-"содержащимися в нем данными, а также за то, чтобы не передавать их по "
-"неосторожности."
-
-#: src/components/screens/Legal.jsx:93
-msgid "legal-screen.privacy.section-6.headline"
-msgstr "Передача данных и отслеживание"
-
-#: src/components/screens/Legal.jsx:94
-msgid "legal-screen.privacy.section-6.text"
-msgstr ""
-"Приложение не обеспечивает автоматического отслеживания или передачи данных "
-"поставщику приложения или третьим лицам. Единственным исключением является "
-"функция экспорта. Там, однако, только пользователь решает, кому будут "
-"переданы данные. В противном случае все данные остаются локально на "
-"смартфоне пользователя."
 
 #: src/components/screens/Menu.jsx:105
 #: src/components/screens/Settings/ui.jsx:92

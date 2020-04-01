@@ -271,96 +271,100 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:102
-msgid "legal-screen.imprint.section-1.headline"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:103
-msgid "legal-screen.imprint.section-1.text"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:104
-msgid "legal-screen.imprint.section-2.headline"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:105
-msgid "legal-screen.imprint.section-2.text"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:106
-msgid "legal-screen.imprint.section-3.headline"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:107
-msgid "legal-screen.imprint.section-3.text"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:108
-msgid "legal-screen.imprint.section-4.headline"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:109
-msgid "legal-screen.imprint.section-4.text"
-msgstr ""
-
-#: src/components/screens/Legal.jsx:61 src/components/screens/Menu.jsx:109
+#: src/components/screens/Legal.jsx:151 src/components/screens/Menu.jsx:109
 msgid "legal-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:68
+#: src/components/screens/Legal.jsx:158
 msgid "legal-screen.tabs.privacy.label"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:73
+#: src/components/screens/Legal.jsx:163
 msgid "legal-screen.tabs.imprint.label"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:83
+#: src/components/screens/Legal.jsx:168
+msgid "legal-screen.tabs.licenses.label"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:178
 msgid "legal-screen.privacy.section-1.headline"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:84
+#: src/components/screens/Legal.jsx:179
 msgid "legal-screen.privacy.section-1.text"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:85
+#: src/components/screens/Legal.jsx:180
 msgid "legal-screen.privacy.section-2.headline"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:86
+#: src/components/screens/Legal.jsx:181
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:87
+#: src/components/screens/Legal.jsx:182
 msgid "legal-screen.privacy.section-3.headline"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:88
+#: src/components/screens/Legal.jsx:183
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:89
+#: src/components/screens/Legal.jsx:184
 msgid "legal-screen.privacy.section-4.headline"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:90
+#: src/components/screens/Legal.jsx:185
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:91
+#: src/components/screens/Legal.jsx:186
 msgid "legal-screen.privacy.section-5.headline"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:92
+#: src/components/screens/Legal.jsx:187
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:93
+#: src/components/screens/Legal.jsx:188
 msgid "legal-screen.privacy.section-6.headline"
 msgstr ""
 
-#: src/components/screens/Legal.jsx:94
+#: src/components/screens/Legal.jsx:189
 msgid "legal-screen.privacy.section-6.text"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:197
+msgid "legal-screen.imprint.section-1.headline"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:198
+msgid "legal-screen.imprint.section-1.text"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:199
+msgid "legal-screen.imprint.section-2.headline"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:200
+msgid "legal-screen.imprint.section-2.text"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:201
+msgid "legal-screen.imprint.section-3.headline"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:202
+msgid "legal-screen.imprint.section-3.text"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:203
+msgid "legal-screen.imprint.section-4.headline"
+msgstr ""
+
+#: src/components/screens/Legal.jsx:204
+msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 
 #: src/components/screens/Menu.jsx:105

@@ -292,11 +292,107 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr "Binnenkort!"
 
-#: src/components/screens/Legal.jsx:102
+#: src/components/screens/Legal.jsx:151 src/components/screens/Menu.jsx:109
+msgid "legal-screen.header.headline"
+msgstr "Juridisch"
+
+#: src/components/screens/Legal.jsx:158
+msgid "legal-screen.tabs.privacy.label"
+msgstr "Privacy"
+
+#: src/components/screens/Legal.jsx:163
+msgid "legal-screen.tabs.imprint.label"
+msgstr "Impressum"
+
+#: src/components/screens/Legal.jsx:168
+msgid "legal-screen.tabs.licenses.label"
+msgstr "Licenties"
+
+#: src/components/screens/Legal.jsx:178
+msgid "legal-screen.privacy.section-1.headline"
+msgstr "Gegevensverwerking van de app"
+
+#: src/components/screens/Legal.jsx:179
+msgid "legal-screen.privacy.section-1.text"
+msgstr ""
+"Coronika verwerkt persoonlijke en locatiegebonden gegevens uitsluitend "
+"lokaal op de smartphone van de gebruiker."
+
+#: src/components/screens/Legal.jsx:180
+msgid "legal-screen.privacy.section-2.headline"
+msgstr "Persoonlijke gegevens"
+
+#: src/components/screens/Legal.jsx:181
+msgid "legal-screen.privacy.section-2.text"
+msgstr ""
+"De gebruiker kan personen toevoegen binnen de app. De naam en een "
+"telefoonnummer worden opgeslagen. Verder is het mogelijk om het telefoonboek "
+"van de smartphone te importeren. De namen en telefoonnummers van contacten "
+"in het telefoonboek worden geimporteert. Alle gegevens worden aleen lokaal "
+"op het smartphone opgeslagen. De gegevens worden nooit doorgegeven aan de "
+"app-provider of aan derden."
+
+#: src/components/screens/Legal.jsx:182
+msgid "legal-screen.privacy.section-3.headline"
+msgstr "Locatiegebonden gegevens"
+
+#: src/components/screens/Legal.jsx:183
+msgid "legal-screen.privacy.section-3.text"
+msgstr ""
+"De gebruiker kan locaties binnen de app toevoegen. De locatienaam en "
+"beschrijving worden opgeslagen. De locatie van de gebruiker word nooit door "
+"een plaatsbepalingsdienst (bijv. GPS of iets dergelijks) bepaalt. De "
+"locatiegebonden gegevens blijven ook lokaal op het smartphone van de "
+"gebruiker en worden nooit doorgegeven aan de aanbieder van de app of aan "
+"derden."
+
+#: src/components/screens/Legal.jsx:184
+msgid "legal-screen.privacy.section-4.headline"
+msgstr "Dagboek"
+
+#: src/components/screens/Legal.jsx:185
+msgid "legal-screen.privacy.section-4.text"
+msgstr ""
+"Binnen het dagboek wijst de gebruiker dagelijks personen en plaatsen toe aan "
+"individuele dagen. Naast de reeds verzamelde gegevens wordt ook een tijd "
+"voor de plaatsen opgeslagen. De agenda en alle gegevens blijven ook lokaal "
+"op de smartphone van de gebruiker en worden niet doorgegeven aan de "
+"aanbieder van de app of aan derden."
+
+#: src/components/screens/Legal.jsx:186
+msgid "legal-screen.privacy.section-5.headline"
+msgstr "Exporteer"
+
+#: src/components/screens/Legal.jsx:187
+msgid "legal-screen.privacy.section-5.text"
+msgstr ""
+"Binnen de app heeft de gebruiker een exportfunctie om een deel van het "
+"dagboek als PDF-bestand te exporteren. Het PDF-bestand wordt lokaal "
+"aangemaakt op de smartphone van de gebruiker. Dit PDF-bestand kan worden "
+"gebruikt om op eenvoudige wijze de gezondheidsautoriteiten of andere "
+"officiële instanties te voorzien van een lijst van contactpersonen in een "
+"geselecteerde periode om zo de infectiepaden te traceren en, indien nodig, "
+"andere mensen te informeren over een mogelijke infectie. De gebruiker is "
+"verantwoordelijk voor een verantwoorde omgang met het PDF-bestand en de "
+"daarin opgenomen gegevens en dient dit niet onzorgvuldig door te geven."
+
+#: src/components/screens/Legal.jsx:188
+msgid "legal-screen.privacy.section-6.headline"
+msgstr "Gegevensoverdracht en -tracering"
+
+#: src/components/screens/Legal.jsx:189
+msgid "legal-screen.privacy.section-6.text"
+msgstr ""
+"De app biedt geen geautomatiseerde tracking of gegevensoverdracht aan de app-"
+"provider of aan derden. De enige uitzondering is de exportfunctie. Daar "
+"beslist echter alleen de gebruiker aan wie de gegevens worden doorgegeven. "
+"Anders blijven alle gegevens lokaal op de smartphone van de gebruiker staan."
+
+#: src/components/screens/Legal.jsx:197
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "Coronika' wordt bediend door"
 
-#: src/components/screens/Legal.jsx:103
+#: src/components/screens/Legal.jsx:198
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -313,11 +409,11 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:104
+#: src/components/screens/Legal.jsx:199
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "Aansprakelijkheid voor inhoud app"
 
-#: src/components/screens/Legal.jsx:105
+#: src/components/screens/Legal.jsx:200
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "Als dienstverlener zijn wij verantwoordelijk voor onze eigen inhoud op deze "
@@ -330,11 +426,11 @@ msgstr ""
 "het moment van kennis van een concrete inbreuk. Indien wij kennis nemen van "
 "een dergelijke inbreuk, zullen wij deze inhoud onmiddellijk verwijderen."
 
-#: src/components/screens/Legal.jsx:106
+#: src/components/screens/Legal.jsx:201
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Aansprakelijkheid voor externe links"
 
-#: src/components/screens/Legal.jsx:107
+#: src/components/screens/Legal.jsx:202
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Deze website kan externe links of links naar door derden beheerde websites "
@@ -350,11 +446,11 @@ msgstr ""
 "krijgen van juridische inbreuken, dan streven wij ernaar de betrokken inhoud "
 "zo snel mogelijk te verwijderen."
 
-#: src/components/screens/Legal.jsx:108
+#: src/components/screens/Legal.jsx:203
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "Copyright"
 
-#: src/components/screens/Legal.jsx:109
+#: src/components/screens/Legal.jsx:204
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "De inhoud en werken op deze pagina's die door de exploitanten zijn gemaakt, "
@@ -369,98 +465,6 @@ msgstr ""
 "auteursrecht, dan verzoeken wij u ons hiervan op de hoogte te stellen. "
 "Indien wij kennis nemen van een inbreuk, zullen wij deze inhoud onmiddellijk "
 "verwijderen."
-
-#: src/components/screens/Legal.jsx:61 src/components/screens/Menu.jsx:109
-msgid "legal-screen.header.headline"
-msgstr "Juridisch"
-
-#: src/components/screens/Legal.jsx:68
-msgid "legal-screen.tabs.privacy.label"
-msgstr "Privacy"
-
-#: src/components/screens/Legal.jsx:73
-msgid "legal-screen.tabs.imprint.label"
-msgstr "Impressum"
-
-#: src/components/screens/Legal.jsx:83
-msgid "legal-screen.privacy.section-1.headline"
-msgstr "Gegevensverwerking van de app"
-
-#: src/components/screens/Legal.jsx:84
-msgid "legal-screen.privacy.section-1.text"
-msgstr ""
-"Coronika verwerkt persoonlijke en locatiegebonden gegevens uitsluitend "
-"lokaal op de smartphone van de gebruiker."
-
-#: src/components/screens/Legal.jsx:85
-msgid "legal-screen.privacy.section-2.headline"
-msgstr "Persoonlijke gegevens"
-
-#: src/components/screens/Legal.jsx:86
-msgid "legal-screen.privacy.section-2.text"
-msgstr ""
-"De gebruiker kan personen toevoegen binnen de app. De naam en een "
-"telefoonnummer worden opgeslagen. Verder is het mogelijk om het telefoonboek "
-"van de smartphone te importeren. De namen en telefoonnummers van contacten "
-"in het telefoonboek worden geimporteert. Alle gegevens worden aleen lokaal "
-"op het smartphone opgeslagen. De gegevens worden nooit doorgegeven aan de "
-"app-provider of aan derden."
-
-#: src/components/screens/Legal.jsx:87
-msgid "legal-screen.privacy.section-3.headline"
-msgstr "Locatiegebonden gegevens"
-
-#: src/components/screens/Legal.jsx:88
-msgid "legal-screen.privacy.section-3.text"
-msgstr ""
-"De gebruiker kan locaties binnen de app toevoegen. De locatienaam en "
-"beschrijving worden opgeslagen. De locatie van de gebruiker word nooit door "
-"een plaatsbepalingsdienst (bijv. GPS of iets dergelijks) bepaalt. De "
-"locatiegebonden gegevens blijven ook lokaal op het smartphone van de "
-"gebruiker en worden nooit doorgegeven aan de aanbieder van de app of aan "
-"derden."
-
-#: src/components/screens/Legal.jsx:89
-msgid "legal-screen.privacy.section-4.headline"
-msgstr "Dagboek"
-
-#: src/components/screens/Legal.jsx:90
-msgid "legal-screen.privacy.section-4.text"
-msgstr ""
-"Binnen het dagboek wijst de gebruiker dagelijks personen en plaatsen toe aan "
-"individuele dagen. Naast de reeds verzamelde gegevens wordt ook een tijd "
-"voor de plaatsen opgeslagen. De agenda en alle gegevens blijven ook lokaal "
-"op de smartphone van de gebruiker en worden niet doorgegeven aan de "
-"aanbieder van de app of aan derden."
-
-#: src/components/screens/Legal.jsx:91
-msgid "legal-screen.privacy.section-5.headline"
-msgstr "Exporteer"
-
-#: src/components/screens/Legal.jsx:92
-msgid "legal-screen.privacy.section-5.text"
-msgstr ""
-"Binnen de app heeft de gebruiker een exportfunctie om een deel van het "
-"dagboek als PDF-bestand te exporteren. Het PDF-bestand wordt lokaal "
-"aangemaakt op de smartphone van de gebruiker. Dit PDF-bestand kan worden "
-"gebruikt om op eenvoudige wijze de gezondheidsautoriteiten of andere "
-"officiële instanties te voorzien van een lijst van contactpersonen in een "
-"geselecteerde periode om zo de infectiepaden te traceren en, indien nodig, "
-"andere mensen te informeren over een mogelijke infectie. De gebruiker is "
-"verantwoordelijk voor een verantwoorde omgang met het PDF-bestand en de "
-"daarin opgenomen gegevens en dient dit niet onzorgvuldig door te geven."
-
-#: src/components/screens/Legal.jsx:93
-msgid "legal-screen.privacy.section-6.headline"
-msgstr "Gegevensoverdracht en -tracering"
-
-#: src/components/screens/Legal.jsx:94
-msgid "legal-screen.privacy.section-6.text"
-msgstr ""
-"De app biedt geen geautomatiseerde tracking of gegevensoverdracht aan de app-"
-"provider of aan derden. De enige uitzondering is de exportfunctie. Daar "
-"beslist echter alleen de gebruiker aan wie de gegevens worden doorgegeven. "
-"Anders blijven alle gegevens lokaal op de smartphone van de gebruiker staan."
 
 #: src/components/screens/Menu.jsx:105
 #: src/components/screens/Settings/ui.jsx:92

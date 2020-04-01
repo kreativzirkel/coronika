@@ -295,11 +295,109 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr "¡Pronto!"
 
-#: src/components/screens/Legal.jsx:102
+#: src/components/screens/Legal.jsx:151 src/components/screens/Menu.jsx:109
+msgid "legal-screen.header.headline"
+msgstr "Legal"
+
+#: src/components/screens/Legal.jsx:158
+msgid "legal-screen.tabs.privacy.label"
+msgstr "Privacidad"
+
+#: src/components/screens/Legal.jsx:163
+msgid "legal-screen.tabs.imprint.label"
+msgstr "Pie de imprenta"
+
+#: src/components/screens/Legal.jsx:168
+msgid "legal-screen.tabs.licenses.label"
+msgstr "Licencias"
+
+#: src/components/screens/Legal.jsx:178
+msgid "legal-screen.privacy.section-1.headline"
+msgstr "El procesamiento de datos de la aplicación"
+
+#: src/components/screens/Legal.jsx:179
+msgid "legal-screen.privacy.section-1.text"
+msgstr ""
+"La App Coronika procesa datos personales y de localización exclusivamente a "
+"nivel local en el smartphone del usuario."
+
+#: src/components/screens/Legal.jsx:180
+msgid "legal-screen.privacy.section-2.headline"
+msgstr "Datos personales"
+
+#: src/components/screens/Legal.jsx:181
+msgid "legal-screen.privacy.section-2.text"
+msgstr ""
+"El usuario puede crear personas dentro de la aplicación. El nombre y el "
+"número de teléfono se guardan. Además, es posible importar la guía "
+"telefónica del smartphone. Los nombres y números de teléfono de las entradas "
+"de la agenda telefónica se transfieren a la aplicación. Todos los datos "
+"permanecen localmente en el smartphone y por lo tanto en las manos del "
+"usuario. Los datos nunca se transfieren al proveedor de la aplicación o a "
+"terceros."
+
+#: src/components/screens/Legal.jsx:182
+msgid "legal-screen.privacy.section-3.headline"
+msgstr "Datos basados en la localización"
+
+#: src/components/screens/Legal.jsx:183
+msgid "legal-screen.privacy.section-3.text"
+msgstr ""
+"El usuario puede crear ubicaciones dentro de la aplicación. Se guarda el "
+"nombre de la ubicación y una descripción. No se accede en ningún momento a "
+"la ubicación del usuario a través de servicios de posicionamiento (por "
+"ejemplo, GPS o similar). Los datos relacionados con la ubicación también "
+"permanecen locales en el smartphone del usuario y no se transmiten al "
+"proveedor de la aplicación o a terceros."
+
+#: src/components/screens/Legal.jsx:184
+msgid "legal-screen.privacy.section-4.headline"
+msgstr "Diario"
+
+#: src/components/screens/Legal.jsx:185
+msgid "legal-screen.privacy.section-4.text"
+msgstr ""
+"Dentro del diario, el usuario asigna personas y lugares a los días "
+"individuales sobre una base diaria. Además de los datos ya recogidos, "
+"también se almacena una hora para los lugares. El diario y todas las "
+"entradas también permanecen localmente en el teléfono inteligente del "
+"usuario y no se transmiten al proveedor de la aplicación o a terceros."
+
+#: src/components/screens/Legal.jsx:186
+msgid "legal-screen.privacy.section-5.headline"
+msgstr "Exportación"
+
+#: src/components/screens/Legal.jsx:187
+msgid "legal-screen.privacy.section-5.text"
+msgstr ""
+"Dentro de la aplicación, el usuario tiene una función de exportación para "
+"exportar una sección del diario como un archivo PDF. El archivo PDF se crea "
+"localmente en el smartphone del usuario. Este archivo PDF puede utilizarse "
+"para proporcionar fácilmente a las autoridades sanitarias u otros organismos "
+"oficiales una lista de contactos en un período de tiempo seleccionado con el "
+"fin de trazar las vías de infección y, si es necesario, informar a otras "
+"personas sobre una posible infección. El usuario es responsable de manejar "
+"el archivo PDF y los datos que contiene de manera responsable y de no "
+"transmitirlo por descuido."
+
+#: src/components/screens/Legal.jsx:188
+msgid "legal-screen.privacy.section-6.headline"
+msgstr "Transferencia y seguimiento de datos"
+
+#: src/components/screens/Legal.jsx:189
+msgid "legal-screen.privacy.section-6.text"
+msgstr ""
+"La aplicación no proporciona un seguimiento automatizado ni la transferencia "
+"de datos al proveedor de la aplicación o a terceros. La única excepción es "
+"la función de exportación. Sin embargo, allí sólo el usuario decide a quién "
+"se transfieren los datos. De lo contrario, todos los datos permanecen "
+"localmente en el smartphone del usuario."
+
+#: src/components/screens/Legal.jsx:197
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "La app \"Coronika\" es operada por"
 
-#: src/components/screens/Legal.jsx:103
+#: src/components/screens/Legal.jsx:198
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -316,11 +414,11 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:104
+#: src/components/screens/Legal.jsx:199
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "Responsabilidad por el contenido"
 
-#: src/components/screens/Legal.jsx:105
+#: src/components/screens/Legal.jsx:200
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "Como proveedor de servicios, somos responsables de nuestros propios "
@@ -334,11 +432,11 @@ msgstr ""
 "conocimiento de una infracción concreta. Si tenemos conocimiento de alguna "
 "de estas infracciones, eliminaremos dicho contenido inmediatamente."
 
-#: src/components/screens/Legal.jsx:106
+#: src/components/screens/Legal.jsx:201
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Responsabilidad de los enlaces"
 
-#: src/components/screens/Legal.jsx:107
+#: src/components/screens/Legal.jsx:202
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Nuestra oferta contiene enlaces a páginas web externas de terceros, sobre "
@@ -353,11 +451,11 @@ msgstr ""
 "tenemos conocimiento de alguna infracción, eliminaremos dichos enlaces "
 "inmediatamente."
 
-#: src/components/screens/Legal.jsx:108
+#: src/components/screens/Legal.jsx:203
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "Derechos de autor"
 
-#: src/components/screens/Legal.jsx:109
+#: src/components/screens/Legal.jsx:204
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "Los contenidos y las obras de estas páginas creadas por los operadores están "
@@ -372,100 +470,6 @@ msgstr ""
 "infracción de derechos de autor, por favor infórmenos al respecto. Si "
 "tenemos conocimiento de alguna infracción, eliminaremos dichos contenidos "
 "inmediatamente."
-
-#: src/components/screens/Legal.jsx:61 src/components/screens/Menu.jsx:109
-msgid "legal-screen.header.headline"
-msgstr "Legal"
-
-#: src/components/screens/Legal.jsx:68
-msgid "legal-screen.tabs.privacy.label"
-msgstr "Privacidad"
-
-#: src/components/screens/Legal.jsx:73
-msgid "legal-screen.tabs.imprint.label"
-msgstr "Pie de imprenta"
-
-#: src/components/screens/Legal.jsx:83
-msgid "legal-screen.privacy.section-1.headline"
-msgstr "El procesamiento de datos de la aplicación"
-
-#: src/components/screens/Legal.jsx:84
-msgid "legal-screen.privacy.section-1.text"
-msgstr ""
-"La App Coronika procesa datos personales y de localización exclusivamente a "
-"nivel local en el smartphone del usuario."
-
-#: src/components/screens/Legal.jsx:85
-msgid "legal-screen.privacy.section-2.headline"
-msgstr "Datos personales"
-
-#: src/components/screens/Legal.jsx:86
-msgid "legal-screen.privacy.section-2.text"
-msgstr ""
-"El usuario puede crear personas dentro de la aplicación. El nombre y el "
-"número de teléfono se guardan. Además, es posible importar la guía "
-"telefónica del smartphone. Los nombres y números de teléfono de las entradas "
-"de la agenda telefónica se transfieren a la aplicación. Todos los datos "
-"permanecen localmente en el smartphone y por lo tanto en las manos del "
-"usuario. Los datos nunca se transfieren al proveedor de la aplicación o a "
-"terceros."
-
-#: src/components/screens/Legal.jsx:87
-msgid "legal-screen.privacy.section-3.headline"
-msgstr "Datos basados en la localización"
-
-#: src/components/screens/Legal.jsx:88
-msgid "legal-screen.privacy.section-3.text"
-msgstr ""
-"El usuario puede crear ubicaciones dentro de la aplicación. Se guarda el "
-"nombre de la ubicación y una descripción. No se accede en ningún momento a "
-"la ubicación del usuario a través de servicios de posicionamiento (por "
-"ejemplo, GPS o similar). Los datos relacionados con la ubicación también "
-"permanecen locales en el smartphone del usuario y no se transmiten al "
-"proveedor de la aplicación o a terceros."
-
-#: src/components/screens/Legal.jsx:89
-msgid "legal-screen.privacy.section-4.headline"
-msgstr "Diario"
-
-#: src/components/screens/Legal.jsx:90
-msgid "legal-screen.privacy.section-4.text"
-msgstr ""
-"Dentro del diario, el usuario asigna personas y lugares a los días "
-"individuales sobre una base diaria. Además de los datos ya recogidos, "
-"también se almacena una hora para los lugares. El diario y todas las "
-"entradas también permanecen localmente en el teléfono inteligente del "
-"usuario y no se transmiten al proveedor de la aplicación o a terceros."
-
-#: src/components/screens/Legal.jsx:91
-msgid "legal-screen.privacy.section-5.headline"
-msgstr "Exportación"
-
-#: src/components/screens/Legal.jsx:92
-msgid "legal-screen.privacy.section-5.text"
-msgstr ""
-"Dentro de la aplicación, el usuario tiene una función de exportación para "
-"exportar una sección del diario como un archivo PDF. El archivo PDF se crea "
-"localmente en el smartphone del usuario. Este archivo PDF puede utilizarse "
-"para proporcionar fácilmente a las autoridades sanitarias u otros organismos "
-"oficiales una lista de contactos en un período de tiempo seleccionado con el "
-"fin de trazar las vías de infección y, si es necesario, informar a otras "
-"personas sobre una posible infección. El usuario es responsable de manejar "
-"el archivo PDF y los datos que contiene de manera responsable y de no "
-"transmitirlo por descuido."
-
-#: src/components/screens/Legal.jsx:93
-msgid "legal-screen.privacy.section-6.headline"
-msgstr "Transferencia y seguimiento de datos"
-
-#: src/components/screens/Legal.jsx:94
-msgid "legal-screen.privacy.section-6.text"
-msgstr ""
-"La aplicación no proporciona un seguimiento automatizado ni la transferencia "
-"de datos al proveedor de la aplicación o a terceros. La única excepción es "
-"la función de exportación. Sin embargo, allí sólo el usuario decide a quién "
-"se transfieren los datos. De lo contrario, todos los datos permanecen "
-"localmente en el smartphone del usuario."
 
 #: src/components/screens/Menu.jsx:105
 #: src/components/screens/Settings/ui.jsx:92

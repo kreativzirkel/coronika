@@ -299,11 +299,109 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr "Bientôt disponible!"
 
-#: src/components/screens/Legal.jsx:102
+#: src/components/screens/Legal.jsx:151 src/components/screens/Menu.jsx:109
+msgid "legal-screen.header.headline"
+msgstr "Juridique"
+
+#: src/components/screens/Legal.jsx:158
+msgid "legal-screen.tabs.privacy.label"
+msgstr "Vie privée"
+
+#: src/components/screens/Legal.jsx:163
+msgid "legal-screen.tabs.imprint.label"
+msgstr "Mentions légales"
+
+#: src/components/screens/Legal.jsx:168
+msgid "legal-screen.tabs.licenses.label"
+msgstr "Licences"
+
+#: src/components/screens/Legal.jsx:178
+msgid "legal-screen.privacy.section-1.headline"
+msgstr "Traitement des données de l'application"
+
+#: src/components/screens/Legal.jsx:179
+msgid "legal-screen.privacy.section-1.text"
+msgstr ""
+"L'App Coronika traite les données personnelles et de localisation "
+"exclusivement localement sur le smartphone de l'utilisateur."
+
+#: src/components/screens/Legal.jsx:180
+msgid "legal-screen.privacy.section-2.headline"
+msgstr "Données personnelles"
+
+#: src/components/screens/Legal.jsx:181
+msgid "legal-screen.privacy.section-2.text"
+msgstr ""
+"L'utilisateur peut créer des personnes dans l'application. Le nom et un "
+"numéro de téléphone sont enregistrés. De plus, il est possible d'importer "
+"l'annuaire du smartphone. Les noms et les numéros de téléphone des entrées "
+"du répertoire sont transférés dans l'application. Toutes les données restent "
+"localement sur le smartphone et donc entre les mains de l'utilisateur. Les "
+"données ne sont jamais transférées au fournisseur de l'application ou à des "
+"tiers."
+
+#: src/components/screens/Legal.jsx:182
+msgid "legal-screen.privacy.section-3.headline"
+msgstr "Données de localisation"
+
+#: src/components/screens/Legal.jsx:183
+msgid "legal-screen.privacy.section-3.text"
+msgstr ""
+"L'utilisateur peut créer des emplacements dans l'application. Le nom de "
+"l'emplacement et une description sont enregistrés. La localisation de "
+"l'utilisateur via des services de positionnement (par exemple, GPS ou autre) "
+"n'est pas accessible à tout moment. Les données relatives à la localisation "
+"restent également locales sur le smartphone de l'utilisateur et ne sont pas "
+"transmises au fournisseur de l'application ou à des tiers."
+
+#: src/components/screens/Legal.jsx:184
+msgid "legal-screen.privacy.section-4.headline"
+msgstr "Journal intime"
+
+#: src/components/screens/Legal.jsx:185
+msgid "legal-screen.privacy.section-4.text"
+msgstr ""
+"Dans l'agenda, l'utilisateur assigne quotidiennement des personnes et des "
+"lieux à des jours individuels. En plus des données déjà collectées, une "
+"heure est également enregistrée pour les lieux. L'agenda et toutes les "
+"entrées restent également localement sur le smartphone de l'utilisateur et "
+"ne sont pas transmises au fournisseur d'applications ou à des tiers."
+
+#: src/components/screens/Legal.jsx:186
+msgid "legal-screen.privacy.section-5.headline"
+msgstr "Exportation"
+
+#: src/components/screens/Legal.jsx:187
+msgid "legal-screen.privacy.section-5.text"
+msgstr ""
+"Dans l'application, l'utilisateur dispose d'une fonction d'exportation pour "
+"exporter une section de l'agenda sous forme de fichier PDF. Le fichier PDF "
+"est créé localement sur le smartphone de l'utilisateur. Ce fichier PDF peut "
+"être utilisé pour fournir facilement aux autorités sanitaires ou à d'autres "
+"organismes officiels une liste de contacts dans une période donnée afin de "
+"retracer les voies d'infection et, si nécessaire, d'informer d'autres "
+"personnes sur une infection potentielle. L'utilisateur est tenu de manipuler "
+"le fichier PDF et les données qu'il contient de manière responsable et de ne "
+"pas le transmettre de manière imprudente."
+
+#: src/components/screens/Legal.jsx:188
+msgid "legal-screen.privacy.section-6.headline"
+msgstr "Transfert et suivi des données"
+
+#: src/components/screens/Legal.jsx:189
+msgid "legal-screen.privacy.section-6.text"
+msgstr ""
+"L'application ne fournit pas de suivi automatisé ou de transfert de données "
+"au fournisseur de l'application ou à des tiers. La seule exception est la "
+"fonction d'exportation. Dans ce cas, seul l'utilisateur décide à qui les "
+"données sont transmises. Sinon, toutes les données restent en local sur le "
+"smartphone de l'utilisateur."
+
+#: src/components/screens/Legal.jsx:197
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "Cette application \"Coronika\" est exploitée par"
 
-#: src/components/screens/Legal.jsx:103
+#: src/components/screens/Legal.jsx:198
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -320,11 +418,11 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:104
+#: src/components/screens/Legal.jsx:199
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "Responsabilité du contenu"
 
-#: src/components/screens/Legal.jsx:105
+#: src/components/screens/Legal.jsx:200
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "En tant que prestataire de services, nous sommes responsables de nos propres "
@@ -339,11 +437,11 @@ msgstr ""
 "avons connaissance de telles infractions, nous retirerons immédiatement ces "
 "contenus."
 
-#: src/components/screens/Legal.jsx:106
+#: src/components/screens/Legal.jsx:201
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Responsabilité pour les liens"
 
-#: src/components/screens/Legal.jsx:107
+#: src/components/screens/Legal.jsx:202
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Notre offre contient des liens vers des sites web externes de tiers, sur le "
@@ -357,11 +455,11 @@ msgstr ""
 "raisonnable sans preuve concrète d'une violation de la loi. Si nous prenons "
 "connaissance d'infractions, nous supprimerons immédiatement ces liens."
 
-#: src/components/screens/Legal.jsx:108
+#: src/components/screens/Legal.jsx:203
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "Copyright"
 
-#: src/components/screens/Legal.jsx:109
+#: src/components/screens/Legal.jsx:204
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "Le contenu et les œuvres de ces pages créées par les opérateurs sont soumis "
@@ -375,100 +473,6 @@ msgstr ""
 "néanmoins avoir connaissance d'une violation des droits d'auteur, veuille "
 "nous en informer. Si nous avons connaissance d'une infraction, nous "
 "retirerons immédiatement ces contenus."
-
-#: src/components/screens/Legal.jsx:61 src/components/screens/Menu.jsx:109
-msgid "legal-screen.header.headline"
-msgstr "Juridique"
-
-#: src/components/screens/Legal.jsx:68
-msgid "legal-screen.tabs.privacy.label"
-msgstr "Vie privée"
-
-#: src/components/screens/Legal.jsx:73
-msgid "legal-screen.tabs.imprint.label"
-msgstr "Mentions légales"
-
-#: src/components/screens/Legal.jsx:83
-msgid "legal-screen.privacy.section-1.headline"
-msgstr "Traitement des données de l'application"
-
-#: src/components/screens/Legal.jsx:84
-msgid "legal-screen.privacy.section-1.text"
-msgstr ""
-"L'App Coronika traite les données personnelles et de localisation "
-"exclusivement localement sur le smartphone de l'utilisateur."
-
-#: src/components/screens/Legal.jsx:85
-msgid "legal-screen.privacy.section-2.headline"
-msgstr "Données personnelles"
-
-#: src/components/screens/Legal.jsx:86
-msgid "legal-screen.privacy.section-2.text"
-msgstr ""
-"L'utilisateur peut créer des personnes dans l'application. Le nom et un "
-"numéro de téléphone sont enregistrés. De plus, il est possible d'importer "
-"l'annuaire du smartphone. Les noms et les numéros de téléphone des entrées "
-"du répertoire sont transférés dans l'application. Toutes les données restent "
-"localement sur le smartphone et donc entre les mains de l'utilisateur. Les "
-"données ne sont jamais transférées au fournisseur de l'application ou à des "
-"tiers."
-
-#: src/components/screens/Legal.jsx:87
-msgid "legal-screen.privacy.section-3.headline"
-msgstr "Données de localisation"
-
-#: src/components/screens/Legal.jsx:88
-msgid "legal-screen.privacy.section-3.text"
-msgstr ""
-"L'utilisateur peut créer des emplacements dans l'application. Le nom de "
-"l'emplacement et une description sont enregistrés. La localisation de "
-"l'utilisateur via des services de positionnement (par exemple, GPS ou autre) "
-"n'est pas accessible à tout moment. Les données relatives à la localisation "
-"restent également locales sur le smartphone de l'utilisateur et ne sont pas "
-"transmises au fournisseur de l'application ou à des tiers."
-
-#: src/components/screens/Legal.jsx:89
-msgid "legal-screen.privacy.section-4.headline"
-msgstr "Journal intime"
-
-#: src/components/screens/Legal.jsx:90
-msgid "legal-screen.privacy.section-4.text"
-msgstr ""
-"Dans l'agenda, l'utilisateur assigne quotidiennement des personnes et des "
-"lieux à des jours individuels. En plus des données déjà collectées, une "
-"heure est également enregistrée pour les lieux. L'agenda et toutes les "
-"entrées restent également localement sur le smartphone de l'utilisateur et "
-"ne sont pas transmises au fournisseur d'applications ou à des tiers."
-
-#: src/components/screens/Legal.jsx:91
-msgid "legal-screen.privacy.section-5.headline"
-msgstr "Exportation"
-
-#: src/components/screens/Legal.jsx:92
-msgid "legal-screen.privacy.section-5.text"
-msgstr ""
-"Dans l'application, l'utilisateur dispose d'une fonction d'exportation pour "
-"exporter une section de l'agenda sous forme de fichier PDF. Le fichier PDF "
-"est créé localement sur le smartphone de l'utilisateur. Ce fichier PDF peut "
-"être utilisé pour fournir facilement aux autorités sanitaires ou à d'autres "
-"organismes officiels une liste de contacts dans une période donnée afin de "
-"retracer les voies d'infection et, si nécessaire, d'informer d'autres "
-"personnes sur une infection potentielle. L'utilisateur est tenu de manipuler "
-"le fichier PDF et les données qu'il contient de manière responsable et de ne "
-"pas le transmettre de manière imprudente."
-
-#: src/components/screens/Legal.jsx:93
-msgid "legal-screen.privacy.section-6.headline"
-msgstr "Transfert et suivi des données"
-
-#: src/components/screens/Legal.jsx:94
-msgid "legal-screen.privacy.section-6.text"
-msgstr ""
-"L'application ne fournit pas de suivi automatisé ou de transfert de données "
-"au fournisseur de l'application ou à des tiers. La seule exception est la "
-"fonction d'exportation. Dans ce cas, seul l'utilisateur décide à qui les "
-"données sont transmises. Sinon, toutes les données restent en local sur le "
-"smartphone de l'utilisateur."
 
 #: src/components/screens/Menu.jsx:105
 #: src/components/screens/Settings/ui.jsx:92

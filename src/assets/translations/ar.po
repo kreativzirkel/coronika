@@ -286,11 +286,100 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr "قريبا!"
 
-#: src/components/screens/Legal.jsx:102
+#: src/components/screens/Legal.jsx:151 src/components/screens/Menu.jsx:109
+msgid "legal-screen.header.headline"
+msgstr "قانوني"
+
+#: src/components/screens/Legal.jsx:158
+msgid "legal-screen.tabs.privacy.label"
+msgstr "خصوصية"
+
+#: src/components/screens/Legal.jsx:163
+msgid "legal-screen.tabs.imprint.label"
+msgstr "بصمة"
+
+#: src/components/screens/Legal.jsx:168
+msgid "legal-screen.tabs.licenses.label"
+msgstr "التراخيص"
+
+#: src/components/screens/Legal.jsx:178
+msgid "legal-screen.privacy.section-1.headline"
+msgstr "معالجة بيانات التطبيق"
+
+#: src/components/screens/Legal.jsx:179
+msgid "legal-screen.privacy.section-1.text"
+msgstr ""
+"يعالج تطبيق Coronika البيانات الشخصية والبيانات المتعلقة بالموقع محليًا حصريًا "
+"على الهاتف الذكي للمستخدم."
+
+#: src/components/screens/Legal.jsx:180
+msgid "legal-screen.privacy.section-2.headline"
+msgstr "بيانات شخصية"
+
+#: src/components/screens/Legal.jsx:181
+msgid "legal-screen.privacy.section-2.text"
+msgstr ""
+"يمكن للمستخدم إنشاء أشخاص داخل التطبيق. يتم حفظ الاسم ورقم الهاتف. علاوة على "
+"ذلك ، من الممكن استيراد دفتر الهاتف من الهاتف الذكي. يتم نقل أسماء وأرقام "
+"هواتف الإدخالات في دليل الهاتف إلى التطبيق. تبقى جميع البيانات محليًا على "
+"الهاتف الذكي وبالتالي في أيدي المستخدم. لا يتم نقل البيانات مطلقًا إلى موفر "
+"التطبيق أو جهات خارجية."
+
+#: src/components/screens/Legal.jsx:182
+msgid "legal-screen.privacy.section-3.headline"
+msgstr "البيانات المستندة إلى الموقع"
+
+#: src/components/screens/Legal.jsx:183
+msgid "legal-screen.privacy.section-3.text"
+msgstr ""
+"يمكن للمستخدم إنشاء مواقع داخل التطبيق. يتم حفظ اسم الموقع والوصف. لا يتم "
+"الوصول إلى موقع المستخدم عبر خدمات تحديد المواقع (مثل GPS أو ما شابه) في أي "
+"وقت. تظل البيانات المتعلقة بالموقع محلية أيضًا على الهاتف الذكي للمستخدم ولا "
+"يتم نقلها إلى مزود التطبيق أو الجهات الخارجية."
+
+#: src/components/screens/Legal.jsx:184
+msgid "legal-screen.privacy.section-4.headline"
+msgstr "مذكرات"
+
+#: src/components/screens/Legal.jsx:185
+msgid "legal-screen.privacy.section-4.text"
+msgstr ""
+"ضمن اليوميات ، يعين المستخدم الأشخاص والأماكن لأيام فردية على أساس يومي. "
+"بالإضافة إلى البيانات التي تم جمعها بالفعل ، يتم أيضًا تخزين الوقت للأماكن. "
+"كما تظل اليوميات وجميع الإدخالات محليًا على الهاتف الذكي للمستخدم ولا يتم "
+"نقلها إلى مزود التطبيق أو الجهات الخارجية."
+
+#: src/components/screens/Legal.jsx:186
+msgid "legal-screen.privacy.section-5.headline"
+msgstr "تصدير"
+
+#: src/components/screens/Legal.jsx:187
+msgid "legal-screen.privacy.section-5.text"
+msgstr ""
+"داخل التطبيق ، يمتلك المستخدم وظيفة تصدير لتصدير قسم من اليوميات كملف PDF. "
+"يتم إنشاء ملف PDF محليًا على الهاتف الذكي الخاص بالمستخدم. يمكن استخدام ملف "
+"PDF هذا لتزويد السلطات الصحية أو الهيئات الرسمية الأخرى بسهولة بقائمة جهات "
+"الاتصال في فترة زمنية محددة من أجل تتبع مسارات العدوى ، وإذا لزم الأمر ، "
+"إبلاغ الأشخاص الآخرين عن العدوى المحتملة. المستخدم هو المسؤول عن معالجة ملف "
+"PDF والبيانات الواردة فيه بشكل مسؤول وعدم تمريره بلا مبالاة."
+
+#: src/components/screens/Legal.jsx:188
+msgid "legal-screen.privacy.section-6.headline"
+msgstr "نقل البيانات وتتبعها"
+
+#: src/components/screens/Legal.jsx:189
+msgid "legal-screen.privacy.section-6.text"
+msgstr ""
+"لا يوفر التطبيق تتبعًا آليًا أو نقل البيانات إلى مزود التطبيق أو الجهات "
+"الخارجية. الاستثناء الوحيد هو وظيفة التصدير. هناك ، ومع ذلك ، يقرر المستخدم "
+"فقط لمن يتم تمرير البيانات. خلاف ذلك ، تبقى جميع البيانات محليا على الهاتف "
+"الذكي للمستخدم."
+
+#: src/components/screens/Legal.jsx:197
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "يتم تشغيل هذا التطبيق \"Coronika\" من قبل"
 
-#: src/components/screens/Legal.jsx:103
+#: src/components/screens/Legal.jsx:198
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -307,11 +396,11 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:104
+#: src/components/screens/Legal.jsx:199
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "المسؤولية عن المحتويات"
 
-#: src/components/screens/Legal.jsx:105
+#: src/components/screens/Legal.jsx:200
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "بصفتنا مقدم خدمة ، نحن مسؤولون عن المحتوى الخاص بنا على هذه الصفحات وفقًا "
@@ -322,11 +411,11 @@ msgstr ""
 "هذا الصدد ممكنة فقط من وقت معرفة التعدي الملموس. إذا علمنا بأي انتهاكات من "
 "هذا القبيل ، فسنزيل هذا المحتوى على الفور."
 
-#: src/components/screens/Legal.jsx:106
+#: src/components/screens/Legal.jsx:201
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "المسؤولية عن الروابط"
 
-#: src/components/screens/Legal.jsx:107
+#: src/components/screens/Legal.jsx:202
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "يحتوي عرضنا على روابط لمواقع خارجية لأطراف ثالثة ليس لنا تأثير على "
@@ -337,11 +426,11 @@ msgstr ""
 "محتويات الصفحات المرتبطة ليس معقولًا دون وجود دليل ملموس على انتهاك القانون. "
 "إذا علمنا بأي انتهاكات ، فسوف نزيل هذه الروابط على الفور."
 
-#: src/components/screens/Legal.jsx:108
+#: src/components/screens/Legal.jsx:203
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "حقوق النشر"
 
-#: src/components/screens/Legal.jsx:109
+#: src/components/screens/Legal.jsx:204
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "تخضع المحتويات والأعمال على هذه الصفحات التي أنشأها المشغلون لقانون حقوق "
@@ -352,91 +441,6 @@ msgstr ""
 "ثالثة. على وجه الخصوص ، يتم وضع علامة على محتوى الطرف الثالث على هذا النحو. "
 "ومع ذلك ، إذا علمت بانتهاك حقوق الطبع والنشر ، فيرجى إبلاغنا بذلك. إذا علمنا "
 "بأي انتهاكات ، فسوف نزيل هذه المحتويات على الفور."
-
-#: src/components/screens/Legal.jsx:61 src/components/screens/Menu.jsx:109
-msgid "legal-screen.header.headline"
-msgstr "قانوني"
-
-#: src/components/screens/Legal.jsx:68
-msgid "legal-screen.tabs.privacy.label"
-msgstr "خصوصية"
-
-#: src/components/screens/Legal.jsx:73
-msgid "legal-screen.tabs.imprint.label"
-msgstr "بصمة"
-
-#: src/components/screens/Legal.jsx:83
-msgid "legal-screen.privacy.section-1.headline"
-msgstr "معالجة بيانات التطبيق"
-
-#: src/components/screens/Legal.jsx:84
-msgid "legal-screen.privacy.section-1.text"
-msgstr ""
-"يعالج تطبيق Coronika البيانات الشخصية والبيانات المتعلقة بالموقع محليًا حصريًا "
-"على الهاتف الذكي للمستخدم."
-
-#: src/components/screens/Legal.jsx:85
-msgid "legal-screen.privacy.section-2.headline"
-msgstr "بيانات شخصية"
-
-#: src/components/screens/Legal.jsx:86
-msgid "legal-screen.privacy.section-2.text"
-msgstr ""
-"يمكن للمستخدم إنشاء أشخاص داخل التطبيق. يتم حفظ الاسم ورقم الهاتف. علاوة على "
-"ذلك ، من الممكن استيراد دفتر الهاتف من الهاتف الذكي. يتم نقل أسماء وأرقام "
-"هواتف الإدخالات في دليل الهاتف إلى التطبيق. تبقى جميع البيانات محليًا على "
-"الهاتف الذكي وبالتالي في أيدي المستخدم. لا يتم نقل البيانات مطلقًا إلى موفر "
-"التطبيق أو جهات خارجية."
-
-#: src/components/screens/Legal.jsx:87
-msgid "legal-screen.privacy.section-3.headline"
-msgstr "البيانات المستندة إلى الموقع"
-
-#: src/components/screens/Legal.jsx:88
-msgid "legal-screen.privacy.section-3.text"
-msgstr ""
-"يمكن للمستخدم إنشاء مواقع داخل التطبيق. يتم حفظ اسم الموقع والوصف. لا يتم "
-"الوصول إلى موقع المستخدم عبر خدمات تحديد المواقع (مثل GPS أو ما شابه) في أي "
-"وقت. تظل البيانات المتعلقة بالموقع محلية أيضًا على الهاتف الذكي للمستخدم ولا "
-"يتم نقلها إلى مزود التطبيق أو الجهات الخارجية."
-
-#: src/components/screens/Legal.jsx:89
-msgid "legal-screen.privacy.section-4.headline"
-msgstr "مذكرات"
-
-#: src/components/screens/Legal.jsx:90
-msgid "legal-screen.privacy.section-4.text"
-msgstr ""
-"ضمن اليوميات ، يعين المستخدم الأشخاص والأماكن لأيام فردية على أساس يومي. "
-"بالإضافة إلى البيانات التي تم جمعها بالفعل ، يتم أيضًا تخزين الوقت للأماكن. "
-"كما تظل اليوميات وجميع الإدخالات محليًا على الهاتف الذكي للمستخدم ولا يتم "
-"نقلها إلى مزود التطبيق أو الجهات الخارجية."
-
-#: src/components/screens/Legal.jsx:91
-msgid "legal-screen.privacy.section-5.headline"
-msgstr "تصدير"
-
-#: src/components/screens/Legal.jsx:92
-msgid "legal-screen.privacy.section-5.text"
-msgstr ""
-"داخل التطبيق ، يمتلك المستخدم وظيفة تصدير لتصدير قسم من اليوميات كملف PDF. "
-"يتم إنشاء ملف PDF محليًا على الهاتف الذكي الخاص بالمستخدم. يمكن استخدام ملف "
-"PDF هذا لتزويد السلطات الصحية أو الهيئات الرسمية الأخرى بسهولة بقائمة جهات "
-"الاتصال في فترة زمنية محددة من أجل تتبع مسارات العدوى ، وإذا لزم الأمر ، "
-"إبلاغ الأشخاص الآخرين عن العدوى المحتملة. المستخدم هو المسؤول عن معالجة ملف "
-"PDF والبيانات الواردة فيه بشكل مسؤول وعدم تمريره بلا مبالاة."
-
-#: src/components/screens/Legal.jsx:93
-msgid "legal-screen.privacy.section-6.headline"
-msgstr "نقل البيانات وتتبعها"
-
-#: src/components/screens/Legal.jsx:94
-msgid "legal-screen.privacy.section-6.text"
-msgstr ""
-"لا يوفر التطبيق تتبعًا آليًا أو نقل البيانات إلى مزود التطبيق أو الجهات "
-"الخارجية. الاستثناء الوحيد هو وظيفة التصدير. هناك ، ومع ذلك ، يقرر المستخدم "
-"فقط لمن يتم تمرير البيانات. خلاف ذلك ، تبقى جميع البيانات محليا على الهاتف "
-"الذكي للمستخدم."
 
 #: src/components/screens/Menu.jsx:105
 #: src/components/screens/Settings/ui.jsx:92

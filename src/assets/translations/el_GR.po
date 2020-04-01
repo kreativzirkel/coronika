@@ -297,11 +297,107 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr "Έρχεται συντομα!"
 
-#: src/components/screens/Legal.jsx:102
+#: src/components/screens/Legal.jsx:151 src/components/screens/Menu.jsx:109
+msgid "legal-screen.header.headline"
+msgstr "Νομικά"
+
+#: src/components/screens/Legal.jsx:158
+msgid "legal-screen.tabs.privacy.label"
+msgstr "Προστασία δεδομένων "
+
+#: src/components/screens/Legal.jsx:163
+msgid "legal-screen.tabs.imprint.label"
+msgstr "Στοιχεία έκδοσης "
+
+#: src/components/screens/Legal.jsx:168
+msgid "legal-screen.tabs.licenses.label"
+msgstr "Άδειες"
+
+#: src/components/screens/Legal.jsx:178
+msgid "legal-screen.privacy.section-1.headline"
+msgstr "Επεξεργασία δεδομένων της εφαρμογής"
+
+#: src/components/screens/Legal.jsx:179
+msgid "legal-screen.privacy.section-1.text"
+msgstr ""
+"Το App Coronika επεξεργάζεται προσωπικά δεδομένα και δεδομένα σχετικά με τη "
+"τοποθεσία αποκλειστικά τοπικά στο smartphone του χρήστη."
+
+#: src/components/screens/Legal.jsx:180
+msgid "legal-screen.privacy.section-2.headline"
+msgstr "Προσωπικά δεδομένα"
+
+#: src/components/screens/Legal.jsx:181
+msgid "legal-screen.privacy.section-2.text"
+msgstr ""
+"Ο χρήστης μπορεί να καταχωρήσει άτομα μέσα στην εφαρμογή. Το όνομα και ο "
+"αριθμός τηλεφώνου αποθηκεύονται. Επιπλέον, είναι δυνατή η εισαγωγή του "
+"τηλεφωνικού καταλόγου του smartphone. Τα ονόματα και οι αριθμοί τηλεφώνου "
+"των καταχωρήσεων του τηλεφωνικού καταλόγου μεταφέρονται στην εφαρμογή. Όλα "
+"τα δεδομένα παραμένουν τοπικά στο smartphone και επομένως στα χέρια του "
+"χρήστη. Τα δεδομένα δεν μεταβιβάζονται ποτέ στον πάροχο της εφαρμογής ή σε "
+"τρίτους."
+
+#: src/components/screens/Legal.jsx:182
+msgid "legal-screen.privacy.section-3.headline"
+msgstr "Τοπικά δεδομένα"
+
+#: src/components/screens/Legal.jsx:183
+msgid "legal-screen.privacy.section-3.text"
+msgstr ""
+"Ο χρήστης μπορεί να δημιουργήσει τοποθεσίες εντός της εφαρμογής. Το όνομα "
+"της τοποθεσίας και μια περιγραφή αποθηκεύονται. Η τοποθεσία του χρήστη μέσω "
+"υπηρεσιών εντοπισμού θέσης (π.χ. GPS ή παρόμοιου) δεν είναι προσβάσιμη σε "
+"καμία περίπτωση. Τα δεδομένα σχετικά με τη θέση παραμένουν επίσης τοπικά στο "
+"smartphone του χρήστη και δεν μεταδίδονται στον πάροχο της εφαρμογής ή σε "
+"τρίτους."
+
+#: src/components/screens/Legal.jsx:184
+msgid "legal-screen.privacy.section-4.headline"
+msgstr "Ημερολόγιο"
+
+#: src/components/screens/Legal.jsx:185
+msgid "legal-screen.privacy.section-4.text"
+msgstr ""
+"Μέσα στο ημερολόγιο, ο χρήστης κατατάσσει καθημερινά άτομα και μέρη σε "
+"μεμονωμένες ημέρες. Εκτός από τα δεδομένα που έχουν ήδη συλλεχθεί, "
+"αποθηκεύεται επίσης μια ώρα για τις τοποθεσίες. Το ημερολόγιο και όλες οι "
+"καταχωρήσεις παραμένουν επίσης τοπικά στο smartphone του χρήστη και δεν "
+"μεταδίδονται στον πάροχο της εφαρμογής ή σε τρίτους."
+
+#: src/components/screens/Legal.jsx:186
+msgid "legal-screen.privacy.section-5.headline"
+msgstr "Εξαγωγή"
+
+#: src/components/screens/Legal.jsx:187
+msgid "legal-screen.privacy.section-5.text"
+msgstr ""
+"Μέσα στην εφαρμογή ο χρήστης έχει τη δυνατότητα να εξάγει ένα τμήμα του "
+"ημερολογίου ως αρχείο PDF. Το αρχείο PDF δημιουργείται τοπικά στο smartphone "
+"του χρήστη. Αυτό το αρχείο PDF μπορεί να χρησιμοποιηθεί για να παρέχει στις "
+"υγειονομικές αρχές ή σε άλλους επίσημους οργανισμούς έναν κατάλογο επαφών σε "
+"μια επιλεγμένη χρονική περίοδο για την ανίχνευση διαδρομών μόλυνσης και, εάν "
+"είναι απαραίτητο, για την ενημέρωση άλλων ατόμων για πιθανή μόλυνση. Ο "
+"χρήστης είναι υπεύθυνος για το υπεύθυνο χειρισμό και την προσεκτική μετάδοση "
+"του αρχείου PDF και των δεδομένων που περιέχονται σε αυτό."
+
+#: src/components/screens/Legal.jsx:188
+msgid "legal-screen.privacy.section-6.headline"
+msgstr "Μεταφορά δεδομένων και παρακολούθηση"
+
+#: src/components/screens/Legal.jsx:189
+msgid "legal-screen.privacy.section-6.text"
+msgstr ""
+"Η εφαρμογή δεν παρέχει αυτοματοποιημένη παρακολούθηση ή μεταφορά δεδομένων "
+"στον πάροχο της ή σε τρίτους. Η μόνη εξαίρεση είναι η λειτουργία εξαγωγής. "
+"Ωστόσο, μόνο ο χρήστης αποφασίζει σε ποιον διαβιβάζονται τα δεδομένα. "
+"Διαφορετικά, όλα τα δεδομένα παραμένουν τοπικά στο smartphone του χρήστη."
+
+#: src/components/screens/Legal.jsx:197
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "Η διαχείριση της εφαρμογής \"Coronika\" γίνεται από"
 
-#: src/components/screens/Legal.jsx:103
+#: src/components/screens/Legal.jsx:198
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -318,11 +414,11 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:104
+#: src/components/screens/Legal.jsx:199
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "Ευθύνη για το περιεχόμενο"
 
-#: src/components/screens/Legal.jsx:105
+#: src/components/screens/Legal.jsx:200
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "Ως πάροχος υπηρεσιών, είμαστε υπεύθυνοι για το δικό μας περιεχόμενο σε αυτές "
@@ -336,11 +432,11 @@ msgstr ""
 "συγκεκριμένης παράβασης. Εάν διαπιστώσουμε τέτοιες παραβάσεις, θα "
 "καταργήσουμε αμέσως αυτό το περιεχόμενο."
 
-#: src/components/screens/Legal.jsx:106
+#: src/components/screens/Legal.jsx:201
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Ευθύνη για συνδέσμους"
 
-#: src/components/screens/Legal.jsx:107
+#: src/components/screens/Legal.jsx:202
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Η προσφορά μας περιέχει συνδέσμους προς εξωτερικούς ιστότοπους τρίτων, για "
@@ -354,11 +450,11 @@ msgstr ""
 "παραβίασης του νόμου. Εάν διαπιστώσουμε τυχόν παραβάσεις, θα καταργήσουμε "
 "αμέσως αυτούς τους συνδέσμους."
 
-#: src/components/screens/Legal.jsx:108
+#: src/components/screens/Legal.jsx:203
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "Πνευματική ιδιοκτησία"
 
-#: src/components/screens/Legal.jsx:109
+#: src/components/screens/Legal.jsx:204
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "Το περιεχόμενο και οι εργασίες σε αυτές τις σελίδες που δημιουργούνται από "
@@ -372,98 +468,6 @@ msgstr ""
 "περιεχόμενο τρίτου μέρους επισημαίνεται ως τέτοιο. Σε περίπτωση που "
 "διαπιστώσετε παραβίαση πνευματικών δικαιωμάτων, ενημερώστε μας σχετικά. Εάν "
 "διαπιστώσουμε τυχόν παραβάσεις, θα καταργήσουμε αμέσως αυτά τα περιεχόμενα."
-
-#: src/components/screens/Legal.jsx:61 src/components/screens/Menu.jsx:109
-msgid "legal-screen.header.headline"
-msgstr "Νομικά"
-
-#: src/components/screens/Legal.jsx:68
-msgid "legal-screen.tabs.privacy.label"
-msgstr "Προστασία δεδομένων "
-
-#: src/components/screens/Legal.jsx:73
-msgid "legal-screen.tabs.imprint.label"
-msgstr "Στοιχεία έκδοσης "
-
-#: src/components/screens/Legal.jsx:83
-msgid "legal-screen.privacy.section-1.headline"
-msgstr "Επεξεργασία δεδομένων της εφαρμογής"
-
-#: src/components/screens/Legal.jsx:84
-msgid "legal-screen.privacy.section-1.text"
-msgstr ""
-"Το App Coronika επεξεργάζεται προσωπικά δεδομένα και δεδομένα σχετικά με τη "
-"τοποθεσία αποκλειστικά τοπικά στο smartphone του χρήστη."
-
-#: src/components/screens/Legal.jsx:85
-msgid "legal-screen.privacy.section-2.headline"
-msgstr "Προσωπικά δεδομένα"
-
-#: src/components/screens/Legal.jsx:86
-msgid "legal-screen.privacy.section-2.text"
-msgstr ""
-"Ο χρήστης μπορεί να καταχωρήσει άτομα μέσα στην εφαρμογή. Το όνομα και ο "
-"αριθμός τηλεφώνου αποθηκεύονται. Επιπλέον, είναι δυνατή η εισαγωγή του "
-"τηλεφωνικού καταλόγου του smartphone. Τα ονόματα και οι αριθμοί τηλεφώνου "
-"των καταχωρήσεων του τηλεφωνικού καταλόγου μεταφέρονται στην εφαρμογή. Όλα "
-"τα δεδομένα παραμένουν τοπικά στο smartphone και επομένως στα χέρια του "
-"χρήστη. Τα δεδομένα δεν μεταβιβάζονται ποτέ στον πάροχο της εφαρμογής ή σε "
-"τρίτους."
-
-#: src/components/screens/Legal.jsx:87
-msgid "legal-screen.privacy.section-3.headline"
-msgstr "Τοπικά δεδομένα"
-
-#: src/components/screens/Legal.jsx:88
-msgid "legal-screen.privacy.section-3.text"
-msgstr ""
-"Ο χρήστης μπορεί να δημιουργήσει τοποθεσίες εντός της εφαρμογής. Το όνομα "
-"της τοποθεσίας και μια περιγραφή αποθηκεύονται. Η τοποθεσία του χρήστη μέσω "
-"υπηρεσιών εντοπισμού θέσης (π.χ. GPS ή παρόμοιου) δεν είναι προσβάσιμη σε "
-"καμία περίπτωση. Τα δεδομένα σχετικά με τη θέση παραμένουν επίσης τοπικά στο "
-"smartphone του χρήστη και δεν μεταδίδονται στον πάροχο της εφαρμογής ή σε "
-"τρίτους."
-
-#: src/components/screens/Legal.jsx:89
-msgid "legal-screen.privacy.section-4.headline"
-msgstr "Ημερολόγιο"
-
-#: src/components/screens/Legal.jsx:90
-msgid "legal-screen.privacy.section-4.text"
-msgstr ""
-"Μέσα στο ημερολόγιο, ο χρήστης κατατάσσει καθημερινά άτομα και μέρη σε "
-"μεμονωμένες ημέρες. Εκτός από τα δεδομένα που έχουν ήδη συλλεχθεί, "
-"αποθηκεύεται επίσης μια ώρα για τις τοποθεσίες. Το ημερολόγιο και όλες οι "
-"καταχωρήσεις παραμένουν επίσης τοπικά στο smartphone του χρήστη και δεν "
-"μεταδίδονται στον πάροχο της εφαρμογής ή σε τρίτους."
-
-#: src/components/screens/Legal.jsx:91
-msgid "legal-screen.privacy.section-5.headline"
-msgstr "Εξαγωγή"
-
-#: src/components/screens/Legal.jsx:92
-msgid "legal-screen.privacy.section-5.text"
-msgstr ""
-"Μέσα στην εφαρμογή ο χρήστης έχει τη δυνατότητα να εξάγει ένα τμήμα του "
-"ημερολογίου ως αρχείο PDF. Το αρχείο PDF δημιουργείται τοπικά στο smartphone "
-"του χρήστη. Αυτό το αρχείο PDF μπορεί να χρησιμοποιηθεί για να παρέχει στις "
-"υγειονομικές αρχές ή σε άλλους επίσημους οργανισμούς έναν κατάλογο επαφών σε "
-"μια επιλεγμένη χρονική περίοδο για την ανίχνευση διαδρομών μόλυνσης και, εάν "
-"είναι απαραίτητο, για την ενημέρωση άλλων ατόμων για πιθανή μόλυνση. Ο "
-"χρήστης είναι υπεύθυνος για το υπεύθυνο χειρισμό και την προσεκτική μετάδοση "
-"του αρχείου PDF και των δεδομένων που περιέχονται σε αυτό."
-
-#: src/components/screens/Legal.jsx:93
-msgid "legal-screen.privacy.section-6.headline"
-msgstr "Μεταφορά δεδομένων και παρακολούθηση"
-
-#: src/components/screens/Legal.jsx:94
-msgid "legal-screen.privacy.section-6.text"
-msgstr ""
-"Η εφαρμογή δεν παρέχει αυτοματοποιημένη παρακολούθηση ή μεταφορά δεδομένων "
-"στον πάροχο της ή σε τρίτους. Η μόνη εξαίρεση είναι η λειτουργία εξαγωγής. "
-"Ωστόσο, μόνο ο χρήστης αποφασίζει σε ποιον διαβιβάζονται τα δεδομένα. "
-"Διαφορετικά, όλα τα δεδομένα παραμένουν τοπικά στο smartphone του χρήστη."
 
 #: src/components/screens/Menu.jsx:105
 #: src/components/screens/Settings/ui.jsx:92

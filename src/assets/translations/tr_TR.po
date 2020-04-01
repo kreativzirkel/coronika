@@ -288,11 +288,104 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr "Çok yakında!"
 
-#: src/components/screens/Legal.jsx:102
+#: src/components/screens/Legal.jsx:151 src/components/screens/Menu.jsx:109
+msgid "legal-screen.header.headline"
+msgstr "Yasal"
+
+#: src/components/screens/Legal.jsx:158
+msgid "legal-screen.tabs.privacy.label"
+msgstr "Gizlilik"
+
+#: src/components/screens/Legal.jsx:163
+msgid "legal-screen.tabs.imprint.label"
+msgstr "baskı bilgileri"
+
+#: src/components/screens/Legal.jsx:168
+msgid "legal-screen.tabs.licenses.label"
+msgstr "Lisanslar"
+
+#: src/components/screens/Legal.jsx:178
+msgid "legal-screen.privacy.section-1.headline"
+msgstr "Uygulamanın veri işlemi"
+
+#: src/components/screens/Legal.jsx:179
+msgid "legal-screen.privacy.section-1.text"
+msgstr ""
+"\"Coronika\" kişisel ve konumla ilgili verileri yalnızca kullanıcının akıllı "
+"telefonunda yerel olarak işler."
+
+#: src/components/screens/Legal.jsx:180
+msgid "legal-screen.privacy.section-2.headline"
+msgstr "Kişisel veri"
+
+#: src/components/screens/Legal.jsx:181
+msgid "legal-screen.privacy.section-2.text"
+msgstr ""
+"Kullanıcı uygulama içinde kişiler oluşturabilir. İsim ve telefon numarası "
+"kaydedilir. Ayrıca akıllı telefonun telefon rehberini içe aktarmak da "
+"mümkündür. Telefon defterindeki kayıtların adları ve telefon numaraları "
+"uygulamaya aktarılır. Tüm veriler yerel olarak akıllı telefonda ve "
+"dolayısıyla kullanıcının elinde kalır. Veriler hiçbir zaman uygulama "
+"sağlayıcısına veya üçüncü taraflara aktarılmaz."
+
+#: src/components/screens/Legal.jsx:182
+msgid "legal-screen.privacy.section-3.headline"
+msgstr "Konum tabanlı veriler"
+
+#: src/components/screens/Legal.jsx:183
+msgid "legal-screen.privacy.section-3.text"
+msgstr ""
+"Kullanıcı uygulama içinde konumlar oluşturabilir. Konumun yeri ve tanımı "
+"kaydedilir. Konumlandırma servisleri (ör. GPS veya benzeri) aracılığıyla "
+"kullanıcının konumuna hiçbir zaman erişilmez. Konumla ilgili veriler ayrıca "
+"kullanıcının akıllı telefonunda yerel kalır ve uygulama sağlayıcısına veya "
+"üçüncü taraflara iletilmez."
+
+#: src/components/screens/Legal.jsx:184
+msgid "legal-screen.privacy.section-4.headline"
+msgstr "günlük"
+
+#: src/components/screens/Legal.jsx:185
+msgid "legal-screen.privacy.section-4.text"
+msgstr ""
+"Kullanıcı günlük icinde her gün kişileri ve konumlari belirli günlere ekler. "
+"Toplanan verilere ek olarak, yerler için de bir zaman kaydedilir. Günlük ve "
+"tüm girişler kullanıcının akıllı telefonunda yerel olarak kalır ve uygulama "
+"sağlayıcısına veya üçüncü taraflara iletilmez."
+
+#: src/components/screens/Legal.jsx:186
+msgid "legal-screen.privacy.section-5.headline"
+msgstr "aktarmak"
+
+#: src/components/screens/Legal.jsx:187
+msgid "legal-screen.privacy.section-5.text"
+msgstr ""
+"Uygulama içinde kullanıcının günlüğün bir bölümünü PDF dosyası olarak dışa "
+"aktarmak için bir dışa aktarma işlevi vardır. PDF dosyası kullanıcının "
+"akıllı telefonunda yerel olarak oluşturulur. Bu PDF dosyası, sağlık "
+"otoritelerine veya diğer resmi kurumlara, enfeksiyon yollarını izlemek ve "
+"gerekirse diğer kişileri potansiyel bir enfeksiyon hakkında bilgilendirmek "
+"için belirli bir süre içinde bir irtibat listesi sağlamak için "
+"kullanılabilir. PDF dosyasını ve içindeki verileri sorumlu bir şekilde "
+"kullanmaktan ve dikkatsizce aktarmamaktan kullanıcı sorumludur."
+
+#: src/components/screens/Legal.jsx:188
+msgid "legal-screen.privacy.section-6.headline"
+msgstr "Veri aktarımı ve takibi"
+
+#: src/components/screens/Legal.jsx:189
+msgid "legal-screen.privacy.section-6.text"
+msgstr ""
+"Uygulama, uygulama sağlayıcısına veya üçüncü taraflara otomatik izleme veya "
+"veri aktarımı sağlamaz. Tek istisna aktarma işlevidir. Ancak orada yalnızca "
+"kullanıcı verilerini kime aktarılacağına karar verir. Aksi takdirde tüm "
+"veriler kullanıcının akıllı telefonunda yerel olarak kalır."
+
+#: src/components/screens/Legal.jsx:197
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "Bu uygulama 'Coronika' tarafından işletilmektedir"
 
-#: src/components/screens/Legal.jsx:103
+#: src/components/screens/Legal.jsx:198
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -309,11 +402,11 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:104
+#: src/components/screens/Legal.jsx:199
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "İçerik sorumluluğu"
 
-#: src/components/screens/Legal.jsx:105
+#: src/components/screens/Legal.jsx:200
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "Bir hizmet sağlayıcı olarak, bu sayfalardaki kendi içeriğimizden § 7 para.1 "
@@ -325,11 +418,11 @@ msgstr ""
 "andan itibaren mümkündür. Bu tür ihlallerin farkına varırsak, bu tür içeriği "
 "hemen kaldıracağız."
 
-#: src/components/screens/Legal.jsx:106
+#: src/components/screens/Legal.jsx:201
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Bağlantı sorumluluğu"
 
-#: src/components/screens/Legal.jsx:107
+#: src/components/screens/Legal.jsx:202
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Teklifimiz, içeriği üzerinde hiçbir etkiye sahip olmadığımız üçüncü "
@@ -343,11 +436,11 @@ msgstr ""
 "Herhangi bir ihlalin farkına varırsak, bu tür bağlantıları derhal "
 "kaldıracağız."
 
-#: src/components/screens/Legal.jsx:108
+#: src/components/screens/Legal.jsx:203
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "telif hakkı"
 
-#: src/components/screens/Legal.jsx:109
+#: src/components/screens/Legal.jsx:204
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "Operatörler tarafından oluşturulan bu sayfalardaki içerik ve eserler Alman "
@@ -360,95 +453,6 @@ msgstr ""
 "içeriği bu şekilde işaretlenir. Yine de bir telif hakkı ihlali olduğunun "
 "farkına varırsan, lütfen bizi buna göre bilgilendir. Herhangi bir ihlalin "
 "farkına varırsak, bu tür içerikleri derhal kaldıracağız."
-
-#: src/components/screens/Legal.jsx:61 src/components/screens/Menu.jsx:109
-msgid "legal-screen.header.headline"
-msgstr "Yasal"
-
-#: src/components/screens/Legal.jsx:68
-msgid "legal-screen.tabs.privacy.label"
-msgstr "Gizlilik"
-
-#: src/components/screens/Legal.jsx:73
-msgid "legal-screen.tabs.imprint.label"
-msgstr "baskı bilgileri"
-
-#: src/components/screens/Legal.jsx:83
-msgid "legal-screen.privacy.section-1.headline"
-msgstr "Uygulamanın veri işlemi"
-
-#: src/components/screens/Legal.jsx:84
-msgid "legal-screen.privacy.section-1.text"
-msgstr ""
-"\"Coronika\" kişisel ve konumla ilgili verileri yalnızca kullanıcının akıllı "
-"telefonunda yerel olarak işler."
-
-#: src/components/screens/Legal.jsx:85
-msgid "legal-screen.privacy.section-2.headline"
-msgstr "Kişisel veri"
-
-#: src/components/screens/Legal.jsx:86
-msgid "legal-screen.privacy.section-2.text"
-msgstr ""
-"Kullanıcı uygulama içinde kişiler oluşturabilir. İsim ve telefon numarası "
-"kaydedilir. Ayrıca akıllı telefonun telefon rehberini içe aktarmak da "
-"mümkündür. Telefon defterindeki kayıtların adları ve telefon numaraları "
-"uygulamaya aktarılır. Tüm veriler yerel olarak akıllı telefonda ve "
-"dolayısıyla kullanıcının elinde kalır. Veriler hiçbir zaman uygulama "
-"sağlayıcısına veya üçüncü taraflara aktarılmaz."
-
-#: src/components/screens/Legal.jsx:87
-msgid "legal-screen.privacy.section-3.headline"
-msgstr "Konum tabanlı veriler"
-
-#: src/components/screens/Legal.jsx:88
-msgid "legal-screen.privacy.section-3.text"
-msgstr ""
-"Kullanıcı uygulama içinde konumlar oluşturabilir. Konumun yeri ve tanımı "
-"kaydedilir. Konumlandırma servisleri (ör. GPS veya benzeri) aracılığıyla "
-"kullanıcının konumuna hiçbir zaman erişilmez. Konumla ilgili veriler ayrıca "
-"kullanıcının akıllı telefonunda yerel kalır ve uygulama sağlayıcısına veya "
-"üçüncü taraflara iletilmez."
-
-#: src/components/screens/Legal.jsx:89
-msgid "legal-screen.privacy.section-4.headline"
-msgstr "günlük"
-
-#: src/components/screens/Legal.jsx:90
-msgid "legal-screen.privacy.section-4.text"
-msgstr ""
-"Kullanıcı günlük icinde her gün kişileri ve konumlari belirli günlere ekler. "
-"Toplanan verilere ek olarak, yerler için de bir zaman kaydedilir. Günlük ve "
-"tüm girişler kullanıcının akıllı telefonunda yerel olarak kalır ve uygulama "
-"sağlayıcısına veya üçüncü taraflara iletilmez."
-
-#: src/components/screens/Legal.jsx:91
-msgid "legal-screen.privacy.section-5.headline"
-msgstr "aktarmak"
-
-#: src/components/screens/Legal.jsx:92
-msgid "legal-screen.privacy.section-5.text"
-msgstr ""
-"Uygulama içinde kullanıcının günlüğün bir bölümünü PDF dosyası olarak dışa "
-"aktarmak için bir dışa aktarma işlevi vardır. PDF dosyası kullanıcının "
-"akıllı telefonunda yerel olarak oluşturulur. Bu PDF dosyası, sağlık "
-"otoritelerine veya diğer resmi kurumlara, enfeksiyon yollarını izlemek ve "
-"gerekirse diğer kişileri potansiyel bir enfeksiyon hakkında bilgilendirmek "
-"için belirli bir süre içinde bir irtibat listesi sağlamak için "
-"kullanılabilir. PDF dosyasını ve içindeki verileri sorumlu bir şekilde "
-"kullanmaktan ve dikkatsizce aktarmamaktan kullanıcı sorumludur."
-
-#: src/components/screens/Legal.jsx:93
-msgid "legal-screen.privacy.section-6.headline"
-msgstr "Veri aktarımı ve takibi"
-
-#: src/components/screens/Legal.jsx:94
-msgid "legal-screen.privacy.section-6.text"
-msgstr ""
-"Uygulama, uygulama sağlayıcısına veya üçüncü taraflara otomatik izleme veya "
-"veri aktarımı sağlamaz. Tek istisna aktarma işlevidir. Ancak orada yalnızca "
-"kullanıcı verilerini kime aktarılacağına karar verir. Aksi takdirde tüm "
-"veriler kullanıcının akıllı telefonunda yerel olarak kalır."
 
 #: src/components/screens/Menu.jsx:105
 #: src/components/screens/Settings/ui.jsx:92
