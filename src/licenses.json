@@ -11,7 +11,7 @@
         "licenseUrl": "https://github.com/react-native-community/react-native-async-storage/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "@react-native-community/datetimepicker@2.3.0": {
+    "@react-native-community/datetimepicker@2.3.1": {
         "licenses": "MIT",
         "repository": "https://github.com/react-native-community/datetimepicker",
         "licenseUrl": "https://github.com/react-native-community/datetimepicker/raw/master/LICENSE.md",
@@ -125,7 +125,7 @@
         "licenseUrl": "https://github.com/react-native-community/react-native-localize/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-modal-datetime-picker@8.5.1": {
+    "react-native-modal-datetime-picker@8.5.2": {
         "licenses": "MIT",
         "repository": "https://github.com/mmazzarolo/react-native-modal-datetime-picker",
         "licenseUrl": "https://github.com/mmazzarolo/react-native-modal-datetime-picker/raw/master/LICENSE.md",
@@ -209,7 +209,7 @@
         "licenseUrl": "https://github.com/reduxjs/redux/raw/master/LICENSE.md",
         "parents": "coronika"
     },
-    "uuid@7.0.2": {
+    "uuid@7.0.3": {
         "licenses": "MIT",
         "repository": "https://github.com/uuidjs/uuid",
         "licenseUrl": "https://github.com/uuidjs/uuid/raw/master/LICENSE.md",
