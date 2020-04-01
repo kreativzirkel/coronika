@@ -60,6 +60,7 @@ const DayOverview = ({
     },
     dayValueNumber: {
       color: COLOR_PRIMARY,
+      textAlign: 'right',
     },
     dayValueNumberEmpty: {
       color: '#d6d6d6',

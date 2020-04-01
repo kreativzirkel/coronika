@@ -2,7 +2,7 @@
 
 ## 1.3.0
 - Added button to load more days in diary (max. 30)
-- Added translations for Greek, Japanese, Russian, Sinhala, Turkish, and Ukrainian
+- Added translations for Arabic, Greek, Japanese, Russian, Sinhala, Turkish, and Ukrainian
 - Bug fixes and improvements
 
 ## 1.2.0
