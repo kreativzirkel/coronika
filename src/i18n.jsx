@@ -320,10 +320,18 @@ const withI18n = (WrappedComponent) => {
       return formatDistance(start, end, { locale });
     }
 
-    __i18n(text) {
-      const { currentLanguage, messages } = this.state;
+    __i18n(text, language) {
+      let translationLanguage = language;
+      let translationMessages;
 
-      return __(text, currentLanguage, messages);
+      if (!translationLanguage) {
+        const { currentLanguage, messages } = this.state;
+
+        translationLanguage = currentLanguage;
+        translationMessages = messages;
+      }
+
+      return __(text, translationLanguage, translationMessages);
     }
 
     render() {
@@ -336,7 +344,7 @@ const withI18n = (WrappedComponent) => {
           {...{ ...props, currentLanguage }}
           formatTimeDistance={(start, end) => this.formatTimeDistance(start, end)}
           ref={forwardedRef}
-          __={(text) => this.__i18n(text)}
+          __={(text, language) => this.__i18n(text, language)}
         />
         /* eslint-enable react/jsx-props-no-spreading */
       );

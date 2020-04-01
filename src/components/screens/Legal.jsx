@@ -5,6 +5,7 @@ import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import licenses from '../../licenses';
 import withViewportUnits from '../../utils/withViewportUnits';
+import CollapsibleBox from '../widgets/CollapsibleBox';
 import { HeaderBack } from '../widgets/Header';
 import Layout from '../widgets/Layout';
 import TabBar from '../widgets/TabBar';
@@ -30,11 +31,14 @@ class Legal extends React.PureComponent {
   }
 
   render() {
-    const { navigation, vw, __ } = this.props;
+    const { currentLanguage, navigation, vw, __ } = this.props;
     const { activeTab } = this.state;
 
     // noinspection JSUnresolvedFunction
     const styles = StyleSheet.create({
+      collapsible: {
+        marginTop: vw(5),
+      },
       contentText: {
         fontFamily: 'JetBrainsMono-Regular',
         fontSize: vw(4),
@@ -187,6 +191,64 @@ class Legal extends React.PureComponent {
                   <Text style={styles.contentText}>{__('legal-screen.privacy.section-5.text')}</Text>
                   <Text style={styles.contentTextHeadline}>{__('legal-screen.privacy.section-6.headline')}</Text>
                   <Text style={styles.contentText}>{__('legal-screen.privacy.section-6.text')}</Text>
+
+                  {!['de', 'en'].includes(currentLanguage) && (
+                    <CollapsibleBox headline={'English version'} style={styles.collapsible}>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.privacy.section-1.headline', 'en')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-1.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.privacy.section-2.headline', 'en')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-2.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.privacy.section-3.headline', 'en')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-3.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.privacy.section-4.headline', 'en')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-4.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.privacy.section-5.headline', 'en')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-5.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.privacy.section-6.headline', 'en')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-6.text', 'en')}</Text>
+                    </CollapsibleBox>
+                  )}
+
+                  {currentLanguage !== 'de' && (
+                    <CollapsibleBox headline={'Deutsche Version'} style={styles.collapsible}>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.privacy.section-1.headline', 'de')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-1.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.privacy.section-2.headline', 'de')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-2.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.privacy.section-3.headline', 'de')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-3.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.privacy.section-4.headline', 'de')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-4.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.privacy.section-5.headline', 'de')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-5.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.privacy.section-6.headline', 'de')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-6.text', 'de')}</Text>
+                    </CollapsibleBox>
+                  )}
                 </View>
               </ScrollView>
             )}
@@ -202,6 +264,48 @@ class Legal extends React.PureComponent {
                   <Text style={styles.contentText}>{__('legal-screen.imprint.section-3.text')}</Text>
                   <Text style={styles.contentTextHeadline}>{__('legal-screen.imprint.section-4.headline')}</Text>
                   <Text style={styles.contentText}>{__('legal-screen.imprint.section-4.text')}</Text>
+
+                  {!['de', 'en'].includes(currentLanguage) && (
+                    <CollapsibleBox headline={'English version'} style={styles.collapsible}>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.imprint.section-1.headline', 'en')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-1.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.imprint.section-2.headline', 'en')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-2.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.imprint.section-3.headline', 'en')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-3.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.imprint.section-4.headline', 'en')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-4.text', 'en')}</Text>
+                    </CollapsibleBox>
+                  )}
+
+                  {currentLanguage !== 'de' && (
+                    <CollapsibleBox headline={'Deutsche Version'} style={styles.collapsible}>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.imprint.section-1.headline', 'de')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-1.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.imprint.section-2.headline', 'de')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-2.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.imprint.section-3.headline', 'de')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-3.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
+                        {__('legal-screen.imprint.section-4.headline', 'de')}
+                      </Text>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-4.text', 'de')}</Text>
+                    </CollapsibleBox>
+                  )}
                 </View>
               </ScrollView>
             )}

@@ -1,11 +1,12 @@
+import moment from 'moment';
 import React, { memo } from 'react';
 import { Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
+import CollapsibleBox from '../widgets/CollapsibleBox';
 import { HeaderBack } from '../widgets/Header';
 import Layout from '../widgets/Layout';
-import moment from 'moment';
 
 const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
   // noinspection JSUnresolvedFunction
@@ -62,16 +63,7 @@ const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
       marginTop: vw(4),
     },
     viewSources: {
-      backgroundColor: COLOR_SECONDARY,
-      borderRadius: vw(2.3),
       marginTop: vw(14),
-      padding: vw(4),
-    },
-    viewSourcesHeadline: {
-      color: '#B0B0B1',
-      fontFamily: 'JetBrainsMono-Regular',
-      fontSize: vw(4.5),
-      lineHeight: vw(7),
     },
     viewSourcesText: {
       fontFamily: 'JetBrainsMono-Regular',
@@ -122,8 +114,7 @@ const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
             ))}
           </View>
 
-          <View style={styles.viewSources}>
-            <Text style={styles.viewSourcesHeadline}>{__('tips.sources.headline')}</Text>
+          <CollapsibleBox headline={__('tips.sources.headline')} style={styles.viewSources}>
             <TouchableOpacity
               onPress={() =>
                 Linking.openURL(
@@ -136,7 +127,7 @@ const TipAvoidCrowdsOfPeople = ({ navigation, vw, __ }) => {
             <Text style={styles.viewSourcesLastUpdated}>
               {`${__('tips.sources.last-updated')} ${moment(1584489600000).format('L')}`}
             </Text>
-          </View>
+          </CollapsibleBox>
         </View>
       </ScrollView>
     </Layout>
