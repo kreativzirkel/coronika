@@ -1,3 +1,4 @@
+import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import UilArrowRight from '@iconscout/react-native-unicons/icons/uil-arrow-right';
 import React, { memo } from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
@@ -7,22 +8,16 @@ import Layout from '../widgets/Layout';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 
-const Tips = ({ navigation, vw, __ }) => {
+const Tips = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     contentText: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.5),
       lineHeight: vw(7),
     },
-    header: {
-      alignItems: 'center',
-      flex: 1,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-    },
     headerHeadline: {
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(5),
       marginLeft: 'auto',
       textTransform: 'lowercase',
@@ -34,7 +29,7 @@ const Tips = ({ navigation, vw, __ }) => {
     },
     tipText: {
       color: '#000000',
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.2),
     },
     tipTextWrapper: {
@@ -127,7 +122,11 @@ const Tips = ({ navigation, vw, __ }) => {
               </View>
 
               <View style={styles.tipIcon}>
-                <UilArrowRight size={vw(11)} color={COLOR_PRIMARY} />
+                {isRTL ? (
+                  <UilArrowLeft size={vw(11)} color={COLOR_PRIMARY} />
+                ) : (
+                  <UilArrowRight size={vw(11)} color={COLOR_PRIMARY} />
+                )}
               </View>
             </TouchableOpacity>
           ))}

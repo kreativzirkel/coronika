@@ -1,9 +1,10 @@
 import React, { memo } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY } from '../../constants';
+import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 
-const TabBarItem = withViewportUnits(({ active, counter, counterVisible, icon: Icon, label, onPress, vw }) => {
+const TabBarItem = ({ active, counter, counterVisible, icon: Icon, label, onPress, vw, getFontFamilyRegular }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     tabBarItem: {
@@ -35,7 +36,7 @@ const TabBarItem = withViewportUnits(({ active, counter, counterVisible, icon: I
     },
     tabBarItemLabel: {
       color: '#000000',
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(3.8),
       textTransform: 'lowercase',
     },
@@ -45,7 +46,7 @@ const TabBarItem = withViewportUnits(({ active, counter, counterVisible, icon: I
     tabBarItemCounter: {
       alignSelf: 'flex-start',
       color: '#000000',
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(3.5),
       textTransform: 'lowercase',
       marginLeft: 3,
@@ -70,6 +71,6 @@ const TabBarItem = withViewportUnits(({ active, counter, counterVisible, icon: I
       </TouchableOpacity>
     </View>
   );
-});
+};
 
-export default memo(TabBarItem);
+export default memo(withI18n(withViewportUnits(TabBarItem)));

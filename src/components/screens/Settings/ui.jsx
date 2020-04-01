@@ -19,17 +19,20 @@ const Settings = ({
   enableNotificationWashingHandsOption2,
   navigation,
   vw,
+  getFontFamilyBold,
+  getFontFamilyRegular,
+  isRTL,
   __,
 }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     contentText: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.5),
       lineHeight: vw(7),
     },
     contentTextHeadline: {
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(5.1),
       lineHeight: vw(7),
       marginBottom: vw(1),
@@ -38,7 +41,7 @@ const Settings = ({
       textTransform: 'lowercase',
     },
     headline: {
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(7),
       marginBottom: vw(4),
       paddingLeft: vw(2),
@@ -57,7 +60,7 @@ const Settings = ({
       paddingTop: vw(3.8),
     },
     settingLabel: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.2),
       width: '85%',
     },
@@ -83,7 +86,7 @@ const Settings = ({
   const Setting = ({ active, label, onPress }) => (
     <View style={styles.setting}>
       <Text style={styles.settingLabel}>{label}</Text>
-      <Toggle active={active} onPress={() => onPress()} style={styles.settingToggle} />
+      <Toggle active={active} isRTL={isRTL} onPress={() => onPress()} style={styles.settingToggle} />
     </View>
   );
 

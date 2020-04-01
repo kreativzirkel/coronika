@@ -7,7 +7,7 @@ import Layout from '../../widgets/Layout';
 
 const slider = React.createRef();
 
-const Welcome = ({ activateNotifications, finish, navigation, vw, __ }) => {
+const Welcome = ({ activateNotifications, finish, navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
   const slides = [
     {
       animation: require('../../../assets/animations/why.json'),
@@ -47,19 +47,19 @@ const Welcome = ({ activateNotifications, finish, navigation, vw, __ }) => {
       width: vw(55),
     },
     headline: {
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(7),
       textAlign: 'center',
     },
     text: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.5),
       lineHeight: vw(7),
       textAlign: 'center',
     },
     button: {
       color: COLOR_PRIMARY,
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(7),
       textAlign: 'center',
     },
@@ -67,7 +67,7 @@ const Welcome = ({ activateNotifications, finish, navigation, vw, __ }) => {
       marginTop: vw(2),
     },
     buttonSkipText: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(3.5),
       textAlign: 'center',
       textDecorationLine: 'underline',

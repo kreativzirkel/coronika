@@ -4,22 +4,22 @@ import { COLOR_SECONDARY } from '../../../constants';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 
-const Export = ({ navigation, vw, __ }) => {
+const Export = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     comingSoon: {
       color: '#b0b0b1',
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(7),
       textAlign: 'center',
     },
     contentHeadline: {
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(7),
       textAlign: 'center',
     },
     contentText: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.5),
       lineHeight: vw(7),
       textAlign: 'center',

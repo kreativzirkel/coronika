@@ -2,9 +2,10 @@ import UilTrashAlt from '@iconscout/react-native-unicons/icons/uil-trash-alt';
 import React, { Fragment } from 'react';
 import { Animated, StyleSheet, TouchableOpacity, View } from 'react-native';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
+import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 
-const renderRightActions = (progress, deleteItem, vw) => {
+const renderSwipeActions = (progress, deleteItem, vw, isRTL) => {
   const linear = progress.interpolate({
     inputRange: [0, 1, 2, 3, 4, 5, 6],
     outputRange: [0, 1, 1, 1, 1, 1, 1],
@@ -12,7 +13,7 @@ const renderRightActions = (progress, deleteItem, vw) => {
 
   const translateX = progress.interpolate({
     inputRange: [0, 1],
-    outputRange: [60, 0],
+    outputRange: [isRTL ? -60 : 60, 0],
   });
 
   // noinspection JSUnresolvedFunction
@@ -38,13 +39,15 @@ const renderRightActions = (progress, deleteItem, vw) => {
   );
 };
 
-const ListItem = React.forwardRef(({ allowDelete, children, deleteItem, vw }, ref) => {
+const ListItem = React.forwardRef(({ allowDelete, children, deleteItem, vw, isRTL }, ref) => {
   return allowDelete ? (
     <Swipeable
       friction={1.5}
+      leftTreshold={isRTL ? 40 : null}
       ref={ref}
-      renderRightActions={(progress) => renderRightActions(progress, deleteItem, vw)}
-      rightTreshold={40}>
+      renderLeftActions={isRTL ? (progress) => renderSwipeActions(progress, deleteItem, vw, isRTL) : null}
+      renderRightActions={isRTL ? null : (progress) => renderSwipeActions(progress, deleteItem, vw, isRTL)}
+      rightTreshold={isRTL ? null : 40}>
       {children}
     </Swipeable>
   ) : (
@@ -52,4 +55,4 @@ const ListItem = React.forwardRef(({ allowDelete, children, deleteItem, vw }, re
   );
 });
 
-export default withViewportUnits(ListItem);
+export default withI18n(withViewportUnits(ListItem));

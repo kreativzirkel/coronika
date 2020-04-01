@@ -16,9 +16,12 @@ const Dashboard = ({
   openDay,
   navigation,
   vw,
+  getFontFamilyBold,
+  getFontFamilyRegular,
+  isRTL,
   __,
 }) => {
-  const listItemHeight = vw(19.6);
+  const listItemHeight = isRTL ? vw(18.9) : vw(19.6);
 
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
@@ -34,7 +37,7 @@ const Dashboard = ({
     },
     headerHeadline: {
       alignSelf: 'flex-start',
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(5),
       textTransform: 'lowercase',
     },
@@ -49,14 +52,14 @@ const Dashboard = ({
     },
     headerButtonsItemText: {
       color: '#555555',
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(3.8),
       marginLeft: vw(1),
       textTransform: 'lowercase',
     },
     loadMoreText: {
       color: COLOR_PRIMARY,
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.8),
       textTransform: 'lowercase',
     },
@@ -102,7 +105,7 @@ const Dashboard = ({
       width: '100%',
     },
     viewHintText: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.5),
       lineHeight: vw(7),
       textAlign: 'center',
@@ -112,7 +115,7 @@ const Dashboard = ({
     },
     viewHintButtonText: {
       color: COLOR_PRIMARY,
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(4.5),
       lineHeight: vw(7),
     },

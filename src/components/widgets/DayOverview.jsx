@@ -19,6 +19,8 @@ const DayOverview = ({
   today,
   formatTimeDistance,
   vw,
+  getFontFamilyBold,
+  getFontFamilyRegular,
   __,
 }) => {
   // noinspection JSUnresolvedFunction
@@ -49,7 +51,7 @@ const DayOverview = ({
       opacity: 0.4,
     },
     dayValue: {
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(7),
       textTransform: 'lowercase',
     },
@@ -58,7 +60,6 @@ const DayOverview = ({
     },
     dayValueNumber: {
       color: COLOR_PRIMARY,
-      textAlign: 'right',
     },
     dayValueNumberEmpty: {
       color: '#d6d6d6',
@@ -68,7 +69,7 @@ const DayOverview = ({
     },
     dayValueCaption: {
       color: '#707070',
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(2.7),
       marginBottom: vw(0.5),
       textTransform: 'lowercase',
@@ -82,6 +83,7 @@ const DayOverview = ({
     },
     dayDateWrapper: {
       flex: 1,
+      flexDirection: 'column',
     },
     dayPersonsWrapper: {
       flexGrow: 0,

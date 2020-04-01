@@ -1,14 +1,24 @@
+import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
 import moment from 'moment';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { COLOR_PRIMARY } from '../../../constants';
+import EntriesTabsView from '../../partials/EntriesTabsView';
 import DayOverview from '../../widgets/DayOverview';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
-import EntriesTabsView from '../../partials/EntriesTabsView';
-import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
-import { COLOR_PRIMARY } from '../../../constants';
 
-const Day = ({ locations, persons, timestamp, deleteLocationFromDay, deletePersonFromDay, navigation, vw, __ }) => {
+const Day = ({
+  locations,
+  persons,
+  timestamp,
+  deleteLocationFromDay,
+  deletePersonFromDay,
+  navigation,
+  vw,
+  getFontFamilyRegular,
+  __,
+}) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     buttonAdd: {
@@ -24,7 +34,7 @@ const Day = ({ locations, persons, timestamp, deleteLocationFromDay, deletePerso
     },
     buttonAddText: {
       color: COLOR_PRIMARY,
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(5.5),
       textTransform: 'lowercase',
     },

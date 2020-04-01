@@ -34,7 +34,7 @@ const onShare = async (message) => {
 const Tab = createBottomTabNavigator();
 
 const TabNavigationItem = withI18n(
-  withViewportUnits(({ isFocused, key, onPress, routeName, vw, __ }) => {
+  withViewportUnits(({ isFocused, key, onPress, routeName, getFontFamilyRegular, isRTL, vw, __ }) => {
     // noinspection JSUnresolvedFunction
     const styles = StyleSheet.create({
       navigationItem: {
@@ -61,7 +61,7 @@ const TabNavigationItem = withI18n(
         backgroundColor: COLOR_PRIMARY,
       },
       navigationItemText: {
-        fontFamily: 'JetBrainsMono-Regular',
+        fontFamily: getFontFamilyRegular(),
         fontSize: vw(2.8),
         textAlign: 'center',
         textTransform: 'lowercase',

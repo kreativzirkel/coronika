@@ -1,14 +1,15 @@
+import UilEllipsisV from '@iconscout/react-native-unicons/icons/uil-ellipsis-v';
 import UilMinus from '@iconscout/react-native-unicons/icons/uil-minus';
 import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
+import cloneDeep from 'lodash/cloneDeep';
 import moment from 'moment';
 import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 import ListItem from './ListItem';
 import ListItemSeparator from './ListItemSeparator';
-import cloneDeep from 'lodash/cloneDeep';
-import UilEllipsisV from '@iconscout/react-native-unicons/icons/uil-ellipsis-v';
 
 class LocationsListItemClass extends React.Component {
   constructor(props) {
@@ -30,7 +31,11 @@ class LocationsListItemClass extends React.Component {
   }
 
   openMore() {
-    if (this.swipeable.current.openRight) {
+    const { isRTL } = this.props;
+
+    if (isRTL && this.swipeable.current.openLeft) {
+      this.swipeable.current.openLeft();
+    } else if (!isRTL && this.swipeable.current.openRight) {
       this.swipeable.current.openRight();
     }
   }
@@ -52,6 +57,8 @@ class LocationsListItemClass extends React.Component {
       title,
       toggleSelection,
       updateItem,
+      getFontFamilyBold,
+      getFontFamilyRegular,
       vw,
     } = this.props;
 
@@ -68,7 +75,7 @@ class LocationsListItemClass extends React.Component {
         paddingTop: vw(3.8),
       },
       locationText: {
-        fontFamily: 'JetBrainsMono-Regular',
+        fontFamily: getFontFamilyRegular(),
         fontSize: vw(4.2),
       },
       locationHeader: {
@@ -80,7 +87,7 @@ class LocationsListItemClass extends React.Component {
       },
       locationContentText: {
         color: '#000000',
-        fontFamily: 'JetBrainsMono-Regular',
+        fontFamily: getFontFamilyRegular(),
         fontSize: vw(3.8),
         marginTop: vw(1),
       },
@@ -117,7 +124,7 @@ class LocationsListItemClass extends React.Component {
       },
       viewCounterText: {
         color: COLOR_PRIMARY,
-        fontFamily: 'JetBrainsMono-Bold',
+        fontFamily: getFontFamilyBold(),
         fontSize: vw(6),
       },
     });
@@ -205,7 +212,7 @@ class LocationsListItemClass extends React.Component {
   }
 }
 
-const LocationsListItem = withViewportUnits(LocationsListItemClass);
+const LocationsListItem = withI18n(withViewportUnits(LocationsListItemClass));
 
 const LocationsList = ({
   allowDelete,

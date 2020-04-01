@@ -45,117 +45,117 @@ msgstr "共有"
 msgid "navigation.tips.label"
 msgstr "ヒント"
 
-#: src/components/partials/EntriesTabsView.jsx:618
-#: src/components/widgets/DayOverview.jsx:160
+#: src/components/partials/EntriesTabsView.jsx:620
+#: src/components/widgets/DayOverview.jsx:162
 msgid "persons"
 msgstr "連絡先"
 
-#: src/components/partials/EntriesTabsView.jsx:628
-#: src/components/widgets/DayOverview.jsx:144
+#: src/components/partials/EntriesTabsView.jsx:630
+#: src/components/widgets/DayOverview.jsx:146
 msgid "locations"
 msgstr "場所"
 
-#: src/components/partials/EntriesTabsView.jsx:640
+#: src/components/partials/EntriesTabsView.jsx:642
 msgid "entries.persons.list.new"
 msgstr "新しい連絡先"
 
-#: src/components/partials/EntriesTabsView.jsx:661
-#: src/components/partials/EntriesTabsView.jsx:711
+#: src/components/partials/EntriesTabsView.jsx:663
+#: src/components/partials/EntriesTabsView.jsx:713
 msgid "entries.search.list.empty"
 msgstr "何も見つかりませんでした。"
 
-#: src/components/partials/EntriesTabsView.jsx:668
+#: src/components/partials/EntriesTabsView.jsx:670
 msgid "entries.persons.list.empty"
 msgstr ""
 "連絡先はまだ追加されていません。 すぐに開始するには、電話帳から連絡先をイン"
 "ポートしてください。"
 
-#: src/components/partials/EntriesTabsView.jsx:672
+#: src/components/partials/EntriesTabsView.jsx:674
 msgid "entries.persons.list.import.button"
 msgstr "今すぐインポート"
 
-#: src/components/partials/EntriesTabsView.jsx:691
+#: src/components/partials/EntriesTabsView.jsx:693
 msgid "entries.locations.list.new"
 msgstr "新しい場所"
 
-#: src/components/partials/EntriesTabsView.jsx:714
+#: src/components/partials/EntriesTabsView.jsx:716
 msgid "entries.locations.list.empty"
 msgstr ""
 "場所がまだ作成されていません。 今から開始し、最初の場所を作成してください。"
 
-#: src/components/partials/EntriesTabsView.jsx:730
+#: src/components/partials/EntriesTabsView.jsx:732
 msgid "entries.selection.add"
 msgstr "選択を追加"
 
-#: src/components/partials/EntriesTabsView.jsx:742
+#: src/components/partials/EntriesTabsView.jsx:744
 msgid "entries.modals.update-person.headline"
 msgstr "連絡先を編集"
 
-#: src/components/partials/EntriesTabsView.jsx:743
+#: src/components/partials/EntriesTabsView.jsx:745
 msgid "entries.modals.new-person.headline"
 msgstr "新しい連絡先"
 
-#: src/components/partials/EntriesTabsView.jsx:754
+#: src/components/partials/EntriesTabsView.jsx:756
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "名前"
 
-#: src/components/partials/EntriesTabsView.jsx:766
+#: src/components/partials/EntriesTabsView.jsx:768
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "電話"
 
-#: src/components/partials/EntriesTabsView.jsx:779
+#: src/components/partials/EntriesTabsView.jsx:781
 msgid "entries.modals.update-person.button"
 msgstr "セーブ"
 
-#: src/components/partials/EntriesTabsView.jsx:780
+#: src/components/partials/EntriesTabsView.jsx:782
 msgid "entries.modals.new-person.button"
 msgstr "追加"
 
-#: src/components/partials/EntriesTabsView.jsx:792
+#: src/components/partials/EntriesTabsView.jsx:794
 msgid "entries.modals.update-location.headline"
 msgstr "場所を編集"
 
-#: src/components/partials/EntriesTabsView.jsx:793
+#: src/components/partials/EntriesTabsView.jsx:795
 msgid "entries.modals.new-location.headline"
 msgstr "新しい場所"
 
-#: src/components/partials/EntriesTabsView.jsx:804
+#: src/components/partials/EntriesTabsView.jsx:806
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "タイトル"
 
-#: src/components/partials/EntriesTabsView.jsx:815
+#: src/components/partials/EntriesTabsView.jsx:817
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "説明"
 
-#: src/components/partials/EntriesTabsView.jsx:828
+#: src/components/partials/EntriesTabsView.jsx:830
 msgid "entries.modals.update-location.button"
 msgstr "セーブ"
 
-#: src/components/partials/EntriesTabsView.jsx:829
+#: src/components/partials/EntriesTabsView.jsx:831
 msgid "entries.modals.new-location.button"
 msgstr "追加"
 
-#: src/components/partials/EntriesTabsView.jsx:839
+#: src/components/partials/EntriesTabsView.jsx:841
 msgid "entries.modals.select-location.headline"
 msgstr "場所を選択"
 
-#: src/components/partials/EntriesTabsView.jsx:858
+#: src/components/partials/EntriesTabsView.jsx:860
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "説明"
 
-#: src/components/partials/EntriesTabsView.jsx:873
+#: src/components/partials/EntriesTabsView.jsx:875
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/components/partials/EntriesTabsView.jsx:874
+#: src/components/partials/EntriesTabsView.jsx:876
 msgid "Confirm"
 msgstr "確認"
 
-#: src/components/partials/EntriesTabsView.jsx:887
+#: src/components/partials/EntriesTabsView.jsx:889
 msgid "entries.modals.select-location.button"
 msgstr "選択する"
 
-#: src/components/screens/About.jsx:105 src/components/screens/Menu.jsx:101
+#: src/components/screens/About.jsx:105 src/components/screens/Menu.jsx:105
 msgid "about-screen.header.headline"
 msgstr "コロニカについて"
 
@@ -203,62 +203,62 @@ msgstr "今すぐ始める"
 msgid "add-entry-screen.header.headline"
 msgstr "エントリを追加"
 
-#: src/components/screens/Dashboard/ui.jsx:144
-#: src/components/screens/Menu.jsx:120
+#: src/components/screens/Dashboard/ui.jsx:147
+#: src/components/screens/Menu.jsx:124
 msgid "menu-screen.header.headline"
 msgstr "メニュー"
 
-#: src/components/screens/Dashboard/ui.jsx:154
+#: src/components/screens/Dashboard/ui.jsx:157
 msgid "dashboard-screen.first-start.hint"
 msgstr "今日の日付をクリックして、最初の人や場所を入力します。"
 
-#: src/components/screens/Dashboard/ui.jsx:156
+#: src/components/screens/Dashboard/ui.jsx:159
 msgid "Close"
 msgstr "閉じる"
 
-#: src/components/screens/Dashboard/ui.jsx:173
+#: src/components/screens/Dashboard/ui.jsx:176
 msgid "dashboard-screen.list.load-more"
 msgstr "もっと読み込む"
 
-#: src/components/screens/Day/ui.jsx:52
+#: src/components/screens/Day/ui.jsx:62
 msgid "day-screen.header.headline"
 msgstr "毎日の概要"
 
-#: src/components/screens/Day/ui.jsx:59
+#: src/components/screens/Day/ui.jsx:69
 msgid "day-screen.locations.empty"
 msgstr "この日の場所は追加されていません。"
 
-#: src/components/screens/Day/ui.jsx:60
+#: src/components/screens/Day/ui.jsx:70
 msgid "day-screen.persons.empty"
 msgstr "この日は連絡先を追加していません。"
 
-#: src/components/screens/Day/ui.jsx:71
+#: src/components/screens/Day/ui.jsx:81
 msgid "day-screen.entries.add"
 msgstr "エントリを追加"
 
-#: src/components/screens/Directory/ui.jsx:129
+#: src/components/screens/Directory/ui.jsx:131
 msgid "directory-screen.header.button.import"
 msgstr "インポート"
 
-#: src/components/screens/Directory/ui.jsx:133
+#: src/components/screens/Directory/ui.jsx:135
 msgid "directory-screen.header.headline"
 msgstr "ディレクトリの管理"
 
-#: src/components/screens/Directory/ui.jsx:151
+#: src/components/screens/Directory/ui.jsx:153
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "連絡先をインポート"
 
-#: src/components/screens/Directory/ui.jsx:157
+#: src/components/screens/Directory/ui.jsx:159
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "電話帳から連絡先をインポートして、すぐに開始できるようにします。 すべての人は"
 "ローカルに保存されます。 データは追跡または共有されません。"
 
-#: src/components/screens/Directory/ui.jsx:163
+#: src/components/screens/Directory/ui.jsx:165
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "インポートしています..."
 
-#: src/components/screens/Directory/ui.jsx:164
+#: src/components/screens/Directory/ui.jsx:166
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "今すぐインポート"
 
@@ -290,37 +290,41 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr "近日公開！"
 
-#: src/components/screens/Legal.jsx:151 src/components/screens/Menu.jsx:109
+#: src/components/screens/Legal.jsx:155 src/components/screens/Menu.jsx:113
 msgid "legal-screen.header.headline"
 msgstr "法律関連"
 
-#: src/components/screens/Legal.jsx:158
+#: src/components/screens/Legal.jsx:162
 msgid "legal-screen.tabs.privacy.label"
 msgstr "個人情報の取り扱いについて"
 
-#: src/components/screens/Legal.jsx:163
+#: src/components/screens/Legal.jsx:167
 msgid "legal-screen.tabs.imprint.label"
 msgstr "バージョンの説明"
 
-#: src/components/screens/Legal.jsx:168
+#: src/components/screens/Legal.jsx:172
 msgid "legal-screen.tabs.licenses.label"
 msgstr "ライセンス"
 
-#: src/components/screens/Legal.jsx:178
+#: src/components/screens/Legal.jsx:182 src/components/screens/Legal.jsx:198
+#: src/components/screens/Legal.jsx:227
 msgid "legal-screen.privacy.section-1.headline"
 msgstr "アプリのデータ処理"
 
-#: src/components/screens/Legal.jsx:179
+#: src/components/screens/Legal.jsx:183 src/components/screens/Legal.jsx:200
+#: src/components/screens/Legal.jsx:229
 msgid "legal-screen.privacy.section-1.text"
 msgstr ""
 "アプリ「コロニカ」は、ユーザーのスマートフォン上で、個人情報や位置情報などの"
 "データをローカルで独占的に処理します。"
 
-#: src/components/screens/Legal.jsx:180
+#: src/components/screens/Legal.jsx:184 src/components/screens/Legal.jsx:202
+#: src/components/screens/Legal.jsx:231
 msgid "legal-screen.privacy.section-2.headline"
 msgstr "個人情報"
 
-#: src/components/screens/Legal.jsx:181
+#: src/components/screens/Legal.jsx:185 src/components/screens/Legal.jsx:204
+#: src/components/screens/Legal.jsx:233
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
 "ユーザーはアプリ内で人物を作成することができます。名前と電話番号が保存されま"
@@ -329,11 +333,13 @@ msgstr ""
 "ローカルに残り、ユーザーの手元に残ります。データがアプリの提供者や第三者に転"
 "送されることはありません。"
 
-#: src/components/screens/Legal.jsx:182
+#: src/components/screens/Legal.jsx:186 src/components/screens/Legal.jsx:206
+#: src/components/screens/Legal.jsx:235
 msgid "legal-screen.privacy.section-3.headline"
 msgstr "位置情報に基づくデータ"
 
-#: src/components/screens/Legal.jsx:183
+#: src/components/screens/Legal.jsx:187 src/components/screens/Legal.jsx:208
+#: src/components/screens/Legal.jsx:237
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
 "ユーザーはアプリ内でロケーションを作成することができます。位置情報の名前と説"
@@ -341,11 +347,13 @@ msgstr ""
 "でもアクセスできません。位置情報関連のデータもユーザーのスマートフォン上に"
 "ローカルに残り、アプリの提供者や第三者に送信されることはありません。"
 
-#: src/components/screens/Legal.jsx:184
+#: src/components/screens/Legal.jsx:188 src/components/screens/Legal.jsx:210
+#: src/components/screens/Legal.jsx:239
 msgid "legal-screen.privacy.section-4.headline"
 msgstr "日記"
 
-#: src/components/screens/Legal.jsx:185
+#: src/components/screens/Legal.jsx:189 src/components/screens/Legal.jsx:212
+#: src/components/screens/Legal.jsx:241
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
 "日記の中では、ユーザーは毎日、人と場所を日単位で記録することができます。すで"
@@ -353,11 +361,13 @@ msgstr ""
 "は、ユーザーのスマートフォンにローカルに残り、アプリの提供者や第三者に転送さ"
 "れることはありません。"
 
-#: src/components/screens/Legal.jsx:186
+#: src/components/screens/Legal.jsx:190 src/components/screens/Legal.jsx:214
+#: src/components/screens/Legal.jsx:243
 msgid "legal-screen.privacy.section-5.headline"
 msgstr "エクスポート"
 
-#: src/components/screens/Legal.jsx:187
+#: src/components/screens/Legal.jsx:191 src/components/screens/Legal.jsx:216
+#: src/components/screens/Legal.jsx:245
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
 "アプリ内には、日記の一部をPDFファイルとして書き出す機能があります。このPDF"
@@ -367,11 +377,13 @@ msgstr ""
 "することができます。ユーザーは、PDFファイルとそれに含まれるデータを責任を持っ"
 "て取り扱い、無造作に渡さないようにする責任があります。"
 
-#: src/components/screens/Legal.jsx:188
+#: src/components/screens/Legal.jsx:192 src/components/screens/Legal.jsx:218
+#: src/components/screens/Legal.jsx:247
 msgid "legal-screen.privacy.section-6.headline"
 msgstr "データ転送とトラッキング"
 
-#: src/components/screens/Legal.jsx:189
+#: src/components/screens/Legal.jsx:193 src/components/screens/Legal.jsx:220
+#: src/components/screens/Legal.jsx:249
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
 "このアプリでは、自動追跡やアプリ提供者や第三者へのデータ転送は行っていませ"
@@ -379,11 +391,13 @@ msgstr ""
 "誰に渡すかを決定します。それ以外の場合、すべてのデータはユーザーのスマート"
 "フォンのローカル領域に残ります。"
 
-#: src/components/screens/Legal.jsx:197
+#: src/components/screens/Legal.jsx:259 src/components/screens/Legal.jsx:271
+#: src/components/screens/Legal.jsx:292
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "このアプリ「コロニカ」は、以下の会社が運営しています。"
 
-#: src/components/screens/Legal.jsx:198
+#: src/components/screens/Legal.jsx:260 src/components/screens/Legal.jsx:273
+#: src/components/screens/Legal.jsx:294
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -400,11 +414,13 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:199
+#: src/components/screens/Legal.jsx:261 src/components/screens/Legal.jsx:275
+#: src/components/screens/Legal.jsx:296
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "コンテンツの責任"
 
-#: src/components/screens/Legal.jsx:200
+#: src/components/screens/Legal.jsx:262 src/components/screens/Legal.jsx:277
+#: src/components/screens/Legal.jsx:298
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "サービス提供者として、我々は§7 para.1 TMG (ドイツのテレメディア法)と一般的な"
@@ -415,11 +431,13 @@ msgstr ""
 "な人権侵害行為を判明した時点からのみ可能です。人権侵害行為を判明場合、当社は"
 "直ちにそのようなコンテンツを削除します。"
 
-#: src/components/screens/Legal.jsx:201
+#: src/components/screens/Legal.jsx:263 src/components/screens/Legal.jsx:279
+#: src/components/screens/Legal.jsx:300
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "リンクに関する責任"
 
-#: src/components/screens/Legal.jsx:202
+#: src/components/screens/Legal.jsx:264 src/components/screens/Legal.jsx:281
+#: src/components/screens/Legal.jsx:302
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "当社の提供するサービスには第三者の外部サイトへのリンクが含まれており、その内"
@@ -432,11 +450,13 @@ msgstr ""
 "的ではありません。万が一、法律に違反していることが判明した場合には、速やかに"
 "リンクを削除します。"
 
-#: src/components/screens/Legal.jsx:203
+#: src/components/screens/Legal.jsx:265 src/components/screens/Legal.jsx:283
+#: src/components/screens/Legal.jsx:304
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "著作権について"
 
-#: src/components/screens/Legal.jsx:204
+#: src/components/screens/Legal.jsx:266 src/components/screens/Legal.jsx:285
+#: src/components/screens/Legal.jsx:306
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "運営者が作成したこれらのページのコンテンツや著作物は、ドイツの著作権法に準拠"
@@ -448,18 +468,18 @@ msgstr ""
 "侵害に気づいた場合には、その旨をご連絡ください。著作権侵害を発見した場合に"
 "は、速やかに削除いたします。"
 
-#: src/components/screens/Menu.jsx:105
-#: src/components/screens/Settings/ui.jsx:92
+#: src/components/screens/Menu.jsx:109
+#: src/components/screens/Settings/ui.jsx:95
 msgid "settings-screen.header.headline"
 msgstr "設定"
 
-#: src/components/screens/Menu.jsx:125
+#: src/components/screens/Menu.jsx:129
 msgid "menu-screen.intro.text"
 msgstr ""
 "パニックを広げるのではなく、明確な情報を作り、正しい情報を広めることが大切で"
 "す。"
 
-#: src/components/screens/Menu.jsx:159
+#: src/components/screens/Menu.jsx:167
 msgid "menu-screen.button.send-feedback"
 msgstr "フィードバックを送る"
 
@@ -526,55 +546,39 @@ msgstr ""
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 ヒントを忘れないでください！"
 
-#: src/components/screens/Settings/ui.jsx:101
-msgid "settings-screen.notifications.washing-hands.headline"
-msgstr "手を洗うときの注意点"
-
-#: src/components/screens/Settings/ui.jsx:105
-msgid "settings-screen.notifications.washing-hands.option-1.label"
-msgstr "一日３回をリマインドする"
-
-#: src/components/screens/Settings/ui.jsx:114
-msgid "settings-screen.notifications.washing-hands.option-2.label"
-msgstr "一日６回をリマインドする"
-
-#: src/components/screens/Settings/ui.jsx:125
-msgid "settings-screen.notifications.disinfect-smartphone.headline"
-msgstr "スマホを消毒するためのリマインド"
-
-#: src/components/screens/Settings/ui.jsx:129
-msgid "settings-screen.notifications.disinfect-smartphone.option.label"
-msgstr "毎日のリマインド"
-
-#: src/components/screens/Settings/ui.jsx:139
-msgid "settings-screen.notifications.diary.headline"
-msgstr "日記を使うときの注意点"
-
-#: src/components/screens/Settings/ui.jsx:142
-msgid "settings-screen.notifications.diary.option.label"
-msgstr "毎日のリマインド"
-
-#: src/components/screens/Settings/ui.jsx:97
+#: src/components/screens/Settings/ui.jsx:100
 msgid "settings-screen.notifications.headline"
 msgstr "お知らせ"
 
-#: src/components/screens/TipAmIInfected.jsx:102
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:104
-#: src/components/screens/TipCoughingSneezing.jsx:104
-#: src/components/screens/TipMouthguard.jsx:106
-#: src/components/screens/TipNotFeelingWell.jsx:103
-#: src/components/screens/TipReliableSources.jsx:76
-#: src/components/screens/TipWashingHands.jsx:104
-#: src/components/screens/Tips.jsx:111
-msgid "tips-screen.header.headline"
-msgstr "衛生に関するヒント"
+#: src/components/screens/Settings/ui.jsx:104
+msgid "settings-screen.notifications.washing-hands.headline"
+msgstr "手を洗うときの注意点"
 
-#: src/components/screens/TipAmIInfected.jsx:107
-#: src/components/screens/Tips.jsx:99
-msgid "tips.am-i-infected.headline"
-msgstr "コロナウイルスに感染したのではないか、どうすればいいですか？"
+#: src/components/screens/Settings/ui.jsx:108
+msgid "settings-screen.notifications.washing-hands.option-1.label"
+msgstr "一日３回をリマインドする"
 
-#: src/components/screens/TipAmIInfected.jsx:108
+#: src/components/screens/Settings/ui.jsx:117
+msgid "settings-screen.notifications.washing-hands.option-2.label"
+msgstr "一日６回をリマインドする"
+
+#: src/components/screens/Settings/ui.jsx:128
+msgid "settings-screen.notifications.disinfect-smartphone.headline"
+msgstr "スマホを消毒するためのリマインド"
+
+#: src/components/screens/Settings/ui.jsx:132
+msgid "settings-screen.notifications.disinfect-smartphone.option.label"
+msgstr "毎日のリマインド"
+
+#: src/components/screens/Settings/ui.jsx:142
+msgid "settings-screen.notifications.diary.headline"
+msgstr "日記を使うときの注意点"
+
+#: src/components/screens/Settings/ui.jsx:145
+msgid "settings-screen.notifications.diary.option.label"
+msgstr "毎日のリマインド"
+
+#: src/components/screens/TipAmIInfected.jsx:100
 msgid "tips.am-i-infected.text"
 msgstr ""
 "感染したのではないかと心配している場合は、他の人に感染しないように家にいてく"
@@ -583,211 +587,227 @@ msgstr ""
 "ニカの日記について伝えてください。この場合、日記を簡単にエクスポートして、そ"
 "れを担当当局に送信できます。"
 
-#: src/components/screens/TipAmIInfected.jsx:124
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:126
-#: src/components/screens/TipCoughingSneezing.jsx:126
-#: src/components/screens/TipMouthguard.jsx:133
-#: src/components/screens/TipNotFeelingWell.jsx:127
-#: src/components/screens/TipWashingHands.jsx:126
+#: src/components/screens/TipAmIInfected.jsx:115
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:118
+#: src/components/screens/TipCoughingSneezing.jsx:118
+#: src/components/screens/TipMouthguard.jsx:125
+#: src/components/screens/TipNotFeelingWell.jsx:119
+#: src/components/screens/TipWashingHands.jsx:118
 msgid "tips.sources.headline"
 msgstr "情報源"
 
-#: src/components/screens/TipAmIInfected.jsx:133
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:137
-#: src/components/screens/TipCoughingSneezing.jsx:146
-#: src/components/screens/TipMouthguard.jsx:151
-#: src/components/screens/TipNotFeelingWell.jsx:134
-#: src/components/screens/TipWashingHands.jsx:140
+#: src/components/screens/TipAmIInfected.jsx:124
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:129
+#: src/components/screens/TipCoughingSneezing.jsx:138
+#: src/components/screens/TipMouthguard.jsx:143
+#: src/components/screens/TipNotFeelingWell.jsx:126
+#: src/components/screens/TipWashingHands.jsx:132
 msgid "tips.sources.last-updated"
 msgstr "最終更新日。"
 
-#: src/components/screens/TipAmIInfected.jsx:95
+#: src/components/screens/TipAmIInfected.jsx:87
 msgid "tips.am-i-infected.list.item-1"
 msgstr "家にいる"
 
-#: src/components/screens/TipAmIInfected.jsx:96
+#: src/components/screens/TipAmIInfected.jsx:88
 msgid "tips.am-i-infected.list.item-2"
 msgstr "医師に電話する"
 
-#: src/components/screens/TipAmIInfected.jsx:97
+#: src/components/screens/TipAmIInfected.jsx:89
 msgid "tips.am-i-infected.list.item-3"
 msgstr "コロニカの日記について教えてください"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:109
-#: src/components/screens/Tips.jsx:83
+#: src/components/screens/TipAmIInfected.jsx:94
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:97
+#: src/components/screens/TipCoughingSneezing.jsx:97
+#: src/components/screens/TipMouthguard.jsx:99
+#: src/components/screens/TipNotFeelingWell.jsx:96
+#: src/components/screens/TipReliableSources.jsx:77
+#: src/components/screens/TipWashingHands.jsx:97
+#: src/components/screens/Tips.jsx:106
+msgid "tips-screen.header.headline"
+msgstr "衛生に関するヒント"
+
+#: src/components/screens/TipAmIInfected.jsx:99
+#: src/components/screens/Tips.jsx:94
+msgid "tips.am-i-infected.headline"
+msgstr "コロナウイルスに感染したのではないか、どうすればいいですか？"
+
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:102
+#: src/components/screens/Tips.jsx:78
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "人混みを避ける"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:110
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:103
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
 "可能の限り旅行に出かけるのを避け、公共交通機関を使用する代わりに自宅で仕事を"
 "してください。必要のないあらゆる接触を控え、大型イベントへの参加はお控えくだ"
 "さい。 "
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:95
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:88
 msgid "tips.avoid-crowds-of-people.list.item-1"
 msgstr "可能な限り大型イベントを避ける"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:96
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:89
 msgid "tips.avoid-crowds-of-people.list.item-2"
 msgstr "近場への移動は公共交通機関ではなく歩きましょう。"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:97
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:90
 msgid "tips.avoid-crowds-of-people.list.item-3"
 msgstr "コマメに手洗いしましょう"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:98
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:91
 msgid "tips.avoid-crowds-of-people.list.item-4"
 msgstr "人と人との間に2メートルの距離を置く"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:99
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:92
 msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "咳やくしゃみをした際は肘やティッシュで鼻と口を覆う"
 
-#: src/components/screens/TipCoughingSneezing.jsx:109
-#: src/components/screens/Tips.jsx:91
+#: src/components/screens/TipCoughingSneezing.jsx:102
+#: src/components/screens/Tips.jsx:86
 msgid "tips.coughing-sneezing.headline"
 msgstr "咳やくしゃみした時の正しい対応"
 
-#: src/components/screens/TipCoughingSneezing.jsx:110
+#: src/components/screens/TipCoughingSneezing.jsx:103
 msgid "tips.coughing-sneezing.text"
 msgstr "ウイルスの拡散を防ぐには、次のことに注意してください。"
 
-#: src/components/screens/TipCoughingSneezing.jsx:95
+#: src/components/screens/TipCoughingSneezing.jsx:88
 msgid "tips.coughing-sneezing.list.item-1"
 msgstr "人と人との間に2メートルの距離を置く"
 
-#: src/components/screens/TipCoughingSneezing.jsx:96
+#: src/components/screens/TipCoughingSneezing.jsx:89
 msgid "tips.coughing-sneezing.list.item-2"
 msgstr "人から背を向ける"
 
-#: src/components/screens/TipCoughingSneezing.jsx:97
+#: src/components/screens/TipCoughingSneezing.jsx:90
 msgid "tips.coughing-sneezing.list.item-3"
 msgstr "咳やくしゃみをした際は肘やティッシュで鼻と口を覆う"
 
-#: src/components/screens/TipCoughingSneezing.jsx:98
+#: src/components/screens/TipCoughingSneezing.jsx:91
 msgid "tips.coughing-sneezing.list.item-4"
 msgstr "使用済みのティッシュの正しい処分方法"
 
-#: src/components/screens/TipCoughingSneezing.jsx:99
+#: src/components/screens/TipCoughingSneezing.jsx:92
 msgid "tips.coughing-sneezing.list.item-5"
 msgstr "その後手を洗う"
 
-#: src/components/screens/TipMouthguard.jsx:100
-msgid "tips.mouthguard.list.item-3"
-msgstr "呼吸の息でマスクが濡れた場合"
-
-#: src/components/screens/TipMouthguard.jsx:101
-msgid "tips.mouthguard.list.item-4"
-msgstr "頻繁に取り替えない場合"
-
-#: src/components/screens/TipMouthguard.jsx:111
-#: src/components/screens/Tips.jsx:87
+#: src/components/screens/TipMouthguard.jsx:104
+#: src/components/screens/Tips.jsx:82
 msgid "tips.mouthguard.headline"
 msgstr "マスクは必要ですか？"
 
-#: src/components/screens/TipMouthguard.jsx:112
+#: src/components/screens/TipMouthguard.jsx:105
 msgid "tips.mouthguard.text-1"
 msgstr ""
 "マスクはすべての医療機関に必要不可欠な物です。病人やCOVID-19マスクの症状のあ"
 "る人にとっては、感染予防と拡散防止の効果があります。他の場合は医師の指示や衛"
 "生規則に従うようにしてください。"
 
-#: src/components/screens/TipMouthguard.jsx:114
+#: src/components/screens/TipMouthguard.jsx:107
 msgid "tips.mouthguard.text-2"
 msgstr ""
 "医療従事者は予防のためマスクを着用します。咳やくしゃみをした時の飛沫が広がる"
 "のを防ぎます。"
 
-#: src/components/screens/TipMouthguard.jsx:119
+#: src/components/screens/TipMouthguard.jsx:112
 msgid "tips.mouthguard.list.intro"
 msgstr "次の場合、手術以外でマスクを着用しても効果はありません。"
 
-#: src/components/screens/TipMouthguard.jsx:98
+#: src/components/screens/TipMouthguard.jsx:91
 msgid "tips.mouthguard.list.item-1"
 msgstr "マスクは紙で作られています"
 
-#: src/components/screens/TipMouthguard.jsx:99
+#: src/components/screens/TipMouthguard.jsx:92
 msgid "tips.mouthguard.list.item-2"
 msgstr "マスクが顔にぴったり合わない、または漏れている"
 
-#: src/components/screens/TipNotFeelingWell.jsx:108
-#: src/components/screens/Tips.jsx:95
+#: src/components/screens/TipMouthguard.jsx:93
+msgid "tips.mouthguard.list.item-3"
+msgstr "呼吸の息でマスクが濡れた場合"
+
+#: src/components/screens/TipMouthguard.jsx:94
+msgid "tips.mouthguard.list.item-4"
+msgstr "頻繁に取り替えない場合"
+
+#: src/components/screens/TipNotFeelingWell.jsx:101
+#: src/components/screens/Tips.jsx:90
 msgid "tips.not-feeling-well.headline"
 msgstr "気分が悪いですが、ウイルスに感染していますか？"
 
-#: src/components/screens/TipNotFeelingWell.jsx:109
+#: src/components/screens/TipNotFeelingWell.jsx:102
 msgid "tips.not-feeling-well.text"
 msgstr ""
 "インフルエンザ症状の患者全員がSARS-CoV-2ウイルスの保因者であるわけではありま"
 "せん。常に自分の症状に注目し、医師に連絡する必要があります。"
 
-#: src/components/screens/TipNotFeelingWell.jsx:113
+#: src/components/screens/TipNotFeelingWell.jsx:106
 msgid "tips.not-feeling-well.list.intro"
 msgstr "WHOによるCOVID-19の典型的な症状は次のとおりです。"
 
-#: src/components/screens/TipNotFeelingWell.jsx:95
+#: src/components/screens/TipNotFeelingWell.jsx:88
 msgid "tips.not-feeling-well.list.item-1"
 msgstr "呼吸器症状"
 
-#: src/components/screens/TipNotFeelingWell.jsx:96
+#: src/components/screens/TipNotFeelingWell.jsx:89
 msgid "tips.not-feeling-well.list.item-2"
 msgstr "熱"
 
-#: src/components/screens/TipNotFeelingWell.jsx:97
+#: src/components/screens/TipNotFeelingWell.jsx:90
 msgid "tips.not-feeling-well.list.item-3"
 msgstr "咳"
 
-#: src/components/screens/TipNotFeelingWell.jsx:98
+#: src/components/screens/TipNotFeelingWell.jsx:91
 msgid "tips.not-feeling-well.list.item-4"
 msgstr "息切れ"
 
-#: src/components/screens/TipReliableSources.jsx:81
-#: src/components/screens/Tips.jsx:103
+#: src/components/screens/TipReliableSources.jsx:82
+#: src/components/screens/Tips.jsx:98
 msgid "tips.reliable-sources.headline"
 msgstr "信頼できる情報源はどこにありますか？"
 
-#: src/components/screens/TipReliableSources.jsx:82
+#: src/components/screens/TipReliableSources.jsx:83
 msgid "tips.reliable-sources.text"
 msgstr "有益なウェブサイト"
 
-#: src/components/screens/Tips.jsx:116
+#: src/components/screens/Tips.jsx:111
 msgid "tips-screen.intro.text"
 msgstr ""
 "ここでは、感染のリスクを可能な限り減らし、感染の場合の正しい行動をするのに役"
 "立つ知識を見つけます。"
 
-#: src/components/screens/TipWashingHands.jsx:109
-#: src/components/screens/Tips.jsx:79
+#: src/components/screens/TipWashingHands.jsx:102
+#: src/components/screens/Tips.jsx:74
 msgid "tips.washing-hands.headline"
 msgstr "手を洗う"
 
-#: src/components/screens/TipWashingHands.jsx:110
+#: src/components/screens/TipWashingHands.jsx:103
 msgid "tips.washing-hands.text"
 msgstr ""
 "手を洗うのは簡単で、細菌の拡散を防ぐ最も効果的な方法の1つです。きれいな手は、"
 "細菌の拡散を防ぐことができます。毎回次の5つの手順を実行します。"
 
-#: src/components/screens/TipWashingHands.jsx:95
+#: src/components/screens/TipWashingHands.jsx:88
 msgid "tips.washing-hands.list.item-1"
 msgstr ""
 "清潔な水道水（温水または冷水）で手を濡らし、蛇口をオフにして、石鹸を塗りま"
 "す。"
 
-#: src/components/screens/TipWashingHands.jsx:96
+#: src/components/screens/TipWashingHands.jsx:89
 msgid "tips.washing-hands.list.item-2"
 msgstr "石鹸で手をこすって手を泡立てます。手の甲、指の間、爪の下を泡立てます。"
 
-#: src/components/screens/TipWashingHands.jsx:97
+#: src/components/screens/TipWashingHands.jsx:90
 msgid "tips.washing-hands.list.item-3"
 msgstr "手の甲、親指、指の間、爪の下などを約30～60秒ほどこすります。"
 
-#: src/components/screens/TipWashingHands.jsx:98
+#: src/components/screens/TipWashingHands.jsx:91
 msgid "tips.washing-hands.list.item-4"
 msgstr "清潔な水道水で手をよくすすぎます。"
 
-#: src/components/screens/TipWashingHands.jsx:99
+#: src/components/screens/TipWashingHands.jsx:92
 msgid "tips.washing-hands.list.item-5"
 msgstr "清潔なタオルを使用して手を乾かすか、風乾します。"
 
@@ -809,15 +829,15 @@ msgstr "スキップ"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "今すぐ活性化する"
 
-#: src/components/widgets/DayOverview.jsx:122
+#: src/components/widgets/DayOverview.jsx:124
 msgid "today"
 msgstr "今日"
 
-#: src/components/widgets/DayOverview.jsx:128
+#: src/components/widgets/DayOverview.jsx:130
 msgid "total"
 msgstr "合計"
 
-#: src/components/widgets/SearchBar.jsx:57
+#: src/components/widgets/SearchBar.jsx:58
 msgid "placeholder.search-input"
 msgstr "探す"
 

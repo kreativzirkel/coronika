@@ -1,8 +1,10 @@
 import UilAngleDown from '@iconscout/react-native-unicons/icons/uil-angle-down';
+import UilAngleLeft from '@iconscout/react-native-unicons/icons/uil-angle-left';
 import UilAngleRight from '@iconscout/react-native-unicons/icons/uil-angle-right';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 
 class CollapsibleBox extends React.PureComponent {
@@ -21,7 +23,7 @@ class CollapsibleBox extends React.PureComponent {
   }
 
   render() {
-    const { children, headline, style, vw } = this.props;
+    const { children, headline, style, vw, getFontFamilyRegular, isRTL } = this.props;
     const { open } = this.state;
 
     const styles = StyleSheet.create({
@@ -37,7 +39,7 @@ class CollapsibleBox extends React.PureComponent {
       },
       headerHeadline: {
         color: '#B0B0B1',
-        fontFamily: 'JetBrainsMono-Regular',
+        fontFamily: getFontFamilyRegular(),
         fontSize: vw(4.5),
         lineHeight: vw(7),
         textTransform: 'lowercase',
@@ -56,6 +58,8 @@ class CollapsibleBox extends React.PureComponent {
           <TouchableOpacity onPress={() => this.toggle()} style={styles.headerButton}>
             {open ? (
               <UilAngleDown color={COLOR_PRIMARY} size={vw(7)} style={styles.headerIcon} />
+            ) : isRTL ? (
+              <UilAngleLeft color={COLOR_PRIMARY} size={vw(7)} style={styles.headerIcon} />
             ) : (
               <UilAngleRight color={COLOR_PRIMARY} size={vw(7)} style={styles.headerIcon} />
             )}
@@ -69,4 +73,4 @@ class CollapsibleBox extends React.PureComponent {
   }
 }
 
-export default withViewportUnits(CollapsibleBox);
+export default withI18n(withViewportUnits(CollapsibleBox));

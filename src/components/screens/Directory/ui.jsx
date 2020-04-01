@@ -19,6 +19,8 @@ const Directory = ({
   hideImportPersonsModal,
   importPersons,
   vw,
+  getFontFamilyBold,
+  getFontFamilyRegular,
   __,
 }) => {
   // noinspection JSUnresolvedFunction
@@ -34,20 +36,20 @@ const Directory = ({
     },
     headerButtonText: {
       color: '#555555',
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(3.8),
       marginLeft: vw(1),
       textTransform: 'lowercase',
     },
     headerHeadline: {
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(5),
       marginLeft: 'auto',
       textTransform: 'lowercase',
-      textAlign: 'right',
     },
     headerHeadlineWrapper: {
       flex: 1,
+      flexDirection: 'row',
     },
     modal: {
       justifyContent: 'flex-end',
@@ -70,12 +72,12 @@ const Directory = ({
       paddingTop: vw(2),
     },
     modalHeaderText: {
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(5),
       textTransform: 'lowercase',
     },
     modalText: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.4),
       marginBottom: vw(7),
       paddingLeft: vw(3),
@@ -95,7 +97,7 @@ const Directory = ({
     },
     modalButtonText: {
       color: '#ffffff',
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(6),
       textTransform: 'lowercase',
     },

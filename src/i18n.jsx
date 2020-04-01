@@ -1,5 +1,6 @@
 import formatDistance from 'date-fns/formatDistance';
 import {
+  arSA as dateFnsArSa,
   de as dateFnsDe,
   el as dateFnsEl,
   enUS as dateFnsEnUs,
@@ -17,6 +18,7 @@ import {
   zhCN as dateFnsZhCn,
 } from 'date-fns/locale';
 import moment from 'moment';
+import momentAr from 'moment/locale/ar';
 import momentDe from 'moment/locale/de';
 import momentEl from 'moment/locale/el';
 import momentEnGb from 'moment/locale/en-gb';
@@ -36,6 +38,7 @@ import momentZhCn from 'moment/locale/zh-cn';
 import React from 'react';
 import * as RNLocalize from 'react-native-localize';
 import { ReactReduxContext } from 'react-redux';
+import ar from './assets/translations/ar';
 import de_DE from './assets/translations/de_DE';
 import el_GR from './assets/translations/el_GR';
 import en_US from './assets/translations/en_US';
@@ -54,12 +57,53 @@ import uk_UA from './assets/translations/uk_UA';
 import zh_CN from './assets/translations/zh_CN';
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from './constants';
 
+const getFontFamily = (language, options = {}) => {
+  let selectedLanguage = language;
+
+  if (!selectedLanguage) {
+    const bestAvailableLanguage = RNLocalize.findBestAvailableLanguage(SUPPORTED_LANGUAGES);
+    selectedLanguage = bestAvailableLanguage?.languageTag?.substring(0, 2) || DEFAULT_LANGUAGE;
+  }
+
+  if (['ar'].includes(selectedLanguage)) {
+    if (options?.fontWeight === 'bold') {
+      return 'DejaVuSansMono-Bold';
+    }
+
+    return 'DejaVuSansMono';
+  } else {
+    if (options?.fontWeight === 'bold') {
+      return 'JetBrainsMono-Bold';
+    }
+
+    return 'JetBrainsMono-Regular';
+  }
+};
+
+export const getFontFamilyBold = (language) => getFontFamily(language, { fontWeight: 'bold' });
+
+export const getFontFamilyRegular = (language) => getFontFamily(language);
+
+export const isRTL = (language) => {
+  let selectedLanguage = language;
+
+  if (!selectedLanguage) {
+    const bestAvailableLanguage = RNLocalize.findBestAvailableLanguage(SUPPORTED_LANGUAGES);
+    selectedLanguage = bestAvailableLanguage?.languageTag?.substring(0, 2) || DEFAULT_LANGUAGE;
+  }
+
+  return ['ar'].includes(selectedLanguage);
+};
+
 const getMessages = (language) => {
   const messages = {};
 
   if (SUPPORTED_LANGUAGES.includes(language)) {
     let messagesList;
     switch (language) {
+      case 'ar':
+        messagesList = ar.locale_data.messages;
+        break;
       case 'de':
         messagesList = de_DE.locale_data.messages;
         break;
@@ -110,7 +154,7 @@ const getMessages = (language) => {
     }
 
     // TODO: remove!!
-    // messagesList = si_LK.locale_data.messages;
+    // messagesList = ar.locale_data.messages;
 
     if (messagesList) {
       Object.keys(messagesList).forEach((key) => {
@@ -145,6 +189,9 @@ export const reducer = (state = initialState, action = { type: null }) => {
         const messages = translations[language];
 
         switch (language) {
+          case 'ar':
+            moment.updateLocale('ar', momentAr);
+            break;
           case 'de':
             moment.updateLocale('de', momentDe);
             break;
@@ -195,9 +242,9 @@ export const reducer = (state = initialState, action = { type: null }) => {
         }
 
         // TODO: remove!!
-        // moment.updateLocale('si', momentSi);
+        // moment.updateLocale('ar', momentAr);
 
-        return { ...state, currentLanguage: action.language, messages };
+        return { ...state, currentLanguage: action.language, isRTL: isRTL(action.language), messages };
       }
 
       return state;
@@ -253,7 +300,7 @@ const withI18n = (WrappedComponent) => {
         this.setState({ ...i18n });
       });
 
-      dispatch({ type: 'CHANGE_LANGUAGE_I18N', language: currentLanguage });
+      dispatch(changeLanguage(currentLanguage));
     }
 
     componentWillUnmount() {
@@ -265,6 +312,9 @@ const withI18n = (WrappedComponent) => {
       let locale;
 
       switch (currentLanguage) {
+        case 'ar':
+          locale = dateFnsArSa;
+          break;
         case 'de':
           locale = dateFnsDe;
           break;
@@ -315,7 +365,7 @@ const withI18n = (WrappedComponent) => {
       }
 
       // TODO: remove!!
-      // locale = dateFnsEnUs;
+      // locale = dateFnsArSa;
 
       return formatDistance(start, end, { locale });
     }
@@ -334,15 +384,42 @@ const withI18n = (WrappedComponent) => {
       return __(text, translationLanguage, translationMessages);
     }
 
+    getFontFamilyBoldI18n(language) {
+      let translationLanguage = language;
+
+      if (!translationLanguage) {
+        const { currentLanguage } = this.state;
+
+        translationLanguage = currentLanguage;
+      }
+
+      return getFontFamilyBold(translationLanguage);
+    }
+
+    getFontFamilyRegularI18n(language) {
+      let translationLanguage = language;
+
+      if (!translationLanguage) {
+        const { currentLanguage } = this.state;
+
+        translationLanguage = currentLanguage;
+      }
+
+      return getFontFamilyRegular(translationLanguage);
+    }
+
     render() {
       const { forwardedRef, ...props } = this.props;
-      const { currentLanguage } = this.state;
+      const { currentLanguage, isRTL: isRTLState } = this.state;
 
       return (
         /* eslint-disable react/jsx-props-no-spreading */
         <WrappedComponent
           {...{ ...props, currentLanguage }}
           formatTimeDistance={(start, end) => this.formatTimeDistance(start, end)}
+          getFontFamilyBold={(language) => this.getFontFamilyBoldI18n(language)}
+          getFontFamilyRegular={(language) => this.getFontFamilyRegularI18n(language)}
+          isRTL={isRTLState}
           ref={forwardedRef}
           __={(text, language) => this.__i18n(text, language)}
         />

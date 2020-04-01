@@ -6,64 +6,66 @@ import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 
-const SearchBar = React.forwardRef(({ onPressSearchIcon, searchValue, setSearchValue, vw, __ }, ref) => {
-  // noinspection JSUnresolvedFunction
-  const styles = StyleSheet.create({
-    searchIcon: {
-      alignItems: 'center',
-      bottom: 0,
-      height: '100%',
-      justifyContent: 'center',
-      margin: 'auto',
-      position: 'absolute',
-      right: vw(3),
-      top: 0,
-      width: vw(12),
-      zIndex: 2,
-    },
-    searchInput: {
-      backgroundColor: '#ffffff',
-      borderRadius: 8,
-      color: '#000000',
-      fontFamily: 'JetBrainsMono-Regular',
-      fontSize: vw(4),
-      height: vw(13),
-      marginLeft: vw(2.5),
-      marginRight: vw(2.5),
-      padding: vw(3.5),
-      paddingRight: vw(12),
-      zIndex: 1,
-    },
-    searchWrapper: {
-      width: '100%',
-    },
-  });
+const SearchBar = React.forwardRef(
+  ({ onPressSearchIcon, searchValue, setSearchValue, vw, getFontFamilyRegular, __ }, ref) => {
+    // noinspection JSUnresolvedFunction
+    const styles = StyleSheet.create({
+      searchIcon: {
+        alignItems: 'center',
+        bottom: 0,
+        height: '100%',
+        justifyContent: 'center',
+        margin: 'auto',
+        position: 'absolute',
+        right: vw(3),
+        top: 0,
+        width: vw(12),
+        zIndex: 2,
+      },
+      searchInput: {
+        backgroundColor: '#ffffff',
+        borderRadius: 8,
+        color: '#000000',
+        fontFamily: getFontFamilyRegular(),
+        fontSize: vw(4),
+        height: vw(13),
+        marginLeft: vw(2.5),
+        marginRight: vw(2.5),
+        padding: vw(3.5),
+        paddingRight: vw(12),
+        zIndex: 1,
+      },
+      searchWrapper: {
+        width: '100%',
+      },
+    });
 
-  return (
-    <View style={styles.searchWrapper}>
-      <TouchableOpacity onPress={() => onPressSearchIcon()} style={styles.searchIcon}>
-        {searchValue.length > 0 ? (
-          <UilTimes size={vw(8)} color={COLOR_PRIMARY} />
-        ) : (
-          <UilSearch size={vw(8)} color={COLOR_PRIMARY} />
-        )}
-      </TouchableOpacity>
+    return (
+      <View style={styles.searchWrapper}>
+        <TouchableOpacity onPress={() => onPressSearchIcon()} style={styles.searchIcon}>
+          {searchValue.length > 0 ? (
+            <UilTimes size={vw(8)} color={COLOR_PRIMARY} />
+          ) : (
+            <UilSearch size={vw(8)} color={COLOR_PRIMARY} />
+          )}
+        </TouchableOpacity>
 
-      <TextInput
-        autoCompleteType={'off'}
-        autoCorrect={false}
-        onChangeText={(value) => setSearchValue(value)}
-        /* onSubmitEditing={() => this.onSubmitEditing()} */
-        placeholder={__('placeholder.search-input').toLowerCase()}
-        placeholderTextColor={'#B0B0B1'}
-        ref={ref}
-        returnKeyType={'search'}
-        style={styles.searchInput}
-        textContentType={'none'}
-        value={searchValue}
-      />
-    </View>
-  );
-});
+        <TextInput
+          autoCompleteType={'off'}
+          autoCorrect={false}
+          onChangeText={(value) => setSearchValue(value)}
+          /* onSubmitEditing={() => this.onSubmitEditing()} */
+          placeholder={__('placeholder.search-input').toLowerCase()}
+          placeholderTextColor={'#B0B0B1'}
+          ref={ref}
+          returnKeyType={'search'}
+          style={styles.searchInput}
+          textContentType={'none'}
+          value={searchValue}
+        />
+      </View>
+    );
+  }
+);
 
 export default memo(withI18n(withViewportUnits(SearchBar)));

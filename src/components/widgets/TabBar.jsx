@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import withViewportUnits from '../../utils/withViewportUnits';
 
-const TabBar = withViewportUnits(({ children, vw }) => {
+const TabBar = ({ children, vw }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     tabBar: {
@@ -17,6 +17,6 @@ const TabBar = withViewportUnits(({ children, vw }) => {
   });
 
   return <View style={styles.tabBar}>{children}</View>;
-});
+};
 
-export default TabBar;
+export default withViewportUnits(TabBar);

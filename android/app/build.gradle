@@ -146,7 +146,7 @@ android {
         applicationId "de.kreativzirkel.coronika"
         minSdkVersion rootProject.ext.minSdkVersion
         multiDexEnabled true
-        resConfigs "de", "el", "en", "es", "fi", "fr", "it", "ja", "nl", "pl", "ro", "ru", "si", "tr", "uk", "zh"
+        resConfigs "ar", "de", "el", "en", "es", "fi", "fr", "it", "ja", "nl", "pl", "ro", "ru", "si", "tr", "uk", "zh"
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 19
         versionName "1.3.0"

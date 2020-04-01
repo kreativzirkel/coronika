@@ -31,7 +31,7 @@ class Legal extends React.PureComponent {
   }
 
   render() {
-    const { currentLanguage, navigation, vw, __ } = this.props;
+    const { currentLanguage, navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ } = this.props;
     const { activeTab } = this.state;
 
     // noinspection JSUnresolvedFunction
@@ -40,12 +40,12 @@ class Legal extends React.PureComponent {
         marginTop: vw(5),
       },
       contentText: {
-        fontFamily: 'JetBrainsMono-Regular',
+        fontFamily: getFontFamilyRegular(),
         fontSize: vw(4),
         lineHeight: vw(6),
       },
       contentTextHeadline: {
-        fontFamily: 'JetBrainsMono-Bold',
+        fontFamily: getFontFamilyBold(),
         fontSize: vw(4.5),
         lineHeight: vw(7),
         marginBottom: vw(1),
@@ -64,7 +64,7 @@ class Legal extends React.PureComponent {
         paddingTop: vw(3.8),
       },
       licenseItemName: {
-        fontFamily: 'JetBrainsMono-Bold',
+        fontFamily: getFontFamilyBold(),
         fontSize: vw(4),
         lineHeight: vw(5),
       },
@@ -76,7 +76,7 @@ class Legal extends React.PureComponent {
         marginTop: vw(0.5),
       },
       licenseItemContentText: {
-        fontFamily: 'JetBrainsMono-Regular',
+        fontFamily: getFontFamilyRegular(),
         fontSize: vw(3.8),
       },
       licenseItemLink: {
@@ -324,7 +324,9 @@ class Legal extends React.PureComponent {
                       <Text style={styles.licenseItemName}>{name}</Text>
                       <View style={styles.licenseItemContent}>
                         <Text style={styles.licenseItemContentText}>{version}</Text>
-                        <Text style={styles.licenseItemContentText}>{' - '}</Text>
+                        <Text style={{ ...styles.licenseItemContentText, marginLeft: vw(2), marginRight: vw(2) }}>
+                          {'-'}
+                        </Text>
                         <TouchableOpacity onPress={() => openLink(licenseUrl)} style={styles.licenseItemLicense}>
                           <Text style={styles.licenseItemContentText}>{license}</Text>
                         </TouchableOpacity>

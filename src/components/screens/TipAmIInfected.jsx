@@ -8,16 +8,16 @@ import CollapsibleBox from '../widgets/CollapsibleBox';
 import { HeaderBack } from '../widgets/Header';
 import Layout from '../widgets/Layout';
 
-const TipAmIInfected = ({ navigation, vw, __ }) => {
+const TipAmIInfected = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     contentHeadline: {
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(7),
       marginBottom: vw(3),
     },
     contentText: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.5),
       lineHeight: vw(7),
     },
@@ -38,11 +38,11 @@ const TipAmIInfected = ({ navigation, vw, __ }) => {
     },
     listItemNumberText: {
       color: '#ffffff',
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(4),
     },
     listItemText: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.5),
       marginTop: vw(2),
       lineHeight: vw(7),
@@ -66,7 +66,7 @@ const TipAmIInfected = ({ navigation, vw, __ }) => {
       marginTop: vw(14),
     },
     viewSourcesText: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(3.5),
       lineHeight: vw(5.5),
       textDecorationLine: 'underline',
@@ -76,7 +76,7 @@ const TipAmIInfected = ({ navigation, vw, __ }) => {
     },
     viewSourcesLastUpdated: {
       color: COLOR_PRIMARY,
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(3.5),
       lineHeight: vw(5.5),
       marginTop: vw(2.5),

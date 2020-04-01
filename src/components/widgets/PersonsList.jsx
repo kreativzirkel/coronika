@@ -9,6 +9,7 @@ import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withViewportUnits from '../../utils/withViewportUnits';
 import ListItem from './ListItem';
 import ListItemSeparator from './ListItemSeparator';
+import withI18n from '../../i18n';
 
 class PersonListItemClass extends React.Component {
   constructor(props) {
@@ -26,7 +27,11 @@ class PersonListItemClass extends React.Component {
   }
 
   openMore() {
-    if (this.swipeable.current.openRight) {
+    const { isRTL } = this.props;
+
+    if (isRTL && this.swipeable.current.openLeft) {
+      this.swipeable.current.openLeft();
+    } else if (!isRTL && this.swipeable.current.openRight) {
       this.swipeable.current.openRight();
     }
   }
@@ -45,6 +50,8 @@ class PersonListItemClass extends React.Component {
       showCounter,
       toggleSelection,
       updateItem,
+      getFontFamilyBold,
+      getFontFamilyRegular,
       vw,
     } = this.props;
 
@@ -72,7 +79,7 @@ class PersonListItemClass extends React.Component {
         paddingTop: vw(3.8),
       },
       personText: {
-        fontFamily: 'JetBrainsMono-Regular',
+        fontFamily: getFontFamilyRegular(),
         fontSize: vw(4.2),
       },
       personTextIconImported: {
@@ -100,7 +107,7 @@ class PersonListItemClass extends React.Component {
       },
       viewCounterText: {
         color: COLOR_PRIMARY,
-        fontFamily: 'JetBrainsMono-Bold',
+        fontFamily: getFontFamilyBold(),
         fontSize: vw(6),
       },
     });
@@ -171,7 +178,7 @@ class PersonListItemClass extends React.Component {
   }
 }
 
-const PersonsListItem = withViewportUnits(PersonListItemClass);
+const PersonsListItem = withI18n(withViewportUnits(PersonListItemClass));
 
 const PersonsList = ({
   allowDelete,

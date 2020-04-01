@@ -420,6 +420,8 @@ class EntriesTabsView extends React.Component {
       orderByLastUsage,
       showCounter,
       vw,
+      getFontFamilyBold,
+      getFontFamilyRegular,
       __,
     } = this.props;
     const {
@@ -485,7 +487,7 @@ class EntriesTabsView extends React.Component {
       },
       buttonCreateNewText: {
         color: COLOR_PRIMARY,
-        fontFamily: 'JetBrainsMono-Regular',
+        fontFamily: getFontFamilyRegular(),
         fontSize: vw(4.8),
         textTransform: 'lowercase',
       },
@@ -499,7 +501,7 @@ class EntriesTabsView extends React.Component {
       },
       personsImportButtonText: {
         color: COLOR_PRIMARY,
-        fontFamily: 'JetBrainsMono-Regular',
+        fontFamily: getFontFamilyRegular(),
         fontSize: vw(4.5),
         textTransform: 'lowercase',
       },
@@ -511,7 +513,7 @@ class EntriesTabsView extends React.Component {
         justifyContent: 'center',
       },
       entriesEmptyText: {
-        fontFamily: 'JetBrainsMono-Regular',
+        fontFamily: getFontFamilyRegular(),
         fontSize: vw(4.4),
         marginBottom: vw(4.5),
         textAlign: 'center',
@@ -537,7 +539,7 @@ class EntriesTabsView extends React.Component {
         paddingTop: vw(2),
       },
       modalHeaderText: {
-        fontFamily: 'JetBrainsMono-Bold',
+        fontFamily: getFontFamilyBold(),
         fontSize: vw(5),
         textTransform: 'lowercase',
       },
@@ -545,7 +547,7 @@ class EntriesTabsView extends React.Component {
         backgroundColor: COLOR_SECONDARY,
         borderRadius: vw(2.3),
         color: '#000000',
-        fontFamily: 'JetBrainsMono-Regular',
+        fontFamily: getFontFamilyRegular(),
         fontSize: vw(4),
         height: vw(15),
         marginBottom: vw(4),
@@ -553,7 +555,7 @@ class EntriesTabsView extends React.Component {
       },
       modalTextInputText: {
         color: '#000000',
-        fontFamily: 'JetBrainsMono-Regular',
+        fontFamily: getFontFamilyRegular(),
         fontSize: vw(4),
       },
       modalTimeInput: {
@@ -574,14 +576,14 @@ class EntriesTabsView extends React.Component {
       },
       modalButtonText: {
         color: '#ffffff',
-        fontFamily: 'JetBrainsMono-Bold',
+        fontFamily: getFontFamilyBold(),
         fontSize: vw(6),
         textTransform: 'lowercase',
       },
       modalButtonTextCounter: {
         alignSelf: 'flex-start',
         color: '#ffffff',
-        fontFamily: 'JetBrainsMono-Bold',
+        fontFamily: getFontFamilyBold(),
         fontSize: vw(4),
         marginLeft: vw(1.5),
         textTransform: 'lowercase',

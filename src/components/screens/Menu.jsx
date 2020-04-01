@@ -1,3 +1,4 @@
+import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import UilArrowRight from '@iconscout/react-native-unicons/icons/uil-arrow-right';
 import UilHeart from '@iconscout/react-native-unicons/icons/uil-heart';
 import React, { memo } from 'react';
@@ -9,17 +10,17 @@ import withViewportUnits from '../../utils/withViewportUnits';
 import { HeaderBack } from '../widgets/Header';
 import Layout from '../widgets/Layout';
 
-const Menu = ({ navigation, vw, __ }) => {
+const Menu = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     contentText: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.5),
       lineHeight: vw(7),
     },
     feedbackButton: {
       color: COLOR_PRIMARY,
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(7),
       textAlign: 'center',
     },
@@ -30,7 +31,7 @@ const Menu = ({ navigation, vw, __ }) => {
     },
     madeByText: {
       color: '#909091',
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(3.5),
       marginLeft: vw(2),
       marginRight: vw(2),
@@ -42,7 +43,7 @@ const Menu = ({ navigation, vw, __ }) => {
     },
     menuItemText: {
       color: '#000000',
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.2),
     },
     menuItemTextWrapper: {
@@ -94,6 +95,9 @@ const Menu = ({ navigation, vw, __ }) => {
       marginBottom: vw(3),
       width: '100%',
     },
+    viewMadeByBottom: {
+      flexDirection: isRTL ? 'row-reverse' : 'row',
+    },
   });
 
   const menuItems = [
@@ -136,7 +140,11 @@ const Menu = ({ navigation, vw, __ }) => {
                 </View>
 
                 <View style={styles.menuItemIcon}>
-                  <UilArrowRight size={vw(11)} color={COLOR_PRIMARY} />
+                  {isRTL ? (
+                    <UilArrowLeft size={vw(11)} color={COLOR_PRIMARY} />
+                  ) : (
+                    <UilArrowRight size={vw(11)} color={COLOR_PRIMARY} />
+                  )}
                 </View>
               </TouchableOpacity>
             ))}
@@ -147,7 +155,7 @@ const Menu = ({ navigation, vw, __ }) => {
           <View style={styles.viewMadeBy}>
             <TouchableOpacity onPress={() => visitKreativzirkel()} style={styles.madeByButton}>
               <Text style={styles.madeByText}>Coronika version {version} made</Text>
-              <View style={styles.viewMadeBy}>
+              <View style={{ ...styles.viewMadeBy, ...styles.viewMadeByBottom }}>
                 <Text style={styles.madeByText}>with</Text>
                 <UilHeart color={'#ed2828'} size={vw(5.5)} />
                 <Text style={styles.madeByText}>by Kreativzirkel</Text>

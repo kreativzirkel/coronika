@@ -241,7 +241,7 @@ PODS:
     - React
   - RNCPushNotificationIOS (1.1.0):
     - React
-  - RNDateTimePicker (2.3.0):
+  - RNDateTimePicker (2.3.1):
     - React
   - RNGestureHandler (1.6.1):
     - React
@@ -433,7 +433,7 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: 00bdf63f7f1e0f11d3323533dba4f222e58bf092
   RNCMaskedView: 90dd32f5b786bd562e876e1421ea77c700cbf71e
   RNCPushNotificationIOS: de54f074e577e684c0619d4271a5b451e8a37ee1
-  RNDateTimePicker: d7d3dde9497b4bd4b3ea84881c41d3f0ece481f5
+  RNDateTimePicker: f654c60568209005a3d9a5a6c4bff0c7094ec527
   RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
   RNLocalize: d8025bb1ac74c0ad54155ea9862538624ebf74d8
   RNReanimated: 4e102df74a9674fa943e05f97f3362b6e44d0b48

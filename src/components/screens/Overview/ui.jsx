@@ -8,7 +8,7 @@ import Layout from '../../widgets/Layout';
 import DayOverview from '../../widgets/DayOverview';
 import moment from 'moment';
 
-const Overview = ({ locations, persons, total, navigation, vw, __ }) => {
+const Overview = ({ locations, persons, total, navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     buttonAdd: {
@@ -24,7 +24,7 @@ const Overview = ({ locations, persons, total, navigation, vw, __ }) => {
     },
     buttonAddText: {
       color: COLOR_PRIMARY,
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(5.5),
       textTransform: 'lowercase',
     },
@@ -43,13 +43,13 @@ const Overview = ({ locations, persons, total, navigation, vw, __ }) => {
     },
     headerButtonText: {
       color: '#555555',
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(3.8),
       marginLeft: vw(1),
       textTransform: 'lowercase',
     },
     headerHeadline: {
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(5),
       marginLeft: 'auto',
       textTransform: 'lowercase',

@@ -6,16 +6,16 @@ import withViewportUnits from '../../utils/withViewportUnits';
 import { HeaderBack } from '../widgets/Header';
 import Layout from '../widgets/Layout';
 
-const TipReliableSources = ({ navigation, vw, __ }) => {
+const TipReliableSources = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     contentHeadline: {
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(7),
       marginBottom: vw(3),
     },
     contentText: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.5),
       lineHeight: vw(7),
     },
@@ -36,11 +36,11 @@ const TipReliableSources = ({ navigation, vw, __ }) => {
     },
     listItemNumberText: {
       color: '#ffffff',
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(4),
     },
     listItemText: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.5),
       lineHeight: vw(7),
       marginTop: vw(2),
@@ -58,13 +58,14 @@ const TipReliableSources = ({ navigation, vw, __ }) => {
       width: '100%',
     },
     viewContentList: {
+      alignItems: 'flex-start',
       marginTop: vw(4),
     },
     link: {
       marginTop: vw(3),
     },
     linkText: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.5),
       lineHeight: vw(7),
       textDecorationLine: 'underline',
@@ -75,7 +76,7 @@ const TipReliableSources = ({ navigation, vw, __ }) => {
     <Layout backgroundColor={COLOR_SECONDARY}>
       <HeaderBack headline={__('tips-screen.header.headline')} navigation={navigation} />
 
-      <ScrollView>
+      <ScrollView style={{ backgroundColor: '#ffffff', height: '100%' }}>
         <View style={styles.view}>
           <View style={styles.viewContent}>
             <Text style={styles.contentHeadline}>{__('tips.reliable-sources.headline')}</Text>

@@ -5,7 +5,16 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY } from '../../constants';
 import withViewportUnits from '../../utils/withViewportUnits';
 
-const Toggle = ({ active, onPress, style, vw }) => {
+const Toggle = ({ active, onPress, style, vw, isRTL }) => {
+  const IconOn = ({ color, size }) =>
+    isRTL ? <UilToggleOff color={color} size={size} /> : <UilToggleOn color={color} size={size} />;
+
+  const IconOff = ({ color, size }) =>
+    isRTL ? <UilToggleOn color={color} size={size} /> : <UilToggleOff color={color} size={size} />;
+
+  const Icon = () =>
+    active ? <IconOn color={COLOR_PRIMARY} size={size} /> : <IconOff color={'#B0B0B1'} size={size} />;
+
   const size = vw(10);
 
   const styles = StyleSheet.create({
@@ -14,9 +23,6 @@ const Toggle = ({ active, onPress, style, vw }) => {
       width: size,
     },
   });
-
-  const Icon = () =>
-    active ? <UilToggleOn color={COLOR_PRIMARY} size={size} /> : <UilToggleOff color={'#B0B0B1'} size={size} />;
 
   return (
     <View style={{ ...styles.toggle, ...(style && style) }}>

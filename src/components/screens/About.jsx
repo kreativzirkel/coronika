@@ -11,7 +11,7 @@ import { HeaderBack } from '../widgets/Header';
 
 const slider = React.createRef();
 
-const About = ({ navigation, vw, __ }) => {
+const About = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
   const slides = [
     {
       animation: require('../../assets/animations/why.json'),
@@ -42,19 +42,19 @@ const About = ({ navigation, vw, __ }) => {
       width: vw(55),
     },
     headline: {
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(7),
       textAlign: 'center',
     },
     text: {
-      fontFamily: 'JetBrainsMono-Regular',
+      fontFamily: getFontFamilyRegular(),
       fontSize: vw(4.5),
       lineHeight: vw(7),
       textAlign: 'center',
     },
     button: {
       color: COLOR_PRIMARY,
-      fontFamily: 'JetBrainsMono-Bold',
+      fontFamily: getFontFamilyBold(),
       fontSize: vw(7),
       textAlign: 'center',
     },

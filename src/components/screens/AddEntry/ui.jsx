@@ -4,7 +4,7 @@ import EntriesTabsView from '../../partials/EntriesTabsView';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 
-const AddEntry = ({ locations, persons, timestamp, addSelection, navigation, vw, __ }) => {
+const AddEntry = ({ locations, persons, timestamp, addSelection, navigation, __ }) => {
   return (
     <Layout backgroundColor={COLOR_SECONDARY}>
       <HeaderBack headline={__('add-entry-screen.header.headline')} navigation={navigation} />
