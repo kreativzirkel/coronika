@@ -68,6 +68,10 @@ const Menu = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, 
       padding: vw(2.5),
       width: '100%',
     },
+    viewInner: {
+      flex: 1,
+      width: '100%',
+    },
     viewBottom: {
       alignItems: 'center',
       flexDirection: 'column',
@@ -124,7 +128,7 @@ const Menu = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, 
       <HeaderBack headline={__('menu-screen.header.headline')} navigation={navigation} />
 
       <View style={styles.view}>
-        <View style={{ width: '100%', flex: 1 }}>
+        <View style={styles.viewInner}>
           <View style={{ ...styles.viewContent, ...styles.viewContentText }}>
             <Text style={styles.contentText}>{__('menu-screen.intro.text')}</Text>
           </View>

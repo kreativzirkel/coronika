@@ -18,7 +18,7 @@ const renderSwipeActions = (progress, deleteItem, vw, isRTL) => {
 
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
-    rightAction: {
+    buttonDelete: {
       alignItems: 'center',
       flex: 1,
       flexDirection: 'row',
@@ -26,12 +26,20 @@ const renderSwipeActions = (progress, deleteItem, vw, isRTL) => {
       marginTop: vw(2.3),
       paddingRight: vw(2.3),
     },
+    viewAnimated: {
+      flex: 1,
+    },
+    view: {
+      flexDirection: 'row',
+      width: 60,
+    },
   });
 
   return (
-    <View style={{ width: 60, flexDirection: 'row' }}>
-      <Animated.View style={{ flex: 1, opacity: linear, transform: [{ translateX }, { scale: linear }] }}>
-        <TouchableOpacity style={styles.rightAction} onPress={() => deleteItem()}>
+    <View style={styles.view}>
+      <Animated.View
+        style={{ ...styles.viewAnimated, opacity: linear, transform: [{ translateX }, { scale: linear }] }}>
+        <TouchableOpacity style={styles.buttonDelete} onPress={() => deleteItem()}>
           <UilTrashAlt color={'#ff0000'} size={vw(7)} />
         </TouchableOpacity>
       </Animated.View>

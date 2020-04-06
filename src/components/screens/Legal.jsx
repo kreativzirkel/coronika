@@ -97,6 +97,9 @@ class Legal extends React.PureComponent {
         flex: 1,
         paddingBottom: vw(2.3),
       },
+      tabBarWrapper: {
+        backgroundColor: COLOR_SECONDARY,
+      },
       view: {
         backgroundColor: '#ffffff',
         flex: 1,
@@ -105,6 +108,10 @@ class Legal extends React.PureComponent {
       },
       viewTabContent: {
         padding: vw(2.5),
+      },
+      viewTabContentWrapper: {
+        flex: 1,
+        width: '100%',
       },
     });
 
@@ -155,7 +162,7 @@ class Legal extends React.PureComponent {
         <HeaderBack headline={__('legal-screen.header.headline')} navigation={navigation} />
 
         <View style={styles.view}>
-          <View style={{ backgroundColor: COLOR_SECONDARY }}>
+          <View style={styles.tabBarWrapper}>
             <TabBar>
               <TabBarItem
                 active={activeTab === TABS.POLICY}
@@ -175,7 +182,7 @@ class Legal extends React.PureComponent {
             </TabBar>
           </View>
 
-          <View style={{ flex: 1, width: '100%' }}>
+          <View style={styles.viewTabContentWrapper}>
             {activeTab === TABS.POLICY && (
               <ScrollView>
                 <View style={styles.viewTabContent}>

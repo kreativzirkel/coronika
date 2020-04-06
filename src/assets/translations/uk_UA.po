@@ -1,32 +1,22 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: coronika\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: uk_UA\n"
+"Project-Id-Version: Coronika\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
-"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
-"esc_html_e;esc_html_x:1,2c\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.1\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Generator: POEditor.com\n"
 
 #: src/components/App/ui.jsx:144
 msgid "app.share.message"
 msgstr ""
 "Не дозволяйте коронавірусу навести вас на паніку. Будьте в курсі та "
-"допомагайте оточуючим людям шляхом того, що … ✅… ти ведеш щоденник контактів "
-"та місць ✅… дотримуєшся порад з гігієни ✅… прислухаєшся до авторитетних "
-"джерел інформації \\  Залишайтеся здоровими та не забувайте регулярно мити "
-"руки. ! ✋😉 https://coronika.app/"
+"допомагайте оточуючим людям шляхом того, що … \n"
+"✅… ти ведеш щоденник контактів та місць \n"
+"✅… дотримуєшся порад з гігієни \n"
+"✅… прислухаєшся до авторитетних джерел інформації \n"
+"Залишайтеся здоровими та не забувайте регулярно мити руки! ✋😉https://"
+"coronika.app/"
 
 #: src/components/App/ui.jsx:75
 msgid "navigation.directory.label"
@@ -45,12 +35,12 @@ msgid "navigation.tips.label"
 msgstr "Поради"
 
 #: src/components/partials/EntriesTabsView.jsx:620
-#: src/components/widgets/DayOverview.jsx:162
+#: src/components/widgets/DayOverview.jsx:163
 msgid "persons"
 msgstr "осіб"
 
 #: src/components/partials/EntriesTabsView.jsx:630
-#: src/components/widgets/DayOverview.jsx:146
+#: src/components/widgets/DayOverview.jsx:147
 msgid "locations"
 msgstr "локації"
 
@@ -512,52 +502,70 @@ msgid "notifications.diary.text"
 msgstr ""
 "Запишіть тісні контакти та допоможіть уповільнити поширення коронавірусу."
 
-#: src/components/screens/Settings/logic.js:166
-#, fuzzy
+#: src/components/screens/Settings/logic.js:169
+msgid "notifications.disinfect-smartphone.variant-2.headline"
+msgstr "📱🧽 Підтримуйте чистий екран"
+
+#: src/components/screens/Settings/logic.js:170
+msgid "notifications.disinfect-smartphone.variant-2.text"
+msgstr ""
+"Очистіть екран від численних мікробів, бактерій та інших патогенних "
+"мікроорганізмів."
+
+#: src/components/screens/Settings/logic.js:173
+msgid "notifications.disinfect-smartphone.variant-3.headline"
+msgstr "📱🧽 Дезінфікуйте телефон"
+
+#: src/components/screens/Settings/logic.js:174
+msgid "notifications.disinfect-smartphone.variant-3.text"
+msgstr ""
+"Дезинфікування вашого телефону - ще один розумний спосіб утримати мікроби "
+"від пальців."
+
+#: src/components/screens/Settings/logic.js:177
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Очистіть екран свого смартфона"
 
-#: src/components/screens/Settings/logic.js:167
-#, fuzzy
+#: src/components/screens/Settings/logic.js:178
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "Видаліть мікроби, очистивши екран за допомогою дезінфікуючого засобу."
 
-#: src/components/screens/Settings/logic.js:178
-#: src/components/screens/Settings/logic.js:211
-#: src/components/screens/Settings/logic.js:226
+#: src/components/screens/Settings/logic.js:194
+#: src/components/screens/Settings/logic.js:227
+#: src/components/screens/Settings/logic.js:242
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "Якщо ви не були, вимийте руки ретельно."
 
-#: src/components/screens/Settings/logic.js:179
-#: src/components/screens/Settings/logic.js:212
-#: src/components/screens/Settings/logic.js:227
+#: src/components/screens/Settings/logic.js:195
+#: src/components/screens/Settings/logic.js:228
+#: src/components/screens/Settings/logic.js:243
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 Помий руки"
 
-#: src/components/screens/Settings/logic.js:183
-#: src/components/screens/Settings/logic.js:216
-#: src/components/screens/Settings/logic.js:231
+#: src/components/screens/Settings/logic.js:199
+#: src/components/screens/Settings/logic.js:232
+#: src/components/screens/Settings/logic.js:247
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Миття рук - один з найпростіших способів захистити себе та інших від хвороб."
 
-#: src/components/screens/Settings/logic.js:184
-#: src/components/screens/Settings/logic.js:217
-#: src/components/screens/Settings/logic.js:232
+#: src/components/screens/Settings/logic.js:200
+#: src/components/screens/Settings/logic.js:233
+#: src/components/screens/Settings/logic.js:248
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Чи помили ви руки?"
 
-#: src/components/screens/Settings/logic.js:188
-#: src/components/screens/Settings/logic.js:221
-#: src/components/screens/Settings/logic.js:236
+#: src/components/screens/Settings/logic.js:204
+#: src/components/screens/Settings/logic.js:237
+#: src/components/screens/Settings/logic.js:252
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Займайтесь уважним миттям рук і не забудьте очистити кінчики пальців і "
 "простір між пальцями."
 
-#: src/components/screens/Settings/logic.js:189
-#: src/components/screens/Settings/logic.js:222
-#: src/components/screens/Settings/logic.js:237
+#: src/components/screens/Settings/logic.js:205
+#: src/components/screens/Settings/logic.js:238
+#: src/components/screens/Settings/logic.js:253
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 Не забудьте свої поради!"
 
@@ -856,30 +864,14 @@ msgstr "Пропустити"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Активуйте зараз"
 
-#: src/components/widgets/DayOverview.jsx:124
+#: src/components/widgets/DayOverview.jsx:125
 msgid "today"
 msgstr "сьогодні"
 
-#: src/components/widgets/DayOverview.jsx:130
+#: src/components/widgets/DayOverview.jsx:131
 msgid "total"
 msgstr "всього"
 
 #: src/components/widgets/SearchBar.jsx:58
 msgid "placeholder.search-input"
 msgstr "Пошук"
-
-#~ msgid "notifications.desinfect-smartphone.variant-2.headline"
-#~ msgstr "📱🧽 Підтримуйте чистий екран"
-
-#~ msgid "notifications.desinfect-smartphone.variant-2.text"
-#~ msgstr ""
-#~ "Очистіть екран від численних мікробів, бактерій та інших патогенних "
-#~ "мікроорганізмів."
-
-#~ msgid "notifications.desinfect-smartphone.variant-3.headline"
-#~ msgstr "📱🧽 Дезінфікуйте телефон"
-
-#~ msgid "notifications.desinfect-smartphone.variant-3.text"
-#~ msgstr ""
-#~ "Дезинфікування вашого телефону - ще один розумний спосіб утримати мікроби "
-#~ "від пальців."

@@ -55,7 +55,7 @@ import si_LK from './assets/translations/si_LK';
 import tr_TR from './assets/translations/tr_TR';
 import uk_UA from './assets/translations/uk_UA';
 import zh_CN from './assets/translations/zh_CN';
-import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from './constants';
+import { ALTERNATIVE_FONT_LANGUAGES, DEFAULT_LANGUAGE, RTL_LANGUAGES, SUPPORTED_LANGUAGES } from './constants';
 
 const getFontFamily = (language, options = {}) => {
   let selectedLanguage = language;
@@ -65,7 +65,7 @@ const getFontFamily = (language, options = {}) => {
     selectedLanguage = bestAvailableLanguage?.languageTag?.substring(0, 2) || DEFAULT_LANGUAGE;
   }
 
-  if (['ar'].includes(selectedLanguage)) {
+  if (ALTERNATIVE_FONT_LANGUAGES.includes(selectedLanguage)) {
     if (options?.fontWeight === 'bold') {
       return 'DejaVuSansMono-Bold';
     }
@@ -92,7 +92,7 @@ export const isRTL = (language) => {
     selectedLanguage = bestAvailableLanguage?.languageTag?.substring(0, 2) || DEFAULT_LANGUAGE;
   }
 
-  return ['ar'].includes(selectedLanguage);
+  return RTL_LANGUAGES.includes(selectedLanguage);
 };
 
 const getMessages = (language) => {

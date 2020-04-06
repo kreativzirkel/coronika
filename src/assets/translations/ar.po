@@ -44,12 +44,12 @@ msgid "navigation.tips.label"
 msgstr "نصائح"
 
 #: src/components/partials/EntriesTabsView.jsx:620
-#: src/components/widgets/DayOverview.jsx:162
+#: src/components/widgets/DayOverview.jsx:163
 msgid "persons"
 msgstr "الأشخاص"
 
 #: src/components/partials/EntriesTabsView.jsx:630
-#: src/components/widgets/DayOverview.jsx:146
+#: src/components/widgets/DayOverview.jsx:147
 msgid "locations"
 msgstr "المواقع"
 
@@ -493,52 +493,66 @@ msgstr ""
 "قم بتسجيل جهات الاتصال القريبة الخاصة بك وساعد في إبطاء انتشار الفيروس "
 "كورونا."
 
-#: src/components/screens/Settings/logic.js:166
-#, fuzzy
+#: src/components/screens/Settings/logic.js:169
+msgid "notifications.disinfect-smartphone.variant-2.headline"
+msgstr "📱🧽 حافظ على نظافة شاشتك"
+
+#: src/components/screens/Settings/logic.js:170
+msgid "notifications.disinfect-smartphone.variant-2.text"
+msgstr "حرر شاشتك من العديد من الجراثيم والبكتيريا ومسببات الأمراض الأخرى."
+
+#: src/components/screens/Settings/logic.js:173
+msgid "notifications.disinfect-smartphone.variant-3.headline"
+msgstr "📱🧽 طهر هاتفك"
+
+#: src/components/screens/Settings/logic.js:174
+msgid "notifications.disinfect-smartphone.variant-3.text"
+msgstr "الحفاظ على تعقيم هاتفك طريقة ذكية أخرى لإبعاد الجراثيم عن متناول يدك."
+
+#: src/components/screens/Settings/logic.js:177
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 تنظيف شاشة هاتفك الذكي"
 
-#: src/components/screens/Settings/logic.js:167
-#, fuzzy
+#: src/components/screens/Settings/logic.js:178
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "قم بإزالة الجراثيم عن طريق تنظيف الشاشة بمسحة مطهرة."
 
-#: src/components/screens/Settings/logic.js:178
-#: src/components/screens/Settings/logic.js:211
-#: src/components/screens/Settings/logic.js:226
+#: src/components/screens/Settings/logic.js:194
+#: src/components/screens/Settings/logic.js:227
+#: src/components/screens/Settings/logic.js:242
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "إذا كنت بالخارج ، اغسل يديك جيدًا."
 
-#: src/components/screens/Settings/logic.js:179
-#: src/components/screens/Settings/logic.js:212
-#: src/components/screens/Settings/logic.js:227
+#: src/components/screens/Settings/logic.js:195
+#: src/components/screens/Settings/logic.js:228
+#: src/components/screens/Settings/logic.js:243
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 اغسل يديك"
 
-#: src/components/screens/Settings/logic.js:183
-#: src/components/screens/Settings/logic.js:216
-#: src/components/screens/Settings/logic.js:231
+#: src/components/screens/Settings/logic.js:199
+#: src/components/screens/Settings/logic.js:232
+#: src/components/screens/Settings/logic.js:247
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "يعد غسل يديك من أبسط الطرق التي يمكنك من خلالها حماية نفسك والآخرين من "
 "الأمراض."
 
-#: src/components/screens/Settings/logic.js:184
-#: src/components/screens/Settings/logic.js:217
-#: src/components/screens/Settings/logic.js:232
+#: src/components/screens/Settings/logic.js:200
+#: src/components/screens/Settings/logic.js:233
+#: src/components/screens/Settings/logic.js:248
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 هل غسلت يديك؟"
 
-#: src/components/screens/Settings/logic.js:188
-#: src/components/screens/Settings/logic.js:221
-#: src/components/screens/Settings/logic.js:236
+#: src/components/screens/Settings/logic.js:204
+#: src/components/screens/Settings/logic.js:237
+#: src/components/screens/Settings/logic.js:252
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "تدرب على غسل اليدين بعناية ولا تنس تنظيف أطراف أصابعك والمسافة بين الأصابع."
 
-#: src/components/screens/Settings/logic.js:189
-#: src/components/screens/Settings/logic.js:222
-#: src/components/screens/Settings/logic.js:237
+#: src/components/screens/Settings/logic.js:205
+#: src/components/screens/Settings/logic.js:238
+#: src/components/screens/Settings/logic.js:253
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 لا تنسى انامل يديك!"
 
@@ -827,11 +841,11 @@ msgstr "تخطى"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "نشط الآن"
 
-#: src/components/widgets/DayOverview.jsx:124
+#: src/components/widgets/DayOverview.jsx:125
 msgid "today"
 msgstr "اليوم"
 
-#: src/components/widgets/DayOverview.jsx:130
+#: src/components/widgets/DayOverview.jsx:131
 msgid "total"
 msgstr "مجموع"
 

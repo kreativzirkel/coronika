@@ -48,12 +48,12 @@ msgid "navigation.tips.label"
 msgstr "Conseils"
 
 #: src/components/partials/EntriesTabsView.jsx:620
-#: src/components/widgets/DayOverview.jsx:162
+#: src/components/widgets/DayOverview.jsx:163
 msgid "persons"
 msgstr "personnes"
 
 #: src/components/partials/EntriesTabsView.jsx:630
-#: src/components/widgets/DayOverview.jsx:146
+#: src/components/widgets/DayOverview.jsx:147
 msgid "locations"
 msgstr "lieux"
 
@@ -527,52 +527,71 @@ msgstr ""
 "Enregistre tes contacts proches et contribue à ralentir la propagation du "
 "coronavirus."
 
-#: src/components/screens/Settings/logic.js:166
+#: src/components/screens/Settings/logic.js:169
+msgid "notifications.disinfect-smartphone.variant-2.headline"
+msgstr "📱🧽 Garde ton écran propre"
+
+#: src/components/screens/Settings/logic.js:170
+msgid "notifications.disinfect-smartphone.variant-2.text"
+msgstr ""
+"Libère votre écran de nombreux germes, bactéries et autres agents pathogènes."
+
+#: src/components/screens/Settings/logic.js:173
+msgid "notifications.disinfect-smartphone.variant-3.headline"
+msgstr "📱🧽 Désinfecter ton téléphone"
+
+#: src/components/screens/Settings/logic.js:174
+msgid "notifications.disinfect-smartphone.variant-3.text"
+msgstr ""
+"L'aseptisation de ton téléphone est un autre moyen intelligent d'éloigner "
+"les germes du bout de tes doigts."
+
+#: src/components/screens/Settings/logic.js:177
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Nettoie l'écran de ton smartphone"
 
-#: src/components/screens/Settings/logic.js:167
+#: src/components/screens/Settings/logic.js:178
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr ""
 "Elimine les germes en nettoyant ton écran avec une lingette désinfectante."
 
-#: src/components/screens/Settings/logic.js:178
-#: src/components/screens/Settings/logic.js:211
-#: src/components/screens/Settings/logic.js:226
+#: src/components/screens/Settings/logic.js:194
+#: src/components/screens/Settings/logic.js:227
+#: src/components/screens/Settings/logic.js:242
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "Si tu es sorti, lave-toi soigneusement les mains."
 
-#: src/components/screens/Settings/logic.js:179
-#: src/components/screens/Settings/logic.js:212
-#: src/components/screens/Settings/logic.js:227
+#: src/components/screens/Settings/logic.js:195
+#: src/components/screens/Settings/logic.js:228
+#: src/components/screens/Settings/logic.js:243
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 Lave-toi les mains"
 
-#: src/components/screens/Settings/logic.js:183
-#: src/components/screens/Settings/logic.js:216
-#: src/components/screens/Settings/logic.js:231
+#: src/components/screens/Settings/logic.js:199
+#: src/components/screens/Settings/logic.js:232
+#: src/components/screens/Settings/logic.js:247
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Se laver les mains est l'un des moyens les plus simples de se protéger et de "
 "protéger les autres contre les maladies."
 
-#: src/components/screens/Settings/logic.js:184
-#: src/components/screens/Settings/logic.js:217
-#: src/components/screens/Settings/logic.js:232
+#: src/components/screens/Settings/logic.js:200
+#: src/components/screens/Settings/logic.js:233
+#: src/components/screens/Settings/logic.js:248
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Tu es-toi lavé les mains ?"
 
-#: src/components/screens/Settings/logic.js:188
-#: src/components/screens/Settings/logic.js:221
-#: src/components/screens/Settings/logic.js:236
+#: src/components/screens/Settings/logic.js:204
+#: src/components/screens/Settings/logic.js:237
+#: src/components/screens/Settings/logic.js:252
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Pratique le lavage des mains en faisant attention et n'oublie pas de "
 "nettoyer le bout de vos doigts et l'espace entre vos doigts."
 
-#: src/components/screens/Settings/logic.js:189
-#: src/components/screens/Settings/logic.js:222
-#: src/components/screens/Settings/logic.js:237
+#: src/components/screens/Settings/logic.js:205
+#: src/components/screens/Settings/logic.js:238
+#: src/components/screens/Settings/logic.js:253
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 N'oublie pas tes conseils !"
 
@@ -877,30 +896,14 @@ msgstr "Sauter"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Activer maintenant"
 
-#: src/components/widgets/DayOverview.jsx:124
+#: src/components/widgets/DayOverview.jsx:125
 msgid "today"
 msgstr "aujourd'hui"
 
-#: src/components/widgets/DayOverview.jsx:130
+#: src/components/widgets/DayOverview.jsx:131
 msgid "total"
 msgstr "total"
 
 #: src/components/widgets/SearchBar.jsx:58
 msgid "placeholder.search-input"
 msgstr "Recherche"
-
-#~ msgid "notifications.disinfect-smartphone.variant-2.headline"
-#~ msgstr "📱🧽 Garde ton écran propre"
-
-#~ msgid "notifications.disinfect-smartphone.variant-2.text"
-#~ msgstr ""
-#~ "Libère votre écran de nombreux germes, bactéries et autres agents "
-#~ "pathogènes."
-
-#~ msgid "notifications.disinfect-smartphone.variant-3.headline"
-#~ msgstr "📱🧽 Désinfecter ton téléphone"
-
-#~ msgid "notifications.disinfect-smartphone.variant-3.text"
-#~ msgstr ""
-#~ "L'aseptisation de ton téléphone est un autre moyen intelligent d'éloigner "
-#~ "les germes du bout de tes doigts."

@@ -65,6 +65,7 @@ const setDefaultNotifications = (__, cb) => async (dispatch, getState) => {
       notificationDiaryEnabled,
       notificationDisinfectSmartphoneEnabled,
       notificationWashingHandsOption1Enabled,
+      /* eslint-disable-next-line prefer-const */
       notificationWashingHandsOption2Enabled,
     },
   } = getState();
@@ -161,10 +162,26 @@ const setNotifications = (notifications, __, cb) => {
   if (notificationDisinfectSmartphoneEnabled) {
     const tag = NOTIFICATION_KEY.DISINFECT_SMARTPHONE;
     const timestamp = getDailyNotificationTimestamp(17, 30);
+    let title;
+    let message;
+
+    switch (Math.round(Math.random() * 3)) {
+      case 1:
+        title = __('notifications.disinfect-smartphone.variant-2.headline');
+        message = __('notifications.disinfect-smartphone.variant-2.text');
+        break;
+      case 2:
+        title = __('notifications.disinfect-smartphone.variant-3.headline');
+        message = __('notifications.disinfect-smartphone.variant-3.text');
+        break;
+      default:
+        title = __('notifications.disinfect-smartphone.variant-1.headline');
+        message = __('notifications.disinfect-smartphone.variant-1.text');
+    }
     PushNotification.localNotificationSchedule({
       ...defaultNotificationOptions,
-      title: __('notifications.disinfect-smartphone.variant-1.headline'),
-      message: __('notifications.disinfect-smartphone.variant-1.text'),
+      title,
+      message,
       date: new Date(timestamp),
       tag,
       userInfo: { tag },

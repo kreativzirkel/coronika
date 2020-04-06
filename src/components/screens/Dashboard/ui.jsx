@@ -5,7 +5,7 @@ import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native
 import DayOverview from '../../widgets/DayOverview';
 import Layout from '../../widgets/Layout';
 import Header from '../../widgets/Header';
-import { COLOR_PRIMARY, COLOR_SECONDARY, DAYS_OVERVIEW } from '../../../constants';
+import { ALTERNATIVE_FONT_LANGUAGES, COLOR_PRIMARY, COLOR_SECONDARY, DAYS_OVERVIEW } from '../../../constants';
 
 const Dashboard = ({
   days,
@@ -16,15 +16,18 @@ const Dashboard = ({
   openDay,
   navigation,
   vw,
+  currentLanguage,
   getFontFamilyBold,
   getFontFamilyRegular,
-  isRTL,
   __,
 }) => {
-  const listItemHeight = isRTL ? vw(18.9) : vw(19.6);
+  const listItemHeight = ALTERNATIVE_FONT_LANGUAGES.includes(currentLanguage) ? vw(18.9) : vw(19.6);
 
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
+    buttonOverview: {
+      width: '100%',
+    },
     daysList: {
       flex: 1,
       width: '100%',
@@ -78,6 +81,9 @@ const Dashboard = ({
       height: '100%',
       justifyContent: 'center',
       width: '100%',
+    },
+    viewList: {
+      backgroundColor: '#ffffff',
     },
     viewHint: {
       alignItems: 'center',
@@ -150,7 +156,7 @@ const Dashboard = ({
           </View>
         </Header>
 
-        <View style={{ ...styles.view, backgroundColor: '#ffffff' }}>
+        <View style={{ ...styles.view, ...styles.viewList }}>
           {firstStartHintVisible && (
             <View style={styles.viewHint}>
               <View style={styles.viewHintInner}>
@@ -197,7 +203,7 @@ const Dashboard = ({
             />
           )}
 
-          <TouchableOpacity onPress={() => navigation.navigate('Overview')} style={{ width: '100%' }}>
+          <TouchableOpacity onPress={() => navigation.navigate('Overview')} style={styles.buttonOverview}>
             <DayOverview
               isDark
               isTotal

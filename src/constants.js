@@ -1,7 +1,9 @@
+const ALTERNATIVE_FONT_LANGUAGES = ['ar', 'el'];
 const COLOR_PRIMARY = '#17d9bd';
 const COLOR_SECONDARY = '#f7f7f7';
 const DAYS_OVERVIEW = 30;
 const DEFAULT_LANGUAGE = 'en';
+const RTL_LANGUAGES = ['ar'];
 const SUPPORTED_LANGUAGES = [
   'ar',
   'de',
@@ -23,9 +25,11 @@ const SUPPORTED_LANGUAGES = [
 ];
 
 module.exports = {
+  ALTERNATIVE_FONT_LANGUAGES,
   COLOR_PRIMARY,
   COLOR_SECONDARY,
   DAYS_OVERVIEW,
   DEFAULT_LANGUAGE,
+  RTL_LANGUAGES,
   SUPPORTED_LANGUAGES,
 };

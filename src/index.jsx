@@ -2,13 +2,35 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import React from 'react';
-import { SafeAreaView, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import App from './components/App/logic';
 import screens from './components/screens';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from './constants';
 import configureStore from './createStore';
+
+const styles = StyleSheet.create({
+  appNavigatorWrapper: {
+    backgroundColor: COLOR_SECONDARY,
+    flex: 1,
+  },
+  appNavigatorWrapperInner: {
+    backgroundColor: '#ffffff',
+    bottom: 0,
+    height: '50%',
+    left: 0,
+    right: 0,
+    position: 'absolute',
+    width: '100%',
+    zIndex: -1,
+  },
+  loading: {
+    backgroundColor: COLOR_PRIMARY,
+    height: '100%',
+    width: '100%',
+  },
+});
 
 const Stack = createStackNavigator();
 
@@ -42,19 +64,8 @@ const AppNavigator = () => (
 );
 
 const AppNavigatorWrapper = () => (
-  <SafeAreaView style={{ backgroundColor: COLOR_SECONDARY, flex: 1 }}>
-    <View
-      style={{
-        width: '100%',
-        height: '50%',
-        backgroundColor: '#ffffff',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        position: 'absolute',
-        zIndex: -1,
-      }}
-    />
+  <SafeAreaView style={styles.appNavigatorWrapper}>
+    <View style={styles.appNavigatorWrapperInner} />
 
     <AppNavigator />
   </SafeAreaView>
@@ -76,7 +87,7 @@ const Navigator = () => (
   </NavigationContainer>
 );
 
-const Loading = () => <View style={{ backgroundColor: COLOR_PRIMARY, height: '100%', width: '100%' }} />;
+const Loading = () => <View style={styles.loading} />;
 
 export default () => {
   const { persistor, store } = configureStore();

@@ -50,6 +50,9 @@ const DayOverview = ({
     dayTranslucent: {
       opacity: 0.4,
     },
+    dayIcon: {
+      alignSelf: 'flex-end',
+    },
     dayValue: {
       fontFamily: getFontFamilyBold(),
       fontSize: vw(7),
@@ -146,7 +149,7 @@ const DayOverview = ({
       <View style={styles.dayLocationsWrapper}>
         <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('locations')}</Text>
         {showIcons ? (
-          <UilLocationPinAlt color={'#000000'} size={vw(8.2)} style={{ alignSelf: 'flex-end' }} />
+          <UilLocationPinAlt color={'#000000'} size={vw(8.2)} style={styles.dayIcon} />
         ) : (
           <Text
             style={{
@@ -162,7 +165,7 @@ const DayOverview = ({
       <View style={styles.dayPersonsWrapper}>
         <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('persons')}</Text>
         {showIcons ? (
-          <UilSmile color={'#000000'} size={vw(8.2)} style={{ alignSelf: 'flex-end' }} />
+          <UilSmile color={'#000000'} size={vw(8.2)} style={styles.dayIcon} />
         ) : (
           <Text
             style={{

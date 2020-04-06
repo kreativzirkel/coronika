@@ -45,6 +45,10 @@ const TipReliableSources = ({ navigation, vw, getFontFamilyBold, getFontFamilyRe
       lineHeight: vw(7),
       marginTop: vw(2),
     },
+    scrollView: {
+      backgroundColor: '#ffffff',
+      height: '100%',
+    },
     view: {
       backgroundColor: '#ffffff',
       flex: 1,
@@ -76,7 +80,7 @@ const TipReliableSources = ({ navigation, vw, getFontFamilyBold, getFontFamilyRe
     <Layout backgroundColor={COLOR_SECONDARY}>
       <HeaderBack headline={__('tips-screen.header.headline')} navigation={navigation} />
 
-      <ScrollView style={{ backgroundColor: '#ffffff', height: '100%' }}>
+      <ScrollView style={styles.scrollView}>
         <View style={styles.view}>
           <View style={styles.viewContent}>
             <Text style={styles.contentHeadline}>{__('tips.reliable-sources.headline')}</Text>

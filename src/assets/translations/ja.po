@@ -46,12 +46,12 @@ msgid "navigation.tips.label"
 msgstr "ヒント"
 
 #: src/components/partials/EntriesTabsView.jsx:620
-#: src/components/widgets/DayOverview.jsx:162
+#: src/components/widgets/DayOverview.jsx:163
 msgid "persons"
 msgstr "連絡先"
 
 #: src/components/partials/EntriesTabsView.jsx:630
-#: src/components/widgets/DayOverview.jsx:146
+#: src/components/widgets/DayOverview.jsx:147
 msgid "locations"
 msgstr "場所"
 
@@ -499,50 +499,67 @@ msgstr "📒 連絡先を記録する"
 msgid "notifications.diary.text"
 msgstr "密接な連絡先を記録し、コロナウイルスの拡散を遅らせます。"
 
-#: src/components/screens/Settings/logic.js:166
-#, fuzzy
+#: src/components/screens/Settings/logic.js:169
+msgid "notifications.disinfect-smartphone.variant-2.headline"
+msgstr "📱🧽 画面を清潔に保つ"
+
+#: src/components/screens/Settings/logic.js:170
+msgid "notifications.disinfect-smartphone.variant-2.text"
+msgstr ""
+"スマートフォンの画面から多数の細菌、バクテリア、その他の病原体を取り除きま"
+"しょう。"
+
+#: src/components/screens/Settings/logic.js:173
+msgid "notifications.disinfect-smartphone.variant-3.headline"
+msgstr "📱🧽 スマートフォンを消毒する"
+
+#: src/components/screens/Settings/logic.js:174
+msgid "notifications.disinfect-smartphone.variant-3.text"
+msgstr ""
+"スマートフォンを無菌状態に保つことは、指をバクテリアから防ぐ効果があります。"
+
+#: src/components/screens/Settings/logic.js:177
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 スマートフォンの画面をきれいにする"
 
-#: src/components/screens/Settings/logic.js:167
-#, fuzzy
+#: src/components/screens/Settings/logic.js:178
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "消毒用ワイプで画面をクリーニングして、細菌を取り除きます。"
 
-#: src/components/screens/Settings/logic.js:178
-#: src/components/screens/Settings/logic.js:211
-#: src/components/screens/Settings/logic.js:226
+#: src/components/screens/Settings/logic.js:194
+#: src/components/screens/Settings/logic.js:227
+#: src/components/screens/Settings/logic.js:242
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "外出した場合は、手をよく洗ってください。"
 
-#: src/components/screens/Settings/logic.js:179
-#: src/components/screens/Settings/logic.js:212
-#: src/components/screens/Settings/logic.js:227
+#: src/components/screens/Settings/logic.js:195
+#: src/components/screens/Settings/logic.js:228
+#: src/components/screens/Settings/logic.js:243
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 手を洗いましょう"
 
-#: src/components/screens/Settings/logic.js:183
-#: src/components/screens/Settings/logic.js:216
-#: src/components/screens/Settings/logic.js:231
+#: src/components/screens/Settings/logic.js:199
+#: src/components/screens/Settings/logic.js:232
+#: src/components/screens/Settings/logic.js:247
 msgid "notifications.washing-hands.variant-2.text"
 msgstr "手を洗うことは、自分や他の人を病気から守る最も簡単な方法の1つです。"
 
-#: src/components/screens/Settings/logic.js:184
-#: src/components/screens/Settings/logic.js:217
-#: src/components/screens/Settings/logic.js:232
+#: src/components/screens/Settings/logic.js:200
+#: src/components/screens/Settings/logic.js:233
+#: src/components/screens/Settings/logic.js:248
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 手を洗いましたか？"
 
-#: src/components/screens/Settings/logic.js:188
-#: src/components/screens/Settings/logic.js:221
-#: src/components/screens/Settings/logic.js:236
+#: src/components/screens/Settings/logic.js:204
+#: src/components/screens/Settings/logic.js:237
+#: src/components/screens/Settings/logic.js:252
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "念入りに手洗いを練習し、指先と指の間をきれいにすることを忘れないでください。"
 
-#: src/components/screens/Settings/logic.js:189
-#: src/components/screens/Settings/logic.js:222
-#: src/components/screens/Settings/logic.js:237
+#: src/components/screens/Settings/logic.js:205
+#: src/components/screens/Settings/logic.js:238
+#: src/components/screens/Settings/logic.js:253
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 ヒントを忘れないでください！"
 
@@ -829,11 +846,11 @@ msgstr "スキップ"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "今すぐ活性化する"
 
-#: src/components/widgets/DayOverview.jsx:124
+#: src/components/widgets/DayOverview.jsx:125
 msgid "today"
 msgstr "今日"
 
-#: src/components/widgets/DayOverview.jsx:130
+#: src/components/widgets/DayOverview.jsx:131
 msgid "total"
 msgstr "合計"
 
