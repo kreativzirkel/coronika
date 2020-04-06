@@ -114,6 +114,11 @@ const TipAmIInfected = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegula
 
           <CollapsibleBox headline={__('tips.sources.headline')} style={styles.viewSources}>
             <TouchableOpacity
+              onPress={() => Linking.openURL('https://covapp.charite.de/').catch(() => {})}
+              style={styles.viewSourcesButton}>
+              <Text style={styles.viewSourcesText}>covapp.charite.de</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
               onPress={() =>
                 Linking.openURL('https://www.rki.de/SharedDocs/FAQ/NCOV2019/FAQ_Liste.html').catch(() => {})
               }
@@ -121,7 +126,7 @@ const TipAmIInfected = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegula
               <Text style={styles.viewSourcesText}>www.rki.de</Text>
             </TouchableOpacity>
             <Text style={styles.viewSourcesLastUpdated}>
-              {`${__('tips.sources.last-updated')} ${moment(1584489600000).format('L')}`}
+              {`${__('tips.sources.last-updated')} ${moment(1586174400000).format('L')}`}
             </Text>
           </CollapsibleBox>
         </View>

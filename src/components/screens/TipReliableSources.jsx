@@ -86,6 +86,11 @@ const TipReliableSources = ({ navigation, vw, getFontFamilyBold, getFontFamilyRe
             <Text style={styles.contentHeadline}>{__('tips.reliable-sources.headline')}</Text>
             <Text style={styles.contentText}>{__('tips.reliable-sources.text')}</Text>
             <TouchableOpacity
+              onPress={() => Linking.openURL('https://covapp.charite.de/').catch(() => {})}
+              style={styles.link}>
+              <Text style={styles.linkText}>covapp.charite.de</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
               onPress={() => Linking.openURL('https://www.rki.de/').catch(() => {})}
               style={styles.link}>
               <Text style={styles.linkText}>www.rki.de</Text>

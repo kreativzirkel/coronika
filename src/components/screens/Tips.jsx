@@ -81,6 +81,7 @@ const Tips = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, 
     {
       headline: __('tips.mouthguard.headline'),
       routeName: 'TipMouthguard',
+      hide: true,
     },
     {
       headline: __('tips.coughing-sneezing.headline'),
@@ -112,24 +113,26 @@ const Tips = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, 
         </View>
 
         <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
-          {tipsList.map(({ headline, routeName }, index) => (
-            <TouchableOpacity
-              key={`tip-${index}`}
-              onPress={() => navigation.navigate(routeName)}
-              style={styles.tipWrapper}>
-              <View style={styles.tipTextWrapper}>
-                <Text style={styles.tipText}>{headline}</Text>
-              </View>
+          {tipsList
+            .filter(({ hide }) => !hide)
+            .map(({ headline, routeName }, index) => (
+              <TouchableOpacity
+                key={`tip-${index}`}
+                onPress={() => navigation.navigate(routeName)}
+                style={styles.tipWrapper}>
+                <View style={styles.tipTextWrapper}>
+                  <Text style={styles.tipText}>{headline}</Text>
+                </View>
 
-              <View style={styles.tipIcon}>
-                {isRTL ? (
-                  <UilArrowLeft size={vw(11)} color={COLOR_PRIMARY} />
-                ) : (
-                  <UilArrowRight size={vw(11)} color={COLOR_PRIMARY} />
-                )}
-              </View>
-            </TouchableOpacity>
-          ))}
+                <View style={styles.tipIcon}>
+                  {isRTL ? (
+                    <UilArrowLeft size={vw(11)} color={COLOR_PRIMARY} />
+                  ) : (
+                    <UilArrowRight size={vw(11)} color={COLOR_PRIMARY} />
+                  )}
+                </View>
+              </TouchableOpacity>
+            ))}
         </View>
       </ScrollView>
     </Layout>
