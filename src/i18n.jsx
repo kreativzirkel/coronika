@@ -96,7 +96,17 @@ export const isRTL = (language) => {
 };
 
 const getMessages = (language) => {
-  const messages = {};
+  let messages = {};
+  const defaultMessages = {};
+  const defaultMessagesList = en_US.locale_data.messages;
+
+  if (defaultMessagesList) {
+    Object.keys(defaultMessagesList).forEach((key) => {
+      if (key.length > 0) {
+        defaultMessages[key] = (defaultMessagesList[key].find((value) => value && value.length > 0) || '').trim();
+      }
+    });
+  }
 
   if (SUPPORTED_LANGUAGES.includes(language)) {
     let messagesList;
@@ -159,10 +169,14 @@ const getMessages = (language) => {
     if (messagesList) {
       Object.keys(messagesList).forEach((key) => {
         if (key.length > 0) {
-          messages[key] = messagesList[key].find((value) => value && value.length > 0);
+          messages[key] = (messagesList[key].find((value) => value && value.length > 0) || '').trim();
         }
       });
     }
+
+    messages = { ...defaultMessages, ...messages };
+  } else {
+    messages = { ...defaultMessages };
   }
 
   return messages;

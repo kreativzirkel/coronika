@@ -44,114 +44,114 @@ msgstr "分享"
 msgid "navigation.tips.label"
 msgstr "小贴士"
 
-#: src/components/partials/EntriesTabsView.jsx:620
-#: src/components/widgets/DayOverview.jsx:163
+#: src/components/partials/EntriesTabsView.jsx:621
+#: src/components/widgets/DayOverview.jsx:166
 msgid "persons"
 msgstr "联系人"
 
-#: src/components/partials/EntriesTabsView.jsx:630
-#: src/components/widgets/DayOverview.jsx:147
+#: src/components/partials/EntriesTabsView.jsx:631
+#: src/components/widgets/DayOverview.jsx:150
 msgid "locations"
 msgstr "地点"
 
-#: src/components/partials/EntriesTabsView.jsx:642
+#: src/components/partials/EntriesTabsView.jsx:643
 msgid "entries.persons.list.new"
 msgstr "新联系人"
 
-#: src/components/partials/EntriesTabsView.jsx:663
-#: src/components/partials/EntriesTabsView.jsx:713
+#: src/components/partials/EntriesTabsView.jsx:664
+#: src/components/partials/EntriesTabsView.jsx:714
 msgid "entries.search.list.empty"
 msgstr "没有搜索到相关内容。"
 
-#: src/components/partials/EntriesTabsView.jsx:670
+#: src/components/partials/EntriesTabsView.jsx:671
 msgid "entries.persons.list.empty"
 msgstr "您尚未添加第一个联系人。从电话簿中导入联系人，以便您可以立即开始使用。"
 
-#: src/components/partials/EntriesTabsView.jsx:674
+#: src/components/partials/EntriesTabsView.jsx:675
 msgid "entries.persons.list.import.button"
 msgstr "现在导入"
 
-#: src/components/partials/EntriesTabsView.jsx:693
+#: src/components/partials/EntriesTabsView.jsx:694
 msgid "entries.locations.list.new"
 msgstr "新地点"
 
-#: src/components/partials/EntriesTabsView.jsx:716
+#: src/components/partials/EntriesTabsView.jsx:717
 msgid "entries.locations.list.empty"
 msgstr "您尚未创建新地点。 现在开始并创建您的第一个地点。"
 
-#: src/components/partials/EntriesTabsView.jsx:732
+#: src/components/partials/EntriesTabsView.jsx:733
 msgid "entries.selection.add"
 msgstr "添加选项"
 
-#: src/components/partials/EntriesTabsView.jsx:744
+#: src/components/partials/EntriesTabsView.jsx:745
 msgid "entries.modals.update-person.headline"
 msgstr "编辑联系人"
 
-#: src/components/partials/EntriesTabsView.jsx:745
+#: src/components/partials/EntriesTabsView.jsx:746
 msgid "entries.modals.new-person.headline"
 msgstr "新联系人"
 
-#: src/components/partials/EntriesTabsView.jsx:756
+#: src/components/partials/EntriesTabsView.jsx:757
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "姓名"
 
-#: src/components/partials/EntriesTabsView.jsx:768
+#: src/components/partials/EntriesTabsView.jsx:769
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "电话"
 
-#: src/components/partials/EntriesTabsView.jsx:781
+#: src/components/partials/EntriesTabsView.jsx:782
 msgid "entries.modals.update-person.button"
 msgstr "保存"
 
-#: src/components/partials/EntriesTabsView.jsx:782
+#: src/components/partials/EntriesTabsView.jsx:783
 msgid "entries.modals.new-person.button"
 msgstr "添加"
 
-#: src/components/partials/EntriesTabsView.jsx:794
+#: src/components/partials/EntriesTabsView.jsx:795
 msgid "entries.modals.update-location.headline"
 msgstr "修改地点"
 
-#: src/components/partials/EntriesTabsView.jsx:795
+#: src/components/partials/EntriesTabsView.jsx:796
 msgid "entries.modals.new-location.headline"
 msgstr "新地点"
 
-#: src/components/partials/EntriesTabsView.jsx:806
+#: src/components/partials/EntriesTabsView.jsx:807
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "标题"
 
-#: src/components/partials/EntriesTabsView.jsx:817
+#: src/components/partials/EntriesTabsView.jsx:818
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "描述"
 
-#: src/components/partials/EntriesTabsView.jsx:830
+#: src/components/partials/EntriesTabsView.jsx:831
 msgid "entries.modals.update-location.button"
 msgstr "保存"
 
-#: src/components/partials/EntriesTabsView.jsx:831
+#: src/components/partials/EntriesTabsView.jsx:832
 msgid "entries.modals.new-location.button"
 msgstr "添加"
 
-#: src/components/partials/EntriesTabsView.jsx:841
+#: src/components/partials/EntriesTabsView.jsx:842
 msgid "entries.modals.select-location.headline"
 msgstr "选择地点"
 
-#: src/components/partials/EntriesTabsView.jsx:860
+#: src/components/partials/EntriesTabsView.jsx:861
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "描述"
 
-#: src/components/partials/EntriesTabsView.jsx:875
+#: src/components/partials/EntriesTabsView.jsx:876
 msgid "Cancel"
 msgstr "取消"
 
-#: src/components/partials/EntriesTabsView.jsx:876
+#: src/components/partials/EntriesTabsView.jsx:877
 msgid "Confirm"
 msgstr "确认"
 
-#: src/components/partials/EntriesTabsView.jsx:889
+#: src/components/partials/EntriesTabsView.jsx:890
 msgid "entries.modals.select-location.button"
 msgstr "选项"
 
-#: src/components/screens/About.jsx:105 src/components/screens/Menu.jsx:105
+#: src/components/screens/About.jsx:105 src/components/screens/Menu.jsx:109
 msgid "about-screen.header.headline"
 msgstr "关于Coronika"
 
@@ -195,20 +195,20 @@ msgstr "现在开始"
 msgid "add-entry-screen.header.headline"
 msgstr "添加条目"
 
-#: src/components/screens/Dashboard/ui.jsx:147
-#: src/components/screens/Menu.jsx:124
+#: src/components/screens/Dashboard/ui.jsx:153
+#: src/components/screens/Menu.jsx:128
 msgid "menu-screen.header.headline"
 msgstr "菜单"
 
-#: src/components/screens/Dashboard/ui.jsx:157
+#: src/components/screens/Dashboard/ui.jsx:163
 msgid "dashboard-screen.first-start.hint"
 msgstr "点击今天的日期，添加您的第一联系人或地点。"
 
-#: src/components/screens/Dashboard/ui.jsx:159
+#: src/components/screens/Dashboard/ui.jsx:165
 msgid "Close"
 msgstr "关闭"
 
-#: src/components/screens/Dashboard/ui.jsx:176
+#: src/components/screens/Dashboard/ui.jsx:182
 msgid "dashboard-screen.list.load-more"
 msgstr "装载更多"
 
@@ -227,6 +227,17 @@ msgstr "您今天没有添加任何联系人。"
 #: src/components/screens/Day/ui.jsx:81
 msgid "day-screen.entries.add"
 msgstr "添加条目"
+
+#: src/components/screens/Directory/logic.js:33
+#: src/components/screens/Directory/logic.js:67
+msgid "directory-screen.alerts.import-persons.missing-permission.title"
+msgstr "未获许可"
+
+#: src/components/screens/Directory/logic.js:34
+#: src/components/screens/Directory/logic.js:68
+#, fuzzy
+msgid "directory-screen.alerts.import-persons.missing-permission.message"
+msgstr "导入联系人"
 
 #: src/components/screens/Directory/ui.jsx:131
 msgid "directory-screen.header.button.import"
@@ -278,39 +289,39 @@ msgstr "请注意，数据涉及到敏感信息。 我们强烈建议不要在�
 msgid "export-screen.coming-soon"
 msgstr "即将推出！"
 
-#: src/components/screens/Legal.jsx:155 src/components/screens/Menu.jsx:113
+#: src/components/screens/Legal.jsx:162 src/components/screens/Menu.jsx:117
 msgid "legal-screen.header.headline"
 msgstr "法律方面"
 
-#: src/components/screens/Legal.jsx:162
+#: src/components/screens/Legal.jsx:169
 msgid "legal-screen.tabs.privacy.label"
 msgstr "隐私政策"
 
-#: src/components/screens/Legal.jsx:167
+#: src/components/screens/Legal.jsx:174
 msgid "legal-screen.tabs.imprint.label"
 msgstr "版本说明"
 
-#: src/components/screens/Legal.jsx:172
+#: src/components/screens/Legal.jsx:179
 msgid "legal-screen.tabs.licenses.label"
 msgstr "许可证"
 
-#: src/components/screens/Legal.jsx:182 src/components/screens/Legal.jsx:198
-#: src/components/screens/Legal.jsx:227
+#: src/components/screens/Legal.jsx:189 src/components/screens/Legal.jsx:205
+#: src/components/screens/Legal.jsx:234
 msgid "legal-screen.privacy.section-1.headline"
 msgstr "应用程序的数据处理"
 
-#: src/components/screens/Legal.jsx:183 src/components/screens/Legal.jsx:200
-#: src/components/screens/Legal.jsx:229
+#: src/components/screens/Legal.jsx:190 src/components/screens/Legal.jsx:207
+#: src/components/screens/Legal.jsx:236
 msgid "legal-screen.privacy.section-1.text"
 msgstr "应用程序Coronika只在用户的智能手机上本地处理个人和位置相关的数据。"
 
-#: src/components/screens/Legal.jsx:184 src/components/screens/Legal.jsx:202
-#: src/components/screens/Legal.jsx:231
+#: src/components/screens/Legal.jsx:191 src/components/screens/Legal.jsx:209
+#: src/components/screens/Legal.jsx:238
 msgid "legal-screen.privacy.section-2.headline"
 msgstr "个人资料"
 
-#: src/components/screens/Legal.jsx:185 src/components/screens/Legal.jsx:204
-#: src/components/screens/Legal.jsx:233
+#: src/components/screens/Legal.jsx:192 src/components/screens/Legal.jsx:211
+#: src/components/screens/Legal.jsx:240
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
 "用户可以在APP内创建联系人。姓名和电话号码都可以保存。此外，它还可以导入智能手"
@@ -318,39 +329,39 @@ msgstr ""
 "智能手机的本地，因此是在用户的手中。这些数据永远不会被传输给应用程序提供商或"
 "第三方。"
 
-#: src/components/screens/Legal.jsx:186 src/components/screens/Legal.jsx:206
-#: src/components/screens/Legal.jsx:235
+#: src/components/screens/Legal.jsx:193 src/components/screens/Legal.jsx:213
+#: src/components/screens/Legal.jsx:242
 msgid "legal-screen.privacy.section-3.headline"
 msgstr "基于位置的数据"
 
-#: src/components/screens/Legal.jsx:187 src/components/screens/Legal.jsx:208
-#: src/components/screens/Legal.jsx:237
+#: src/components/screens/Legal.jsx:194 src/components/screens/Legal.jsx:215
+#: src/components/screens/Legal.jsx:244
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
 "用户可以在APP内创建位置。位置的名称和描述会被保存下来。用户通过定位服务（如"
 "GPS或类似的定位服务）的位置不会在任何时候被访问。与位置相关的数据也会保留在用"
 "户的智能手机上，不会传输给应用提供商或第三方。"
 
-#: src/components/screens/Legal.jsx:188 src/components/screens/Legal.jsx:210
-#: src/components/screens/Legal.jsx:239
+#: src/components/screens/Legal.jsx:195 src/components/screens/Legal.jsx:217
+#: src/components/screens/Legal.jsx:246
 msgid "legal-screen.privacy.section-4.headline"
 msgstr "日记"
 
-#: src/components/screens/Legal.jsx:189 src/components/screens/Legal.jsx:212
-#: src/components/screens/Legal.jsx:241
+#: src/components/screens/Legal.jsx:196 src/components/screens/Legal.jsx:219
+#: src/components/screens/Legal.jsx:248
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
 "在日记中，用户每天都可以将人和地点相对应记录到不同的日子。除了已经收集到的数"
 "据外，还可以记录时间。日记和所有条目也会保存在用户的智能手机上，不会被传送给"
 "应用程序提供商或第三方。"
 
-#: src/components/screens/Legal.jsx:190 src/components/screens/Legal.jsx:214
-#: src/components/screens/Legal.jsx:243
+#: src/components/screens/Legal.jsx:197 src/components/screens/Legal.jsx:221
+#: src/components/screens/Legal.jsx:250
 msgid "legal-screen.privacy.section-5.headline"
 msgstr "导出"
 
-#: src/components/screens/Legal.jsx:191 src/components/screens/Legal.jsx:216
-#: src/components/screens/Legal.jsx:245
+#: src/components/screens/Legal.jsx:198 src/components/screens/Legal.jsx:223
+#: src/components/screens/Legal.jsx:252
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
 "在该应用程序中，用户可以将日记的一部分导出为PDF文件。该PDF文件是在用户的智能"
@@ -358,26 +369,26 @@ msgstr ""
 "人名单，以便追踪感染路径，必要时，将潜在的感染情况通知其他人。用户有责任负责"
 "任地处理该PDF文件及其中包含的数据，不得随意传递。"
 
-#: src/components/screens/Legal.jsx:192 src/components/screens/Legal.jsx:218
-#: src/components/screens/Legal.jsx:247
+#: src/components/screens/Legal.jsx:199 src/components/screens/Legal.jsx:225
+#: src/components/screens/Legal.jsx:254
 msgid "legal-screen.privacy.section-6.headline"
 msgstr "数据传输和跟踪"
 
-#: src/components/screens/Legal.jsx:193 src/components/screens/Legal.jsx:220
-#: src/components/screens/Legal.jsx:249
+#: src/components/screens/Legal.jsx:200 src/components/screens/Legal.jsx:227
+#: src/components/screens/Legal.jsx:256
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
 "该应用不提供自动跟踪或数据传输给应用提供商或第三方的功能。唯一的例外是导出功"
 "能。然而，在这里，只有用户才能决定将数据传递给谁。否则，所有的数据都保留在用"
 "户的智能手机里。"
 
-#: src/components/screens/Legal.jsx:259 src/components/screens/Legal.jsx:271
-#: src/components/screens/Legal.jsx:292
+#: src/components/screens/Legal.jsx:266 src/components/screens/Legal.jsx:278
+#: src/components/screens/Legal.jsx:299
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "这款应用 \"Coronika \"是由以下公司运营的"
 
-#: src/components/screens/Legal.jsx:260 src/components/screens/Legal.jsx:273
-#: src/components/screens/Legal.jsx:294
+#: src/components/screens/Legal.jsx:267 src/components/screens/Legal.jsx:280
+#: src/components/screens/Legal.jsx:301
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -394,13 +405,13 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:261 src/components/screens/Legal.jsx:275
-#: src/components/screens/Legal.jsx:296
+#: src/components/screens/Legal.jsx:268 src/components/screens/Legal.jsx:282
+#: src/components/screens/Legal.jsx:303
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "关于内容的责任"
 
-#: src/components/screens/Legal.jsx:262 src/components/screens/Legal.jsx:277
-#: src/components/screens/Legal.jsx:298
+#: src/components/screens/Legal.jsx:269 src/components/screens/Legal.jsx:284
+#: src/components/screens/Legal.jsx:305
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "作为服务提供者，根据§7第1段TMG（德国电信媒体法）和一般法律，我们对这些网页上"
@@ -409,13 +420,13 @@ msgstr ""
 "用信息的权力不受影响。只有在知道有具体的侵权行为时，我们才会承担相应的责任。"
 "如果我们知道有任何此类侵权行为，我们将立即删除这些内容。"
 
-#: src/components/screens/Legal.jsx:263 src/components/screens/Legal.jsx:279
-#: src/components/screens/Legal.jsx:300
+#: src/components/screens/Legal.jsx:270 src/components/screens/Legal.jsx:286
+#: src/components/screens/Legal.jsx:307
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "关于链接的责任"
 
-#: src/components/screens/Legal.jsx:264 src/components/screens/Legal.jsx:281
-#: src/components/screens/Legal.jsx:302
+#: src/components/screens/Legal.jsx:271 src/components/screens/Legal.jsx:288
+#: src/components/screens/Legal.jsx:309
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "我们提供的包含了第三方网站的外部链接，我们对其内容没有任何影响。因此，我们对"
@@ -424,13 +435,13 @@ msgstr ""
 "接时，非法内容是无法识别的。但是，在没有具体的违法证据的情况下，永久控制链接"
 "页面的内容是不合理的。如果我们发现有侵权行为，我们将立即删除此类链接。"
 
-#: src/components/screens/Legal.jsx:265 src/components/screens/Legal.jsx:283
-#: src/components/screens/Legal.jsx:304
+#: src/components/screens/Legal.jsx:272 src/components/screens/Legal.jsx:290
+#: src/components/screens/Legal.jsx:311
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "版权"
 
-#: src/components/screens/Legal.jsx:266 src/components/screens/Legal.jsx:285
-#: src/components/screens/Legal.jsx:306
+#: src/components/screens/Legal.jsx:273 src/components/screens/Legal.jsx:292
+#: src/components/screens/Legal.jsx:313
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "这些网页上的内容和由经营者创建的作品受德国版权法的保护。复制、编辑、传播和任"
@@ -439,16 +450,16 @@ msgstr ""
 "权。特别是，第三方的内容都会被标明。如果您发现有侵犯版权的情况，请及时通知我"
 "们。如果我们发现任何侵权行为，我们将立即删除这些内容。"
 
-#: src/components/screens/Menu.jsx:109
+#: src/components/screens/Menu.jsx:113
 #: src/components/screens/Settings/ui.jsx:95
 msgid "settings-screen.header.headline"
 msgstr "设置"
 
-#: src/components/screens/Menu.jsx:129
+#: src/components/screens/Menu.jsx:133
 msgid "menu-screen.intro.text"
 msgstr "重要的是，不要散布恐慌，而是要建立起真实信息的透明化，传递正确的信息。"
 
-#: src/components/screens/Menu.jsx:167
+#: src/components/screens/Menu.jsx:171
 msgid "menu-screen.button.send-feedback"
 msgstr "发送反馈信息"
 
@@ -460,71 +471,71 @@ msgstr "导出概要"
 msgid "overview-screen.header.headline"
 msgstr "概要"
 
-#: src/components/screens/Settings/logic.js:153
+#: src/components/screens/Settings/logic.js:154
 msgid "notifications.diary.headline"
 msgstr "📒 添加您的联系人"
 
-#: src/components/screens/Settings/logic.js:154
+#: src/components/screens/Settings/logic.js:155
 msgid "notifications.diary.text"
 msgstr "添加您的亲密联系人，并帮助减缓新冠病毒的传播。"
 
-#: src/components/screens/Settings/logic.js:169
+#: src/components/screens/Settings/logic.js:170
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽保持屏幕清洁"
 
-#: src/components/screens/Settings/logic.js:170
+#: src/components/screens/Settings/logic.js:171
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr "使您的屏幕摆脱各种细菌，病菌和其他病原体的侵害。"
 
-#: src/components/screens/Settings/logic.js:173
+#: src/components/screens/Settings/logic.js:174
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 对手机进行消毒"
 
-#: src/components/screens/Settings/logic.js:174
+#: src/components/screens/Settings/logic.js:175
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr "保持手机清洁是防止细菌滋生的另一种好方法。"
 
-#: src/components/screens/Settings/logic.js:177
+#: src/components/screens/Settings/logic.js:178
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 清洁您的智能手机屏幕"
 
-#: src/components/screens/Settings/logic.js:178
+#: src/components/screens/Settings/logic.js:179
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "用消毒湿巾清洁屏幕以清除细菌。"
-
-#: src/components/screens/Settings/logic.js:194
-#: src/components/screens/Settings/logic.js:227
-#: src/components/screens/Settings/logic.js:242
-msgid "notifications.washing-hands.variant-1.text"
-msgstr "如果您出门在外，请认真彻底的洗手。"
 
 #: src/components/screens/Settings/logic.js:195
 #: src/components/screens/Settings/logic.js:228
 #: src/components/screens/Settings/logic.js:243
+msgid "notifications.washing-hands.variant-1.text"
+msgstr "如果您出门在外，请认真彻底的洗手。"
+
+#: src/components/screens/Settings/logic.js:196
+#: src/components/screens/Settings/logic.js:229
+#: src/components/screens/Settings/logic.js:244
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧洗手"
-
-#: src/components/screens/Settings/logic.js:199
-#: src/components/screens/Settings/logic.js:232
-#: src/components/screens/Settings/logic.js:247
-msgid "notifications.washing-hands.variant-2.text"
-msgstr "洗手是保护自己和他人免受疾病侵害的最简单方法之一。"
 
 #: src/components/screens/Settings/logic.js:200
 #: src/components/screens/Settings/logic.js:233
 #: src/components/screens/Settings/logic.js:248
+msgid "notifications.washing-hands.variant-2.text"
+msgstr "洗手是保护自己和他人免受疾病侵害的最简单方法之一。"
+
+#: src/components/screens/Settings/logic.js:201
+#: src/components/screens/Settings/logic.js:234
+#: src/components/screens/Settings/logic.js:249
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 你洗手了吗？"
-
-#: src/components/screens/Settings/logic.js:204
-#: src/components/screens/Settings/logic.js:237
-#: src/components/screens/Settings/logic.js:252
-msgid "notifications.washing-hands.variant-3.text"
-msgstr "洗手的时候不要忘记清洁指尖和手指之间的缝隙。"
 
 #: src/components/screens/Settings/logic.js:205
 #: src/components/screens/Settings/logic.js:238
 #: src/components/screens/Settings/logic.js:253
+msgid "notifications.washing-hands.variant-3.text"
+msgstr "洗手的时候不要忘记清洁指尖和手指之间的缝隙。"
+
+#: src/components/screens/Settings/logic.js:206
+#: src/components/screens/Settings/logic.js:239
+#: src/components/screens/Settings/logic.js:254
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 不要忘记您的提示！"
 
@@ -577,11 +588,11 @@ msgstr ""
 msgid "tips.sources.headline"
 msgstr "来源"
 
-#: src/components/screens/TipAmIInfected.jsx:124
+#: src/components/screens/TipAmIInfected.jsx:129
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:129
 #: src/components/screens/TipCoughingSneezing.jsx:138
 #: src/components/screens/TipMouthguard.jsx:143
-#: src/components/screens/TipNotFeelingWell.jsx:126
+#: src/components/screens/TipNotFeelingWell.jsx:131
 #: src/components/screens/TipWashingHands.jsx:132
 msgid "tips.sources.last-updated"
 msgstr "最后一次更新："
@@ -603,14 +614,14 @@ msgstr "讲述您的Coronika日记"
 #: src/components/screens/TipCoughingSneezing.jsx:97
 #: src/components/screens/TipMouthguard.jsx:99
 #: src/components/screens/TipNotFeelingWell.jsx:96
-#: src/components/screens/TipReliableSources.jsx:77
+#: src/components/screens/TipReliableSources.jsx:81
 #: src/components/screens/TipWashingHands.jsx:97
-#: src/components/screens/Tips.jsx:106
+#: src/components/screens/Tips.jsx:107
 msgid "tips-screen.header.headline"
 msgstr "卫生提示"
 
 #: src/components/screens/TipAmIInfected.jsx:99
-#: src/components/screens/Tips.jsx:94
+#: src/components/screens/Tips.jsx:95
 msgid "tips.am-i-infected.headline"
 msgstr "担心自己得了新冠状病毒，该怎么办？"
 
@@ -646,7 +657,7 @@ msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "用肘部或纸巾遮住咳嗽和打喷嚏"
 
 #: src/components/screens/TipCoughingSneezing.jsx:102
-#: src/components/screens/Tips.jsx:86
+#: src/components/screens/Tips.jsx:87
 msgid "tips.coughing-sneezing.headline"
 msgstr "正确的咳嗽和打喷嚏"
 
@@ -712,7 +723,7 @@ msgid "tips.mouthguard.list.item-4"
 msgstr "没有多次更换"
 
 #: src/components/screens/TipNotFeelingWell.jsx:101
-#: src/components/screens/Tips.jsx:90
+#: src/components/screens/Tips.jsx:91
 msgid "tips.not-feeling-well.headline"
 msgstr "我感觉不舒服，我有病毒吗？"
 
@@ -742,16 +753,16 @@ msgstr "咳嗽"
 msgid "tips.not-feeling-well.list.item-4"
 msgstr "呼吸急促"
 
-#: src/components/screens/TipReliableSources.jsx:82
-#: src/components/screens/Tips.jsx:98
+#: src/components/screens/TipReliableSources.jsx:86
+#: src/components/screens/Tips.jsx:99
 msgid "tips.reliable-sources.headline"
 msgstr "在哪里可以找到可靠的信息？"
 
-#: src/components/screens/TipReliableSources.jsx:83
+#: src/components/screens/TipReliableSources.jsx:87
 msgid "tips.reliable-sources.text"
 msgstr "消息丰富的网站"
 
-#: src/components/screens/Tips.jsx:111
+#: src/components/screens/Tips.jsx:112
 msgid "tips-screen.intro.text"
 msgstr "在这里，您可以找到有助于减少感染风险并在感染时采取正确措施的知识。"
 
@@ -802,11 +813,11 @@ msgstr "跳过"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "现在就激活"
 
-#: src/components/widgets/DayOverview.jsx:125
+#: src/components/widgets/DayOverview.jsx:128
 msgid "today"
 msgstr "今天"
 
-#: src/components/widgets/DayOverview.jsx:131
+#: src/components/widgets/DayOverview.jsx:134
 msgid "total"
 msgstr "合计"
 

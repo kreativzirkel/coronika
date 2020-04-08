@@ -35,116 +35,116 @@ msgstr "Distribuie"
 msgid "navigation.tips.label"
 msgstr "sfaturi"
 
-#: src/components/partials/EntriesTabsView.jsx:620
-#: src/components/widgets/DayOverview.jsx:163
+#: src/components/partials/EntriesTabsView.jsx:621
+#: src/components/widgets/DayOverview.jsx:166
 msgid "persons"
 msgstr "persoane"
 
-#: src/components/partials/EntriesTabsView.jsx:630
-#: src/components/widgets/DayOverview.jsx:147
+#: src/components/partials/EntriesTabsView.jsx:631
+#: src/components/widgets/DayOverview.jsx:150
 msgid "locations"
 msgstr "locații"
 
-#: src/components/partials/EntriesTabsView.jsx:642
+#: src/components/partials/EntriesTabsView.jsx:643
 msgid "entries.persons.list.new"
 msgstr "Persoană nouă"
 
-#: src/components/partials/EntriesTabsView.jsx:663
-#: src/components/partials/EntriesTabsView.jsx:713
+#: src/components/partials/EntriesTabsView.jsx:664
+#: src/components/partials/EntriesTabsView.jsx:714
 msgid "entries.search.list.empty"
 msgstr "Nu s-a putut găsi nimic în căutarea ta."
 
-#: src/components/partials/EntriesTabsView.jsx:670
+#: src/components/partials/EntriesTabsView.jsx:671
 msgid "entries.persons.list.empty"
 msgstr ""
 "Nu ai creat o persoană. Pentru a începe imediat, poti importa persoane din "
 "agenda telefonică."
 
-#: src/components/partials/EntriesTabsView.jsx:674
+#: src/components/partials/EntriesTabsView.jsx:675
 msgid "entries.persons.list.import.button"
 msgstr "Importa acum"
 
-#: src/components/partials/EntriesTabsView.jsx:693
+#: src/components/partials/EntriesTabsView.jsx:694
 msgid "entries.locations.list.new"
 msgstr "Locație nouă"
 
-#: src/components/partials/EntriesTabsView.jsx:716
+#: src/components/partials/EntriesTabsView.jsx:717
 msgid "entries.locations.list.empty"
 msgstr "Încă nu ai creat o locație. Începe acum și creaza prima locație."
 
-#: src/components/partials/EntriesTabsView.jsx:732
+#: src/components/partials/EntriesTabsView.jsx:733
 msgid "entries.selection.add"
 msgstr "Adăuga selecția"
 
-#: src/components/partials/EntriesTabsView.jsx:744
+#: src/components/partials/EntriesTabsView.jsx:745
 msgid "entries.modals.update-person.headline"
 msgstr "Editează persoana"
 
-#: src/components/partials/EntriesTabsView.jsx:745
+#: src/components/partials/EntriesTabsView.jsx:746
 msgid "entries.modals.new-person.headline"
 msgstr "Persoană nouă"
 
-#: src/components/partials/EntriesTabsView.jsx:756
+#: src/components/partials/EntriesTabsView.jsx:757
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Nume"
 
-#: src/components/partials/EntriesTabsView.jsx:768
+#: src/components/partials/EntriesTabsView.jsx:769
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Telefon"
 
-#: src/components/partials/EntriesTabsView.jsx:781
+#: src/components/partials/EntriesTabsView.jsx:782
 msgid "entries.modals.update-person.button"
 msgstr "Salveaza"
 
-#: src/components/partials/EntriesTabsView.jsx:782
+#: src/components/partials/EntriesTabsView.jsx:783
 msgid "entries.modals.new-person.button"
 msgstr "Adăuga"
 
-#: src/components/partials/EntriesTabsView.jsx:794
+#: src/components/partials/EntriesTabsView.jsx:795
 msgid "entries.modals.update-location.headline"
 msgstr "Editeaza locația"
 
-#: src/components/partials/EntriesTabsView.jsx:795
+#: src/components/partials/EntriesTabsView.jsx:796
 msgid "entries.modals.new-location.headline"
 msgstr "Locație nouă"
 
-#: src/components/partials/EntriesTabsView.jsx:806
+#: src/components/partials/EntriesTabsView.jsx:807
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Titlu"
 
-#: src/components/partials/EntriesTabsView.jsx:817
+#: src/components/partials/EntriesTabsView.jsx:818
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Descriere"
 
-#: src/components/partials/EntriesTabsView.jsx:830
+#: src/components/partials/EntriesTabsView.jsx:831
 msgid "entries.modals.update-location.button"
 msgstr "Salveaza"
 
-#: src/components/partials/EntriesTabsView.jsx:831
+#: src/components/partials/EntriesTabsView.jsx:832
 msgid "entries.modals.new-location.button"
 msgstr "Adăuga"
 
-#: src/components/partials/EntriesTabsView.jsx:841
+#: src/components/partials/EntriesTabsView.jsx:842
 msgid "entries.modals.select-location.headline"
 msgstr "Selecteaza locația"
 
-#: src/components/partials/EntriesTabsView.jsx:860
+#: src/components/partials/EntriesTabsView.jsx:861
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Descriere"
 
-#: src/components/partials/EntriesTabsView.jsx:875
+#: src/components/partials/EntriesTabsView.jsx:876
 msgid "Cancel"
 msgstr "Anuleaza"
 
-#: src/components/partials/EntriesTabsView.jsx:876
+#: src/components/partials/EntriesTabsView.jsx:877
 msgid "Confirm"
 msgstr "Confirma"
 
-#: src/components/partials/EntriesTabsView.jsx:889
+#: src/components/partials/EntriesTabsView.jsx:890
 msgid "entries.modals.select-location.button"
 msgstr "Selecteaza"
 
-#: src/components/screens/About.jsx:105 src/components/screens/Menu.jsx:105
+#: src/components/screens/About.jsx:105 src/components/screens/Menu.jsx:109
 msgid "about-screen.header.headline"
 msgstr "Despre Coronika"
 
@@ -194,22 +194,22 @@ msgstr "Începe acum"
 msgid "add-entry-screen.header.headline"
 msgstr "Adaugă înregistrare"
 
-#: src/components/screens/Dashboard/ui.jsx:147
-#: src/components/screens/Menu.jsx:124
+#: src/components/screens/Dashboard/ui.jsx:153
+#: src/components/screens/Menu.jsx:128
 msgid "menu-screen.header.headline"
 msgstr "Meniul"
 
-#: src/components/screens/Dashboard/ui.jsx:157
+#: src/components/screens/Dashboard/ui.jsx:163
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Faceți clic pe data de astăzi pentru a introduce primele persoane sau "
 "locații."
 
-#: src/components/screens/Dashboard/ui.jsx:159
+#: src/components/screens/Dashboard/ui.jsx:165
 msgid "Close"
 msgstr "Închide"
 
-#: src/components/screens/Dashboard/ui.jsx:176
+#: src/components/screens/Dashboard/ui.jsx:182
 msgid "dashboard-screen.list.load-more"
 msgstr "incarca mai mult"
 
@@ -228,6 +228,17 @@ msgstr "Nu ai adăugat nicio persoană pentru această zi."
 #: src/components/screens/Day/ui.jsx:81
 msgid "day-screen.entries.add"
 msgstr "Adaugă înregistrare"
+
+#: src/components/screens/Directory/logic.js:33
+#: src/components/screens/Directory/logic.js:67
+msgid "directory-screen.alerts.import-persons.missing-permission.title"
+msgstr "Lipsește permisiunea"
+
+#: src/components/screens/Directory/logic.js:34
+#: src/components/screens/Directory/logic.js:68
+#, fuzzy
+msgid "directory-screen.alerts.import-persons.missing-permission.message"
+msgstr "Import persoane"
 
 #: src/components/screens/Directory/ui.jsx:131
 msgid "directory-screen.header.button.import"
@@ -284,41 +295,41 @@ msgstr ""
 msgid "export-screen.coming-soon"
 msgstr "In curand!"
 
-#: src/components/screens/Legal.jsx:155 src/components/screens/Menu.jsx:113
+#: src/components/screens/Legal.jsx:162 src/components/screens/Menu.jsx:117
 msgid "legal-screen.header.headline"
 msgstr "legal"
 
-#: src/components/screens/Legal.jsx:162
+#: src/components/screens/Legal.jsx:169
 msgid "legal-screen.tabs.privacy.label"
 msgstr "Confidentialitate"
 
-#: src/components/screens/Legal.jsx:167
+#: src/components/screens/Legal.jsx:174
 msgid "legal-screen.tabs.imprint.label"
 msgstr "Imprima"
 
-#: src/components/screens/Legal.jsx:172
+#: src/components/screens/Legal.jsx:179
 msgid "legal-screen.tabs.licenses.label"
 msgstr "Licențe"
 
-#: src/components/screens/Legal.jsx:182 src/components/screens/Legal.jsx:198
-#: src/components/screens/Legal.jsx:227
+#: src/components/screens/Legal.jsx:189 src/components/screens/Legal.jsx:205
+#: src/components/screens/Legal.jsx:234
 msgid "legal-screen.privacy.section-1.headline"
 msgstr "Prelucrarea datelor a aplicației"
 
-#: src/components/screens/Legal.jsx:183 src/components/screens/Legal.jsx:200
-#: src/components/screens/Legal.jsx:229
+#: src/components/screens/Legal.jsx:190 src/components/screens/Legal.jsx:207
+#: src/components/screens/Legal.jsx:236
 msgid "legal-screen.privacy.section-1.text"
 msgstr ""
 "Aplicația Coronika prelucrează date personale și legate de locație exclusiv "
 "local pe smartphone-ul utilizatorului."
 
-#: src/components/screens/Legal.jsx:184 src/components/screens/Legal.jsx:202
-#: src/components/screens/Legal.jsx:231
+#: src/components/screens/Legal.jsx:191 src/components/screens/Legal.jsx:209
+#: src/components/screens/Legal.jsx:238
 msgid "legal-screen.privacy.section-2.headline"
 msgstr "Date personale"
 
-#: src/components/screens/Legal.jsx:185 src/components/screens/Legal.jsx:204
-#: src/components/screens/Legal.jsx:233
+#: src/components/screens/Legal.jsx:192 src/components/screens/Legal.jsx:211
+#: src/components/screens/Legal.jsx:240
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
 "Utilizatorul poate crea persoane în cadrul aplicației. Numele și un număr de "
@@ -328,13 +339,13 @@ msgstr ""
 "smartphone și, prin urmare, în mâinile utilizatorului. Datele nu sunt "
 "transferate niciodată furnizorului de aplicații sau terților."
 
-#: src/components/screens/Legal.jsx:186 src/components/screens/Legal.jsx:206
-#: src/components/screens/Legal.jsx:235
+#: src/components/screens/Legal.jsx:193 src/components/screens/Legal.jsx:213
+#: src/components/screens/Legal.jsx:242
 msgid "legal-screen.privacy.section-3.headline"
 msgstr "Date bazate pe locație"
 
-#: src/components/screens/Legal.jsx:187 src/components/screens/Legal.jsx:208
-#: src/components/screens/Legal.jsx:237
+#: src/components/screens/Legal.jsx:194 src/components/screens/Legal.jsx:215
+#: src/components/screens/Legal.jsx:244
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
 "Utilizatorul poate crea locații în cadrul aplicației. Numele locației și o "
@@ -343,13 +354,13 @@ msgstr ""
 "moment. Datele legate de locație rămân de asemenea locale pe smartphone-ul "
 "utilizatorului și nu sunt transmise furnizorului de aplicații sau terților."
 
-#: src/components/screens/Legal.jsx:188 src/components/screens/Legal.jsx:210
-#: src/components/screens/Legal.jsx:239
+#: src/components/screens/Legal.jsx:195 src/components/screens/Legal.jsx:217
+#: src/components/screens/Legal.jsx:246
 msgid "legal-screen.privacy.section-4.headline"
 msgstr "Jurnal"
 
-#: src/components/screens/Legal.jsx:189 src/components/screens/Legal.jsx:212
-#: src/components/screens/Legal.jsx:241
+#: src/components/screens/Legal.jsx:196 src/components/screens/Legal.jsx:219
+#: src/components/screens/Legal.jsx:248
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
 "În jurnal, utilizatorul atribuie zilnic persoane și locuri zilnic. Pe lângă "
@@ -357,13 +368,13 @@ msgstr ""
 "toate intrările rămân și la nivel local pe smartphone-ul utilizatorului și "
 "nu sunt transmise furnizorului de aplicații sau terților."
 
-#: src/components/screens/Legal.jsx:190 src/components/screens/Legal.jsx:214
-#: src/components/screens/Legal.jsx:243
+#: src/components/screens/Legal.jsx:197 src/components/screens/Legal.jsx:221
+#: src/components/screens/Legal.jsx:250
 msgid "legal-screen.privacy.section-5.headline"
 msgstr "Export"
 
-#: src/components/screens/Legal.jsx:191 src/components/screens/Legal.jsx:216
-#: src/components/screens/Legal.jsx:245
+#: src/components/screens/Legal.jsx:198 src/components/screens/Legal.jsx:223
+#: src/components/screens/Legal.jsx:252
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
 "În cadrul aplicației, utilizatorul are o funcție de export pentru a exporta "
@@ -376,13 +387,13 @@ msgstr ""
 "PDF și a datelor conținute în acesta în mod responsabil și de a nu le "
 "transmite nepăsător."
 
-#: src/components/screens/Legal.jsx:192 src/components/screens/Legal.jsx:218
-#: src/components/screens/Legal.jsx:247
+#: src/components/screens/Legal.jsx:199 src/components/screens/Legal.jsx:225
+#: src/components/screens/Legal.jsx:254
 msgid "legal-screen.privacy.section-6.headline"
 msgstr "Transfer de date și urmărire"
 
-#: src/components/screens/Legal.jsx:193 src/components/screens/Legal.jsx:220
-#: src/components/screens/Legal.jsx:249
+#: src/components/screens/Legal.jsx:200 src/components/screens/Legal.jsx:227
+#: src/components/screens/Legal.jsx:256
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
 "Aplicația nu oferă urmărire automată sau transfer de date furnizorului de "
@@ -390,13 +401,13 @@ msgstr ""
 "numai utilizatorul decide cui cui sunt transmise datele. În caz contrar, "
 "toate datele rămân local pe smartphone-ul utilizatorului."
 
-#: src/components/screens/Legal.jsx:259 src/components/screens/Legal.jsx:271
-#: src/components/screens/Legal.jsx:292
+#: src/components/screens/Legal.jsx:266 src/components/screens/Legal.jsx:278
+#: src/components/screens/Legal.jsx:299
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "Această aplicație „Coronika” este operată de"
 
-#: src/components/screens/Legal.jsx:260 src/components/screens/Legal.jsx:273
-#: src/components/screens/Legal.jsx:294
+#: src/components/screens/Legal.jsx:267 src/components/screens/Legal.jsx:280
+#: src/components/screens/Legal.jsx:301
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -413,13 +424,13 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:261 src/components/screens/Legal.jsx:275
-#: src/components/screens/Legal.jsx:296
+#: src/components/screens/Legal.jsx:268 src/components/screens/Legal.jsx:282
+#: src/components/screens/Legal.jsx:303
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "Răspunderea pentru conținut"
 
-#: src/components/screens/Legal.jsx:262 src/components/screens/Legal.jsx:277
-#: src/components/screens/Legal.jsx:298
+#: src/components/screens/Legal.jsx:269 src/components/screens/Legal.jsx:284
+#: src/components/screens/Legal.jsx:305
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "În calitate de furnizor de servicii, suntem responsabili pentru propriul "
@@ -432,13 +443,13 @@ msgstr ""
 "din momentul cunoașterii unei încălcări concrete. Dacă vom lua cunoștință de "
 "astfel de încălcări, vom elimina imediat acest conținut."
 
-#: src/components/screens/Legal.jsx:263 src/components/screens/Legal.jsx:279
-#: src/components/screens/Legal.jsx:300
+#: src/components/screens/Legal.jsx:270 src/components/screens/Legal.jsx:286
+#: src/components/screens/Legal.jsx:307
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Răspundere pentru linkuri"
 
-#: src/components/screens/Legal.jsx:264 src/components/screens/Legal.jsx:281
-#: src/components/screens/Legal.jsx:302
+#: src/components/screens/Legal.jsx:271 src/components/screens/Legal.jsx:288
+#: src/components/screens/Legal.jsx:309
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Oferta noastră conține link-uri către site-uri web externe ale terților, pe "
@@ -452,13 +463,13 @@ msgstr ""
 "a legii. Dacă vom lua cunoștință de orice încălcare, vom elimina aceste "
 "legături imediat."
 
-#: src/components/screens/Legal.jsx:265 src/components/screens/Legal.jsx:283
-#: src/components/screens/Legal.jsx:304
+#: src/components/screens/Legal.jsx:272 src/components/screens/Legal.jsx:290
+#: src/components/screens/Legal.jsx:311
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "Drepturi de autor"
 
-#: src/components/screens/Legal.jsx:266 src/components/screens/Legal.jsx:285
-#: src/components/screens/Legal.jsx:306
+#: src/components/screens/Legal.jsx:273 src/components/screens/Legal.jsx:292
+#: src/components/screens/Legal.jsx:313
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "Conținutul și lucrările pe aceste pagini create de operatori sunt supuse "
@@ -473,18 +484,18 @@ msgstr ""
 "consecință. Dacă vom lua cunoștință de orice încălcare, vom elimina imediat "
 "acest conținut."
 
-#: src/components/screens/Menu.jsx:109
+#: src/components/screens/Menu.jsx:113
 #: src/components/screens/Settings/ui.jsx:95
 msgid "settings-screen.header.headline"
 msgstr "Setări"
 
-#: src/components/screens/Menu.jsx:129
+#: src/components/screens/Menu.jsx:133
 msgid "menu-screen.intro.text"
 msgstr ""
 "Este important să nu răspândim panica, ci să creăm claritate și să răspândim "
 "informații corecte."
 
-#: src/components/screens/Menu.jsx:167
+#: src/components/screens/Menu.jsx:171
 msgid "menu-screen.button.send-feedback"
 msgstr "Trimite feedback"
 
@@ -496,80 +507,80 @@ msgstr "Prezentare generală a exporturilor"
 msgid "overview-screen.header.headline"
 msgstr "Prezentare generală"
 
-#: src/components/screens/Settings/logic.js:153
+#: src/components/screens/Settings/logic.js:154
 msgid "notifications.diary.headline"
 msgstr "📒 Conecteaza-ti contactele"
 
-#: src/components/screens/Settings/logic.js:154
+#: src/components/screens/Settings/logic.js:155
 msgid "notifications.diary.text"
 msgstr ""
 "Conecteaza-ti contactele strânse și ajuta la încetinirea răspândirii "
 "coronavirusului."
 
-#: src/components/screens/Settings/logic.js:169
+#: src/components/screens/Settings/logic.js:170
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽 Păstreaza ecranul curat"
 
-#: src/components/screens/Settings/logic.js:170
+#: src/components/screens/Settings/logic.js:171
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr ""
 "Elibereaza-ti ecranul de numeroși germeni, bacterii și alți agenți patogeni."
 
-#: src/components/screens/Settings/logic.js:173
+#: src/components/screens/Settings/logic.js:174
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 Dezinfecteaza telefonul"
 
-#: src/components/screens/Settings/logic.js:174
+#: src/components/screens/Settings/logic.js:175
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr ""
 "Menținerea telefonului igienizat este un alt mod inteligent de a-ți reduce "
 "germenii."
 
-#: src/components/screens/Settings/logic.js:177
+#: src/components/screens/Settings/logic.js:178
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Curăța-ti ecranul smartphone-ului"
 
-#: src/components/screens/Settings/logic.js:178
+#: src/components/screens/Settings/logic.js:179
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "Îndepărteaza germenii curățând ecranul cu un ștergător dezinfectant."
-
-#: src/components/screens/Settings/logic.js:194
-#: src/components/screens/Settings/logic.js:227
-#: src/components/screens/Settings/logic.js:242
-msgid "notifications.washing-hands.variant-1.text"
-msgstr "Dacă ai fost afară, iti speli bine mâinile."
 
 #: src/components/screens/Settings/logic.js:195
 #: src/components/screens/Settings/logic.js:228
 #: src/components/screens/Settings/logic.js:243
+msgid "notifications.washing-hands.variant-1.text"
+msgstr "Dacă ai fost afară, iti speli bine mâinile."
+
+#: src/components/screens/Settings/logic.js:196
+#: src/components/screens/Settings/logic.js:229
+#: src/components/screens/Settings/logic.js:244
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 Spăla-te pe mâini"
 
-#: src/components/screens/Settings/logic.js:199
-#: src/components/screens/Settings/logic.js:232
-#: src/components/screens/Settings/logic.js:247
+#: src/components/screens/Settings/logic.js:200
+#: src/components/screens/Settings/logic.js:233
+#: src/components/screens/Settings/logic.js:248
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Spălarea mâinilor este una dintre cele mai simple metode prin care te poți "
 "proteja pe tine și pe ceilalți de boli."
 
-#: src/components/screens/Settings/logic.js:200
-#: src/components/screens/Settings/logic.js:233
-#: src/components/screens/Settings/logic.js:248
+#: src/components/screens/Settings/logic.js:201
+#: src/components/screens/Settings/logic.js:234
+#: src/components/screens/Settings/logic.js:249
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Te-ai spălat pe mâini?"
 
-#: src/components/screens/Settings/logic.js:204
-#: src/components/screens/Settings/logic.js:237
-#: src/components/screens/Settings/logic.js:252
+#: src/components/screens/Settings/logic.js:205
+#: src/components/screens/Settings/logic.js:238
+#: src/components/screens/Settings/logic.js:253
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Exerseaza spălarea atentă a mâinilor și nu uita să iti cureti vârfurile "
 "degetelor și spațiul dintre degete."
 
-#: src/components/screens/Settings/logic.js:205
-#: src/components/screens/Settings/logic.js:238
-#: src/components/screens/Settings/logic.js:253
+#: src/components/screens/Settings/logic.js:206
+#: src/components/screens/Settings/logic.js:239
+#: src/components/screens/Settings/logic.js:254
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 Nu uita varful degetelor!"
 
@@ -624,11 +635,11 @@ msgstr ""
 msgid "tips.sources.headline"
 msgstr "surse"
 
-#: src/components/screens/TipAmIInfected.jsx:124
+#: src/components/screens/TipAmIInfected.jsx:129
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:129
 #: src/components/screens/TipCoughingSneezing.jsx:138
 #: src/components/screens/TipMouthguard.jsx:143
-#: src/components/screens/TipNotFeelingWell.jsx:126
+#: src/components/screens/TipNotFeelingWell.jsx:131
 #: src/components/screens/TipWashingHands.jsx:132
 msgid "tips.sources.last-updated"
 msgstr "Ultima actualizare:"
@@ -650,14 +661,14 @@ msgstr "Povestește despre jurnalul tău Coronika"
 #: src/components/screens/TipCoughingSneezing.jsx:97
 #: src/components/screens/TipMouthguard.jsx:99
 #: src/components/screens/TipNotFeelingWell.jsx:96
-#: src/components/screens/TipReliableSources.jsx:77
+#: src/components/screens/TipReliableSources.jsx:81
 #: src/components/screens/TipWashingHands.jsx:97
-#: src/components/screens/Tips.jsx:106
+#: src/components/screens/Tips.jsx:107
 msgid "tips-screen.header.headline"
 msgstr "Sfaturi de igienă"
 
 #: src/components/screens/TipAmIInfected.jsx:99
-#: src/components/screens/Tips.jsx:94
+#: src/components/screens/Tips.jsx:95
 msgid "tips.am-i-infected.headline"
 msgstr "Mi-e teamă că am primit coronavirusul, ce pot face?"
 
@@ -696,7 +707,7 @@ msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "acopera-ti tusea și strănutul cu cotul sau țesutul"
 
 #: src/components/screens/TipCoughingSneezing.jsx:102
-#: src/components/screens/Tips.jsx:86
+#: src/components/screens/Tips.jsx:87
 msgid "tips.coughing-sneezing.headline"
 msgstr "Tusitul și strănutul corect"
 
@@ -767,7 +778,7 @@ msgid "tips.mouthguard.list.item-4"
 msgstr "nu este înlocuita de mai multe ori pe zi"
 
 #: src/components/screens/TipNotFeelingWell.jsx:101
-#: src/components/screens/Tips.jsx:90
+#: src/components/screens/Tips.jsx:91
 msgid "tips.not-feeling-well.headline"
 msgstr "Nu mă simt bine, am coronavirus?"
 
@@ -798,16 +809,16 @@ msgstr "tuse"
 msgid "tips.not-feeling-well.list.item-4"
 msgstr "respirație scurta"
 
-#: src/components/screens/TipReliableSources.jsx:82
-#: src/components/screens/Tips.jsx:98
+#: src/components/screens/TipReliableSources.jsx:86
+#: src/components/screens/Tips.jsx:99
 msgid "tips.reliable-sources.headline"
 msgstr "Unde pot găsi surse fiabile?"
 
-#: src/components/screens/TipReliableSources.jsx:83
+#: src/components/screens/TipReliableSources.jsx:87
 msgid "tips.reliable-sources.text"
 msgstr "Site-uri web informative"
 
-#: src/components/screens/Tips.jsx:111
+#: src/components/screens/Tips.jsx:112
 msgid "tips-screen.intro.text"
 msgstr ""
 "Aici vei gasi cunoștințe care te ajută să reduci cât mai mult riscul de "
@@ -865,11 +876,11 @@ msgstr "Ocolire"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Activeaza acum"
 
-#: src/components/widgets/DayOverview.jsx:125
+#: src/components/widgets/DayOverview.jsx:128
 msgid "today"
 msgstr "astăzi"
 
-#: src/components/widgets/DayOverview.jsx:131
+#: src/components/widgets/DayOverview.jsx:134
 msgid "total"
 msgstr "total"
 

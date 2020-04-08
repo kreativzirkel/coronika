@@ -158,7 +158,7 @@ const Directory = ({
 
           <Text style={styles.modalText}>{__('directory-screen.modals.import-persons.text')}</Text>
 
-          <TouchableOpacity disabled={personsImporting} onPress={() => importPersons()}>
+          <TouchableOpacity disabled={personsImporting} onPress={() => importPersons(__)}>
             <View style={{ ...styles.modalButton, ...(personsImporting && styles.modalButtonDisabled) }}>
               <Text style={styles.modalButtonText}>
                 {personsImporting

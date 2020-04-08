@@ -1,4 +1,4 @@
-import { PermissionsAndroid } from 'react-native';
+import { Alert, PermissionsAndroid, Platform } from 'react-native';
 import RNContacts from 'react-native-contacts';
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
@@ -15,49 +15,59 @@ import {
 } from './actions';
 import Screen from './ui';
 
-export const importPersons = (closeImportPersonsModal = false) => async (dispatch) => {
+export const importPersons = (__, closeImportPersonsModal = false) => async (dispatch) => {
   dispatch(enablePersonsImporting());
 
-  // noinspection JSCheckFunctionSignatures,JSUnresolvedFunction,JSUnresolvedVariable
-  PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_CONTACTS, {
-    title: 'Contacts',
-    message: 'This app would like to view your contacts.', // TODO: add translations
-    buttonPositive: 'Please accept',
-  })
-    .then(() => {
-      RNContacts.getAll((err, contacts) => {
-        if (err === 'denied') {
-          // error
-          dispatch(disablePersonsImporting());
-        } else {
-          const personsToImport = [];
+  let permissionGranted = true;
 
-          contacts.forEach(({ familyName, givenName, middleName, phoneNumbers, recordID }) => {
-            // ignore company contacts
-            if (givenName && givenName.trim() !== '') {
-              personsToImport.push({
-                givenName,
-                middleName,
-                familyName,
-                phoneNumbers,
-                recordID,
-              });
-            }
-          });
+  if (Platform.OS === 'android') {
+    const permissionRequestResult = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_CONTACTS);
 
-          dispatch(importPersonsAction(personsToImport));
+    permissionGranted = permissionRequestResult === 'granted';
+  }
 
-          if (closeImportPersonsModal) {
-            dispatch(hideImportPersonsModal());
+  if (permissionGranted) {
+    RNContacts.getAll((err, contacts) => {
+      if (err === 'denied') {
+        Alert.alert(
+          __('directory-screen.alerts.import-persons.missing-permission.title'),
+          __('directory-screen.alerts.import-persons.missing-permission.message')
+        );
+
+        dispatch(disablePersonsImporting());
+      } else {
+        const personsToImport = [];
+
+        contacts.forEach(({ familyName, givenName, middleName, phoneNumbers, recordID }) => {
+          // ignore company contacts
+          if (givenName && givenName.trim() !== '') {
+            personsToImport.push({
+              givenName,
+              middleName,
+              familyName,
+              phoneNumbers,
+              recordID,
+            });
           }
+        });
 
-          dispatch(disablePersonsImporting());
+        dispatch(importPersonsAction(personsToImport));
+
+        if (closeImportPersonsModal) {
+          dispatch(hideImportPersonsModal());
         }
-      });
-    })
-    .catch(() => {
-      dispatch(disablePersonsImporting());
+
+        dispatch(disablePersonsImporting());
+      }
     });
+  } else {
+    dispatch(disablePersonsImporting());
+
+    Alert.alert(
+      __('directory-screen.alerts.import-persons.missing-permission.title'),
+      __('directory-screen.alerts.import-persons.missing-permission.message')
+    );
+  }
 };
 
 const personsSortingFunction = (a, b) => {
@@ -104,7 +114,7 @@ const mapDispatchToProps = (dispatch) => {
     deleteLocation: (locationId) => dispatch(removeLocation(locationId)),
     showImportPersonsModal: () => dispatch(showImportPersonsModal()),
     hideImportPersonsModal: () => dispatch(hideImportPersonsModal()),
-    importPersons: () => dispatch(importPersons(true)),
+    importPersons: (__) => dispatch(importPersons(__, true)),
   };
 };
 

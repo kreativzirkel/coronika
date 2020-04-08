@@ -214,8 +214,9 @@ class EntriesTabsView extends React.Component {
     const {
       store: { dispatch },
     } = this.context;
+    const { __ } = this.props;
 
-    dispatch(importPersons());
+    dispatch(importPersons(__));
   }
 
   openModalNewPerson() {
