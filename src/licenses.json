@@ -125,7 +125,7 @@
         "licenseUrl": "https://github.com/react-native-community/react-native-localize/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-modal-datetime-picker@8.5.2": {
+    "react-native-modal-datetime-picker@8.5.4": {
         "licenses": "MIT",
         "repository": "https://github.com/mmazzarolo/react-native-modal-datetime-picker",
         "licenseUrl": "https://github.com/mmazzarolo/react-native-modal-datetime-picker/raw/master/LICENSE.md",
@@ -143,7 +143,7 @@
         "licenseUrl": "https://github.com/zo0r/react-native-push-notification/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-reanimated@1.7.1": {
+    "react-native-reanimated@1.8.0": {
         "licenses": "MIT",
         "repository": "https://github.com/software-mansion/react-native-reanimated",
         "licenseUrl": "https://github.com/software-mansion/react-native-reanimated/raw/master/LICENSE",
