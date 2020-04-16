@@ -40,7 +40,7 @@ At the moment the app is only available for android smartphones and you can get 
 <br>
 <a href="https://play.google.com/store/apps/details?id=de.kreativzirkel.coronika"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" style="width: 150px" width="150px" /></a>
 <br>
-<small>Google Play and the Google Play logo are trademarks of Google LLC.</small>
+<small>_Google Play and the Google Play logo are trademarks of Google LLC._</small>
 
 ## Translations
 The app currently is available in 17 languages:
@@ -63,12 +63,14 @@ The app currently is available in 17 languages:
 - 🇨🇳 Chinese
 
 ## Data protection
-You can find information regarding data protection either in the app or in the data protection policy of our  [website](https://www.coronika.app/datenschutz#app).
+You can find information regarding data protection in the [`docs/DATA_PROTECTION.md`](https://github.com/kreativzirkel/coronika/tree/master/docs/DATA_PROTECTION.md) file.
+<br>
+This information is also available inside the app and in the data protection policy of our [website](https://www.coronika.app/datenschutz#app).
 
 ## Development
 The app is built with React Native. This allows us to make the app cross-platform (Android & iOS) available easily.
 <br>
-Read [`DEVELOPMENT.md`](https://github.com/kreativzirkel/coronika/tree/master/docs/DEVELOPMENT.md) for more information about development.
+Read [`docs/DEVELOPMENT.md`](https://github.com/kreativzirkel/coronika/tree/master/docs/DEVELOPMENT.md) for more information about development.
 
 ---
 
