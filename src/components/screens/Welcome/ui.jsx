@@ -69,8 +69,7 @@ export const getWelcomeStyles = (vw, getFontFamilyBold, getFontFamilyRegular) =>
     viewSlide: {
       justifyContent: 'space-between',
       padding: vw(5),
-      paddingBottom: vw(20),
-      paddingTop: vw(5),
+      paddingBottom: vw(15),
     },
   });
 };
