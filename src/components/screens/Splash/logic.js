@@ -5,7 +5,6 @@ import connect from 'react-redux/lib/connect/connect';
 import { SUPPORTED_LANGUAGES } from '../../../constants';
 import { changeLanguage } from '../../../i18n';
 import { container } from '../../../utils/react';
-import sleep from '../../../utils/sleep';
 import { configurePushNotifications } from '../Settings/logic';
 import Screen from './ui';
 
@@ -41,7 +40,7 @@ const Container = container(Screen, {
     const showWelcomeScreen = welcomeScreenShowKey !== showKey;
 
     (async () => {
-      await sleep(3000);
+      await new Promise((resolve) => setTimeout(resolve, 3000));
 
       if (showWelcomeScreen) {
         navigation.navigate('Welcome');

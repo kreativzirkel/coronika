@@ -1,13 +1,14 @@
 import { CommonActions } from '@react-navigation/native';
 import LottieView from 'lottie-react-native';
 import React, { memo } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import { COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 import Layout from '../widgets/Layout';
 import { HeaderBack } from '../widgets/Header';
+import { getWelcomeStyles } from './Welcome/ui';
 
 const slider = React.createRef();
 
@@ -36,56 +37,7 @@ const About = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) 
     },
   ];
 
-  // noinspection JSUnresolvedFunction
-  const styles = StyleSheet.create({
-    animation: {
-      width: vw(55),
-    },
-    headline: {
-      fontFamily: getFontFamilyBold(),
-      fontSize: vw(7),
-      textAlign: 'center',
-    },
-    text: {
-      fontFamily: getFontFamilyRegular(),
-      fontSize: vw(4.5),
-      lineHeight: vw(7),
-      textAlign: 'center',
-    },
-    button: {
-      color: COLOR_PRIMARY,
-      fontFamily: getFontFamilyBold(),
-      fontSize: vw(7),
-      textAlign: 'center',
-    },
-    sliderPagination: {
-      bottom: vw(2),
-    },
-    sliderPaginationDot: {
-      backgroundColor: '#000000',
-      borderRadius: 0,
-      height: 5,
-      width: vw(15),
-    },
-    sliderPaginationDotActive: {
-      backgroundColor: COLOR_PRIMARY,
-    },
-    view: {
-      alignItems: 'center',
-      backgroundColor: '#ffffff',
-      flex: 1,
-      flexDirection: 'column',
-      height: '100%',
-      justifyContent: 'center',
-      width: '100%',
-    },
-    viewSlide: {
-      justifyContent: 'space-between',
-      padding: vw(5),
-      paddingBottom: vw(20),
-      paddingTop: vw(5),
-    },
-  });
+  const styles = getWelcomeStyles(vw, getFontFamilyBold, getFontFamilyRegular);
 
   const goBack = () => navigation.dispatch(CommonActions.goBack());
 
@@ -106,9 +58,7 @@ const About = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) 
 
       <View style={styles.view}>
         <AppIntroSlider
-          activeDotStyle={{ ...styles.sliderPaginationDot, ...styles.sliderPaginationDotActive }}
-          dotStyle={styles.sliderPaginationDot}
-          paginationStyle={styles.sliderPagination}
+          data={slides}
           ref={slider}
           renderItem={({ item: { animation, headline, text, buttonText, key }, index }) => {
             return (
@@ -122,7 +72,25 @@ const About = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) 
               </View>
             );
           }}
-          slides={slides}
+          renderPagination={(activeIndex) => (
+            <View style={styles.sliderPagination}>
+              {slides.length > 1 &&
+                slides.map((item, i) => (
+                  <TouchableOpacity
+                    key={i}
+                    onPress={() => slider.current.goToSlide(i, true)}
+                    style={{
+                      ...styles.sliderPaginationDot,
+                      ...(i === activeIndex && styles.sliderPaginationDotActive),
+                    }}
+                  />
+                ))}
+            </View>
+          )}
+          showDoneButton={false}
+          showNextButton={false}
+          showPrevButton={false}
+          showSkipButton={false}
         />
       </View>
     </Layout>

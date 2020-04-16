@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import { COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 import { HeaderBack } from '../widgets/Header';
@@ -19,32 +19,6 @@ const TipReliableSources = ({ navigation, vw, getFontFamilyBold, getFontFamilyRe
       fontSize: vw(4.5),
       lineHeight: vw(7),
     },
-    listItem: {
-      alignItems: 'flex-start',
-      flexDirection: 'row',
-      marginTop: vw(4),
-      width: vw(70),
-    },
-    listItemNumber: {
-      alignItems: 'center',
-      backgroundColor: COLOR_PRIMARY,
-      borderRadius: 50,
-      height: vw(10),
-      justifyContent: 'center',
-      marginRight: vw(6),
-      width: vw(10),
-    },
-    listItemNumberText: {
-      color: '#ffffff',
-      fontFamily: getFontFamilyBold(),
-      fontSize: vw(4),
-    },
-    listItemText: {
-      fontFamily: getFontFamilyRegular(),
-      fontSize: vw(4.5),
-      lineHeight: vw(7),
-      marginTop: vw(2),
-    },
     scrollView: {
       backgroundColor: '#ffffff',
       height: '100%',
@@ -60,10 +34,6 @@ const TipReliableSources = ({ navigation, vw, getFontFamilyBold, getFontFamilyRe
       flex: 1,
       flexDirection: 'column',
       width: '100%',
-    },
-    viewContentList: {
-      alignItems: 'flex-start',
-      marginTop: vw(4),
     },
     link: {
       marginTop: vw(3),

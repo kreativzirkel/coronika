@@ -13,11 +13,7 @@ const loadDays = () => async (dispatch, getState) => {
     dashboard: { days },
   } = getState();
 
-  const today = moment()
-    .hours(0)
-    .minutes(0)
-    .seconds(0)
-    .milliseconds(0);
+  const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
 
   let differenceToLastDay = 0;
 
@@ -36,9 +32,7 @@ const loadDays = () => async (dispatch, getState) => {
     addTimestamps.push(currentDayTimestamp);
   }
 
-  const maxTimestamp = moment(today)
-    .subtract(DAYS_OVERVIEW, 'days')
-    .valueOf();
+  const maxTimestamp = moment(today).subtract(DAYS_OVERVIEW, 'days').valueOf();
   dispatch(initializeDays(addTimestamps, maxTimestamp));
 };
 
@@ -58,9 +52,7 @@ const loadMoreDays = () => async (dispatch, getState) => {
     addTimestamps.push(currentDayTimestamp);
   }
 
-  const maxTimestamp = moment(firstDay)
-    .subtract(DAYS_OVERVIEW, 'days')
-    .valueOf();
+  const maxTimestamp = moment(firstDay).subtract(DAYS_OVERVIEW, 'days').valueOf();
   dispatch(initializeDays(addTimestamps, maxTimestamp));
 };
 

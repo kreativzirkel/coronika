@@ -1,88 +1,16 @@
-import moment from 'moment';
 import React, { memo } from 'react';
-import { Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import { ScrollView } from 'react-native';
+import { COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
-import withViewportUnits from '../../utils/withViewportUnits';
-import CollapsibleBox from '../widgets/CollapsibleBox';
 import { HeaderBack } from '../widgets/Header';
 import Layout from '../widgets/Layout';
+import Tip from '../widgets/Tip';
 
-const TipWashingHands = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, __ }) => {
-  // noinspection JSUnresolvedFunction
-  const styles = StyleSheet.create({
-    contentHeadline: {
-      fontFamily: getFontFamilyBold(),
-      fontSize: vw(7),
-      marginBottom: vw(3),
-    },
-    contentText: {
-      fontFamily: getFontFamilyRegular(),
-      fontSize: vw(4.5),
-      lineHeight: vw(7),
-    },
-    listItem: {
-      alignItems: 'flex-start',
-      flexDirection: 'row',
-      marginTop: vw(4),
-      width: vw(70),
-    },
-    listItemNumber: {
-      alignItems: 'center',
-      backgroundColor: COLOR_PRIMARY,
-      borderRadius: 50,
-      height: vw(10),
-      justifyContent: 'center',
-      marginRight: vw(6),
-      width: vw(10),
-    },
-    listItemNumberText: {
-      color: '#ffffff',
-      fontFamily: getFontFamilyBold(),
-      fontSize: vw(4),
-    },
-    listItemText: {
-      fontFamily: getFontFamilyRegular(),
-      fontSize: vw(4.5),
-      lineHeight: vw(7),
-      marginTop: vw(2),
-    },
-    view: {
-      backgroundColor: '#ffffff',
-      flex: 1,
-      flexDirection: 'column',
-      padding: vw(8),
-      width: '100%',
-    },
-    viewContent: {
-      flex: 1,
-      flexDirection: 'column',
-      width: '100%',
-    },
-    viewContentList: {
-      alignItems: 'flex-start',
-      marginTop: vw(4),
-    },
-    viewSources: {
-      marginTop: vw(14),
-    },
-    viewSourcesText: {
-      fontFamily: getFontFamilyRegular(),
-      fontSize: vw(3.5),
-      lineHeight: vw(5.5),
-      textDecorationLine: 'underline',
-    },
-    viewSourcesButton: {
-      marginTop: vw(2),
-    },
-    viewSourcesLastUpdated: {
-      color: COLOR_PRIMARY,
-      fontFamily: getFontFamilyRegular(),
-      fontSize: vw(3.5),
-      lineHeight: vw(5.5),
-      marginTop: vw(2.5),
-    },
-  });
+const TipWashingHands = ({ navigation, __ }) => {
+  const sources = [
+    { text: 'www.who.int', url: 'https://www.who.int/gpsc/clean_hands_protection/en/' },
+    { text: 'www.cdc.gov', url: 'https://www.cdc.gov/handwashing/when-how-handwashing.html' },
+  ];
 
   const steps = [
     __('tips.washing-hands.list.item-1'),
@@ -97,45 +25,16 @@ const TipWashingHands = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegul
       <HeaderBack headline={__('tips-screen.header.headline')} navigation={navigation} />
 
       <ScrollView>
-        <View style={styles.view}>
-          <View style={styles.viewContent}>
-            <Text style={styles.contentHeadline}>{__('tips.washing-hands.headline')}</Text>
-            <Text style={styles.contentText}>{__('tips.washing-hands.text')}</Text>
-          </View>
-
-          <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
-            {steps.map((stepText, index) => (
-              <View key={`tip-list-item-${index}`} style={styles.listItem}>
-                <View style={styles.listItemNumber}>
-                  <Text style={styles.listItemNumberText}>{index + 1}</Text>
-                </View>
-
-                <Text style={styles.listItemText}>{stepText}</Text>
-              </View>
-            ))}
-          </View>
-
-          <CollapsibleBox headline={__('tips.sources.headline')} style={styles.viewSources}>
-            <TouchableOpacity
-              onPress={() => Linking.openURL('https://www.who.int/gpsc/clean_hands_protection/en/').catch(() => {})}
-              style={styles.viewSourcesButton}>
-              <Text style={styles.viewSourcesText}>www.who.int</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() =>
-                Linking.openURL('https://www.cdc.gov/handwashing/when-how-handwashing.html').catch(() => {})
-              }
-              style={styles.viewSourcesButton}>
-              <Text style={styles.viewSourcesText}>www.cdc.gov</Text>
-            </TouchableOpacity>
-            <Text style={styles.viewSourcesLastUpdated}>
-              {`${__('tips.sources.last-updated')} ${moment(1584489600000).format('L')}`}
-            </Text>
-          </CollapsibleBox>
-        </View>
+        <Tip
+          headline={__('tips.washing-hands.headline')}
+          lastUpdated={1584489600000}
+          steps={steps}
+          sources={sources}
+          texts={[__('tips.washing-hands.text')]}
+        />
       </ScrollView>
     </Layout>
   );
 };
 
-export default memo(withI18n(withViewportUnits(TipWashingHands)));
+export default memo(withI18n(TipWashingHands));

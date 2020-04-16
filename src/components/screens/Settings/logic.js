@@ -116,11 +116,7 @@ export const activateDefaultNotifications = (__, cb) => async (dispatch, getStat
 };
 
 const getDailyNotificationTimestamp = (hours, minutes = 0) => {
-  const timestamp = moment()
-    .hours(hours)
-    .minutes(minutes)
-    .seconds(0)
-    .milliseconds(0);
+  const timestamp = moment().hours(hours).minutes(minutes).seconds(0).milliseconds(0);
 
   if (timestamp.valueOf() < moment().valueOf()) {
     timestamp.add(1, 'day');

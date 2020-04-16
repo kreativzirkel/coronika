@@ -5,6 +5,73 @@ import AppIntroSlider from 'react-native-app-intro-slider';
 import { COLOR_PRIMARY } from '../../../constants';
 import Layout from '../../widgets/Layout';
 
+export const getWelcomeStyles = (vw, getFontFamilyBold, getFontFamilyRegular) => {
+  return StyleSheet.create({
+    animation: {
+      width: vw(55),
+    },
+    headline: {
+      fontFamily: getFontFamilyBold(),
+      fontSize: vw(7),
+      textAlign: 'center',
+    },
+    text: {
+      fontFamily: getFontFamilyRegular(),
+      fontSize: vw(4.5),
+      lineHeight: vw(7),
+      textAlign: 'center',
+    },
+    button: {
+      color: COLOR_PRIMARY,
+      fontFamily: getFontFamilyBold(),
+      fontSize: vw(7),
+      textAlign: 'center',
+    },
+    buttonSkip: {
+      marginTop: vw(2),
+    },
+    buttonSkipText: {
+      fontFamily: getFontFamilyRegular(),
+      fontSize: vw(3.5),
+      textAlign: 'center',
+      textDecorationLine: 'underline',
+    },
+    sliderPagination: {
+      alignItems: 'center',
+      bottom: vw(2),
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+    },
+    sliderPaginationDot: {
+      backgroundColor: '#000000',
+      borderRadius: 0,
+      height: 5,
+      marginLeft: vw(0.8),
+      marginRight: vw(0.8),
+      width: vw(15),
+    },
+    sliderPaginationDotActive: {
+      backgroundColor: COLOR_PRIMARY,
+    },
+    view: {
+      alignItems: 'center',
+      backgroundColor: '#ffffff',
+      flex: 1,
+      flexDirection: 'column',
+      height: '100%',
+      justifyContent: 'center',
+      width: '100%',
+    },
+    viewSlide: {
+      justifyContent: 'space-between',
+      padding: vw(5),
+      paddingBottom: vw(20),
+      paddingTop: vw(5),
+    },
+  });
+};
+
 const slider = React.createRef();
 
 const Welcome = ({ activateNotifications, finish, navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
@@ -41,64 +108,7 @@ const Welcome = ({ activateNotifications, finish, navigation, vw, getFontFamilyB
     },
   ];
 
-  // noinspection JSUnresolvedFunction
-  const styles = StyleSheet.create({
-    animation: {
-      width: vw(55),
-    },
-    headline: {
-      fontFamily: getFontFamilyBold(),
-      fontSize: vw(7),
-      textAlign: 'center',
-    },
-    text: {
-      fontFamily: getFontFamilyRegular(),
-      fontSize: vw(4.5),
-      lineHeight: vw(7),
-      textAlign: 'center',
-    },
-    button: {
-      color: COLOR_PRIMARY,
-      fontFamily: getFontFamilyBold(),
-      fontSize: vw(7),
-      textAlign: 'center',
-    },
-    buttonSkip: {
-      marginTop: vw(2),
-    },
-    buttonSkipText: {
-      fontFamily: getFontFamilyRegular(),
-      fontSize: vw(3.5),
-      textAlign: 'center',
-      textDecorationLine: 'underline',
-    },
-    sliderPagination: {
-      bottom: vw(2),
-    },
-    sliderPaginationDot: {
-      backgroundColor: '#000000',
-      borderRadius: 0,
-      height: 5,
-      width: vw(15),
-    },
-    sliderPaginationDotActive: {
-      backgroundColor: COLOR_PRIMARY,
-    },
-    view: {
-      alignItems: 'center',
-      flex: 1,
-      flexDirection: 'column',
-      height: '100%',
-      justifyContent: 'center',
-      width: '100%',
-    },
-    viewSlide: {
-      justifyContent: 'space-between',
-      padding: vw(5),
-      paddingBottom: vw(20),
-      paddingTop: vw(5),
-    },
-  });
+  const styles = getWelcomeStyles(vw, getFontFamilyBold, getFontFamilyRegular);
 
   const next = (index) => {
     const nextSlide = index + 1;
@@ -121,11 +131,8 @@ const Welcome = ({ activateNotifications, finish, navigation, vw, getFontFamilyB
     <Layout backgroundColor={'#ffffff'} statusBarHidden>
       <View style={styles.view}>
         <AppIntroSlider
-          activeDotStyle={{ ...styles.sliderPaginationDot, ...styles.sliderPaginationDotActive }}
-          dotStyle={styles.sliderPaginationDot}
-          paginationStyle={styles.sliderPagination}
+          data={slides}
           ref={slider}
-          renderDoneButton={() => <View />}
           renderItem={({
             item: { animation, headline, text, buttonSkipText, buttonText, key, requestPushNotificationsPermissions },
             index,
@@ -147,8 +154,25 @@ const Welcome = ({ activateNotifications, finish, navigation, vw, getFontFamilyB
               </View>
             );
           }}
-          renderNextButton={() => <View />}
-          slides={slides}
+          renderPagination={(activeIndex) => (
+            <View style={styles.sliderPagination}>
+              {slides.length > 1 &&
+                slides.map((item, i) => (
+                  <TouchableOpacity
+                    key={i}
+                    onPress={() => slider.current.goToSlide(i, true)}
+                    style={{
+                      ...styles.sliderPaginationDot,
+                      ...(i === activeIndex && styles.sliderPaginationDotActive),
+                    }}
+                  />
+                ))}
+            </View>
+          )}
+          showDoneButton={false}
+          showNextButton={false}
+          showPrevButton={false}
+          showSkipButton={false}
         />
       </View>
     </Layout>

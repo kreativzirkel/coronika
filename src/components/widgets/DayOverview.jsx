@@ -7,6 +7,83 @@ import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 
+const DayDate = memo(({ formatTimeDistance, isDark, isToday, isTotal, styles, timestamp, today, __ }) => {
+  return (
+    <View style={styles.dayDateWrapper}>
+      {isTotal && (
+        <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>
+          {formatTimeDistance(moment(timestamp).add(1, 'minute').valueOf(), today.valueOf())}
+        </Text>
+      )}
+
+      {!isTotal && (
+        <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>
+          {isToday ? __('today') : moment(timestamp).from(today)}
+        </Text>
+      )}
+
+      {isTotal && (
+        <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark) }}>
+          {isTotal ? __('total') : moment(timestamp).format('dd DD.MMM')}
+        </Text>
+      )}
+
+      {!isTotal && (
+        <View style={styles.dayValueWrapper}>
+          <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark), ...styles.dayValueDay }}>
+            {moment(timestamp).format('dd')}
+          </Text>
+          <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark) }}>
+            {moment(timestamp).format('DD.MMM')}
+          </Text>
+        </View>
+      )}
+    </View>
+  );
+});
+
+const DayLocations = memo(({ isDark, locations, showIcons, styles, vw, __ }) => {
+  return (
+    <View style={styles.dayLocationsWrapper}>
+      <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('locations')}</Text>
+      {showIcons ? (
+        <UilLocationPinAlt color={'#000000'} size={vw(8.2)} style={styles.dayIcon} />
+      ) : (
+        <Text
+          style={{
+            ...styles.dayValue,
+            ...styles.dayValueNumber,
+            ...(!locations && styles.dayValueNumberEmpty),
+            ...(isDark && styles.dayValueNumberDark),
+          }}>
+          {locations || '-'}
+        </Text>
+      )}
+    </View>
+  );
+});
+
+const DayPersons = memo(({ isDark, persons, showIcons, styles, vw, __ }) => {
+  return (
+    <View style={styles.dayPersonsWrapper}>
+      <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('persons')}</Text>
+      {showIcons ? (
+        <UilSmile color={'#000000'} size={vw(8.2)} style={styles.dayIcon} />
+      ) : (
+        <Text
+          style={{
+            ...styles.dayValue,
+            ...styles.dayValueNumber,
+            ...(!persons && styles.dayValueNumberEmpty),
+            ...(isDark && styles.dayValueNumberDark),
+          }}>
+          {persons || '-'}
+        </Text>
+      )}
+    </View>
+  );
+});
+
 const DayOverview = ({
   isDark,
   isEmphasized,
@@ -111,73 +188,9 @@ const DayOverview = ({
         ...(isEmphasized && styles.dayEmphasized),
         ...(isTranslucent && styles.dayTranslucent),
       }}>
-      <View style={styles.dayDateWrapper}>
-        {isTotal && (
-          <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>
-            {formatTimeDistance(
-              moment(timestamp)
-                .add(1, 'minute')
-                .valueOf(),
-              today.valueOf()
-            )}
-          </Text>
-        )}
-
-        {!isTotal && (
-          <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>
-            {isToday ? __('today') : moment(timestamp).from(today)}
-          </Text>
-        )}
-
-        {isTotal && (
-          <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark) }}>
-            {isTotal ? __('total') : moment(timestamp).format('dd DD.MMM')}
-          </Text>
-        )}
-
-        {!isTotal && (
-          <View style={styles.dayValueWrapper}>
-            <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark), ...styles.dayValueDay }}>
-              {moment(timestamp).format('dd')}
-            </Text>
-            <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark) }}>
-              {moment(timestamp).format('DD.MMM')}
-            </Text>
-          </View>
-        )}
-      </View>
-      <View style={styles.dayLocationsWrapper}>
-        <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('locations')}</Text>
-        {showIcons ? (
-          <UilLocationPinAlt color={'#000000'} size={vw(8.2)} style={styles.dayIcon} />
-        ) : (
-          <Text
-            style={{
-              ...styles.dayValue,
-              ...styles.dayValueNumber,
-              ...(!locations && styles.dayValueNumberEmpty),
-              ...(isDark && styles.dayValueNumberDark),
-            }}>
-            {locations || '-'}
-          </Text>
-        )}
-      </View>
-      <View style={styles.dayPersonsWrapper}>
-        <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('persons')}</Text>
-        {showIcons ? (
-          <UilSmile color={'#000000'} size={vw(8.2)} style={styles.dayIcon} />
-        ) : (
-          <Text
-            style={{
-              ...styles.dayValue,
-              ...styles.dayValueNumber,
-              ...(!persons && styles.dayValueNumberEmpty),
-              ...(isDark && styles.dayValueNumberDark),
-            }}>
-            {persons || '-'}
-          </Text>
-        )}
-      </View>
+      <DayDate {...{ formatTimeDistance, isDark, isToday, isTotal, styles, timestamp, today, __ }} />
+      <DayLocations {...{ isDark, locations, showIcons, styles, vw, __ }} />
+      <DayPersons {...{ isDark, persons, showIcons, styles, vw, __ }} />
     </View>
   );
 };

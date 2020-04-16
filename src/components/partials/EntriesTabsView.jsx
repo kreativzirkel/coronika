@@ -405,6 +405,8 @@ class EntriesTabsView extends React.Component {
     this.setState({ isUpdateLocationMode: false, isModalNewLocationVisible: false });
   }
 
+  // TODO: reduce complexity!!
+  /* eslint-disable-next-line complexity */
   render() {
     const {
       allowSelection,

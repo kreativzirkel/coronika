@@ -49,11 +49,7 @@ const Day = ({
     },
   });
 
-  const today = moment()
-    .hours(0)
-    .minutes(0)
-    .seconds(0)
-    .milliseconds(0);
+  const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
 
   const goToAddEntry = () => navigation.navigate('AddEntry');
 

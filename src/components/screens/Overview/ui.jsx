@@ -78,11 +78,7 @@ const Overview = ({ locations, persons, total, navigation, vw, getFontFamilyBold
     },
   });
 
-  const today = moment()
-    .hours(0)
-    .minutes(0)
-    .seconds(0)
-    .milliseconds(0);
+  const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
 
   const totalTimespan = moment(today).subtract(DAYS_OVERVIEW, 'days');
 

@@ -53,79 +53,51 @@ export default (state = initialState, action = { type: null }) => {
     }
 
     case 'REMOVE_PERSON_DIRECTORY': {
-      const personId = action.personId;
-      const persons = [];
-
-      for (const c of state.persons) {
-        if (c.id !== personId) {
-          persons.push(c);
-        }
-      }
+      const persons = state.persons.filter(({ id }) => id !== action.personId);
 
       return { ...state, persons };
     }
 
     case 'UPDATE_PERSON_DIRECTORY': {
       const person = action.person;
-      const persons = [];
+      const persons = state.persons.filter(({ id }) => id !== person.id);
 
-      for (const c of state.persons) {
-        if (c.id !== person.id) {
-          persons.push(c);
-        } else {
-          persons.push({ ...c, ...person });
-        }
-      }
+      persons.push({
+        ...state.persons.find(({ id }) => id === person.id),
+        ...person,
+      });
 
       return { ...state, persons };
     }
 
     case 'ADD_LOCATION_DIRECTORY': {
       const location = action.location;
-      const locations = [];
+      const locations = [...state.locations];
 
-      for (const l of state.locations) {
-        if (l.title !== location.title) {
-          locations.push(l);
-        } else {
-          location.description = l.description;
-          location.id = l.id;
-        }
+      if (!locations.find(({ title }) => title === location.title)) {
+        locations.push({
+          ...location,
+          id: uuidv4(),
+        });
       }
-
-      if (!location.id) {
-        location.id = uuidv4();
-      }
-
-      locations.push(location);
 
       return { ...state, locations };
     }
 
     case 'REMOVE_LOCATION_DIRECTORY': {
-      const locationId = action.locationId;
-      const locations = [];
-
-      for (const c of state.locations) {
-        if (c.id !== locationId) {
-          locations.push(c);
-        }
-      }
+      const locations = state.locations.filter(({ id }) => id !== action.locationId);
 
       return { ...state, locations };
     }
 
     case 'UPDATE_LOCATION_DIRECTORY': {
       const location = action.location;
-      const locations = [];
+      const locations = state.locations.filter(({ id }) => id !== location.id);
 
-      for (const l of state.locations) {
-        if (l.id !== location.id) {
-          locations.push(l);
-        } else {
-          locations.push({ ...l, ...location });
-        }
-      }
+      locations.push({
+        ...state.locations.find(({ id }) => id === location.id),
+        ...location,
+      });
 
       return { ...state, locations };
     }
@@ -158,28 +130,22 @@ export default (state = initialState, action = { type: null }) => {
       return { ...state, personsImporting: false };
 
     case 'UPDATE_LAST_USAGE_OF_LOCATION_DIRECTORY': {
-      const locations = [];
+      const locations = state.locations.filter(({ id }) => id !== action.id);
 
-      state.locations.forEach((l) => {
-        if (l.id === action.id) {
-          locations.push({ ...l, lastUsed: Date.now() });
-        } else {
-          locations.push({ ...l });
-        }
+      locations.push({
+        ...state.locations.find(({ id }) => id === action.id),
+        lastUsed: Date.now(),
       });
 
       return { ...state, locations };
     }
 
     case 'UPDATE_LAST_USAGE_OF_PERSON_DIRECTORY': {
-      const persons = [];
+      const persons = state.persons.filter(({ id }) => id !== action.id);
 
-      state.persons.forEach((p) => {
-        if (p.id === action.id) {
-          persons.push({ ...p, lastUsed: Date.now() });
-        } else {
-          persons.push({ ...p });
-        }
+      persons.push({
+        ...state.persons.find(({ id }) => id === action.id),
+        lastUsed: Date.now(),
       });
 
       return { ...state, persons };
