@@ -1,23 +1,23 @@
-<h1 style="text-align: center">
+<h1 align="center">
     <a href="https://github.com/kreativzirkel/coronika" title="coronika">
-      <img style="max-width: 400px; width: 50%" alt="" src="./docs/assets/images/logo.png">
+      <img style="max-width: 400px; width: 40%" alt="" src="./docs/assets/images/logo.png" width="50%">
     </a>
     <br>
 </h1>
 
-<p style="text-align: center">
+<p align="center">
   <strong>Coronika is a kind of diary for the health of all.</strong>
 </p>
 
-<p style="text-align: center">
+<p align="center">
   <img alt="version" src="https://img.shields.io/github/package-json/v/kreativzirkel/coronika" />
   <a href="https://github.com/kreativzirkel/coronika/commits/" title="last commit"><img alt="last commit" src="https://img.shields.io/github/last-commit/kreativzirkel/coronika" /></a>
   <a href="https://github.com/kreativzirkel/coronika/blob/master/LICENSE.md" title="license"><img alt="license" src="https://img.shields.io/github/license/kreativzirkel/coronika" /></a>
   <img alt="platform" src="https://img.shields.io/badge/platform-android%20%7C%20ios-lightgrey" />
 </p>
 
-<p style="text-align: center">
-  <img alt="Header" style="max-width: 1024px; width: 100%" src="./docs/assets/images/header.jpg"/>
+<p align="center">
+  <img alt="Header" style="max-width: 1024px; width: 100%" src="./docs/assets/images/header.jpg" width="100%"/>
 </p>
 
 Coronika helps you remember who you met and where you have been to reduce the spread of the virus.
@@ -38,7 +38,9 @@ Get more information on the [website](https://www.coronika.app/) of the app.
 ## Download the app
 At the moment the app is only available for android smartphones and you can get it on Google Play:
 <br>
-<a href="https://play.google.com/store/apps/details?id=de.kreativzirkel.coronika"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" style="width: 150px"/></a>
+<a href="https://play.google.com/store/apps/details?id=de.kreativzirkel.coronika">  
+    <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" style="width: 150px" width="150px" />
+</a>
 <br>
 <small>Google Play and the Google Play logo are trademarks of Google LLC.</small>
 
@@ -67,6 +69,7 @@ You can find information regarding data protection either in the app or in the d
 
 ## Development
 The app is built with React Native. This allows us to make the app cross-platform (Android & iOS) available easily.
+<br>
 Read [`DEVELOPMENT.md`](https://github.com/kreativzirkel/coronika/tree/master/docs/DEVELOPMENT.md) for more information about development.
 
 ---
