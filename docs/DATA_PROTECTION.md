@@ -1,6 +1,6 @@
 # Data Protection
 
-App Coronika processes personal and location-related data exclusively locally on the smartphone of the user.
+The app Coronika processes personal and location-related data exclusively locally on the smartphone of the user.
 
 ## Personal data
 

@@ -38,7 +38,7 @@ Get more information on the [website](https://www.coronika.app/) of the app.
 ## Download the app
 At the moment the app is only available for android smartphones and you can get it on Google Play:
 <br>
-<a href="https://play.google.com/store/apps/details?id=de.kreativzirkel.coronika"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" style="width: 150px" width="150px" /></a>
+<a href="https://play.google.com/store/apps/details?id=de.kreativzirkel.coronika"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" style="width: 200px" width="200px" /></a>
 <br>
 <small>_Google Play and the Google Play logo are trademarks of Google LLC._</small>
 
