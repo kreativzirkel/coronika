@@ -1,23 +1,23 @@
-<h1 align="center" dir="center" style="text-align: center">
+<h1 align="center" style="text-align: center">
     <a href="https://github.com/kreativzirkel/coronika" title="coronika">
-      <img style="max-width: 400px; width: 40%" alt="" src="./docs/assets/images/logo.png" width="40%">
+      <img style="max-width: 400px; width: 40%" alt="coronika logo" src="./docs/assets/images/logo.png" width="40%">
     </a>
     <br>
 </h1>
 
-<p align="center" dir="center" style="text-align: center">
+<p align="center" style="text-align: center">
   <strong>Coronika is a kind of diary for the health of all.</strong>
 </p>
 
-<p align="center" dir="center" style="text-align: center">
+<p align="center" style="text-align: center">
   <img alt="version" src="https://img.shields.io/github/package-json/v/kreativzirkel/coronika" />
   <a href="https://github.com/kreativzirkel/coronika/commits/" title="last commit"><img alt="last commit" src="https://img.shields.io/github/last-commit/kreativzirkel/coronika" /></a>
   <a href="https://github.com/kreativzirkel/coronika/blob/master/LICENSE.md" title="license"><img alt="license" src="https://img.shields.io/github/license/kreativzirkel/coronika" /></a>
   <img alt="platform" src="https://img.shields.io/badge/platform-android%20%7C%20ios-lightgrey" />
 </p>
 
-<p align="center" dir="center" style="text-align: center">
-  <img alt="Header" style="max-width: 1024px; width: 100%" src="./docs/assets/images/header.jpg" width="100%"/>
+<p align="center" style="text-align: center">
+  <img alt="header" style="max-width: 1024px; width: 100%" src="./docs/assets/images/header.jpg" width="100%"/>
 </p>
 
 Coronika helps you remember who you met and where you have been to reduce the spread of the virus.

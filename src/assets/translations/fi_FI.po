@@ -44,198 +44,201 @@ msgstr "Jaa"
 msgid "navigation.tips.label"
 msgstr "Vinkit"
 
-#: src/components/partials/EntriesTabsView.jsx:621
-#: src/components/widgets/DayOverview.jsx:166
+#: src/components/partials/EntriesTabsView.jsx:623
+#: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "Yhteystiedot"
 
-#: src/components/partials/EntriesTabsView.jsx:631
-#: src/components/widgets/DayOverview.jsx:150
+#: src/components/partials/EntriesTabsView.jsx:633
+#: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "Sijainnit"
 
-#: src/components/partials/EntriesTabsView.jsx:643
+#: src/components/partials/EntriesTabsView.jsx:645
 msgid "entries.persons.list.new"
 msgstr "Uusi yhteystieto"
 
-#: src/components/partials/EntriesTabsView.jsx:664
-#: src/components/partials/EntriesTabsView.jsx:714
+#: src/components/partials/EntriesTabsView.jsx:666
+#: src/components/partials/EntriesTabsView.jsx:716
 msgid "entries.search.list.empty"
 msgstr "Hakusi ei tuottanut tuloksia."
 
-#: src/components/partials/EntriesTabsView.jsx:671
+#: src/components/partials/EntriesTabsView.jsx:673
 msgid "entries.persons.list.empty"
 msgstr ""
 "Et ole vielä luonut yhteystietoa. Aloittaaksesi heti, voit tuoda "
 "yhteystietoja puhelinluettelosta."
 
-#: src/components/partials/EntriesTabsView.jsx:675
+#: src/components/partials/EntriesTabsView.jsx:677
 msgid "entries.persons.list.import.button"
 msgstr "Tuo nyt"
 
-#: src/components/partials/EntriesTabsView.jsx:694
+#: src/components/partials/EntriesTabsView.jsx:696
 msgid "entries.locations.list.new"
 msgstr "Uusi sijainti"
 
-#: src/components/partials/EntriesTabsView.jsx:717
+#: src/components/partials/EntriesTabsView.jsx:719
 msgid "entries.locations.list.empty"
 msgstr ""
 "Et ole vielä luonut sijaintia. Aloita nyt ja luo ensimmäinen sijaintisi."
 
-#: src/components/partials/EntriesTabsView.jsx:733
+#: src/components/partials/EntriesTabsView.jsx:735
 msgid "entries.selection.add"
 msgstr "Lisää valinta"
 
-#: src/components/partials/EntriesTabsView.jsx:745
+#: src/components/partials/EntriesTabsView.jsx:747
 msgid "entries.modals.update-person.headline"
 msgstr "Muokkaa yhteystietoa"
 
-#: src/components/partials/EntriesTabsView.jsx:746
+#: src/components/partials/EntriesTabsView.jsx:748
 msgid "entries.modals.new-person.headline"
 msgstr "Uusi yhteystieto"
 
-#: src/components/partials/EntriesTabsView.jsx:757
+#: src/components/partials/EntriesTabsView.jsx:759
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Nimi"
 
-#: src/components/partials/EntriesTabsView.jsx:769
+#: src/components/partials/EntriesTabsView.jsx:771
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Puhelin"
 
-#: src/components/partials/EntriesTabsView.jsx:782
+#: src/components/partials/EntriesTabsView.jsx:784
 msgid "entries.modals.update-person.button"
 msgstr "Tallenna"
 
-#: src/components/partials/EntriesTabsView.jsx:783
+#: src/components/partials/EntriesTabsView.jsx:785
 msgid "entries.modals.new-person.button"
 msgstr "Lisää"
 
-#: src/components/partials/EntriesTabsView.jsx:795
+#: src/components/partials/EntriesTabsView.jsx:797
 msgid "entries.modals.update-location.headline"
 msgstr "Muokkaa sijaintia"
 
-#: src/components/partials/EntriesTabsView.jsx:796
+#: src/components/partials/EntriesTabsView.jsx:798
 msgid "entries.modals.new-location.headline"
 msgstr "Uusi sijainti"
 
-#: src/components/partials/EntriesTabsView.jsx:807
+#: src/components/partials/EntriesTabsView.jsx:809
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Otsikko"
 
-#: src/components/partials/EntriesTabsView.jsx:818
+#: src/components/partials/EntriesTabsView.jsx:820
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Kuvaus"
 
-#: src/components/partials/EntriesTabsView.jsx:831
+#: src/components/partials/EntriesTabsView.jsx:833
 msgid "entries.modals.update-location.button"
 msgstr "Tallenna"
 
-#: src/components/partials/EntriesTabsView.jsx:832
+#: src/components/partials/EntriesTabsView.jsx:834
 msgid "entries.modals.new-location.button"
 msgstr "Lisää"
 
-#: src/components/partials/EntriesTabsView.jsx:842
+#: src/components/partials/EntriesTabsView.jsx:844
 msgid "entries.modals.select-location.headline"
 msgstr "Valitse sijainti"
 
-#: src/components/partials/EntriesTabsView.jsx:861
+#: src/components/partials/EntriesTabsView.jsx:863
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Kuvaus"
 
-#: src/components/partials/EntriesTabsView.jsx:876
+#: src/components/partials/EntriesTabsView.jsx:878
 msgid "Cancel"
 msgstr "Peruuta"
 
-#: src/components/partials/EntriesTabsView.jsx:877
+#: src/components/partials/EntriesTabsView.jsx:879
 msgid "Confirm"
 msgstr "Vahvista"
 
-#: src/components/partials/EntriesTabsView.jsx:890
+#: src/components/partials/EntriesTabsView.jsx:892
 msgid "entries.modals.select-location.button"
 msgstr "Valitse"
 
-#: src/components/screens/About.jsx:105 src/components/screens/Menu.jsx:109
-msgid "about-screen.header.headline"
-msgstr "Coronikasta"
-
-#: src/components/screens/About.jsx:18 src/components/screens/Welcome/ui.jsx:14
+#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:84
 msgid "welcome-screen.slides.intro.headline"
 msgstr "Taistellaan yhdessä koronavirusta vastaan"
 
-#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:15
+#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:85
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
 "Kirjaa ylös henkilöt ja paikat, jäljennä tartuntareitit ja auttaa estämään "
 "leviäminen."
 
-#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:16
+#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:86
 msgid "welcome-screen.slides.intro.button"
 msgstr "Hienoa, minäkin haluan auttaa!"
 
-#: src/components/screens/About.jsx:25 src/components/screens/Welcome/ui.jsx:21
+#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:91
 msgid "welcome-screen.slides.how-to.headline"
 msgstr "Päiväkirja kollektiivisesta terveydestämme"
 
-#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:22
+#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:92
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
 "Kirjaa ylös keitä olet tavannut, sekä julkiset paikat, joissa olet käynyt, "
 "ja tee voitavasi kaikkien terveyden hyväksi."
 
-#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:23
+#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:93
 msgid "welcome-screen.slides.how-to.button"
 msgstr "Okei"
 
-#: src/components/screens/About.jsx:32 src/components/screens/Welcome/ui.jsx:37
+#: src/components/screens/About.jsx:33
+#: src/components/screens/Welcome/ui.jsx:107
 msgid "welcome-screen.slides.local-data.headline"
 msgstr "Tietosi ovat yksin sinun"
 
-#: src/components/screens/About.jsx:33 src/components/screens/Welcome/ui.jsx:38
+#: src/components/screens/About.jsx:34
+#: src/components/screens/Welcome/ui.jsx:108
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 "Kaikki Coronikan luomat ja käyttämät tiedot tallennetaan paikallisesti, eikä "
 "niitä voida jäljittää tai välittää."
 
-#: src/components/screens/About.jsx:34 src/components/screens/Welcome/ui.jsx:39
+#: src/components/screens/About.jsx:35
+#: src/components/screens/Welcome/ui.jsx:109
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Aloita nyt"
+
+#: src/components/screens/About.jsx:57 src/components/screens/Menu.jsx:109
+msgid "about-screen.header.headline"
+msgstr "Coronikasta"
 
 #: src/components/screens/AddEntry/ui.jsx:10
 msgid "add-entry-screen.header.headline"
 msgstr "Lisää merkintä"
 
-#: src/components/screens/Dashboard/ui.jsx:153
+#: src/components/screens/Dashboard/ui.jsx:149
 #: src/components/screens/Menu.jsx:128
 msgid "menu-screen.header.headline"
 msgstr "Valikko"
 
-#: src/components/screens/Dashboard/ui.jsx:163
+#: src/components/screens/Dashboard/ui.jsx:159
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Napsauta tämän päivän päivämäärää kirjataksesi ylös ensimmäiset tapaamisesi "
 "tai sijaintisi."
 
-#: src/components/screens/Dashboard/ui.jsx:165
+#: src/components/screens/Dashboard/ui.jsx:161
 msgid "Close"
 msgstr "Sulje"
 
-#: src/components/screens/Dashboard/ui.jsx:182
+#: src/components/screens/Dashboard/ui.jsx:178
 msgid "dashboard-screen.list.load-more"
 msgstr "lataa lisää"
 
-#: src/components/screens/Day/ui.jsx:62
+#: src/components/screens/Day/ui.jsx:58
 msgid "day-screen.header.headline"
 msgstr "Päivittäinen yleiskatsaus"
 
-#: src/components/screens/Day/ui.jsx:69
+#: src/components/screens/Day/ui.jsx:65
 msgid "day-screen.locations.empty"
 msgstr "Et ole lisännyt yhtään sijaintia tälle päivälle."
 
-#: src/components/screens/Day/ui.jsx:70
+#: src/components/screens/Day/ui.jsx:66
 msgid "day-screen.persons.empty"
 msgstr "Et ole lisännyt yhteystietoja tälle päivälle."
 
-#: src/components/screens/Day/ui.jsx:81
+#: src/components/screens/Day/ui.jsx:77
 msgid "day-screen.entries.add"
 msgstr "Lisää merkintä"
 
@@ -508,87 +511,87 @@ msgstr ""
 msgid "menu-screen.button.send-feedback"
 msgstr "Lähetä palautetta"
 
-#: src/components/screens/Overview/ui.jsx:118
+#: src/components/screens/Overview/ui.jsx:114
 msgid "overview-screen.export.button"
 msgstr "Vie yleiskatsaus"
 
-#: src/components/screens/Overview/ui.jsx:92
+#: src/components/screens/Overview/ui.jsx:88
 msgid "overview-screen.header.headline"
 msgstr "Yleiskatsaus"
 
-#: src/components/screens/Settings/logic.js:154
+#: src/components/screens/Settings/logic.js:150
 msgid "notifications.diary.headline"
 msgstr "📒 Kirjaa ylös kontaktisi"
 
-#: src/components/screens/Settings/logic.js:155
+#: src/components/screens/Settings/logic.js:151
 msgid "notifications.diary.text"
 msgstr ""
 "Kirjaa läheiset kontaktisi ja auta hidastamaan koronaviruksen leviämistä."
 
-#: src/components/screens/Settings/logic.js:170
+#: src/components/screens/Settings/logic.js:166
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽 Pidä näyttösi puhtaana"
 
-#: src/components/screens/Settings/logic.js:171
+#: src/components/screens/Settings/logic.js:167
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr ""
 "Vapauta näyttösi lukuisista pöpöistä, bakteereista ja muista "
 "taudinaiheuttajista."
 
-#: src/components/screens/Settings/logic.js:174
+#: src/components/screens/Settings/logic.js:170
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 Puhdista puhelimesi"
 
-#: src/components/screens/Settings/logic.js:175
+#: src/components/screens/Settings/logic.js:171
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr ""
 "Puhelimesi puhdistaminen on toinen fiksu tapa pitää bakteerit poissa "
 "sormenpäistäsi."
 
-#: src/components/screens/Settings/logic.js:178
+#: src/components/screens/Settings/logic.js:174
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Puhdista älypuhelimesi näyttö"
 
-#: src/components/screens/Settings/logic.js:179
+#: src/components/screens/Settings/logic.js:175
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "Poista bakteerit puhdistamalla näyttö desinfiointiaineella."
 
-#: src/components/screens/Settings/logic.js:195
-#: src/components/screens/Settings/logic.js:228
-#: src/components/screens/Settings/logic.js:243
+#: src/components/screens/Settings/logic.js:191
+#: src/components/screens/Settings/logic.js:224
+#: src/components/screens/Settings/logic.js:239
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "Pese kätesi huolellisesti, jos olet ollut ulkona."
+
+#: src/components/screens/Settings/logic.js:192
+#: src/components/screens/Settings/logic.js:225
+#: src/components/screens/Settings/logic.js:240
+msgid "notifications.washing-hands.variant-1.headline"
+msgstr "Pese kätesi"
 
 #: src/components/screens/Settings/logic.js:196
 #: src/components/screens/Settings/logic.js:229
 #: src/components/screens/Settings/logic.js:244
-msgid "notifications.washing-hands.variant-1.headline"
-msgstr "Pese kätesi"
-
-#: src/components/screens/Settings/logic.js:200
-#: src/components/screens/Settings/logic.js:233
-#: src/components/screens/Settings/logic.js:248
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Käsien pesu on yksinkertaisin tapa suojata itseäsi ja muita sairauksilta."
 
-#: src/components/screens/Settings/logic.js:201
-#: src/components/screens/Settings/logic.js:234
-#: src/components/screens/Settings/logic.js:249
+#: src/components/screens/Settings/logic.js:197
+#: src/components/screens/Settings/logic.js:230
+#: src/components/screens/Settings/logic.js:245
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Pesitkö kätesi?"
 
-#: src/components/screens/Settings/logic.js:205
-#: src/components/screens/Settings/logic.js:238
-#: src/components/screens/Settings/logic.js:253
+#: src/components/screens/Settings/logic.js:201
+#: src/components/screens/Settings/logic.js:234
+#: src/components/screens/Settings/logic.js:249
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Harjoittele huolellista käsipesua äläkä unohda puhdistaa sormenpäitä ja "
 "sormenvälejä."
 
-#: src/components/screens/Settings/logic.js:206
-#: src/components/screens/Settings/logic.js:239
-#: src/components/screens/Settings/logic.js:254
+#: src/components/screens/Settings/logic.js:202
+#: src/components/screens/Settings/logic.js:235
+#: src/components/screens/Settings/logic.js:250
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 Älä unohda sormenpäitäsi!"
 
@@ -624,7 +627,35 @@ msgstr "Muistutus päiväkirjan käytöstä"
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "Muistuta päivittäin"
 
-#: src/components/screens/TipAmIInfected.jsx:100
+#: src/components/screens/TipAmIInfected.jsx:16
+msgid "tips.am-i-infected.list.item-1"
+msgstr "Jää kotiin"
+
+#: src/components/screens/TipAmIInfected.jsx:17
+msgid "tips.am-i-infected.list.item-2"
+msgstr "Soita lääkärillesi"
+
+#: src/components/screens/TipAmIInfected.jsx:18
+msgid "tips.am-i-infected.list.item-3"
+msgstr "Kerro Coronika-päiväkirjastasi"
+
+#: src/components/screens/TipAmIInfected.jsx:23
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:33
+#: src/components/screens/TipMouthguard.jsx:28
+#: src/components/screens/TipNotFeelingWell.jsx:24
+#: src/components/screens/TipReliableSources.jsx:51
+#: src/components/screens/TipWashingHands.jsx:25
+#: src/components/screens/Tips.jsx:107
+msgid "tips-screen.header.headline"
+msgstr "Hygieniavinkkejä"
+
+#: src/components/screens/TipAmIInfected.jsx:27
+#: src/components/screens/Tips.jsx:95
+msgid "tips.am-i-infected.headline"
+msgstr "Pelkään, että sain koronaviruksen, mitä voin tehdä?"
+
+#: src/components/screens/TipAmIInfected.jsx:31
 msgid "tips.am-i-infected.text"
 msgstr ""
 "Jos olet huolissasi siitä, että olet saattanut tartunnan, pysy kotona, jotta "
@@ -634,58 +665,32 @@ msgstr ""
 "leviämisen hillitsemiseksi. Tällaisessa tilanteessa voit viedä päiväkirjasi "
 "ja lähettää sen vastuussa oleville viranomaisille."
 
-#: src/components/screens/TipAmIInfected.jsx:115
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:118
-#: src/components/screens/TipCoughingSneezing.jsx:118
-#: src/components/screens/TipMouthguard.jsx:125
-#: src/components/screens/TipNotFeelingWell.jsx:119
-#: src/components/screens/TipWashingHands.jsx:118
-msgid "tips.sources.headline"
-msgstr "Lähteet"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
+msgid "tips.avoid-crowds-of-people.list.item-1"
+msgstr "Vältä suuria julkisia kokouksia, elleivät ne ole välttämättömiä"
 
-#: src/components/screens/TipAmIInfected.jsx:129
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:129
-#: src/components/screens/TipCoughingSneezing.jsx:138
-#: src/components/screens/TipMouthguard.jsx:143
-#: src/components/screens/TipNotFeelingWell.jsx:131
-#: src/components/screens/TipWashingHands.jsx:132
-msgid "tips.sources.last-updated"
-msgstr "Viimeksi päivitetty:"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
+msgid "tips.avoid-crowds-of-people.list.item-2"
+msgstr "Kävele lyhyet matkat julkisen liikenteen sijasta."
 
-#: src/components/screens/TipAmIInfected.jsx:87
-msgid "tips.am-i-infected.list.item-1"
-msgstr "Jää kotiin"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
+msgid "tips.avoid-crowds-of-people.list.item-3"
+msgstr "Pese kädet säännöllisesti ja perusteellisesti"
 
-#: src/components/screens/TipAmIInfected.jsx:88
-msgid "tips.am-i-infected.list.item-2"
-msgstr "Soita lääkärillesi"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
+msgid "tips.avoid-crowds-of-people.list.item-4"
+msgstr "Pidä noin 2 metrin etäisyys sinun ja muiden ihmisten välillä"
 
-#: src/components/screens/TipAmIInfected.jsx:89
-msgid "tips.am-i-infected.list.item-3"
-msgstr "Kerro Coronika-päiväkirjastasi"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:22
+msgid "tips.avoid-crowds-of-people.list.item-5"
+msgstr "Yski tai aivasta kyynärpäähäsi tai nenäliinaan."
 
-#: src/components/screens/TipAmIInfected.jsx:94
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:97
-#: src/components/screens/TipCoughingSneezing.jsx:97
-#: src/components/screens/TipMouthguard.jsx:99
-#: src/components/screens/TipNotFeelingWell.jsx:96
-#: src/components/screens/TipReliableSources.jsx:81
-#: src/components/screens/TipWashingHands.jsx:97
-#: src/components/screens/Tips.jsx:107
-msgid "tips-screen.header.headline"
-msgstr "Hygieniavinkkejä"
-
-#: src/components/screens/TipAmIInfected.jsx:99
-#: src/components/screens/Tips.jsx:95
-msgid "tips.am-i-infected.headline"
-msgstr "Pelkään, että sain koronaviruksen, mitä voin tehdä?"
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:102
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:31
 #: src/components/screens/Tips.jsx:78
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Vältä väkijoukkoja"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:103
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:35
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
 "Vältä mahdollisuuksien mukaan matkustamista, julkisen liikenteen käyttöä ja "
@@ -693,61 +698,62 @@ msgstr ""
 "rajoitettava vain välttämättömimpiin ja joukkotapahtumiin osallistumista "
 "tulisi välttää."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:88
-msgid "tips.avoid-crowds-of-people.list.item-1"
-msgstr "Vältä suuria julkisia kokouksia, elleivät ne ole välttämättömiä"
+#: src/components/screens/TipCoughingSneezing.jsx:24
+msgid "tips.coughing-sneezing.list.item-1"
+msgstr "Pidä noin 2 metrin etäisyys itsesi ja muiden ihmisten välillä"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:89
-msgid "tips.avoid-crowds-of-people.list.item-2"
-msgstr "Kävele lyhyet matkat julkisen liikenteen sijasta."
+#: src/components/screens/TipCoughingSneezing.jsx:25
+msgid "tips.coughing-sneezing.list.item-2"
+msgstr "käänny pois ihmisistä"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:90
-msgid "tips.avoid-crowds-of-people.list.item-3"
-msgstr "Pese kädet säännöllisesti ja perusteellisesti"
+#: src/components/screens/TipCoughingSneezing.jsx:26
+msgid "tips.coughing-sneezing.list.item-3"
+msgstr "peitä yskäsi ja aivastelusi kyynärpäähän tai nenäliinaan"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:91
-msgid "tips.avoid-crowds-of-people.list.item-4"
-msgstr "Pidä noin 2 metrin etäisyys sinun ja muiden ihmisten välillä"
+#: src/components/screens/TipCoughingSneezing.jsx:27
+msgid "tips.coughing-sneezing.list.item-4"
+msgstr "Hankkiudu nenäliinoista asianmukaisesti eroon"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:92
-msgid "tips.avoid-crowds-of-people.list.item-5"
-msgstr "Yski tai aivasta kyynärpäähäsi tai nenäliinaan."
+#: src/components/screens/TipCoughingSneezing.jsx:28
+msgid "tips.coughing-sneezing.list.item-5"
+msgstr "Pese kädet jälkeenpäin"
 
-#: src/components/screens/TipCoughingSneezing.jsx:102
+#: src/components/screens/TipCoughingSneezing.jsx:37
 #: src/components/screens/Tips.jsx:87
 msgid "tips.coughing-sneezing.headline"
 msgstr "Oikeanlainen yskiminen ja aivastelu"
 
-#: src/components/screens/TipCoughingSneezing.jsx:103
+#: src/components/screens/TipCoughingSneezing.jsx:41
 msgid "tips.coughing-sneezing.text"
 msgstr "Estä virusten leviäminen kiinnittämällä huomiota:"
 
-#: src/components/screens/TipCoughingSneezing.jsx:88
-msgid "tips.coughing-sneezing.list.item-1"
-msgstr "Pidä noin 2 metrin etäisyys itsesi ja muiden ihmisten välillä"
+#: src/components/screens/TipMouthguard.jsx:20
+msgid "tips.mouthguard.list.item-1"
+msgstr "Suusuojus on valmistettu paperista"
 
-#: src/components/screens/TipCoughingSneezing.jsx:89
-msgid "tips.coughing-sneezing.list.item-2"
-msgstr "käänny pois ihmisistä"
+#: src/components/screens/TipMouthguard.jsx:21
+msgid "tips.mouthguard.list.item-2"
+msgstr "Suusuojus ei sovi tiukasti kasvoihin tai vuotaa"
 
-#: src/components/screens/TipCoughingSneezing.jsx:90
-msgid "tips.coughing-sneezing.list.item-3"
-msgstr "peitä yskäsi ja aivastelusi kyynärpäähän tai nenäliinaan"
+#: src/components/screens/TipMouthguard.jsx:22
+msgid "tips.mouthguard.list.item-3"
+msgstr "Hengitys kastelee suusuojuksen"
 
-#: src/components/screens/TipCoughingSneezing.jsx:91
-msgid "tips.coughing-sneezing.list.item-4"
-msgstr "Hankkiudu nenäliinoista asianmukaisesti eroon"
+#: src/components/screens/TipMouthguard.jsx:23
+msgid "tips.mouthguard.list.item-4"
+msgstr "Sitä ei vaihdeta päivittäin"
 
-#: src/components/screens/TipCoughingSneezing.jsx:92
-msgid "tips.coughing-sneezing.list.item-5"
-msgstr "Pese kädet jälkeenpäin"
-
-#: src/components/screens/TipMouthguard.jsx:104
+#: src/components/screens/TipMouthguard.jsx:32
 #: src/components/screens/Tips.jsx:82
 msgid "tips.mouthguard.headline"
 msgstr "Suusuojus, kyllä ​​vai ei?"
 
-#: src/components/screens/TipMouthguard.jsx:105
+#: src/components/screens/TipMouthguard.jsx:35
+msgid "tips.mouthguard.list.intro"
+msgstr ""
+"Suusuojuksen käyttämisellä leikkauksen ulkopuolella ei ole vaikutusta, jos:"
+
+#: src/components/screens/TipMouthguard.jsx:37
 msgid "tips.mouthguard.text-1"
 msgstr ""
 "Suusuojukset ovat välttämättömiä kaikille terveydenhoitoaloille. Sairaille "
@@ -756,71 +762,50 @@ msgstr ""
 "terveydenhuollon tarjoajasi suosittelee sitä. Muista noudattaa "
 "hygieniasääntöjä."
 
-#: src/components/screens/TipMouthguard.jsx:107
+#: src/components/screens/TipMouthguard.jsx:37
 msgid "tips.mouthguard.text-2"
 msgstr ""
 "Terveydenhuollon tarjoajat käyttävät suusuojuksia esteenä, ja ne auttavat "
 "estämään pienten pisaroiden leviämisen, kun yskit tai aivastat."
 
-#: src/components/screens/TipMouthguard.jsx:112
-msgid "tips.mouthguard.list.intro"
-msgstr ""
-"Suusuojuksen käyttämisellä leikkauksen ulkopuolella ei ole vaikutusta, jos:"
+#: src/components/screens/TipNotFeelingWell.jsx:16
+msgid "tips.not-feeling-well.list.item-1"
+msgstr "Hengitysteiden oireet"
 
-#: src/components/screens/TipMouthguard.jsx:91
-msgid "tips.mouthguard.list.item-1"
-msgstr "Suusuojus on valmistettu paperista"
+#: src/components/screens/TipNotFeelingWell.jsx:17
+msgid "tips.not-feeling-well.list.item-2"
+msgstr "Kuume"
 
-#: src/components/screens/TipMouthguard.jsx:92
-msgid "tips.mouthguard.list.item-2"
-msgstr "Suusuojus ei sovi tiukasti kasvoihin tai vuotaa"
+#: src/components/screens/TipNotFeelingWell.jsx:18
+msgid "tips.not-feeling-well.list.item-3"
+msgstr "Yskä"
 
-#: src/components/screens/TipMouthguard.jsx:93
-msgid "tips.mouthguard.list.item-3"
-msgstr "Hengitys kastelee suusuojuksen"
+#: src/components/screens/TipNotFeelingWell.jsx:19
+msgid "tips.not-feeling-well.list.item-4"
+msgstr "hengenahdistus"
 
-#: src/components/screens/TipMouthguard.jsx:94
-msgid "tips.mouthguard.list.item-4"
-msgstr "Sitä ei vaihdeta päivittäin"
-
-#: src/components/screens/TipNotFeelingWell.jsx:101
+#: src/components/screens/TipNotFeelingWell.jsx:28
 #: src/components/screens/Tips.jsx:91
 msgid "tips.not-feeling-well.headline"
 msgstr "En voi hyvin, onko minulla virus?"
 
-#: src/components/screens/TipNotFeelingWell.jsx:102
+#: src/components/screens/TipNotFeelingWell.jsx:31
+msgid "tips.not-feeling-well.list.intro"
+msgstr "WHO: n mukaan tyypillisiä COVID-19-oireita ovat:"
+
+#: src/components/screens/TipNotFeelingWell.jsx:33
 msgid "tips.not-feeling-well.text"
 msgstr ""
 "Kaikki potilaat, joilla on flunssamaisia ​​oireita, eivät automaattisesti ole "
 "SARS-CoV-2-viruksen kantajia. Sinun tulisi pysyä ajan tasalla oireistasi ja "
 "soittaa lääkärillesi."
 
-#: src/components/screens/TipNotFeelingWell.jsx:106
-msgid "tips.not-feeling-well.list.intro"
-msgstr "WHO: n mukaan tyypillisiä COVID-19-oireita ovat:"
-
-#: src/components/screens/TipNotFeelingWell.jsx:88
-msgid "tips.not-feeling-well.list.item-1"
-msgstr "Hengitysteiden oireet"
-
-#: src/components/screens/TipNotFeelingWell.jsx:89
-msgid "tips.not-feeling-well.list.item-2"
-msgstr "Kuume"
-
-#: src/components/screens/TipNotFeelingWell.jsx:90
-msgid "tips.not-feeling-well.list.item-3"
-msgstr "Yskä"
-
-#: src/components/screens/TipNotFeelingWell.jsx:91
-msgid "tips.not-feeling-well.list.item-4"
-msgstr "hengenahdistus"
-
-#: src/components/screens/TipReliableSources.jsx:86
+#: src/components/screens/TipReliableSources.jsx:56
 #: src/components/screens/Tips.jsx:99
 msgid "tips.reliable-sources.headline"
 msgstr "Mistä voin löytää luotettavia lähteitä?"
 
-#: src/components/screens/TipReliableSources.jsx:87
+#: src/components/screens/TipReliableSources.jsx:57
 msgid "tips.reliable-sources.text"
 msgstr "Informatiiviset verkkosivustot"
 
@@ -830,67 +815,75 @@ msgstr ""
 "Täältä löydät tietoa, joka auttaa sinua vähentämään infektioriskiä "
 "mahdollisimman paljon, ja toimimaan oikein, jos saat tartunnan."
 
-#: src/components/screens/TipWashingHands.jsx:102
+#: src/components/screens/TipWashingHands.jsx:16
+msgid "tips.washing-hands.list.item-1"
+msgstr ""
+"Kostuta kädet puhtaalla, juoksevalla vedellä (lämpimällä tai kylmällä)."
+
+#: src/components/screens/TipWashingHands.jsx:17
+msgid "tips.washing-hands.list.item-2"
+msgstr "Levitä käsiisi saippuaa ja vaahdota kätesi hieromalla niitä yhteen."
+
+#: src/components/screens/TipWashingHands.jsx:18
+msgid "tips.washing-hands.list.item-3"
+msgstr ""
+"Hiero kämmenselkiäsi, peukaloitasi, sormenvälejäsi ja kynnenalusiasi noin 30–"
+"60 sekunnin ajan."
+
+#: src/components/screens/TipWashingHands.jsx:19
+msgid "tips.washing-hands.list.item-4"
+msgstr "Huuhtele kätesi hyvin puhtaan, juoksevan veden alla."
+
+#: src/components/screens/TipWashingHands.jsx:20
+msgid "tips.washing-hands.list.item-5"
+msgstr "Kuivaa kädet puhtaaseen pyyhkeeseen tai ilmakuivaa ne."
+
+#: src/components/screens/TipWashingHands.jsx:29
 #: src/components/screens/Tips.jsx:74
 msgid "tips.washing-hands.headline"
 msgstr "Käsien pesu"
 
-#: src/components/screens/TipWashingHands.jsx:103
+#: src/components/screens/TipWashingHands.jsx:33
 msgid "tips.washing-hands.text"
 msgstr ""
 "Käsien peseminen on helppoa, ja se on yksi tehokkaimmista tavoista estää "
 "bakteerien leviäminen. Puhtaat kädet voivat estää bakteerien leviämisen. "
 "Seuraa näitä viittä vaihetta joka kerta:"
 
-#: src/components/screens/TipWashingHands.jsx:88
-msgid "tips.washing-hands.list.item-1"
-msgstr ""
-"Kostuta kädet puhtaalla, juoksevalla vedellä (lämpimällä tai kylmällä)."
+#: src/components/screens/Welcome/ui.jsx:100
+msgid "welcome-screen.slides.notifications.button-skip"
+msgstr "Ohita"
 
-#: src/components/screens/TipWashingHands.jsx:89
-msgid "tips.washing-hands.list.item-2"
-msgstr "Levitä käsiisi saippuaa ja vaahdota kätesi hieromalla niitä yhteen."
+#: src/components/screens/Welcome/ui.jsx:101
+msgid "welcome-screen.slides.notifications.button"
+msgstr "Aktivoi nyt"
 
-#: src/components/screens/TipWashingHands.jsx:90
-msgid "tips.washing-hands.list.item-3"
-msgstr ""
-"Hiero kämmenselkiäsi, peukaloitasi, sormenvälejäsi ja kynnenalusiasi noin 30–"
-"60 sekunnin ajan."
-
-#: src/components/screens/TipWashingHands.jsx:91
-msgid "tips.washing-hands.list.item-4"
-msgstr "Huuhtele kätesi hyvin puhtaan, juoksevan veden alla."
-
-#: src/components/screens/TipWashingHands.jsx:92
-msgid "tips.washing-hands.list.item-5"
-msgstr "Kuivaa kädet puhtaaseen pyyhkeeseen tai ilmakuivaa ne."
-
-#: src/components/screens/Welcome/ui.jsx:28
+#: src/components/screens/Welcome/ui.jsx:98
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "Pesitkö kädet?"
 
-#: src/components/screens/Welcome/ui.jsx:29
+#: src/components/screens/Welcome/ui.jsx:99
 msgid "welcome-screen.slides.notifications.text"
 msgstr ""
 "Aktivoi ilmoitukset ja sinua muistutetaan säännöllisesti pesemään kätesi "
 "tartunnan estämiseksi."
 
-#: src/components/screens/Welcome/ui.jsx:30
-msgid "welcome-screen.slides.notifications.button-skip"
-msgstr "Ohita"
-
-#: src/components/screens/Welcome/ui.jsx:31
-msgid "welcome-screen.slides.notifications.button"
-msgstr "Aktivoi nyt"
-
-#: src/components/widgets/DayOverview.jsx:128
+#: src/components/widgets/DayOverview.jsx:21
 msgid "today"
 msgstr "Tänään"
 
-#: src/components/widgets/DayOverview.jsx:134
+#: src/components/widgets/DayOverview.jsx:27
 msgid "total"
 msgstr "Yhteensä"
 
 #: src/components/widgets/SearchBar.jsx:58
 msgid "placeholder.search-input"
 msgstr "Hae"
+
+#: src/components/widgets/Tip.jsx:127
+msgid "tips.sources.headline"
+msgstr "Lähteet"
+
+#: src/components/widgets/Tip.jsx:138
+msgid "tips.sources.last-updated"
+msgstr "Viimeksi päivitetty:"

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.2
+
+- minor changes
+
 ## 1.3.1
 
 - Fixed crash of the app when importing contacts

@@ -46,199 +46,202 @@ msgstr "Κοινοποίηση"
 msgid "navigation.tips.label"
 msgstr "Συμβουλές"
 
-#: src/components/partials/EntriesTabsView.jsx:621
-#: src/components/widgets/DayOverview.jsx:166
+#: src/components/partials/EntriesTabsView.jsx:623
+#: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "επαφές"
 
-#: src/components/partials/EntriesTabsView.jsx:631
-#: src/components/widgets/DayOverview.jsx:150
+#: src/components/partials/EntriesTabsView.jsx:633
+#: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "τοποθεσίες"
 
-#: src/components/partials/EntriesTabsView.jsx:643
+#: src/components/partials/EntriesTabsView.jsx:645
 msgid "entries.persons.list.new"
 msgstr "Νέα επαφή"
 
-#: src/components/partials/EntriesTabsView.jsx:664
-#: src/components/partials/EntriesTabsView.jsx:714
+#: src/components/partials/EntriesTabsView.jsx:666
+#: src/components/partials/EntriesTabsView.jsx:716
 msgid "entries.search.list.empty"
 msgstr "Δεν βρέθηκε τίποτα στην αναζήτησή σου."
 
-#: src/components/partials/EntriesTabsView.jsx:671
+#: src/components/partials/EntriesTabsView.jsx:673
 msgid "entries.persons.list.empty"
 msgstr ""
 "Δεν έχεις δημιουργήσει καμία επαφή εως τώρα. Για να ξεκινήσεις, μπορείς να "
 "εισάγεις άτομα από τον τηλεφωνικό σου κατάλογο."
 
-#: src/components/partials/EntriesTabsView.jsx:675
+#: src/components/partials/EntriesTabsView.jsx:677
 msgid "entries.persons.list.import.button"
 msgstr "Εισαγωγή τώρα"
 
-#: src/components/partials/EntriesTabsView.jsx:694
+#: src/components/partials/EntriesTabsView.jsx:696
 msgid "entries.locations.list.new"
 msgstr "Νέα τοποθεσία"
 
-#: src/components/partials/EntriesTabsView.jsx:717
+#: src/components/partials/EntriesTabsView.jsx:719
 msgid "entries.locations.list.empty"
 msgstr ""
 "Δεν έχεις δημιουργήσει καμία τοποθεσία εως τώρα. Ξεκίνησε τώρα και "
 "δημιούργησε την πρώτη σου τοποθεσία."
 
-#: src/components/partials/EntriesTabsView.jsx:733
+#: src/components/partials/EntriesTabsView.jsx:735
 msgid "entries.selection.add"
 msgstr "Προσθήκη επιλογής"
 
-#: src/components/partials/EntriesTabsView.jsx:745
+#: src/components/partials/EntriesTabsView.jsx:747
 msgid "entries.modals.update-person.headline"
 msgstr "Επεξεργασία προσώπου"
 
-#: src/components/partials/EntriesTabsView.jsx:746
+#: src/components/partials/EntriesTabsView.jsx:748
 msgid "entries.modals.new-person.headline"
 msgstr "Νέα επαφή"
 
-#: src/components/partials/EntriesTabsView.jsx:757
+#: src/components/partials/EntriesTabsView.jsx:759
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Όνομα"
 
-#: src/components/partials/EntriesTabsView.jsx:769
+#: src/components/partials/EntriesTabsView.jsx:771
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Τηλέφωνο"
 
-#: src/components/partials/EntriesTabsView.jsx:782
+#: src/components/partials/EntriesTabsView.jsx:784
 msgid "entries.modals.update-person.button"
 msgstr "Αποθήκευση"
 
-#: src/components/partials/EntriesTabsView.jsx:783
+#: src/components/partials/EntriesTabsView.jsx:785
 msgid "entries.modals.new-person.button"
 msgstr "Προσθήκη"
 
-#: src/components/partials/EntriesTabsView.jsx:795
+#: src/components/partials/EntriesTabsView.jsx:797
 msgid "entries.modals.update-location.headline"
 msgstr "Επεξεργασία τοποθεσίας"
 
-#: src/components/partials/EntriesTabsView.jsx:796
+#: src/components/partials/EntriesTabsView.jsx:798
 msgid "entries.modals.new-location.headline"
 msgstr "Νέα τοποθεσία"
 
-#: src/components/partials/EntriesTabsView.jsx:807
+#: src/components/partials/EntriesTabsView.jsx:809
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Τίτλος"
 
-#: src/components/partials/EntriesTabsView.jsx:818
+#: src/components/partials/EntriesTabsView.jsx:820
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Περιγραφή"
 
-#: src/components/partials/EntriesTabsView.jsx:831
+#: src/components/partials/EntriesTabsView.jsx:833
 msgid "entries.modals.update-location.button"
 msgstr "Αποθήκευση"
 
-#: src/components/partials/EntriesTabsView.jsx:832
+#: src/components/partials/EntriesTabsView.jsx:834
 msgid "entries.modals.new-location.button"
 msgstr "Προσθήκη"
 
-#: src/components/partials/EntriesTabsView.jsx:842
+#: src/components/partials/EntriesTabsView.jsx:844
 msgid "entries.modals.select-location.headline"
 msgstr "Επέλεξε τοποθεσία"
 
-#: src/components/partials/EntriesTabsView.jsx:861
+#: src/components/partials/EntriesTabsView.jsx:863
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Περιγραφή"
 
-#: src/components/partials/EntriesTabsView.jsx:876
+#: src/components/partials/EntriesTabsView.jsx:878
 msgid "Cancel"
 msgstr "Ματαίωση"
 
-#: src/components/partials/EntriesTabsView.jsx:877
+#: src/components/partials/EntriesTabsView.jsx:879
 msgid "Confirm"
 msgstr "Επιβεβαίωση"
 
-#: src/components/partials/EntriesTabsView.jsx:890
+#: src/components/partials/EntriesTabsView.jsx:892
 msgid "entries.modals.select-location.button"
 msgstr "Επιλογή"
 
-#: src/components/screens/About.jsx:105 src/components/screens/Menu.jsx:109
-msgid "about-screen.header.headline"
-msgstr "Σχετικά με τη Coronika"
-
-#: src/components/screens/About.jsx:18 src/components/screens/Welcome/ui.jsx:14
+#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:84
 msgid "welcome-screen.slides.intro.headline"
 msgstr "Καταπολέμηση του κορωνοϊού μαζί"
 
-#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:15
+#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:85
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
 "Κατέγραψε άτομα και τοποθεσίες, ανακατασκεύασε τις διαδρομές μόλυνσης και "
 "βοήθησε να σταματήσει η διάδοση."
 
-#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:16
+#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:86
 msgid "welcome-screen.slides.intro.button"
 msgstr "Τέλεια, θέλω να βοηθήσω κι εγώ"
 
-#: src/components/screens/About.jsx:25 src/components/screens/Welcome/ui.jsx:21
+#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:91
 msgid "welcome-screen.slides.how-to.headline"
 msgstr "Ένα ημερολόγιο για τη υγεία μας"
 
-#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:22
+#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:92
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
 "Σημειώσε ποιον έχεις συναντήσει, τους δημόσιους χώρους που έχεις επισκεφθεί "
 "και σύμβαλλε στην υγεία όλων."
 
-#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:23
+#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:93
 msgid "welcome-screen.slides.how-to.button"
 msgstr "εντάξει"
 
-#: src/components/screens/About.jsx:32 src/components/screens/Welcome/ui.jsx:37
+#: src/components/screens/About.jsx:33
+#: src/components/screens/Welcome/ui.jsx:107
 msgid "welcome-screen.slides.local-data.headline"
 msgstr "Τα δεδομένα σου είναι μόνο δικά σου"
 
-#: src/components/screens/About.jsx:33 src/components/screens/Welcome/ui.jsx:38
+#: src/components/screens/About.jsx:34
+#: src/components/screens/Welcome/ui.jsx:108
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 "Όλα τα δεδομένα που δημιουργούνται και χρησιμοποιούνται από την Coronika "
 "αποθηκεύονται τοπικά και δεν παρακολουθούνται ούτε διαβιβάζονται."
 
-#: src/components/screens/About.jsx:34 src/components/screens/Welcome/ui.jsx:39
+#: src/components/screens/About.jsx:35
+#: src/components/screens/Welcome/ui.jsx:109
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Ξεκίνα τώρα"
+
+#: src/components/screens/About.jsx:57 src/components/screens/Menu.jsx:109
+msgid "about-screen.header.headline"
+msgstr "Σχετικά με τη Coronika"
 
 #: src/components/screens/AddEntry/ui.jsx:10
 msgid "add-entry-screen.header.headline"
 msgstr "Προσθήκη καταχώρησης"
 
-#: src/components/screens/Dashboard/ui.jsx:153
+#: src/components/screens/Dashboard/ui.jsx:149
 #: src/components/screens/Menu.jsx:128
 msgid "menu-screen.header.headline"
 msgstr "Μενού"
 
-#: src/components/screens/Dashboard/ui.jsx:163
+#: src/components/screens/Dashboard/ui.jsx:159
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Κάνε κλικ στη σημερινή ημερομηνία για να εισάγεις τα πρώτα σου άτομα ή "
 "τοποθεσίες."
 
-#: src/components/screens/Dashboard/ui.jsx:165
+#: src/components/screens/Dashboard/ui.jsx:161
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: src/components/screens/Dashboard/ui.jsx:182
+#: src/components/screens/Dashboard/ui.jsx:178
 msgid "dashboard-screen.list.load-more"
 msgstr "φόρτωσε περισσότερα"
 
-#: src/components/screens/Day/ui.jsx:62
+#: src/components/screens/Day/ui.jsx:58
 msgid "day-screen.header.headline"
 msgstr "Ημερήσια επισκόπηση"
 
-#: src/components/screens/Day/ui.jsx:69
+#: src/components/screens/Day/ui.jsx:65
 msgid "day-screen.locations.empty"
 msgstr "Δεν έχεις προσθέσει τοποθεσίες για αυτήν την ημέρα."
 
-#: src/components/screens/Day/ui.jsx:70
+#: src/components/screens/Day/ui.jsx:66
 msgid "day-screen.persons.empty"
 msgstr "Δεν έχεις προσθέσει καμία επαφή για αυτήν την ημέρα."
 
-#: src/components/screens/Day/ui.jsx:81
+#: src/components/screens/Day/ui.jsx:77
 msgid "day-screen.entries.add"
 msgstr "Προσθήκη καταχώρησης"
 
@@ -515,90 +518,90 @@ msgstr ""
 msgid "menu-screen.button.send-feedback"
 msgstr "Στείλε τα σχόλιά σου"
 
-#: src/components/screens/Overview/ui.jsx:118
+#: src/components/screens/Overview/ui.jsx:114
 msgid "overview-screen.export.button"
 msgstr "Σύνοψη εξαγωγών"
 
-#: src/components/screens/Overview/ui.jsx:92
+#: src/components/screens/Overview/ui.jsx:88
 msgid "overview-screen.header.headline"
 msgstr "Σύνοψη "
 
-#: src/components/screens/Settings/logic.js:154
+#: src/components/screens/Settings/logic.js:150
 msgid "notifications.diary.headline"
 msgstr "📒 Κατέγραψε τις επαφές σου"
 
-#: src/components/screens/Settings/logic.js:155
+#: src/components/screens/Settings/logic.js:151
 msgid "notifications.diary.text"
 msgstr ""
 "Κατέγραψε τις στενές επαφές σου και κάνε μια συμβολή στην επιβράδυνση της "
 "εξάπλωσης του κορωνοϊού."
 
-#: src/components/screens/Settings/logic.js:170
+#: src/components/screens/Settings/logic.js:166
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽 Κράτα την οθόνη σου καθαρή"
 
-#: src/components/screens/Settings/logic.js:171
+#: src/components/screens/Settings/logic.js:167
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr ""
 "Απομάκρυνε από την οθόνη σου διάφορα μικρόβια, βακτήρια και άλλα παθογόνα."
 
-#: src/components/screens/Settings/logic.js:174
+#: src/components/screens/Settings/logic.js:170
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 Καθάρισε το τηλέφωνό σου"
 
-#: src/components/screens/Settings/logic.js:175
+#: src/components/screens/Settings/logic.js:171
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr ""
 "Κρατώντας το τηλέφωνο σου καθαρό είναι άλλος ένας έξυπνος τρόπος για να "
 "κρατήσεις τα μικρόβια μακριά από τα δάχτυλά σου."
 
-#: src/components/screens/Settings/logic.js:178
+#: src/components/screens/Settings/logic.js:174
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Καθάρισε την οθόνη του smartphone σου"
 
-#: src/components/screens/Settings/logic.js:179
+#: src/components/screens/Settings/logic.js:175
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr ""
 "Απομάκρυνε τα μικρόβια καθαρίζοντας την οθόνη σου με ένα απολυμαντικό "
 "καθαριστικό."
 
-#: src/components/screens/Settings/logic.js:195
-#: src/components/screens/Settings/logic.js:228
-#: src/components/screens/Settings/logic.js:243
+#: src/components/screens/Settings/logic.js:191
+#: src/components/screens/Settings/logic.js:224
+#: src/components/screens/Settings/logic.js:239
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "Εάν έχεις βγεί έξω, καθάρισε τα χέρια σου καλά."
+
+#: src/components/screens/Settings/logic.js:192
+#: src/components/screens/Settings/logic.js:225
+#: src/components/screens/Settings/logic.js:240
+msgid "notifications.washing-hands.variant-1.headline"
+msgstr "🤚💧 Πλύνε τα χέρια σου"
 
 #: src/components/screens/Settings/logic.js:196
 #: src/components/screens/Settings/logic.js:229
 #: src/components/screens/Settings/logic.js:244
-msgid "notifications.washing-hands.variant-1.headline"
-msgstr "🤚💧 Πλύνε τα χέρια σου"
-
-#: src/components/screens/Settings/logic.js:200
-#: src/components/screens/Settings/logic.js:233
-#: src/components/screens/Settings/logic.js:248
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Το πλύσιμο των χεριών σου είναι ένας από τους απλούστερους τρόπους για να "
 "προστατέψεις τον εαυτό σου και τους άλλους από ασθένειες."
 
-#: src/components/screens/Settings/logic.js:201
-#: src/components/screens/Settings/logic.js:234
-#: src/components/screens/Settings/logic.js:249
+#: src/components/screens/Settings/logic.js:197
+#: src/components/screens/Settings/logic.js:230
+#: src/components/screens/Settings/logic.js:245
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Έπλυνες τα χέρια σου;"
 
-#: src/components/screens/Settings/logic.js:205
-#: src/components/screens/Settings/logic.js:238
-#: src/components/screens/Settings/logic.js:253
+#: src/components/screens/Settings/logic.js:201
+#: src/components/screens/Settings/logic.js:234
+#: src/components/screens/Settings/logic.js:249
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Πλείνε τα χέρια σου με προσοχή και μην ξεχάσεις να καθαρίσεις τις άκρες των "
 "δακτύλων σου και το διάστημα μεταξύ των δακτύλων."
 
-#: src/components/screens/Settings/logic.js:206
-#: src/components/screens/Settings/logic.js:239
-#: src/components/screens/Settings/logic.js:254
+#: src/components/screens/Settings/logic.js:202
+#: src/components/screens/Settings/logic.js:235
+#: src/components/screens/Settings/logic.js:250
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 Μην ξεχάσεις τις άκρες των δαχτύλων σου!"
 
@@ -634,7 +637,35 @@ msgstr "Υπενθύμιση για χρήση ημερολογίου"
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "καθημερινή υπενθύμιση "
 
-#: src/components/screens/TipAmIInfected.jsx:100
+#: src/components/screens/TipAmIInfected.jsx:16
+msgid "tips.am-i-infected.list.item-1"
+msgstr "Μείνε σπίτι"
+
+#: src/components/screens/TipAmIInfected.jsx:17
+msgid "tips.am-i-infected.list.item-2"
+msgstr "Επικοινώνησε με το γιατρό σου"
+
+#: src/components/screens/TipAmIInfected.jsx:18
+msgid "tips.am-i-infected.list.item-3"
+msgstr "Πες για το ημερολόγιό σου από τη Coronika"
+
+#: src/components/screens/TipAmIInfected.jsx:23
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:33
+#: src/components/screens/TipMouthguard.jsx:28
+#: src/components/screens/TipNotFeelingWell.jsx:24
+#: src/components/screens/TipReliableSources.jsx:51
+#: src/components/screens/TipWashingHands.jsx:25
+#: src/components/screens/Tips.jsx:107
+msgid "tips-screen.header.headline"
+msgstr "Συμβουλές υγιεινής"
+
+#: src/components/screens/TipAmIInfected.jsx:27
+#: src/components/screens/Tips.jsx:95
+msgid "tips.am-i-infected.headline"
+msgstr "Φοβάμαι ότι έχω κολλήσει τον κορονοιὸ, τι μπορώ να κάνω;"
+
+#: src/components/screens/TipAmIInfected.jsx:31
 msgid "tips.am-i-infected.text"
 msgstr ""
 "Εάν ανησυχείς ότι μπορεί να έχεις μολυνθεί, μείνε στο σπίτι για να μην "
@@ -645,123 +676,97 @@ msgstr ""
 "μπορείς απλά να εξάγεις το ημερολόγιό σου και να το στείλεις στις αρμόδιες "
 "αρχές."
 
-#: src/components/screens/TipAmIInfected.jsx:115
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:118
-#: src/components/screens/TipCoughingSneezing.jsx:118
-#: src/components/screens/TipMouthguard.jsx:125
-#: src/components/screens/TipNotFeelingWell.jsx:119
-#: src/components/screens/TipWashingHands.jsx:118
-msgid "tips.sources.headline"
-msgstr "Πηγές"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
+msgid "tips.avoid-crowds-of-people.list.item-1"
+msgstr "Απέφευγε μεγάλες δημόσιες συναντήσεις εάν δεν είναι απαραίτητες"
 
-#: src/components/screens/TipAmIInfected.jsx:129
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:129
-#: src/components/screens/TipCoughingSneezing.jsx:138
-#: src/components/screens/TipMouthguard.jsx:143
-#: src/components/screens/TipNotFeelingWell.jsx:131
-#: src/components/screens/TipWashingHands.jsx:132
-msgid "tips.sources.last-updated"
-msgstr "Τελευταία ενημέρωση:"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
+msgid "tips.avoid-crowds-of-people.list.item-2"
+msgstr ""
+"Για μικρές αποστάσεις προτίμησε να περπατάς αντί να χρησιμοποιείς τα μέσα "
+"μαζικής μεταφοράς"
 
-#: src/components/screens/TipAmIInfected.jsx:87
-msgid "tips.am-i-infected.list.item-1"
-msgstr "Μείνε σπίτι"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
+msgid "tips.avoid-crowds-of-people.list.item-3"
+msgstr "πλύνε τα χέρια σου τακτικά και σχολαστικά"
 
-#: src/components/screens/TipAmIInfected.jsx:88
-msgid "tips.am-i-infected.list.item-2"
-msgstr "Επικοινώνησε με το γιατρό σου"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
+msgid "tips.avoid-crowds-of-people.list.item-4"
+msgstr "διατήρησε απόσταση περίπου 2 μέτρων μεταξύ εσού και άλλων ανθρώπων"
 
-#: src/components/screens/TipAmIInfected.jsx:89
-msgid "tips.am-i-infected.list.item-3"
-msgstr "Πες για το ημερολόγιό σου από τη Coronika"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:22
+msgid "tips.avoid-crowds-of-people.list.item-5"
+msgstr ""
+"κάλυψε τον βήχα και το φτάρνισμά σου με ένα χαρτομάντιλο ή με την μασχάλη σου"
 
-#: src/components/screens/TipAmIInfected.jsx:94
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:97
-#: src/components/screens/TipCoughingSneezing.jsx:97
-#: src/components/screens/TipMouthguard.jsx:99
-#: src/components/screens/TipNotFeelingWell.jsx:96
-#: src/components/screens/TipReliableSources.jsx:81
-#: src/components/screens/TipWashingHands.jsx:97
-#: src/components/screens/Tips.jsx:107
-msgid "tips-screen.header.headline"
-msgstr "Συμβουλές υγιεινής"
-
-#: src/components/screens/TipAmIInfected.jsx:99
-#: src/components/screens/Tips.jsx:95
-msgid "tips.am-i-infected.headline"
-msgstr "Φοβάμαι ότι έχω κολλήσει τον κορονοιὸ, τι μπορώ να κάνω;"
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:102
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:31
 #: src/components/screens/Tips.jsx:78
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Απέφευγε πλήθη ανθρώπων"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:103
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:35
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
 "Εάν είναι δυνατό, μη χρησιμοποιείς τα μέσα μαζικής μεταφοράς και αντ 'αυτού "
 "εργάσου από το σπίτι. Σε γενικές γραμμές, οι επαφές με άλλους ανθρώπους "
 "πρέπει να μειωθούν όσο το δυνατό περισσότερο."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:88
-msgid "tips.avoid-crowds-of-people.list.item-1"
-msgstr "Απέφευγε μεγάλες δημόσιες συναντήσεις εάν δεν είναι απαραίτητες"
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:89
-msgid "tips.avoid-crowds-of-people.list.item-2"
-msgstr ""
-"Για μικρές αποστάσεις προτίμησε να περπατάς αντί να χρησιμοποιείς τα μέσα "
-"μαζικής μεταφοράς"
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:90
-msgid "tips.avoid-crowds-of-people.list.item-3"
-msgstr "πλύνε τα χέρια σου τακτικά και σχολαστικά"
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:91
-msgid "tips.avoid-crowds-of-people.list.item-4"
-msgstr "διατήρησε απόσταση περίπου 2 μέτρων μεταξύ εσού και άλλων ανθρώπων"
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:92
-msgid "tips.avoid-crowds-of-people.list.item-5"
-msgstr ""
-"κάλυψε τον βήχα και το φτάρνισμά σου με ένα χαρτομάντιλο ή με την μασχάλη σου"
-
-#: src/components/screens/TipCoughingSneezing.jsx:102
-#: src/components/screens/Tips.jsx:87
-msgid "tips.coughing-sneezing.headline"
-msgstr "Βήχας και φτάρνισμα όπως αρμόζει"
-
-#: src/components/screens/TipCoughingSneezing.jsx:103
-msgid "tips.coughing-sneezing.text"
-msgstr "Για να αποτρέψεις την εξάπλωση ιών, δώσε προσοχή στα παρακάτω:"
-
-#: src/components/screens/TipCoughingSneezing.jsx:88
+#: src/components/screens/TipCoughingSneezing.jsx:24
 msgid "tips.coughing-sneezing.list.item-1"
 msgstr "διατήρησε απόσταση περίπου 2 μέτρων μεταξύ εσού και άλλων ανθρώπων"
 
-#: src/components/screens/TipCoughingSneezing.jsx:89
+#: src/components/screens/TipCoughingSneezing.jsx:25
 msgid "tips.coughing-sneezing.list.item-2"
 msgstr "Γύρισε την πλάτη σε άλλους ανθρώπους"
 
-#: src/components/screens/TipCoughingSneezing.jsx:90
+#: src/components/screens/TipCoughingSneezing.jsx:26
 msgid "tips.coughing-sneezing.list.item-3"
 msgstr ""
 "κάλυψε τον βήχα και το φτάρνισμά σου με ένα χαρτομάντιλο ή με την μασχάλη σου"
 
-#: src/components/screens/TipCoughingSneezing.jsx:91
+#: src/components/screens/TipCoughingSneezing.jsx:27
 msgid "tips.coughing-sneezing.list.item-4"
 msgstr "Πέταξε χρησιμοποιημένα χαρτομάντιλα στα σκουπίδια"
 
-#: src/components/screens/TipCoughingSneezing.jsx:92
+#: src/components/screens/TipCoughingSneezing.jsx:28
 msgid "tips.coughing-sneezing.list.item-5"
 msgstr "πλύνε στη συνέχεια τα χέρια σου "
 
-#: src/components/screens/TipMouthguard.jsx:104
+#: src/components/screens/TipCoughingSneezing.jsx:37
+#: src/components/screens/Tips.jsx:87
+msgid "tips.coughing-sneezing.headline"
+msgstr "Βήχας και φτάρνισμα όπως αρμόζει"
+
+#: src/components/screens/TipCoughingSneezing.jsx:41
+msgid "tips.coughing-sneezing.text"
+msgstr "Για να αποτρέψεις την εξάπλωση ιών, δώσε προσοχή στα παρακάτω:"
+
+#: src/components/screens/TipMouthguard.jsx:20
+msgid "tips.mouthguard.list.item-1"
+msgstr "η μάσκα είναι κατασκευασμένη από χαρτί"
+
+#: src/components/screens/TipMouthguard.jsx:21
+msgid "tips.mouthguard.list.item-2"
+msgstr "η μάσκα δεν ταιριάζει σφιχτά στο πρόσωπο ή παρουσιάζει διαρροή"
+
+#: src/components/screens/TipMouthguard.jsx:22
+msgid "tips.mouthguard.list.item-3"
+msgstr "γίνεται υγρή μέσω της αναπνοής"
+
+#: src/components/screens/TipMouthguard.jsx:23
+msgid "tips.mouthguard.list.item-4"
+msgstr "δεν ανανεώνεται περισσότερες φορές καθημερινά"
+
+#: src/components/screens/TipMouthguard.jsx:32
 #: src/components/screens/Tips.jsx:82
 msgid "tips.mouthguard.headline"
 msgstr "Επιστόμιο, ναι ή όχι;"
 
-#: src/components/screens/TipMouthguard.jsx:105
+#: src/components/screens/TipMouthguard.jsx:35
+msgid "tips.mouthguard.list.intro"
+msgstr "Η χρήση μιας μάσκας έξω από το χειρουργίο δεν έχει καμία επίδραση εαν:"
+
+#: src/components/screens/TipMouthguard.jsx:37
 msgid "tips.mouthguard.text-1"
 msgstr ""
 "Οι μάσκες είναι απαραίτητες για όλους τους τομείς της υγείας. Για τους "
@@ -770,70 +775,50 @@ msgstr ""
 "εάν ο γιατρός σου στο συνιστήσει. Διαφορετικά απλά ακολούθησε τους κανόνες "
 "υγιεινής."
 
-#: src/components/screens/TipMouthguard.jsx:107
+#: src/components/screens/TipMouthguard.jsx:37
 msgid "tips.mouthguard.text-2"
 msgstr ""
 "Οι Γιατροί φοράνε μάσκες για να μειώσουν την εξάπλωση μικροσκοπικών "
 "σταγονιδίων όταν βήχουν ή φταρνίζονται."
 
-#: src/components/screens/TipMouthguard.jsx:112
-msgid "tips.mouthguard.list.intro"
-msgstr "Η χρήση μιας μάσκας έξω από το χειρουργίο δεν έχει καμία επίδραση εαν:"
+#: src/components/screens/TipNotFeelingWell.jsx:16
+msgid "tips.not-feeling-well.list.item-1"
+msgstr "αναπνευστικά συμπτώματα"
 
-#: src/components/screens/TipMouthguard.jsx:91
-msgid "tips.mouthguard.list.item-1"
-msgstr "η μάσκα είναι κατασκευασμένη από χαρτί"
+#: src/components/screens/TipNotFeelingWell.jsx:17
+msgid "tips.not-feeling-well.list.item-2"
+msgstr "πυρετός"
 
-#: src/components/screens/TipMouthguard.jsx:92
-msgid "tips.mouthguard.list.item-2"
-msgstr "η μάσκα δεν ταιριάζει σφιχτά στο πρόσωπο ή παρουσιάζει διαρροή"
+#: src/components/screens/TipNotFeelingWell.jsx:18
+msgid "tips.not-feeling-well.list.item-3"
+msgstr "βήχας"
 
-#: src/components/screens/TipMouthguard.jsx:93
-msgid "tips.mouthguard.list.item-3"
-msgstr "γίνεται υγρή μέσω της αναπνοής"
+#: src/components/screens/TipNotFeelingWell.jsx:19
+msgid "tips.not-feeling-well.list.item-4"
+msgstr "δυσκολία στην αναπνοή"
 
-#: src/components/screens/TipMouthguard.jsx:94
-msgid "tips.mouthguard.list.item-4"
-msgstr "δεν ανανεώνεται περισσότερες φορές καθημερινά"
-
-#: src/components/screens/TipNotFeelingWell.jsx:101
+#: src/components/screens/TipNotFeelingWell.jsx:28
 #: src/components/screens/Tips.jsx:91
 msgid "tips.not-feeling-well.headline"
 msgstr "Δεν αισθάνομαι καλά, έχω τον κορονοιό;"
 
-#: src/components/screens/TipNotFeelingWell.jsx:102
+#: src/components/screens/TipNotFeelingWell.jsx:31
+msgid "tips.not-feeling-well.list.intro"
+msgstr "Τα τυπικά συμπτώματα του COVID-19 σύμφωνα με την WHO είναι:"
+
+#: src/components/screens/TipNotFeelingWell.jsx:33
 msgid "tips.not-feeling-well.text"
 msgstr ""
 "Ασθενείς με συμπτώματα γρίπης δεν είναι απαραίτητα φορείς του ιού SARS-"
 "CoV-2. Θα πρέπει πάντα να ενημερώνεσε για τα συμπτώματά σου και να "
 "επικοινωνείς με το γιατρό σου."
 
-#: src/components/screens/TipNotFeelingWell.jsx:106
-msgid "tips.not-feeling-well.list.intro"
-msgstr "Τα τυπικά συμπτώματα του COVID-19 σύμφωνα με την WHO είναι:"
-
-#: src/components/screens/TipNotFeelingWell.jsx:88
-msgid "tips.not-feeling-well.list.item-1"
-msgstr "αναπνευστικά συμπτώματα"
-
-#: src/components/screens/TipNotFeelingWell.jsx:89
-msgid "tips.not-feeling-well.list.item-2"
-msgstr "πυρετός"
-
-#: src/components/screens/TipNotFeelingWell.jsx:90
-msgid "tips.not-feeling-well.list.item-3"
-msgstr "βήχας"
-
-#: src/components/screens/TipNotFeelingWell.jsx:91
-msgid "tips.not-feeling-well.list.item-4"
-msgstr "δυσκολία στην αναπνοή"
-
-#: src/components/screens/TipReliableSources.jsx:86
+#: src/components/screens/TipReliableSources.jsx:56
 #: src/components/screens/Tips.jsx:99
 msgid "tips.reliable-sources.headline"
 msgstr "Πού μπορώ να βρω αξιόπιστες πηγές;"
 
-#: src/components/screens/TipReliableSources.jsx:87
+#: src/components/screens/TipReliableSources.jsx:57
 msgid "tips.reliable-sources.text"
 msgstr "Ενημερωτικές ιστοσελίδες"
 
@@ -844,12 +829,34 @@ msgstr ""
 "περισσότερο τον κίνδυνο μόλυνσης και να κάνεις το σωστό σε περίπτωση "
 "μόλυνσης."
 
-#: src/components/screens/TipWashingHands.jsx:102
+#: src/components/screens/TipWashingHands.jsx:16
+msgid "tips.washing-hands.list.item-1"
+msgstr "Βρέξε τα χέρια σου με καθαρό, τρεχούμενο νερό (ζεστό ή κρύο)"
+
+#: src/components/screens/TipWashingHands.jsx:17
+msgid "tips.washing-hands.list.item-2"
+msgstr "εφάρμοσε σαπούνι και τρίψε καλά τα χέρια σου."
+
+#: src/components/screens/TipWashingHands.jsx:18
+msgid "tips.washing-hands.list.item-3"
+msgstr ""
+"Τρίψε το πίσω μέρος των χεριών, τους αντίχειρες, τα νύχια και το μέρος "
+"ανάμεσα στα δάχτυλά σου για περίπου 30-60 δευτερόλεπτα."
+
+#: src/components/screens/TipWashingHands.jsx:19
+msgid "tips.washing-hands.list.item-4"
+msgstr "Ξέπλυνε τα χέρια σου καλά κάτω από καθαρό, τρεχούμενο νερό."
+
+#: src/components/screens/TipWashingHands.jsx:20
+msgid "tips.washing-hands.list.item-5"
+msgstr "Στέγνωσε τα χέρια σου χρησιμοποιώντας μια καθαρή πετσέτα ή στεγνωτήρα."
+
+#: src/components/screens/TipWashingHands.jsx:29
 #: src/components/screens/Tips.jsx:74
 msgid "tips.washing-hands.headline"
 msgstr "Πλένοντας τα χέρια σου"
 
-#: src/components/screens/TipWashingHands.jsx:103
+#: src/components/screens/TipWashingHands.jsx:33
 msgid "tips.washing-hands.text"
 msgstr ""
 "Το πλύσιμο των χεριών σου είναι εύκολο και είναι ένας από τους πιο "
@@ -857,51 +864,29 @@ msgstr ""
 "χέρια μπορούν να σταματήσουν τη διάδοση μικροβίων. Απλά ακολούθησε αυτά τα "
 "πέντε βήματα:"
 
-#: src/components/screens/TipWashingHands.jsx:88
-msgid "tips.washing-hands.list.item-1"
-msgstr "Βρέξε τα χέρια σου με καθαρό, τρεχούμενο νερό (ζεστό ή κρύο)"
+#: src/components/screens/Welcome/ui.jsx:100
+msgid "welcome-screen.slides.notifications.button-skip"
+msgstr "Παράλειψη"
 
-#: src/components/screens/TipWashingHands.jsx:89
-msgid "tips.washing-hands.list.item-2"
-msgstr "εφάρμοσε σαπούνι και τρίψε καλά τα χέρια σου."
+#: src/components/screens/Welcome/ui.jsx:101
+msgid "welcome-screen.slides.notifications.button"
+msgstr "Ενεργοποίηση τώρα"
 
-#: src/components/screens/TipWashingHands.jsx:90
-msgid "tips.washing-hands.list.item-3"
-msgstr ""
-"Τρίψε το πίσω μέρος των χεριών, τους αντίχειρες, τα νύχια και το μέρος "
-"ανάμεσα στα δάχτυλά σου για περίπου 30-60 δευτερόλεπτα."
-
-#: src/components/screens/TipWashingHands.jsx:91
-msgid "tips.washing-hands.list.item-4"
-msgstr "Ξέπλυνε τα χέρια σου καλά κάτω από καθαρό, τρεχούμενο νερό."
-
-#: src/components/screens/TipWashingHands.jsx:92
-msgid "tips.washing-hands.list.item-5"
-msgstr "Στέγνωσε τα χέρια σου χρησιμοποιώντας μια καθαρή πετσέτα ή στεγνωτήρα."
-
-#: src/components/screens/Welcome/ui.jsx:28
+#: src/components/screens/Welcome/ui.jsx:98
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "Έπλυνες τα χέρια σου;"
 
-#: src/components/screens/Welcome/ui.jsx:29
+#: src/components/screens/Welcome/ui.jsx:99
 msgid "welcome-screen.slides.notifications.text"
 msgstr ""
 "Ενεργοποίησε τις ειδοποιήσεις σου και θα υπενθυμίζεσε τακτικά να πλένεις τα "
 "χέρια σου για να αποφύγεις τη μόλυνση."
 
-#: src/components/screens/Welcome/ui.jsx:30
-msgid "welcome-screen.slides.notifications.button-skip"
-msgstr "Παράλειψη"
-
-#: src/components/screens/Welcome/ui.jsx:31
-msgid "welcome-screen.slides.notifications.button"
-msgstr "Ενεργοποίηση τώρα"
-
-#: src/components/widgets/DayOverview.jsx:128
+#: src/components/widgets/DayOverview.jsx:21
 msgid "today"
 msgstr "σήμερα"
 
-#: src/components/widgets/DayOverview.jsx:134
+#: src/components/widgets/DayOverview.jsx:27
 msgid "total"
 msgstr "σύνολο"
 
@@ -909,17 +894,10 @@ msgstr "σύνολο"
 msgid "placeholder.search-input"
 msgstr "Αναζήτηση"
 
-#~ msgid "notifications.desinfect-smartphone.variant-2.headline"
-#~ msgstr "📱🧽 Κράτα την οθόνη σου καθαρή"
+#: src/components/widgets/Tip.jsx:127
+msgid "tips.sources.headline"
+msgstr "Πηγές"
 
-#~ msgid "notifications.desinfect-smartphone.variant-2.text"
-#~ msgstr ""
-#~ "Απομάκρυνε από την οθόνη σου διάφορα μικρόβια, βακτήρια και άλλα παθογόνα."
-
-#~ msgid "notifications.desinfect-smartphone.variant-3.headline"
-#~ msgstr "📱🧽 Καθάρισε το τηλέφωνό σου"
-
-#~ msgid "notifications.desinfect-smartphone.variant-3.text"
-#~ msgstr ""
-#~ "Κρατώντας το τηλέφωνο σου καθαρό είναι άλλος ένας έξυπνος τρόπος για να "
-#~ "κρατήσεις τα μικρόβια μακριά από τα δάχτυλά σου."
+#: src/components/widgets/Tip.jsx:138
+msgid "tips.sources.last-updated"
+msgstr "Τελευταία ενημέρωση:"

@@ -35,197 +35,200 @@ msgstr "Distribuie"
 msgid "navigation.tips.label"
 msgstr "sfaturi"
 
-#: src/components/partials/EntriesTabsView.jsx:621
-#: src/components/widgets/DayOverview.jsx:166
+#: src/components/partials/EntriesTabsView.jsx:623
+#: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "persoane"
 
-#: src/components/partials/EntriesTabsView.jsx:631
-#: src/components/widgets/DayOverview.jsx:150
+#: src/components/partials/EntriesTabsView.jsx:633
+#: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "locații"
 
-#: src/components/partials/EntriesTabsView.jsx:643
+#: src/components/partials/EntriesTabsView.jsx:645
 msgid "entries.persons.list.new"
 msgstr "Persoană nouă"
 
-#: src/components/partials/EntriesTabsView.jsx:664
-#: src/components/partials/EntriesTabsView.jsx:714
+#: src/components/partials/EntriesTabsView.jsx:666
+#: src/components/partials/EntriesTabsView.jsx:716
 msgid "entries.search.list.empty"
 msgstr "Nu s-a putut găsi nimic în căutarea ta."
 
-#: src/components/partials/EntriesTabsView.jsx:671
+#: src/components/partials/EntriesTabsView.jsx:673
 msgid "entries.persons.list.empty"
 msgstr ""
 "Nu ai creat o persoană. Pentru a începe imediat, poti importa persoane din "
 "agenda telefonică."
 
-#: src/components/partials/EntriesTabsView.jsx:675
+#: src/components/partials/EntriesTabsView.jsx:677
 msgid "entries.persons.list.import.button"
 msgstr "Importa acum"
 
-#: src/components/partials/EntriesTabsView.jsx:694
+#: src/components/partials/EntriesTabsView.jsx:696
 msgid "entries.locations.list.new"
 msgstr "Locație nouă"
 
-#: src/components/partials/EntriesTabsView.jsx:717
+#: src/components/partials/EntriesTabsView.jsx:719
 msgid "entries.locations.list.empty"
 msgstr "Încă nu ai creat o locație. Începe acum și creaza prima locație."
 
-#: src/components/partials/EntriesTabsView.jsx:733
+#: src/components/partials/EntriesTabsView.jsx:735
 msgid "entries.selection.add"
 msgstr "Adăuga selecția"
 
-#: src/components/partials/EntriesTabsView.jsx:745
+#: src/components/partials/EntriesTabsView.jsx:747
 msgid "entries.modals.update-person.headline"
 msgstr "Editează persoana"
 
-#: src/components/partials/EntriesTabsView.jsx:746
+#: src/components/partials/EntriesTabsView.jsx:748
 msgid "entries.modals.new-person.headline"
 msgstr "Persoană nouă"
 
-#: src/components/partials/EntriesTabsView.jsx:757
+#: src/components/partials/EntriesTabsView.jsx:759
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Nume"
 
-#: src/components/partials/EntriesTabsView.jsx:769
+#: src/components/partials/EntriesTabsView.jsx:771
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Telefon"
 
-#: src/components/partials/EntriesTabsView.jsx:782
+#: src/components/partials/EntriesTabsView.jsx:784
 msgid "entries.modals.update-person.button"
 msgstr "Salveaza"
 
-#: src/components/partials/EntriesTabsView.jsx:783
+#: src/components/partials/EntriesTabsView.jsx:785
 msgid "entries.modals.new-person.button"
 msgstr "Adăuga"
 
-#: src/components/partials/EntriesTabsView.jsx:795
+#: src/components/partials/EntriesTabsView.jsx:797
 msgid "entries.modals.update-location.headline"
 msgstr "Editeaza locația"
 
-#: src/components/partials/EntriesTabsView.jsx:796
+#: src/components/partials/EntriesTabsView.jsx:798
 msgid "entries.modals.new-location.headline"
 msgstr "Locație nouă"
 
-#: src/components/partials/EntriesTabsView.jsx:807
+#: src/components/partials/EntriesTabsView.jsx:809
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Titlu"
 
-#: src/components/partials/EntriesTabsView.jsx:818
+#: src/components/partials/EntriesTabsView.jsx:820
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Descriere"
 
-#: src/components/partials/EntriesTabsView.jsx:831
+#: src/components/partials/EntriesTabsView.jsx:833
 msgid "entries.modals.update-location.button"
 msgstr "Salveaza"
 
-#: src/components/partials/EntriesTabsView.jsx:832
+#: src/components/partials/EntriesTabsView.jsx:834
 msgid "entries.modals.new-location.button"
 msgstr "Adăuga"
 
-#: src/components/partials/EntriesTabsView.jsx:842
+#: src/components/partials/EntriesTabsView.jsx:844
 msgid "entries.modals.select-location.headline"
 msgstr "Selecteaza locația"
 
-#: src/components/partials/EntriesTabsView.jsx:861
+#: src/components/partials/EntriesTabsView.jsx:863
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Descriere"
 
-#: src/components/partials/EntriesTabsView.jsx:876
+#: src/components/partials/EntriesTabsView.jsx:878
 msgid "Cancel"
 msgstr "Anuleaza"
 
-#: src/components/partials/EntriesTabsView.jsx:877
+#: src/components/partials/EntriesTabsView.jsx:879
 msgid "Confirm"
 msgstr "Confirma"
 
-#: src/components/partials/EntriesTabsView.jsx:890
+#: src/components/partials/EntriesTabsView.jsx:892
 msgid "entries.modals.select-location.button"
 msgstr "Selecteaza"
 
-#: src/components/screens/About.jsx:105 src/components/screens/Menu.jsx:109
-msgid "about-screen.header.headline"
-msgstr "Despre Coronika"
-
-#: src/components/screens/About.jsx:18 src/components/screens/Welcome/ui.jsx:14
+#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:84
 msgid "welcome-screen.slides.intro.headline"
 msgstr "Combaterea corona-virusul împreună"
 
-#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:15
+#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:85
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
 "Conecteaza persoanele și locațiile, reconstruieste căile de infecție și "
 "ajuta la oprirea răspândirii."
 
-#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:16
+#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:86
 msgid "welcome-screen.slides.intro.button"
 msgstr "Bine, vreau să ajut și eu"
 
-#: src/components/screens/About.jsx:25 src/components/screens/Welcome/ui.jsx:21
+#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:91
 msgid "welcome-screen.slides.how-to.headline"
 msgstr "Un jurnal pentru sănătatea noastră colectivă"
 
-#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:22
+#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:92
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
 "Scrie pe cine ai întâlnit, locurile publice pe care le-ai vizitat și "
 "contribuie la sănătatea tuturor."
 
-#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:23
+#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:93
 msgid "welcome-screen.slides.how-to.button"
 msgstr "Foarte bine"
 
-#: src/components/screens/About.jsx:32 src/components/screens/Welcome/ui.jsx:37
+#: src/components/screens/About.jsx:33
+#: src/components/screens/Welcome/ui.jsx:107
 msgid "welcome-screen.slides.local-data.headline"
 msgstr "Datele tale sunt singure"
 
-#: src/components/screens/About.jsx:33 src/components/screens/Welcome/ui.jsx:38
+#: src/components/screens/About.jsx:34
+#: src/components/screens/Welcome/ui.jsx:108
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 "Toate datele create și utilizate de Coronika sunt stocate local și nu vor fi "
 "urmărite sau transmise."
 
-#: src/components/screens/About.jsx:34 src/components/screens/Welcome/ui.jsx:39
+#: src/components/screens/About.jsx:35
+#: src/components/screens/Welcome/ui.jsx:109
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Începe acum"
+
+#: src/components/screens/About.jsx:57 src/components/screens/Menu.jsx:109
+msgid "about-screen.header.headline"
+msgstr "Despre Coronika"
 
 #: src/components/screens/AddEntry/ui.jsx:10
 msgid "add-entry-screen.header.headline"
 msgstr "Adaugă înregistrare"
 
-#: src/components/screens/Dashboard/ui.jsx:153
+#: src/components/screens/Dashboard/ui.jsx:149
 #: src/components/screens/Menu.jsx:128
 msgid "menu-screen.header.headline"
 msgstr "Meniul"
 
-#: src/components/screens/Dashboard/ui.jsx:163
+#: src/components/screens/Dashboard/ui.jsx:159
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Faceți clic pe data de astăzi pentru a introduce primele persoane sau "
 "locații."
 
-#: src/components/screens/Dashboard/ui.jsx:165
+#: src/components/screens/Dashboard/ui.jsx:161
 msgid "Close"
 msgstr "Închide"
 
-#: src/components/screens/Dashboard/ui.jsx:182
+#: src/components/screens/Dashboard/ui.jsx:178
 msgid "dashboard-screen.list.load-more"
 msgstr "incarca mai mult"
 
-#: src/components/screens/Day/ui.jsx:62
+#: src/components/screens/Day/ui.jsx:58
 msgid "day-screen.header.headline"
 msgstr "Prezentare zilnică"
 
-#: src/components/screens/Day/ui.jsx:69
+#: src/components/screens/Day/ui.jsx:65
 msgid "day-screen.locations.empty"
 msgstr "Nu ai adăugat nicio locație pentru această zi."
 
-#: src/components/screens/Day/ui.jsx:70
+#: src/components/screens/Day/ui.jsx:66
 msgid "day-screen.persons.empty"
 msgstr "Nu ai adăugat nicio persoană pentru această zi."
 
-#: src/components/screens/Day/ui.jsx:81
+#: src/components/screens/Day/ui.jsx:77
 msgid "day-screen.entries.add"
 msgstr "Adaugă înregistrare"
 
@@ -499,88 +502,88 @@ msgstr ""
 msgid "menu-screen.button.send-feedback"
 msgstr "Trimite feedback"
 
-#: src/components/screens/Overview/ui.jsx:118
+#: src/components/screens/Overview/ui.jsx:114
 msgid "overview-screen.export.button"
 msgstr "Prezentare generală a exporturilor"
 
-#: src/components/screens/Overview/ui.jsx:92
+#: src/components/screens/Overview/ui.jsx:88
 msgid "overview-screen.header.headline"
 msgstr "Prezentare generală"
 
-#: src/components/screens/Settings/logic.js:154
+#: src/components/screens/Settings/logic.js:150
 msgid "notifications.diary.headline"
 msgstr "📒 Conecteaza-ti contactele"
 
-#: src/components/screens/Settings/logic.js:155
+#: src/components/screens/Settings/logic.js:151
 msgid "notifications.diary.text"
 msgstr ""
 "Conecteaza-ti contactele strânse și ajuta la încetinirea răspândirii "
 "coronavirusului."
 
-#: src/components/screens/Settings/logic.js:170
+#: src/components/screens/Settings/logic.js:166
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽 Păstreaza ecranul curat"
 
-#: src/components/screens/Settings/logic.js:171
+#: src/components/screens/Settings/logic.js:167
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr ""
 "Elibereaza-ti ecranul de numeroși germeni, bacterii și alți agenți patogeni."
 
-#: src/components/screens/Settings/logic.js:174
+#: src/components/screens/Settings/logic.js:170
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 Dezinfecteaza telefonul"
 
-#: src/components/screens/Settings/logic.js:175
+#: src/components/screens/Settings/logic.js:171
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr ""
 "Menținerea telefonului igienizat este un alt mod inteligent de a-ți reduce "
 "germenii."
 
-#: src/components/screens/Settings/logic.js:178
+#: src/components/screens/Settings/logic.js:174
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Curăța-ti ecranul smartphone-ului"
 
-#: src/components/screens/Settings/logic.js:179
+#: src/components/screens/Settings/logic.js:175
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "Îndepărteaza germenii curățând ecranul cu un ștergător dezinfectant."
 
-#: src/components/screens/Settings/logic.js:195
-#: src/components/screens/Settings/logic.js:228
-#: src/components/screens/Settings/logic.js:243
+#: src/components/screens/Settings/logic.js:191
+#: src/components/screens/Settings/logic.js:224
+#: src/components/screens/Settings/logic.js:239
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "Dacă ai fost afară, iti speli bine mâinile."
+
+#: src/components/screens/Settings/logic.js:192
+#: src/components/screens/Settings/logic.js:225
+#: src/components/screens/Settings/logic.js:240
+msgid "notifications.washing-hands.variant-1.headline"
+msgstr "🤚💧 Spăla-te pe mâini"
 
 #: src/components/screens/Settings/logic.js:196
 #: src/components/screens/Settings/logic.js:229
 #: src/components/screens/Settings/logic.js:244
-msgid "notifications.washing-hands.variant-1.headline"
-msgstr "🤚💧 Spăla-te pe mâini"
-
-#: src/components/screens/Settings/logic.js:200
-#: src/components/screens/Settings/logic.js:233
-#: src/components/screens/Settings/logic.js:248
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Spălarea mâinilor este una dintre cele mai simple metode prin care te poți "
 "proteja pe tine și pe ceilalți de boli."
 
-#: src/components/screens/Settings/logic.js:201
-#: src/components/screens/Settings/logic.js:234
-#: src/components/screens/Settings/logic.js:249
+#: src/components/screens/Settings/logic.js:197
+#: src/components/screens/Settings/logic.js:230
+#: src/components/screens/Settings/logic.js:245
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Te-ai spălat pe mâini?"
 
-#: src/components/screens/Settings/logic.js:205
-#: src/components/screens/Settings/logic.js:238
-#: src/components/screens/Settings/logic.js:253
+#: src/components/screens/Settings/logic.js:201
+#: src/components/screens/Settings/logic.js:234
+#: src/components/screens/Settings/logic.js:249
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Exerseaza spălarea atentă a mâinilor și nu uita să iti cureti vârfurile "
 "degetelor și spațiul dintre degete."
 
-#: src/components/screens/Settings/logic.js:206
-#: src/components/screens/Settings/logic.js:239
-#: src/components/screens/Settings/logic.js:254
+#: src/components/screens/Settings/logic.js:202
+#: src/components/screens/Settings/logic.js:235
+#: src/components/screens/Settings/logic.js:250
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 Nu uita varful degetelor!"
 
@@ -616,7 +619,35 @@ msgstr "Memento pentru a utiliza jurnalul"
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "reamintesc zilnic"
 
-#: src/components/screens/TipAmIInfected.jsx:100
+#: src/components/screens/TipAmIInfected.jsx:16
+msgid "tips.am-i-infected.list.item-1"
+msgstr "A sta acasa"
+
+#: src/components/screens/TipAmIInfected.jsx:17
+msgid "tips.am-i-infected.list.item-2"
+msgstr "Sună-ți medicul"
+
+#: src/components/screens/TipAmIInfected.jsx:18
+msgid "tips.am-i-infected.list.item-3"
+msgstr "Povestește despre jurnalul tău Coronika"
+
+#: src/components/screens/TipAmIInfected.jsx:23
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:33
+#: src/components/screens/TipMouthguard.jsx:28
+#: src/components/screens/TipNotFeelingWell.jsx:24
+#: src/components/screens/TipReliableSources.jsx:51
+#: src/components/screens/TipWashingHands.jsx:25
+#: src/components/screens/Tips.jsx:107
+msgid "tips-screen.header.headline"
+msgstr "Sfaturi de igienă"
+
+#: src/components/screens/TipAmIInfected.jsx:27
+#: src/components/screens/Tips.jsx:95
+msgid "tips.am-i-infected.headline"
+msgstr "Mi-e teamă că am primit coronavirusul, ce pot face?"
+
+#: src/components/screens/TipAmIInfected.jsx:31
 msgid "tips.am-i-infected.text"
 msgstr ""
 "Dacă te îngrijorează faptul că s-ar putea să fi fost infectat, ramai acasă "
@@ -626,58 +657,33 @@ msgstr ""
 "pentru a restrange răspândirea bolii. În acest caz, poti pur și simplu să "
 "exporti jurnalul și să îl trimiti autorităților responsabile."
 
-#: src/components/screens/TipAmIInfected.jsx:115
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:118
-#: src/components/screens/TipCoughingSneezing.jsx:118
-#: src/components/screens/TipMouthguard.jsx:125
-#: src/components/screens/TipNotFeelingWell.jsx:119
-#: src/components/screens/TipWashingHands.jsx:118
-msgid "tips.sources.headline"
-msgstr "surse"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
+msgid "tips.avoid-crowds-of-people.list.item-1"
+msgstr "evita adunările publice mari și inutile"
 
-#: src/components/screens/TipAmIInfected.jsx:129
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:129
-#: src/components/screens/TipCoughingSneezing.jsx:138
-#: src/components/screens/TipMouthguard.jsx:143
-#: src/components/screens/TipNotFeelingWell.jsx:131
-#: src/components/screens/TipWashingHands.jsx:132
-msgid "tips.sources.last-updated"
-msgstr "Ultima actualizare:"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
+msgid "tips.avoid-crowds-of-people.list.item-2"
+msgstr ""
+"alege mersul în loc de transportul public pentru a parcurge distanțe scurte"
 
-#: src/components/screens/TipAmIInfected.jsx:87
-msgid "tips.am-i-infected.list.item-1"
-msgstr "A sta acasa"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
+msgid "tips.avoid-crowds-of-people.list.item-3"
+msgstr "spăla-ti mâinile în mod regulat și complet"
 
-#: src/components/screens/TipAmIInfected.jsx:88
-msgid "tips.am-i-infected.list.item-2"
-msgstr "Sună-ți medicul"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
+msgid "tips.avoid-crowds-of-people.list.item-4"
+msgstr "menține o distanță de aproximativ 2 metri între tine și alte persoane"
 
-#: src/components/screens/TipAmIInfected.jsx:89
-msgid "tips.am-i-infected.list.item-3"
-msgstr "Povestește despre jurnalul tău Coronika"
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:22
+msgid "tips.avoid-crowds-of-people.list.item-5"
+msgstr "acopera-ti tusea și strănutul cu cotul sau țesutul"
 
-#: src/components/screens/TipAmIInfected.jsx:94
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:97
-#: src/components/screens/TipCoughingSneezing.jsx:97
-#: src/components/screens/TipMouthguard.jsx:99
-#: src/components/screens/TipNotFeelingWell.jsx:96
-#: src/components/screens/TipReliableSources.jsx:81
-#: src/components/screens/TipWashingHands.jsx:97
-#: src/components/screens/Tips.jsx:107
-msgid "tips-screen.header.headline"
-msgstr "Sfaturi de igienă"
-
-#: src/components/screens/TipAmIInfected.jsx:99
-#: src/components/screens/Tips.jsx:95
-msgid "tips.am-i-infected.headline"
-msgstr "Mi-e teamă că am primit coronavirusul, ce pot face?"
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:102
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:31
 #: src/components/screens/Tips.jsx:78
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Evita aglomerația de oameni"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:103
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:35
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
 "Dacă este posibil, evita să mergi în excursii, să folosesti transportul "
@@ -685,63 +691,63 @@ msgstr ""
 "reduse la cele esențiale și trebuie evitată prezența la evenimente cu "
 "mulțimi de oameni."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:88
-msgid "tips.avoid-crowds-of-people.list.item-1"
-msgstr "evita adunările publice mari și inutile"
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:89
-msgid "tips.avoid-crowds-of-people.list.item-2"
-msgstr ""
-"alege mersul în loc de transportul public pentru a parcurge distanțe scurte"
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:90
-msgid "tips.avoid-crowds-of-people.list.item-3"
-msgstr "spăla-ti mâinile în mod regulat și complet"
-
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:91
-msgid "tips.avoid-crowds-of-people.list.item-4"
+#: src/components/screens/TipCoughingSneezing.jsx:24
+msgid "tips.coughing-sneezing.list.item-1"
 msgstr "menține o distanță de aproximativ 2 metri între tine și alte persoane"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:92
-msgid "tips.avoid-crowds-of-people.list.item-5"
-msgstr "acopera-ti tusea și strănutul cu cotul sau țesutul"
+#: src/components/screens/TipCoughingSneezing.jsx:25
+msgid "tips.coughing-sneezing.list.item-2"
+msgstr "abate-te de oameni"
 
-#: src/components/screens/TipCoughingSneezing.jsx:102
+#: src/components/screens/TipCoughingSneezing.jsx:26
+msgid "tips.coughing-sneezing.list.item-3"
+msgstr "acopera-ti tusea și strănutul cu cotul sau un țesut"
+
+#: src/components/screens/TipCoughingSneezing.jsx:27
+msgid "tips.coughing-sneezing.list.item-4"
+msgstr "arunca țesuturile în mod corespunzător"
+
+#: src/components/screens/TipCoughingSneezing.jsx:28
+msgid "tips.coughing-sneezing.list.item-5"
+msgstr "spală-te pe mâini după aceea"
+
+#: src/components/screens/TipCoughingSneezing.jsx:37
 #: src/components/screens/Tips.jsx:87
 msgid "tips.coughing-sneezing.headline"
 msgstr "Tusitul și strănutul corect"
 
-#: src/components/screens/TipCoughingSneezing.jsx:103
+#: src/components/screens/TipCoughingSneezing.jsx:41
 msgid "tips.coughing-sneezing.text"
 msgstr ""
 "Pentru a preveni răspândirea virusurilor, te rugăm să acorzi atenție la:"
 
-#: src/components/screens/TipCoughingSneezing.jsx:88
-msgid "tips.coughing-sneezing.list.item-1"
-msgstr "menține o distanță de aproximativ 2 metri între tine și alte persoane"
+#: src/components/screens/TipMouthguard.jsx:20
+msgid "tips.mouthguard.list.item-1"
+msgstr "masca este făcută din hârtie"
 
-#: src/components/screens/TipCoughingSneezing.jsx:89
-msgid "tips.coughing-sneezing.list.item-2"
-msgstr "abate-te de oameni"
+#: src/components/screens/TipMouthguard.jsx:21
+msgid "tips.mouthguard.list.item-2"
+msgstr "masca nu se potrivește strâns la față sau se scurge"
 
-#: src/components/screens/TipCoughingSneezing.jsx:90
-msgid "tips.coughing-sneezing.list.item-3"
-msgstr "acopera-ti tusea și strănutul cu cotul sau un țesut"
+#: src/components/screens/TipMouthguard.jsx:22
+msgid "tips.mouthguard.list.item-3"
+msgstr "se udă prin respirație"
 
-#: src/components/screens/TipCoughingSneezing.jsx:91
-msgid "tips.coughing-sneezing.list.item-4"
-msgstr "arunca țesuturile în mod corespunzător"
+#: src/components/screens/TipMouthguard.jsx:23
+msgid "tips.mouthguard.list.item-4"
+msgstr "nu este înlocuita de mai multe ori pe zi"
 
-#: src/components/screens/TipCoughingSneezing.jsx:92
-msgid "tips.coughing-sneezing.list.item-5"
-msgstr "spală-te pe mâini după aceea"
-
-#: src/components/screens/TipMouthguard.jsx:104
+#: src/components/screens/TipMouthguard.jsx:32
 #: src/components/screens/Tips.jsx:82
 msgid "tips.mouthguard.headline"
 msgstr "masca, da sau nu?"
 
-#: src/components/screens/TipMouthguard.jsx:105
+#: src/components/screens/TipMouthguard.jsx:35
+msgid "tips.mouthguard.list.intro"
+msgstr ""
+"Purtarea unei măști în afara intervenției chirurgicale nu are efect dacă:"
+
+#: src/components/screens/TipMouthguard.jsx:37
 msgid "tips.mouthguard.text-1"
 msgstr ""
 "Măștile sunt esențiale pentru toate sectoarele de sănătate. Pentru "
@@ -750,71 +756,50 @@ msgstr ""
 "numai dacă medicul tau iti solicită. Asigura-te că respecti egulile de "
 "igienă."
 
-#: src/components/screens/TipMouthguard.jsx:107
+#: src/components/screens/TipMouthguard.jsx:37
 msgid "tips.mouthguard.text-2"
 msgstr ""
 "Furnizorii de servicii medicale poartă măști ca barieră și ajută la oprirea "
 "picăturilor minuscule să se răspândească atunci când tusesc sau strănut."
 
-#: src/components/screens/TipMouthguard.jsx:112
-msgid "tips.mouthguard.list.intro"
-msgstr ""
-"Purtarea unei măști în afara intervenției chirurgicale nu are efect dacă:"
+#: src/components/screens/TipNotFeelingWell.jsx:16
+msgid "tips.not-feeling-well.list.item-1"
+msgstr "simptome respiratorii"
 
-#: src/components/screens/TipMouthguard.jsx:91
-msgid "tips.mouthguard.list.item-1"
-msgstr "masca este făcută din hârtie"
+#: src/components/screens/TipNotFeelingWell.jsx:17
+msgid "tips.not-feeling-well.list.item-2"
+msgstr "febră"
 
-#: src/components/screens/TipMouthguard.jsx:92
-msgid "tips.mouthguard.list.item-2"
-msgstr "masca nu se potrivește strâns la față sau se scurge"
+#: src/components/screens/TipNotFeelingWell.jsx:18
+msgid "tips.not-feeling-well.list.item-3"
+msgstr "tuse"
 
-#: src/components/screens/TipMouthguard.jsx:93
-msgid "tips.mouthguard.list.item-3"
-msgstr "se udă prin respirație"
+#: src/components/screens/TipNotFeelingWell.jsx:19
+msgid "tips.not-feeling-well.list.item-4"
+msgstr "respirație scurta"
 
-#: src/components/screens/TipMouthguard.jsx:94
-msgid "tips.mouthguard.list.item-4"
-msgstr "nu este înlocuita de mai multe ori pe zi"
-
-#: src/components/screens/TipNotFeelingWell.jsx:101
+#: src/components/screens/TipNotFeelingWell.jsx:28
 #: src/components/screens/Tips.jsx:91
 msgid "tips.not-feeling-well.headline"
 msgstr "Nu mă simt bine, am coronavirus?"
 
-#: src/components/screens/TipNotFeelingWell.jsx:102
+#: src/components/screens/TipNotFeelingWell.jsx:31
+msgid "tips.not-feeling-well.list.intro"
+msgstr "Simptomele tipice ale COVID-19 conform OMS sunt:"
+
+#: src/components/screens/TipNotFeelingWell.jsx:33
 msgid "tips.not-feeling-well.text"
 msgstr ""
 "Nu orice pacient cu simptome asemănătoare gripei este, de asemenea, un "
 "purtător al virusului SARS-CoV-2. Ar trebui să te informezi întotdeauna "
 "despre simptomele tale și să apelezi la medic."
 
-#: src/components/screens/TipNotFeelingWell.jsx:106
-msgid "tips.not-feeling-well.list.intro"
-msgstr "Simptomele tipice ale COVID-19 conform OMS sunt:"
-
-#: src/components/screens/TipNotFeelingWell.jsx:88
-msgid "tips.not-feeling-well.list.item-1"
-msgstr "simptome respiratorii"
-
-#: src/components/screens/TipNotFeelingWell.jsx:89
-msgid "tips.not-feeling-well.list.item-2"
-msgstr "febră"
-
-#: src/components/screens/TipNotFeelingWell.jsx:90
-msgid "tips.not-feeling-well.list.item-3"
-msgstr "tuse"
-
-#: src/components/screens/TipNotFeelingWell.jsx:91
-msgid "tips.not-feeling-well.list.item-4"
-msgstr "respirație scurta"
-
-#: src/components/screens/TipReliableSources.jsx:86
+#: src/components/screens/TipReliableSources.jsx:56
 #: src/components/screens/Tips.jsx:99
 msgid "tips.reliable-sources.headline"
 msgstr "Unde pot găsi surse fiabile?"
 
-#: src/components/screens/TipReliableSources.jsx:87
+#: src/components/screens/TipReliableSources.jsx:57
 msgid "tips.reliable-sources.text"
 msgstr "Site-uri web informative"
 
@@ -824,66 +809,74 @@ msgstr ""
 "Aici vei gasi cunoștințe care te ajută să reduci cât mai mult riscul de "
 "infecție și să iti permită să faci ceea ce trebuie în cazul unei infecții."
 
-#: src/components/screens/TipWashingHands.jsx:102
+#: src/components/screens/TipWashingHands.jsx:16
+msgid "tips.washing-hands.list.item-1"
+msgstr "Uda-ti mâinile cu apă curată, curgătoare (caldă sau rece)"
+
+#: src/components/screens/TipWashingHands.jsx:17
+msgid "tips.washing-hands.list.item-2"
+msgstr "aplica săpun și ruleaza mâinile frecându-le împreună"
+
+#: src/components/screens/TipWashingHands.jsx:18
+msgid "tips.washing-hands.list.item-3"
+msgstr ""
+"Freaca spatele mâinilor, degetele mari, între degete și sub unghii pentru "
+"aproximativ 30–60 de secunde."
+
+#: src/components/screens/TipWashingHands.jsx:19
+msgid "tips.washing-hands.list.item-4"
+msgstr "Clăteste bine mâinile sub apă curată și curgătoare."
+
+#: src/components/screens/TipWashingHands.jsx:20
+msgid "tips.washing-hands.list.item-5"
+msgstr "Usuca-ti mâinile folosind un prosop curat sau uscați-le cu aer."
+
+#: src/components/screens/TipWashingHands.jsx:29
 #: src/components/screens/Tips.jsx:74
 msgid "tips.washing-hands.headline"
 msgstr "Spalandu-ti mainile"
 
-#: src/components/screens/TipWashingHands.jsx:103
+#: src/components/screens/TipWashingHands.jsx:33
 msgid "tips.washing-hands.text"
 msgstr ""
 "Spălarea mâinilor este ușoară și este una dintre cele mai eficiente metode "
 "de a preveni răspândirea germenilor. Mâinile curate pot împiedica germenii "
 "să se răspândească. Pur și simplu urmați acești cinci pași:"
 
-#: src/components/screens/TipWashingHands.jsx:88
-msgid "tips.washing-hands.list.item-1"
-msgstr "Uda-ti mâinile cu apă curată, curgătoare (caldă sau rece)"
+#: src/components/screens/Welcome/ui.jsx:100
+msgid "welcome-screen.slides.notifications.button-skip"
+msgstr "Ocolire"
 
-#: src/components/screens/TipWashingHands.jsx:89
-msgid "tips.washing-hands.list.item-2"
-msgstr "aplica săpun și ruleaza mâinile frecându-le împreună"
+#: src/components/screens/Welcome/ui.jsx:101
+msgid "welcome-screen.slides.notifications.button"
+msgstr "Activeaza acum"
 
-#: src/components/screens/TipWashingHands.jsx:90
-msgid "tips.washing-hands.list.item-3"
-msgstr ""
-"Freaca spatele mâinilor, degetele mari, între degete și sub unghii pentru "
-"aproximativ 30–60 de secunde."
-
-#: src/components/screens/TipWashingHands.jsx:91
-msgid "tips.washing-hands.list.item-4"
-msgstr "Clăteste bine mâinile sub apă curată și curgătoare."
-
-#: src/components/screens/TipWashingHands.jsx:92
-msgid "tips.washing-hands.list.item-5"
-msgstr "Usuca-ti mâinile folosind un prosop curat sau uscați-le cu aer."
-
-#: src/components/screens/Welcome/ui.jsx:28
+#: src/components/screens/Welcome/ui.jsx:98
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "Te-ai spălat pe mâini?"
 
-#: src/components/screens/Welcome/ui.jsx:29
+#: src/components/screens/Welcome/ui.jsx:99
 msgid "welcome-screen.slides.notifications.text"
 msgstr ""
 "Activeaza-ti notificările și aminteste-ti periodic pentru a te spăla pe "
 "mâini pentru a preveni infecția."
 
-#: src/components/screens/Welcome/ui.jsx:30
-msgid "welcome-screen.slides.notifications.button-skip"
-msgstr "Ocolire"
-
-#: src/components/screens/Welcome/ui.jsx:31
-msgid "welcome-screen.slides.notifications.button"
-msgstr "Activeaza acum"
-
-#: src/components/widgets/DayOverview.jsx:128
+#: src/components/widgets/DayOverview.jsx:21
 msgid "today"
 msgstr "astăzi"
 
-#: src/components/widgets/DayOverview.jsx:134
+#: src/components/widgets/DayOverview.jsx:27
 msgid "total"
 msgstr "total"
 
 #: src/components/widgets/SearchBar.jsx:58
 msgid "placeholder.search-input"
 msgstr "Căutare"
+
+#: src/components/widgets/Tip.jsx:127
+msgid "tips.sources.headline"
+msgstr "surse"
+
+#: src/components/widgets/Tip.jsx:138
+msgid "tips.sources.last-updated"
+msgstr "Ultima actualizare:"

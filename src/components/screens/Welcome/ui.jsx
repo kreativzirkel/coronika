@@ -38,7 +38,10 @@ export const getWelcomeStyles = (vw, getFontFamilyBold, getFontFamilyRegular) =>
     },
     sliderPagination: {
       alignItems: 'center',
-      bottom: vw(2),
+      bottom: vw(5),
+      left: 0,
+      right: 0,
+      margin: 'auto',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'center',
