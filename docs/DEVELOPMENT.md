@@ -29,6 +29,8 @@ Link necessary packages:
 
 `react-native link lottie-react-native`
 
+`react-native link react-native-fs`
+
 `react-native link react-native-interactable`
 
 `react-native link react-native-push-notification`

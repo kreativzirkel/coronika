@@ -57,7 +57,7 @@ The app currently is available in 17 languages:
 - 🇵🇱 Polish
 - 🇷🇴 Romanian
 - 🇷🇺 Russian
-- 🇱🇰 Singhalese
+- 🇱🇰 Sinhalese
 - 🇹🇷 Turkish
 - 🇺🇦 Ukrainian
 - 🇨🇳 Chinese

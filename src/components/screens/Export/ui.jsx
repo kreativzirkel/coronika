@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_SECONDARY } from '../../../constants';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 
-const Export = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
+const Export = ({ createExport, navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     comingSoon: {
@@ -55,7 +55,9 @@ const Export = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ })
           <Text style={styles.contentText}>{__('export-screen.content.section-1.text')}</Text>
           <Text style={styles.contentHeadline}>{__('export-screen.content.section-2.headline')}</Text>
           <Text style={styles.contentText}>{__('export-screen.content.section-2.text')}</Text>
-          <Text style={styles.comingSoon}>{__('export-screen.coming-soon')}</Text>
+          <TouchableOpacity onPress={() => createExport()}>
+            <Text style={styles.comingSoon}>{__('export-screen.coming-soon')}</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </Layout>

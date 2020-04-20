@@ -18,6 +18,7 @@ const addPersonToList = (persons, person) => {
         resultList.push(c);
       } else {
         importPerson.id = c.id;
+        importPerson.lastUsed = c.lastUsed;
       }
     }
 
@@ -30,6 +31,7 @@ const addPersonToList = (persons, person) => {
         resultList.push(c);
       } else {
         importPerson.id = c.id;
+        importPerson.lastUsed = c.lastUsed;
         importPerson.phoneNumbers = [...c.phoneNumbers];
       }
     }

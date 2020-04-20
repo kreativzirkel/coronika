@@ -202,6 +202,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-fs')
     implementation project(':react-native-push-notification')
     implementation project(':react-native-safe-area-context')
     implementation project(':react-native-screens')

@@ -5,6 +5,7 @@ import androidx.multidex.MultiDex;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.rnfs.RNFSPackage;
 import com.reactcommunity.rndatetimepicker.RNDateTimePickerPackage;
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
