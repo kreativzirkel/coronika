@@ -47,11 +47,13 @@ msgid "navigation.tips.label"
 msgstr "Συμβουλές"
 
 #: src/components/partials/EntriesTabsView.jsx:623
+#: src/components/screens/Export/createPdfFile.js:214
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "επαφές"
 
 #: src/components/partials/EntriesTabsView.jsx:633
+#: src/components/screens/Export/createPdfFile.js:292
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "τοποθεσίες"
@@ -157,48 +159,48 @@ msgstr "Επιβεβαίωση"
 msgid "entries.modals.select-location.button"
 msgstr "Επιλογή"
 
-#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:84
+#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:83
 msgid "welcome-screen.slides.intro.headline"
 msgstr "Καταπολέμηση του κορωνοϊού μαζί"
 
-#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:85
+#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:84
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
 "Κατέγραψε άτομα και τοποθεσίες, ανακατασκεύασε τις διαδρομές μόλυνσης και "
 "βοήθησε να σταματήσει η διάδοση."
 
-#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:86
+#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:85
 msgid "welcome-screen.slides.intro.button"
 msgstr "Τέλεια, θέλω να βοηθήσω κι εγώ"
 
-#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:91
+#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:90
 msgid "welcome-screen.slides.how-to.headline"
 msgstr "Ένα ημερολόγιο για τη υγεία μας"
 
-#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:92
+#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:91
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
 "Σημειώσε ποιον έχεις συναντήσει, τους δημόσιους χώρους που έχεις επισκεφθεί "
 "και σύμβαλλε στην υγεία όλων."
 
-#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:93
+#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:92
 msgid "welcome-screen.slides.how-to.button"
 msgstr "εντάξει"
 
 #: src/components/screens/About.jsx:33
-#: src/components/screens/Welcome/ui.jsx:107
+#: src/components/screens/Welcome/ui.jsx:106
 msgid "welcome-screen.slides.local-data.headline"
 msgstr "Τα δεδομένα σου είναι μόνο δικά σου"
 
 #: src/components/screens/About.jsx:34
-#: src/components/screens/Welcome/ui.jsx:108
+#: src/components/screens/Welcome/ui.jsx:107
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 "Όλα τα δεδομένα που δημιουργούνται και χρησιμοποιούνται από την Coronika "
 "αποθηκεύονται τοπικά και δεν παρακολουθούνται ούτε διαβιβάζονται."
 
 #: src/components/screens/About.jsx:35
-#: src/components/screens/Welcome/ui.jsx:109
+#: src/components/screens/Welcome/ui.jsx:108
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Ξεκίνα τώρα"
 
@@ -283,33 +285,47 @@ msgstr "Εισαγωγή ..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Εισαγωγή τώρα"
 
-#: src/components/screens/Export/ui.jsx:50
+#: src/components/screens/Export/createPdfFile.js:120
+#: src/components/screens/Export/createPdfFile.js:123
+#: src/components/screens/Export/createPdfFile.js:43
+#: src/components/screens/Export/ui.jsx:63
 msgid "export-screen.header.headline"
 msgstr "Εξαγωγή"
 
-#: src/components/screens/Export/ui.jsx:54
+#: src/components/screens/Export/createPdfFile.js:207
+msgid "quantity"
+msgstr ""
+
+#: src/components/screens/Export/createPdfFile.js:81
+msgid "page"
+msgstr ""
+
+#: src/components/screens/Export/ui.jsx:67
 msgid "export-screen.content.section-1.headline"
 msgstr "Η σύνοψή σου"
 
-#: src/components/screens/Export/ui.jsx:55
+#: src/components/screens/Export/ui.jsx:68
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "Μαζί μπορούμε να κατανοήσουμε τις διαδρομές μόλυνσης ενημερώνοντας τις "
 "υγειονομικές αρχές και τους ανθρώπους γύρω σου."
 
-#: src/components/screens/Export/ui.jsx:56
+#: src/components/screens/Export/ui.jsx:69
 msgid "export-screen.content.section-2.headline"
 msgstr "Με μεγάλη δύναμη έρχεται μεγάλη ευθύνη"
 
-#: src/components/screens/Export/ui.jsx:57
+#: src/components/screens/Export/ui.jsx:70
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "Λάβετε υπόψη ότι τα δεδομένα είναι πολύ ευαίσθητα. Συνιστάται ιδιαίτερα να "
 "μην τα μοιράζεσαι ηλεκτρονικά ή με τυχαίους ανθρώπους."
 
-#: src/components/screens/Export/ui.jsx:58
-msgid "export-screen.coming-soon"
-msgstr "Έρχεται συντομα!"
+#: src/components/screens/Export/ui.jsx:73
+#, fuzzy
+msgid "export-screen.button.export"
+msgstr ""
+"Μαζί μπορούμε να κατανοήσουμε τις διαδρομές μόλυνσης ενημερώνοντας τις "
+"υγειονομικές αρχές και τους ανθρώπους γύρω σου."
 
 #: src/components/screens/Legal.jsx:162 src/components/screens/Menu.jsx:117
 msgid "legal-screen.header.headline"
@@ -865,22 +881,22 @@ msgstr ""
 "πέντε βήματα:"
 
 #: src/components/screens/Welcome/ui.jsx:100
-msgid "welcome-screen.slides.notifications.button-skip"
-msgstr "Παράλειψη"
-
-#: src/components/screens/Welcome/ui.jsx:101
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Ενεργοποίηση τώρα"
 
-#: src/components/screens/Welcome/ui.jsx:98
+#: src/components/screens/Welcome/ui.jsx:97
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "Έπλυνες τα χέρια σου;"
 
-#: src/components/screens/Welcome/ui.jsx:99
+#: src/components/screens/Welcome/ui.jsx:98
 msgid "welcome-screen.slides.notifications.text"
 msgstr ""
 "Ενεργοποίησε τις ειδοποιήσεις σου και θα υπενθυμίζεσε τακτικά να πλένεις τα "
 "χέρια σου για να αποφύγεις τη μόλυνση."
+
+#: src/components/screens/Welcome/ui.jsx:99
+msgid "welcome-screen.slides.notifications.button-skip"
+msgstr "Παράλειψη"
 
 #: src/components/widgets/DayOverview.jsx:21
 msgid "today"
@@ -901,3 +917,6 @@ msgstr "Πηγές"
 #: src/components/widgets/Tip.jsx:138
 msgid "tips.sources.last-updated"
 msgstr "Τελευταία ενημέρωση:"
+
+#~ msgid "export-screen.coming-soon"
+#~ msgstr "Έρχεται συντομα!"

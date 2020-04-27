@@ -46,11 +46,13 @@ msgid "navigation.tips.label"
 msgstr "ヒント"
 
 #: src/components/partials/EntriesTabsView.jsx:623
+#: src/components/screens/Export/createPdfFile.js:214
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "連絡先"
 
 #: src/components/partials/EntriesTabsView.jsx:633
+#: src/components/screens/Export/createPdfFile.js:292
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "場所"
@@ -155,46 +157,46 @@ msgstr "確認"
 msgid "entries.modals.select-location.button"
 msgstr "選択する"
 
-#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:84
+#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:83
 msgid "welcome-screen.slides.intro.headline"
 msgstr "一緒にコロナウイルスと戦う"
 
-#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:85
+#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:84
 msgid "welcome-screen.slides.intro.text"
 msgstr "人と場所を記録し、感染経路を再構築し、感染拡大を阻止します。"
 
-#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:86
+#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:85
 msgid "welcome-screen.slides.intro.button"
 msgstr "素晴らしい、私も助けたい"
 
-#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:91
+#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:90
 msgid "welcome-screen.slides.how-to.headline"
 msgstr "団体の健康日記"
 
-#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:92
+#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:91
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
 "あなたが会った人、訪れた公共の場所を書き留め、みんなの健康に貢献してくださ"
 "い。"
 
-#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:93
+#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:92
 msgid "welcome-screen.slides.how-to.button"
 msgstr "はい"
 
 #: src/components/screens/About.jsx:33
-#: src/components/screens/Welcome/ui.jsx:107
+#: src/components/screens/Welcome/ui.jsx:106
 msgid "welcome-screen.slides.local-data.headline"
 msgstr "あなたのデータはあなただけのものです"
 
 #: src/components/screens/About.jsx:34
-#: src/components/screens/Welcome/ui.jsx:108
+#: src/components/screens/Welcome/ui.jsx:107
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 "Coronikaが作成および使用するすべてのデータはローカルに保存され、追跡または転"
 "送されません。"
 
 #: src/components/screens/About.jsx:35
-#: src/components/screens/Welcome/ui.jsx:109
+#: src/components/screens/Welcome/ui.jsx:108
 msgid "welcome-screen.slides.local-data.button"
 msgstr "今すぐ始める"
 
@@ -276,33 +278,47 @@ msgstr "インポートしています..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "今すぐインポート"
 
-#: src/components/screens/Export/ui.jsx:50
+#: src/components/screens/Export/createPdfFile.js:120
+#: src/components/screens/Export/createPdfFile.js:123
+#: src/components/screens/Export/createPdfFile.js:43
+#: src/components/screens/Export/ui.jsx:63
 msgid "export-screen.header.headline"
 msgstr "書き出す"
 
-#: src/components/screens/Export/ui.jsx:54
+#: src/components/screens/Export/createPdfFile.js:207
+msgid "quantity"
+msgstr ""
+
+#: src/components/screens/Export/createPdfFile.js:81
+msgid "page"
+msgstr ""
+
+#: src/components/screens/Export/ui.jsx:67
 msgid "export-screen.content.section-1.headline"
 msgstr "あなたの概況"
 
-#: src/components/screens/Export/ui.jsx:55
+#: src/components/screens/Export/ui.jsx:68
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "保健当局と周囲の人々に情報を提供することで、感染経路をまとめて再構築できま"
 "す。"
 
-#: src/components/screens/Export/ui.jsx:56
+#: src/components/screens/Export/ui.jsx:69
 msgid "export-screen.content.section-2.headline"
 msgstr "大きな権力には大きな責任が伴います"
 
-#: src/components/screens/Export/ui.jsx:57
+#: src/components/screens/Export/ui.jsx:70
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "データは非常に機密性が高いことに注意してください。 オンラインまたはランダムな"
 "人と共有しないことを強くお勧めします。"
 
-#: src/components/screens/Export/ui.jsx:58
-msgid "export-screen.coming-soon"
-msgstr "近日公開！"
+#: src/components/screens/Export/ui.jsx:73
+#, fuzzy
+msgid "export-screen.button.export"
+msgstr ""
+"保健当局と周囲の人々に情報を提供することで、感染経路をまとめて再構築できま"
+"す。"
 
 #: src/components/screens/Legal.jsx:162 src/components/screens/Menu.jsx:117
 msgid "legal-screen.header.headline"
@@ -825,22 +841,22 @@ msgstr ""
 "細菌の拡散を防ぐことができます。毎回次の5つの手順を実行します。"
 
 #: src/components/screens/Welcome/ui.jsx:100
-msgid "welcome-screen.slides.notifications.button-skip"
-msgstr "スキップ"
-
-#: src/components/screens/Welcome/ui.jsx:101
 msgid "welcome-screen.slides.notifications.button"
 msgstr "今すぐ活性化する"
 
-#: src/components/screens/Welcome/ui.jsx:98
+#: src/components/screens/Welcome/ui.jsx:97
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "手洗いはしましたか？"
 
-#: src/components/screens/Welcome/ui.jsx:99
+#: src/components/screens/Welcome/ui.jsx:98
 msgid "welcome-screen.slides.notifications.text"
 msgstr ""
 "通知を有効にして、感染を防ぐために定期的に手を洗うようにリマインドしましょ"
 "う。"
+
+#: src/components/screens/Welcome/ui.jsx:99
+msgid "welcome-screen.slides.notifications.button-skip"
+msgstr "スキップ"
 
 #: src/components/widgets/DayOverview.jsx:21
 msgid "today"
@@ -861,3 +877,6 @@ msgstr "情報源"
 #: src/components/widgets/Tip.jsx:138
 msgid "tips.sources.last-updated"
 msgstr "最終更新日。"
+
+#~ msgid "export-screen.coming-soon"
+#~ msgstr "近日公開！"

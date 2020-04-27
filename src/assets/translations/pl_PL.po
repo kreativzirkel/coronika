@@ -46,11 +46,13 @@ msgid "navigation.tips.label"
 msgstr "Porady"
 
 #: src/components/partials/EntriesTabsView.jsx:623
+#: src/components/screens/Export/createPdfFile.js:214
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "osoby"
 
 #: src/components/partials/EntriesTabsView.jsx:633
+#: src/components/screens/Export/createPdfFile.js:292
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "lokalizacje"
@@ -156,48 +158,48 @@ msgstr "Potwierdzić"
 msgid "entries.modals.select-location.button"
 msgstr "Wybierz"
 
-#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:84
+#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:83
 msgid "welcome-screen.slides.intro.headline"
 msgstr "Wspólna walka z korona-wirusem"
 
-#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:85
+#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:84
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
 "Zaloguj osoby i lokalizacje, zrekonstruuj drogi infekcji i pomóż powstrzymać "
 "rozprzestrzenianie się."
 
-#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:86
+#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:85
 msgid "welcome-screen.slides.intro.button"
 msgstr "Świetnie, ja też chcę pomóc"
 
-#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:91
+#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:90
 msgid "welcome-screen.slides.how-to.headline"
 msgstr "Dziennik dla naszego wspólnego zdrowia"
 
-#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:92
+#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:91
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
 "Zapisz, kogo spotkałeś, jakie miejsca publiczne odwiedziłeś i w jaki sposób "
 "przyczyniasz się do zdrowia każdego."
 
-#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:93
+#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:92
 msgid "welcome-screen.slides.how-to.button"
 msgstr "Okay"
 
 #: src/components/screens/About.jsx:33
-#: src/components/screens/Welcome/ui.jsx:107
+#: src/components/screens/Welcome/ui.jsx:106
 msgid "welcome-screen.slides.local-data.headline"
 msgstr "Twoje dane są tylko twoje."
 
 #: src/components/screens/About.jsx:34
-#: src/components/screens/Welcome/ui.jsx:108
+#: src/components/screens/Welcome/ui.jsx:107
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 "Wszystkie dane utworzone i używane przez Coronika są przechowywane lokalnie "
 "i nie będą śledzone ani przekazywane dalej."
 
 #: src/components/screens/About.jsx:35
-#: src/components/screens/Welcome/ui.jsx:109
+#: src/components/screens/Welcome/ui.jsx:108
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Zacznij teraz"
 
@@ -282,33 +284,47 @@ msgstr "Importowanie..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Import teraz"
 
-#: src/components/screens/Export/ui.jsx:50
+#: src/components/screens/Export/createPdfFile.js:120
+#: src/components/screens/Export/createPdfFile.js:123
+#: src/components/screens/Export/createPdfFile.js:43
+#: src/components/screens/Export/ui.jsx:63
 msgid "export-screen.header.headline"
 msgstr "Eksportuj"
 
-#: src/components/screens/Export/ui.jsx:54
+#: src/components/screens/Export/createPdfFile.js:207
+msgid "quantity"
+msgstr ""
+
+#: src/components/screens/Export/createPdfFile.js:81
+msgid "page"
+msgstr ""
+
+#: src/components/screens/Export/ui.jsx:67
 msgid "export-screen.content.section-1.headline"
 msgstr "Twój przegląd"
 
-#: src/components/screens/Export/ui.jsx:55
+#: src/components/screens/Export/ui.jsx:68
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "Wspólnie możemy odtworzyć drogi zakażenia, informując o tym władze zdrowotne "
 "i osoby z otoczenia."
 
-#: src/components/screens/Export/ui.jsx:56
+#: src/components/screens/Export/ui.jsx:69
 msgid "export-screen.content.section-2.headline"
 msgstr "Z wielką siłą przychodzi duża odpowiedzialność"
 
-#: src/components/screens/Export/ui.jsx:57
+#: src/components/screens/Export/ui.jsx:70
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "Należy pamiętać, że dane te są bardzo wrażliwe. Zalecamy, aby nie "
 "udostępniać ich online lub przypadkowym osobom."
 
-#: src/components/screens/Export/ui.jsx:58
-msgid "export-screen.coming-soon"
-msgstr "Już niedługo!"
+#: src/components/screens/Export/ui.jsx:73
+#, fuzzy
+msgid "export-screen.button.export"
+msgstr ""
+"Wspólnie możemy odtworzyć drogi zakażenia, informując o tym władze zdrowotne "
+"i osoby z otoczenia."
 
 #: src/components/screens/Legal.jsx:162 src/components/screens/Menu.jsx:117
 msgid "legal-screen.header.headline"
@@ -856,22 +872,22 @@ msgstr ""
 "krokami za każdym razem:"
 
 #: src/components/screens/Welcome/ui.jsx:100
-msgid "welcome-screen.slides.notifications.button-skip"
-msgstr "przeskoczyć"
-
-#: src/components/screens/Welcome/ui.jsx:101
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Aktywuj teraz"
 
-#: src/components/screens/Welcome/ui.jsx:98
+#: src/components/screens/Welcome/ui.jsx:97
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "Umyłeś ręce?"
 
-#: src/components/screens/Welcome/ui.jsx:99
+#: src/components/screens/Welcome/ui.jsx:98
 msgid "welcome-screen.slides.notifications.text"
 msgstr ""
 "Aktywuj swoje powiadomienia i otrzymuj regularne przypomnienia o "
 "konieczności mycia rąk, aby zapobiec infekcji."
+
+#: src/components/screens/Welcome/ui.jsx:99
+msgid "welcome-screen.slides.notifications.button-skip"
+msgstr "przeskoczyć"
 
 #: src/components/widgets/DayOverview.jsx:21
 msgid "today"
@@ -892,3 +908,6 @@ msgstr "Źródła"
 #: src/components/widgets/Tip.jsx:138
 msgid "tips.sources.last-updated"
 msgstr "Ostatnia aktualizacja:"
+
+#~ msgid "export-screen.coming-soon"
+#~ msgstr "Już niedługo!"

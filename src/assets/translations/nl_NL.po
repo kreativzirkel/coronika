@@ -46,11 +46,13 @@ msgid "navigation.tips.label"
 msgstr "Tips"
 
 #: src/components/partials/EntriesTabsView.jsx:623
+#: src/components/screens/Export/createPdfFile.js:214
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "Personen"
 
 #: src/components/partials/EntriesTabsView.jsx:633
+#: src/components/screens/Export/createPdfFile.js:292
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "Locaties"
@@ -154,48 +156,48 @@ msgstr "Bevestigen"
 msgid "entries.modals.select-location.button"
 msgstr "Selecteren"
 
-#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:84
+#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:83
 msgid "welcome-screen.slides.intro.headline"
 msgstr "Samen tegen het corona-virus"
 
-#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:85
+#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:84
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
 "Log personen en locaties in, reconstrueer paden van de infectie en help de "
 "verspreiding te stoppen."
 
-#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:86
+#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:85
 msgid "welcome-screen.slides.intro.button"
 msgstr "Geweldig, hoe kan ik helpen"
 
-#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:91
+#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:90
 msgid "welcome-screen.slides.how-to.headline"
 msgstr "Een dagboek voor onze collectieve gezondheid"
 
-#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:92
+#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:91
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
 "Schrijf op wie je hebt ontmoet, waar je bent geweest en lever een bijdrage "
 "aan de gezondheid van iedereen."
 
-#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:93
+#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:92
 msgid "welcome-screen.slides.how-to.button"
 msgstr "Ok"
 
 #: src/components/screens/About.jsx:33
-#: src/components/screens/Welcome/ui.jsx:107
+#: src/components/screens/Welcome/ui.jsx:106
 msgid "welcome-screen.slides.local-data.headline"
 msgstr "Jouw gegevens zijn alleen van jouw."
 
 #: src/components/screens/About.jsx:34
-#: src/components/screens/Welcome/ui.jsx:108
+#: src/components/screens/Welcome/ui.jsx:107
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 "Gegevens worden uitsluitend local opgeslagen. Er wordt geen gegevens met "
 "derde partijen gedelt"
 
 #: src/components/screens/About.jsx:35
-#: src/components/screens/Welcome/ui.jsx:109
+#: src/components/screens/Welcome/ui.jsx:108
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Nu beginen"
 
@@ -279,32 +281,46 @@ msgstr "Importeren..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Nu importeren"
 
-#: src/components/screens/Export/ui.jsx:50
+#: src/components/screens/Export/createPdfFile.js:120
+#: src/components/screens/Export/createPdfFile.js:123
+#: src/components/screens/Export/createPdfFile.js:43
+#: src/components/screens/Export/ui.jsx:63
 msgid "export-screen.header.headline"
 msgstr "Exporteren"
 
-#: src/components/screens/Export/ui.jsx:54
+#: src/components/screens/Export/createPdfFile.js:207
+msgid "quantity"
+msgstr ""
+
+#: src/components/screens/Export/createPdfFile.js:81
+msgid "page"
+msgstr ""
+
+#: src/components/screens/Export/ui.jsx:67
 msgid "export-screen.content.section-1.headline"
 msgstr "Overzicht"
 
-#: src/components/screens/Export/ui.jsx:55
+#: src/components/screens/Export/ui.jsx:68
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "Door het informeren van ons omgeving en de zorginstantie kunne wij de "
 "infectiewegen reconstrueren"
 
-#: src/components/screens/Export/ui.jsx:56
+#: src/components/screens/Export/ui.jsx:69
 msgid "export-screen.content.section-2.headline"
 msgstr "Wie macht heeft , heeft ook grote verantwoordelijkheid"
 
-#: src/components/screens/Export/ui.jsx:57
+#: src/components/screens/Export/ui.jsx:70
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "Let op, gevoelige informatie. Deel je infomatie niet willekeurig en online"
 
-#: src/components/screens/Export/ui.jsx:58
-msgid "export-screen.coming-soon"
-msgstr "Binnenkort!"
+#: src/components/screens/Export/ui.jsx:73
+#, fuzzy
+msgid "export-screen.button.export"
+msgstr ""
+"Door het informeren van ons omgeving en de zorginstantie kunne wij de "
+"infectiewegen reconstrueren"
 
 #: src/components/screens/Legal.jsx:162 src/components/screens/Menu.jsx:117
 msgid "legal-screen.header.headline"
@@ -865,22 +881,22 @@ msgstr ""
 "elke keer:"
 
 #: src/components/screens/Welcome/ui.jsx:100
-msgid "welcome-screen.slides.notifications.button-skip"
-msgstr "Overslaan"
-
-#: src/components/screens/Welcome/ui.jsx:101
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Activeer nu"
 
-#: src/components/screens/Welcome/ui.jsx:98
+#: src/components/screens/Welcome/ui.jsx:97
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "Heb je je handen gewassen?"
 
-#: src/components/screens/Welcome/ui.jsx:99
+#: src/components/screens/Welcome/ui.jsx:98
 msgid "welcome-screen.slides.notifications.text"
 msgstr ""
 "Activeer uw meldingen en laat u regelmatig herinneren aan het wassen van uw "
 "handen om infectie te voorkomen."
+
+#: src/components/screens/Welcome/ui.jsx:99
+msgid "welcome-screen.slides.notifications.button-skip"
+msgstr "Overslaan"
 
 #: src/components/widgets/DayOverview.jsx:21
 msgid "today"
@@ -901,3 +917,6 @@ msgstr "Bron"
 #: src/components/widgets/Tip.jsx:138
 msgid "tips.sources.last-updated"
 msgstr "Laatste update"
+
+#~ msgid "export-screen.coming-soon"
+#~ msgstr "Binnenkort!"

@@ -46,11 +46,13 @@ msgid "navigation.tips.label"
 msgstr "ඉඟි"
 
 #: src/components/partials/EntriesTabsView.jsx:623
+#: src/components/screens/Export/createPdfFile.js:214
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "පුද්ගලයන්"
 
 #: src/components/partials/EntriesTabsView.jsx:633
+#: src/components/screens/Export/createPdfFile.js:292
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "ස්ථාන"
@@ -154,45 +156,45 @@ msgstr "තහවුරු කරන්න"
 msgid "entries.modals.select-location.button"
 msgstr "තෝරන්න"
 
-#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:84
+#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:83
 msgid "welcome-screen.slides.intro.headline"
 msgstr "කොරෝනා වෛරසයට එරෙහිව සටන් කිරීම"
 
-#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:85
+#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:84
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
 "පුද්ගලයින් සහ ස්ථාන ලොග් කරන්න, ආසාදන මාර්ග ප්‍රතිනිර්මාණය කිරීම සහ පැතිරීම නැවැත්වීමට උදව් කරන්න."
 
-#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:86
+#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:85
 msgid "welcome-screen.slides.intro.button"
 msgstr "නියමයි, මටත් උදව් කරන්න ඕන"
 
-#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:91
+#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:90
 msgid "welcome-screen.slides.how-to.headline"
 msgstr "අපගේ සාමූහික සෞඛ්‍යය සඳහා දිනපොතක්"
 
-#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:92
+#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:91
 msgid "welcome-screen.slides.how-to.text"
 msgstr "ඔබ මුණගැසුණු අය, ඔබ සංචාරය කළ පොදු ස්ථාන ලියා සියලු දෙනාගේ සෞඛ්‍යයට දායක වන්න."
 
-#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:93
+#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:92
 msgid "welcome-screen.slides.how-to.button"
 msgstr "හරි"
 
 #: src/components/screens/About.jsx:33
-#: src/components/screens/Welcome/ui.jsx:107
+#: src/components/screens/Welcome/ui.jsx:106
 msgid "welcome-screen.slides.local-data.headline"
 msgstr "ඔබගේ දත්ත ඔබගේ පමණි"
 
 #: src/components/screens/About.jsx:34
-#: src/components/screens/Welcome/ui.jsx:108
+#: src/components/screens/Welcome/ui.jsx:107
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 "කොරොනිකා විසින් නිර්මාණය කරන ලද සහ භාවිතා කරන සියලුම දත්ත දේශීයව ගබඩා කර ඇති අතර ඒවා "
 "සොයා ගැනීමට හෝ සම්මත කිරීමට නොහැකි වනු ඇත."
 
 #: src/components/screens/About.jsx:35
-#: src/components/screens/Welcome/ui.jsx:109
+#: src/components/screens/Welcome/ui.jsx:108
 msgid "welcome-screen.slides.local-data.button"
 msgstr "දැන් පටන් ගන්න"
 
@@ -274,33 +276,47 @@ msgstr "ආනයනය ..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "දැන් ආයාත කරන්න"
 
-#: src/components/screens/Export/ui.jsx:50
+#: src/components/screens/Export/createPdfFile.js:120
+#: src/components/screens/Export/createPdfFile.js:123
+#: src/components/screens/Export/createPdfFile.js:43
+#: src/components/screens/Export/ui.jsx:63
 msgid "export-screen.header.headline"
 msgstr "අපනයන"
 
-#: src/components/screens/Export/ui.jsx:54
+#: src/components/screens/Export/createPdfFile.js:207
+msgid "quantity"
+msgstr ""
+
+#: src/components/screens/Export/createPdfFile.js:81
+msgid "page"
+msgstr ""
+
+#: src/components/screens/Export/ui.jsx:67
 msgid "export-screen.content.section-1.headline"
 msgstr "ඔබේ දළ විශ්ලේෂණය"
 
-#: src/components/screens/Export/ui.jsx:55
+#: src/components/screens/Export/ui.jsx:68
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "සෞඛ්‍ය බලධාරීන් සහ ඔබ අවට සිටින පුද්ගලයින් දැනුවත් කිරීමෙන් අපට සාමූහිකව ආසාදන මාර්ග ප්‍රතිනිර්මාණය "
 "කළ හැකිය."
 
-#: src/components/screens/Export/ui.jsx:56
+#: src/components/screens/Export/ui.jsx:69
 msgid "export-screen.content.section-2.headline"
 msgstr "විශාල බලයක් සමඟ විශාල වගකීමක් පැමිණේ"
 
-#: src/components/screens/Export/ui.jsx:57
+#: src/components/screens/Export/ui.jsx:70
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "දත්ත ඉතා සංවේදී බව මතක තබා ගන්න. එය සබැඳිව හෝ අහඹු පුද්ගලයින් සමඟ බෙදා නොගන්නා ලෙස අපි "
 "තරයේ නිර්දේශ කරමු."
 
-#: src/components/screens/Export/ui.jsx:58
-msgid "export-screen.coming-soon"
-msgstr "ළඟදීම!"
+#: src/components/screens/Export/ui.jsx:73
+#, fuzzy
+msgid "export-screen.button.export"
+msgstr ""
+"සෞඛ්‍ය බලධාරීන් සහ ඔබ අවට සිටින පුද්ගලයින් දැනුවත් කිරීමෙන් අපට සාමූහිකව ආසාදන මාර්ග ප්‍රතිනිර්මාණය "
+"කළ හැකිය."
 
 #: src/components/screens/Legal.jsx:162 src/components/screens/Menu.jsx:117
 msgid "legal-screen.header.headline"
@@ -815,20 +831,20 @@ msgstr ""
 "වළක්වා ගත හැකිය. මෙම පියවර පහ අනුගමනය කරන්න:"
 
 #: src/components/screens/Welcome/ui.jsx:100
-msgid "welcome-screen.slides.notifications.button-skip"
-msgstr "මඟ හරින්න"
-
-#: src/components/screens/Welcome/ui.jsx:101
 msgid "welcome-screen.slides.notifications.button"
 msgstr "දැන් ක්‍රියාත්මක කරන්න"
 
-#: src/components/screens/Welcome/ui.jsx:98
+#: src/components/screens/Welcome/ui.jsx:97
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "ඔබ අත් සෝදා ගත්තාද?"
 
-#: src/components/screens/Welcome/ui.jsx:99
+#: src/components/screens/Welcome/ui.jsx:98
 msgid "welcome-screen.slides.notifications.text"
 msgstr "ඔබේ දැනුම්දීම් සක්‍රිය කර ආසාදනය වැළැක්වීම සඳහා අත් සේදීම සඳහා නිතරම මතක් කරන්න."
+
+#: src/components/screens/Welcome/ui.jsx:99
+msgid "welcome-screen.slides.notifications.button-skip"
+msgstr "මඟ හරින්න"
 
 #: src/components/widgets/DayOverview.jsx:21
 msgid "today"
@@ -849,3 +865,6 @@ msgstr "මුලාශ්‍ර"
 #: src/components/widgets/Tip.jsx:138
 msgid "tips.sources.last-updated"
 msgstr "අවසන් වරට යාවත්කාලීන කරන ලද්දේ:"
+
+#~ msgid "export-screen.coming-soon"
+#~ msgstr "ළඟදීම!"

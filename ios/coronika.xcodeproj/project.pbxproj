@@ -17,6 +17,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* coronikaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* coronikaTests.m */; };
 		35786472241826C00040C421 /* workaround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35786471241826C00040C421 /* workaround.swift */; };
+		35C27E9E2451A44800CA8361 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35C27E9D2451A44800CA8361 /* SplashScreen.storyboard */; };
 		6EC4DAE10D23BA1AB4829A4C /* libPods-coronikaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F32A88BDF55331171DCE2250 /* libPods-coronikaTests.a */; };
 		7E38248B0E5DD439F44FB63E /* libPods-coronika-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E24DCBE8D3A93D9972ECABD /* libPods-coronika-tvOS.a */; };
 		8A11597F6BFC46F2AE246DCA /* JetBrainsMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93633654320429E99519F9C /* JetBrainsMono-Bold.ttf */; };
@@ -73,6 +74,7 @@
 		354DDDA7242B8E2000C791F6 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		35786470241826C00040C421 /* coronika-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "coronika-Bridging-Header.h"; sourceTree = "<group>"; };
 		35786471241826C00040C421 /* workaround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workaround.swift; sourceTree = "<group>"; };
+		35C27E9D2451A44800CA8361 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		35EBE24424333CFB00F5D28B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		35EBE24524333D0500F5D28B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		35EBE24624333D0D00F5D28B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				35C27E9D2451A44800CA8361 /* SplashScreen.storyboard */,
 				35786471241826C00040C421 /* workaround.swift */,
 				13B07FAE1A68108700A75B9A /* coronika */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -407,6 +410,7 @@
 				E7FEF051A81948CCAFB2799A /* JetBrainsMono-Regular.ttf in Resources */,
 				9776B8B6A30A45D9AC8FB068 /* DejaVuSansMono-Bold.ttf in Resources */,
 				D934181FDD244AD3B8E41A59 /* DejaVuSansMono.ttf in Resources */,
+				35C27E9E2451A44800CA8361 /* SplashScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

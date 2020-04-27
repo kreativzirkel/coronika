@@ -1,17 +1,30 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { COLOR_SECONDARY } from '../../../constants';
+import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../../constants';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
+import UilFile from '@iconscout/react-native-unicons/icons/uil-file';
 
 const Export = ({ createExport, navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
-    comingSoon: {
-      color: '#b0b0b1',
+    button: {
+      alignItems: 'center',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      marginBottom: vw(7),
+      marginTop: vw(7),
+    },
+    buttonIcon: {
+      marginRight: vw(1.5),
+    },
+    buttonText: {
+      color: COLOR_PRIMARY,
       fontFamily: getFontFamilyBold(),
-      fontSize: vw(7),
+      fontSize: vw(6),
       textAlign: 'center',
+      textTransform: 'lowercase',
     },
     contentHeadline: {
       fontFamily: getFontFamilyBold(),
@@ -55,8 +68,9 @@ const Export = ({ createExport, navigation, vw, getFontFamilyBold, getFontFamily
           <Text style={styles.contentText}>{__('export-screen.content.section-1.text')}</Text>
           <Text style={styles.contentHeadline}>{__('export-screen.content.section-2.headline')}</Text>
           <Text style={styles.contentText}>{__('export-screen.content.section-2.text')}</Text>
-          <TouchableOpacity onPress={() => createExport()}>
-            <Text style={styles.comingSoon}>{__('export-screen.coming-soon')}</Text>
+          <TouchableOpacity onPress={() => createExport()} style={styles.button}>
+            <UilFile color={COLOR_PRIMARY} size={vw(7)} style={styles.buttonIcon} />
+            <Text style={styles.buttonText}>{__('export-screen.button.export')}</Text>
           </TouchableOpacity>
         </View>
       </View>

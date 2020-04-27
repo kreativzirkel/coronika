@@ -1,5 +1,6 @@
 package de.kreativzirkel.coronika;
 
+import org.devio.rn.splashscreen.SplashScreen;
 import android.os.Bundle;
 
 import org.devio.rn.splashscreen.SplashScreen;
@@ -11,7 +12,7 @@ import org.devio.rn.splashscreen.SplashScreen;
 public class MainActivity extends ReactActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        SplashScreen.show(this);
+        SplashScreen.show(this, R.style.SplashScreenTheme);
         super.onCreate(savedInstanceState);
     }
 
