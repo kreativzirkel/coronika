@@ -5,7 +5,7 @@ import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 import UilFile from '@iconscout/react-native-unicons/icons/uil-file';
 
-const Export = ({ createExport, navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
+const Export = ({ isExporting, createExport, navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     button: {
@@ -25,6 +25,9 @@ const Export = ({ createExport, navigation, vw, getFontFamilyBold, getFontFamily
       fontSize: vw(6),
       textAlign: 'center',
       textTransform: 'lowercase',
+    },
+    buttonTextDisabled: {
+      color: '#b0b0b1',
     },
     contentHeadline: {
       fontFamily: getFontFamilyBold(),
@@ -68,9 +71,11 @@ const Export = ({ createExport, navigation, vw, getFontFamilyBold, getFontFamily
           <Text style={styles.contentText}>{__('export-screen.content.section-1.text')}</Text>
           <Text style={styles.contentHeadline}>{__('export-screen.content.section-2.headline')}</Text>
           <Text style={styles.contentText}>{__('export-screen.content.section-2.text')}</Text>
-          <TouchableOpacity onPress={() => createExport()} style={styles.button}>
-            <UilFile color={COLOR_PRIMARY} size={vw(7)} style={styles.buttonIcon} />
-            <Text style={styles.buttonText}>{__('export-screen.button.export')}</Text>
+          <TouchableOpacity disabled={isExporting} onPress={() => createExport()} style={styles.button}>
+            <UilFile color={isExporting ? '#b0b0b1' : COLOR_PRIMARY} size={vw(7)} style={styles.buttonIcon} />
+            <Text style={{ ...styles.buttonText, ...(isExporting && styles.buttonTextDisabled) }}>
+              {__('export-screen.button.export')}
+            </Text>
           </TouchableOpacity>
         </View>
       </View>

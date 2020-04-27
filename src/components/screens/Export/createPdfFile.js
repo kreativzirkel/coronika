@@ -271,7 +271,7 @@ const createPdfFile = async (options = {}) => {
       size: entryNameTextSize,
     });
 
-    const numbers = [...new Set(Object.values(phoneNumbers).map(({ number }) => number))];
+    const numbers = [...new Set(Object.values(phoneNumbers).map(({ number }) => number.toString().replace(/\s/g, '')))];
     const numbersText = numbers.join(', ');
 
     page.drawText(numbersText, {
@@ -440,7 +440,7 @@ const createPdfFile = async (options = {}) => {
     'export-screen.header.headline',
     currentLanguage
   ).toLowerCase()}.pdf`;
-  const pdfPath = `${RNFS.DocumentDirectoryPath}/${pdfFileName}`;
+  const pdfPath = `${RNFS.DocumentDirectoryPath}/${pdfFileName.replace(/\s/g, '_')}`;
   await RNFS.writeFile(pdfPath, pdfContent, 'base64');
 
   return pdfPath;
