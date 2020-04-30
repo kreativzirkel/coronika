@@ -19,6 +19,9 @@ const Overview = ({ locations, persons, total, navigation, vw, getFontFamilyBold
       marginBottom: vw(7),
       marginTop: vw(7),
     },
+    buttonAddDisabled: {
+      opacity: 0.5,
+    },
     buttonAddIcon: {
       marginRight: vw(1.5),
     },
@@ -27,6 +30,9 @@ const Overview = ({ locations, persons, total, navigation, vw, getFontFamilyBold
       fontFamily: getFontFamilyRegular(),
       fontSize: vw(5.5),
       textTransform: 'lowercase',
+    },
+    buttonAddTextDisabled: {
+      color: '#b0b0b1',
     },
     dayOverviewWrapper: {
       marginBottom: vw(0.7),
@@ -78,8 +84,8 @@ const Overview = ({ locations, persons, total, navigation, vw, getFontFamilyBold
     },
   });
 
+  const exportButtonDisabled = total.locations === 0 && total.persons === 0;
   const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
-
   const totalTimespan = moment(today).subtract(DAYS_OVERVIEW, 'days');
 
   return (
@@ -109,9 +115,18 @@ const Overview = ({ locations, persons, total, navigation, vw, getFontFamilyBold
         />
 
         <View style={styles.wrapperAddEntry}>
-          <TouchableOpacity onPress={() => navigation.navigate('Export')} style={styles.buttonAdd}>
-            <UilFile color={COLOR_PRIMARY} size={vw(6)} style={styles.buttonAddIcon} />
-            <Text style={styles.buttonAddText}>{__('overview-screen.export.button')}</Text>
+          <TouchableOpacity
+            disabled={exportButtonDisabled}
+            onPress={() => navigation.navigate('Export')}
+            style={{ ...styles.buttonAdd, ...(exportButtonDisabled && styles.buttonAddDisabled) }}>
+            <UilFile
+              color={exportButtonDisabled ? '#b0b0b1' : COLOR_PRIMARY}
+              size={vw(6)}
+              style={styles.buttonAddIcon}
+            />
+            <Text style={{ ...styles.buttonAddText, ...(exportButtonDisabled && styles.buttonAddTextDisabled) }}>
+              {__('overview-screen.export.button')}
+            </Text>
           </TouchableOpacity>
         </View>
       </View>

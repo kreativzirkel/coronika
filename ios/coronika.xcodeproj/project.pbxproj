@@ -26,6 +26,9 @@
 		D09638AC333EE4FE96CB158B /* libPods-coronika-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5D6547647F8E2E8C2DFB94 /* libPods-coronika-tvOSTests.a */; };
 		D934181FDD244AD3B8E41A59 /* DejaVuSansMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 938D1A0B91F543BA8CF2BFA0 /* DejaVuSansMono.ttf */; };
 		E7FEF051A81948CCAFB2799A /* JetBrainsMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B0B7943E65D4243A8DEDD68 /* JetBrainsMono-Regular.ttf */; };
+		5F4152FBFDC54E3F8DFBCCD7 /* NotoSansJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0285AA94A7464CD5833B0666 /* NotoSansJP-Regular.otf */; };
+		5CEED336EB5348A8B35CDCCC /* NotoSansSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F1A46C2AA1074086BC93820E /* NotoSansSC-Regular.otf */; };
+		2EFF7ECC7374482FA0DCA774 /* NotoSansSinhala-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1898DB95C8954BAA86537B0F /* NotoSansSinhala-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,9 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F32A88BDF55331171DCE2250 /* libPods-coronikaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-coronikaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0285AA94A7464CD5833B0666 /* NotoSansJP-Regular.otf */ = {isa = PBXFileReference; name = "NotoSansJP-Regular.otf"; path = "../src/assets/fonts/NotoSansJP-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F1A46C2AA1074086BC93820E /* NotoSansSC-Regular.otf */ = {isa = PBXFileReference; name = "NotoSansSC-Regular.otf"; path = "../src/assets/fonts/NotoSansSC-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1898DB95C8954BAA86537B0F /* NotoSansSinhala-Regular.ttf */ = {isa = PBXFileReference; name = "NotoSansSinhala-Regular.ttf"; path = "../src/assets/fonts/NotoSansSinhala-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +166,9 @@
 				1B0B7943E65D4243A8DEDD68 /* JetBrainsMono-Regular.ttf */,
 				AA396BC9B7B44BE8A71E57FB /* DejaVuSansMono-Bold.ttf */,
 				938D1A0B91F543BA8CF2BFA0 /* DejaVuSansMono.ttf */,
+				0285AA94A7464CD5833B0666 /* NotoSansJP-Regular.otf */,
+				F1A46C2AA1074086BC93820E /* NotoSansSC-Regular.otf */,
+				1898DB95C8954BAA86537B0F /* NotoSansSinhala-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -411,6 +420,9 @@
 				9776B8B6A30A45D9AC8FB068 /* DejaVuSansMono-Bold.ttf in Resources */,
 				D934181FDD244AD3B8E41A59 /* DejaVuSansMono.ttf in Resources */,
 				35C27E9E2451A44800CA8361 /* SplashScreen.storyboard in Resources */,
+				5F4152FBFDC54E3F8DFBCCD7 /* NotoSansJP-Regular.otf in Resources */,
+				5CEED336EB5348A8B35CDCCC /* NotoSansSC-Regular.otf in Resources */,
+				2EFF7ECC7374482FA0DCA774 /* NotoSansSinhala-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

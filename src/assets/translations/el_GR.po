@@ -1,23 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: coronika\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: el_GR\n"
+"Project-Id-Version: Coronika\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
-"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
-"esc_html_e;esc_html_x:1,2c\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.1\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Generator: POEditor.com\n"
 
 #: src/components/App/ui.jsx:144
 msgid "app.share.message"
@@ -46,116 +34,116 @@ msgstr "Κοινοποίηση"
 msgid "navigation.tips.label"
 msgstr "Συμβουλές"
 
-#: src/components/partials/EntriesTabsView.jsx:623
-#: src/components/screens/Export/createPdfFile.js:214
+#: src/components/partials/EntriesTabsView.jsx:628
+#: src/components/screens/Export/createPdfFile.js:277
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "επαφές"
 
-#: src/components/partials/EntriesTabsView.jsx:633
-#: src/components/screens/Export/createPdfFile.js:292
+#: src/components/partials/EntriesTabsView.jsx:638
+#: src/components/screens/Export/createPdfFile.js:358
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "τοποθεσίες"
 
-#: src/components/partials/EntriesTabsView.jsx:645
+#: src/components/partials/EntriesTabsView.jsx:650
 msgid "entries.persons.list.new"
 msgstr "Νέα επαφή"
 
-#: src/components/partials/EntriesTabsView.jsx:666
-#: src/components/partials/EntriesTabsView.jsx:716
+#: src/components/partials/EntriesTabsView.jsx:671
+#: src/components/partials/EntriesTabsView.jsx:721
 msgid "entries.search.list.empty"
 msgstr "Δεν βρέθηκε τίποτα στην αναζήτησή σου."
 
-#: src/components/partials/EntriesTabsView.jsx:673
+#: src/components/partials/EntriesTabsView.jsx:678
 msgid "entries.persons.list.empty"
 msgstr ""
 "Δεν έχεις δημιουργήσει καμία επαφή εως τώρα. Για να ξεκινήσεις, μπορείς να "
 "εισάγεις άτομα από τον τηλεφωνικό σου κατάλογο."
 
-#: src/components/partials/EntriesTabsView.jsx:677
+#: src/components/partials/EntriesTabsView.jsx:682
 msgid "entries.persons.list.import.button"
 msgstr "Εισαγωγή τώρα"
 
-#: src/components/partials/EntriesTabsView.jsx:696
+#: src/components/partials/EntriesTabsView.jsx:701
 msgid "entries.locations.list.new"
 msgstr "Νέα τοποθεσία"
 
-#: src/components/partials/EntriesTabsView.jsx:719
+#: src/components/partials/EntriesTabsView.jsx:724
 msgid "entries.locations.list.empty"
 msgstr ""
 "Δεν έχεις δημιουργήσει καμία τοποθεσία εως τώρα. Ξεκίνησε τώρα και "
 "δημιούργησε την πρώτη σου τοποθεσία."
 
-#: src/components/partials/EntriesTabsView.jsx:735
+#: src/components/partials/EntriesTabsView.jsx:740
 msgid "entries.selection.add"
 msgstr "Προσθήκη επιλογής"
 
-#: src/components/partials/EntriesTabsView.jsx:747
+#: src/components/partials/EntriesTabsView.jsx:752
 msgid "entries.modals.update-person.headline"
 msgstr "Επεξεργασία προσώπου"
 
-#: src/components/partials/EntriesTabsView.jsx:748
+#: src/components/partials/EntriesTabsView.jsx:753
 msgid "entries.modals.new-person.headline"
 msgstr "Νέα επαφή"
 
-#: src/components/partials/EntriesTabsView.jsx:759
+#: src/components/partials/EntriesTabsView.jsx:764
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Όνομα"
 
-#: src/components/partials/EntriesTabsView.jsx:771
+#: src/components/partials/EntriesTabsView.jsx:776
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Τηλέφωνο"
 
-#: src/components/partials/EntriesTabsView.jsx:784
+#: src/components/partials/EntriesTabsView.jsx:789
 msgid "entries.modals.update-person.button"
 msgstr "Αποθήκευση"
 
-#: src/components/partials/EntriesTabsView.jsx:785
+#: src/components/partials/EntriesTabsView.jsx:790
 msgid "entries.modals.new-person.button"
 msgstr "Προσθήκη"
 
-#: src/components/partials/EntriesTabsView.jsx:797
+#: src/components/partials/EntriesTabsView.jsx:802
 msgid "entries.modals.update-location.headline"
 msgstr "Επεξεργασία τοποθεσίας"
 
-#: src/components/partials/EntriesTabsView.jsx:798
+#: src/components/partials/EntriesTabsView.jsx:803
 msgid "entries.modals.new-location.headline"
 msgstr "Νέα τοποθεσία"
 
-#: src/components/partials/EntriesTabsView.jsx:809
+#: src/components/partials/EntriesTabsView.jsx:814
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Τίτλος"
 
-#: src/components/partials/EntriesTabsView.jsx:820
+#: src/components/partials/EntriesTabsView.jsx:825
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Περιγραφή"
 
-#: src/components/partials/EntriesTabsView.jsx:833
+#: src/components/partials/EntriesTabsView.jsx:838
 msgid "entries.modals.update-location.button"
 msgstr "Αποθήκευση"
 
-#: src/components/partials/EntriesTabsView.jsx:834
+#: src/components/partials/EntriesTabsView.jsx:839
 msgid "entries.modals.new-location.button"
 msgstr "Προσθήκη"
 
-#: src/components/partials/EntriesTabsView.jsx:844
+#: src/components/partials/EntriesTabsView.jsx:849
 msgid "entries.modals.select-location.headline"
 msgstr "Επέλεξε τοποθεσία"
 
-#: src/components/partials/EntriesTabsView.jsx:863
+#: src/components/partials/EntriesTabsView.jsx:868
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Περιγραφή"
 
-#: src/components/partials/EntriesTabsView.jsx:878
+#: src/components/partials/EntriesTabsView.jsx:883
 msgid "Cancel"
 msgstr "Ματαίωση"
 
-#: src/components/partials/EntriesTabsView.jsx:879
+#: src/components/partials/EntriesTabsView.jsx:884
 msgid "Confirm"
 msgstr "Επιβεβαίωση"
 
-#: src/components/partials/EntriesTabsView.jsx:892
+#: src/components/partials/EntriesTabsView.jsx:897
 msgid "entries.modals.select-location.button"
 msgstr "Επιλογή"
 
@@ -254,114 +242,162 @@ msgstr "Δεν υπάρχει άδεια"
 
 #: src/components/screens/Directory/logic.js:34
 #: src/components/screens/Directory/logic.js:68
-#, fuzzy
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
-msgstr "Εισαγωγή επαφών"
+msgstr ""
+"Επιτρέψτε στην εφαρμογή να έχει πρόσβαση στις επαφές στις ρυθμίσεις "
+"απορρήτου της συσκευής σας."
 
-#: src/components/screens/Directory/ui.jsx:131
+#: src/components/screens/Directory/ui.jsx:136
 msgid "directory-screen.header.button.import"
 msgstr "Εισαγωγή"
 
-#: src/components/screens/Directory/ui.jsx:135
+#: src/components/screens/Directory/ui.jsx:140
 msgid "directory-screen.header.headline"
 msgstr "Διαχείριση καταλόγου"
 
-#: src/components/screens/Directory/ui.jsx:153
+#: src/components/screens/Directory/ui.jsx:158
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Εισαγωγή επαφών"
 
-#: src/components/screens/Directory/ui.jsx:159
+#: src/components/screens/Directory/ui.jsx:164
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Κάνε εισαγωγή επαφών από τον τηλεφωνικό σου κατάλογο, ώστε να μπορείς να "
 "ξεκινήσεις αμέσως. Όλες οι επαφές σου αποθηκεύονται σε τοπικό επίπεδο. Δεν "
 "παρακολουθούνται και δεν κοινοποιούνται δεδομένα."
 
-#: src/components/screens/Directory/ui.jsx:165
+#: src/components/screens/Directory/ui.jsx:170
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Εισαγωγή ..."
 
-#: src/components/screens/Directory/ui.jsx:166
+#: src/components/screens/Directory/ui.jsx:171
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Εισαγωγή τώρα"
 
-#: src/components/screens/Export/createPdfFile.js:120
-#: src/components/screens/Export/createPdfFile.js:123
-#: src/components/screens/Export/createPdfFile.js:43
-#: src/components/screens/Export/ui.jsx:63
+#: src/components/screens/Export/createPdfFile.js:102
+msgid "page"
+msgstr "σελίδα"
+
+#: src/components/screens/Export/createPdfFile.js:147
+#: src/components/screens/Export/createPdfFile.js:150
+#: src/components/screens/Export/createPdfFile.js:516
+#: src/components/screens/Export/createPdfFile.js:60
+#: src/components/screens/Export/logic.js:44
+#: src/components/screens/Export/logic.js:94
+#: src/components/screens/Export/ui.jsx:149
 msgid "export-screen.header.headline"
 msgstr "Εξαγωγή"
 
-#: src/components/screens/Export/createPdfFile.js:207
+#: src/components/screens/Export/createPdfFile.js:266
 msgid "quantity"
+msgstr "ποσότητα"
+
+#: src/components/screens/Export/logic.js:57
+msgid "export-screen.alerts.save-file.success.title"
 msgstr ""
 
-#: src/components/screens/Export/createPdfFile.js:81
-msgid "page"
+#: src/components/screens/Export/logic.js:58
+msgid "export-screen.alerts.save-file.success.message"
 msgstr ""
+"Το αρχείο αποθηκεύτηκε με επιτυχία στον κατάλογο λήψης της συσκευής σας."
 
-#: src/components/screens/Export/ui.jsx:67
+#: src/components/screens/Export/logic.js:63
+msgid "export-screen.alerts.save-file.error.title"
+msgstr "Λάθος"
+
+#: src/components/screens/Export/logic.js:64
+msgid "export-screen.alerts.save-file.error.message"
+msgstr ""
+"Παρουσιάστηκε σφάλμα κατά την αποθήκευση του αρχείου στον κατάλογο λήψης της "
+"συσκευής σας."
+
+#: src/components/screens/Export/logic.js:69
+msgid "export-screen.alerts.save-file.missing-permission.title"
+msgstr "Λείπει η εξουσιοδότηση"
+
+#: src/components/screens/Export/logic.js:70
+msgid "export-screen.alerts.save-file.missing-permission.message"
+msgstr ""
+"Επιτρέψτε στην εφαρμογή να έχει πρόσβαση στη μνήμη στις ρυθμίσεις απορρήτου "
+"της συσκευής σας."
+
+#: src/components/screens/Export/ui.jsx:153
 msgid "export-screen.content.section-1.headline"
 msgstr "Η σύνοψή σου"
 
-#: src/components/screens/Export/ui.jsx:68
+#: src/components/screens/Export/ui.jsx:154
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "Μαζί μπορούμε να κατανοήσουμε τις διαδρομές μόλυνσης ενημερώνοντας τις "
 "υγειονομικές αρχές και τους ανθρώπους γύρω σου."
 
-#: src/components/screens/Export/ui.jsx:69
+#: src/components/screens/Export/ui.jsx:155
 msgid "export-screen.content.section-2.headline"
 msgstr "Με μεγάλη δύναμη έρχεται μεγάλη ευθύνη"
 
-#: src/components/screens/Export/ui.jsx:70
+#: src/components/screens/Export/ui.jsx:156
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "Λάβετε υπόψη ότι τα δεδομένα είναι πολύ ευαίσθητα. Συνιστάται ιδιαίτερα να "
 "μην τα μοιράζεσαι ηλεκτρονικά ή με τυχαίους ανθρώπους."
 
-#: src/components/screens/Export/ui.jsx:73
-#, fuzzy
-msgid "export-screen.button.export"
-msgstr ""
-"Μαζί μπορούμε να κατανοήσουμε τις διαδρομές μόλυνσης ενημερώνοντας τις "
-"υγειονομικές αρχές και τους ανθρώπους γύρω σου."
+#: src/components/screens/Export/ui.jsx:160
+msgid "export-screen.export.button.exporting"
+msgstr "Εξαγωγή ..."
 
-#: src/components/screens/Legal.jsx:162 src/components/screens/Menu.jsx:117
+#: src/components/screens/Export/ui.jsx:160
+msgid "export-screen.export.button.default"
+msgstr "Εξαγωγή τώρα"
+
+#: src/components/screens/Export/ui.jsx:169
+msgid "export-screen.modals.export-completed.headline"
+msgstr "Η εξαγωγή ολοκληρώθηκε"
+
+#: src/components/screens/Export/ui.jsx:175
+msgid "export-screen.modals.export-completed.text"
+msgstr ""
+"Το αρχείο PDF με την επισκόπηση σας δημιουργήθηκε με επιτυχία. Τώρα μπορείτε "
+"να αποθηκεύσετε ή να μοιραστείτε το αρχείο."
+
+#: src/components/screens/Export/ui.jsx:180
+msgid "export-screen.modals.export-completed.button.save"
+msgstr "Αποθήκευση"
+
+#: src/components/screens/Legal.jsx:170 src/components/screens/Menu.jsx:117
 msgid "legal-screen.header.headline"
 msgstr "Νομικά"
 
-#: src/components/screens/Legal.jsx:169
+#: src/components/screens/Legal.jsx:177
 msgid "legal-screen.tabs.privacy.label"
 msgstr "Προστασία δεδομένων "
 
-#: src/components/screens/Legal.jsx:174
+#: src/components/screens/Legal.jsx:182
 msgid "legal-screen.tabs.imprint.label"
 msgstr "Στοιχεία έκδοσης "
 
-#: src/components/screens/Legal.jsx:179
+#: src/components/screens/Legal.jsx:187
 msgid "legal-screen.tabs.licenses.label"
 msgstr "Άδειες"
 
-#: src/components/screens/Legal.jsx:189 src/components/screens/Legal.jsx:205
-#: src/components/screens/Legal.jsx:234
+#: src/components/screens/Legal.jsx:197 src/components/screens/Legal.jsx:213
+#: src/components/screens/Legal.jsx:242
 msgid "legal-screen.privacy.section-1.headline"
 msgstr "Επεξεργασία δεδομένων της εφαρμογής"
 
-#: src/components/screens/Legal.jsx:190 src/components/screens/Legal.jsx:207
-#: src/components/screens/Legal.jsx:236
+#: src/components/screens/Legal.jsx:198 src/components/screens/Legal.jsx:215
+#: src/components/screens/Legal.jsx:244
 msgid "legal-screen.privacy.section-1.text"
 msgstr ""
 "Το App Coronika επεξεργάζεται προσωπικά δεδομένα και δεδομένα σχετικά με τη "
 "τοποθεσία αποκλειστικά τοπικά στο smartphone του χρήστη."
 
-#: src/components/screens/Legal.jsx:191 src/components/screens/Legal.jsx:209
-#: src/components/screens/Legal.jsx:238
+#: src/components/screens/Legal.jsx:199 src/components/screens/Legal.jsx:217
+#: src/components/screens/Legal.jsx:246
 msgid "legal-screen.privacy.section-2.headline"
 msgstr "Προσωπικά δεδομένα"
 
-#: src/components/screens/Legal.jsx:192 src/components/screens/Legal.jsx:211
-#: src/components/screens/Legal.jsx:240
+#: src/components/screens/Legal.jsx:200 src/components/screens/Legal.jsx:219
+#: src/components/screens/Legal.jsx:248
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
 "Ο χρήστης μπορεί να καταχωρήσει άτομα μέσα στην εφαρμογή. Το όνομα και ο "
@@ -372,13 +408,13 @@ msgstr ""
 "χρήστη. Τα δεδομένα δεν μεταβιβάζονται ποτέ στον πάροχο της εφαρμογής ή σε "
 "τρίτους."
 
-#: src/components/screens/Legal.jsx:193 src/components/screens/Legal.jsx:213
-#: src/components/screens/Legal.jsx:242
+#: src/components/screens/Legal.jsx:201 src/components/screens/Legal.jsx:221
+#: src/components/screens/Legal.jsx:250
 msgid "legal-screen.privacy.section-3.headline"
 msgstr "Τοπικά δεδομένα"
 
-#: src/components/screens/Legal.jsx:194 src/components/screens/Legal.jsx:215
-#: src/components/screens/Legal.jsx:244
+#: src/components/screens/Legal.jsx:202 src/components/screens/Legal.jsx:223
+#: src/components/screens/Legal.jsx:252
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
 "Ο χρήστης μπορεί να δημιουργήσει τοποθεσίες εντός της εφαρμογής. Το όνομα "
@@ -388,13 +424,13 @@ msgstr ""
 "smartphone του χρήστη και δεν μεταδίδονται στον πάροχο της εφαρμογής ή σε "
 "τρίτους."
 
-#: src/components/screens/Legal.jsx:195 src/components/screens/Legal.jsx:217
-#: src/components/screens/Legal.jsx:246
+#: src/components/screens/Legal.jsx:203 src/components/screens/Legal.jsx:225
+#: src/components/screens/Legal.jsx:254
 msgid "legal-screen.privacy.section-4.headline"
 msgstr "Ημερολόγιο"
 
-#: src/components/screens/Legal.jsx:196 src/components/screens/Legal.jsx:219
-#: src/components/screens/Legal.jsx:248
+#: src/components/screens/Legal.jsx:204 src/components/screens/Legal.jsx:227
+#: src/components/screens/Legal.jsx:256
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
 "Μέσα στο ημερολόγιο, ο χρήστης κατατάσσει καθημερινά άτομα και μέρη σε "
@@ -403,13 +439,13 @@ msgstr ""
 "καταχωρήσεις παραμένουν επίσης τοπικά στο smartphone του χρήστη και δεν "
 "μεταδίδονται στον πάροχο της εφαρμογής ή σε τρίτους."
 
-#: src/components/screens/Legal.jsx:197 src/components/screens/Legal.jsx:221
-#: src/components/screens/Legal.jsx:250
+#: src/components/screens/Legal.jsx:205 src/components/screens/Legal.jsx:229
+#: src/components/screens/Legal.jsx:258
 msgid "legal-screen.privacy.section-5.headline"
 msgstr "Εξαγωγή"
 
-#: src/components/screens/Legal.jsx:198 src/components/screens/Legal.jsx:223
-#: src/components/screens/Legal.jsx:252
+#: src/components/screens/Legal.jsx:206 src/components/screens/Legal.jsx:231
+#: src/components/screens/Legal.jsx:260
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
 "Μέσα στην εφαρμογή ο χρήστης έχει τη δυνατότητα να εξάγει ένα τμήμα του "
@@ -421,13 +457,13 @@ msgstr ""
 "χρήστης είναι υπεύθυνος για το υπεύθυνο χειρισμό και την προσεκτική μετάδοση "
 "του αρχείου PDF και των δεδομένων που περιέχονται σε αυτό."
 
-#: src/components/screens/Legal.jsx:199 src/components/screens/Legal.jsx:225
-#: src/components/screens/Legal.jsx:254
+#: src/components/screens/Legal.jsx:207 src/components/screens/Legal.jsx:233
+#: src/components/screens/Legal.jsx:262
 msgid "legal-screen.privacy.section-6.headline"
 msgstr "Μεταφορά δεδομένων και παρακολούθηση"
 
-#: src/components/screens/Legal.jsx:200 src/components/screens/Legal.jsx:227
-#: src/components/screens/Legal.jsx:256
+#: src/components/screens/Legal.jsx:208 src/components/screens/Legal.jsx:235
+#: src/components/screens/Legal.jsx:264
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
 "Η εφαρμογή δεν παρέχει αυτοματοποιημένη παρακολούθηση ή μεταφορά δεδομένων "
@@ -435,13 +471,13 @@ msgstr ""
 "Ωστόσο, μόνο ο χρήστης αποφασίζει σε ποιον διαβιβάζονται τα δεδομένα. "
 "Διαφορετικά, όλα τα δεδομένα παραμένουν τοπικά στο smartphone του χρήστη."
 
-#: src/components/screens/Legal.jsx:266 src/components/screens/Legal.jsx:278
-#: src/components/screens/Legal.jsx:299
+#: src/components/screens/Legal.jsx:274 src/components/screens/Legal.jsx:286
+#: src/components/screens/Legal.jsx:307
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "Η διαχείριση της εφαρμογής \"Coronika\" γίνεται από"
 
-#: src/components/screens/Legal.jsx:267 src/components/screens/Legal.jsx:280
-#: src/components/screens/Legal.jsx:301
+#: src/components/screens/Legal.jsx:275 src/components/screens/Legal.jsx:288
+#: src/components/screens/Legal.jsx:309
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -458,13 +494,13 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:268 src/components/screens/Legal.jsx:282
-#: src/components/screens/Legal.jsx:303
+#: src/components/screens/Legal.jsx:276 src/components/screens/Legal.jsx:290
+#: src/components/screens/Legal.jsx:311
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "Ευθύνη για το περιεχόμενο"
 
-#: src/components/screens/Legal.jsx:269 src/components/screens/Legal.jsx:284
-#: src/components/screens/Legal.jsx:305
+#: src/components/screens/Legal.jsx:277 src/components/screens/Legal.jsx:292
+#: src/components/screens/Legal.jsx:313
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "Ως πάροχος υπηρεσιών, είμαστε υπεύθυνοι για το δικό μας περιεχόμενο σε αυτές "
@@ -478,13 +514,13 @@ msgstr ""
 "συγκεκριμένης παράβασης. Εάν διαπιστώσουμε τέτοιες παραβάσεις, θα "
 "καταργήσουμε αμέσως αυτό το περιεχόμενο."
 
-#: src/components/screens/Legal.jsx:270 src/components/screens/Legal.jsx:286
-#: src/components/screens/Legal.jsx:307
+#: src/components/screens/Legal.jsx:278 src/components/screens/Legal.jsx:294
+#: src/components/screens/Legal.jsx:315
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Ευθύνη για συνδέσμους"
 
-#: src/components/screens/Legal.jsx:271 src/components/screens/Legal.jsx:288
-#: src/components/screens/Legal.jsx:309
+#: src/components/screens/Legal.jsx:279 src/components/screens/Legal.jsx:296
+#: src/components/screens/Legal.jsx:317
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Η προσφορά μας περιέχει συνδέσμους προς εξωτερικούς ιστότοπους τρίτων, για "
@@ -498,13 +534,13 @@ msgstr ""
 "παραβίασης του νόμου. Εάν διαπιστώσουμε τυχόν παραβάσεις, θα καταργήσουμε "
 "αμέσως αυτούς τους συνδέσμους."
 
-#: src/components/screens/Legal.jsx:272 src/components/screens/Legal.jsx:290
-#: src/components/screens/Legal.jsx:311
+#: src/components/screens/Legal.jsx:280 src/components/screens/Legal.jsx:298
+#: src/components/screens/Legal.jsx:319
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "Πνευματική ιδιοκτησία"
 
-#: src/components/screens/Legal.jsx:273 src/components/screens/Legal.jsx:292
-#: src/components/screens/Legal.jsx:313
+#: src/components/screens/Legal.jsx:281 src/components/screens/Legal.jsx:300
+#: src/components/screens/Legal.jsx:321
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "Το περιεχόμενο και οι εργασίες σε αυτές τις σελίδες που δημιουργούνται από "
@@ -534,11 +570,11 @@ msgstr ""
 msgid "menu-screen.button.send-feedback"
 msgstr "Στείλε τα σχόλιά σου"
 
-#: src/components/screens/Overview/ui.jsx:114
+#: src/components/screens/Overview/ui.jsx:128
 msgid "overview-screen.export.button"
 msgstr "Σύνοψη εξαγωγών"
 
-#: src/components/screens/Overview/ui.jsx:88
+#: src/components/screens/Overview/ui.jsx:94
 msgid "overview-screen.header.headline"
 msgstr "Σύνοψη "
 
@@ -917,6 +953,3 @@ msgstr "Πηγές"
 #: src/components/widgets/Tip.jsx:138
 msgid "tips.sources.last-updated"
 msgstr "Τελευταία ενημέρωση:"
-
-#~ msgid "export-screen.coming-soon"
-#~ msgstr "Έρχεται συντομα!"

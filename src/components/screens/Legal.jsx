@@ -127,6 +127,14 @@ class Legal extends React.PureComponent {
     });
 
     licensesList.push({
+      license: 'Custom',
+      licenseUrl: 'https://dejavu-fonts.github.io/License.html',
+      name: 'DejaVu Fonts',
+      repository: 'https://dejavu-fonts.github.io/',
+      version: '2.37',
+    });
+
+    licensesList.push({
       license: 'Apache-2.0',
       licenseUrl: 'https://www.jetbrains.com/lp/mono/#license',
       name: 'JetBrains Mono',
@@ -135,11 +143,11 @@ class Legal extends React.PureComponent {
     });
 
     licensesList.push({
-      license: 'Custom',
-      licenseUrl: 'https://dejavu-fonts.github.io/License.html',
-      name: 'DejaVu Fonts',
-      repository: 'https://dejavu-fonts.github.io/',
-      version: '2.37',
+      license: 'SIL Open Font License 1.1',
+      licenseUrl: 'https://github.com/googlefonts/noto-fonts/blob/master/LICENSE',
+      name: 'Noto Fonts',
+      repository: 'https://github.com/googlefonts/noto-fonts',
+      version: '',
     });
 
     licensesList.sort((a, b) => {
@@ -323,23 +331,29 @@ class Legal extends React.PureComponent {
                   data={licensesList}
                   initialNumToRender={50}
                   keyExtractor={({ name }) => name}
-                  renderItem={({ item: { license, licenseUrl, name, repository, version } }) => (
-                    <View style={styles.licenseItem}>
-                      <TouchableOpacity onPress={() => openLink(repository)} style={styles.licenseItemLink}>
-                        <UilExternalLinkAlt color={COLOR_PRIMARY} size={vw(6)} />
-                      </TouchableOpacity>
-                      <Text style={styles.licenseItemName}>{name}</Text>
-                      <View style={styles.licenseItemContent}>
-                        <Text style={styles.licenseItemContentText}>{version}</Text>
-                        <Text style={{ ...styles.licenseItemContentText, marginLeft: vw(2), marginRight: vw(2) }}>
-                          {'-'}
-                        </Text>
-                        <TouchableOpacity onPress={() => openLink(licenseUrl)} style={styles.licenseItemLicense}>
-                          <Text style={styles.licenseItemContentText}>{license}</Text>
+                  renderItem={({ item: { license, licenseUrl, name, repository, version } }) => {
+                    const hasVersion = version.toString().trim().length > 0;
+
+                    return (
+                      <View style={styles.licenseItem}>
+                        <TouchableOpacity onPress={() => openLink(repository)} style={styles.licenseItemLink}>
+                          <UilExternalLinkAlt color={COLOR_PRIMARY} size={vw(6)} />
                         </TouchableOpacity>
+                        <Text style={styles.licenseItemName}>{name}</Text>
+                        <View style={styles.licenseItemContent}>
+                          {hasVersion && <Text style={styles.licenseItemContentText}>{version}</Text>}
+                          {hasVersion && (
+                            <Text style={{ ...styles.licenseItemContentText, marginLeft: vw(2), marginRight: vw(2) }}>
+                              {'-'}
+                            </Text>
+                          )}
+                          <TouchableOpacity onPress={() => openLink(licenseUrl)} style={styles.licenseItemLicense}>
+                            <Text style={styles.licenseItemContentText}>{license}</Text>
+                          </TouchableOpacity>
+                        </View>
                       </View>
-                    </View>
-                  )}
+                    );
+                  }}
                   style={styles.licensesList}
                 />
               </View>

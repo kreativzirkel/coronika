@@ -1,23 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: coronika\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: tr_TR\n"
+"Project-Id-Version: Coronika\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
-"_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
-"esc_html_e;esc_html_x:1,2c\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.1\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Generator: POEditor.com\n"
 
 #: src/components/App/ui.jsx:144
 msgid "app.share.message"
@@ -43,115 +31,115 @@ msgstr "Paylaşmak"
 msgid "navigation.tips.label"
 msgstr "İpuçları"
 
-#: src/components/partials/EntriesTabsView.jsx:623
-#: src/components/screens/Export/createPdfFile.js:214
+#: src/components/partials/EntriesTabsView.jsx:628
+#: src/components/screens/Export/createPdfFile.js:277
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "Kişiler"
 
-#: src/components/partials/EntriesTabsView.jsx:633
-#: src/components/screens/Export/createPdfFile.js:292
+#: src/components/partials/EntriesTabsView.jsx:638
+#: src/components/screens/Export/createPdfFile.js:358
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "Konum"
 
-#: src/components/partials/EntriesTabsView.jsx:645
+#: src/components/partials/EntriesTabsView.jsx:650
 msgid "entries.persons.list.new"
 msgstr "Yeni kişi"
 
-#: src/components/partials/EntriesTabsView.jsx:666
-#: src/components/partials/EntriesTabsView.jsx:716
+#: src/components/partials/EntriesTabsView.jsx:671
+#: src/components/partials/EntriesTabsView.jsx:721
 msgid "entries.search.list.empty"
 msgstr "Aramanızda hiçbir şey bulunamadı."
 
-#: src/components/partials/EntriesTabsView.jsx:673
+#: src/components/partials/EntriesTabsView.jsx:678
 msgid "entries.persons.list.empty"
 msgstr ""
 "Henüz bir kişi oluşturmadınız. Hemen başlamak için telefon defterinizden "
 "kişileri aktarabilirsiniz."
 
-#: src/components/partials/EntriesTabsView.jsx:677
+#: src/components/partials/EntriesTabsView.jsx:682
 msgid "entries.persons.list.import.button"
 msgstr "Şimdi aktar "
 
-#: src/components/partials/EntriesTabsView.jsx:696
+#: src/components/partials/EntriesTabsView.jsx:701
 msgid "entries.locations.list.new"
 msgstr "Yeni konum"
 
-#: src/components/partials/EntriesTabsView.jsx:719
+#: src/components/partials/EntriesTabsView.jsx:724
 msgid "entries.locations.list.empty"
 msgstr ""
 "Henüz bir konum oluşturmadınız. Şimdi başlayın ve ilk konumunuzu oluşturun."
 
-#: src/components/partials/EntriesTabsView.jsx:735
+#: src/components/partials/EntriesTabsView.jsx:740
 msgid "entries.selection.add"
 msgstr "Seçim ekle"
 
-#: src/components/partials/EntriesTabsView.jsx:747
+#: src/components/partials/EntriesTabsView.jsx:752
 msgid "entries.modals.update-person.headline"
 msgstr "Kişiyi düzenle"
 
-#: src/components/partials/EntriesTabsView.jsx:748
+#: src/components/partials/EntriesTabsView.jsx:753
 msgid "entries.modals.new-person.headline"
 msgstr "Yeni kişi"
 
-#: src/components/partials/EntriesTabsView.jsx:759
+#: src/components/partials/EntriesTabsView.jsx:764
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Adı ve soyadı"
 
-#: src/components/partials/EntriesTabsView.jsx:771
+#: src/components/partials/EntriesTabsView.jsx:776
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Telefon"
 
-#: src/components/partials/EntriesTabsView.jsx:784
+#: src/components/partials/EntriesTabsView.jsx:789
 msgid "entries.modals.update-person.button"
 msgstr "Kayıt etmek"
 
-#: src/components/partials/EntriesTabsView.jsx:785
+#: src/components/partials/EntriesTabsView.jsx:790
 msgid "entries.modals.new-person.button"
 msgstr "Ekle"
 
-#: src/components/partials/EntriesTabsView.jsx:797
+#: src/components/partials/EntriesTabsView.jsx:802
 msgid "entries.modals.update-location.headline"
 msgstr "Konumunu düzenle"
 
-#: src/components/partials/EntriesTabsView.jsx:798
+#: src/components/partials/EntriesTabsView.jsx:803
 msgid "entries.modals.new-location.headline"
 msgstr "Yeni konum"
 
-#: src/components/partials/EntriesTabsView.jsx:809
+#: src/components/partials/EntriesTabsView.jsx:814
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Başlık"
 
-#: src/components/partials/EntriesTabsView.jsx:820
+#: src/components/partials/EntriesTabsView.jsx:825
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Tanım "
 
-#: src/components/partials/EntriesTabsView.jsx:833
+#: src/components/partials/EntriesTabsView.jsx:838
 msgid "entries.modals.update-location.button"
 msgstr "Kayıt etmek"
 
-#: src/components/partials/EntriesTabsView.jsx:834
+#: src/components/partials/EntriesTabsView.jsx:839
 msgid "entries.modals.new-location.button"
 msgstr "Ekle"
 
-#: src/components/partials/EntriesTabsView.jsx:844
+#: src/components/partials/EntriesTabsView.jsx:849
 msgid "entries.modals.select-location.headline"
 msgstr "Konum seçin"
 
-#: src/components/partials/EntriesTabsView.jsx:863
+#: src/components/partials/EntriesTabsView.jsx:868
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Tanım "
 
-#: src/components/partials/EntriesTabsView.jsx:878
+#: src/components/partials/EntriesTabsView.jsx:883
 msgid "Cancel"
 msgstr "İptal etmek"
 
-#: src/components/partials/EntriesTabsView.jsx:879
+#: src/components/partials/EntriesTabsView.jsx:884
 msgid "Confirm"
 msgstr "Onaylamak"
 
-#: src/components/partials/EntriesTabsView.jsx:892
+#: src/components/partials/EntriesTabsView.jsx:897
 msgid "entries.modals.select-location.button"
 msgstr "Seçmek"
 
@@ -246,113 +234,157 @@ msgstr "Eksik izin"
 
 #: src/components/screens/Directory/logic.js:34
 #: src/components/screens/Directory/logic.js:68
-#, fuzzy
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
-msgstr "Kişileri aktar "
+msgstr ""
+"Uygulamanın cihazınızın gizlilik ayarlarındaki kişilere erişmesine izin "
+"verin."
 
-#: src/components/screens/Directory/ui.jsx:131
+#: src/components/screens/Directory/ui.jsx:136
 msgid "directory-screen.header.button.import"
 msgstr "Aktar "
 
-#: src/components/screens/Directory/ui.jsx:135
+#: src/components/screens/Directory/ui.jsx:140
 msgid "directory-screen.header.headline"
 msgstr "Rehberi yönet"
 
-#: src/components/screens/Directory/ui.jsx:153
+#: src/components/screens/Directory/ui.jsx:158
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Kişileri aktar "
 
-#: src/components/screens/Directory/ui.jsx:159
+#: src/components/screens/Directory/ui.jsx:164
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Hemen başlayabilmeniz için kişileri telefon defterinizden aktarın. Tüm "
 "kişileriniz yerel olarak saklanır. Hiçbir veri izlenmez veya paylaşılmaz."
 
-#: src/components/screens/Directory/ui.jsx:165
+#: src/components/screens/Directory/ui.jsx:170
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Aktarılıyor ..."
 
-#: src/components/screens/Directory/ui.jsx:166
+#: src/components/screens/Directory/ui.jsx:171
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Şimdi aktar "
 
-#: src/components/screens/Export/createPdfFile.js:120
-#: src/components/screens/Export/createPdfFile.js:123
-#: src/components/screens/Export/createPdfFile.js:43
-#: src/components/screens/Export/ui.jsx:63
+#: src/components/screens/Export/createPdfFile.js:102
+msgid "page"
+msgstr "sayfa"
+
+#: src/components/screens/Export/createPdfFile.js:147
+#: src/components/screens/Export/createPdfFile.js:150
+#: src/components/screens/Export/createPdfFile.js:516
+#: src/components/screens/Export/createPdfFile.js:60
+#: src/components/screens/Export/logic.js:44
+#: src/components/screens/Export/logic.js:94
+#: src/components/screens/Export/ui.jsx:149
 msgid "export-screen.header.headline"
 msgstr "ihracat"
 
-#: src/components/screens/Export/createPdfFile.js:207
+#: src/components/screens/Export/createPdfFile.js:266
 msgid "quantity"
+msgstr "miktar"
+
+#: src/components/screens/Export/logic.js:57
+msgid "export-screen.alerts.save-file.success.title"
 msgstr ""
 
-#: src/components/screens/Export/createPdfFile.js:81
-msgid "page"
-msgstr ""
+#: src/components/screens/Export/logic.js:58
+msgid "export-screen.alerts.save-file.success.message"
+msgstr "Dosya, cihazınızın indirme dizinine başarıyla kaydedildi."
 
-#: src/components/screens/Export/ui.jsx:67
+#: src/components/screens/Export/logic.js:63
+msgid "export-screen.alerts.save-file.error.title"
+msgstr "Hata"
+
+#: src/components/screens/Export/logic.js:64
+msgid "export-screen.alerts.save-file.error.message"
+msgstr "Dosya cihazınızın indirme dizinine kaydedilirken bir hata oluştu."
+
+#: src/components/screens/Export/logic.js:69
+msgid "export-screen.alerts.save-file.missing-permission.title"
+msgstr "Eksik izin"
+
+#: src/components/screens/Export/logic.js:70
+msgid "export-screen.alerts.save-file.missing-permission.message"
+msgstr ""
+"Uygulamanın cihazınızın gizlilik ayarlarında belleğe erişmesine izin verin."
+
+#: src/components/screens/Export/ui.jsx:153
 msgid "export-screen.content.section-1.headline"
 msgstr "Genel Bakış"
 
-#: src/components/screens/Export/ui.jsx:68
+#: src/components/screens/Export/ui.jsx:154
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "Toplu olarak, sağlık yetkililerini ve çevrenizdeki insanları bilgilendirerek "
 "enfeksiyon yollarını kavrayabiliriz."
 
-#: src/components/screens/Export/ui.jsx:69
+#: src/components/screens/Export/ui.jsx:155
 msgid "export-screen.content.section-2.headline"
 msgstr "Büyük güç büyük sorumluluk getirir"
 
-#: src/components/screens/Export/ui.jsx:70
+#: src/components/screens/Export/ui.jsx:156
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "Verilerin çok hassas olduğunu unutmayın. Çevrimiçi olarak veya rastgele "
 "kişilerle paylaşmamanızı önemle öneririz."
 
-#: src/components/screens/Export/ui.jsx:73
-#, fuzzy
-msgid "export-screen.button.export"
-msgstr ""
-"Toplu olarak, sağlık yetkililerini ve çevrenizdeki insanları bilgilendirerek "
-"enfeksiyon yollarını kavrayabiliriz."
+#: src/components/screens/Export/ui.jsx:160
+msgid "export-screen.export.button.exporting"
+msgstr "İhracat ..."
 
-#: src/components/screens/Legal.jsx:162 src/components/screens/Menu.jsx:117
+#: src/components/screens/Export/ui.jsx:160
+msgid "export-screen.export.button.default"
+msgstr "Şimdi dışa aktar"
+
+#: src/components/screens/Export/ui.jsx:169
+msgid "export-screen.modals.export-completed.headline"
+msgstr "Dışa aktarma tamamlandı"
+
+#: src/components/screens/Export/ui.jsx:175
+msgid "export-screen.modals.export-completed.text"
+msgstr ""
+"Genel bakışınızın bulunduğu PDF dosyası başarıyla oluşturuldu. Artık dosyayı "
+"kaydedebilir veya paylaşabilirsiniz."
+
+#: src/components/screens/Export/ui.jsx:180
+msgid "export-screen.modals.export-completed.button.save"
+msgstr "Kayıt etmek"
+
+#: src/components/screens/Legal.jsx:170 src/components/screens/Menu.jsx:117
 msgid "legal-screen.header.headline"
 msgstr "Yasal"
 
-#: src/components/screens/Legal.jsx:169
+#: src/components/screens/Legal.jsx:177
 msgid "legal-screen.tabs.privacy.label"
 msgstr "Gizlilik"
 
-#: src/components/screens/Legal.jsx:174
+#: src/components/screens/Legal.jsx:182
 msgid "legal-screen.tabs.imprint.label"
 msgstr "baskı bilgileri"
 
-#: src/components/screens/Legal.jsx:179
+#: src/components/screens/Legal.jsx:187
 msgid "legal-screen.tabs.licenses.label"
 msgstr "Lisanslar"
 
-#: src/components/screens/Legal.jsx:189 src/components/screens/Legal.jsx:205
-#: src/components/screens/Legal.jsx:234
+#: src/components/screens/Legal.jsx:197 src/components/screens/Legal.jsx:213
+#: src/components/screens/Legal.jsx:242
 msgid "legal-screen.privacy.section-1.headline"
 msgstr "Uygulamanın veri işlemi"
 
-#: src/components/screens/Legal.jsx:190 src/components/screens/Legal.jsx:207
-#: src/components/screens/Legal.jsx:236
+#: src/components/screens/Legal.jsx:198 src/components/screens/Legal.jsx:215
+#: src/components/screens/Legal.jsx:244
 msgid "legal-screen.privacy.section-1.text"
 msgstr ""
 "\"Coronika\" kişisel ve konumla ilgili verileri yalnızca kullanıcının akıllı "
 "telefonunda yerel olarak işler."
 
-#: src/components/screens/Legal.jsx:191 src/components/screens/Legal.jsx:209
-#: src/components/screens/Legal.jsx:238
+#: src/components/screens/Legal.jsx:199 src/components/screens/Legal.jsx:217
+#: src/components/screens/Legal.jsx:246
 msgid "legal-screen.privacy.section-2.headline"
 msgstr "Kişisel veri"
 
-#: src/components/screens/Legal.jsx:192 src/components/screens/Legal.jsx:211
-#: src/components/screens/Legal.jsx:240
+#: src/components/screens/Legal.jsx:200 src/components/screens/Legal.jsx:219
+#: src/components/screens/Legal.jsx:248
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
 "Kullanıcı uygulama içinde kişiler oluşturabilir. İsim ve telefon numarası "
@@ -362,13 +394,13 @@ msgstr ""
 "dolayısıyla kullanıcının elinde kalır. Veriler hiçbir zaman uygulama "
 "sağlayıcısına veya üçüncü taraflara aktarılmaz."
 
-#: src/components/screens/Legal.jsx:193 src/components/screens/Legal.jsx:213
-#: src/components/screens/Legal.jsx:242
+#: src/components/screens/Legal.jsx:201 src/components/screens/Legal.jsx:221
+#: src/components/screens/Legal.jsx:250
 msgid "legal-screen.privacy.section-3.headline"
 msgstr "Konum tabanlı veriler"
 
-#: src/components/screens/Legal.jsx:194 src/components/screens/Legal.jsx:215
-#: src/components/screens/Legal.jsx:244
+#: src/components/screens/Legal.jsx:202 src/components/screens/Legal.jsx:223
+#: src/components/screens/Legal.jsx:252
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
 "Kullanıcı uygulama içinde konumlar oluşturabilir. Konumun yeri ve tanımı "
@@ -377,13 +409,13 @@ msgstr ""
 "kullanıcının akıllı telefonunda yerel kalır ve uygulama sağlayıcısına veya "
 "üçüncü taraflara iletilmez."
 
-#: src/components/screens/Legal.jsx:195 src/components/screens/Legal.jsx:217
-#: src/components/screens/Legal.jsx:246
+#: src/components/screens/Legal.jsx:203 src/components/screens/Legal.jsx:225
+#: src/components/screens/Legal.jsx:254
 msgid "legal-screen.privacy.section-4.headline"
 msgstr "günlük"
 
-#: src/components/screens/Legal.jsx:196 src/components/screens/Legal.jsx:219
-#: src/components/screens/Legal.jsx:248
+#: src/components/screens/Legal.jsx:204 src/components/screens/Legal.jsx:227
+#: src/components/screens/Legal.jsx:256
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
 "Kullanıcı günlük icinde her gün kişileri ve konumlari belirli günlere ekler. "
@@ -391,13 +423,13 @@ msgstr ""
 "tüm girişler kullanıcının akıllı telefonunda yerel olarak kalır ve uygulama "
 "sağlayıcısına veya üçüncü taraflara iletilmez."
 
-#: src/components/screens/Legal.jsx:197 src/components/screens/Legal.jsx:221
-#: src/components/screens/Legal.jsx:250
+#: src/components/screens/Legal.jsx:205 src/components/screens/Legal.jsx:229
+#: src/components/screens/Legal.jsx:258
 msgid "legal-screen.privacy.section-5.headline"
 msgstr "aktarmak"
 
-#: src/components/screens/Legal.jsx:198 src/components/screens/Legal.jsx:223
-#: src/components/screens/Legal.jsx:252
+#: src/components/screens/Legal.jsx:206 src/components/screens/Legal.jsx:231
+#: src/components/screens/Legal.jsx:260
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
 "Uygulama içinde kullanıcının günlüğün bir bölümünü PDF dosyası olarak dışa "
@@ -409,13 +441,13 @@ msgstr ""
 "kullanılabilir. PDF dosyasını ve içindeki verileri sorumlu bir şekilde "
 "kullanmaktan ve dikkatsizce aktarmamaktan kullanıcı sorumludur."
 
-#: src/components/screens/Legal.jsx:199 src/components/screens/Legal.jsx:225
-#: src/components/screens/Legal.jsx:254
+#: src/components/screens/Legal.jsx:207 src/components/screens/Legal.jsx:233
+#: src/components/screens/Legal.jsx:262
 msgid "legal-screen.privacy.section-6.headline"
 msgstr "Veri aktarımı ve takibi"
 
-#: src/components/screens/Legal.jsx:200 src/components/screens/Legal.jsx:227
-#: src/components/screens/Legal.jsx:256
+#: src/components/screens/Legal.jsx:208 src/components/screens/Legal.jsx:235
+#: src/components/screens/Legal.jsx:264
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
 "Uygulama, uygulama sağlayıcısına veya üçüncü taraflara otomatik izleme veya "
@@ -423,13 +455,13 @@ msgstr ""
 "kullanıcı verilerini kime aktarılacağına karar verir. Aksi takdirde tüm "
 "veriler kullanıcının akıllı telefonunda yerel olarak kalır."
 
-#: src/components/screens/Legal.jsx:266 src/components/screens/Legal.jsx:278
-#: src/components/screens/Legal.jsx:299
+#: src/components/screens/Legal.jsx:274 src/components/screens/Legal.jsx:286
+#: src/components/screens/Legal.jsx:307
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "Bu uygulama 'Coronika' tarafından işletilmektedir"
 
-#: src/components/screens/Legal.jsx:267 src/components/screens/Legal.jsx:280
-#: src/components/screens/Legal.jsx:301
+#: src/components/screens/Legal.jsx:275 src/components/screens/Legal.jsx:288
+#: src/components/screens/Legal.jsx:309
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -446,13 +478,13 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:268 src/components/screens/Legal.jsx:282
-#: src/components/screens/Legal.jsx:303
+#: src/components/screens/Legal.jsx:276 src/components/screens/Legal.jsx:290
+#: src/components/screens/Legal.jsx:311
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "İçerik sorumluluğu"
 
-#: src/components/screens/Legal.jsx:269 src/components/screens/Legal.jsx:284
-#: src/components/screens/Legal.jsx:305
+#: src/components/screens/Legal.jsx:277 src/components/screens/Legal.jsx:292
+#: src/components/screens/Legal.jsx:313
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "Bir hizmet sağlayıcı olarak, bu sayfalardaki kendi içeriğimizden § 7 para.1 "
@@ -464,13 +496,13 @@ msgstr ""
 "andan itibaren mümkündür. Bu tür ihlallerin farkına varırsak, bu tür içeriği "
 "hemen kaldıracağız."
 
-#: src/components/screens/Legal.jsx:270 src/components/screens/Legal.jsx:286
-#: src/components/screens/Legal.jsx:307
+#: src/components/screens/Legal.jsx:278 src/components/screens/Legal.jsx:294
+#: src/components/screens/Legal.jsx:315
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Bağlantı sorumluluğu"
 
-#: src/components/screens/Legal.jsx:271 src/components/screens/Legal.jsx:288
-#: src/components/screens/Legal.jsx:309
+#: src/components/screens/Legal.jsx:279 src/components/screens/Legal.jsx:296
+#: src/components/screens/Legal.jsx:317
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Teklifimiz, içeriği üzerinde hiçbir etkiye sahip olmadığımız üçüncü "
@@ -484,13 +516,13 @@ msgstr ""
 "Herhangi bir ihlalin farkına varırsak, bu tür bağlantıları derhal "
 "kaldıracağız."
 
-#: src/components/screens/Legal.jsx:272 src/components/screens/Legal.jsx:290
-#: src/components/screens/Legal.jsx:311
+#: src/components/screens/Legal.jsx:280 src/components/screens/Legal.jsx:298
+#: src/components/screens/Legal.jsx:319
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "telif hakkı"
 
-#: src/components/screens/Legal.jsx:273 src/components/screens/Legal.jsx:292
-#: src/components/screens/Legal.jsx:313
+#: src/components/screens/Legal.jsx:281 src/components/screens/Legal.jsx:300
+#: src/components/screens/Legal.jsx:321
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "Operatörler tarafından oluşturulan bu sayfalardaki içerik ve eserler Alman "
@@ -518,11 +550,11 @@ msgstr ""
 msgid "menu-screen.button.send-feedback"
 msgstr "Geribildirim yolla"
 
-#: src/components/screens/Overview/ui.jsx:114
+#: src/components/screens/Overview/ui.jsx:128
 msgid "overview-screen.export.button"
 msgstr "Özeti aktarmak"
 
-#: src/components/screens/Overview/ui.jsx:88
+#: src/components/screens/Overview/ui.jsx:94
 msgid "overview-screen.header.headline"
 msgstr "Özet"
 
@@ -893,6 +925,3 @@ msgstr "Kaynaklar"
 #: src/components/widgets/Tip.jsx:138
 msgid "tips.sources.last-updated"
 msgstr "Son güncelleme:"
-
-#~ msgid "export-screen.coming-soon"
-#~ msgstr "Çok yakında!"

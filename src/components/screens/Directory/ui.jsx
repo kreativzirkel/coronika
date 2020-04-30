@@ -70,8 +70,13 @@ const Directory = ({
       paddingLeft: vw(3),
       paddingRight: vw(3),
       paddingTop: vw(2),
+      width: '100%',
+    },
+    modalHeaderIcon: {
+      alignSelf: 'flex-start',
     },
     modalHeaderText: {
+      flex: 1,
       fontFamily: getFontFamilyBold(),
       fontSize: vw(5),
       textTransform: 'lowercase',
@@ -151,7 +156,7 @@ const Directory = ({
         <View style={styles.modalContent}>
           <View style={styles.modalHeader}>
             <Text style={styles.modalHeaderText}>{__('directory-screen.modals.import-persons.headline')}</Text>
-            <TouchableOpacity onPress={() => hideImportPersonsModal()}>
+            <TouchableOpacity onPress={() => hideImportPersonsModal()} style={styles.modalHeaderIcon}>
               <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
             </TouchableOpacity>
           </View>

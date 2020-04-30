@@ -540,8 +540,13 @@ class EntriesTabsView extends React.Component {
         paddingLeft: vw(3),
         paddingRight: vw(3),
         paddingTop: vw(2),
+        width: '100%',
+      },
+      modalHeaderIcon: {
+        alignSelf: 'flex-start',
       },
       modalHeaderText: {
+        flex: 1,
         fontFamily: getFontFamilyBold(),
         fontSize: vw(5),
         textTransform: 'lowercase',
@@ -747,7 +752,7 @@ class EntriesTabsView extends React.Component {
                   ? __('entries.modals.update-person.headline')
                   : __('entries.modals.new-person.headline')}
               </Text>
-              <TouchableOpacity onPress={() => this.closeModalNewPerson()}>
+              <TouchableOpacity onPress={() => this.closeModalNewPerson()} style={styles.modalHeaderIcon}>
                 <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
               </TouchableOpacity>
             </View>
@@ -797,7 +802,7 @@ class EntriesTabsView extends React.Component {
                   ? __('entries.modals.update-location.headline')
                   : __('entries.modals.new-location.headline')}
               </Text>
-              <TouchableOpacity onPress={() => this.closeModalNewLocation()}>
+              <TouchableOpacity onPress={() => this.closeModalNewLocation()} style={styles.modalHeaderIcon}>
                 <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
               </TouchableOpacity>
             </View>
@@ -842,7 +847,7 @@ class EntriesTabsView extends React.Component {
           <KeyboardAvoidingView behavior={keyboardAvoidingViewBehavior} enabled style={styles.modalContent}>
             <View style={styles.modalHeader}>
               <Text style={styles.modalHeaderText}>{__('entries.modals.select-location.headline')}</Text>
-              <TouchableOpacity onPress={() => this.closeModalSelectLocation()}>
+              <TouchableOpacity onPress={() => this.closeModalSelectLocation()} style={styles.modalHeaderIcon}>
                 <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
               </TouchableOpacity>
             </View>

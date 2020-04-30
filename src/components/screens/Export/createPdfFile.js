@@ -21,7 +21,24 @@ const CONTENT_MARGIN = {
   TOP: PAGE_MARGINS.TOP * 2,
 };
 
-const addHeaderFooter = (pdfDoc, customFontBold, customFontRegular, days, exportTime, currentLanguage) => {
+const chooseFont = (text, currentLanguage, font, fontDefault) => {
+  if (['ja', 'si', 'zh'].includes(currentLanguage)) {
+    const charCodes = [...new Set(text.split('').map((c) => c.charCodeAt(0)))];
+
+    if (charCodes.every((c) => fontDefault.getCharacterSet().includes(c))) {
+      return fontDefault;
+    }
+  }
+
+  return font;
+};
+
+const addHeaderFooter = (pdfDoc, days, exportTime, currentLanguage, fonts) => {
+  const { customFontBold, customFontRegular, customFontJetBrainsMonoBold, customFontJetBrainsMonoRegular } = fonts;
+
+  const chooseFontRegular = (text) =>
+    chooseFont(text, currentLanguage, customFontRegular, customFontJetBrainsMonoRegular);
+
   const pages = pdfDoc.getPages();
 
   pages.forEach((page, index) => {
@@ -29,14 +46,14 @@ const addHeaderFooter = (pdfDoc, customFontBold, customFontRegular, days, export
 
     const logoText = 'coronika';
     const logoTextSize = 20;
-    const logoTextHeight = customFontBold.heightAtSize(logoTextSize / 1.6);
-    const logoTextWidth = customFontBold.widthOfTextAtSize(logoText, logoTextSize);
+    const logoTextHeight = customFontJetBrainsMonoBold.heightAtSize(logoTextSize / 1.6);
+    const logoTextWidth = customFontJetBrainsMonoBold.widthOfTextAtSize(logoText, logoTextSize);
 
     page.drawText(logoText, {
       x: width - PAGE_MARGINS.RIGHT - logoTextWidth,
       y: height - PAGE_MARGINS.TOP - logoTextHeight,
       color: rgb(23 / 255, 217 / 255, 188 / 255),
-      font: customFontBold,
+      font: customFontJetBrainsMonoBold,
       size: logoTextSize,
     });
 
@@ -57,48 +74,58 @@ const addHeaderFooter = (pdfDoc, customFontBold, customFontRegular, days, export
     const dayEnd = Math.max(...timestamps);
 
     const timespanText = `${moment(dayStart).format('L')} - ${moment(dayEnd).format('L')}`;
+    const timespanTextFont = chooseFontRegular(timespanText);
     const timespanTextSize = 10;
-    const timespanTextHeight = customFontRegular.heightAtSize(timespanTextSize / 1.6);
+    const timespanTextHeight = timespanTextFont.heightAtSize(timespanTextSize / 1.6);
 
     page.drawText(timespanText, {
       x: PAGE_MARGINS.LEFT,
       y: height - PAGE_MARGINS.TOP - headlineTextHeight - 5 - timespanTextHeight,
       color: rgb(0, 0, 0),
+      font: timespanTextFont,
       size: timespanTextSize,
     });
 
-    const footerTimestampText = moment(exportTime).format('LLL');
+    const footerTimestampText = moment(exportTime).format('L LT');
+    const footerTimestampTextFont = chooseFontRegular(footerTimestampText);
     const footerTimestampTextSize = 8;
-    const footerTimestampTextHeight = customFontRegular.heightAtSize(footerTimestampTextSize / 1.6);
+    const footerTimestampTextHeight = footerTimestampTextFont.heightAtSize(footerTimestampTextSize / 1.6);
 
     page.drawText(footerTimestampText, {
       x: PAGE_MARGINS.LEFT,
       y: PAGE_MARGINS.BOTTOM / 2 + footerTimestampTextHeight / 2,
       color: rgb(0, 0, 0),
+      font: footerTimestampTextFont,
       size: footerTimestampTextSize,
     });
 
     const footerPageText = `${__('page', currentLanguage).toLowerCase()} ${index + 1} / ${pages.length}`;
+    const footerPageTextFont = chooseFontRegular(footerPageText);
     const footerPageTextSize = 8;
-    const footerPageTextHeight = customFontRegular.heightAtSize(footerPageTextSize / 1.6);
-    const footerPageTextWidth = customFontBold.widthOfTextAtSize(footerPageText, footerPageTextSize);
+    const footerPageTextHeight = footerPageTextFont.heightAtSize(footerPageTextSize / 1.6);
+    const footerPageTextWidth = footerPageTextFont.widthOfTextAtSize(footerPageText, footerPageTextSize);
 
     page.drawText(footerPageText, {
       x: width - footerPageTextWidth - PAGE_MARGINS.RIGHT,
       y: PAGE_MARGINS.BOTTOM / 2 + footerPageTextHeight / 2,
       color: rgb(0, 0, 0),
+      font: footerPageTextFont,
       size: footerPageTextSize,
     });
 
     const footerWebsiteText = 'https://coronika.app/';
     const footerWebsiteTextSize = 8;
-    const footerWebsiteTextHeight = customFontRegular.heightAtSize(footerWebsiteTextSize / 1.6);
-    const footerWebsiteTextWidth = customFontBold.widthOfTextAtSize(footerWebsiteText, footerWebsiteTextSize);
+    const footerWebsiteTextHeight = customFontJetBrainsMonoRegular.heightAtSize(footerWebsiteTextSize / 1.6);
+    const footerWebsiteTextWidth = customFontJetBrainsMonoRegular.widthOfTextAtSize(
+      footerWebsiteText,
+      footerWebsiteTextSize
+    );
 
     page.drawText(footerWebsiteText, {
       x: width / 2 - footerWebsiteTextWidth / 2,
       y: PAGE_MARGINS.BOTTOM / 2 + footerWebsiteTextHeight / 2,
       color: rgb(0, 0, 0),
+      font: customFontJetBrainsMonoRegular,
       size: footerWebsiteTextSize,
     });
   });
@@ -123,21 +150,53 @@ const createPdfFile = async (options = {}) => {
     `${exportTimeFormatted} coronika ${__('export-screen.header.headline', currentLanguage).toLowerCase()}`
   );
 
-  const fontFileBold = `${getFontFamilyBold(currentLanguage)}.ttf`;
-  const fontFileRegular = `${getFontFamilyRegular(currentLanguage)}.ttf`;
+  let fontFileBold;
+  let fontFileRegular;
+
+  switch (currentLanguage) {
+    case 'ja':
+      fontFileBold = fontFileRegular = 'NotoSansJP-Regular.otf';
+      break;
+    case 'si':
+      fontFileBold = fontFileRegular = 'NotoSansSinhala-Regular.ttf';
+      break;
+    case 'zh':
+      fontFileBold = fontFileRegular = 'NotoSansSC-Regular.otf';
+      break;
+    default:
+      fontFileBold = `${getFontFamilyBold(currentLanguage)}.ttf`;
+      fontFileRegular = `${getFontFamilyRegular(currentLanguage)}.ttf`;
+  }
+
+  const fontFileJetBrainsMonoBold = 'JetBrainsMono-Bold.ttf';
+  const fontFileJetBrainsMonoRegular = 'JetBrainsMono-Regular.ttf';
 
   let fontBoldBase64;
   let fontRegularBase64;
+  let fontJetBrainsMonoBoldBase64;
+  let fontJetBrainsMonoRegularBase64;
   if (Platform.OS === 'android') {
     fontBoldBase64 = await RNFS.readFileAssets(`fonts/${fontFileBold}`, 'base64');
     fontRegularBase64 = await RNFS.readFileAssets(`fonts/${fontFileRegular}`, 'base64');
+    fontJetBrainsMonoBoldBase64 = await RNFS.readFileAssets(`fonts/${fontFileJetBrainsMonoBold}`, 'base64');
+    fontJetBrainsMonoRegularBase64 = await RNFS.readFileAssets(`fonts/${fontFileJetBrainsMonoRegular}`, 'base64');
   } else {
     fontBoldBase64 = await RNFS.readFile(`${RNFS.MainBundlePath}/${fontFileBold}`, 'base64');
     fontRegularBase64 = await RNFS.readFile(`${RNFS.MainBundlePath}/${fontFileRegular}`, 'base64');
+    fontJetBrainsMonoBoldBase64 = await RNFS.readFile(`${RNFS.MainBundlePath}/${fontFileJetBrainsMonoBold}`, 'base64');
+    fontJetBrainsMonoRegularBase64 = await RNFS.readFile(
+      `${RNFS.MainBundlePath}/${fontFileJetBrainsMonoRegular}`,
+      'base64'
+    );
   }
 
   const customFontRegular = await pdfDoc.embedFont(fontRegularBase64);
   const customFontBold = await pdfDoc.embedFont(fontBoldBase64);
+  const customFontJetBrainsMonoRegular = await pdfDoc.embedFont(fontJetBrainsMonoRegularBase64);
+  const customFontJetBrainsMonoBold = await pdfDoc.embedFont(fontJetBrainsMonoBoldBase64);
+
+  const chooseFontRegular = (text) =>
+    chooseFont(text, currentLanguage, customFontRegular, customFontJetBrainsMonoRegular);
 
   const entryPadding = 6;
   const entryNameTextSize = 9;
@@ -206,10 +265,14 @@ const createPdfFile = async (options = {}) => {
   const subheadlineTextHeightWithMargin = subheadlineTextHeight * 1.8;
   const subheadlineQuantityText = __('quantity', currentLanguage).toLowerCase();
   const subheadlineQuantityTextSize = 9;
-  const subheadlineQuantityTextWidth = customFontRegular.widthOfTextAtSize(
+  let subheadlineQuantityTextWidth = customFontRegular.widthOfTextAtSize(
     subheadlineQuantityText,
     subheadlineQuantityTextSize
   );
+
+  if (currentLanguage === 'si') {
+    subheadlineQuantityTextWidth *= 1.25;
+  }
 
   const personsHeadlineText = __('persons', currentLanguage).toLowerCase();
 
@@ -259,6 +322,7 @@ const createPdfFile = async (options = {}) => {
       x: PAGE_MARGINS.LEFT + entryPadding,
       y: pageCursorY - entryPadding - entryNameTextHeight,
       color: rgb(0, 0, 0),
+      font: chooseFontRegular(fullName),
       size: entryNameTextSize,
     });
 
@@ -268,6 +332,7 @@ const createPdfFile = async (options = {}) => {
       x: PAGE_SIZE.WIDTH - PAGE_MARGINS.RIGHT - entryPadding - entryCounterTextWidth,
       y: pageCursorY - entryPadding - entryNameTextHeight,
       color: rgb(0, 0, 0),
+      font: chooseFontRegular(counter.toString()),
       size: entryNameTextSize,
     });
 
@@ -278,6 +343,7 @@ const createPdfFile = async (options = {}) => {
       x: PAGE_MARGINS.LEFT + entryPadding,
       y: pageCursorY - entryPadding - entryNameTextHeight - entryNameMarginBottom - entryPhoneTextHeight,
       color: rgb(0, 0, 0),
+      font: chooseFontRegular(numbersText),
       size: entryPhoneTextSize,
     });
 
@@ -371,6 +437,7 @@ const createPdfFile = async (options = {}) => {
       x: PAGE_MARGINS.LEFT + entryPadding,
       y: pageCursorY - entryPadding - entryNameTextHeight,
       color: rgb(0, 0, 0),
+      font: chooseFontRegular(title),
       size: entryNameTextSize,
     });
 
@@ -380,6 +447,7 @@ const createPdfFile = async (options = {}) => {
       x: PAGE_SIZE.WIDTH - PAGE_MARGINS.RIGHT - entryPadding - entryCounterTextWidth,
       y: pageCursorY - entryPadding - entryNameTextHeight,
       color: rgb(0, 0, 0),
+      font: chooseFontRegular(counter.toString()),
       size: entryNameTextSize,
     });
 
@@ -391,7 +459,8 @@ const createPdfFile = async (options = {}) => {
         return 0;
       })
       .forEach(({ description, timestamp }, i) => {
-        const timestampText = moment(timestamp).format('LLL');
+        const timestampText = moment(timestamp).format('L LT');
+        const timestampTextFont = chooseFontRegular(timestampText);
 
         const y =
           pageCursorY -
@@ -405,16 +474,19 @@ const createPdfFile = async (options = {}) => {
           x: PAGE_MARGINS.LEFT + entryPadding,
           y: y - entryTimestampTextHeight,
           color: rgb(0, 0, 0),
+          font: timestampTextFont,
           size: entryTimestampTextSize,
         });
 
         if (description.trim().length > 0) {
-          const timestampTextWidth = customFontRegular.widthOfTextAtSize(timestampText, entryTimestampTextSize);
+          const timestampTextWidth = timestampTextFont.widthOfTextAtSize(timestampText, entryTimestampTextSize);
+          const descriptionText = `(${description.trim()})`;
 
-          page.drawText(`(${description.trim()})`, {
+          page.drawText(descriptionText, {
             x: PAGE_MARGINS.LEFT + 1.5 * entryPadding + timestampTextWidth,
             y: y - entryTimestampTextHeight,
             color: rgb(0.33, 0.33, 0.33),
+            font: chooseFontRegular(descriptionText),
             size: entryTimestampTextSize - 1,
           });
         }
@@ -433,17 +505,20 @@ const createPdfFile = async (options = {}) => {
     }
   });
 
-  addHeaderFooter(pdfDoc, customFontBold, customFontRegular, days, exportTime, currentLanguage);
+  addHeaderFooter(pdfDoc, days, exportTime, currentLanguage, {
+    customFontBold,
+    customFontRegular,
+    customFontJetBrainsMonoBold,
+    customFontJetBrainsMonoRegular,
+  });
 
-  const pdfContent = await pdfDoc.saveAsBase64();
-  const pdfFileName = `${exportTimeFormatted} coronika ${__(
+  const content = await pdfDoc.saveAsBase64();
+  const filename = `${exportTimeFormatted} coronika ${__(
     'export-screen.header.headline',
     currentLanguage
   ).toLowerCase()}.pdf`;
-  const pdfPath = `${RNFS.DocumentDirectoryPath}/${pdfFileName.replace(/\s/g, '_')}`;
-  await RNFS.writeFile(pdfPath, pdfContent, 'base64');
 
-  return pdfPath;
+  return { content, filename };
 };
 
 export default createPdfFile;

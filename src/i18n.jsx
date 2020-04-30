@@ -169,7 +169,8 @@ const getMessages = (language) => {
     if (messagesList) {
       Object.keys(messagesList).forEach((key) => {
         if (key.length > 0) {
-          messages[key] = (messagesList[key].find((value) => value && value.length > 0) || '').trim();
+          const messageValue = (messagesList[key].find((value) => value && value.length > 0) || '').trim();
+          if (messageValue.length > 0) messages[key] = messageValue;
         }
       });
     }
