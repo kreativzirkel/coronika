@@ -1,7 +1,7 @@
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
-import { addPersonToDay, addLocationToDay } from '../../screens/Dashboard/actions';
+import { addPersonToDay, addLocationToDay } from '../Dashboard/actions';
 import { updateLastUsageOfLocation, updateLastUsageOfPerson } from '../Directory/actions';
 import Screen from './ui';
 

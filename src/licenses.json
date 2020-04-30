@@ -155,7 +155,7 @@
         "licenseUrl": "https://github.com/react-native-community/react-native-modal/raw/master/LICENSE.md",
         "parents": "coronika"
     },
-    "react-native-push-notification@3.2.1": {
+    "react-native-push-notification@3.3.0": {
         "licenses": "MIT",
         "repository": "https://github.com/zo0r/react-native-push-notification",
         "licenseUrl": "https://github.com/zo0r/react-native-push-notification/raw/master/LICENSE",
@@ -233,7 +233,7 @@
         "licenseUrl": "https://github.com/reduxjs/redux/raw/master/LICENSE.md",
         "parents": "coronika"
     },
-    "uuid@7.0.3": {
+    "uuid@8.0.0": {
         "licenses": "MIT",
         "repository": "https://github.com/uuidjs/uuid",
         "licenseUrl": "https://github.com/uuidjs/uuid/raw/master/LICENSE.md",

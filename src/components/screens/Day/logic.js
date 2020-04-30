@@ -2,7 +2,7 @@ import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
 import withViewportUnits from '../../../utils/withViewportUnits';
-import { removePersonFromDay, removeLocationFromDay } from '../../screens/Dashboard/actions';
+import { removePersonFromDay, removeLocationFromDay } from '../Dashboard/actions';
 import Screen from './ui';
 
 const deletePersonFromDay = (personId) => async (dispatch, getState) => {
