@@ -4,7 +4,7 @@ import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../../constants';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 import UilFile from '@iconscout/react-native-unicons/icons/uil-file';
-import UilUpload from '@iconscout/react-native-unicons/icons/uil-upload';
+import UilShare from '@iconscout/react-native-unicons/icons/uil-share';
 import UilTimes from '@iconscout/react-native-unicons/icons/uil-times';
 import Modal from 'react-native-modal';
 
@@ -183,7 +183,7 @@ const Export = ({
 
             <TouchableOpacity onPress={() => shareExportFile()} style={styles.modalButtonShare}>
               <View style={{ ...styles.modalButton, ...styles.modalButtonSecondary }}>
-                <UilUpload color={'#ffffff'} size={vw(7)} />
+                <UilShare color={'#ffffff'} size={vw(7)} />
               </View>
             </TouchableOpacity>
           </View>

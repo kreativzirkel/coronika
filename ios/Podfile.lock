@@ -22,7 +22,7 @@ PODS:
   - Interactable (2.0.1):
     - React
   - lottie-ios (3.1.8)
-  - lottie-react-native (3.3.2):
+  - lottie-react-native (3.4.0):
     - lottie-ios (~> 3.1.3)
     - React
   - RCTRequired (0.61.5)
@@ -196,7 +196,7 @@ PODS:
     - React
   - react-native-splash-screen (3.2.0):
     - React
-  - react-native-unicons (0.0.5):
+  - react-native-unicons (1.0.1):
     - React
   - React-RCTActionSheet (0.61.5):
     - React-Core/RCTActionSheetHeaders (= 0.61.5)
@@ -235,11 +235,11 @@ PODS:
     - ReactCommon/jscallinvoker (= 0.61.5)
   - ReactNativeDarkMode (0.2.2):
     - React
-  - RNCAsyncStorage (1.9.0):
+  - RNCAsyncStorage (1.11.0):
     - React
   - RNCMaskedView (0.1.10):
     - React
-  - RNCPushNotificationIOS (1.1.1):
+  - RNCPushNotificationIOS (1.2.2):
     - React
   - RNDateTimePicker (2.3.2):
     - React
@@ -249,13 +249,13 @@ PODS:
     - React
   - RNLocalize (1.4.0):
     - React
-  - RNReanimated (1.8.0):
+  - RNReanimated (1.9.0):
     - React
-  - RNScreens (2.7.0):
+  - RNScreens (2.8.0):
     - React
-  - RNShare (3.3.0):
+  - RNShare (3.3.3):
     - React
-  - RNSVG (12.1.0):
+  - RNSVG (9.13.6):
     - React
   - Yoga (1.14.0)
 
@@ -414,7 +414,7 @@ SPEC CHECKSUMS:
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
   Interactable: 334971ca372efcb6791bb47f81f3265963c47f3e
   lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
-  lottie-react-native: 2a1a82bb326ae51331a5520de0cf706733c6db69
+  lottie-react-native: a664f59f1f298c2696dd0ae07b15cbdfc433cb02
   RCTRequired: b153add4da6e7dbc44aebf93f3cf4fcae392ddf1
   RCTTypeSafety: 9aa1b91d7f9310fc6eadc3cf95126ffe818af320
   React: b6a59ef847b2b40bb6e0180a97d0ca716969ac78
@@ -428,7 +428,7 @@ SPEC CHECKSUMS:
   react-native-get-random-values: 2b7500cdb68066aba87cdccd97067c29e16ffe95
   react-native-safe-area-context: 8260e5157617df4b72865f44006797f895b2ada7
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
-  react-native-unicons: 47c4a16fdde482ef922324a33f36cfbe416b2f82
+  react-native-unicons: efd90c35fe14a0af64be168b263e613ec0ba0fae
   React-RCTActionSheet: 600b4d10e3aea0913b5a92256d2719c0cdd26d76
   React-RCTAnimation: 791a87558389c80908ed06cc5dfc5e7920dfa360
   React-RCTBlob: d89293cc0236d9cb0933d85e430b0bbe81ad1d72
@@ -440,17 +440,17 @@ SPEC CHECKSUMS:
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
   ReactNativeDarkMode: 0178ffca3b10f6a7c9f49d6f9810232b328fa949
-  RNCAsyncStorage: b16697280b08bab4b5f2f67f752d93d13a52e9ed
+  RNCAsyncStorage: db711e29e5e0500d9bd21aa0c2e397efa45302b1
   RNCMaskedView: f5c7d14d6847b7b44853f7acb6284c1da30a3459
-  RNCPushNotificationIOS: a38f0b8c4f6f5226cd1d8eeb21ab5670f4a09892
+  RNCPushNotificationIOS: 375feee5b89ad4aeee8a971f63fe4848902380b7
   RNDateTimePicker: 0f657a34a0f6465ab7d0255c24954693bc7a8cf6
   RNFS: 2bd9eb49dc82fa9676382f0585b992c424cd59df
   RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
   RNLocalize: fc27ee5878ce5a3af73873fb2d8e866e0d1e6d84
-  RNReanimated: 955cf4068714003d2f1a6e2bae3fb1118f359aff
-  RNScreens: cf198f915f8a2bf163de94ca9f5bfc8d326c3706
-  RNShare: fea1801315aa8875d6db73a4010b14afcd568765
-  RNSVG: ce9d996113475209013317e48b05c21ee988d42e
+  RNReanimated: b5ccb50650ba06f6e749c7c329a1bc3ae0c88b43
+  RNScreens: 62211832af51e0aebcf6e8c36bcf7dd65592f244
+  RNShare: f4ec422e27904e0dc9310038d1110460a59ad30d
+  RNSVG: 8ba35cbeb385a52fd960fd28db9d7d18b4c2974f
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
 PODFILE CHECKSUM: 753db191f017b24ff3f80dde3ed9daadac46084e
