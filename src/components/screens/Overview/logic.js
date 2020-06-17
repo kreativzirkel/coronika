@@ -19,9 +19,12 @@ export const sortByCounterAndFullName = (a, b) => {
   let sortResult = sortByCounter(a, b);
 
   if (sortResult === 0) {
-    if (a.fullName < b.fullName) {
+    const fullNameA = a.fullName.toLowerCase();
+    const fullNameB = b.fullName.toLowerCase();
+
+    if (fullNameA < fullNameB) {
       sortResult = -1;
-    } else if (a.fullName > b.fullName) {
+    } else if (fullNameA > fullNameB) {
       sortResult = 1;
     }
   }
@@ -33,9 +36,12 @@ export const sortByCounterAndTitle = (a, b) => {
   let sortResult = sortByCounter(a, b);
 
   if (sortResult === 0) {
-    if (a.title < b.title) {
+    const titleA = a.title.toLowerCase();
+    const titleB = b.title.toLowerCase();
+
+    if (titleA < titleB) {
       sortResult = -1;
-    } else if (a.title > b.title) {
+    } else if (titleA > titleB) {
       sortResult = 1;
     }
   }
