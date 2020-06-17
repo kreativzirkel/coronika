@@ -15,6 +15,34 @@ const sortByCounter = (a, b) => {
   return 0;
 };
 
+export const sortByCounterAndFullName = (a, b) => {
+  let sortResult = sortByCounter(a, b);
+
+  if (sortResult === 0) {
+    if (a.fullName < b.fullName) {
+      sortResult = -1;
+    } else if (a.fullName > b.fullName) {
+      sortResult = 1;
+    }
+  }
+
+  return sortResult;
+};
+
+export const sortByCounterAndTitle = (a, b) => {
+  let sortResult = sortByCounter(a, b);
+
+  if (sortResult === 0) {
+    if (a.title < b.title) {
+      sortResult = -1;
+    } else if (a.title > b.title) {
+      sortResult = 1;
+    }
+  }
+
+  return sortResult;
+};
+
 const mapStateToProps = ({ dashboard: { days } }) => {
   const total = Object.values(days)
     .map(({ persons, locations }) => ({
@@ -64,8 +92,8 @@ const mapStateToProps = ({ dashboard: { days } }) => {
     });
   });
 
-  const locationsSorted = Object.values(locations).sort((a, b) => sortByCounter(a, b));
-  const personsSorted = Object.values(persons).sort((a, b) => sortByCounter(a, b));
+  const locationsSorted = Object.values(locations).sort((a, b) => sortByCounterAndTitle(a, b));
+  const personsSorted = Object.values(persons).sort((a, b) => sortByCounterAndFullName(a, b));
 
   return { locations: locationsSorted, persons: personsSorted, total };
 };

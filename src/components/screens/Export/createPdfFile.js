@@ -4,6 +4,7 @@ import { PDFDocument, rgb } from 'pdf-lib';
 import { Platform } from 'react-native';
 import RNFS from 'react-native-fs';
 import { __, getFontFamilyBold, getFontFamilyRegular } from '../../../i18n';
+import { sortByCounterAndFullName, sortByCounterAndTitle } from '../Overview/logic';
 
 const PAGE_MARGINS = {
   BOTTOM: 56.6928, // 2cm
@@ -212,17 +213,6 @@ const createPdfFile = async (options = {}) => {
   const pageCursorYInitial = PAGE_SIZE.HEIGHT - CONTENT_MARGIN.TOP;
   let pageCursorY = pageCursorYInitial;
 
-  const sortByCounter = (a, b) => {
-    if (a.counter < b.counter) {
-      return 1;
-    }
-    if (a.counter > b.counter) {
-      return -1;
-    }
-
-    return 0;
-  };
-
   const locations = {};
   const persons = {};
 
@@ -257,8 +247,8 @@ const createPdfFile = async (options = {}) => {
     });
   });
 
-  const locationsSorted = Object.values(locations).sort((a, b) => sortByCounter(a, b));
-  const personsSorted = Object.values(persons).sort((a, b) => sortByCounter(a, b));
+  const locationsSorted = Object.values(locations).sort((a, b) => sortByCounterAndTitle(a, b));
+  const personsSorted = Object.values(persons).sort((a, b) => sortByCounterAndFullName(a, b));
 
   const subheadlineTextSize = 14;
   const subheadlineTextHeight = customFontBold.heightAtSize(subheadlineTextSize / 1.6);

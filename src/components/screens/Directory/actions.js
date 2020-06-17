@@ -20,6 +20,10 @@ export const enablePersonsImporting = () => ({ type: 'ENABLE_PERSONS_IMPORTING_D
 
 export const disablePersonsImporting = () => ({ type: 'DISABLE_PERSONS_IMPORTING_DIRECTORY' });
 
+export const resetLastUsageOfLocation = (id) => ({ type: 'RESET_LAST_USAGE_OF_LOCATION_DIRECTORY', id });
+
+export const resetLastUsageOfPerson = (id) => ({ type: 'RESET_LAST_USAGE_OF_PERSON_DIRECTORY', id });
+
 export const updateLastUsageOfLocation = (id) => ({ type: 'UPDATE_LAST_USAGE_OF_LOCATION_DIRECTORY', id });
 
 export const updateLastUsageOfPerson = (id) => ({ type: 'UPDATE_LAST_USAGE_OF_PERSON_DIRECTORY', id });

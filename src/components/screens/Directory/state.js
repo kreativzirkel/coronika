@@ -131,6 +131,28 @@ export default (state = initialState, action = { type: null }) => {
     case 'DISABLE_PERSONS_IMPORTING_DIRECTORY':
       return { ...state, personsImporting: false };
 
+    case 'RESET_LAST_USAGE_OF_LOCATION_DIRECTORY': {
+      const locations = state.locations.filter(({ id }) => id !== action.id);
+
+      locations.push({
+        ...state.locations.find(({ id }) => id === action.id),
+        lastUsed: 0,
+      });
+
+      return { ...state, locations };
+    }
+
+    case 'RESET_LAST_USAGE_OF_PERSON_DIRECTORY': {
+      const persons = state.persons.filter(({ id }) => id !== action.id);
+
+      persons.push({
+        ...state.persons.find(({ id }) => id === action.id),
+        lastUsed: 0,
+      });
+
+      return { ...state, persons };
+    }
+
     case 'UPDATE_LAST_USAGE_OF_LOCATION_DIRECTORY': {
       const locations = state.locations.filter(({ id }) => id !== action.id);
 

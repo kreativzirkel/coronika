@@ -1,10 +1,11 @@
 import moment from 'moment';
 import connect from 'react-redux/lib/connect/connect';
-import { DAYS_OVERVIEW } from '../../../constants';
+import { DAYS_LAST_USAGE, DAYS_OVERVIEW_MAX, DAYS_OVERVIEW_MIN, DAYS_TO_ADD } from '../../../constants';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import { setTimestamp as setTimestampDay } from '../Day/actions';
+import { resetLastUsageOfLocation, resetLastUsageOfPerson } from '../Directory/actions';
 import { initializeDays, hideFirstStartHint, confirmFirstStartHint, showFirstStartHint } from './actions';
 import Screen from './ui';
 
@@ -22,8 +23,7 @@ const loadDays = () => async (dispatch, getState) => {
     differenceToLastDay = moment(lastDay).diff(today);
   }
 
-  // add last 7 days if not already in list
-  const daysInPast = Math.max(differenceToLastDay, 7);
+  const daysInPast = Math.max(differenceToLastDay, DAYS_OVERVIEW_MIN);
   const addTimestamps = [];
 
   for (let i = 0; i < daysInPast; i++) {
@@ -32,7 +32,7 @@ const loadDays = () => async (dispatch, getState) => {
     addTimestamps.push(currentDayTimestamp);
   }
 
-  const maxTimestamp = moment(today).subtract(DAYS_OVERVIEW, 'days').valueOf();
+  const maxTimestamp = moment(today).subtract(DAYS_OVERVIEW_MAX, 'days').valueOf();
   dispatch(initializeDays(addTimestamps, maxTimestamp));
 };
 
@@ -42,17 +42,15 @@ const loadMoreDays = () => async (dispatch, getState) => {
   } = getState();
 
   const firstDay = Math.min(...Object.keys(days).map((timestamp) => parseInt(timestamp, 10)));
-
-  const daysToAdd = 7;
   const addTimestamps = [];
 
-  for (let i = 1; i <= daysToAdd; i++) {
+  for (let i = 1; i <= DAYS_TO_ADD; i++) {
     const currentDay = moment(firstDay).subtract(i, 'days');
     const currentDayTimestamp = currentDay.valueOf();
     addTimestamps.push(currentDayTimestamp);
   }
 
-  const maxTimestamp = moment(firstDay).subtract(DAYS_OVERVIEW, 'days').valueOf();
+  const maxTimestamp = moment(firstDay).subtract(DAYS_OVERVIEW_MAX, 'days').valueOf();
   dispatch(initializeDays(addTimestamps, maxTimestamp));
 };
 
@@ -67,7 +65,7 @@ const daysSortingFunction = (a, b) => {
   return 0;
 };
 
-const openDay = (timestamp, navigation) => async (dispatch, getState) => {
+const openDay = (timestamp, navigation) => async (dispatch) => {
   dispatch(setTimestampDay(timestamp));
   dispatch(hideFirstStartHint());
   dispatch(confirmFirstStartHint());
@@ -75,9 +73,32 @@ const openDay = (timestamp, navigation) => async (dispatch, getState) => {
   navigation.navigate('Day');
 };
 
-const closeFirstStartHint = () => async (dispatch, getState) => {
+const closeFirstStartHint = () => async (dispatch) => {
   dispatch(hideFirstStartHint());
   dispatch(confirmFirstStartHint());
+};
+
+const resetLastUsageTimestamps = () => async (dispatch, getState) => {
+  const {
+    directory: { locations, persons },
+  } = getState();
+
+  const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
+  const lastUsageTimestampMax = today.subtract(DAYS_LAST_USAGE, 'days').valueOf();
+
+  locations
+    .filter((location) => location.lastUsed > 0 && location.lastUsed < lastUsageTimestampMax)
+    .map((location) => location.id)
+    .forEach((id) => {
+      dispatch(resetLastUsageOfLocation(id));
+    });
+
+  persons
+    .filter((person) => person.lastUsed > 0 && person.lastUsed < lastUsageTimestampMax)
+    .map((person) => person.id)
+    .forEach((id) => {
+      dispatch(resetLastUsageOfPerson(id));
+    });
 };
 
 const mapStateToProps = ({ dashboard: { days, firstStartHintVisible } }) => {
@@ -124,6 +145,8 @@ const Container = container(Screen, {
       } = this.context;
 
       await dispatch(await loadDays());
+
+      dispatch(resetLastUsageTimestamps());
 
       const {
         dashboard: { days, firstStartHintConfirmed },
