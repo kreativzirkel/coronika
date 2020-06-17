@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
@@ -9,6 +9,7 @@ import moment from 'moment';
 const Tip = ({
   headline,
   lastUpdated,
+  links,
   sources,
   steps,
   stepsIntroText,
@@ -58,6 +59,10 @@ const Tip = ({
       lineHeight: vw(7),
       marginTop: vw(2),
     },
+    scrollView: {
+      backgroundColor: '#ffffff',
+      height: '100%',
+    },
     view: {
       backgroundColor: '#ffffff',
       flex: 1,
@@ -73,6 +78,15 @@ const Tip = ({
     viewContentList: {
       alignItems: 'flex-start',
       marginTop: vw(4),
+    },
+    viewLinksText: {
+      fontFamily: getFontFamilyRegular(),
+      fontSize: vw(4.5),
+      lineHeight: vw(7),
+      textDecorationLine: 'underline',
+    },
+    viewLinksButton: {
+      marginTop: vw(3),
     },
     viewSources: {
       marginTop: vw(14),
@@ -96,49 +110,66 @@ const Tip = ({
   });
 
   return (
-    <View style={styles.view}>
-      <View style={styles.viewContent}>
-        <Text style={styles.contentHeadline}>{headline}</Text>
-        {texts &&
-          texts.map((text, index) => (
-            <Text
-              key={`tip-text-${index}`}
-              style={{ ...styles.contentText, ...(index > 0 && styles.contentTextParagraph) }}>
-              {text}
-            </Text>
-          ))}
-      </View>
+    <ScrollView style={styles.scrollView}>
+      <View style={styles.view}>
+        <View style={styles.viewContent}>
+          <Text style={styles.contentHeadline}>{headline}</Text>
+          {texts &&
+            texts.map((text, index) => (
+              <Text
+                key={`tip-text-${index}`}
+                style={{ ...styles.contentText, ...(index > 0 && styles.contentTextParagraph) }}>
+                {text}
+              </Text>
+            ))}
+        </View>
 
-      <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
-        {stepsIntroText && <Text style={styles.contentText}>{stepsIntroText}</Text>}
+        {steps && (
+          <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
+            {stepsIntroText && <Text style={styles.contentText}>{stepsIntroText}</Text>}
 
-        {steps &&
-          steps.map((stepText, index) => (
-            <View key={`tip-list-item-${index}`} style={styles.listItem}>
-              <View style={styles.listItemNumber}>
-                <Text style={styles.listItemNumberText}>{index + 1}</Text>
+            {steps.map((stepText, index) => (
+              <View key={`tip-list-item-${index}`} style={styles.listItem}>
+                <View style={styles.listItemNumber}>
+                  <Text style={styles.listItemNumberText}>{index + 1}</Text>
+                </View>
+
+                <Text style={styles.listItemText}>{stepText}</Text>
               </View>
+            ))}
+          </View>
+        )}
 
-              <Text style={styles.listItemText}>{stepText}</Text>
-            </View>
-          ))}
+        {links && (
+          <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
+            {links.map(({ text, url }, index) => (
+              <TouchableOpacity
+                key={`tip-link-${index}`}
+                onPress={() => Linking.openURL(url).catch(() => {})}
+                style={styles.viewLinksButton}>
+                <Text style={styles.viewLinksText}>{text}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+        )}
+
+        {sources && (
+          <CollapsibleBox headline={__('tips.sources.headline')} style={styles.viewSources}>
+            {sources.map(({ text, url }, index) => (
+              <TouchableOpacity
+                key={`tip-source-${index}`}
+                onPress={() => Linking.openURL(url).catch(() => {})}
+                style={styles.viewSourcesButton}>
+                <Text style={styles.viewSourcesText}>{text}</Text>
+              </TouchableOpacity>
+            ))}
+            <Text style={styles.viewSourcesLastUpdated}>
+              {`${__('tips.sources.last-updated')} ${moment(lastUpdated).format('L')}`}
+            </Text>
+          </CollapsibleBox>
+        )}
       </View>
-
-      <CollapsibleBox headline={__('tips.sources.headline')} style={styles.viewSources}>
-        {sources &&
-          sources.map(({ text, url }, index) => (
-            <TouchableOpacity
-              key={`tip-source-${index}`}
-              onPress={() => Linking.openURL(url).catch(() => {})}
-              style={styles.viewSourcesButton}>
-              <Text style={styles.viewSourcesText}>{text}</Text>
-            </TouchableOpacity>
-          ))}
-        <Text style={styles.viewSourcesLastUpdated}>
-          {`${__('tips.sources.last-updated')} ${moment(lastUpdated).format('L')}`}
-        </Text>
-      </CollapsibleBox>
-    </View>
+    </ScrollView>
   );
 };
 

@@ -678,35 +678,37 @@ msgstr "Przypomnienie do korzystania z dziennika"
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "przypominać codziennie"
 
-#: src/components/screens/TipAmIInfected.jsx:16
+#: src/components/screens/TipAmIInfected.jsx:15
 msgid "tips.am-i-infected.list.item-1"
 msgstr "Zostań w domu"
 
-#: src/components/screens/TipAmIInfected.jsx:17
+#: src/components/screens/TipAmIInfected.jsx:16
 msgid "tips.am-i-infected.list.item-2"
 msgstr "Wezwij swojego lekarza"
 
-#: src/components/screens/TipAmIInfected.jsx:18
+#: src/components/screens/TipAmIInfected.jsx:17
 msgid "tips.am-i-infected.list.item-3"
 msgstr "Opowiedz o swoim dzienniku Coronika"
 
-#: src/components/screens/TipAmIInfected.jsx:23
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:27
-#: src/components/screens/TipCoughingSneezing.jsx:33
-#: src/components/screens/TipMouthguard.jsx:28
-#: src/components/screens/TipNotFeelingWell.jsx:24
-#: src/components/screens/TipReliableSources.jsx:51
-#: src/components/screens/TipWashingHands.jsx:25
-#: src/components/screens/Tips.jsx:107
+#: src/components/screens/TipAmIInfected.jsx:22
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:26
+#: src/components/screens/TipCoronaWarnApp.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:32
+#: src/components/screens/TipDistanceAndMouthguard.jsx:18
+#: src/components/screens/TipMouthguard.jsx:27
+#: src/components/screens/TipNotFeelingWell.jsx:23
+#: src/components/screens/TipReliableSources.jsx:18
+#: src/components/screens/TipWashingHands.jsx:24
+#: src/components/screens/Tips.jsx:115
 msgid "tips-screen.header.headline"
 msgstr "Wskazówki higieniczne"
 
-#: src/components/screens/TipAmIInfected.jsx:27
-#: src/components/screens/Tips.jsx:95
+#: src/components/screens/TipAmIInfected.jsx:25
+#: src/components/screens/Tips.jsx:103
 msgid "tips.am-i-infected.headline"
 msgstr "Obawiam się, że mam koronaawirus, co mogę zrobić?"
 
-#: src/components/screens/TipAmIInfected.jsx:31
+#: src/components/screens/TipAmIInfected.jsx:29
 msgid "tips.am-i-infected.text"
 msgstr ""
 "Jeśli obawiasz się, że mogłeś zostać zarażony, zostań w domu, aby nie "
@@ -716,33 +718,33 @@ msgstr ""
 "powstrzymać rozprzestrzenianie się tej choroby. W tym przypadku możesz po "
 "prostu wyeksportować swój pamiętnik i wysłać go do odpowiednich urzędów."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:17
 msgid "tips.avoid-crowds-of-people.list.item-1"
 msgstr "unikając dużych zgromadzeń publicznych, jeżeli nie są one konieczne."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
 msgid "tips.avoid-crowds-of-people.list.item-2"
 msgstr ""
 "chodć pieszo niż transportem publicznym, aby pokonać krótkie odległości"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
 msgid "tips.avoid-crowds-of-people.list.item-3"
 msgstr "myć ręce regularnie i dokładnie"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
 msgid "tips.avoid-crowds-of-people.list.item-4"
 msgstr "utrzymać odległość około 2 metrów pomiędzy Tobą a innymi osobami"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:22
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
 msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "pokrywając kaszel i kichanie łokciem lub chusteczką"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:31
-#: src/components/screens/Tips.jsx:78
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:29
+#: src/components/screens/Tips.jsx:86
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Unikaj tłumów ludzi"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:35
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:33
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
 "Jeśli to możliwe, unikaj wyjazdów, korzystania z transportu publicznego, a "
@@ -751,61 +753,95 @@ msgstr ""
 "wydarzeniach, w których uczestniczą tłumy ludzi. Obywatele w wieku powyżej "
 "60 lat powinni otrzymać szczepionkę przeciwko zakażeniu pneumokokowemu."
 
-#: src/components/screens/TipCoughingSneezing.jsx:24
+#: src/components/screens/TipCoronaWarnApp.jsx:10
+msgid "tips.corona-warn-app.link.app-store.text"
+msgstr "Pobierz w App Store"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:14
+msgid "tips.corona-warn-app.link.google-play.text"
+msgstr "Pobierz z Google Play"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:30
+#: src/components/screens/Tips.jsx:74
+msgid "tips.corona-warn-app.headline"
+msgstr ""
+
+#: src/components/screens/TipCoronaWarnApp.jsx:32
+msgid "tips.corona-warn-app.text-1"
+msgstr ""
+
+#: src/components/screens/TipCoronaWarnApp.jsx:32
+msgid "tips.corona-warn-app.text-2"
+msgstr ""
+
+#: src/components/screens/TipCoughingSneezing.jsx:23
 msgid "tips.coughing-sneezing.list.item-1"
 msgstr "utrzymać odległość około 2 metrów pomiędzy Tobą a innymi osobami"
 
-#: src/components/screens/TipCoughingSneezing.jsx:25
+#: src/components/screens/TipCoughingSneezing.jsx:24
 msgid "tips.coughing-sneezing.list.item-2"
 msgstr "odwrócić się od ludzi"
 
-#: src/components/screens/TipCoughingSneezing.jsx:26
+#: src/components/screens/TipCoughingSneezing.jsx:25
 msgid "tips.coughing-sneezing.list.item-3"
 msgstr "pokrywając kaszel i kichanie łokciem lub chusteczką"
 
-#: src/components/screens/TipCoughingSneezing.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:26
 msgid "tips.coughing-sneezing.list.item-4"
 msgstr "prawidłowe usuwanie chusteczki higieniczne"
 
-#: src/components/screens/TipCoughingSneezing.jsx:28
+#: src/components/screens/TipCoughingSneezing.jsx:27
 msgid "tips.coughing-sneezing.list.item-5"
 msgstr "potem umyj ręce"
 
-#: src/components/screens/TipCoughingSneezing.jsx:37
-#: src/components/screens/Tips.jsx:87
+#: src/components/screens/TipCoughingSneezing.jsx:35
+#: src/components/screens/Tips.jsx:95
 msgid "tips.coughing-sneezing.headline"
 msgstr "Prawidłowy kaszel i kichanie"
 
-#: src/components/screens/TipCoughingSneezing.jsx:41
+#: src/components/screens/TipCoughingSneezing.jsx:39
 msgid "tips.coughing-sneezing.text"
 msgstr "Aby zapobiec rozprzestrzenianiu się wirusów, proszę zwrócić uwagę:"
 
-#: src/components/screens/TipMouthguard.jsx:20
+#: src/components/screens/TipDistanceAndMouthguard.jsx:21
+#: src/components/screens/Tips.jsx:78
+msgid "tips.distance-and-mouthguard.headline"
+msgstr ""
+
+#: src/components/screens/TipDistanceAndMouthguard.jsx:23
+msgid "tips.distance-and-mouthguard.text-1"
+msgstr ""
+
+#: src/components/screens/TipDistanceAndMouthguard.jsx:23
+msgid "tips.distance-and-mouthguard.text-2"
+msgstr ""
+
+#: src/components/screens/TipMouthguard.jsx:19
 msgid "tips.mouthguard.list.item-1"
 msgstr "maska jest zrobiona z papieru"
 
-#: src/components/screens/TipMouthguard.jsx:21
+#: src/components/screens/TipMouthguard.jsx:20
 msgid "tips.mouthguard.list.item-2"
 msgstr "maska jest ciasna lub jest nieszczelna"
 
-#: src/components/screens/TipMouthguard.jsx:22
+#: src/components/screens/TipMouthguard.jsx:21
 msgid "tips.mouthguard.list.item-3"
 msgstr "zmoczy się przez oddychanie"
 
-#: src/components/screens/TipMouthguard.jsx:23
+#: src/components/screens/TipMouthguard.jsx:22
 msgid "tips.mouthguard.list.item-4"
 msgstr "nie zmieniać codziennie"
 
-#: src/components/screens/TipMouthguard.jsx:32
-#: src/components/screens/Tips.jsx:82
+#: src/components/screens/TipMouthguard.jsx:30
+#: src/components/screens/Tips.jsx:90
 msgid "tips.mouthguard.headline"
 msgstr "maseczki, tak czy nie?"
 
-#: src/components/screens/TipMouthguard.jsx:35
+#: src/components/screens/TipMouthguard.jsx:33
 msgid "tips.mouthguard.list.intro"
 msgstr "Noszenie maski poza sali operacyjnej nie daje żadnego efektu, jeśli:"
 
-#: src/components/screens/TipMouthguard.jsx:37
+#: src/components/screens/TipMouthguard.jsx:35
 msgid "tips.mouthguard.text-1"
 msgstr ""
 "Maski są niezbędne dla wszystkich sektorów ochrony zdrowia. Dla osób chorych "
@@ -813,90 +849,90 @@ msgstr ""
 "i kontroli zakażeń. Proszę nosić maskę, jeśli Twój lekarz zalecił ci. "
 "Upewnij się, że przestrzegasz zasad higieny."
 
-#: src/components/screens/TipMouthguard.jsx:37
+#: src/components/screens/TipMouthguard.jsx:35
 msgid "tips.mouthguard.text-2"
 msgstr ""
 "Dostawca usług medycznych nosi maski jako barierę i pomaga powstrzymać "
 "rozprzestrzenianie się malutkich kropelek podczas kaszlu lub kichania."
 
-#: src/components/screens/TipNotFeelingWell.jsx:16
+#: src/components/screens/TipNotFeelingWell.jsx:15
 msgid "tips.not-feeling-well.list.item-1"
 msgstr "objawy oddechowe"
 
-#: src/components/screens/TipNotFeelingWell.jsx:17
+#: src/components/screens/TipNotFeelingWell.jsx:16
 msgid "tips.not-feeling-well.list.item-2"
 msgstr "Gorączka"
 
-#: src/components/screens/TipNotFeelingWell.jsx:18
+#: src/components/screens/TipNotFeelingWell.jsx:17
 msgid "tips.not-feeling-well.list.item-3"
 msgstr "kaszel"
 
-#: src/components/screens/TipNotFeelingWell.jsx:19
+#: src/components/screens/TipNotFeelingWell.jsx:18
 msgid "tips.not-feeling-well.list.item-4"
 msgstr "zwięzłość oddechu"
 
-#: src/components/screens/TipNotFeelingWell.jsx:28
-#: src/components/screens/Tips.jsx:91
+#: src/components/screens/TipNotFeelingWell.jsx:26
+#: src/components/screens/Tips.jsx:99
 msgid "tips.not-feeling-well.headline"
 msgstr "Nie czuję się dobrze, czy mam wirusa?"
 
-#: src/components/screens/TipNotFeelingWell.jsx:31
+#: src/components/screens/TipNotFeelingWell.jsx:29
 msgid "tips.not-feeling-well.list.intro"
 msgstr "Typowymi objawami COVID-19 według WHO są:"
 
-#: src/components/screens/TipNotFeelingWell.jsx:33
+#: src/components/screens/TipNotFeelingWell.jsx:31
 msgid "tips.not-feeling-well.text"
 msgstr ""
 "Nie każdy pacjent z objawami grypopodobnymi jest również nosicielem wirusa "
 "SARS-CoV-2. Zawsze należy poinformować się o swoich objawach i wezwać "
 "lekarza."
 
-#: src/components/screens/TipReliableSources.jsx:56
-#: src/components/screens/Tips.jsx:99
+#: src/components/screens/TipReliableSources.jsx:21
+#: src/components/screens/Tips.jsx:107
 msgid "tips.reliable-sources.headline"
 msgstr "Gdzie mogę znaleźć wiarygodne źródła?"
 
-#: src/components/screens/TipReliableSources.jsx:57
+#: src/components/screens/TipReliableSources.jsx:24
 msgid "tips.reliable-sources.text"
 msgstr "Informatyczne strony internetowe"
 
-#: src/components/screens/Tips.jsx:112
+#: src/components/screens/Tips.jsx:120
 msgid "tips-screen.intro.text"
 msgstr ""
 "Tutaj znajdziesz wiedzę informacji, która pomoże Ci zmniejszyć ryzyko "
 "infekcji jak tylko możliwe i poinformuje cię, co zrobić w przypadku infekcji."
 
-#: src/components/screens/TipWashingHands.jsx:16
+#: src/components/screens/TipWashingHands.jsx:15
 msgid "tips.washing-hands.list.item-1"
 msgstr ""
 "Zmocz ręce czystą, bieżącą wodą (ciepłą lub zimną), zakręć kran i nałóż "
 "mydło."
 
-#: src/components/screens/TipWashingHands.jsx:17
+#: src/components/screens/TipWashingHands.jsx:16
 msgid "tips.washing-hands.list.item-2"
 msgstr ""
 "Namydl ręce. Rozetrzeć mydło na dłoni,między palcami i pod paznokciami."
 
-#: src/components/screens/TipWashingHands.jsx:18
+#: src/components/screens/TipWashingHands.jsx:17
 msgid "tips.washing-hands.list.item-3"
 msgstr ""
 "Wyszorować grzbiety dłoni, kciuki, między palcami i pod paznokciami przez "
 "około 30-60 sekund."
 
-#: src/components/screens/TipWashingHands.jsx:19
+#: src/components/screens/TipWashingHands.jsx:18
 msgid "tips.washing-hands.list.item-4"
 msgstr "Opłucz ręce pod czystą, bieżącą wodą."
 
-#: src/components/screens/TipWashingHands.jsx:20
+#: src/components/screens/TipWashingHands.jsx:19
 msgid "tips.washing-hands.list.item-5"
 msgstr "Wysusz ręce czystym ręcznikiem lub osusz na powietrzu."
 
-#: src/components/screens/TipWashingHands.jsx:29
-#: src/components/screens/Tips.jsx:74
+#: src/components/screens/TipWashingHands.jsx:27
+#: src/components/screens/Tips.jsx:82
 msgid "tips.washing-hands.headline"
 msgstr "Mycie rąk"
 
-#: src/components/screens/TipWashingHands.jsx:33
+#: src/components/screens/TipWashingHands.jsx:31
 msgid "tips.washing-hands.text"
 msgstr ""
 "Mycie rąk jest łatwe, a to jeden z najskuteczniejszych sposobów na "
@@ -934,10 +970,10 @@ msgstr "Łącznie"
 msgid "placeholder.search-input"
 msgstr "Szukaj"
 
-#: src/components/widgets/Tip.jsx:127
+#: src/components/widgets/Tip.jsx:157
 msgid "tips.sources.headline"
 msgstr "Źródła"
 
-#: src/components/widgets/Tip.jsx:138
+#: src/components/widgets/Tip.jsx:167
 msgid "tips.sources.last-updated"
 msgstr "Ostatnia aktualizacja:"

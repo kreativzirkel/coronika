@@ -687,35 +687,37 @@ msgstr "Herinnering aan het gebruik van het dagboek"
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "Herinner me er dagelijks aan"
 
-#: src/components/screens/TipAmIInfected.jsx:16
+#: src/components/screens/TipAmIInfected.jsx:15
 msgid "tips.am-i-infected.list.item-1"
 msgstr "Blijf thuis"
 
-#: src/components/screens/TipAmIInfected.jsx:17
+#: src/components/screens/TipAmIInfected.jsx:16
 msgid "tips.am-i-infected.list.item-2"
 msgstr "Bel je dokter"
 
-#: src/components/screens/TipAmIInfected.jsx:18
+#: src/components/screens/TipAmIInfected.jsx:17
 msgid "tips.am-i-infected.list.item-3"
 msgstr "Vertel over je Coronika-dagboek"
 
-#: src/components/screens/TipAmIInfected.jsx:23
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:27
-#: src/components/screens/TipCoughingSneezing.jsx:33
-#: src/components/screens/TipMouthguard.jsx:28
-#: src/components/screens/TipNotFeelingWell.jsx:24
-#: src/components/screens/TipReliableSources.jsx:51
-#: src/components/screens/TipWashingHands.jsx:25
-#: src/components/screens/Tips.jsx:107
+#: src/components/screens/TipAmIInfected.jsx:22
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:26
+#: src/components/screens/TipCoronaWarnApp.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:32
+#: src/components/screens/TipDistanceAndMouthguard.jsx:18
+#: src/components/screens/TipMouthguard.jsx:27
+#: src/components/screens/TipNotFeelingWell.jsx:23
+#: src/components/screens/TipReliableSources.jsx:18
+#: src/components/screens/TipWashingHands.jsx:24
+#: src/components/screens/Tips.jsx:115
 msgid "tips-screen.header.headline"
 msgstr "Hygiënetips"
 
-#: src/components/screens/TipAmIInfected.jsx:27
-#: src/components/screens/Tips.jsx:95
+#: src/components/screens/TipAmIInfected.jsx:25
+#: src/components/screens/Tips.jsx:103
 msgid "tips.am-i-infected.headline"
 msgstr "Ik ben bang dat ik het coronavirus heb, wat kan ik doen?"
 
-#: src/components/screens/TipAmIInfected.jsx:31
+#: src/components/screens/TipAmIInfected.jsx:29
 msgid "tips.am-i-infected.text"
 msgstr ""
 "Als je je zorgen maakt dat je misschien besmet bent, blijf dan thuis, zodat "
@@ -726,36 +728,36 @@ msgstr ""
 "kunt u uw dagboek gewoon exporteren en opsturen naar de verantwoordelijke "
 "autoriteiten."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:17
 msgid "tips.avoid-crowds-of-people.list.item-1"
 msgstr ""
 "Het vermijden van grote publieke bijeenkomsten als deze niet essentieel "
 "zijn..."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
 msgid "tips.avoid-crowds-of-people.list.item-2"
 msgstr ""
 "Verkiezen te voet te gaan in plaats van met het openbaar vervoer om korte "
 "afstanden af te leggen"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
 msgid "tips.avoid-crowds-of-people.list.item-3"
 msgstr "Was uw handen regelmatig en grondig"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
 msgid "tips.avoid-crowds-of-people.list.item-4"
 msgstr "Houd 2 meter afstand van elkaar"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:22
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
 msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "Hoest en nies in je elleboog of een zakdoek..."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:31
-#: src/components/screens/Tips.jsx:78
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:29
+#: src/components/screens/Tips.jsx:86
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Vermijd massa's mensen"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:35
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:33
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
 "Vermijd, indien mogelijk, het reizen, het gebruik van het openbaar vervoer "
@@ -764,152 +766,186 @@ msgstr ""
 "veel mensenmassa's worden vermeden. Burgers die ouder zijn dan 60 jaar "
 "moeten een vaccin tegen een pneumokokkeninfectie krijgen."
 
-#: src/components/screens/TipCoughingSneezing.jsx:24
+#: src/components/screens/TipCoronaWarnApp.jsx:10
+msgid "tips.corona-warn-app.link.app-store.text"
+msgstr "Download in de App Store"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:14
+msgid "tips.corona-warn-app.link.google-play.text"
+msgstr "Ontdek het op Google Play"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:30
+#: src/components/screens/Tips.jsx:74
+msgid "tips.corona-warn-app.headline"
+msgstr ""
+
+#: src/components/screens/TipCoronaWarnApp.jsx:32
+msgid "tips.corona-warn-app.text-1"
+msgstr ""
+
+#: src/components/screens/TipCoronaWarnApp.jsx:32
+msgid "tips.corona-warn-app.text-2"
+msgstr ""
+
+#: src/components/screens/TipCoughingSneezing.jsx:23
 msgid "tips.coughing-sneezing.list.item-1"
 msgstr "Houd 2 meter afstand van elkaar"
 
-#: src/components/screens/TipCoughingSneezing.jsx:25
+#: src/components/screens/TipCoughingSneezing.jsx:24
 msgid "tips.coughing-sneezing.list.item-2"
 msgstr "Draaie je weg van andere mensen"
 
-#: src/components/screens/TipCoughingSneezing.jsx:26
+#: src/components/screens/TipCoughingSneezing.jsx:25
 msgid "tips.coughing-sneezing.list.item-3"
 msgstr "In zijn elleboog hoesten of niezen"
 
-#: src/components/screens/TipCoughingSneezing.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:26
 msgid "tips.coughing-sneezing.list.item-4"
 msgstr "Smeet je zakdoek onmiddellijk weg"
 
-#: src/components/screens/TipCoughingSneezing.jsx:28
+#: src/components/screens/TipCoughingSneezing.jsx:27
 msgid "tips.coughing-sneezing.list.item-5"
 msgstr "Was je handen daarna"
 
-#: src/components/screens/TipCoughingSneezing.jsx:37
-#: src/components/screens/Tips.jsx:87
+#: src/components/screens/TipCoughingSneezing.jsx:35
+#: src/components/screens/Tips.jsx:95
 msgid "tips.coughing-sneezing.headline"
 msgstr "De juiste manier van hoesten en niezen"
 
-#: src/components/screens/TipCoughingSneezing.jsx:41
+#: src/components/screens/TipCoughingSneezing.jsx:39
 msgid "tips.coughing-sneezing.text"
 msgstr "So kun je de verspreiding van het nieuwe coronavirus voorkomen"
 
-#: src/components/screens/TipMouthguard.jsx:20
+#: src/components/screens/TipDistanceAndMouthguard.jsx:21
+#: src/components/screens/Tips.jsx:78
+msgid "tips.distance-and-mouthguard.headline"
+msgstr ""
+
+#: src/components/screens/TipDistanceAndMouthguard.jsx:23
+msgid "tips.distance-and-mouthguard.text-1"
+msgstr ""
+
+#: src/components/screens/TipDistanceAndMouthguard.jsx:23
+msgid "tips.distance-and-mouthguard.text-2"
+msgstr ""
+
+#: src/components/screens/TipMouthguard.jsx:19
 msgid "tips.mouthguard.list.item-1"
 msgstr "Het mom is gemaakt van papier"
 
-#: src/components/screens/TipMouthguard.jsx:21
+#: src/components/screens/TipMouthguard.jsx:20
 msgid "tips.mouthguard.list.item-2"
 msgstr "Het mom past niet strak op het gezicht of lekt"
 
-#: src/components/screens/TipMouthguard.jsx:22
+#: src/components/screens/TipMouthguard.jsx:21
 msgid "tips.mouthguard.list.item-3"
 msgstr "Wordt nat door de ademhaling"
 
-#: src/components/screens/TipMouthguard.jsx:23
+#: src/components/screens/TipMouthguard.jsx:22
 msgid "tips.mouthguard.list.item-4"
 msgstr "Niet dagelijks vervangen"
 
-#: src/components/screens/TipMouthguard.jsx:32
-#: src/components/screens/Tips.jsx:82
+#: src/components/screens/TipMouthguard.jsx:30
+#: src/components/screens/Tips.jsx:90
 msgid "tips.mouthguard.headline"
 msgstr "Stofkap, ja of nee?"
 
-#: src/components/screens/TipMouthguard.jsx:35
+#: src/components/screens/TipMouthguard.jsx:33
 msgid "tips.mouthguard.list.intro"
 msgstr "Het dragen van een mom naast een operatie heeft geen effect als:"
 
-#: src/components/screens/TipMouthguard.jsx:37
+#: src/components/screens/TipMouthguard.jsx:35
 msgid "tips.mouthguard.text-1"
 msgstr ""
 "Momen zijn essentieel voor alle gezondheidssectoren. Voor zieke mensen of "
 "mensen met symptomen van COVID-19 zijn maskers een passend onderdeel van "
 "infectiepreventie- en bestrijdingsmaatregelen."
 
-#: src/components/screens/TipMouthguard.jsx:37
+#: src/components/screens/TipMouthguard.jsx:35
 msgid "tips.mouthguard.text-2"
 msgstr ""
 "De zorgverlener draagt en mom als een barrière om de kleine druppeltjes te "
 "stoppen met zich wanneer je hoest of niest."
 
-#: src/components/screens/TipNotFeelingWell.jsx:16
+#: src/components/screens/TipNotFeelingWell.jsx:15
 msgid "tips.not-feeling-well.list.item-1"
 msgstr "Ademhalingssymptomen"
 
-#: src/components/screens/TipNotFeelingWell.jsx:17
+#: src/components/screens/TipNotFeelingWell.jsx:16
 msgid "tips.not-feeling-well.list.item-2"
 msgstr "Koorts"
 
-#: src/components/screens/TipNotFeelingWell.jsx:18
+#: src/components/screens/TipNotFeelingWell.jsx:17
 msgid "tips.not-feeling-well.list.item-3"
 msgstr "Hoesten"
 
-#: src/components/screens/TipNotFeelingWell.jsx:19
+#: src/components/screens/TipNotFeelingWell.jsx:18
 msgid "tips.not-feeling-well.list.item-4"
 msgstr "Benauwdheid"
 
-#: src/components/screens/TipNotFeelingWell.jsx:28
-#: src/components/screens/Tips.jsx:91
+#: src/components/screens/TipNotFeelingWell.jsx:26
+#: src/components/screens/Tips.jsx:99
 msgid "tips.not-feeling-well.headline"
 msgstr "Ik voel me niet goed, heb ik het virus?"
 
-#: src/components/screens/TipNotFeelingWell.jsx:31
+#: src/components/screens/TipNotFeelingWell.jsx:29
 msgid "tips.not-feeling-well.list.intro"
 msgstr "Typische symptomen van COVID-19 volgens de WHO zijn:"
 
-#: src/components/screens/TipNotFeelingWell.jsx:33
+#: src/components/screens/TipNotFeelingWell.jsx:31
 msgid "tips.not-feeling-well.text"
 msgstr ""
 "Niet elke patiënt met griepachtige verschijnselen is ook drager van het SARS-"
 "CoV-2-virus. U dient zich altijd te informeren over uw symptomen en uw arts "
 "te bellen."
 
-#: src/components/screens/TipReliableSources.jsx:56
-#: src/components/screens/Tips.jsx:99
+#: src/components/screens/TipReliableSources.jsx:21
+#: src/components/screens/Tips.jsx:107
 msgid "tips.reliable-sources.headline"
 msgstr "Waar kan ik betrouwbare bronnen vinden?"
 
-#: src/components/screens/TipReliableSources.jsx:57
+#: src/components/screens/TipReliableSources.jsx:24
 msgid "tips.reliable-sources.text"
 msgstr "Informatieve websites"
 
-#: src/components/screens/Tips.jsx:112
+#: src/components/screens/Tips.jsx:120
 msgid "tips-screen.intro.text"
 msgstr ""
 "Hier vindt u infomatie die je helpt om het risico op een infectie zoveel "
 "mogelijk te beperken en om het juiste te doen in geval van een infectie."
 
-#: src/components/screens/TipWashingHands.jsx:16
+#: src/components/screens/TipWashingHands.jsx:15
 msgid "tips.washing-hands.list.item-1"
 msgstr ""
 "Maak uw handen nat met schoon, stromend water (warm of koud), draai de kraan "
 "dicht en breng zeep aan."
 
-#: src/components/screens/TipWashingHands.jsx:17
+#: src/components/screens/TipWashingHands.jsx:16
 msgid "tips.washing-hands.list.item-2"
 msgstr ""
 "Schuim uw handen op door ze met de zeep in te wrijven. Schuim de ruggen van "
 "uw handen, tussen uw vingers en onder uw nagels."
 
-#: src/components/screens/TipWashingHands.jsx:18
+#: src/components/screens/TipWashingHands.jsx:17
 msgid "tips.washing-hands.list.item-3"
 msgstr ""
 "Schrob de ruggen van je handen, duimen, tussen je vingers en onder je nagels "
 "gedurende ongeveer 30-60 seconden."
 
-#: src/components/screens/TipWashingHands.jsx:19
+#: src/components/screens/TipWashingHands.jsx:18
 msgid "tips.washing-hands.list.item-4"
 msgstr "Spoel je handen goed af onder schoon, stromend water."
 
-#: src/components/screens/TipWashingHands.jsx:20
+#: src/components/screens/TipWashingHands.jsx:19
 msgid "tips.washing-hands.list.item-5"
 msgstr "Droog uw handen af met een schone handdoek of droog ze aan de lucht."
 
-#: src/components/screens/TipWashingHands.jsx:29
-#: src/components/screens/Tips.jsx:74
+#: src/components/screens/TipWashingHands.jsx:27
+#: src/components/screens/Tips.jsx:82
 msgid "tips.washing-hands.headline"
 msgstr "Handen wassen"
 
-#: src/components/screens/TipWashingHands.jsx:33
+#: src/components/screens/TipWashingHands.jsx:31
 msgid "tips.washing-hands.text"
 msgstr ""
 "Het wassen van uw handen is eenvoudig en het is een van de meest effectieve "
@@ -947,10 +983,10 @@ msgstr "Totaal"
 msgid "placeholder.search-input"
 msgstr "Opzoeken"
 
-#: src/components/widgets/Tip.jsx:127
+#: src/components/widgets/Tip.jsx:157
 msgid "tips.sources.headline"
 msgstr "Bron"
 
-#: src/components/widgets/Tip.jsx:138
+#: src/components/widgets/Tip.jsx:167
 msgid "tips.sources.last-updated"
 msgstr "Laatste update"

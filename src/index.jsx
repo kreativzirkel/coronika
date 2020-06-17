@@ -55,7 +55,9 @@ const AppNavigator = () => (
     <Stack.Screen component={screens.Settings} name={'Settings'} />
     <Stack.Screen component={screens.TipAmIInfected} name={'TipAmIInfected'} />
     <Stack.Screen component={screens.TipAvoidCrowdsOfPeople} name={'TipAvoidCrowdsOfPeople'} />
+    <Stack.Screen component={screens.TipCoronaWarnApp} name={'TipCoronaWarnApp'} />
     <Stack.Screen component={screens.TipCoughingSneezing} name={'TipCoughingSneezing'} />
+    <Stack.Screen component={screens.TipDistanceAndMouthguard} name={'TipDistanceAndMouthguard'} />
     <Stack.Screen component={screens.TipMouthguard} name={'TipMouthguard'} />
     <Stack.Screen component={screens.TipNotFeelingWell} name={'TipNotFeelingWell'} />
     <Stack.Screen component={screens.TipReliableSources} name={'TipReliableSources'} />

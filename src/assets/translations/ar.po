@@ -644,35 +644,37 @@ msgstr "تذكير لاستخدام مذكرات"
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "التذكير يومياً"
 
-#: src/components/screens/TipAmIInfected.jsx:16
+#: src/components/screens/TipAmIInfected.jsx:15
 msgid "tips.am-i-infected.list.item-1"
 msgstr "البقاء في المنزل"
 
-#: src/components/screens/TipAmIInfected.jsx:17
+#: src/components/screens/TipAmIInfected.jsx:16
 msgid "tips.am-i-infected.list.item-2"
 msgstr "اتصل بطبيبك"
 
-#: src/components/screens/TipAmIInfected.jsx:18
+#: src/components/screens/TipAmIInfected.jsx:17
 msgid "tips.am-i-infected.list.item-3"
 msgstr "بلغ عن مذكرات Coronika الخاصة بك"
 
-#: src/components/screens/TipAmIInfected.jsx:23
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:27
-#: src/components/screens/TipCoughingSneezing.jsx:33
-#: src/components/screens/TipMouthguard.jsx:28
-#: src/components/screens/TipNotFeelingWell.jsx:24
-#: src/components/screens/TipReliableSources.jsx:51
-#: src/components/screens/TipWashingHands.jsx:25
-#: src/components/screens/Tips.jsx:107
+#: src/components/screens/TipAmIInfected.jsx:22
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:26
+#: src/components/screens/TipCoronaWarnApp.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:32
+#: src/components/screens/TipDistanceAndMouthguard.jsx:18
+#: src/components/screens/TipMouthguard.jsx:27
+#: src/components/screens/TipNotFeelingWell.jsx:23
+#: src/components/screens/TipReliableSources.jsx:18
+#: src/components/screens/TipWashingHands.jsx:24
+#: src/components/screens/Tips.jsx:115
 msgid "tips-screen.header.headline"
 msgstr "نصائح النظافة"
 
-#: src/components/screens/TipAmIInfected.jsx:27
-#: src/components/screens/Tips.jsx:95
+#: src/components/screens/TipAmIInfected.jsx:25
+#: src/components/screens/Tips.jsx:103
 msgid "tips.am-i-infected.headline"
 msgstr "أخشى أنني مصابة بفايروس كورونا ، ماذا يمكنني أن أفعل؟"
 
-#: src/components/screens/TipAmIInfected.jsx:31
+#: src/components/screens/TipAmIInfected.jsx:29
 msgid "tips.am-i-infected.text"
 msgstr ""
 "إذا كنت قلقًا من أن تكون مصابًا ، فابق في المنزل حتى لا تصيب الآخرين. اتصل "
@@ -681,32 +683,32 @@ msgstr ""
 "احتواء انتشار المرض. في هذه الحالة ، يمكنك ببساطة تصدير يومياتك وإرسالها إلى "
 "السلطات المسؤولة."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:17
 msgid "tips.avoid-crowds-of-people.list.item-1"
 msgstr "تجنب التجمعات العامة الكبيرة الغير ضرورية"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
 msgid "tips.avoid-crowds-of-people.list.item-2"
 msgstr "يفضل المشي بدلا من وسائل النقل العام لتغطية مسافات قصيرة"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
 msgid "tips.avoid-crowds-of-people.list.item-3"
 msgstr "اغسل يديك بانتظام وبشكل تام"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
 msgid "tips.avoid-crowds-of-people.list.item-4"
 msgstr "الحفاظ على مسافة تقارب 2 متر بينك وبين الأشخاص الآخرين"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:22
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
 msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "في حال السعال والعطس استخدم كوعك أو منديل لتغطية وجهك"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:31
-#: src/components/screens/Tips.jsx:78
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:29
+#: src/components/screens/Tips.jsx:86
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "تجنب الحشود "
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:35
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:33
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
 "إذا كان ممكنًا ، تجنب استخدام وسائل النقل العام واعمل من المنزل. بشكل عام ، "
@@ -714,61 +716,119 @@ msgstr ""
 "المواطنين الذين تزيد أعمارهم عن ٦٠ عامًا الحصول على لقاح ضد عدوى المكورات "
 "الرئوية."
 
-#: src/components/screens/TipCoughingSneezing.jsx:24
+#: src/components/screens/TipCoronaWarnApp.jsx:10
+#, fuzzy
+msgid "tips.corona-warn-app.link.app-store.text"
+msgstr ""
+"يعد غسل يديك أمرًا سهلاً ، وهي واحدة من أكثر الطرق فعالية لمنع انتشار "
+"الجراثيم. يمكن أن تمنع الأيدي النظيفة الجراثيم من الانتشار. اتبع هذه الخطوات "
+"الخمس في كل مرة:"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:14
+msgid "tips.corona-warn-app.link.google-play.text"
+msgstr ""
+
+#: src/components/screens/TipCoronaWarnApp.jsx:30
+#: src/components/screens/Tips.jsx:74
+#, fuzzy
+msgid "tips.corona-warn-app.headline"
+msgstr "غسل يديك"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:32
+#, fuzzy
+msgid "tips.corona-warn-app.text-1"
+msgstr ""
+"يعد غسل يديك أمرًا سهلاً ، وهي واحدة من أكثر الطرق فعالية لمنع انتشار "
+"الجراثيم. يمكن أن تمنع الأيدي النظيفة الجراثيم من الانتشار. اتبع هذه الخطوات "
+"الخمس في كل مرة:"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:32
+#, fuzzy
+msgid "tips.corona-warn-app.text-2"
+msgstr ""
+"يعد غسل يديك أمرًا سهلاً ، وهي واحدة من أكثر الطرق فعالية لمنع انتشار "
+"الجراثيم. يمكن أن تمنع الأيدي النظيفة الجراثيم من الانتشار. اتبع هذه الخطوات "
+"الخمس في كل مرة:"
+
+#: src/components/screens/TipCoughingSneezing.jsx:23
 msgid "tips.coughing-sneezing.list.item-1"
 msgstr "الحفاظ على مسافة تقارب 2 متر بينك وبين الأشخاص الآخرين"
 
-#: src/components/screens/TipCoughingSneezing.jsx:25
+#: src/components/screens/TipCoughingSneezing.jsx:24
 msgid "tips.coughing-sneezing.list.item-2"
 msgstr "ابتعد عن الناس"
 
-#: src/components/screens/TipCoughingSneezing.jsx:26
+#: src/components/screens/TipCoughingSneezing.jsx:25
 msgid "tips.coughing-sneezing.list.item-3"
 msgstr "في حال السعال والعطس استخدم كوعك أو منديل لتغطية وجهك"
 
-#: src/components/screens/TipCoughingSneezing.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:26
 msgid "tips.coughing-sneezing.list.item-4"
 msgstr "التخلص من المناديل بشكل صحيح"
 
-#: src/components/screens/TipCoughingSneezing.jsx:28
+#: src/components/screens/TipCoughingSneezing.jsx:27
 msgid "tips.coughing-sneezing.list.item-5"
 msgstr "اغسل يديك بعد ذلك"
 
-#: src/components/screens/TipCoughingSneezing.jsx:37
-#: src/components/screens/Tips.jsx:87
+#: src/components/screens/TipCoughingSneezing.jsx:35
+#: src/components/screens/Tips.jsx:95
 msgid "tips.coughing-sneezing.headline"
 msgstr "السعال والعطس بشكل صحيح"
 
-#: src/components/screens/TipCoughingSneezing.jsx:41
+#: src/components/screens/TipCoughingSneezing.jsx:39
 msgid "tips.coughing-sneezing.text"
 msgstr "لمنع انتشار الفيروسات ، يرجى الانتباه إلى:"
 
-#: src/components/screens/TipMouthguard.jsx:20
+#: src/components/screens/TipDistanceAndMouthguard.jsx:21
+#: src/components/screens/Tips.jsx:78
+#, fuzzy
+msgid "tips.distance-and-mouthguard.headline"
+msgstr "كمامة ، نعم أم لا؟"
+
+#: src/components/screens/TipDistanceAndMouthguard.jsx:23
+#, fuzzy
+msgid "tips.distance-and-mouthguard.text-1"
+msgstr ""
+"الكمامات ضرورية لجميع القطاعات الصحية. بالنسبة للأشخاص المرضى أو الأشخاص "
+"الذين يعانون من أعراض COVID-19 الكمامة هي جزء مهم من تدابير الوقاية من "
+"العدوى ومكافحتها. ننصح بارتداء الكمامة فقط إذا كان مقدم الرعاية الصحية الخاص "
+"بك قد اوصى بذلك و في الحالات أخرى تأكد من اتباع قواعد النظافة."
+
+#: src/components/screens/TipDistanceAndMouthguard.jsx:23
+#, fuzzy
+msgid "tips.distance-and-mouthguard.text-2"
+msgstr ""
+"الكمامات ضرورية لجميع القطاعات الصحية. بالنسبة للأشخاص المرضى أو الأشخاص "
+"الذين يعانون من أعراض COVID-19 الكمامة هي جزء مهم من تدابير الوقاية من "
+"العدوى ومكافحتها. ننصح بارتداء الكمامة فقط إذا كان مقدم الرعاية الصحية الخاص "
+"بك قد اوصى بذلك و في الحالات أخرى تأكد من اتباع قواعد النظافة."
+
+#: src/components/screens/TipMouthguard.jsx:19
 msgid "tips.mouthguard.list.item-1"
 msgstr "الكمامة مصنوعة من الورق"
 
-#: src/components/screens/TipMouthguard.jsx:21
+#: src/components/screens/TipMouthguard.jsx:20
 msgid "tips.mouthguard.list.item-2"
 msgstr "مقاس الكمامة لا يتناسب مع حجم الوجه أو يسرب"
 
-#: src/components/screens/TipMouthguard.jsx:22
+#: src/components/screens/TipMouthguard.jsx:21
 msgid "tips.mouthguard.list.item-3"
 msgstr "يتيبلل بسبب التنفس"
 
-#: src/components/screens/TipMouthguard.jsx:23
+#: src/components/screens/TipMouthguard.jsx:22
 msgid "tips.mouthguard.list.item-4"
 msgstr "لا تتغيرعدة مرات يوميا"
 
-#: src/components/screens/TipMouthguard.jsx:32
-#: src/components/screens/Tips.jsx:82
+#: src/components/screens/TipMouthguard.jsx:30
+#: src/components/screens/Tips.jsx:90
 msgid "tips.mouthguard.headline"
 msgstr "كمامة ، نعم أم لا؟"
 
-#: src/components/screens/TipMouthguard.jsx:35
+#: src/components/screens/TipMouthguard.jsx:33
 msgid "tips.mouthguard.list.intro"
 msgstr "ارتداء الكمامة خارج عمليات الجراحة ليس له أي تأثير إذا:"
 
-#: src/components/screens/TipMouthguard.jsx:37
+#: src/components/screens/TipMouthguard.jsx:35
 msgid "tips.mouthguard.text-1"
 msgstr ""
 "الكمامات ضرورية لجميع القطاعات الصحية. بالنسبة للأشخاص المرضى أو الأشخاص "
@@ -776,87 +836,87 @@ msgstr ""
 "العدوى ومكافحتها. ننصح بارتداء الكمامة فقط إذا كان مقدم الرعاية الصحية الخاص "
 "بك قد اوصى بذلك و في الحالات أخرى تأكد من اتباع قواعد النظافة."
 
-#: src/components/screens/TipMouthguard.jsx:37
+#: src/components/screens/TipMouthguard.jsx:35
 msgid "tips.mouthguard.text-2"
 msgstr ""
 "مقدم الرعاية الصحية يرتدي الكمامة كحاجز ليساعد على منع انتشار جزيئات الرذاذ "
 "عند السعال أو العطس."
 
-#: src/components/screens/TipNotFeelingWell.jsx:16
+#: src/components/screens/TipNotFeelingWell.jsx:15
 msgid "tips.not-feeling-well.list.item-1"
 msgstr "أعراض الجهاز التنفسي"
 
-#: src/components/screens/TipNotFeelingWell.jsx:17
+#: src/components/screens/TipNotFeelingWell.jsx:16
 msgid "tips.not-feeling-well.list.item-2"
 msgstr "حمى"
 
-#: src/components/screens/TipNotFeelingWell.jsx:18
+#: src/components/screens/TipNotFeelingWell.jsx:17
 msgid "tips.not-feeling-well.list.item-3"
 msgstr "سعال"
 
-#: src/components/screens/TipNotFeelingWell.jsx:19
+#: src/components/screens/TipNotFeelingWell.jsx:18
 msgid "tips.not-feeling-well.list.item-4"
 msgstr "ضيق في التنفس"
 
-#: src/components/screens/TipNotFeelingWell.jsx:28
-#: src/components/screens/Tips.jsx:91
+#: src/components/screens/TipNotFeelingWell.jsx:26
+#: src/components/screens/Tips.jsx:99
 msgid "tips.not-feeling-well.headline"
 msgstr "لا أشعر أنني بخير ، هل اصبت بالفيروس؟"
 
-#: src/components/screens/TipNotFeelingWell.jsx:31
+#: src/components/screens/TipNotFeelingWell.jsx:29
 msgid "tips.not-feeling-well.list.intro"
 msgstr "الأعراض التقليدية لـ COVID-19 وفقًا لمنظمة الصحة العالمية هي:"
 
-#: src/components/screens/TipNotFeelingWell.jsx:33
+#: src/components/screens/TipNotFeelingWell.jsx:31
 msgid "tips.not-feeling-well.text"
 msgstr ""
 "ليس كل مريض يعاني من أعراض تشبه أعراض الأنفلونزا هو أيضًا حامل لفيروس سارس - "
 "CoV - 2. يجب عليك دائمًا إبلاغ نفسك عن أعراضك والاتصال بطبيبك."
 
-#: src/components/screens/TipReliableSources.jsx:56
-#: src/components/screens/Tips.jsx:99
+#: src/components/screens/TipReliableSources.jsx:21
+#: src/components/screens/Tips.jsx:107
 msgid "tips.reliable-sources.headline"
 msgstr "أين يمكنني العثور على مصادر موثوقة؟"
 
-#: src/components/screens/TipReliableSources.jsx:57
+#: src/components/screens/TipReliableSources.jsx:24
 msgid "tips.reliable-sources.text"
 msgstr "مواقع إخبارية"
 
-#: src/components/screens/Tips.jsx:112
+#: src/components/screens/Tips.jsx:120
 msgid "tips-screen.intro.text"
 msgstr ""
 "هنا تجد المعلومات التي تساعدك على الحد من خطر الإصابة بأكبر قدر ممكن والقيام "
 "بالشيء الصحيح في حالة الإصابة."
 
-#: src/components/screens/TipWashingHands.jsx:16
+#: src/components/screens/TipWashingHands.jsx:15
 msgid "tips.washing-hands.list.item-1"
 msgstr ""
 "بلل يديك بمياه نظيفة وجارية (دافئة أو باردة) وأطفئ الصنبور ثم ضع الصابون."
 
-#: src/components/screens/TipWashingHands.jsx:17
+#: src/components/screens/TipWashingHands.jsx:16
 msgid "tips.washing-hands.list.item-2"
 msgstr ""
 "قم بترغية يديك بفركهما مع الصابون. قم بفرك ظهر يديك و بين أصابعك وتحت أظافرك."
 
-#: src/components/screens/TipWashingHands.jsx:18
+#: src/components/screens/TipWashingHands.jsx:17
 msgid "tips.washing-hands.list.item-3"
 msgstr ""
 "افرك ظهر يديك وإبهاميك وبين أصابعك وتحت أظافرك لمدة ٣٠ الى ٦٠ ثانية تقريبًا."
 
-#: src/components/screens/TipWashingHands.jsx:19
+#: src/components/screens/TipWashingHands.jsx:18
 msgid "tips.washing-hands.list.item-4"
 msgstr "اغسل يديك جيدًا تحت الماء الجاري النظيف."
 
-#: src/components/screens/TipWashingHands.jsx:20
+#: src/components/screens/TipWashingHands.jsx:19
 msgid "tips.washing-hands.list.item-5"
 msgstr "جفف يديك باستخدام منشفة نظيفة أو جففها بالهواء."
 
-#: src/components/screens/TipWashingHands.jsx:29
-#: src/components/screens/Tips.jsx:74
+#: src/components/screens/TipWashingHands.jsx:27
+#: src/components/screens/Tips.jsx:82
 msgid "tips.washing-hands.headline"
 msgstr "غسل يديك"
 
-#: src/components/screens/TipWashingHands.jsx:33
+#: src/components/screens/TipWashingHands.jsx:31
 msgid "tips.washing-hands.text"
 msgstr ""
 "يعد غسل يديك أمرًا سهلاً ، وهي واحدة من أكثر الطرق فعالية لمنع انتشار "
@@ -891,10 +951,10 @@ msgstr "مجموع"
 msgid "placeholder.search-input"
 msgstr "بحث"
 
-#: src/components/widgets/Tip.jsx:127
+#: src/components/widgets/Tip.jsx:157
 msgid "tips.sources.headline"
 msgstr "مصادر"
 
-#: src/components/widgets/Tip.jsx:138
+#: src/components/widgets/Tip.jsx:167
 msgid "tips.sources.last-updated"
 msgstr "آخر تحديث:"

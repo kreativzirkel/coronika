@@ -689,35 +689,37 @@ msgstr "Υπενθύμιση για χρήση ημερολογίου"
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "καθημερινή υπενθύμιση "
 
-#: src/components/screens/TipAmIInfected.jsx:16
+#: src/components/screens/TipAmIInfected.jsx:15
 msgid "tips.am-i-infected.list.item-1"
 msgstr "Μείνε σπίτι"
 
-#: src/components/screens/TipAmIInfected.jsx:17
+#: src/components/screens/TipAmIInfected.jsx:16
 msgid "tips.am-i-infected.list.item-2"
 msgstr "Επικοινώνησε με το γιατρό σου"
 
-#: src/components/screens/TipAmIInfected.jsx:18
+#: src/components/screens/TipAmIInfected.jsx:17
 msgid "tips.am-i-infected.list.item-3"
 msgstr "Πες για το ημερολόγιό σου από τη Coronika"
 
-#: src/components/screens/TipAmIInfected.jsx:23
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:27
-#: src/components/screens/TipCoughingSneezing.jsx:33
-#: src/components/screens/TipMouthguard.jsx:28
-#: src/components/screens/TipNotFeelingWell.jsx:24
-#: src/components/screens/TipReliableSources.jsx:51
-#: src/components/screens/TipWashingHands.jsx:25
-#: src/components/screens/Tips.jsx:107
+#: src/components/screens/TipAmIInfected.jsx:22
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:26
+#: src/components/screens/TipCoronaWarnApp.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:32
+#: src/components/screens/TipDistanceAndMouthguard.jsx:18
+#: src/components/screens/TipMouthguard.jsx:27
+#: src/components/screens/TipNotFeelingWell.jsx:23
+#: src/components/screens/TipReliableSources.jsx:18
+#: src/components/screens/TipWashingHands.jsx:24
+#: src/components/screens/Tips.jsx:115
 msgid "tips-screen.header.headline"
 msgstr "Συμβουλές υγιεινής"
 
-#: src/components/screens/TipAmIInfected.jsx:27
-#: src/components/screens/Tips.jsx:95
+#: src/components/screens/TipAmIInfected.jsx:25
+#: src/components/screens/Tips.jsx:103
 msgid "tips.am-i-infected.headline"
 msgstr "Φοβάμαι ότι έχω κολλήσει τον κορονοιὸ, τι μπορώ να κάνω;"
 
-#: src/components/screens/TipAmIInfected.jsx:31
+#: src/components/screens/TipAmIInfected.jsx:29
 msgid "tips.am-i-infected.text"
 msgstr ""
 "Εάν ανησυχείς ότι μπορεί να έχεις μολυνθεί, μείνε στο σπίτι για να μην "
@@ -728,97 +730,160 @@ msgstr ""
 "μπορείς απλά να εξάγεις το ημερολόγιό σου και να το στείλεις στις αρμόδιες "
 "αρχές."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:17
 msgid "tips.avoid-crowds-of-people.list.item-1"
 msgstr "Απέφευγε μεγάλες δημόσιες συναντήσεις εάν δεν είναι απαραίτητες"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
 msgid "tips.avoid-crowds-of-people.list.item-2"
 msgstr ""
 "Για μικρές αποστάσεις προτίμησε να περπατάς αντί να χρησιμοποιείς τα μέσα "
 "μαζικής μεταφοράς"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
 msgid "tips.avoid-crowds-of-people.list.item-3"
 msgstr "πλύνε τα χέρια σου τακτικά και σχολαστικά"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
 msgid "tips.avoid-crowds-of-people.list.item-4"
 msgstr "διατήρησε απόσταση περίπου 2 μέτρων μεταξύ εσού και άλλων ανθρώπων"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:22
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
 msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr ""
 "κάλυψε τον βήχα και το φτάρνισμά σου με ένα χαρτομάντιλο ή με την μασχάλη σου"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:31
-#: src/components/screens/Tips.jsx:78
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:29
+#: src/components/screens/Tips.jsx:86
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Απέφευγε πλήθη ανθρώπων"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:35
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:33
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
 "Εάν είναι δυνατό, μη χρησιμοποιείς τα μέσα μαζικής μεταφοράς και αντ 'αυτού "
 "εργάσου από το σπίτι. Σε γενικές γραμμές, οι επαφές με άλλους ανθρώπους "
 "πρέπει να μειωθούν όσο το δυνατό περισσότερο."
 
-#: src/components/screens/TipCoughingSneezing.jsx:24
+#: src/components/screens/TipCoronaWarnApp.jsx:10
+#, fuzzy
+msgid "tips.corona-warn-app.link.app-store.text"
+msgstr ""
+"Το πλύσιμο των χεριών σου είναι εύκολο και είναι ένας από τους πιο "
+"αποτελεσματικούς τρόπους για την αποτροπή εξάπλωσης μικροβίων. Τα καθαρά "
+"χέρια μπορούν να σταματήσουν τη διάδοση μικροβίων. Απλά ακολούθησε αυτά τα "
+"πέντε βήματα:"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:14
+msgid "tips.corona-warn-app.link.google-play.text"
+msgstr ""
+
+#: src/components/screens/TipCoronaWarnApp.jsx:30
+#: src/components/screens/Tips.jsx:74
+#, fuzzy
+msgid "tips.corona-warn-app.headline"
+msgstr "Πλένοντας τα χέρια σου"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:32
+#, fuzzy
+msgid "tips.corona-warn-app.text-1"
+msgstr ""
+"Το πλύσιμο των χεριών σου είναι εύκολο και είναι ένας από τους πιο "
+"αποτελεσματικούς τρόπους για την αποτροπή εξάπλωσης μικροβίων. Τα καθαρά "
+"χέρια μπορούν να σταματήσουν τη διάδοση μικροβίων. Απλά ακολούθησε αυτά τα "
+"πέντε βήματα:"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:32
+#, fuzzy
+msgid "tips.corona-warn-app.text-2"
+msgstr ""
+"Το πλύσιμο των χεριών σου είναι εύκολο και είναι ένας από τους πιο "
+"αποτελεσματικούς τρόπους για την αποτροπή εξάπλωσης μικροβίων. Τα καθαρά "
+"χέρια μπορούν να σταματήσουν τη διάδοση μικροβίων. Απλά ακολούθησε αυτά τα "
+"πέντε βήματα:"
+
+#: src/components/screens/TipCoughingSneezing.jsx:23
 msgid "tips.coughing-sneezing.list.item-1"
 msgstr "διατήρησε απόσταση περίπου 2 μέτρων μεταξύ εσού και άλλων ανθρώπων"
 
-#: src/components/screens/TipCoughingSneezing.jsx:25
+#: src/components/screens/TipCoughingSneezing.jsx:24
 msgid "tips.coughing-sneezing.list.item-2"
 msgstr "Γύρισε την πλάτη σε άλλους ανθρώπους"
 
-#: src/components/screens/TipCoughingSneezing.jsx:26
+#: src/components/screens/TipCoughingSneezing.jsx:25
 msgid "tips.coughing-sneezing.list.item-3"
 msgstr ""
 "κάλυψε τον βήχα και το φτάρνισμά σου με ένα χαρτομάντιλο ή με την μασχάλη σου"
 
-#: src/components/screens/TipCoughingSneezing.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:26
 msgid "tips.coughing-sneezing.list.item-4"
 msgstr "Πέταξε χρησιμοποιημένα χαρτομάντιλα στα σκουπίδια"
 
-#: src/components/screens/TipCoughingSneezing.jsx:28
+#: src/components/screens/TipCoughingSneezing.jsx:27
 msgid "tips.coughing-sneezing.list.item-5"
 msgstr "πλύνε στη συνέχεια τα χέρια σου "
 
-#: src/components/screens/TipCoughingSneezing.jsx:37
-#: src/components/screens/Tips.jsx:87
+#: src/components/screens/TipCoughingSneezing.jsx:35
+#: src/components/screens/Tips.jsx:95
 msgid "tips.coughing-sneezing.headline"
 msgstr "Βήχας και φτάρνισμα όπως αρμόζει"
 
-#: src/components/screens/TipCoughingSneezing.jsx:41
+#: src/components/screens/TipCoughingSneezing.jsx:39
 msgid "tips.coughing-sneezing.text"
 msgstr "Για να αποτρέψεις την εξάπλωση ιών, δώσε προσοχή στα παρακάτω:"
 
-#: src/components/screens/TipMouthguard.jsx:20
+#: src/components/screens/TipDistanceAndMouthguard.jsx:21
+#: src/components/screens/Tips.jsx:78
+#, fuzzy
+msgid "tips.distance-and-mouthguard.headline"
+msgstr "Επιστόμιο, ναι ή όχι;"
+
+#: src/components/screens/TipDistanceAndMouthguard.jsx:23
+#, fuzzy
+msgid "tips.distance-and-mouthguard.text-1"
+msgstr ""
+"Οι μάσκες είναι απαραίτητες για όλους τους τομείς της υγείας. Για τους "
+"ασθενείς ή άτομα με συμπτώματα COVID-19 οι μάσκες αποτελούν ένα από τα "
+"σημαντικότερα μέτρα πρόληψης και ελέγχου λοιμώξεων. Φόρεσε μια μάσκα μόνο "
+"εάν ο γιατρός σου στο συνιστήσει. Διαφορετικά απλά ακολούθησε τους κανόνες "
+"υγιεινής."
+
+#: src/components/screens/TipDistanceAndMouthguard.jsx:23
+#, fuzzy
+msgid "tips.distance-and-mouthguard.text-2"
+msgstr ""
+"Οι μάσκες είναι απαραίτητες για όλους τους τομείς της υγείας. Για τους "
+"ασθενείς ή άτομα με συμπτώματα COVID-19 οι μάσκες αποτελούν ένα από τα "
+"σημαντικότερα μέτρα πρόληψης και ελέγχου λοιμώξεων. Φόρεσε μια μάσκα μόνο "
+"εάν ο γιατρός σου στο συνιστήσει. Διαφορετικά απλά ακολούθησε τους κανόνες "
+"υγιεινής."
+
+#: src/components/screens/TipMouthguard.jsx:19
 msgid "tips.mouthguard.list.item-1"
 msgstr "η μάσκα είναι κατασκευασμένη από χαρτί"
 
-#: src/components/screens/TipMouthguard.jsx:21
+#: src/components/screens/TipMouthguard.jsx:20
 msgid "tips.mouthguard.list.item-2"
 msgstr "η μάσκα δεν ταιριάζει σφιχτά στο πρόσωπο ή παρουσιάζει διαρροή"
 
-#: src/components/screens/TipMouthguard.jsx:22
+#: src/components/screens/TipMouthguard.jsx:21
 msgid "tips.mouthguard.list.item-3"
 msgstr "γίνεται υγρή μέσω της αναπνοής"
 
-#: src/components/screens/TipMouthguard.jsx:23
+#: src/components/screens/TipMouthguard.jsx:22
 msgid "tips.mouthguard.list.item-4"
 msgstr "δεν ανανεώνεται περισσότερες φορές καθημερινά"
 
-#: src/components/screens/TipMouthguard.jsx:32
-#: src/components/screens/Tips.jsx:82
+#: src/components/screens/TipMouthguard.jsx:30
+#: src/components/screens/Tips.jsx:90
 msgid "tips.mouthguard.headline"
 msgstr "Επιστόμιο, ναι ή όχι;"
 
-#: src/components/screens/TipMouthguard.jsx:35
+#: src/components/screens/TipMouthguard.jsx:33
 msgid "tips.mouthguard.list.intro"
 msgstr "Η χρήση μιας μάσκας έξω από το χειρουργίο δεν έχει καμία επίδραση εαν:"
 
-#: src/components/screens/TipMouthguard.jsx:37
+#: src/components/screens/TipMouthguard.jsx:35
 msgid "tips.mouthguard.text-1"
 msgstr ""
 "Οι μάσκες είναι απαραίτητες για όλους τους τομείς της υγείας. Για τους "
@@ -827,88 +892,88 @@ msgstr ""
 "εάν ο γιατρός σου στο συνιστήσει. Διαφορετικά απλά ακολούθησε τους κανόνες "
 "υγιεινής."
 
-#: src/components/screens/TipMouthguard.jsx:37
+#: src/components/screens/TipMouthguard.jsx:35
 msgid "tips.mouthguard.text-2"
 msgstr ""
 "Οι Γιατροί φοράνε μάσκες για να μειώσουν την εξάπλωση μικροσκοπικών "
 "σταγονιδίων όταν βήχουν ή φταρνίζονται."
 
-#: src/components/screens/TipNotFeelingWell.jsx:16
+#: src/components/screens/TipNotFeelingWell.jsx:15
 msgid "tips.not-feeling-well.list.item-1"
 msgstr "αναπνευστικά συμπτώματα"
 
-#: src/components/screens/TipNotFeelingWell.jsx:17
+#: src/components/screens/TipNotFeelingWell.jsx:16
 msgid "tips.not-feeling-well.list.item-2"
 msgstr "πυρετός"
 
-#: src/components/screens/TipNotFeelingWell.jsx:18
+#: src/components/screens/TipNotFeelingWell.jsx:17
 msgid "tips.not-feeling-well.list.item-3"
 msgstr "βήχας"
 
-#: src/components/screens/TipNotFeelingWell.jsx:19
+#: src/components/screens/TipNotFeelingWell.jsx:18
 msgid "tips.not-feeling-well.list.item-4"
 msgstr "δυσκολία στην αναπνοή"
 
-#: src/components/screens/TipNotFeelingWell.jsx:28
-#: src/components/screens/Tips.jsx:91
+#: src/components/screens/TipNotFeelingWell.jsx:26
+#: src/components/screens/Tips.jsx:99
 msgid "tips.not-feeling-well.headline"
 msgstr "Δεν αισθάνομαι καλά, έχω τον κορονοιό;"
 
-#: src/components/screens/TipNotFeelingWell.jsx:31
+#: src/components/screens/TipNotFeelingWell.jsx:29
 msgid "tips.not-feeling-well.list.intro"
 msgstr "Τα τυπικά συμπτώματα του COVID-19 σύμφωνα με την WHO είναι:"
 
-#: src/components/screens/TipNotFeelingWell.jsx:33
+#: src/components/screens/TipNotFeelingWell.jsx:31
 msgid "tips.not-feeling-well.text"
 msgstr ""
 "Ασθενείς με συμπτώματα γρίπης δεν είναι απαραίτητα φορείς του ιού SARS-"
 "CoV-2. Θα πρέπει πάντα να ενημερώνεσε για τα συμπτώματά σου και να "
 "επικοινωνείς με το γιατρό σου."
 
-#: src/components/screens/TipReliableSources.jsx:56
-#: src/components/screens/Tips.jsx:99
+#: src/components/screens/TipReliableSources.jsx:21
+#: src/components/screens/Tips.jsx:107
 msgid "tips.reliable-sources.headline"
 msgstr "Πού μπορώ να βρω αξιόπιστες πηγές;"
 
-#: src/components/screens/TipReliableSources.jsx:57
+#: src/components/screens/TipReliableSources.jsx:24
 msgid "tips.reliable-sources.text"
 msgstr "Ενημερωτικές ιστοσελίδες"
 
-#: src/components/screens/Tips.jsx:112
+#: src/components/screens/Tips.jsx:120
 msgid "tips-screen.intro.text"
 msgstr ""
 "Εδώ θα βρείς πληροφορείες που θα σε βοηθήσουν να μειώσεις όσο το δυνατό "
 "περισσότερο τον κίνδυνο μόλυνσης και να κάνεις το σωστό σε περίπτωση "
 "μόλυνσης."
 
-#: src/components/screens/TipWashingHands.jsx:16
+#: src/components/screens/TipWashingHands.jsx:15
 msgid "tips.washing-hands.list.item-1"
 msgstr "Βρέξε τα χέρια σου με καθαρό, τρεχούμενο νερό (ζεστό ή κρύο)"
 
-#: src/components/screens/TipWashingHands.jsx:17
+#: src/components/screens/TipWashingHands.jsx:16
 msgid "tips.washing-hands.list.item-2"
 msgstr "εφάρμοσε σαπούνι και τρίψε καλά τα χέρια σου."
 
-#: src/components/screens/TipWashingHands.jsx:18
+#: src/components/screens/TipWashingHands.jsx:17
 msgid "tips.washing-hands.list.item-3"
 msgstr ""
 "Τρίψε το πίσω μέρος των χεριών, τους αντίχειρες, τα νύχια και το μέρος "
 "ανάμεσα στα δάχτυλά σου για περίπου 30-60 δευτερόλεπτα."
 
-#: src/components/screens/TipWashingHands.jsx:19
+#: src/components/screens/TipWashingHands.jsx:18
 msgid "tips.washing-hands.list.item-4"
 msgstr "Ξέπλυνε τα χέρια σου καλά κάτω από καθαρό, τρεχούμενο νερό."
 
-#: src/components/screens/TipWashingHands.jsx:20
+#: src/components/screens/TipWashingHands.jsx:19
 msgid "tips.washing-hands.list.item-5"
 msgstr "Στέγνωσε τα χέρια σου χρησιμοποιώντας μια καθαρή πετσέτα ή στεγνωτήρα."
 
-#: src/components/screens/TipWashingHands.jsx:29
-#: src/components/screens/Tips.jsx:74
+#: src/components/screens/TipWashingHands.jsx:27
+#: src/components/screens/Tips.jsx:82
 msgid "tips.washing-hands.headline"
 msgstr "Πλένοντας τα χέρια σου"
 
-#: src/components/screens/TipWashingHands.jsx:33
+#: src/components/screens/TipWashingHands.jsx:31
 msgid "tips.washing-hands.text"
 msgstr ""
 "Το πλύσιμο των χεριών σου είναι εύκολο και είναι ένας από τους πιο "
@@ -946,10 +1011,10 @@ msgstr "σύνολο"
 msgid "placeholder.search-input"
 msgstr "Αναζήτηση"
 
-#: src/components/widgets/Tip.jsx:127
+#: src/components/widgets/Tip.jsx:157
 msgid "tips.sources.headline"
 msgstr "Πηγές"
 
-#: src/components/widgets/Tip.jsx:138
+#: src/components/widgets/Tip.jsx:167
 msgid "tips.sources.last-updated"
 msgstr "Τελευταία ενημέρωση:"

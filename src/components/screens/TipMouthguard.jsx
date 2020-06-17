@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import { ScrollView } from 'react-native';
 import { COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import { HeaderBack } from '../widgets/Header';
@@ -27,16 +26,14 @@ const TipMouthguard = ({ navigation, __ }) => {
     <Layout backgroundColor={COLOR_SECONDARY}>
       <HeaderBack headline={__('tips-screen.header.headline')} navigation={navigation} />
 
-      <ScrollView>
-        <Tip
-          headline={__('tips.mouthguard.headline')}
-          lastUpdated={1584489600000}
-          steps={steps}
-          stepsIntroText={__('tips.mouthguard.list.intro')}
-          sources={sources}
-          texts={[__('tips.mouthguard.text-1'), __('tips.mouthguard.text-2')]}
-        />
-      </ScrollView>
+      <Tip
+        headline={__('tips.mouthguard.headline')}
+        lastUpdated={1584489600000}
+        steps={steps}
+        stepsIntroText={__('tips.mouthguard.list.intro')}
+        sources={sources}
+        texts={[__('tips.mouthguard.text-1'), __('tips.mouthguard.text-2')]}
+      />
     </Layout>
   );
 };

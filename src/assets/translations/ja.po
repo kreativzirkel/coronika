@@ -660,35 +660,37 @@ msgstr "日記を使うときの注意点"
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "毎日のリマインド"
 
-#: src/components/screens/TipAmIInfected.jsx:16
+#: src/components/screens/TipAmIInfected.jsx:15
 msgid "tips.am-i-infected.list.item-1"
 msgstr "家にいる"
 
-#: src/components/screens/TipAmIInfected.jsx:17
+#: src/components/screens/TipAmIInfected.jsx:16
 msgid "tips.am-i-infected.list.item-2"
 msgstr "医師に電話する"
 
-#: src/components/screens/TipAmIInfected.jsx:18
+#: src/components/screens/TipAmIInfected.jsx:17
 msgid "tips.am-i-infected.list.item-3"
 msgstr "コロニカの日記について教えてください"
 
-#: src/components/screens/TipAmIInfected.jsx:23
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:27
-#: src/components/screens/TipCoughingSneezing.jsx:33
-#: src/components/screens/TipMouthguard.jsx:28
-#: src/components/screens/TipNotFeelingWell.jsx:24
-#: src/components/screens/TipReliableSources.jsx:51
-#: src/components/screens/TipWashingHands.jsx:25
-#: src/components/screens/Tips.jsx:107
+#: src/components/screens/TipAmIInfected.jsx:22
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:26
+#: src/components/screens/TipCoronaWarnApp.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:32
+#: src/components/screens/TipDistanceAndMouthguard.jsx:18
+#: src/components/screens/TipMouthguard.jsx:27
+#: src/components/screens/TipNotFeelingWell.jsx:23
+#: src/components/screens/TipReliableSources.jsx:18
+#: src/components/screens/TipWashingHands.jsx:24
+#: src/components/screens/Tips.jsx:115
 msgid "tips-screen.header.headline"
 msgstr "衛生に関するヒント"
 
-#: src/components/screens/TipAmIInfected.jsx:27
-#: src/components/screens/Tips.jsx:95
+#: src/components/screens/TipAmIInfected.jsx:25
+#: src/components/screens/Tips.jsx:103
 msgid "tips.am-i-infected.headline"
 msgstr "コロナウイルスに感染したのではないか、どうすればいいですか？"
 
-#: src/components/screens/TipAmIInfected.jsx:31
+#: src/components/screens/TipAmIInfected.jsx:29
 msgid "tips.am-i-infected.text"
 msgstr ""
 "感染したのではないかと心配している場合は、他の人に感染しないように家にいてく"
@@ -697,179 +699,232 @@ msgstr ""
 "ニカの日記について伝えてください。この場合、日記を簡単にエクスポートして、そ"
 "れを担当当局に送信できます。"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:17
 msgid "tips.avoid-crowds-of-people.list.item-1"
 msgstr "可能な限り大型イベントを避ける"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
 msgid "tips.avoid-crowds-of-people.list.item-2"
 msgstr "近場への移動は公共交通機関ではなく歩きましょう。"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
 msgid "tips.avoid-crowds-of-people.list.item-3"
 msgstr "コマメに手洗いしましょう"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
 msgid "tips.avoid-crowds-of-people.list.item-4"
 msgstr "人と人との間に2メートルの距離を置く"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:22
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
 msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "咳やくしゃみをした際は肘やティッシュで鼻と口を覆う"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:31
-#: src/components/screens/Tips.jsx:78
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:29
+#: src/components/screens/Tips.jsx:86
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "人混みを避ける"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:35
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:33
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
 "可能の限り旅行に出かけるのを避け、公共交通機関を使用する代わりに自宅で仕事を"
 "してください。必要のないあらゆる接触を控え、大型イベントへの参加はお控えくだ"
 "さい。 "
 
-#: src/components/screens/TipCoughingSneezing.jsx:24
+#: src/components/screens/TipCoronaWarnApp.jsx:10
+#, fuzzy
+msgid "tips.corona-warn-app.link.app-store.text"
+msgstr ""
+"手を洗うのは簡単で、細菌の拡散を防ぐ最も効果的な方法の1つです。きれいな手は、"
+"細菌の拡散を防ぐことができます。毎回次の5つの手順を実行します。"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:14
+msgid "tips.corona-warn-app.link.google-play.text"
+msgstr ""
+
+#: src/components/screens/TipCoronaWarnApp.jsx:30
+#: src/components/screens/Tips.jsx:74
+#, fuzzy
+msgid "tips.corona-warn-app.headline"
+msgstr "手を洗う"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:32
+#, fuzzy
+msgid "tips.corona-warn-app.text-1"
+msgstr ""
+"手を洗うのは簡単で、細菌の拡散を防ぐ最も効果的な方法の1つです。きれいな手は、"
+"細菌の拡散を防ぐことができます。毎回次の5つの手順を実行します。"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:32
+#, fuzzy
+msgid "tips.corona-warn-app.text-2"
+msgstr ""
+"手を洗うのは簡単で、細菌の拡散を防ぐ最も効果的な方法の1つです。きれいな手は、"
+"細菌の拡散を防ぐことができます。毎回次の5つの手順を実行します。"
+
+#: src/components/screens/TipCoughingSneezing.jsx:23
 msgid "tips.coughing-sneezing.list.item-1"
 msgstr "人と人との間に2メートルの距離を置く"
 
-#: src/components/screens/TipCoughingSneezing.jsx:25
+#: src/components/screens/TipCoughingSneezing.jsx:24
 msgid "tips.coughing-sneezing.list.item-2"
 msgstr "人から背を向ける"
 
-#: src/components/screens/TipCoughingSneezing.jsx:26
+#: src/components/screens/TipCoughingSneezing.jsx:25
 msgid "tips.coughing-sneezing.list.item-3"
 msgstr "咳やくしゃみをした際は肘やティッシュで鼻と口を覆う"
 
-#: src/components/screens/TipCoughingSneezing.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:26
 msgid "tips.coughing-sneezing.list.item-4"
 msgstr "使用済みのティッシュの正しい処分方法"
 
-#: src/components/screens/TipCoughingSneezing.jsx:28
+#: src/components/screens/TipCoughingSneezing.jsx:27
 msgid "tips.coughing-sneezing.list.item-5"
 msgstr "その後手を洗う"
 
-#: src/components/screens/TipCoughingSneezing.jsx:37
-#: src/components/screens/Tips.jsx:87
+#: src/components/screens/TipCoughingSneezing.jsx:35
+#: src/components/screens/Tips.jsx:95
 msgid "tips.coughing-sneezing.headline"
 msgstr "咳やくしゃみした時の正しい対応"
 
-#: src/components/screens/TipCoughingSneezing.jsx:41
+#: src/components/screens/TipCoughingSneezing.jsx:39
 msgid "tips.coughing-sneezing.text"
 msgstr "ウイルスの拡散を防ぐには、次のことに注意してください。"
 
-#: src/components/screens/TipMouthguard.jsx:20
+#: src/components/screens/TipDistanceAndMouthguard.jsx:21
+#: src/components/screens/Tips.jsx:78
+#, fuzzy
+msgid "tips.distance-and-mouthguard.headline"
+msgstr "マスクは必要ですか？"
+
+#: src/components/screens/TipDistanceAndMouthguard.jsx:23
+#, fuzzy
+msgid "tips.distance-and-mouthguard.text-1"
+msgstr ""
+"マスクはすべての医療機関に必要不可欠な物です。病人やCOVID-19マスクの症状のあ"
+"る人にとっては、感染予防と拡散防止の効果があります。他の場合は医師の指示や衛"
+"生規則に従うようにしてください。"
+
+#: src/components/screens/TipDistanceAndMouthguard.jsx:23
+#, fuzzy
+msgid "tips.distance-and-mouthguard.text-2"
+msgstr ""
+"マスクはすべての医療機関に必要不可欠な物です。病人やCOVID-19マスクの症状のあ"
+"る人にとっては、感染予防と拡散防止の効果があります。他の場合は医師の指示や衛"
+"生規則に従うようにしてください。"
+
+#: src/components/screens/TipMouthguard.jsx:19
 msgid "tips.mouthguard.list.item-1"
 msgstr "マスクは紙で作られています"
 
-#: src/components/screens/TipMouthguard.jsx:21
+#: src/components/screens/TipMouthguard.jsx:20
 msgid "tips.mouthguard.list.item-2"
 msgstr "マスクが顔にぴったり合わない、または漏れている"
 
-#: src/components/screens/TipMouthguard.jsx:22
+#: src/components/screens/TipMouthguard.jsx:21
 msgid "tips.mouthguard.list.item-3"
 msgstr "呼吸の息でマスクが濡れた場合"
 
-#: src/components/screens/TipMouthguard.jsx:23
+#: src/components/screens/TipMouthguard.jsx:22
 msgid "tips.mouthguard.list.item-4"
 msgstr "頻繁に取り替えない場合"
 
-#: src/components/screens/TipMouthguard.jsx:32
-#: src/components/screens/Tips.jsx:82
+#: src/components/screens/TipMouthguard.jsx:30
+#: src/components/screens/Tips.jsx:90
 msgid "tips.mouthguard.headline"
 msgstr "マスクは必要ですか？"
 
-#: src/components/screens/TipMouthguard.jsx:35
+#: src/components/screens/TipMouthguard.jsx:33
 msgid "tips.mouthguard.list.intro"
 msgstr "次の場合、手術以外でマスクを着用しても効果はありません。"
 
-#: src/components/screens/TipMouthguard.jsx:37
+#: src/components/screens/TipMouthguard.jsx:35
 msgid "tips.mouthguard.text-1"
 msgstr ""
 "マスクはすべての医療機関に必要不可欠な物です。病人やCOVID-19マスクの症状のあ"
 "る人にとっては、感染予防と拡散防止の効果があります。他の場合は医師の指示や衛"
 "生規則に従うようにしてください。"
 
-#: src/components/screens/TipMouthguard.jsx:37
+#: src/components/screens/TipMouthguard.jsx:35
 msgid "tips.mouthguard.text-2"
 msgstr ""
 "医療従事者は予防のためマスクを着用します。咳やくしゃみをした時の飛沫が広がる"
 "のを防ぎます。"
 
-#: src/components/screens/TipNotFeelingWell.jsx:16
+#: src/components/screens/TipNotFeelingWell.jsx:15
 msgid "tips.not-feeling-well.list.item-1"
 msgstr "呼吸器症状"
 
-#: src/components/screens/TipNotFeelingWell.jsx:17
+#: src/components/screens/TipNotFeelingWell.jsx:16
 msgid "tips.not-feeling-well.list.item-2"
 msgstr "熱"
 
-#: src/components/screens/TipNotFeelingWell.jsx:18
+#: src/components/screens/TipNotFeelingWell.jsx:17
 msgid "tips.not-feeling-well.list.item-3"
 msgstr "咳"
 
-#: src/components/screens/TipNotFeelingWell.jsx:19
+#: src/components/screens/TipNotFeelingWell.jsx:18
 msgid "tips.not-feeling-well.list.item-4"
 msgstr "息切れ"
 
-#: src/components/screens/TipNotFeelingWell.jsx:28
-#: src/components/screens/Tips.jsx:91
+#: src/components/screens/TipNotFeelingWell.jsx:26
+#: src/components/screens/Tips.jsx:99
 msgid "tips.not-feeling-well.headline"
 msgstr "気分が悪いですが、ウイルスに感染していますか？"
 
-#: src/components/screens/TipNotFeelingWell.jsx:31
+#: src/components/screens/TipNotFeelingWell.jsx:29
 msgid "tips.not-feeling-well.list.intro"
 msgstr "WHOによるCOVID-19の典型的な症状は次のとおりです。"
 
-#: src/components/screens/TipNotFeelingWell.jsx:33
+#: src/components/screens/TipNotFeelingWell.jsx:31
 msgid "tips.not-feeling-well.text"
 msgstr ""
 "インフルエンザ症状の患者全員がSARS-CoV-2ウイルスの保因者であるわけではありま"
 "せん。常に自分の症状に注目し、医師に連絡する必要があります。"
 
-#: src/components/screens/TipReliableSources.jsx:56
-#: src/components/screens/Tips.jsx:99
+#: src/components/screens/TipReliableSources.jsx:21
+#: src/components/screens/Tips.jsx:107
 msgid "tips.reliable-sources.headline"
 msgstr "信頼できる情報源はどこにありますか？"
 
-#: src/components/screens/TipReliableSources.jsx:57
+#: src/components/screens/TipReliableSources.jsx:24
 msgid "tips.reliable-sources.text"
 msgstr "有益なウェブサイト"
 
-#: src/components/screens/Tips.jsx:112
+#: src/components/screens/Tips.jsx:120
 msgid "tips-screen.intro.text"
 msgstr ""
 "ここでは、感染のリスクを可能な限り減らし、感染の場合の正しい行動をするのに役"
 "立つ知識を見つけます。"
 
-#: src/components/screens/TipWashingHands.jsx:16
+#: src/components/screens/TipWashingHands.jsx:15
 msgid "tips.washing-hands.list.item-1"
 msgstr ""
 "清潔な水道水（温水または冷水）で手を濡らし、蛇口をオフにして、石鹸を塗りま"
 "す。"
 
-#: src/components/screens/TipWashingHands.jsx:17
+#: src/components/screens/TipWashingHands.jsx:16
 msgid "tips.washing-hands.list.item-2"
 msgstr "石鹸で手をこすって手を泡立てます。手の甲、指の間、爪の下を泡立てます。"
 
-#: src/components/screens/TipWashingHands.jsx:18
+#: src/components/screens/TipWashingHands.jsx:17
 msgid "tips.washing-hands.list.item-3"
 msgstr "手の甲、親指、指の間、爪の下などを約30～60秒ほどこすります。"
 
-#: src/components/screens/TipWashingHands.jsx:19
+#: src/components/screens/TipWashingHands.jsx:18
 msgid "tips.washing-hands.list.item-4"
 msgstr "清潔な水道水で手をよくすすぎます。"
 
-#: src/components/screens/TipWashingHands.jsx:20
+#: src/components/screens/TipWashingHands.jsx:19
 msgid "tips.washing-hands.list.item-5"
 msgstr "清潔なタオルを使用して手を乾かすか、風乾します。"
 
-#: src/components/screens/TipWashingHands.jsx:29
-#: src/components/screens/Tips.jsx:74
+#: src/components/screens/TipWashingHands.jsx:27
+#: src/components/screens/Tips.jsx:82
 msgid "tips.washing-hands.headline"
 msgstr "手を洗う"
 
-#: src/components/screens/TipWashingHands.jsx:33
+#: src/components/screens/TipWashingHands.jsx:31
 msgid "tips.washing-hands.text"
 msgstr ""
 "手を洗うのは簡単で、細菌の拡散を防ぐ最も効果的な方法の1つです。きれいな手は、"
@@ -905,10 +960,10 @@ msgstr "合計"
 msgid "placeholder.search-input"
 msgstr "探す"
 
-#: src/components/widgets/Tip.jsx:127
+#: src/components/widgets/Tip.jsx:157
 msgid "tips.sources.headline"
 msgstr "情報源"
 
-#: src/components/widgets/Tip.jsx:138
+#: src/components/widgets/Tip.jsx:167
 msgid "tips.sources.last-updated"
 msgstr "最終更新日。"

@@ -664,35 +664,37 @@ msgstr "Günlük kullanma hatırlatıcısı"
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "Günlük hatırlat"
 
-#: src/components/screens/TipAmIInfected.jsx:16
+#: src/components/screens/TipAmIInfected.jsx:15
 msgid "tips.am-i-infected.list.item-1"
 msgstr "Evde kal"
 
-#: src/components/screens/TipAmIInfected.jsx:17
+#: src/components/screens/TipAmIInfected.jsx:16
 msgid "tips.am-i-infected.list.item-2"
 msgstr "Doktorunu ara"
 
-#: src/components/screens/TipAmIInfected.jsx:18
+#: src/components/screens/TipAmIInfected.jsx:17
 msgid "tips.am-i-infected.list.item-3"
 msgstr "Coronika günlüğünden bahset"
 
-#: src/components/screens/TipAmIInfected.jsx:23
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:27
-#: src/components/screens/TipCoughingSneezing.jsx:33
-#: src/components/screens/TipMouthguard.jsx:28
-#: src/components/screens/TipNotFeelingWell.jsx:24
-#: src/components/screens/TipReliableSources.jsx:51
-#: src/components/screens/TipWashingHands.jsx:25
-#: src/components/screens/Tips.jsx:107
+#: src/components/screens/TipAmIInfected.jsx:22
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:26
+#: src/components/screens/TipCoronaWarnApp.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:32
+#: src/components/screens/TipDistanceAndMouthguard.jsx:18
+#: src/components/screens/TipMouthguard.jsx:27
+#: src/components/screens/TipNotFeelingWell.jsx:23
+#: src/components/screens/TipReliableSources.jsx:18
+#: src/components/screens/TipWashingHands.jsx:24
+#: src/components/screens/Tips.jsx:115
 msgid "tips-screen.header.headline"
 msgstr "Hijyen ipuçları"
 
-#: src/components/screens/TipAmIInfected.jsx:27
-#: src/components/screens/Tips.jsx:95
+#: src/components/screens/TipAmIInfected.jsx:25
+#: src/components/screens/Tips.jsx:103
 msgid "tips.am-i-infected.headline"
 msgstr "Korkarım ki korona virüsü var, ne yapabilirim?"
 
-#: src/components/screens/TipAmIInfected.jsx:31
+#: src/components/screens/TipAmIInfected.jsx:29
 msgid "tips.am-i-infected.text"
 msgstr ""
 "Enfeksiyon kapmış olabileceğinden endişe ediyorsan, diğer insanlara "
@@ -702,94 +704,152 @@ msgstr ""
 "Coronika günlüğün hakkında bilgi ver. Bu durumda günlüğün dışa aktarabilir "
 "ve sorumlu makamlara gönderebilirsin."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:17
 msgid "tips.avoid-crowds-of-people.list.item-1"
 msgstr "önemli olmayan büyük kamu toplantılarından veya etkinliklere katılma."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
 msgid "tips.avoid-crowds-of-people.list.item-2"
 msgstr "Kısa mesafelerde toplu taşıma yerine yürümeyi tercih et."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
 msgid "tips.avoid-crowds-of-people.list.item-3"
 msgstr "ellerini düzenli ve iyice yıka"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
 msgid "tips.avoid-crowds-of-people.list.item-4"
 msgstr "seninle diğer insanlar arasında yaklaşık 2 metre mesafe bırak."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:22
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
 msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "öksürüklerini ve hapşırıklarını dirseğin veya mendilinle ört."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:31
-#: src/components/screens/Tips.jsx:78
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:29
+#: src/components/screens/Tips.jsx:86
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "İnsan kalabalığından uzak dur."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:35
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:33
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
 "Mümkünse, gezilere çıkmaktan, toplu taşıma araçlarını kullanmaktan kaçın ve "
 "evden çalışmayı seç. Aksi takdirde virüsün bulaşması kacınılmaz. Sadece acil "
 "islerini halledip, geri kalanını erteleye bilirsin."
 
-#: src/components/screens/TipCoughingSneezing.jsx:24
+#: src/components/screens/TipCoronaWarnApp.jsx:10
+#, fuzzy
+msgid "tips.corona-warn-app.link.app-store.text"
+msgstr ""
+"Ellerini yıkamak kolaydır ve mikropların yayılmasını önlemenin en etkili "
+"yollarından biridir. Temiz eller mikropların yayılmasını engelleyebilir. Her "
+"seferinde aşağıdaki beş adımı uygula:"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:14
+msgid "tips.corona-warn-app.link.google-play.text"
+msgstr ""
+
+#: src/components/screens/TipCoronaWarnApp.jsx:30
+#: src/components/screens/Tips.jsx:74
+#, fuzzy
+msgid "tips.corona-warn-app.headline"
+msgstr "Ellerini doğru yıka"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:32
+#, fuzzy
+msgid "tips.corona-warn-app.text-1"
+msgstr ""
+"Ellerini yıkamak kolaydır ve mikropların yayılmasını önlemenin en etkili "
+"yollarından biridir. Temiz eller mikropların yayılmasını engelleyebilir. Her "
+"seferinde aşağıdaki beş adımı uygula:"
+
+#: src/components/screens/TipCoronaWarnApp.jsx:32
+#, fuzzy
+msgid "tips.corona-warn-app.text-2"
+msgstr ""
+"Ellerini yıkamak kolaydır ve mikropların yayılmasını önlemenin en etkili "
+"yollarından biridir. Temiz eller mikropların yayılmasını engelleyebilir. Her "
+"seferinde aşağıdaki beş adımı uygula:"
+
+#: src/components/screens/TipCoughingSneezing.jsx:23
 msgid "tips.coughing-sneezing.list.item-1"
 msgstr "seninle ve diğer insanlar arasında yaklaşık 2 metre mesafe bırak"
 
-#: src/components/screens/TipCoughingSneezing.jsx:25
+#: src/components/screens/TipCoughingSneezing.jsx:24
 msgid "tips.coughing-sneezing.list.item-2"
 msgstr "Diğer insanlardan kendini çevir"
 
-#: src/components/screens/TipCoughingSneezing.jsx:26
+#: src/components/screens/TipCoughingSneezing.jsx:25
 msgid "tips.coughing-sneezing.list.item-3"
 msgstr "Dirsek içine veya mendiline öksür ve hapşır"
 
-#: src/components/screens/TipCoughingSneezing.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:26
 msgid "tips.coughing-sneezing.list.item-4"
 msgstr "Mendilini çöpe at ve etrafa saçma"
 
-#: src/components/screens/TipCoughingSneezing.jsx:28
+#: src/components/screens/TipCoughingSneezing.jsx:27
 msgid "tips.coughing-sneezing.list.item-5"
 msgstr "sonra ellerini yıka"
 
-#: src/components/screens/TipCoughingSneezing.jsx:37
-#: src/components/screens/Tips.jsx:87
+#: src/components/screens/TipCoughingSneezing.jsx:35
+#: src/components/screens/Tips.jsx:95
 msgid "tips.coughing-sneezing.headline"
 msgstr "\"doğru\" öksürme ve hapşırma"
 
-#: src/components/screens/TipCoughingSneezing.jsx:41
+#: src/components/screens/TipCoughingSneezing.jsx:39
 msgid "tips.coughing-sneezing.text"
 msgstr "Virüslerin yayılmasını önlemek için lütfen şunlara dikkat et:"
 
-#: src/components/screens/TipMouthguard.jsx:20
+#: src/components/screens/TipDistanceAndMouthguard.jsx:21
+#: src/components/screens/Tips.jsx:78
+#, fuzzy
+msgid "tips.distance-and-mouthguard.headline"
+msgstr "ağız maskesi, evet mi hayır mı?"
+
+#: src/components/screens/TipDistanceAndMouthguard.jsx:23
+#, fuzzy
+msgid "tips.distance-and-mouthguard.text-1"
+msgstr ""
+"Maskeler tüm sağlık sektörleri için gereklidir. Hasta insanların maskeleri "
+"takmalari mevcuttur ki başkalarına hastalik bulaşmasın. Sağlık hizmeti "
+"sağlayıcınız tavsi etmiyorsa maske takmak zorunda değilsin. Hijyenik "
+"kurallarına uy."
+
+#: src/components/screens/TipDistanceAndMouthguard.jsx:23
+#, fuzzy
+msgid "tips.distance-and-mouthguard.text-2"
+msgstr ""
+"Maskeler tüm sağlık sektörleri için gereklidir. Hasta insanların maskeleri "
+"takmalari mevcuttur ki başkalarına hastalik bulaşmasın. Sağlık hizmeti "
+"sağlayıcınız tavsi etmiyorsa maske takmak zorunda değilsin. Hijyenik "
+"kurallarına uy."
+
+#: src/components/screens/TipMouthguard.jsx:19
 msgid "tips.mouthguard.list.item-1"
 msgstr "maske kağıtdansa"
 
-#: src/components/screens/TipMouthguard.jsx:21
+#: src/components/screens/TipMouthguard.jsx:20
 msgid "tips.mouthguard.list.item-2"
 msgstr "maske yüze sıkıca oturmuyor veya sızdırıyorsa"
 
-#: src/components/screens/TipMouthguard.jsx:22
+#: src/components/screens/TipMouthguard.jsx:21
 msgid "tips.mouthguard.list.item-3"
 msgstr "nefes alarak ıslanır"
 
-#: src/components/screens/TipMouthguard.jsx:23
+#: src/components/screens/TipMouthguard.jsx:22
 msgid "tips.mouthguard.list.item-4"
 msgstr "günlük olarak değişmezse"
 
-#: src/components/screens/TipMouthguard.jsx:32
-#: src/components/screens/Tips.jsx:82
+#: src/components/screens/TipMouthguard.jsx:30
+#: src/components/screens/Tips.jsx:90
 msgid "tips.mouthguard.headline"
 msgstr "ağız maskesi, evet mi hayır mı?"
 
-#: src/components/screens/TipMouthguard.jsx:35
+#: src/components/screens/TipMouthguard.jsx:33
 msgid "tips.mouthguard.list.intro"
 msgstr ""
 "Ameliyat dışında maske takmanın aşağıdaki durumlarda bir etkisi yoktur:"
 
-#: src/components/screens/TipMouthguard.jsx:37
+#: src/components/screens/TipMouthguard.jsx:35
 msgid "tips.mouthguard.text-1"
 msgstr ""
 "Maskeler tüm sağlık sektörleri için gereklidir. Hasta insanların maskeleri "
@@ -797,91 +857,91 @@ msgstr ""
 "sağlayıcınız tavsi etmiyorsa maske takmak zorunda değilsin. Hijyenik "
 "kurallarına uy."
 
-#: src/components/screens/TipMouthguard.jsx:37
+#: src/components/screens/TipMouthguard.jsx:35
 msgid "tips.mouthguard.text-2"
 msgstr ""
 "Doktorlar maskeyi küçük damlacıkların yayılmasını engellemek için "
 "kullanırlar."
 
-#: src/components/screens/TipNotFeelingWell.jsx:16
+#: src/components/screens/TipNotFeelingWell.jsx:15
 msgid "tips.not-feeling-well.list.item-1"
 msgstr "solunum semptomları"
 
-#: src/components/screens/TipNotFeelingWell.jsx:17
+#: src/components/screens/TipNotFeelingWell.jsx:16
 msgid "tips.not-feeling-well.list.item-2"
 msgstr "ateş"
 
-#: src/components/screens/TipNotFeelingWell.jsx:18
+#: src/components/screens/TipNotFeelingWell.jsx:17
 msgid "tips.not-feeling-well.list.item-3"
 msgstr "öksürük"
 
-#: src/components/screens/TipNotFeelingWell.jsx:19
+#: src/components/screens/TipNotFeelingWell.jsx:18
 msgid "tips.not-feeling-well.list.item-4"
 msgstr "nefes darlığı"
 
-#: src/components/screens/TipNotFeelingWell.jsx:28
-#: src/components/screens/Tips.jsx:91
+#: src/components/screens/TipNotFeelingWell.jsx:26
+#: src/components/screens/Tips.jsx:99
 msgid "tips.not-feeling-well.headline"
 msgstr "Kendimi iyi hissetmiyorum, virüs var mı?"
 
-#: src/components/screens/TipNotFeelingWell.jsx:31
+#: src/components/screens/TipNotFeelingWell.jsx:29
 msgid "tips.not-feeling-well.list.intro"
 msgstr "WHO'ya göre tipik COVID-19 semptomları şunlardır:"
 
-#: src/components/screens/TipNotFeelingWell.jsx:33
+#: src/components/screens/TipNotFeelingWell.jsx:31
 msgid "tips.not-feeling-well.text"
 msgstr ""
 "Grip benzeri semptomları olan her hasta aynı zamanda SARS-CoV-2 virüsünün "
 "taşıyıcısı değildir. Kendini belirtilerin hakkında bilgilendirmeli ve "
 "doktorunu aramalısın."
 
-#: src/components/screens/TipReliableSources.jsx:56
-#: src/components/screens/Tips.jsx:99
+#: src/components/screens/TipReliableSources.jsx:21
+#: src/components/screens/Tips.jsx:107
 msgid "tips.reliable-sources.headline"
 msgstr "Güvenilir kaynakları nerede bulabilirim?"
 
-#: src/components/screens/TipReliableSources.jsx:57
+#: src/components/screens/TipReliableSources.jsx:24
 msgid "tips.reliable-sources.text"
 msgstr "Bilgilendirici web siteleri"
 
-#: src/components/screens/Tips.jsx:112
+#: src/components/screens/Tips.jsx:120
 msgid "tips-screen.intro.text"
 msgstr ""
 "Burada enfeksiyon riskini mümkün olduğunca azaltmana ve enfeksiyon durumunda "
 "doğru şeyi yapmana yardımcı olan bilgileri bulacaksın."
 
-#: src/components/screens/TipWashingHands.jsx:16
+#: src/components/screens/TipWashingHands.jsx:15
 msgid "tips.washing-hands.list.item-1"
 msgstr ""
 "Ellerini temiz akan suyla (ılık veya soğuk) ıslat, musluğu kapat ve sabun "
 "uygula."
 
-#: src/components/screens/TipWashingHands.jsx:17
+#: src/components/screens/TipWashingHands.jsx:16
 msgid "tips.washing-hands.list.item-2"
 msgstr ""
 "Ellerini sabunla birlikte ovarak yıka. Ellerinin arkasını, parmaklarının "
 "arasını ve tırnaklarının altını köpürt."
 
-#: src/components/screens/TipWashingHands.jsx:18
+#: src/components/screens/TipWashingHands.jsx:17
 msgid "tips.washing-hands.list.item-3"
 msgstr ""
 "Ellerini, parmak ucunu, parmaklarının arasını ve tırnaklarını yaklaşık 30-60 "
 "saniye temizle."
 
-#: src/components/screens/TipWashingHands.jsx:19
+#: src/components/screens/TipWashingHands.jsx:18
 msgid "tips.washing-hands.list.item-4"
 msgstr "Ellerini temiz akan su altında iyice durula."
 
-#: src/components/screens/TipWashingHands.jsx:20
+#: src/components/screens/TipWashingHands.jsx:19
 msgid "tips.washing-hands.list.item-5"
 msgstr "Ellerini temiz bir havluyla kurula."
 
-#: src/components/screens/TipWashingHands.jsx:29
-#: src/components/screens/Tips.jsx:74
+#: src/components/screens/TipWashingHands.jsx:27
+#: src/components/screens/Tips.jsx:82
 msgid "tips.washing-hands.headline"
 msgstr "Ellerini doğru yıka"
 
-#: src/components/screens/TipWashingHands.jsx:33
+#: src/components/screens/TipWashingHands.jsx:31
 msgid "tips.washing-hands.text"
 msgstr ""
 "Ellerini yıkamak kolaydır ve mikropların yayılmasını önlemenin en etkili "
@@ -918,10 +978,10 @@ msgstr "Toplam"
 msgid "placeholder.search-input"
 msgstr "Arama"
 
-#: src/components/widgets/Tip.jsx:127
+#: src/components/widgets/Tip.jsx:157
 msgid "tips.sources.headline"
 msgstr "Kaynaklar"
 
-#: src/components/widgets/Tip.jsx:138
+#: src/components/widgets/Tip.jsx:167
 msgid "tips.sources.last-updated"
 msgstr "Son güncelleme:"

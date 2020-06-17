@@ -12,7 +12,9 @@ import Splash from './Splash/logic';
 import Tips from './Tips';
 import TipAmIInfected from './TipAmIInfected';
 import TipAvoidCrowdsOfPeople from './TipAvoidCrowdsOfPeople';
+import TipCoronaWarnApp from './TipCoronaWarnApp';
 import TipCoughingSneezing from './TipCoughingSneezing';
+import TipDistanceAndMouthguard from './TipDistanceAndMouthguard';
 import TipMouthguard from './TipMouthguard';
 import TipNotFeelingWell from './TipNotFeelingWell';
 import TipReliableSources from './TipReliableSources';
@@ -34,7 +36,9 @@ export default {
   Tips,
   TipAmIInfected,
   TipAvoidCrowdsOfPeople,
+  TipCoronaWarnApp,
   TipCoughingSneezing,
+  TipDistanceAndMouthguard,
   TipMouthguard,
   TipNotFeelingWell,
   TipReliableSources,

@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import { ScrollView } from 'react-native';
 import { COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import { HeaderBack } from '../widgets/Header';
@@ -23,16 +22,14 @@ const TipNotFeelingWell = ({ navigation, __ }) => {
     <Layout backgroundColor={COLOR_SECONDARY}>
       <HeaderBack headline={__('tips-screen.header.headline')} navigation={navigation} />
 
-      <ScrollView>
-        <Tip
-          headline={__('tips.not-feeling-well.headline')}
-          lastUpdated={1586174400000}
-          steps={steps}
-          stepsIntroText={__('tips.not-feeling-well.list.intro')}
-          sources={sources}
-          texts={[__('tips.not-feeling-well.text')]}
-        />
-      </ScrollView>
+      <Tip
+        headline={__('tips.not-feeling-well.headline')}
+        lastUpdated={1586174400000}
+        steps={steps}
+        stepsIntroText={__('tips.not-feeling-well.list.intro')}
+        sources={sources}
+        texts={[__('tips.not-feeling-well.text')]}
+      />
     </Layout>
   );
 };

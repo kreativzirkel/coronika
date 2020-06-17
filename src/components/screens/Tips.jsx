@@ -71,6 +71,14 @@ const Tips = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, 
 
   const tipsList = [
     {
+      headline: __('tips.corona-warn-app.headline'),
+      routeName: 'TipCoronaWarnApp',
+    },
+    {
+      headline: __('tips.distance-and-mouthguard.headline'),
+      routeName: 'TipDistanceAndMouthguard',
+    },
+    {
       headline: __('tips.washing-hands.headline'),
       routeName: 'TipWashingHands',
     },
