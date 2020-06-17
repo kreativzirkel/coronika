@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.1
+
+- Added new tips
+- Bug fixes and improvements
+
 ## 1.4.0
 
 - Added PDF export
