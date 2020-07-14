@@ -34,8 +34,8 @@
     "lottie-react-native": "3.4.0",
     "moment": "2.27.0",
     "pdf-lib": "1.9.0",
-    "react": "16.11.0",
-    "react-native": "0.62.2",
+    "react": "16.13.1",
+    "react-native": "0.63.0",
     "react-native-app-intro-slider": "4.0.4",
     "react-native-contacts": "5.2.4",
     "react-native-fs": "2.16.6",
@@ -81,7 +81,7 @@
     "prettier": "^2.0.5",
     "react-native-bundle-visualizer": "2.2.1",
     "react-native-version": "4.0.0",
-    "react-test-renderer": "16.11.0",
+    "react-test-renderer": "16.13.1",
     "recursive-sync-readdir": "1.1.0"
   },
   "jest": {
