@@ -191,7 +191,7 @@
         "licenseUrl": "https://github.com/react-native-community/react-native-svg/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native@0.62.2": {
+    "react-native@0.63.0": {
         "licenses": "MIT",
         "repository": "https://github.com/facebook/react-native",
         "licenseUrl": "https://github.com/facebook/react-native/raw/master/LICENSE",
@@ -203,7 +203,7 @@
         "licenseUrl": "https://github.com/reduxjs/react-redux/raw/master/LICENSE.md",
         "parents": "coronika"
     },
-    "react@16.11.0": {
+    "react@16.13.1": {
         "licenses": "MIT",
         "repository": "https://github.com/facebook/react",
         "licenseUrl": "https://github.com/facebook/react/raw/master/LICENSE",

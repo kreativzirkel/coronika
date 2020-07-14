@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.3
+
+- Bug fixes and improvements
+
 ## 1.4.2
 
 - App can be moved to SD Card on Android devices
