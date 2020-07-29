@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.4
+
+- Optimized app icon on Android devices
+- Bug fixes and improvements
+
 ## 1.4.3
 
 - Bug fixes and improvements

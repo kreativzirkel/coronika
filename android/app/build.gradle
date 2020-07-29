@@ -149,8 +149,8 @@ android {
         multiDexEnabled true
         resConfigs "ar", "de", "el", "en", "es", "fi", "fr", "it", "ja", "nl", "pl", "ro", "ru", "si", "tr", "uk", "zh"
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 33
-        versionName "1.4.3"
+        versionCode 34
+        versionName "1.4.4"
     }
     splits {
         abi {
