@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
 
 const Splash = () => {
   return (
-    <Layout backgroundColor={COLOR_PRIMARY} hideHelperViews statusBarHidden>
+    <Layout backgroundColor={COLOR_PRIMARY} hideHelperViews statusBarStyle={'light-content'}>
       <View style={styles.view}>
         <View>
           <LottieView

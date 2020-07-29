@@ -130,7 +130,7 @@ const Welcome = ({ activateNotifications, finish, navigation, vw, getFontFamilyB
   };
 
   return (
-    <Layout backgroundColor={'#ffffff'} statusBarHidden>
+    <Layout backgroundColor={'#ffffff'}>
       <View style={styles.view}>
         <AppIntroSlider
           data={slides}

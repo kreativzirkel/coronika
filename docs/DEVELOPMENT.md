@@ -11,9 +11,11 @@ Run `react-native link` to add the fonts to the app resources.
 ## App Icons
 Automatic generation using react-native-make.
 
+### iOS
 `react-native set-icon --platform ios --path ./src/assets/images/app_icon.png`
 
-`react-native set-icon --platform android --path ./src/assets/images/app_icon_android.png`
+### Android
+Use Android Studio to create app icon. `Right click on app -> New -> Image Asset`
 
 ## Splash Screen
 Automatic generation using react-native-make.

@@ -19,9 +19,15 @@ const styles = StyleSheet.create({
   },
 });
 
-const Layout = ({ children, backgroundColor = COLOR_SECONDARY, hideHelperViews = false, statusBarHidden = false }) => (
+const Layout = ({
+  children,
+  backgroundColor = COLOR_SECONDARY,
+  hideHelperViews = false,
+  statusBarHidden = false,
+  statusBarStyle = 'dark-content',
+}) => (
   <SafeAreaView style={{ ...styles.safeAreaView, backgroundColor }}>
-    <StatusBar animated backgroundColor={backgroundColor} barStyle={'dark-content'} hidden={statusBarHidden} />
+    <StatusBar animated={false} backgroundColor={backgroundColor} barStyle={statusBarStyle} hidden={statusBarHidden} />
 
     {!hideHelperViews && <View style={styles.helperView} />}
 
