@@ -8,6 +8,10 @@ const withViewportUnits = (WrappedComponent) => {
   class WithViewportUnits extends React.Component {
     constructor(props) {
       super(props);
+
+      this.state = {
+        orientation: screenWidth < screenHeight ? 'portrait' : 'landscape',
+      };
     }
 
     componentDidMount() {
@@ -37,11 +41,13 @@ const withViewportUnits = (WrappedComponent) => {
 
     render() {
       const { forwardedRef, ...props } = this.props;
+      const { orientation } = this.state;
 
       return (
         <WrappedComponent
           /* eslint-disable-next-line react/jsx-props-no-spreading */
           {...props}
+          orientation={orientation}
           ref={forwardedRef}
           vh={(value) => this.viewportHeight(value)}
           vw={(value) => this.viewportWidth(value)}

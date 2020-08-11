@@ -5,7 +5,7 @@ import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native
 import DayOverview from '../../widgets/DayOverview';
 import Layout from '../../widgets/Layout';
 import Header from '../../widgets/Header';
-import { ALTERNATIVE_FONT_LANGUAGES, COLOR_PRIMARY, COLOR_SECONDARY, DAYS_OVERVIEW } from '../../../constants';
+import { ALTERNATIVE_FONT_LANGUAGES, COLOR_PRIMARY, COLOR_SECONDARY, DAYS_OVERVIEW_MAX } from '../../../constants';
 
 const Dashboard = ({
   days,
@@ -129,9 +129,9 @@ const Dashboard = ({
 
   const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
 
-  const totalTimespan = moment(today).subtract(DAYS_OVERVIEW, 'days');
+  const totalTimespan = moment(today).subtract(DAYS_OVERVIEW_MAX, 'days');
 
-  if (days.length > 0 && days.length < 30) {
+  if (days.length > 0 && days.length < DAYS_OVERVIEW_MAX) {
     days = [...days, { loadMore: true, timestamp: 'load-more' }];
   }
 

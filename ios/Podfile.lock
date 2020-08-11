@@ -246,7 +246,7 @@ PODS:
     - React
   - react-native-get-random-values (1.4.0):
     - React
-  - react-native-safe-area-context (3.1.1):
+  - react-native-safe-area-context (3.1.4):
     - React
   - react-native-splash-screen (3.2.0):
     - React
@@ -318,7 +318,7 @@ PODS:
     - React
   - RNCPushNotificationIOS (1.4.0):
     - React
-  - RNDateTimePicker (2.6.1):
+  - RNDateTimePicker (3.0.0):
     - React
   - RNFS (2.16.6):
     - React
@@ -326,9 +326,9 @@ PODS:
     - React
   - RNLocalize (1.4.1):
     - React
-  - RNReanimated (1.10.1):
+  - RNReanimated (1.11.0):
     - React
-  - RNScreens (2.9.0):
+  - RNScreens (2.10.1):
     - React
   - RNShare (3.7.0):
     - React
@@ -545,7 +545,7 @@ SPEC CHECKSUMS:
   React-jsinspector: b14e62ebe7a66e9231e9581279909f2fc3db6606
   react-native-contacts: 0ed0dc4d5154c9181657837913bdfac6bba3469b
   react-native-get-random-values: 2b7500cdb68066aba87cdccd97067c29e16ffe95
-  react-native-safe-area-context: 4c3249e4840225c61fcd215b136af0a737bccb79
+  react-native-safe-area-context: 0ed9288ed4409beabb0817b54efc047286fc84da
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-unicons: ad4249b43fc95cc1804c8d1ff79bfc49f34f3df4
   React-RCTActionSheet: 910163b6b09685a35c4ebbc52b66d1bfbbe39fc5
@@ -561,12 +561,12 @@ SPEC CHECKSUMS:
   RNCAsyncStorage: db711e29e5e0500d9bd21aa0c2e397efa45302b1
   RNCMaskedView: f5c7d14d6847b7b44853f7acb6284c1da30a3459
   RNCPushNotificationIOS: f4a1a20fe1d70bbb1fab6abf86ffec2996012b12
-  RNDateTimePicker: f13c2d8c4cd1ea6d1a1f9ea7ddcdd24e82060770
+  RNDateTimePicker: 4eaf4032b374e818a19e183f13f2c833fbea3815
   RNFS: 2bd9eb49dc82fa9676382f0585b992c424cd59df
   RNGestureHandler: b6b359bb800ae399a9c8b27032bdbf7c18f08a08
   RNLocalize: c388679af021ddd6069c215f7fdd2acf4e77ede5
-  RNReanimated: c2bb7438b57a3d987bb2e4e6e4bca94787e30b02
-  RNScreens: c526239bbe0e957b988dacc8d75ac94ec9cb19da
+  RNReanimated: f05ea1c5ee07891aaefee662f073f4944c87ac4d
+  RNScreens: b748efec66e095134c7166ca333b628cd7e6f3e2
   RNShare: a1d5064df7a0ebe778d001869b3f0a124bf0a491
   RNSVG: 8ba35cbeb385a52fd960fd28db9d7d18b4c2974f
   Yoga: 7740b94929bbacbddda59bf115b5317e9a161598

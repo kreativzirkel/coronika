@@ -1,7 +1,7 @@
 import UilFile from '@iconscout/react-native-unicons/icons/uil-file';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { COLOR_PRIMARY, COLOR_SECONDARY, DAYS_OVERVIEW } from '../../../constants';
+import { COLOR_PRIMARY, COLOR_SECONDARY, DAYS_OVERVIEW_MAX } from '../../../constants';
 import EntriesTabsView from '../../partials/EntriesTabsView';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
@@ -86,7 +86,7 @@ const Overview = ({ locations, persons, total, navigation, vw, getFontFamilyBold
 
   const exportButtonDisabled = total.locations === 0 && total.persons === 0;
   const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
-  const totalTimespan = moment(today).subtract(DAYS_OVERVIEW, 'days');
+  const totalTimespan = moment(today).subtract(DAYS_OVERVIEW_MAX, 'days');
 
   return (
     <Layout backgroundColor={COLOR_SECONDARY}>
