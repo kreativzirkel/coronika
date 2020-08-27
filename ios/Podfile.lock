@@ -242,11 +242,11 @@ PODS:
     - React-cxxreact (= 0.63.2)
     - React-jsi (= 0.63.2)
   - React-jsinspector (0.63.2)
-  - react-native-contacts (5.2.5):
+  - react-native-contacts (5.2.7):
     - React
   - react-native-get-random-values (1.4.0):
     - React
-  - react-native-safe-area-context (3.1.4):
+  - react-native-safe-area-context (3.1.7):
     - React
   - react-native-splash-screen (3.2.0):
     - React
@@ -312,13 +312,13 @@ PODS:
     - React-Core (= 0.63.2)
     - React-cxxreact (= 0.63.2)
     - React-jsi (= 0.63.2)
-  - RNCAsyncStorage (1.11.0):
+  - RNCAsyncStorage (1.12.0):
     - React
   - RNCMaskedView (0.1.10):
     - React
-  - RNCPushNotificationIOS (1.4.0):
+  - RNCPushNotificationIOS (1.4.1):
     - React
-  - RNDateTimePicker (3.0.0):
+  - RNDateTimePicker (3.0.1):
     - React
   - RNFS (2.16.6):
     - React
@@ -326,7 +326,7 @@ PODS:
     - React
   - RNLocalize (1.4.1):
     - React
-  - RNReanimated (1.11.0):
+  - RNReanimated (1.13.0):
     - React
   - RNScreens (2.10.1):
     - React
@@ -543,9 +543,9 @@ SPEC CHECKSUMS:
   React-jsi: 54245e1d5f4b690dec614a73a3795964eeef13a8
   React-jsiexecutor: 8ca588cc921e70590820ce72b8789b02c67cce38
   React-jsinspector: b14e62ebe7a66e9231e9581279909f2fc3db6606
-  react-native-contacts: 0ed0dc4d5154c9181657837913bdfac6bba3469b
+  react-native-contacts: 23a5a68151740bae84d5d379545bf5c3579b0d94
   react-native-get-random-values: 2b7500cdb68066aba87cdccd97067c29e16ffe95
-  react-native-safe-area-context: 0ed9288ed4409beabb0817b54efc047286fc84da
+  react-native-safe-area-context: fcece23844742b6f7f0627c3715b806a7deff946
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-unicons: ad4249b43fc95cc1804c8d1ff79bfc49f34f3df4
   React-RCTActionSheet: 910163b6b09685a35c4ebbc52b66d1bfbbe39fc5
@@ -558,14 +558,14 @@ SPEC CHECKSUMS:
   React-RCTText: 1b6773e776e4b33f90468c20fe3b16ca3e224bb8
   React-RCTVibration: 4d2e726957f4087449739b595f107c0d4b6c2d2d
   ReactCommon: a0a1edbebcac5e91338371b72ffc66aa822792ce
-  RNCAsyncStorage: db711e29e5e0500d9bd21aa0c2e397efa45302b1
+  RNCAsyncStorage: 3eea36d9460c5159b592f9ecbe5a77f8aca98006
   RNCMaskedView: f5c7d14d6847b7b44853f7acb6284c1da30a3459
-  RNCPushNotificationIOS: f4a1a20fe1d70bbb1fab6abf86ffec2996012b12
-  RNDateTimePicker: 4eaf4032b374e818a19e183f13f2c833fbea3815
+  RNCPushNotificationIOS: c625dde093c3c8351d4babd34285d772f551dc36
+  RNDateTimePicker: 843eca1c684369861c7dccccb6632f3c104c009c
   RNFS: 2bd9eb49dc82fa9676382f0585b992c424cd59df
   RNGestureHandler: b6b359bb800ae399a9c8b27032bdbf7c18f08a08
   RNLocalize: c388679af021ddd6069c215f7fdd2acf4e77ede5
-  RNReanimated: f05ea1c5ee07891aaefee662f073f4944c87ac4d
+  RNReanimated: 89f5e0a04d1dd52fbf27e7e7030d8f80a646a3fc
   RNScreens: b748efec66e095134c7166ca333b628cd7e6f3e2
   RNShare: a1d5064df7a0ebe778d001869b3f0a124bf0a491
   RNSVG: 8ba35cbeb385a52fd960fd28db9d7d18b4c2974f
