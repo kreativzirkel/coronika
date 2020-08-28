@@ -14,13 +14,13 @@ const loadDays = () => async (dispatch, getState) => {
     dashboard: { days },
   } = getState();
 
-  const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
+  const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0).valueOf();
 
   let differenceToLastDay = 0;
 
   if (Object.keys(days).length > 0) {
     const lastDay = Math.min(...Object.keys(days).map((timestamp) => parseInt(timestamp, 10)));
-    differenceToLastDay = moment(lastDay).diff(today);
+    differenceToLastDay = moment(today).diff(moment(lastDay), 'days');
   }
 
   const daysInPast = Math.max(differenceToLastDay, DAYS_OVERVIEW_MIN);
