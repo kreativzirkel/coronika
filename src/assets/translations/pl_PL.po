@@ -33,116 +33,120 @@ msgstr "Podziel się"
 msgid "navigation.tips.label"
 msgstr "Porady"
 
-#: src/components/partials/EntriesTabsView.jsx:628
-#: src/components/screens/Export/createPdfFile.js:277
+#: src/components/partials/EntriesTabsView.jsx:641
+#: src/components/screens/Export/createPdfFile.js:267
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "osoby"
 
-#: src/components/partials/EntriesTabsView.jsx:638
-#: src/components/screens/Export/createPdfFile.js:358
+#: src/components/partials/EntriesTabsView.jsx:651
+#: src/components/screens/Export/createPdfFile.js:348
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "lokalizacje"
 
-#: src/components/partials/EntriesTabsView.jsx:650
+#: src/components/partials/EntriesTabsView.jsx:663
 msgid "entries.persons.list.new"
 msgstr "Nowa osoba"
 
-#: src/components/partials/EntriesTabsView.jsx:671
-#: src/components/partials/EntriesTabsView.jsx:721
+#: src/components/partials/EntriesTabsView.jsx:684
+#: src/components/partials/EntriesTabsView.jsx:734
 msgid "entries.search.list.empty"
 msgstr "Nic nie znaleziono na twoich poszukiwaniach."
 
-#: src/components/partials/EntriesTabsView.jsx:678
+#: src/components/partials/EntriesTabsView.jsx:691
 msgid "entries.persons.list.empty"
 msgstr ""
 "Jeszcze nie nakładeś osobe. Aby zacząć od razu, możesz importować osoby z "
 "książki telefonicznej."
 
-#: src/components/partials/EntriesTabsView.jsx:682
+#: src/components/partials/EntriesTabsView.jsx:695
 msgid "entries.persons.list.import.button"
 msgstr "Importuj teraz"
 
-#: src/components/partials/EntriesTabsView.jsx:701
+#: src/components/partials/EntriesTabsView.jsx:714
 msgid "entries.locations.list.new"
 msgstr "Nowa lokalizacja"
 
-#: src/components/partials/EntriesTabsView.jsx:724
+#: src/components/partials/EntriesTabsView.jsx:737
 msgid "entries.locations.list.empty"
 msgstr ""
 "Nie stworzyłeś jeszcze lokalizacji. Zacznij teraz i stwórz swoją pierwszą "
 "lokalizację."
 
-#: src/components/partials/EntriesTabsView.jsx:740
+#: src/components/partials/EntriesTabsView.jsx:753
 msgid "entries.selection.add"
 msgstr "Dodaj wybór"
 
-#: src/components/partials/EntriesTabsView.jsx:752
+#: src/components/partials/EntriesTabsView.jsx:765
 msgid "entries.modals.update-person.headline"
 msgstr "osoba opracować"
 
-#: src/components/partials/EntriesTabsView.jsx:753
+#: src/components/partials/EntriesTabsView.jsx:766
 msgid "entries.modals.new-person.headline"
 msgstr "Nowa osoba"
 
-#: src/components/partials/EntriesTabsView.jsx:764
+#: src/components/partials/EntriesTabsView.jsx:777
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Nazwa"
 
-#: src/components/partials/EntriesTabsView.jsx:776
+#: src/components/partials/EntriesTabsView.jsx:789
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Telefon"
 
-#: src/components/partials/EntriesTabsView.jsx:789
+#: src/components/partials/EntriesTabsView.jsx:802
 msgid "entries.modals.update-person.button"
 msgstr "Zapisz"
 
-#: src/components/partials/EntriesTabsView.jsx:790
+#: src/components/partials/EntriesTabsView.jsx:803
 msgid "entries.modals.new-person.button"
 msgstr "Dodaj"
 
-#: src/components/partials/EntriesTabsView.jsx:802
+#: src/components/partials/EntriesTabsView.jsx:815
 msgid "entries.modals.update-location.headline"
 msgstr "Miejsce edycji"
 
-#: src/components/partials/EntriesTabsView.jsx:803
+#: src/components/partials/EntriesTabsView.jsx:816
 msgid "entries.modals.new-location.headline"
 msgstr "Nowa lokalizacja"
 
-#: src/components/partials/EntriesTabsView.jsx:814
+#: src/components/partials/EntriesTabsView.jsx:827
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Tytuł"
 
-#: src/components/partials/EntriesTabsView.jsx:825
+#: src/components/partials/EntriesTabsView.jsx:838
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Opis"
 
-#: src/components/partials/EntriesTabsView.jsx:838
+#: src/components/partials/EntriesTabsView.jsx:850
+msgid "entries.modals.new-location.placeholder.phone-number"
+msgstr "Telefon"
+
+#: src/components/partials/EntriesTabsView.jsx:863
 msgid "entries.modals.update-location.button"
 msgstr "Zapisz"
 
-#: src/components/partials/EntriesTabsView.jsx:839
+#: src/components/partials/EntriesTabsView.jsx:864
 msgid "entries.modals.new-location.button"
 msgstr "Dodaj"
 
-#: src/components/partials/EntriesTabsView.jsx:849
+#: src/components/partials/EntriesTabsView.jsx:874
 msgid "entries.modals.select-location.headline"
 msgstr "Wybierz lokalizację"
 
-#: src/components/partials/EntriesTabsView.jsx:868
+#: src/components/partials/EntriesTabsView.jsx:893
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Opis"
 
-#: src/components/partials/EntriesTabsView.jsx:883
+#: src/components/partials/EntriesTabsView.jsx:908
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: src/components/partials/EntriesTabsView.jsx:884
+#: src/components/partials/EntriesTabsView.jsx:909
 msgid "Confirm"
 msgstr "Potwierdzić"
 
-#: src/components/partials/EntriesTabsView.jsx:897
+#: src/components/partials/EntriesTabsView.jsx:922
 msgid "entries.modals.select-location.button"
 msgstr "Wybierz"
 
@@ -273,21 +277,21 @@ msgstr "Importowanie..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Import teraz"
 
-#: src/components/screens/Export/createPdfFile.js:102
+#: src/components/screens/Export/createPdfFile.js:103
 msgid "page"
 msgstr "Strona"
 
-#: src/components/screens/Export/createPdfFile.js:147
-#: src/components/screens/Export/createPdfFile.js:150
-#: src/components/screens/Export/createPdfFile.js:516
-#: src/components/screens/Export/createPdfFile.js:60
+#: src/components/screens/Export/createPdfFile.js:148
+#: src/components/screens/Export/createPdfFile.js:151
+#: src/components/screens/Export/createPdfFile.js:506
+#: src/components/screens/Export/createPdfFile.js:61
 #: src/components/screens/Export/logic.js:44
 #: src/components/screens/Export/logic.js:94
 #: src/components/screens/Export/ui.jsx:149
 msgid "export-screen.header.headline"
 msgstr "Eksportuj"
 
-#: src/components/screens/Export/createPdfFile.js:266
+#: src/components/screens/Export/createPdfFile.js:256
 msgid "quantity"
 msgstr "Ilość"
 

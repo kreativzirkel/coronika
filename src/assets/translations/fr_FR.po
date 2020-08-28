@@ -35,116 +35,120 @@ msgstr "Partager"
 msgid "navigation.tips.label"
 msgstr "Conseils"
 
-#: src/components/partials/EntriesTabsView.jsx:628
-#: src/components/screens/Export/createPdfFile.js:277
+#: src/components/partials/EntriesTabsView.jsx:641
+#: src/components/screens/Export/createPdfFile.js:267
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "personnes"
 
-#: src/components/partials/EntriesTabsView.jsx:638
-#: src/components/screens/Export/createPdfFile.js:358
+#: src/components/partials/EntriesTabsView.jsx:651
+#: src/components/screens/Export/createPdfFile.js:348
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "lieux"
 
-#: src/components/partials/EntriesTabsView.jsx:650
+#: src/components/partials/EntriesTabsView.jsx:663
 msgid "entries.persons.list.new"
 msgstr "Nouvelle personne"
 
-#: src/components/partials/EntriesTabsView.jsx:671
-#: src/components/partials/EntriesTabsView.jsx:721
+#: src/components/partials/EntriesTabsView.jsx:684
+#: src/components/partials/EntriesTabsView.jsx:734
 msgid "entries.search.list.empty"
 msgstr "Rien n'a pu être trouvé lors de ta recherche."
 
-#: src/components/partials/EntriesTabsView.jsx:678
+#: src/components/partials/EntriesTabsView.jsx:691
 msgid "entries.persons.list.empty"
 msgstr ""
 "Tu n'as pas encore créé une personne. Pour commencer tout de suite, tu peut "
 "importer des personnes à partir de ton annuaire téléphonique."
 
-#: src/components/partials/EntriesTabsView.jsx:682
+#: src/components/partials/EntriesTabsView.jsx:695
 msgid "entries.persons.list.import.button"
 msgstr "Importer maintenant"
 
-#: src/components/partials/EntriesTabsView.jsx:701
+#: src/components/partials/EntriesTabsView.jsx:714
 msgid "entries.locations.list.new"
 msgstr "Nouvelle localisation"
 
-#: src/components/partials/EntriesTabsView.jsx:724
+#: src/components/partials/EntriesTabsView.jsx:737
 msgid "entries.locations.list.empty"
 msgstr ""
 "Tu n'as pas encore créé de lieu. Commence maintenant et crée ton premier "
 "lieu."
 
-#: src/components/partials/EntriesTabsView.jsx:740
+#: src/components/partials/EntriesTabsView.jsx:753
 msgid "entries.selection.add"
 msgstr "Ajouter une sélection"
 
-#: src/components/partials/EntriesTabsView.jsx:752
+#: src/components/partials/EntriesTabsView.jsx:765
 msgid "entries.modals.update-person.headline"
 msgstr "modifier la personne"
 
-#: src/components/partials/EntriesTabsView.jsx:753
+#: src/components/partials/EntriesTabsView.jsx:766
 msgid "entries.modals.new-person.headline"
 msgstr "Nouvelle personne"
 
-#: src/components/partials/EntriesTabsView.jsx:764
+#: src/components/partials/EntriesTabsView.jsx:777
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Nom"
 
-#: src/components/partials/EntriesTabsView.jsx:776
+#: src/components/partials/EntriesTabsView.jsx:789
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Téléphone"
 
-#: src/components/partials/EntriesTabsView.jsx:789
+#: src/components/partials/EntriesTabsView.jsx:802
 msgid "entries.modals.update-person.button"
 msgstr "Sauvegarder"
 
-#: src/components/partials/EntriesTabsView.jsx:790
+#: src/components/partials/EntriesTabsView.jsx:803
 msgid "entries.modals.new-person.button"
 msgstr "Ajouter"
 
-#: src/components/partials/EntriesTabsView.jsx:802
+#: src/components/partials/EntriesTabsView.jsx:815
 msgid "entries.modals.update-location.headline"
 msgstr "Modifier le lieu"
 
-#: src/components/partials/EntriesTabsView.jsx:803
+#: src/components/partials/EntriesTabsView.jsx:816
 msgid "entries.modals.new-location.headline"
 msgstr "Nouvelle localisation"
 
-#: src/components/partials/EntriesTabsView.jsx:814
+#: src/components/partials/EntriesTabsView.jsx:827
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Titre"
 
-#: src/components/partials/EntriesTabsView.jsx:825
+#: src/components/partials/EntriesTabsView.jsx:838
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Description"
 
-#: src/components/partials/EntriesTabsView.jsx:838
+#: src/components/partials/EntriesTabsView.jsx:850
+msgid "entries.modals.new-location.placeholder.phone-number"
+msgstr "Téléphone"
+
+#: src/components/partials/EntriesTabsView.jsx:863
 msgid "entries.modals.update-location.button"
 msgstr "Sauvegarder"
 
-#: src/components/partials/EntriesTabsView.jsx:839
+#: src/components/partials/EntriesTabsView.jsx:864
 msgid "entries.modals.new-location.button"
 msgstr "Ajouter"
 
-#: src/components/partials/EntriesTabsView.jsx:849
+#: src/components/partials/EntriesTabsView.jsx:874
 msgid "entries.modals.select-location.headline"
 msgstr "Sélectionne un lieu"
 
-#: src/components/partials/EntriesTabsView.jsx:868
+#: src/components/partials/EntriesTabsView.jsx:893
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Description"
 
-#: src/components/partials/EntriesTabsView.jsx:883
+#: src/components/partials/EntriesTabsView.jsx:908
 msgid "Cancel"
 msgstr "Annuler"
 
-#: src/components/partials/EntriesTabsView.jsx:884
+#: src/components/partials/EntriesTabsView.jsx:909
 msgid "Confirm"
 msgstr "Confirmer"
 
-#: src/components/partials/EntriesTabsView.jsx:897
+#: src/components/partials/EntriesTabsView.jsx:922
 msgid "entries.modals.select-location.button"
 msgstr "Sélectionne"
 
@@ -275,21 +279,21 @@ msgstr "Importer..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Importer maintenant"
 
-#: src/components/screens/Export/createPdfFile.js:102
+#: src/components/screens/Export/createPdfFile.js:103
 msgid "page"
 msgstr "page"
 
-#: src/components/screens/Export/createPdfFile.js:147
-#: src/components/screens/Export/createPdfFile.js:150
-#: src/components/screens/Export/createPdfFile.js:516
-#: src/components/screens/Export/createPdfFile.js:60
+#: src/components/screens/Export/createPdfFile.js:148
+#: src/components/screens/Export/createPdfFile.js:151
+#: src/components/screens/Export/createPdfFile.js:506
+#: src/components/screens/Export/createPdfFile.js:61
 #: src/components/screens/Export/logic.js:44
 #: src/components/screens/Export/logic.js:94
 #: src/components/screens/Export/ui.jsx:149
 msgid "export-screen.header.headline"
 msgstr "Exportation"
 
-#: src/components/screens/Export/createPdfFile.js:266
+#: src/components/screens/Export/createPdfFile.js:256
 msgid "quantity"
 msgstr "quantité"
 

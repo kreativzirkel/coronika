@@ -81,6 +81,7 @@ class EntriesTabsView extends React.Component {
       newPersonName: '',
       newPersonPhone: '',
       newLocationDescription: '',
+      newLocationPhone: '',
       newLocationTitle: '',
       searchValue: '',
       selectedEntries: {
@@ -178,8 +179,8 @@ class EntriesTabsView extends React.Component {
       store: { dispatch, getState },
     } = this.context;
     const { allowSelection } = this.props;
-    const { newLocationDescription, newLocationTitle } = this.state;
-    const location = { description: newLocationDescription, title: newLocationTitle };
+    const { newLocationDescription, newLocationPhone, newLocationTitle } = this.state;
+    const location = { description: newLocationDescription, phone: newLocationPhone, title: newLocationTitle };
 
     await dispatch(await addLocation(location));
 
@@ -237,6 +238,7 @@ class EntriesTabsView extends React.Component {
       isUpdateLocationMode: false,
       isModalNewLocationVisible: true,
       newLocationDescription: '',
+      newLocationPhone: '',
       newLocationTitle: '',
     });
   }
@@ -277,6 +279,10 @@ class EntriesTabsView extends React.Component {
 
   setNewLocationDescription(newLocationDescription) {
     this.setState({ newLocationDescription });
+  }
+
+  setNewLocationPhone(newLocationPhone) {
+    this.setState({ newLocationPhone });
   }
 
   setNewLocationTitle(newLocationTitle) {
@@ -381,7 +387,7 @@ class EntriesTabsView extends React.Component {
 
   editLocation(editLocationId) {
     const { locations } = this.props;
-    const { description: newLocationDescription, title: newLocationTitle } = locations.find(
+    const { description: newLocationDescription, phone: newLocationPhone, title: newLocationTitle } = locations.find(
       ({ id }) => id === editLocationId
     );
     this.setState({
@@ -389,6 +395,7 @@ class EntriesTabsView extends React.Component {
       isUpdateLocationMode: true,
       isModalNewLocationVisible: true,
       newLocationDescription,
+      newLocationPhone,
       newLocationTitle,
     });
   }
@@ -397,8 +404,13 @@ class EntriesTabsView extends React.Component {
     const {
       store: { dispatch },
     } = this.context;
-    const { editLocationId, newLocationDescription, newLocationTitle } = this.state;
-    const location = { description: newLocationDescription, id: editLocationId, title: newLocationTitle };
+    const { editLocationId, newLocationDescription, newLocationPhone, newLocationTitle } = this.state;
+    const location = {
+      description: newLocationDescription,
+      id: editLocationId,
+      phone: newLocationPhone,
+      title: newLocationTitle,
+    };
 
     dispatch(updateLocation(location));
 
@@ -437,6 +449,7 @@ class EntriesTabsView extends React.Component {
       newPersonName,
       newPersonPhone,
       newLocationDescription,
+      newLocationPhone,
       newLocationTitle,
       searchValue,
       selectedEntries,
@@ -827,6 +840,18 @@ class EntriesTabsView extends React.Component {
               style={styles.modalTextInput}
               textContentType={'none'}
               value={newLocationDescription}
+            />
+
+            <TextInput
+              autoCompleteType={'off'}
+              autoCorrect={false}
+              onChangeText={(value) => this.setNewLocationPhone(value)}
+              keyboardType={'phone-pad'}
+              placeholder={__('entries.modals.new-location.placeholder.phone-number').toLowerCase()}
+              placeholderTextColor={'#B0B0B1'}
+              style={styles.modalTextInput}
+              textContentType={'none'}
+              value={newLocationPhone}
             />
 
             <TouchableOpacity
