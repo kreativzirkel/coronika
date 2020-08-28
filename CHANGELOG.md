@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.5.0
+
+- Added possibility to add both start and end time to locations
+- Reduced number of days in diary
+- Optimized export
+- Bug fixes and improvements
+
 ## 1.4.5
 
 - Bug fixes and improvements
