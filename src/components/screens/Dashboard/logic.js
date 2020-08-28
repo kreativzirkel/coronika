@@ -19,7 +19,7 @@ const loadDays = () => async (dispatch, getState) => {
   let differenceToLastDay = 0;
 
   if (Object.keys(days).length > 0) {
-    const lastDay = Math.max(...Object.keys(days).map((timestamp) => parseInt(timestamp, 10)));
+    const lastDay = Math.min(...Object.keys(days).map((timestamp) => parseInt(timestamp, 10)));
     differenceToLastDay = moment(lastDay).diff(today);
   }
 
@@ -50,8 +50,8 @@ const loadMoreDays = () => async (dispatch, getState) => {
     addTimestamps.push(currentDayTimestamp);
   }
 
-  const maxTimestamp = moment(firstDay).subtract(DAYS_OVERVIEW_MAX, 'days').valueOf();
-  dispatch(initializeDays(addTimestamps, maxTimestamp));
+  const minTimestamp = moment(firstDay).subtract(DAYS_OVERVIEW_MAX, 'days').valueOf();
+  dispatch(initializeDays(addTimestamps, minTimestamp));
 };
 
 const daysSortingFunction = (a, b) => {
