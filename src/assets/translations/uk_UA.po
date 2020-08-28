@@ -35,13 +35,13 @@ msgid "navigation.tips.label"
 msgstr "Поради"
 
 #: src/components/partials/EntriesTabsView.jsx:641
-#: src/components/screens/Export/createPdfFile.js:267
+#: src/components/screens/Export/createPdfFile.js:303
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "осіб"
 
 #: src/components/partials/EntriesTabsView.jsx:651
-#: src/components/screens/Export/createPdfFile.js:348
+#: src/components/screens/Export/createPdfFile.js:389
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "локації"
@@ -278,23 +278,27 @@ msgstr "Імпорт..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Імпортуйте зараз"
 
-#: src/components/screens/Export/createPdfFile.js:103
+#: src/components/screens/Export/createPdfFile.js:123
 msgid "page"
 msgstr "сторінки"
 
-#: src/components/screens/Export/createPdfFile.js:148
-#: src/components/screens/Export/createPdfFile.js:151
-#: src/components/screens/Export/createPdfFile.js:506
-#: src/components/screens/Export/createPdfFile.js:61
+#: src/components/screens/Export/createPdfFile.js:169
+#: src/components/screens/Export/createPdfFile.js:172
+#: src/components/screens/Export/createPdfFile.js:573
+#: src/components/screens/Export/createPdfFile.js:65
 #: src/components/screens/Export/logic.js:44
 #: src/components/screens/Export/logic.js:94
 #: src/components/screens/Export/ui.jsx:149
 msgid "export-screen.header.headline"
 msgstr "Експорт"
 
-#: src/components/screens/Export/createPdfFile.js:256
+#: src/components/screens/Export/createPdfFile.js:292
 msgid "quantity"
 msgstr "кількість"
+
+#: src/components/screens/Export/createPdfFile.js:95
+msgid "export-screen.footer.hint-entries-possibly-irrelevant"
+msgstr "може бути нерелевантним, оскільки цей запис старше 14 днів."
 
 #: src/components/screens/Export/logic.js:57
 msgid "export-screen.alerts.save-file.success.title"

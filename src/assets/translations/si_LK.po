@@ -34,13 +34,13 @@ msgid "navigation.tips.label"
 msgstr "ඉඟි"
 
 #: src/components/partials/EntriesTabsView.jsx:641
-#: src/components/screens/Export/createPdfFile.js:267
+#: src/components/screens/Export/createPdfFile.js:303
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "පුද්ගලයන්"
 
 #: src/components/partials/EntriesTabsView.jsx:651
-#: src/components/screens/Export/createPdfFile.js:348
+#: src/components/screens/Export/createPdfFile.js:389
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "ස්ථාන"
@@ -267,23 +267,27 @@ msgstr "ආනයනය ..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "දැන් ආයාත කරන්න"
 
-#: src/components/screens/Export/createPdfFile.js:103
+#: src/components/screens/Export/createPdfFile.js:123
 msgid "page"
 msgstr "පිටුව"
 
-#: src/components/screens/Export/createPdfFile.js:148
-#: src/components/screens/Export/createPdfFile.js:151
-#: src/components/screens/Export/createPdfFile.js:506
-#: src/components/screens/Export/createPdfFile.js:61
+#: src/components/screens/Export/createPdfFile.js:169
+#: src/components/screens/Export/createPdfFile.js:172
+#: src/components/screens/Export/createPdfFile.js:573
+#: src/components/screens/Export/createPdfFile.js:65
 #: src/components/screens/Export/logic.js:44
 #: src/components/screens/Export/logic.js:94
 #: src/components/screens/Export/ui.jsx:149
 msgid "export-screen.header.headline"
 msgstr "අපනයන"
 
-#: src/components/screens/Export/createPdfFile.js:256
+#: src/components/screens/Export/createPdfFile.js:292
 msgid "quantity"
 msgstr "ප්‍රමාණය"
+
+#: src/components/screens/Export/createPdfFile.js:95
+msgid "export-screen.footer.hint-entries-possibly-irrelevant"
+msgstr "මෙම ප්‍රවේශය දින 14 කට වඩා පැරණි බැවින් අදාළ නොවිය හැකිය."
 
 #: src/components/screens/Export/logic.js:57
 msgid "export-screen.alerts.save-file.success.title"

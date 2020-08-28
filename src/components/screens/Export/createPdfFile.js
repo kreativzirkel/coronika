@@ -3,6 +3,7 @@ import moment from 'moment';
 import { PDFDocument, rgb } from 'pdf-lib';
 import { Platform } from 'react-native';
 import RNFS from 'react-native-fs';
+import { DAYS_RELEVANT } from '../../../constants';
 import { __, getFontFamilyBold, getFontFamilyRegular } from '../../../i18n';
 import { sortByCounterAndFullName, sortByCounterAndTitle } from '../Overview/logic';
 
@@ -22,6 +23,8 @@ const CONTENT_MARGIN = {
   TOP: PAGE_MARGINS.TOP * 2,
 };
 
+const fontColorNotRelevant = rgb(0.5401960784, 0.5401960784, 0.5441176471);
+
 const chooseFont = (text, currentLanguage, font, fontDefault) => {
   if (['ja', 'si', 'zh'].includes(currentLanguage)) {
     const charCodes = [...new Set(text.split('').map((c) => c.charCodeAt(0)))];
@@ -34,7 +37,7 @@ const chooseFont = (text, currentLanguage, font, fontDefault) => {
   return font;
 };
 
-const addHeaderFooter = (pdfDoc, days, exportTime, currentLanguage, fonts) => {
+const addHeaderFooter = (pdfDoc, days, exportTime, currentLanguage, fonts, showFooterHintForIrrelevantEntries) => {
   const { customFontBold, customFontRegular, customFontJetBrainsMonoBold, customFontJetBrainsMonoRegular } = fonts;
 
   const chooseFontRegular = (text) =>
@@ -45,6 +48,7 @@ const addHeaderFooter = (pdfDoc, days, exportTime, currentLanguage, fonts) => {
   pages.forEach((page, index) => {
     const { height, width } = page.getSize();
 
+    // HEADER
     const logoText = 'coronika';
     const logoTextSize = 20;
     const logoTextHeight = customFontJetBrainsMonoBold.heightAtSize(logoTextSize / 1.6);
@@ -87,14 +91,30 @@ const addHeaderFooter = (pdfDoc, days, exportTime, currentLanguage, fonts) => {
       size: timespanTextSize,
     });
 
+    // FOOTER
+    const footerHintText = `* ${__('export-screen.footer.hint-entries-possibly-irrelevant', currentLanguage)}`;
+    const footerHintTextFont = chooseFontRegular(footerHintText);
+    const footerHintTextSize = 6.5;
+    const footerHintTextHeight = footerHintTextFont.heightAtSize(footerHintTextSize / 1.6);
+
     const footerTimestampText = moment(exportTime).format('L LT');
     const footerTimestampTextFont = chooseFontRegular(footerTimestampText);
     const footerTimestampTextSize = 8;
     const footerTimestampTextHeight = footerTimestampTextFont.heightAtSize(footerTimestampTextSize / 1.6);
 
+    if (showFooterHintForIrrelevantEntries) {
+      page.drawText(footerHintText.toLowerCase(), {
+        x: PAGE_MARGINS.LEFT,
+        y: PAGE_MARGINS.BOTTOM + footerHintTextHeight / 2,
+        color: fontColorNotRelevant,
+        font: footerHintTextFont,
+        size: footerHintTextSize,
+      });
+    }
+
     page.drawText(footerTimestampText, {
       x: PAGE_MARGINS.LEFT,
-      y: PAGE_MARGINS.BOTTOM / 2 + footerTimestampTextHeight / 2,
+      y: PAGE_MARGINS.BOTTOM / 2 + footerTimestampTextHeight / 2 - footerHintTextHeight / 2,
       color: rgb(0, 0, 0),
       font: footerTimestampTextFont,
       size: footerTimestampTextSize,
@@ -135,6 +155,7 @@ const addHeaderFooter = (pdfDoc, days, exportTime, currentLanguage, fonts) => {
 const createPdfFile = async (options = {}) => {
   const { currentLanguage, days } = options;
 
+  let showFooterHintForIrrelevantEntries = false;
   const exportTime = new Date();
   const exportTimeFormatted = moment(exportTime).format('YYYYMMDDHHmm');
   const pdfDoc = await PDFDocument.create();
@@ -210,6 +231,7 @@ const createPdfFile = async (options = {}) => {
   const entryTimestampMarginBottom = 4;
   const entryHeight = 2 * entryPadding + entryNameTextHeight + entryPhoneTextHeight + entryNameMarginBottom;
 
+  const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0).valueOf();
   const pageCursorYInitial = PAGE_SIZE.HEIGHT - CONTENT_MARGIN.TOP;
   let pageCursorY = pageCursorYInitial;
 
@@ -228,12 +250,23 @@ const createPdfFile = async (options = {}) => {
   });
 
   daysSorted.forEach((day) => {
-    day.locations.forEach(({ description, id, title, timestamp }) => {
+    day.locations.forEach(({ description, id, phone, title, timestamp }) => {
       if (Object.values(locations).find((l) => l.id === id)) {
         locations[id].counter += 1;
+        if (phone && !locations[id].phoneNumbers.contains(phone)) locations[id].phoneNumbers.push(phone);
         locations[id].timestamps = [...locations[id].timestamps, { description, timestamp }];
+        if (day.timestamp > locations[id].lastUsage) {
+          locations[id].lastUsage = day.timestamp;
+        }
       } else {
-        locations[id] = { counter: 1, id, title, timestamps: [{ description, timestamp }] };
+        locations[id] = {
+          counter: 1,
+          id,
+          lastUsage: day.timestamp,
+          phoneNumbers: phone ? [phone] : [],
+          title,
+          timestamps: [{ description, timestamp }],
+        };
       }
     });
 
@@ -241,8 +274,11 @@ const createPdfFile = async (options = {}) => {
       if (Object.values(persons).find((p) => p.id === id)) {
         persons[id].counter += 1;
         persons[id].phoneNumbers = { ...persons[id].phoneNumbers, ...phoneNumbers };
+        if (day.timestamp > persons[id].lastUsage) {
+          persons[id].lastUsage = day.timestamp;
+        }
       } else {
-        persons[id] = { counter: 1, fullName, id, phoneNumbers };
+        persons[id] = { counter: 1, fullName, id, phoneNumbers, lastUsage: day.timestamp };
       }
     });
   });
@@ -268,8 +304,13 @@ const createPdfFile = async (options = {}) => {
 
   let createNewPage = true;
 
-  personsSorted.forEach(({ counter, fullName, phoneNumbers }) => {
+  personsSorted.forEach(({ counter, fullName, phoneNumbers, lastUsage }) => {
     let page;
+
+    const daysLastUsage = (today - lastUsage) / 1000 / 60 / 60 / 24;
+    const isRelevant = daysLastUsage < DAYS_RELEVANT;
+
+    if (!isRelevant) showFooterHintForIrrelevantEntries = true;
 
     if (createNewPage) {
       page = pdfDoc.addPage();
@@ -308,10 +349,10 @@ const createPdfFile = async (options = {}) => {
       color: rgb(1, 1, 1),
     });
 
-    page.drawText(fullName, {
+    page.drawText(`${fullName}${isRelevant ? '' : ' *'}`, {
       x: PAGE_MARGINS.LEFT + entryPadding,
       y: pageCursorY - entryPadding - entryNameTextHeight,
-      color: rgb(0, 0, 0),
+      color: isRelevant ? rgb(0, 0, 0) : fontColorNotRelevant,
       font: chooseFontRegular(fullName),
       size: entryNameTextSize,
     });
@@ -321,7 +362,7 @@ const createPdfFile = async (options = {}) => {
     page.drawText(counter.toString(), {
       x: PAGE_SIZE.WIDTH - PAGE_MARGINS.RIGHT - entryPadding - entryCounterTextWidth,
       y: pageCursorY - entryPadding - entryNameTextHeight,
-      color: rgb(0, 0, 0),
+      color: isRelevant ? rgb(0, 0, 0) : fontColorNotRelevant,
       font: chooseFontRegular(counter.toString()),
       size: entryNameTextSize,
     });
@@ -332,7 +373,7 @@ const createPdfFile = async (options = {}) => {
     page.drawText(numbersText, {
       x: PAGE_MARGINS.LEFT + entryPadding,
       y: pageCursorY - entryPadding - entryNameTextHeight - entryNameMarginBottom - entryPhoneTextHeight,
-      color: rgb(0, 0, 0),
+      color: isRelevant ? rgb(0, 0, 0) : fontColorNotRelevant,
       font: chooseFontRegular(numbersText),
       size: entryPhoneTextSize,
     });
@@ -349,8 +390,9 @@ const createPdfFile = async (options = {}) => {
 
   const calculateLocationEntryHeight = (countTimestamps = 0) => {
     return (
-      2 * entryPadding +
+      3 * entryPadding +
       entryNameTextHeight +
+      entryPhoneTextHeight +
       countTimestamps * entryTimestampTextHeight +
       (countTimestamps - 1) * entryTimestampMarginBottom +
       entryNameMarginBottom
@@ -376,8 +418,13 @@ const createPdfFile = async (options = {}) => {
     }
   }
 
-  locationsSorted.forEach(({ counter, timestamps, title }, index) => {
+  locationsSorted.forEach(({ counter, lastUsage, phoneNumbers, timestamps, title }, index) => {
     let page;
+
+    const daysLastUsage = (today - lastUsage) / 1000 / 60 / 60 / 24;
+    const isRelevant = daysLastUsage < DAYS_RELEVANT;
+
+    if (!isRelevant) showFooterHintForIrrelevantEntries = true;
 
     if (createNewPage) {
       page = pdfDoc.addPage();
@@ -423,10 +470,10 @@ const createPdfFile = async (options = {}) => {
       color: rgb(1, 1, 1),
     });
 
-    page.drawText(title, {
+    page.drawText(`${title}${isRelevant ? '' : ' *'}`, {
       x: PAGE_MARGINS.LEFT + entryPadding,
       y: pageCursorY - entryPadding - entryNameTextHeight,
-      color: rgb(0, 0, 0),
+      color: isRelevant ? rgb(0, 0, 0) : fontColorNotRelevant,
       font: chooseFontRegular(title),
       size: entryNameTextSize,
     });
@@ -436,9 +483,20 @@ const createPdfFile = async (options = {}) => {
     page.drawText(counter.toString(), {
       x: PAGE_SIZE.WIDTH - PAGE_MARGINS.RIGHT - entryPadding - entryCounterTextWidth,
       y: pageCursorY - entryPadding - entryNameTextHeight,
-      color: rgb(0, 0, 0),
+      color: isRelevant ? rgb(0, 0, 0) : fontColorNotRelevant,
       font: chooseFontRegular(counter.toString()),
       size: entryNameTextSize,
+    });
+
+    const numbers = [...new Set(phoneNumbers.map((number) => number.replace(/\s/g, '')))];
+    const numbersText = numbers.join(', ');
+
+    page.drawText(numbersText, {
+      x: PAGE_MARGINS.LEFT + entryPadding,
+      y: pageCursorY - entryPadding - entryNameTextHeight - entryPadding - entryPhoneTextHeight,
+      color: isRelevant ? rgb(0, 0, 0) : fontColorNotRelevant,
+      font: chooseFontRegular(numbersText),
+      size: entryPhoneTextSize,
     });
 
     timestamps
@@ -456,6 +514,8 @@ const createPdfFile = async (options = {}) => {
           pageCursorY -
           entryPadding -
           entryNameTextHeight -
+          entryPadding -
+          entryPhoneTextHeight -
           i * entryTimestampTextHeight -
           entryNameMarginBottom -
           i * entryTimestampMarginBottom;
@@ -463,7 +523,7 @@ const createPdfFile = async (options = {}) => {
         page.drawText(timestampText, {
           x: PAGE_MARGINS.LEFT + entryPadding,
           y: y - entryTimestampTextHeight,
-          color: rgb(0, 0, 0),
+          color: isRelevant ? rgb(0, 0, 0) : fontColorNotRelevant,
           font: timestampTextFont,
           size: entryTimestampTextSize,
         });
@@ -475,7 +535,7 @@ const createPdfFile = async (options = {}) => {
           page.drawText(descriptionText, {
             x: PAGE_MARGINS.LEFT + 1.5 * entryPadding + timestampTextWidth,
             y: y - entryTimestampTextHeight,
-            color: rgb(0.33, 0.33, 0.33),
+            color: isRelevant ? rgb(0.33, 0.33, 0.33) : fontColorNotRelevant,
             font: chooseFontRegular(descriptionText),
             size: entryTimestampTextSize - 1,
           });
@@ -495,12 +555,19 @@ const createPdfFile = async (options = {}) => {
     }
   });
 
-  addHeaderFooter(pdfDoc, days, exportTime, currentLanguage, {
-    customFontBold,
-    customFontRegular,
-    customFontJetBrainsMonoBold,
-    customFontJetBrainsMonoRegular,
-  });
+  addHeaderFooter(
+    pdfDoc,
+    days,
+    exportTime,
+    currentLanguage,
+    {
+      customFontBold,
+      customFontRegular,
+      customFontJetBrainsMonoBold,
+      customFontJetBrainsMonoRegular,
+    },
+    showFooterHintForIrrelevantEntries
+  );
 
   const content = await pdfDoc.saveAsBase64();
   const filename = `${exportTimeFormatted} coronika ${__(

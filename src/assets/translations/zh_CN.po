@@ -33,13 +33,13 @@ msgid "navigation.tips.label"
 msgstr "小贴士"
 
 #: src/components/partials/EntriesTabsView.jsx:641
-#: src/components/screens/Export/createPdfFile.js:267
+#: src/components/screens/Export/createPdfFile.js:303
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "联系人"
 
 #: src/components/partials/EntriesTabsView.jsx:651
-#: src/components/screens/Export/createPdfFile.js:348
+#: src/components/screens/Export/createPdfFile.js:389
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "地点"
@@ -261,23 +261,27 @@ msgstr "导入中..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "现在导入"
 
-#: src/components/screens/Export/createPdfFile.js:103
+#: src/components/screens/Export/createPdfFile.js:123
 msgid "page"
 msgstr "页"
 
-#: src/components/screens/Export/createPdfFile.js:148
-#: src/components/screens/Export/createPdfFile.js:151
-#: src/components/screens/Export/createPdfFile.js:506
-#: src/components/screens/Export/createPdfFile.js:61
+#: src/components/screens/Export/createPdfFile.js:169
+#: src/components/screens/Export/createPdfFile.js:172
+#: src/components/screens/Export/createPdfFile.js:573
+#: src/components/screens/Export/createPdfFile.js:65
 #: src/components/screens/Export/logic.js:44
 #: src/components/screens/Export/logic.js:94
 #: src/components/screens/Export/ui.jsx:149
 msgid "export-screen.header.headline"
 msgstr "导出"
 
-#: src/components/screens/Export/createPdfFile.js:256
+#: src/components/screens/Export/createPdfFile.js:292
 msgid "quantity"
 msgstr "数量"
+
+#: src/components/screens/Export/createPdfFile.js:95
+msgid "export-screen.footer.hint-entries-possibly-irrelevant"
+msgstr "可能不相关，因为该条目已超过14天。"
 
 #: src/components/screens/Export/logic.js:57
 msgid "export-screen.alerts.save-file.success.title"
