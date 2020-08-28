@@ -54,6 +54,7 @@ class LocationsListItemClass extends React.Component {
       selectedLocationTime,
       showCounter,
       timestamp,
+      timestampEnd,
       title,
       toggleSelection,
       updateItem,
@@ -178,6 +179,7 @@ class LocationsListItemClass extends React.Component {
             {timestamp > 0 && (
               <Text style={{ ...styles.locationContentText, ...styles.locationContentTime }}>
                 {moment(timestamp || 0).format('LT')}
+                {timestampEnd > 0 && timestampEnd > timestamp && ` - ${moment(timestampEnd).format('LT')}`}
               </Text>
             )}
           </View>
@@ -283,7 +285,7 @@ const LocationsList = ({
       data={locations}
       initialNumToRender={50}
       keyExtractor={({ description, id, timestamp }) => `location-${id}-${description}-${timestamp}`}
-      renderItem={({ item: { counter, description, id, separatorItem, timestamp, title } }) => {
+      renderItem={({ item: { counter, description, id, separatorItem, timestamp, timestampEnd, title } }) => {
         if (separatorItem) {
           return <ListItemSeparator />;
         }
@@ -296,6 +298,9 @@ const LocationsList = ({
         if (isLocationSelected) {
           selectedLocationDescription = selectedLocation.description;
           selectedLocationTime = moment(selectedLocation.timestamp || 0).format('LT');
+          if (selectedLocation.timestampEnd > 0 && selectedLocation.timestampEnd > selectedLocation.timestamp) {
+            selectedLocationTime = `${selectedLocationTime} - ${moment(selectedLocation.timestampEnd).format('LT')}`;
+          }
         }
 
         return (
@@ -314,6 +319,7 @@ const LocationsList = ({
             selectedLocationTime={selectedLocationTime}
             showCounter={showCounter}
             timestamp={timestamp}
+            timestampEnd={timestampEnd}
             title={title}
             toggleSelection={(locationId) => toggleSelection(locationId)}
             updateItem={(locationId) => updateItem(locationId)}

@@ -32,118 +32,120 @@ msgstr "分享"
 msgid "navigation.tips.label"
 msgstr "小贴士"
 
-#: src/components/partials/EntriesTabsView.jsx:641
+#: src/components/partials/EntriesTabsView.jsx:1005
+msgid "entries.modals.select-location.button"
+msgstr "选项"
+
+#: src/components/partials/EntriesTabsView.jsx:696
 #: src/components/screens/Export/createPdfFile.js:303
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "联系人"
 
-#: src/components/partials/EntriesTabsView.jsx:651
+#: src/components/partials/EntriesTabsView.jsx:706
 #: src/components/screens/Export/createPdfFile.js:389
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "地点"
 
-#: src/components/partials/EntriesTabsView.jsx:663
+#: src/components/partials/EntriesTabsView.jsx:718
 msgid "entries.persons.list.new"
 msgstr "新联系人"
 
-#: src/components/partials/EntriesTabsView.jsx:684
-#: src/components/partials/EntriesTabsView.jsx:734
+#: src/components/partials/EntriesTabsView.jsx:739
+#: src/components/partials/EntriesTabsView.jsx:789
 msgid "entries.search.list.empty"
 msgstr "没有搜索到相关内容。"
 
-#: src/components/partials/EntriesTabsView.jsx:691
+#: src/components/partials/EntriesTabsView.jsx:746
 msgid "entries.persons.list.empty"
 msgstr "您尚未添加第一个联系人。从电话簿中导入联系人，以便您可以立即开始使用。"
 
-#: src/components/partials/EntriesTabsView.jsx:695
+#: src/components/partials/EntriesTabsView.jsx:750
 msgid "entries.persons.list.import.button"
 msgstr "现在导入"
 
-#: src/components/partials/EntriesTabsView.jsx:714
+#: src/components/partials/EntriesTabsView.jsx:769
 msgid "entries.locations.list.new"
 msgstr "新地点"
 
-#: src/components/partials/EntriesTabsView.jsx:737
+#: src/components/partials/EntriesTabsView.jsx:792
 msgid "entries.locations.list.empty"
 msgstr "您尚未创建新地点。 现在开始并创建您的第一个地点。"
 
-#: src/components/partials/EntriesTabsView.jsx:753
+#: src/components/partials/EntriesTabsView.jsx:808
 msgid "entries.selection.add"
 msgstr "添加选项"
 
-#: src/components/partials/EntriesTabsView.jsx:765
+#: src/components/partials/EntriesTabsView.jsx:820
 msgid "entries.modals.update-person.headline"
 msgstr "编辑联系人"
 
-#: src/components/partials/EntriesTabsView.jsx:766
+#: src/components/partials/EntriesTabsView.jsx:821
 msgid "entries.modals.new-person.headline"
 msgstr "新联系人"
 
-#: src/components/partials/EntriesTabsView.jsx:777
+#: src/components/partials/EntriesTabsView.jsx:832
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "姓名"
 
-#: src/components/partials/EntriesTabsView.jsx:789
+#: src/components/partials/EntriesTabsView.jsx:844
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "电话"
 
-#: src/components/partials/EntriesTabsView.jsx:802
+#: src/components/partials/EntriesTabsView.jsx:857
 msgid "entries.modals.update-person.button"
 msgstr "保存"
 
-#: src/components/partials/EntriesTabsView.jsx:803
+#: src/components/partials/EntriesTabsView.jsx:858
 msgid "entries.modals.new-person.button"
 msgstr "添加"
 
-#: src/components/partials/EntriesTabsView.jsx:815
+#: src/components/partials/EntriesTabsView.jsx:870
 msgid "entries.modals.update-location.headline"
 msgstr "修改地点"
 
-#: src/components/partials/EntriesTabsView.jsx:816
+#: src/components/partials/EntriesTabsView.jsx:871
 msgid "entries.modals.new-location.headline"
 msgstr "新地点"
 
-#: src/components/partials/EntriesTabsView.jsx:827
+#: src/components/partials/EntriesTabsView.jsx:882
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "标题"
 
-#: src/components/partials/EntriesTabsView.jsx:838
+#: src/components/partials/EntriesTabsView.jsx:893
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "描述"
 
-#: src/components/partials/EntriesTabsView.jsx:850
+#: src/components/partials/EntriesTabsView.jsx:905
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "电话"
 
-#: src/components/partials/EntriesTabsView.jsx:863
+#: src/components/partials/EntriesTabsView.jsx:918
 msgid "entries.modals.update-location.button"
 msgstr "保存"
 
-#: src/components/partials/EntriesTabsView.jsx:864
+#: src/components/partials/EntriesTabsView.jsx:919
 msgid "entries.modals.new-location.button"
 msgstr "添加"
 
-#: src/components/partials/EntriesTabsView.jsx:874
+#: src/components/partials/EntriesTabsView.jsx:929
 msgid "entries.modals.select-location.headline"
 msgstr "选择地点"
 
-#: src/components/partials/EntriesTabsView.jsx:893
+#: src/components/partials/EntriesTabsView.jsx:948
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "描述"
 
-#: src/components/partials/EntriesTabsView.jsx:908
+#: src/components/partials/EntriesTabsView.jsx:979
+#: src/components/partials/EntriesTabsView.jsx:991
 msgid "Cancel"
 msgstr "取消"
 
-#: src/components/partials/EntriesTabsView.jsx:909
+#: src/components/partials/EntriesTabsView.jsx:980
+#: src/components/partials/EntriesTabsView.jsx:992
 msgid "Confirm"
 msgstr "确认"
-
-#: src/components/partials/EntriesTabsView.jsx:922
-msgid "entries.modals.select-location.button"
-msgstr "选项"
 
 #: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:83
 msgid "welcome-screen.slides.intro.headline"
@@ -267,7 +269,7 @@ msgstr "页"
 
 #: src/components/screens/Export/createPdfFile.js:169
 #: src/components/screens/Export/createPdfFile.js:172
-#: src/components/screens/Export/createPdfFile.js:573
+#: src/components/screens/Export/createPdfFile.js:576
 #: src/components/screens/Export/createPdfFile.js:65
 #: src/components/screens/Export/logic.js:44
 #: src/components/screens/Export/logic.js:94

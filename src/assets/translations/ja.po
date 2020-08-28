@@ -33,121 +33,123 @@ msgstr "共有"
 msgid "navigation.tips.label"
 msgstr "ヒント"
 
-#: src/components/partials/EntriesTabsView.jsx:641
+#: src/components/partials/EntriesTabsView.jsx:1005
+msgid "entries.modals.select-location.button"
+msgstr "選択する"
+
+#: src/components/partials/EntriesTabsView.jsx:696
 #: src/components/screens/Export/createPdfFile.js:303
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "連絡先"
 
-#: src/components/partials/EntriesTabsView.jsx:651
+#: src/components/partials/EntriesTabsView.jsx:706
 #: src/components/screens/Export/createPdfFile.js:389
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "場所"
 
-#: src/components/partials/EntriesTabsView.jsx:663
+#: src/components/partials/EntriesTabsView.jsx:718
 msgid "entries.persons.list.new"
 msgstr "新しい連絡先"
 
-#: src/components/partials/EntriesTabsView.jsx:684
-#: src/components/partials/EntriesTabsView.jsx:734
+#: src/components/partials/EntriesTabsView.jsx:739
+#: src/components/partials/EntriesTabsView.jsx:789
 msgid "entries.search.list.empty"
 msgstr "何も見つかりませんでした。"
 
-#: src/components/partials/EntriesTabsView.jsx:691
+#: src/components/partials/EntriesTabsView.jsx:746
 msgid "entries.persons.list.empty"
 msgstr ""
 "連絡先はまだ追加されていません。 すぐに開始するには、電話帳から連絡先をイン"
 "ポートしてください。"
 
-#: src/components/partials/EntriesTabsView.jsx:695
+#: src/components/partials/EntriesTabsView.jsx:750
 msgid "entries.persons.list.import.button"
 msgstr "今すぐインポート"
 
-#: src/components/partials/EntriesTabsView.jsx:714
+#: src/components/partials/EntriesTabsView.jsx:769
 msgid "entries.locations.list.new"
 msgstr "新しい場所"
 
-#: src/components/partials/EntriesTabsView.jsx:737
+#: src/components/partials/EntriesTabsView.jsx:792
 msgid "entries.locations.list.empty"
 msgstr ""
 "場所がまだ作成されていません。 今から開始し、最初の場所を作成してください。"
 
-#: src/components/partials/EntriesTabsView.jsx:753
+#: src/components/partials/EntriesTabsView.jsx:808
 msgid "entries.selection.add"
 msgstr "選択を追加"
 
-#: src/components/partials/EntriesTabsView.jsx:765
+#: src/components/partials/EntriesTabsView.jsx:820
 msgid "entries.modals.update-person.headline"
 msgstr "連絡先を編集"
 
-#: src/components/partials/EntriesTabsView.jsx:766
+#: src/components/partials/EntriesTabsView.jsx:821
 msgid "entries.modals.new-person.headline"
 msgstr "新しい連絡先"
 
-#: src/components/partials/EntriesTabsView.jsx:777
+#: src/components/partials/EntriesTabsView.jsx:832
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "名前"
 
-#: src/components/partials/EntriesTabsView.jsx:789
+#: src/components/partials/EntriesTabsView.jsx:844
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "電話"
 
-#: src/components/partials/EntriesTabsView.jsx:802
+#: src/components/partials/EntriesTabsView.jsx:857
 msgid "entries.modals.update-person.button"
 msgstr "セーブ"
 
-#: src/components/partials/EntriesTabsView.jsx:803
+#: src/components/partials/EntriesTabsView.jsx:858
 msgid "entries.modals.new-person.button"
 msgstr "追加"
 
-#: src/components/partials/EntriesTabsView.jsx:815
+#: src/components/partials/EntriesTabsView.jsx:870
 msgid "entries.modals.update-location.headline"
 msgstr "場所を編集"
 
-#: src/components/partials/EntriesTabsView.jsx:816
+#: src/components/partials/EntriesTabsView.jsx:871
 msgid "entries.modals.new-location.headline"
 msgstr "新しい場所"
 
-#: src/components/partials/EntriesTabsView.jsx:827
+#: src/components/partials/EntriesTabsView.jsx:882
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "タイトル"
 
-#: src/components/partials/EntriesTabsView.jsx:838
+#: src/components/partials/EntriesTabsView.jsx:893
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "説明"
 
-#: src/components/partials/EntriesTabsView.jsx:850
+#: src/components/partials/EntriesTabsView.jsx:905
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "電話"
 
-#: src/components/partials/EntriesTabsView.jsx:863
+#: src/components/partials/EntriesTabsView.jsx:918
 msgid "entries.modals.update-location.button"
 msgstr "セーブ"
 
-#: src/components/partials/EntriesTabsView.jsx:864
+#: src/components/partials/EntriesTabsView.jsx:919
 msgid "entries.modals.new-location.button"
 msgstr "追加"
 
-#: src/components/partials/EntriesTabsView.jsx:874
+#: src/components/partials/EntriesTabsView.jsx:929
 msgid "entries.modals.select-location.headline"
 msgstr "場所を選択"
 
-#: src/components/partials/EntriesTabsView.jsx:893
+#: src/components/partials/EntriesTabsView.jsx:948
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "説明"
 
-#: src/components/partials/EntriesTabsView.jsx:908
+#: src/components/partials/EntriesTabsView.jsx:979
+#: src/components/partials/EntriesTabsView.jsx:991
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/components/partials/EntriesTabsView.jsx:909
+#: src/components/partials/EntriesTabsView.jsx:980
+#: src/components/partials/EntriesTabsView.jsx:992
 msgid "Confirm"
 msgstr "確認"
-
-#: src/components/partials/EntriesTabsView.jsx:922
-msgid "entries.modals.select-location.button"
-msgstr "選択する"
 
 #: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:83
 msgid "welcome-screen.slides.intro.headline"
@@ -277,7 +279,7 @@ msgstr "ページ"
 
 #: src/components/screens/Export/createPdfFile.js:169
 #: src/components/screens/Export/createPdfFile.js:172
-#: src/components/screens/Export/createPdfFile.js:573
+#: src/components/screens/Export/createPdfFile.js:576
 #: src/components/screens/Export/createPdfFile.js:65
 #: src/components/screens/Export/logic.js:44
 #: src/components/screens/Export/logic.js:94

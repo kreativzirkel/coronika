@@ -105,7 +105,7 @@ const addHeaderFooter = (pdfDoc, days, exportTime, currentLanguage, fonts, showF
     if (showFooterHintForIrrelevantEntries) {
       page.drawText(footerHintText.toLowerCase(), {
         x: PAGE_MARGINS.LEFT,
-        y: PAGE_MARGINS.BOTTOM + footerHintTextHeight / 2,
+        y: PAGE_MARGINS.BOTTOM - footerHintTextHeight / 2,
         color: fontColorNotRelevant,
         font: footerHintTextFont,
         size: footerHintTextSize,
@@ -250,11 +250,11 @@ const createPdfFile = async (options = {}) => {
   });
 
   daysSorted.forEach((day) => {
-    day.locations.forEach(({ description, id, phone, title, timestamp }) => {
+    day.locations.forEach(({ description, id, phone, title, timestamp, timestampEnd }) => {
       if (Object.values(locations).find((l) => l.id === id)) {
         locations[id].counter += 1;
-        if (phone && !locations[id].phoneNumbers.contains(phone)) locations[id].phoneNumbers.push(phone);
-        locations[id].timestamps = [...locations[id].timestamps, { description, timestamp }];
+        if (phone && !locations[id].phoneNumbers.includes(phone)) locations[id].phoneNumbers.push(phone);
+        locations[id].timestamps = [...locations[id].timestamps, { description, timestamp, timestampEnd }];
         if (day.timestamp > locations[id].lastUsage) {
           locations[id].lastUsage = day.timestamp;
         }
@@ -265,7 +265,7 @@ const createPdfFile = async (options = {}) => {
           lastUsage: day.timestamp,
           phoneNumbers: phone ? [phone] : [],
           title,
-          timestamps: [{ description, timestamp }],
+          timestamps: [{ description, timestamp, timestampEnd }],
         };
       }
     });
@@ -506,8 +506,11 @@ const createPdfFile = async (options = {}) => {
 
         return 0;
       })
-      .forEach(({ description, timestamp }, i) => {
-        const timestampText = moment(timestamp).format('L LT');
+      .forEach(({ description, timestamp, timestampEnd }, i) => {
+        let timestampText = moment(timestamp).format('L LT');
+        if (timestampEnd > 0 && timestampEnd > timestamp)
+          timestampText = `${timestampText} - ${moment(timestampEnd).format('LT')}`;
+
         const timestampTextFont = chooseFontRegular(timestampText);
 
         const y =

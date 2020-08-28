@@ -20,13 +20,20 @@ const addSelection = (selection, navigation) => async (dispatch, getState) => {
     }
   });
 
-  selection.locations.forEach(({ description, id: locationId, timestamp: locationTimestamp }) => {
-    const location = locations.find(({ id }) => id === locationId);
-    const newLocation = { ...location, description, timestamp: locationTimestamp };
+  selection.locations.forEach(
+    ({ description, id: locationId, timestamp: locationTimestamp, timestampEnd: locationTimestampEnd }) => {
+      const location = locations.find(({ id }) => id === locationId);
+      const newLocation = {
+        ...location,
+        description,
+        timestamp: locationTimestamp,
+        timestampEnd: locationTimestampEnd,
+      };
 
-    dispatch(addLocationToDay(timestamp, newLocation));
-    dispatch(updateLastUsageOfLocation(locationId));
-  });
+      dispatch(addLocationToDay(timestamp, newLocation));
+      dispatch(updateLastUsageOfLocation(locationId));
+    }
+  );
 
   navigation.navigate('Day');
 };

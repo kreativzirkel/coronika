@@ -1,5 +1,6 @@
 import UilImport from '@iconscout/react-native-unicons/icons/uil-import';
 import UilLocationPinAlt from '@iconscout/react-native-unicons/icons/uil-location-pin-alt';
+import UilMinus from '@iconscout/react-native-unicons/icons/uil-minus';
 import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
 import UilTimes from '@iconscout/react-native-unicons/icons/uil-times';
 // import UilUsersAlt from '@iconscout/react-native-unicons/icons/uil-users-alt';
@@ -50,10 +51,14 @@ class EntriesTabsView extends React.Component {
 
     this.searchInput = React.createRef();
 
-    const { timestamp, showLocationsOnly, showPersonsOnly } = this.props;
+    const { timestamp, timestampEnd, showLocationsOnly, showPersonsOnly } = this.props;
 
     const now = moment();
     const selectLocationTimestamp = moment(timestamp || 0)
+      .hours(now.hours())
+      .minutes(now.minutes())
+      .valueOf();
+    const selectLocationTimestampEnd = moment(timestampEnd || timestamp || 0)
       .hours(now.hours())
       .minutes(now.minutes())
       .valueOf();
@@ -92,6 +97,7 @@ class EntriesTabsView extends React.Component {
       selectLocationDescription: '',
       selectLocationId: '',
       selectLocationTimestamp,
+      selectLocationTimestampEnd,
       selectLocationTitle: '',
     };
   }
@@ -259,6 +265,14 @@ class EntriesTabsView extends React.Component {
     this.setState({ isModalSelectLocationTimestampVisible: false });
   }
 
+  openModalSelectLocationTimestampEnd() {
+    this.setState({ isModalSelectLocationTimestampEndVisible: true });
+  }
+
+  closeModalSelectLocationTimestampEnd() {
+    this.setState({ isModalSelectLocationTimestampEndVisible: false });
+  }
+
   setActiveTab(activeTab) {
     this.setState({ activeTab });
 
@@ -298,7 +312,10 @@ class EntriesTabsView extends React.Component {
   }
 
   setSelectLocationTimestamp(selectLocationTimestamp) {
-    this.setState({ selectLocationTimestamp });
+    const { selectLocationTimestampEnd } = this.state;
+    const valueTimestampEnd =
+      selectLocationTimestamp < selectLocationTimestampEnd ? selectLocationTimestampEnd : selectLocationTimestamp;
+    this.setState({ selectLocationTimestamp, selectLocationTimestampEnd: valueTimestampEnd });
   }
 
   confirmSelectLocationTimestamp(selectLocationTimestamp) {
@@ -306,6 +323,21 @@ class EntriesTabsView extends React.Component {
 
     this.setSelectLocationTimestamp(timestamp);
     this.closeModalSelectLocationTimestamp();
+  }
+
+  setSelectLocationTimestampEnd(selectLocationTimestampEnd) {
+    const { selectLocationTimestamp } = this.state;
+    const valueTimestamp =
+      selectLocationTimestampEnd > selectLocationTimestamp ? selectLocationTimestamp : selectLocationTimestampEnd;
+
+    this.setState({ selectLocationTimestampEnd, selectLocationTimestamp: valueTimestamp });
+  }
+
+  confirmSelectLocationTimestampEnd(selectLocationTimestampEnd) {
+    const timestamp = moment(selectLocationTimestampEnd).valueOf();
+
+    this.setSelectLocationTimestampEnd(timestamp);
+    this.closeModalSelectLocationTimestampEnd();
   }
 
   togglePersonSelection(id) {
@@ -346,10 +378,21 @@ class EntriesTabsView extends React.Component {
   }
 
   addLocationToSelectedLocations() {
-    const { selectedEntries, selectLocationDescription, selectLocationId, selectLocationTimestamp } = this.state;
+    const {
+      selectedEntries,
+      selectLocationDescription,
+      selectLocationId,
+      selectLocationTimestamp,
+      selectLocationTimestampEnd,
+    } = this.state;
     const updatedSelection = [
       ...selectedEntries.locations,
-      { id: selectLocationId, description: selectLocationDescription, timestamp: selectLocationTimestamp },
+      {
+        id: selectLocationId,
+        description: selectLocationDescription,
+        timestamp: selectLocationTimestamp,
+        timestampEnd: selectLocationTimestampEnd,
+      },
     ];
     const updatedSelectedEntries = { ...selectedEntries, locations: updatedSelection };
 
@@ -444,6 +487,7 @@ class EntriesTabsView extends React.Component {
       isModalNewLocationVisible,
       isModalSelectLocationVisible,
       isModalSelectLocationTimestampVisible,
+      isModalSelectLocationTimestampEndVisible,
       isUpdatePersonMode,
       isUpdateLocationMode,
       newPersonName,
@@ -455,6 +499,7 @@ class EntriesTabsView extends React.Component {
       selectedEntries,
       selectLocationDescription,
       selectLocationTimestamp,
+      selectLocationTimestampEnd,
       selectLocationTitle,
     } = this.state;
 
@@ -578,6 +623,16 @@ class EntriesTabsView extends React.Component {
         color: '#000000',
         fontFamily: getFontFamilyRegular(),
         fontSize: vw(4),
+      },
+      modalTimeInputContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+      },
+      modalTimeInputWrapper: {
+        width: vw(38),
+      },
+      modalTimeInputDivider: {
+        marginTop: vw(4),
       },
       modalTimeInput: {
         backgroundColor: '#b0b0b1',
@@ -897,11 +952,27 @@ class EntriesTabsView extends React.Component {
               value={selectLocationDescription}
             />
 
-            <TouchableOpacity onPress={() => this.openModalSelectLocationTimestamp()}>
-              <View style={styles.modalTextInput}>
-                <Text style={styles.modalTextInputText}>{moment(selectLocationTimestamp).format('LT')}</Text>
+            <View style={styles.modalTimeInputContainer}>
+              <TouchableOpacity
+                onPress={() => this.openModalSelectLocationTimestamp()}
+                style={styles.modalTimeInputWrapper}>
+                <View style={styles.modalTextInput}>
+                  <Text style={styles.modalTextInputText}>{moment(selectLocationTimestamp).format('LT')}</Text>
+                </View>
+              </TouchableOpacity>
+
+              <View style={styles.modalTimeInputDivider}>
+                <UilMinus size={vw(7)} color={'#d6d6d6'} />
               </View>
-            </TouchableOpacity>
+
+              <TouchableOpacity
+                onPress={() => this.openModalSelectLocationTimestampEnd()}
+                style={styles.modalTimeInputWrapper}>
+                <View style={styles.modalTextInput}>
+                  <Text style={styles.modalTextInputText}>{moment(selectLocationTimestampEnd).format('LT')}</Text>
+                </View>
+              </TouchableOpacity>
+            </View>
 
             <View style={styles.modalTimeInput}>
               <DateTimePickerModal
@@ -914,6 +985,18 @@ class EntriesTabsView extends React.Component {
                 mode={'time'}
                 onCancel={() => this.closeModalSelectLocationTimestamp()}
                 onConfirm={(value) => this.confirmSelectLocationTimestamp(value)}
+              />
+
+              <DateTimePickerModal
+                cancelTextIOS={__('Cancel')}
+                confirmTextIOS={__('Confirm')}
+                customHeaderIOS={() => <View />}
+                date={new Date(selectLocationTimestampEnd)}
+                headerTextIOS={''}
+                isVisible={isModalSelectLocationTimestampEndVisible}
+                mode={'time'}
+                onCancel={() => this.closeModalSelectLocationTimestampEnd()}
+                onConfirm={(value) => this.confirmSelectLocationTimestampEnd(value)}
               />
             </View>
 
