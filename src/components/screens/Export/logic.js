@@ -113,10 +113,11 @@ const createExport = () => async (dispatch, getState) => {
 
   const {
     dashboard: { days },
+    directory: { persons: directoryPersons, locations: directoryLocations },
     i18n: { currentLanguage },
   } = getState();
 
-  const { content, filename } = await createPdfFile({ currentLanguage, days });
+  const { content, filename } = await createPdfFile({ currentLanguage, days, directoryLocations, directoryPersons });
   const pdfPath = `${exportFileTempDirectory}/${filename}`;
 
   dispatch(setExportFilename(filename));

@@ -49,7 +49,10 @@ export const sortByCounterAndTitle = (a, b) => {
   return sortResult;
 };
 
-const mapStateToProps = ({ dashboard: { days } }) => {
+const mapStateToProps = ({
+  dashboard: { days },
+  directory: { locations: directoryLocations, persons: directoryPersons },
+}) => {
   const total = Object.values(days)
     .map(({ persons, locations }) => ({
       persons: persons.map(({ id }) => id),
@@ -85,7 +88,9 @@ const mapStateToProps = ({ dashboard: { days } }) => {
       if (Object.values(locations).find((l) => l.id === id)) {
         locations[id].counter += 1;
       } else {
-        locations[id] = { counter: 1, id, title };
+        const defaultLocationTitle = directoryLocations?.find((l) => l.id === id)?.title;
+
+        locations[id] = { counter: 1, id, title: defaultLocationTitle || title };
       }
     });
 
@@ -93,7 +98,9 @@ const mapStateToProps = ({ dashboard: { days } }) => {
       if (Object.values(persons).find((p) => p.id === id)) {
         persons[id].counter += 1;
       } else {
-        persons[id] = { counter: 1, fullName, id };
+        const defaultPersonFullName = directoryPersons?.find((p) => p.id === id)?.fullName;
+
+        persons[id] = { counter: 1, fullName: defaultPersonFullName || fullName, id };
       }
     });
   });

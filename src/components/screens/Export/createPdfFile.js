@@ -153,7 +153,7 @@ const addHeaderFooter = (pdfDoc, days, exportTime, currentLanguage, fonts, showF
 };
 
 const createPdfFile = async (options = {}) => {
-  const { currentLanguage, days } = options;
+  const { currentLanguage, days, directoryLocations, directoryPersons } = options;
 
   let showFooterHintForIrrelevantEntries = false;
   const exportTime = new Date();
@@ -259,26 +259,40 @@ const createPdfFile = async (options = {}) => {
           locations[id].lastUsage = day.timestamp;
         }
       } else {
+        const defaultLocationPhone = directoryLocations?.find((l) => l.id === id)?.phone;
+        const defaultLocationTitle = directoryLocations?.find((l) => l.id === id)?.title;
+
         locations[id] = {
           counter: 1,
           id,
           lastUsage: day.timestamp,
-          phoneNumbers: phone ? [phone] : [],
-          title,
+          phoneNumbers: defaultLocationPhone ? [defaultLocationPhone] : [],
+          title: defaultLocationTitle || title,
           timestamps: [{ description, timestamp, timestampEnd }],
         };
+
+        if (phone && !locations[id].phoneNumbers.includes(phone)) locations[id].phoneNumbers.push(phone);
       }
     });
 
     day.persons.forEach(({ fullName, id, phoneNumbers }) => {
       if (Object.values(persons).find((p) => p.id === id)) {
         persons[id].counter += 1;
-        persons[id].phoneNumbers = { ...persons[id].phoneNumbers, ...phoneNumbers };
+        persons[id].phoneNumbers = [...persons[id].phoneNumbers, ...phoneNumbers];
         if (day.timestamp > persons[id].lastUsage) {
           persons[id].lastUsage = day.timestamp;
         }
       } else {
-        persons[id] = { counter: 1, fullName, id, phoneNumbers, lastUsage: day.timestamp };
+        const defaultPersonFullName = directoryPersons?.find((p) => p.id === id)?.fullName;
+        const defaultPersonPhoneNumbers = directoryPersons?.find((p) => p.id === id)?.phoneNumbers;
+
+        persons[id] = {
+          counter: 1,
+          fullName: defaultPersonFullName || fullName,
+          id,
+          phoneNumbers: [...defaultPersonPhoneNumbers, ...phoneNumbers],
+          lastUsage: day.timestamp,
+        };
       }
     });
   });
@@ -367,7 +381,13 @@ const createPdfFile = async (options = {}) => {
       size: entryNameTextSize,
     });
 
-    const numbers = [...new Set(Object.values(phoneNumbers).map(({ number }) => number.toString().replace(/\s/g, '')))];
+    const numbers = [
+      ...new Set(
+        phoneNumbers
+          .map(({ number }) => number.toString().replace(/\s/g, ''))
+          .filter((number) => number.trim().length > 0)
+      ),
+    ];
     const numbersText = numbers.join(', ');
 
     page.drawText(numbersText, {
@@ -488,7 +508,9 @@ const createPdfFile = async (options = {}) => {
       size: entryNameTextSize,
     });
 
-    const numbers = [...new Set(phoneNumbers.map((number) => number.replace(/\s/g, '')))];
+    const numbers = [
+      ...new Set(phoneNumbers.map((number) => number.replace(/\s/g, '')).filter((number) => number.trim().length > 0)),
+    ];
     const numbersText = numbers.join(', ');
 
     page.drawText(numbersText, {
