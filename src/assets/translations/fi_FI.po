@@ -7,7 +7,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 
-#: src/components/App/ui.jsx:144
+#: src/components/App/ui.jsx:100
+msgid "navigation.dashboard.label"
+msgstr "Päiväkirja"
+
+#: src/components/App/ui.jsx:103
+msgid "navigation.share.label"
+msgstr "Jaa"
+
+#: src/components/App/ui.jsx:106
+msgid "navigation.tips.label"
+msgstr "Vinkit"
+
+#: src/components/App/ui.jsx:161
 msgid "app.share.message"
 msgstr ""
 "Älä anna koronaviruksen suistaa itseäsi paniikkiin. Pysy ajan tasalla ja "
@@ -16,139 +28,139 @@ msgstr ""
 "luotettavista lähteistä. Pysy terveenä ja muista pestä kätesi säännöllisesti!"
 "✋😉 https://coronika.app/"
 
-#: src/components/App/ui.jsx:75
+#: src/components/App/ui.jsx:97
 msgid "navigation.directory.label"
 msgstr "Hakemisto"
 
-#: src/components/App/ui.jsx:78
-msgid "navigation.dashboard.label"
-msgstr "Päiväkirja"
-
-#: src/components/App/ui.jsx:81
-msgid "navigation.share.label"
-msgstr "Jaa"
-
-#: src/components/App/ui.jsx:84
-msgid "navigation.tips.label"
-msgstr "Vinkit"
-
-#: src/components/partials/EntriesTabsView.jsx:1005
-msgid "entries.modals.select-location.button"
-msgstr "Valitse"
-
-#: src/components/partials/EntriesTabsView.jsx:696
-#: src/components/screens/Export/createPdfFile.js:303
+#: src/components/partials/EntriesTabsView/index.jsx:831
+#: src/components/screens/Export/createPdfFile.js:317
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "Yhteystiedot"
 
-#: src/components/partials/EntriesTabsView.jsx:706
-#: src/components/screens/Export/createPdfFile.js:389
+#: src/components/partials/EntriesTabsView/index.jsx:839
+#: src/components/screens/Export/createPdfFile.js:409
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "Sijainnit"
 
-#: src/components/partials/EntriesTabsView.jsx:718
+#: src/components/partials/EntriesTabsView/index.jsx:851
 msgid "entries.persons.list.new"
 msgstr "Uusi yhteystieto"
 
-#: src/components/partials/EntriesTabsView.jsx:739
-#: src/components/partials/EntriesTabsView.jsx:789
+#: src/components/partials/EntriesTabsView/index.jsx:871
+#: src/components/partials/EntriesTabsView/index.jsx:922
 msgid "entries.search.list.empty"
 msgstr "Hakusi ei tuottanut tuloksia."
 
-#: src/components/partials/EntriesTabsView.jsx:746
+#: src/components/partials/EntriesTabsView/index.jsx:878
 msgid "entries.persons.list.empty"
 msgstr ""
 "Et ole vielä luonut yhteystietoa. Aloittaaksesi heti, voit tuoda "
 "yhteystietoja puhelinluettelosta."
 
-#: src/components/partials/EntriesTabsView.jsx:750
+#: src/components/partials/EntriesTabsView/index.jsx:886
 msgid "entries.persons.list.import.button"
 msgstr "Tuo nyt"
 
-#: src/components/partials/EntriesTabsView.jsx:769
+#: src/components/partials/EntriesTabsView/index.jsx:903
 msgid "entries.locations.list.new"
 msgstr "Uusi sijainti"
 
-#: src/components/partials/EntriesTabsView.jsx:792
+#: src/components/partials/EntriesTabsView/index.jsx:925
 msgid "entries.locations.list.empty"
 msgstr ""
 "Et ole vielä luonut sijaintia. Aloita nyt ja luo ensimmäinen sijaintisi."
 
-#: src/components/partials/EntriesTabsView.jsx:808
+#: src/components/partials/EntriesTabsView/index.jsx:941
 msgid "entries.selection.add"
 msgstr "Lisää valinta"
 
-#: src/components/partials/EntriesTabsView.jsx:820
-msgid "entries.modals.update-person.headline"
-msgstr "Muokkaa yhteystietoa"
-
-#: src/components/partials/EntriesTabsView.jsx:821
-msgid "entries.modals.new-person.headline"
-msgstr "Uusi yhteystieto"
-
-#: src/components/partials/EntriesTabsView.jsx:832
-msgid "entries.modals.new-person.placeholder.name"
-msgstr "Nimi"
-
-#: src/components/partials/EntriesTabsView.jsx:844
-msgid "entries.modals.new-person.placeholder.phone-number"
-msgstr "Puhelin"
-
-#: src/components/partials/EntriesTabsView.jsx:857
+#: src/components/partials/EntriesTabsView/index.jsx:951
 msgid "entries.modals.update-person.button"
 msgstr "Tallenna"
 
-#: src/components/partials/EntriesTabsView.jsx:858
+#: src/components/partials/EntriesTabsView/index.jsx:951
 msgid "entries.modals.new-person.button"
 msgstr "Lisää"
 
-#: src/components/partials/EntriesTabsView.jsx:870
-msgid "entries.modals.update-location.headline"
-msgstr "Muokkaa sijaintia"
+#: src/components/partials/EntriesTabsView/index.jsx:954
+msgid "entries.modals.update-person.headline"
+msgstr "Muokkaa yhteystietoa"
 
-#: src/components/partials/EntriesTabsView.jsx:871
-msgid "entries.modals.new-location.headline"
-msgstr "Uusi sijainti"
+#: src/components/partials/EntriesTabsView/index.jsx:954
+msgid "entries.modals.new-person.headline"
+msgstr "Uusi yhteystieto"
 
-#: src/components/partials/EntriesTabsView.jsx:882
-msgid "entries.modals.new-location.placeholder.title"
-msgstr "Otsikko"
-
-#: src/components/partials/EntriesTabsView.jsx:893
-msgid "entries.modals.new-location.placeholder.description"
-msgstr "Kuvaus"
-
-#: src/components/partials/EntriesTabsView.jsx:905
-msgid "entries.modals.new-location.placeholder.phone-number"
-msgstr "Puhelin"
-
-#: src/components/partials/EntriesTabsView.jsx:918
+#: src/components/partials/EntriesTabsView/index.jsx:969
+#: src/components/partials/EntriesTabsView/index.jsx:991
 msgid "entries.modals.update-location.button"
 msgstr "Tallenna"
 
-#: src/components/partials/EntriesTabsView.jsx:919
+#: src/components/partials/EntriesTabsView/index.jsx:970
 msgid "entries.modals.new-location.button"
 msgstr "Lisää"
 
-#: src/components/partials/EntriesTabsView.jsx:929
+#: src/components/partials/EntriesTabsView/index.jsx:974
+#: src/components/partials/EntriesTabsView/index.jsx:998
+msgid "entries.modals.update-location.headline"
+msgstr "Muokkaa sijaintia"
+
+#: src/components/partials/EntriesTabsView/index.jsx:975
+msgid "entries.modals.new-location.headline"
+msgstr "Uusi sijainti"
+
+#: src/components/partials/EntriesTabsView/index.jsx:992
+msgid "entries.modals.select-location.button"
+msgstr "Valitse"
+
+#: src/components/partials/EntriesTabsView/index.jsx:999
 msgid "entries.modals.select-location.headline"
 msgstr "Valitse sijainti"
 
-#: src/components/partials/EntriesTabsView.jsx:948
+#: src/components/partials/EntriesTabsView/Modals.jsx:207
+msgid "entries.modals.new-person.placeholder.name"
+msgstr "Nimi"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:219
+msgid "entries.modals.new-person.placeholder.phone-number"
+msgstr "Puhelin"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:292
+msgid "entries.modals.new-location.placeholder.title"
+msgstr "Otsikko"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:303
+msgid "entries.modals.new-location.placeholder.description"
+msgstr "Kuvaus"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:315
+msgid "entries.modals.new-location.placeholder.phone-number"
+msgstr "Puhelin"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:451
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Kuvaus"
 
-#: src/components/partials/EntriesTabsView.jsx:979
-#: src/components/partials/EntriesTabsView.jsx:991
+#: src/components/partials/EntriesTabsView/Modals.jsx:478
+#: src/components/partials/EntriesTabsView/Modals.jsx:490
 msgid "Cancel"
 msgstr "Peruuta"
 
-#: src/components/partials/EntriesTabsView.jsx:980
-#: src/components/partials/EntriesTabsView.jsx:992
+#: src/components/partials/EntriesTabsView/Modals.jsx:479
+#: src/components/partials/EntriesTabsView/Modals.jsx:491
 msgid "Confirm"
 msgstr "Vahvista"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:587
+#: src/components/partials/EntriesTabsView/Modals.jsx:659
+msgid "entries.modals.more.edit"
+msgstr "muokata"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:593
+#: src/components/partials/EntriesTabsView/Modals.jsx:667
+msgid "entries.modals.more.delete"
+msgstr "poistaa"
 
 #: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:83
 msgid "welcome-screen.slides.intro.headline"
@@ -195,7 +207,7 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Aloita nyt"
 
-#: src/components/screens/About.jsx:57 src/components/screens/Menu.jsx:109
+#: src/components/screens/About.jsx:57 src/components/screens/Menu.jsx:123
 msgid "about-screen.header.headline"
 msgstr "Coronikasta"
 
@@ -203,48 +215,48 @@ msgstr "Coronikasta"
 msgid "add-entry-screen.header.headline"
 msgstr "Lisää merkintä"
 
-#: src/components/screens/Dashboard/ui.jsx:149
-#: src/components/screens/Menu.jsx:128
+#: src/components/screens/Dashboard/ui.jsx:173
+#: src/components/screens/Menu.jsx:138
 msgid "menu-screen.header.headline"
 msgstr "Valikko"
 
-#: src/components/screens/Dashboard/ui.jsx:159
+#: src/components/screens/Dashboard/ui.jsx:183
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Napsauta tämän päivän päivämäärää kirjataksesi ylös ensimmäiset tapaamisesi "
 "tai sijaintisi."
 
-#: src/components/screens/Dashboard/ui.jsx:161
+#: src/components/screens/Dashboard/ui.jsx:185
 msgid "Close"
 msgstr "Sulje"
 
-#: src/components/screens/Dashboard/ui.jsx:178
+#: src/components/screens/Dashboard/ui.jsx:206
 msgid "dashboard-screen.list.load-more"
 msgstr "lataa lisää"
 
-#: src/components/screens/Day/ui.jsx:58
+#: src/components/screens/Day/ui.jsx:73
 msgid "day-screen.header.headline"
 msgstr "Päivittäinen yleiskatsaus"
 
-#: src/components/screens/Day/ui.jsx:65
+#: src/components/screens/Day/ui.jsx:86
 msgid "day-screen.locations.empty"
 msgstr "Et ole lisännyt yhtään sijaintia tälle päivälle."
 
-#: src/components/screens/Day/ui.jsx:66
+#: src/components/screens/Day/ui.jsx:87
 msgid "day-screen.persons.empty"
 msgstr "Et ole lisännyt yhteystietoja tälle päivälle."
 
-#: src/components/screens/Day/ui.jsx:77
+#: src/components/screens/Day/ui.jsx:99
 msgid "day-screen.entries.add"
 msgstr "Lisää merkintä"
 
-#: src/components/screens/Directory/logic.js:33
-#: src/components/screens/Directory/logic.js:67
+#: src/components/screens/Directory/importPersons.js:49
+#: src/components/screens/Directory/importPersons.js:59
 msgid "directory-screen.alerts.import-persons.missing-permission.title"
 msgstr "Puuttuu lupa"
 
-#: src/components/screens/Directory/logic.js:34
-#: src/components/screens/Directory/logic.js:68
+#: src/components/screens/Directory/importPersons.js:50
+#: src/components/screens/Directory/importPersons.js:60
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
 msgstr ""
 "Anna sovelluksen käyttää laitteesi yksityisyysasetuksissa olevia "
@@ -258,21 +270,21 @@ msgstr "Tuonti"
 msgid "directory-screen.header.headline"
 msgstr "Hallinnoi hakemistoa"
 
-#: src/components/screens/Directory/ui.jsx:158
+#: src/components/screens/Directory/ui.jsx:164
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Tuo yhteystietoja"
 
-#: src/components/screens/Directory/ui.jsx:164
+#: src/components/screens/Directory/ui.jsx:170
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Tuo yhteystietoja puhelimestasi, jotta voit aloittaa heti. Kaikki "
 "yhteystiedot varastoidaan paikallisesti. Tietoja ei seurata tai jaeta."
 
-#: src/components/screens/Directory/ui.jsx:170
+#: src/components/screens/Directory/ui.jsx:176
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Tuodaan ..."
 
-#: src/components/screens/Directory/ui.jsx:171
+#: src/components/screens/Directory/ui.jsx:177
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Tuo nyt"
 
@@ -282,7 +294,7 @@ msgstr "sivu"
 
 #: src/components/screens/Export/createPdfFile.js:169
 #: src/components/screens/Export/createPdfFile.js:172
-#: src/components/screens/Export/createPdfFile.js:576
+#: src/components/screens/Export/createPdfFile.js:598
 #: src/components/screens/Export/createPdfFile.js:65
 #: src/components/screens/Export/logic.js:44
 #: src/components/screens/Export/logic.js:94
@@ -290,7 +302,7 @@ msgstr "sivu"
 msgid "export-screen.header.headline"
 msgstr "Vie"
 
-#: src/components/screens/Export/createPdfFile.js:292
+#: src/components/screens/Export/createPdfFile.js:306
 msgid "quantity"
 msgstr "määrä"
 
@@ -350,55 +362,55 @@ msgstr "Viedään ..."
 msgid "export-screen.export.button.default"
 msgstr "Vie nyt"
 
-#: src/components/screens/Export/ui.jsx:169
+#: src/components/screens/Export/ui.jsx:174
 msgid "export-screen.modals.export-completed.headline"
 msgstr "Vienti valmis"
 
-#: src/components/screens/Export/ui.jsx:175
+#: src/components/screens/Export/ui.jsx:180
 msgid "export-screen.modals.export-completed.text"
 msgstr ""
 "Yleiskatsauksen mukainen PDF-tiedosto luotiin onnistuneesti. Voit nyt "
 "tallentaa tai jakaa tiedoston."
 
-#: src/components/screens/Export/ui.jsx:180
+#: src/components/screens/Export/ui.jsx:185
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "Tallenna"
 
-#: src/components/screens/Legal.jsx:170 src/components/screens/Menu.jsx:117
+#: src/components/screens/Legal.jsx:188 src/components/screens/Menu.jsx:131
 msgid "legal-screen.header.headline"
 msgstr "oikeudellinen"
 
-#: src/components/screens/Legal.jsx:177
+#: src/components/screens/Legal.jsx:195
 msgid "legal-screen.tabs.privacy.label"
 msgstr "Yksityisyys"
 
-#: src/components/screens/Legal.jsx:182
+#: src/components/screens/Legal.jsx:200
 msgid "legal-screen.tabs.imprint.label"
 msgstr "Jälki"
 
-#: src/components/screens/Legal.jsx:187
+#: src/components/screens/Legal.jsx:205
 msgid "legal-screen.tabs.licenses.label"
 msgstr "lisenssit"
 
-#: src/components/screens/Legal.jsx:197 src/components/screens/Legal.jsx:213
-#: src/components/screens/Legal.jsx:242
+#: src/components/screens/Legal.jsx:215 src/components/screens/Legal.jsx:231
+#: src/components/screens/Legal.jsx:260
 msgid "legal-screen.privacy.section-1.headline"
 msgstr "Sovelluksen tiedonkäsittely"
 
-#: src/components/screens/Legal.jsx:198 src/components/screens/Legal.jsx:215
-#: src/components/screens/Legal.jsx:244
+#: src/components/screens/Legal.jsx:216 src/components/screens/Legal.jsx:233
+#: src/components/screens/Legal.jsx:262
 msgid "legal-screen.privacy.section-1.text"
 msgstr ""
 "App Coronika käsittelee henkilökohtaisia ja sijaintiin liittyviä tietoja "
 "yksinomaan paikallisesti käyttäjän älypuhelimella."
 
-#: src/components/screens/Legal.jsx:199 src/components/screens/Legal.jsx:217
-#: src/components/screens/Legal.jsx:246
+#: src/components/screens/Legal.jsx:217 src/components/screens/Legal.jsx:235
+#: src/components/screens/Legal.jsx:264
 msgid "legal-screen.privacy.section-2.headline"
 msgstr "Henkilökohtaiset tiedot"
 
-#: src/components/screens/Legal.jsx:200 src/components/screens/Legal.jsx:219
-#: src/components/screens/Legal.jsx:248
+#: src/components/screens/Legal.jsx:218 src/components/screens/Legal.jsx:237
+#: src/components/screens/Legal.jsx:266
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
 "Käyttäjä voi luoda yhteystietoja sovelluksen sisällä. Nimi ja puhelinnumero "
@@ -408,13 +420,13 @@ msgstr ""
 "käyttäjän käsissä. Tietoja ei koskaan siirretä sovelluksen tarjoajalle tai "
 "kolmansille osapuolille."
 
-#: src/components/screens/Legal.jsx:201 src/components/screens/Legal.jsx:221
-#: src/components/screens/Legal.jsx:250
+#: src/components/screens/Legal.jsx:219 src/components/screens/Legal.jsx:239
+#: src/components/screens/Legal.jsx:268
 msgid "legal-screen.privacy.section-3.headline"
 msgstr "Sijaintiin perustuvat tiedot"
 
-#: src/components/screens/Legal.jsx:202 src/components/screens/Legal.jsx:223
-#: src/components/screens/Legal.jsx:252
+#: src/components/screens/Legal.jsx:220 src/components/screens/Legal.jsx:241
+#: src/components/screens/Legal.jsx:270
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
 "Käyttäjä voi luoda sijainteja sovelluksessa. Paikan nimi ja kuvaus "
@@ -424,13 +436,13 @@ msgstr ""
 "älypuhelimessa, eikä niitä välitetä sovelluksen tarjoajalle tai kolmansille "
 "osapuolille."
 
-#: src/components/screens/Legal.jsx:203 src/components/screens/Legal.jsx:225
-#: src/components/screens/Legal.jsx:254
+#: src/components/screens/Legal.jsx:221 src/components/screens/Legal.jsx:243
+#: src/components/screens/Legal.jsx:272
 msgid "legal-screen.privacy.section-4.headline"
 msgstr "Päiväkirja"
 
-#: src/components/screens/Legal.jsx:204 src/components/screens/Legal.jsx:227
-#: src/components/screens/Legal.jsx:256
+#: src/components/screens/Legal.jsx:222 src/components/screens/Legal.jsx:245
+#: src/components/screens/Legal.jsx:274
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
 "Päiväkirjassa käyttäjä määrittää päivittäin henkilöt ja paikat yksittäisiin "
@@ -439,13 +451,13 @@ msgstr ""
 "älypuhelimella, eikä niitä välitetä sovelluksen tarjoajalle tai kolmansille "
 "osapuolille."
 
-#: src/components/screens/Legal.jsx:205 src/components/screens/Legal.jsx:229
-#: src/components/screens/Legal.jsx:258
+#: src/components/screens/Legal.jsx:223 src/components/screens/Legal.jsx:247
+#: src/components/screens/Legal.jsx:276
 msgid "legal-screen.privacy.section-5.headline"
 msgstr "Vie"
 
-#: src/components/screens/Legal.jsx:206 src/components/screens/Legal.jsx:231
-#: src/components/screens/Legal.jsx:260
+#: src/components/screens/Legal.jsx:224 src/components/screens/Legal.jsx:249
+#: src/components/screens/Legal.jsx:278
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
 "Sovelluksessa on vientitoiminto, jotta käyttäjä voi viedä osan päiväkirjasta "
@@ -458,13 +470,13 @@ msgstr ""
 "vastuuntuntoisesta käsittelystä, eikä tämän pidä välittää sitä "
 "huolimattomasti."
 
-#: src/components/screens/Legal.jsx:207 src/components/screens/Legal.jsx:233
-#: src/components/screens/Legal.jsx:262
+#: src/components/screens/Legal.jsx:225 src/components/screens/Legal.jsx:251
+#: src/components/screens/Legal.jsx:280
 msgid "legal-screen.privacy.section-6.headline"
 msgstr "Tiedonsiirto ja seuranta"
 
-#: src/components/screens/Legal.jsx:208 src/components/screens/Legal.jsx:235
-#: src/components/screens/Legal.jsx:264
+#: src/components/screens/Legal.jsx:226 src/components/screens/Legal.jsx:253
+#: src/components/screens/Legal.jsx:282
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
 "Sovellus ei tarjoa automaattista seurantaa tai tiedonsiirtoa sovelluksen "
@@ -472,13 +484,13 @@ msgstr ""
 "Kuitenkin, silloinkin vain käyttäjä päättää kenelle tiedot siirretään. "
 "Muuten kaikki tiedot pysyvät paikallisesti käyttäjän älypuhelimella."
 
-#: src/components/screens/Legal.jsx:274 src/components/screens/Legal.jsx:286
-#: src/components/screens/Legal.jsx:307
+#: src/components/screens/Legal.jsx:292 src/components/screens/Legal.jsx:304
+#: src/components/screens/Legal.jsx:325
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "Coronika'-sovellusta ylläpitää"
 
-#: src/components/screens/Legal.jsx:275 src/components/screens/Legal.jsx:288
-#: src/components/screens/Legal.jsx:309
+#: src/components/screens/Legal.jsx:293 src/components/screens/Legal.jsx:306
+#: src/components/screens/Legal.jsx:327
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -495,13 +507,13 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:276 src/components/screens/Legal.jsx:290
-#: src/components/screens/Legal.jsx:311
+#: src/components/screens/Legal.jsx:294 src/components/screens/Legal.jsx:308
+#: src/components/screens/Legal.jsx:329
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "Vastuu sisällöstä"
 
-#: src/components/screens/Legal.jsx:277 src/components/screens/Legal.jsx:292
-#: src/components/screens/Legal.jsx:313
+#: src/components/screens/Legal.jsx:295 src/components/screens/Legal.jsx:310
+#: src/components/screens/Legal.jsx:331
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "Palveluntarjoajana olemme vastuussa omasta sisällöstämme näillä sivuilla "
@@ -514,13 +526,13 @@ msgstr ""
 "konkreettinen rikkomus. Jos saamme tietoomme tällaisia rikkomuksia, "
 "poistamme tällaisen sisällön heti."
 
-#: src/components/screens/Legal.jsx:278 src/components/screens/Legal.jsx:294
-#: src/components/screens/Legal.jsx:315
+#: src/components/screens/Legal.jsx:296 src/components/screens/Legal.jsx:312
+#: src/components/screens/Legal.jsx:333
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Vastuu linkeistä"
 
-#: src/components/screens/Legal.jsx:279 src/components/screens/Legal.jsx:296
-#: src/components/screens/Legal.jsx:317
+#: src/components/screens/Legal.jsx:297 src/components/screens/Legal.jsx:314
+#: src/components/screens/Legal.jsx:335
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Tarjouksemme sisältää linkkejä kolmansien osapuolien ulkopuolisille "
@@ -533,13 +545,13 @@ msgstr ""
 "järkeenkäypää ilman konkreettisia todisteita lain rikkomuksesta. Jos saamme "
 "tietoomme rikkomuksista, poistamme nämä linkit välittömästi."
 
-#: src/components/screens/Legal.jsx:280 src/components/screens/Legal.jsx:298
-#: src/components/screens/Legal.jsx:319
+#: src/components/screens/Legal.jsx:298 src/components/screens/Legal.jsx:316
+#: src/components/screens/Legal.jsx:337
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "Tekijänoikeudet"
 
-#: src/components/screens/Legal.jsx:281 src/components/screens/Legal.jsx:300
-#: src/components/screens/Legal.jsx:321
+#: src/components/screens/Legal.jsx:299 src/components/screens/Legal.jsx:318
+#: src/components/screens/Legal.jsx:339
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "Operaattorien luomaan sisältöön näillä sivuilla sovelletaan Saksan "
@@ -553,18 +565,18 @@ msgstr ""
 "tekijänoikeusloukkauksia, ilmoita meille siitä. Jos saamme tietoomme "
 "rikkomuksia, poistamme tällaisen sisällön heti."
 
-#: src/components/screens/Menu.jsx:113
+#: src/components/screens/Menu.jsx:127
 #: src/components/screens/Settings/ui.jsx:95
 msgid "settings-screen.header.headline"
 msgstr "Asetukset"
 
-#: src/components/screens/Menu.jsx:133
+#: src/components/screens/Menu.jsx:143
 msgid "menu-screen.intro.text"
 msgstr ""
 "Tärkeää ei ole levittää paniikkia, vaan luoda selkeyttä ja levittää "
 "paikkansapitävää tietoa."
 
-#: src/components/screens/Menu.jsx:171
+#: src/components/screens/Menu.jsx:181
 msgid "menu-screen.button.send-feedback"
 msgstr "Lähetä palautetta"
 
@@ -969,14 +981,14 @@ msgstr "Tänään"
 msgid "total"
 msgstr "Yhteensä"
 
-#: src/components/widgets/SearchBar.jsx:58
+#: src/components/widgets/SearchBar.jsx:78
 msgid "placeholder.search-input"
 msgstr "Hae"
 
-#: src/components/widgets/Tip.jsx:157
+#: src/components/widgets/Tip.jsx:156
 msgid "tips.sources.headline"
 msgstr "Lähteet"
 
-#: src/components/widgets/Tip.jsx:167
+#: src/components/widgets/Tip.jsx:166
 msgid "tips.sources.last-updated"
 msgstr "Viimeksi päivitetty:"

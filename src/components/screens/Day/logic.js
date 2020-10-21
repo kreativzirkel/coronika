@@ -1,8 +1,7 @@
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
-import { container } from '../../../utils/react';
 import withViewportUnits from '../../../utils/withViewportUnits';
-import { removePersonFromDay, removeLocationFromDay } from '../Dashboard/actions';
+import { addLocationToDay, removePersonFromDay, removeLocationFromDay } from '../Dashboard/actions';
 import Screen from './ui';
 
 const deletePersonFromDay = (personId) => async (dispatch, getState) => {
@@ -19,6 +18,34 @@ const deleteLocationFromDay = (locationId, description, locationTimestamp) => as
   } = getState();
 
   dispatch(removeLocationFromDay(timestamp, locationId, description, locationTimestamp));
+};
+
+const updateSelectedLocation = (locationOld, locationUpdated) => async (dispatch, getState) => {
+  const { id: locationOldId, description: locationOldDescription, timestamp: locationOldTimestamp } = locationOld;
+
+  dispatch(deleteLocationFromDay(locationOldId, locationOldDescription, locationOldTimestamp));
+
+  const {
+    id: locationUpdatedId,
+    description: locationUpdatedDescription,
+    timestamp: locationUpdatedTimestamp,
+    timestampEnd: locationUpdatedTimestampEnd,
+  } = locationUpdated;
+
+  const {
+    directory: { locations },
+    day: { timestamp },
+  } = getState();
+
+  const location = locations.find(({ id }) => id === locationUpdatedId);
+  const updatedLocation = {
+    ...location,
+    description: locationUpdatedDescription,
+    timestamp: locationUpdatedTimestamp,
+    timestampEnd: locationUpdatedTimestampEnd,
+  };
+
+  dispatch(addLocationToDay(timestamp, updatedLocation));
 };
 
 const personsSortingFunction = (a, b) => {
@@ -77,13 +104,11 @@ const mapDispatchToProps = (dispatch) => {
     deletePersonFromDay: (personId) => dispatch(deletePersonFromDay(personId)),
     deleteLocationFromDay: (locationId, description, time) =>
       dispatch(deleteLocationFromDay(locationId, description, time)),
+    updateSelectedLocation: (locationOld, locationUpdated) =>
+      dispatch(updateSelectedLocation(locationOld, locationUpdated)),
   };
 };
 
-const Container = container(Screen, {
-  componentDidMount() {},
-});
-
-const Day = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Container)));
+const Day = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Screen)));
 
 export default Day;

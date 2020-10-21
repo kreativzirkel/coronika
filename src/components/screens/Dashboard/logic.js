@@ -106,6 +106,10 @@ const mapStateToProps = ({ dashboard: { days, firstStartHintVisible } }) => {
     .sort((a, b) => daysSortingFunction(a, b))
     .map((timestamp) => days[timestamp]);
 
+  if (daysList.length > 0 && daysList.length < DAYS_OVERVIEW_MAX) {
+    daysList.push({ loadMore: true, timestamp: 'load-more' });
+  }
+
   const total = Object.values(days)
     .map(({ persons, locations }) => ({
       persons: persons.map(({ id }) => id),

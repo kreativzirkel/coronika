@@ -148,11 +148,17 @@ const Directory = ({
           deleteLocationItem={(id) => deleteLocation(id)}
           deletePersonItem={(id) => deletePerson(id)}
           disableDeleteImportedPersons
+          isDirectory
           locations={locations}
         />
       </View>
 
-      <Modal isVisible={isImportPersonsModalVisible} style={styles.modal}>
+      <Modal
+        hideModalContentWhileAnimating
+        isVisible={isImportPersonsModalVisible}
+        statusBarTranslucent
+        style={styles.modal}
+        useNativeDriver>
         <View style={styles.modalContent}>
           <View style={styles.modalHeader}>
             <Text style={styles.modalHeaderText}>{__('directory-screen.modals.import-persons.headline')}</Text>

@@ -294,28 +294,35 @@ const withI18n = (WrappedComponent) => {
   class I18n extends React.Component {
     unsubscribeStore;
 
-    constructor(props) {
-      super(props);
+    constructor(props, context) {
+      super(props, context);
+
+      const {
+        store: { getState },
+      } = context;
+      const {
+        i18n: { currentLanguage: i18nCurrentLanguage },
+      } = getState();
 
       this.state = {
-        currentLanguage: DEFAULT_LANGUAGE,
+        currentLanguage: i18nCurrentLanguage || DEFAULT_LANGUAGE,
       };
+
+      this.formatTimeDistance = this.formatTimeDistance.bind(this);
+      this.getFontFamilyBoldI18n = this.getFontFamilyBoldI18n.bind(this);
+      this.getFontFamilyRegularI18n = this.getFontFamilyRegularI18n.bind(this);
+      this.__i18n = this.__i18n.bind(this);
     }
 
     componentDidMount() {
       const {
-        store: { dispatch, getState, subscribe },
+        store: { getState, subscribe },
       } = this.context;
-      const {
-        i18n: { currentLanguage },
-      } = getState();
 
       this.unsubscribeStore = subscribe(() => {
         const { i18n } = getState();
         this.setState({ ...i18n });
       });
-
-      dispatch(changeLanguage(currentLanguage));
     }
 
     componentWillUnmount() {
@@ -431,12 +438,12 @@ const withI18n = (WrappedComponent) => {
         /* eslint-disable react/jsx-props-no-spreading */
         <WrappedComponent
           {...{ ...props, currentLanguage }}
-          formatTimeDistance={(start, end) => this.formatTimeDistance(start, end)}
-          getFontFamilyBold={(language) => this.getFontFamilyBoldI18n(language)}
-          getFontFamilyRegular={(language) => this.getFontFamilyRegularI18n(language)}
+          formatTimeDistance={this.formatTimeDistance}
+          getFontFamilyBold={this.getFontFamilyBoldI18n}
+          getFontFamilyRegular={this.getFontFamilyRegularI18n}
           isRTL={isRTLState}
           ref={forwardedRef}
-          __={(text, language) => this.__i18n(text, language)}
+          __={this.__i18n}
         />
         /* eslint-enable react/jsx-props-no-spreading */
       );

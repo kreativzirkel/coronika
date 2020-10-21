@@ -7,7 +7,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 
-#: src/components/App/ui.jsx:144
+#: src/components/App/ui.jsx:100
+msgid "navigation.dashboard.label"
+msgstr "දිනපොත"
+
+#: src/components/App/ui.jsx:103
+msgid "navigation.share.label"
+msgstr "බෙදාගන්න"
+
+#: src/components/App/ui.jsx:106
+msgid "navigation.tips.label"
+msgstr "ඉඟි"
+
+#: src/components/App/ui.jsx:161
 msgid "app.share.message"
 msgstr ""
 "කිරීටක වෛරසය ඔබව කලබලයට පත් කිරීමට ඉඩ නොදෙන්න. කොරෝනා වෛරසය ගැන දැන ගැනීමට සහ අනෙක් "
@@ -17,138 +29,138 @@ msgstr ""
 "✅…පිළිගත් තොරතුරු ප්‍රභවයන් භාවිතා කරන්න\n"
 "නිරෝගීව සිටින්න, නිතිපතා අත් සේදීමට මතක තබා ගන්න! ✋😉 https://coronika.app/"
 
-#: src/components/App/ui.jsx:75
+#: src/components/App/ui.jsx:97
 msgid "navigation.directory.label"
 msgstr "නාමාවලිය"
 
-#: src/components/App/ui.jsx:78
-msgid "navigation.dashboard.label"
-msgstr "දිනපොත"
-
-#: src/components/App/ui.jsx:81
-msgid "navigation.share.label"
-msgstr "බෙදාගන්න"
-
-#: src/components/App/ui.jsx:84
-msgid "navigation.tips.label"
-msgstr "ඉඟි"
-
-#: src/components/partials/EntriesTabsView.jsx:1005
-msgid "entries.modals.select-location.button"
-msgstr "තෝරන්න"
-
-#: src/components/partials/EntriesTabsView.jsx:696
-#: src/components/screens/Export/createPdfFile.js:303
+#: src/components/partials/EntriesTabsView/index.jsx:831
+#: src/components/screens/Export/createPdfFile.js:317
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "පුද්ගලයන්"
 
-#: src/components/partials/EntriesTabsView.jsx:706
-#: src/components/screens/Export/createPdfFile.js:389
+#: src/components/partials/EntriesTabsView/index.jsx:839
+#: src/components/screens/Export/createPdfFile.js:409
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "ස්ථාන"
 
-#: src/components/partials/EntriesTabsView.jsx:718
+#: src/components/partials/EntriesTabsView/index.jsx:851
 msgid "entries.persons.list.new"
 msgstr "නව පුද්ගලයෙක්"
 
-#: src/components/partials/EntriesTabsView.jsx:739
-#: src/components/partials/EntriesTabsView.jsx:789
+#: src/components/partials/EntriesTabsView/index.jsx:871
+#: src/components/partials/EntriesTabsView/index.jsx:922
 msgid "entries.search.list.empty"
 msgstr "ඔබගේ සෙවුමෙන් කිසිවක් සොයාගත නොහැකි විය."
 
-#: src/components/partials/EntriesTabsView.jsx:746
+#: src/components/partials/EntriesTabsView/index.jsx:878
 msgid "entries.persons.list.empty"
 msgstr ""
 "ඔබ තවම පුද්ගලයෙකු නිර්මාණය කර නැත. වහාම ආරම්භ කිරීම සඳහා, ඔබට ඔබගේ දුරකථන පොතෙන් "
 "පුද්ගලයින් ආනයනය කළ හැකිය."
 
-#: src/components/partials/EntriesTabsView.jsx:750
+#: src/components/partials/EntriesTabsView/index.jsx:886
 msgid "entries.persons.list.import.button"
 msgstr "දැන් ආයාත කරන්න"
 
-#: src/components/partials/EntriesTabsView.jsx:769
+#: src/components/partials/EntriesTabsView/index.jsx:903
 msgid "entries.locations.list.new"
 msgstr "නව ස්ථානය"
 
-#: src/components/partials/EntriesTabsView.jsx:792
+#: src/components/partials/EntriesTabsView/index.jsx:925
 msgid "entries.locations.list.empty"
 msgstr "ඔබ තවම ස්ථානයක් නිර්මාණය කර නැත. දැන් ආරම්භ කර ඔබේ පළමු ස්ථානය සාදන්න."
 
-#: src/components/partials/EntriesTabsView.jsx:808
+#: src/components/partials/EntriesTabsView/index.jsx:941
 msgid "entries.selection.add"
 msgstr "තේරීම එක් කරන්න"
 
-#: src/components/partials/EntriesTabsView.jsx:820
-msgid "entries.modals.update-person.headline"
-msgstr "පුද්ගල විස්තර සංස්කරණය කරන්න"
-
-#: src/components/partials/EntriesTabsView.jsx:821
-msgid "entries.modals.new-person.headline"
-msgstr "නව පුද්ගලයෙක්"
-
-#: src/components/partials/EntriesTabsView.jsx:832
-msgid "entries.modals.new-person.placeholder.name"
-msgstr "නම"
-
-#: src/components/partials/EntriesTabsView.jsx:844
-msgid "entries.modals.new-person.placeholder.phone-number"
-msgstr "දුරකතන අංකය"
-
-#: src/components/partials/EntriesTabsView.jsx:857
+#: src/components/partials/EntriesTabsView/index.jsx:951
 msgid "entries.modals.update-person.button"
 msgstr "සුරකින්න"
 
-#: src/components/partials/EntriesTabsView.jsx:858
+#: src/components/partials/EntriesTabsView/index.jsx:951
 msgid "entries.modals.new-person.button"
 msgstr "එකතු කරන්න"
 
-#: src/components/partials/EntriesTabsView.jsx:870
-msgid "entries.modals.update-location.headline"
-msgstr "ස්ථානය සංස්කරණය කරන්න"
+#: src/components/partials/EntriesTabsView/index.jsx:954
+msgid "entries.modals.update-person.headline"
+msgstr "පුද්ගල විස්තර සංස්කරණය කරන්න"
 
-#: src/components/partials/EntriesTabsView.jsx:871
-msgid "entries.modals.new-location.headline"
-msgstr "නව ස්ථානය"
+#: src/components/partials/EntriesTabsView/index.jsx:954
+msgid "entries.modals.new-person.headline"
+msgstr "නව පුද්ගලයෙක්"
 
-#: src/components/partials/EntriesTabsView.jsx:882
-msgid "entries.modals.new-location.placeholder.title"
-msgstr "ශීර්ෂය"
-
-#: src/components/partials/EntriesTabsView.jsx:893
-msgid "entries.modals.new-location.placeholder.description"
-msgstr "විස්තර"
-
-#: src/components/partials/EntriesTabsView.jsx:905
-msgid "entries.modals.new-location.placeholder.phone-number"
-msgstr "දුරකතන අංකය"
-
-#: src/components/partials/EntriesTabsView.jsx:918
+#: src/components/partials/EntriesTabsView/index.jsx:969
+#: src/components/partials/EntriesTabsView/index.jsx:991
 msgid "entries.modals.update-location.button"
 msgstr "සුරකින්න"
 
-#: src/components/partials/EntriesTabsView.jsx:919
+#: src/components/partials/EntriesTabsView/index.jsx:970
 msgid "entries.modals.new-location.button"
 msgstr "එකතු කරන්න"
 
-#: src/components/partials/EntriesTabsView.jsx:929
+#: src/components/partials/EntriesTabsView/index.jsx:974
+#: src/components/partials/EntriesTabsView/index.jsx:998
+msgid "entries.modals.update-location.headline"
+msgstr "ස්ථානය සංස්කරණය කරන්න"
+
+#: src/components/partials/EntriesTabsView/index.jsx:975
+msgid "entries.modals.new-location.headline"
+msgstr "නව ස්ථානය"
+
+#: src/components/partials/EntriesTabsView/index.jsx:992
+msgid "entries.modals.select-location.button"
+msgstr "තෝරන්න"
+
+#: src/components/partials/EntriesTabsView/index.jsx:999
 msgid "entries.modals.select-location.headline"
 msgstr "ස්ථානය තෝරන්න"
 
-#: src/components/partials/EntriesTabsView.jsx:948
+#: src/components/partials/EntriesTabsView/Modals.jsx:207
+msgid "entries.modals.new-person.placeholder.name"
+msgstr "නම"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:219
+msgid "entries.modals.new-person.placeholder.phone-number"
+msgstr "දුරකතන අංකය"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:292
+msgid "entries.modals.new-location.placeholder.title"
+msgstr "ශීර්ෂය"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:303
+msgid "entries.modals.new-location.placeholder.description"
+msgstr "විස්තර"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:315
+msgid "entries.modals.new-location.placeholder.phone-number"
+msgstr "දුරකතන අංකය"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:451
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "විස්තර"
 
-#: src/components/partials/EntriesTabsView.jsx:979
-#: src/components/partials/EntriesTabsView.jsx:991
+#: src/components/partials/EntriesTabsView/Modals.jsx:478
+#: src/components/partials/EntriesTabsView/Modals.jsx:490
 msgid "Cancel"
 msgstr "අවලංගු කරන්න"
 
-#: src/components/partials/EntriesTabsView.jsx:980
-#: src/components/partials/EntriesTabsView.jsx:992
+#: src/components/partials/EntriesTabsView/Modals.jsx:479
+#: src/components/partials/EntriesTabsView/Modals.jsx:491
 msgid "Confirm"
 msgstr "තහවුරු කරන්න"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:587
+#: src/components/partials/EntriesTabsView/Modals.jsx:659
+msgid "entries.modals.more.edit"
+msgstr "සංස්කරණය"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:593
+#: src/components/partials/EntriesTabsView/Modals.jsx:667
+msgid "entries.modals.more.delete"
+msgstr "මකන්න"
 
 #: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:83
 msgid "welcome-screen.slides.intro.headline"
@@ -192,7 +204,7 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "දැන් පටන් ගන්න"
 
-#: src/components/screens/About.jsx:57 src/components/screens/Menu.jsx:109
+#: src/components/screens/About.jsx:57 src/components/screens/Menu.jsx:123
 msgid "about-screen.header.headline"
 msgstr "කොරොනිකා තතු"
 
@@ -200,46 +212,46 @@ msgstr "කොරොනිකා තතු"
 msgid "add-entry-screen.header.headline"
 msgstr "ප්‍රවේශය එක් කරන්න"
 
-#: src/components/screens/Dashboard/ui.jsx:149
-#: src/components/screens/Menu.jsx:128
+#: src/components/screens/Dashboard/ui.jsx:173
+#: src/components/screens/Menu.jsx:138
 msgid "menu-screen.header.headline"
 msgstr "මෙනුව"
 
-#: src/components/screens/Dashboard/ui.jsx:159
+#: src/components/screens/Dashboard/ui.jsx:183
 msgid "dashboard-screen.first-start.hint"
 msgstr "ඔබගේ පළමු පුද්ගලයින් හෝ ස්ථාන ඇතුළත් කිරීමට අද දිනය තෝරන්න"
 
-#: src/components/screens/Dashboard/ui.jsx:161
+#: src/components/screens/Dashboard/ui.jsx:185
 msgid "Close"
 msgstr "වසන්න"
 
-#: src/components/screens/Dashboard/ui.jsx:178
+#: src/components/screens/Dashboard/ui.jsx:206
 msgid "dashboard-screen.list.load-more"
 msgstr "තවත් පටවන්න"
 
-#: src/components/screens/Day/ui.jsx:58
+#: src/components/screens/Day/ui.jsx:73
 msgid "day-screen.header.headline"
 msgstr "දෛනික දළ විශ්ලේෂණය"
 
-#: src/components/screens/Day/ui.jsx:65
+#: src/components/screens/Day/ui.jsx:86
 msgid "day-screen.locations.empty"
 msgstr "ඔබ මේ දිනය සඳහා කිසිදු ස්ථානයක් එකතු කර නැත."
 
-#: src/components/screens/Day/ui.jsx:66
+#: src/components/screens/Day/ui.jsx:87
 msgid "day-screen.persons.empty"
 msgstr "ඔබ මේ දිනය සඳහා කිසිදු පුද්ගලයෙකු එකතු කර නැත."
 
-#: src/components/screens/Day/ui.jsx:77
+#: src/components/screens/Day/ui.jsx:99
 msgid "day-screen.entries.add"
 msgstr "ප්‍රවේශය එක් කරන්න"
 
-#: src/components/screens/Directory/logic.js:33
-#: src/components/screens/Directory/logic.js:67
+#: src/components/screens/Directory/importPersons.js:49
+#: src/components/screens/Directory/importPersons.js:59
 msgid "directory-screen.alerts.import-persons.missing-permission.title"
 msgstr "අවසරය නොමැත"
 
-#: src/components/screens/Directory/logic.js:34
-#: src/components/screens/Directory/logic.js:68
+#: src/components/screens/Directory/importPersons.js:50
+#: src/components/screens/Directory/importPersons.js:60
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
 msgstr "ඔබගේ උපාංගයේ රහස්‍යතා සැකසුම් තුළ ඔබගේ සම්බන්ධතා වෙත ප්‍රවේශ වීමට යෙදුමට ඉඩ දෙන්න."
 
@@ -251,21 +263,21 @@ msgstr "ආනයන"
 msgid "directory-screen.header.headline"
 msgstr "නාමාවලිය කළමනාකරණය කරන්න"
 
-#: src/components/screens/Directory/ui.jsx:158
+#: src/components/screens/Directory/ui.jsx:164
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "පුද්ගලයින් ආනයනය කරන්න"
 
-#: src/components/screens/Directory/ui.jsx:164
+#: src/components/screens/Directory/ui.jsx:170
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "ඔබගේ දුරකථන පොතෙන් පුද්ගලයින් ආනයනය කරන්න එවිට ඔබට වහාම ආරම්භ කළ හැකිය. ඔබගේ සියලු "
 "පුද්ගලයින් දේශීයව ගබඩා කර ඇත. දත්ත කිසිවක් නිරීක්ෂණය කර හෝ බෙදාගෙන නොමැත."
 
-#: src/components/screens/Directory/ui.jsx:170
+#: src/components/screens/Directory/ui.jsx:176
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "ආනයනය ..."
 
-#: src/components/screens/Directory/ui.jsx:171
+#: src/components/screens/Directory/ui.jsx:177
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "දැන් ආයාත කරන්න"
 
@@ -275,7 +287,7 @@ msgstr "පිටුව"
 
 #: src/components/screens/Export/createPdfFile.js:169
 #: src/components/screens/Export/createPdfFile.js:172
-#: src/components/screens/Export/createPdfFile.js:576
+#: src/components/screens/Export/createPdfFile.js:598
 #: src/components/screens/Export/createPdfFile.js:65
 #: src/components/screens/Export/logic.js:44
 #: src/components/screens/Export/logic.js:94
@@ -283,7 +295,7 @@ msgstr "පිටුව"
 msgid "export-screen.header.headline"
 msgstr "අපනයන"
 
-#: src/components/screens/Export/createPdfFile.js:292
+#: src/components/screens/Export/createPdfFile.js:306
 msgid "quantity"
 msgstr "ප්‍රමාණය"
 
@@ -293,7 +305,7 @@ msgstr "මෙම ප්‍රවේශය දින 14 කට වඩා පැ�
 
 #: src/components/screens/Export/logic.js:57
 msgid "export-screen.alerts.save-file.success.title"
-msgstr ""
+msgstr "සාර්ථකව සුරකින ලදි"
 
 #: src/components/screens/Export/logic.js:58
 msgid "export-screen.alerts.save-file.success.message"
@@ -343,55 +355,55 @@ msgstr "අපනයනය ..."
 msgid "export-screen.export.button.default"
 msgstr "දැන් අපනයනය කරන්න"
 
-#: src/components/screens/Export/ui.jsx:169
+#: src/components/screens/Export/ui.jsx:174
 msgid "export-screen.modals.export-completed.headline"
 msgstr "අපනයනය අවසන්"
 
-#: src/components/screens/Export/ui.jsx:175
+#: src/components/screens/Export/ui.jsx:180
 msgid "export-screen.modals.export-completed.text"
 msgstr ""
 "ඔබගේ දළ විශ්ලේෂණය සහිත PDF ගොනුව සාර්ථකව නිර්මාණය කරන ලදි. ඔබට දැන් ගොනුව සුරැකීමට හෝ "
 "බෙදා ගැනීමට හැකිය."
 
-#: src/components/screens/Export/ui.jsx:180
+#: src/components/screens/Export/ui.jsx:185
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "සුරකින්න"
 
-#: src/components/screens/Legal.jsx:170 src/components/screens/Menu.jsx:117
+#: src/components/screens/Legal.jsx:188 src/components/screens/Menu.jsx:131
 msgid "legal-screen.header.headline"
 msgstr "නීතිමය"
 
-#: src/components/screens/Legal.jsx:177
+#: src/components/screens/Legal.jsx:195
 msgid "legal-screen.tabs.privacy.label"
 msgstr "පෞද්ගලිකත්වය"
 
-#: src/components/screens/Legal.jsx:182
+#: src/components/screens/Legal.jsx:200
 msgid "legal-screen.tabs.imprint.label"
 msgstr "මුද්‍රණය"
 
-#: src/components/screens/Legal.jsx:187
+#: src/components/screens/Legal.jsx:205
 msgid "legal-screen.tabs.licenses.label"
 msgstr "බලපත්ර"
 
-#: src/components/screens/Legal.jsx:197 src/components/screens/Legal.jsx:213
-#: src/components/screens/Legal.jsx:242
+#: src/components/screens/Legal.jsx:215 src/components/screens/Legal.jsx:231
+#: src/components/screens/Legal.jsx:260
 msgid "legal-screen.privacy.section-1.headline"
 msgstr "යෙදුමේ දත්ත සැකසීම"
 
-#: src/components/screens/Legal.jsx:198 src/components/screens/Legal.jsx:215
-#: src/components/screens/Legal.jsx:244
+#: src/components/screens/Legal.jsx:216 src/components/screens/Legal.jsx:233
+#: src/components/screens/Legal.jsx:262
 msgid "legal-screen.privacy.section-1.text"
 msgstr ""
 "ඇප් කොරොනිකා පුද්ගලික සහ ස්ථාන සම්බන්ධ දත්ත පරිශීලකයාගේ ස්මාර්ට් ජංගම දුරකතනයෙන් පමණක් දේශීයව "
 "සකසයි."
 
-#: src/components/screens/Legal.jsx:199 src/components/screens/Legal.jsx:217
-#: src/components/screens/Legal.jsx:246
+#: src/components/screens/Legal.jsx:217 src/components/screens/Legal.jsx:235
+#: src/components/screens/Legal.jsx:264
 msgid "legal-screen.privacy.section-2.headline"
 msgstr "පෞද්ගලික දත්ත"
 
-#: src/components/screens/Legal.jsx:200 src/components/screens/Legal.jsx:219
-#: src/components/screens/Legal.jsx:248
+#: src/components/screens/Legal.jsx:218 src/components/screens/Legal.jsx:237
+#: src/components/screens/Legal.jsx:266
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
 "පරිශීලකයාට යෙදුම තුළ පුද්ගලයින් නිර්මාණය කළ හැකිය. නම සහ දුරකථන අංකයක් සුරකින ලදි. තවද, "
@@ -400,13 +412,13 @@ msgstr ""
 "නිසා එය පරිශීලකයාගේ අතේ ඇත. දත්ත කිසි විටෙකත් යෙදුම් සැපයුම්කරුට හෝ තෙවන පාර්ශවයකට මාරු "
 "නොකෙරේ."
 
-#: src/components/screens/Legal.jsx:201 src/components/screens/Legal.jsx:221
-#: src/components/screens/Legal.jsx:250
+#: src/components/screens/Legal.jsx:219 src/components/screens/Legal.jsx:239
+#: src/components/screens/Legal.jsx:268
 msgid "legal-screen.privacy.section-3.headline"
 msgstr "ස්ථානය පදනම් කරගත් දත්ත"
 
-#: src/components/screens/Legal.jsx:202 src/components/screens/Legal.jsx:223
-#: src/components/screens/Legal.jsx:252
+#: src/components/screens/Legal.jsx:220 src/components/screens/Legal.jsx:241
+#: src/components/screens/Legal.jsx:270
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
 "පරිශීලකයාට යෙදුම තුළ ස්ථාන නිර්මාණය කළ හැකිය. ස්ථානයේ නම සහ විස්තරයක් සුරකින ලදි. ස්ථානගත "
@@ -414,26 +426,26 @@ msgstr ""
 "නොවේ. ස්ථානය සම්බන්ධ දත්ත පරිශීලකයාගේ ස්මාර්ට් ජංගම දුරකතනයේ ද දේශීයව පවතින අතර එය යෙදුම් "
 "සැපයුම්කරුට හෝ තෙවන පාර්ශවයකට සම්ප්‍රේෂණය නොවේ."
 
-#: src/components/screens/Legal.jsx:203 src/components/screens/Legal.jsx:225
-#: src/components/screens/Legal.jsx:254
+#: src/components/screens/Legal.jsx:221 src/components/screens/Legal.jsx:243
+#: src/components/screens/Legal.jsx:272
 msgid "legal-screen.privacy.section-4.headline"
 msgstr "දිනපොත"
 
-#: src/components/screens/Legal.jsx:204 src/components/screens/Legal.jsx:227
-#: src/components/screens/Legal.jsx:256
+#: src/components/screens/Legal.jsx:222 src/components/screens/Legal.jsx:245
+#: src/components/screens/Legal.jsx:274
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
 "දිනපොත තුළ, පරිශීලකයා දිනපතා පුද්ගල හා ස්ථාන තනි දිනවලට පවරයි. දැනටමත් එකතු කර ඇති දත්ත වලට "
 "අමතරව, ස්ථාන සඳහා කාලයක් ද ගබඩා කර ඇත. දිනපොත සහ සියලුම ඇතුළත් කිරීම් පරිශීලකයාගේ ස්මාර්ට් "
 "ජංගම දුරකතනයේ දේශීයව පවතින අතර ඒවා යෙදුම් සැපයුම්කරුට හෝ තෙවන පාර්ශවයකට සම්ප්‍රේෂණය නොවේ."
 
-#: src/components/screens/Legal.jsx:205 src/components/screens/Legal.jsx:229
-#: src/components/screens/Legal.jsx:258
+#: src/components/screens/Legal.jsx:223 src/components/screens/Legal.jsx:247
+#: src/components/screens/Legal.jsx:276
 msgid "legal-screen.privacy.section-5.headline"
 msgstr "අපනයන"
 
-#: src/components/screens/Legal.jsx:206 src/components/screens/Legal.jsx:231
-#: src/components/screens/Legal.jsx:260
+#: src/components/screens/Legal.jsx:224 src/components/screens/Legal.jsx:249
+#: src/components/screens/Legal.jsx:278
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
 "යෙදුම තුළ පරිශීලකයාට දිනපොතේ කොටසක් පී.ඩී.එෆ් ගොනුවක් ලෙස අපනයනය කිරීමට අපනයන කාර්යයක් ඇත. "
@@ -443,13 +455,13 @@ msgstr ""
 "බවට වෙනත් පුද්ගලයින් දැනුවත් කිරීමටත් හැකි වේ. පී.ඩී.එෆ් ගොනුව සහ එහි අඩංගු දත්ත වගකීමෙන් යුතුව "
 "හැසිරවීමේ වගකීම පරිශීලකයා සතු වන අතර එය නොසැලකිලිමත් ලෙස නොයැවිය යුතුය."
 
-#: src/components/screens/Legal.jsx:207 src/components/screens/Legal.jsx:233
-#: src/components/screens/Legal.jsx:262
+#: src/components/screens/Legal.jsx:225 src/components/screens/Legal.jsx:251
+#: src/components/screens/Legal.jsx:280
 msgid "legal-screen.privacy.section-6.headline"
 msgstr "දත්ත හුවමාරුව සහ ලුහුබැඳීම"
 
-#: src/components/screens/Legal.jsx:208 src/components/screens/Legal.jsx:235
-#: src/components/screens/Legal.jsx:264
+#: src/components/screens/Legal.jsx:226 src/components/screens/Legal.jsx:253
+#: src/components/screens/Legal.jsx:282
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
 "යෙදුම සැපයුම්කරුට හෝ තෙවන පාර්ශවයකට ස්වයංක්‍රීයව ලුහුබැඳීම හෝ දත්ත හුවමාරුව ලබා නොදේ. එකම "
@@ -457,13 +469,13 @@ msgstr ""
 "කරන්නේ පරිශීලකයා පමණි. එසේ නොමැතිනම්, සියලු දත්ත පරිශීලකයාගේ ස්මාර්ට් ජංගම දුරකතනයේ දේශීයව "
 "පවතී."
 
-#: src/components/screens/Legal.jsx:274 src/components/screens/Legal.jsx:286
-#: src/components/screens/Legal.jsx:307
+#: src/components/screens/Legal.jsx:292 src/components/screens/Legal.jsx:304
+#: src/components/screens/Legal.jsx:325
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "This app 'Coronika' is operated by"
 
-#: src/components/screens/Legal.jsx:275 src/components/screens/Legal.jsx:288
-#: src/components/screens/Legal.jsx:309
+#: src/components/screens/Legal.jsx:293 src/components/screens/Legal.jsx:306
+#: src/components/screens/Legal.jsx:327
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -480,13 +492,13 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:276 src/components/screens/Legal.jsx:290
-#: src/components/screens/Legal.jsx:311
+#: src/components/screens/Legal.jsx:294 src/components/screens/Legal.jsx:308
+#: src/components/screens/Legal.jsx:329
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "අන්තර්ගතය සඳහා වගකීම"
 
-#: src/components/screens/Legal.jsx:277 src/components/screens/Legal.jsx:292
-#: src/components/screens/Legal.jsx:313
+#: src/components/screens/Legal.jsx:295 src/components/screens/Legal.jsx:310
+#: src/components/screens/Legal.jsx:331
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "සේවා සපයන්නෙකු ලෙස, § 7 ඡේද 1 TMG (ජර්මානු ටෙලිමීඩියා පනත) සහ සාමාන්‍ය නීති වලට අනුව මෙම "
@@ -498,13 +510,13 @@ msgstr ""
 "වෙතත්, මේ සම්බන්ධයෙන් වගකීම පැවතිය හැක්කේ නිශ්චිත උල්ලංගනයක්  පිළිගත් අවස්ථාවේ සිට පමණි. එවැනි "
 "උල්ලංගනයන් පිළිබඳව අප දැනුවත්වුවහොත්, අපි වහාම එවැනි අන්තර්ගතයන් ඉවත් කරන්නෙමු."
 
-#: src/components/screens/Legal.jsx:278 src/components/screens/Legal.jsx:294
-#: src/components/screens/Legal.jsx:315
+#: src/components/screens/Legal.jsx:296 src/components/screens/Legal.jsx:312
+#: src/components/screens/Legal.jsx:333
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "සබැඳි සඳහා වගකීම"
 
-#: src/components/screens/Legal.jsx:279 src/components/screens/Legal.jsx:296
-#: src/components/screens/Legal.jsx:317
+#: src/components/screens/Legal.jsx:297 src/components/screens/Legal.jsx:314
+#: src/components/screens/Legal.jsx:335
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "අපගේ ඉල්ලුමට තෙවන පාර්ශවයන්ගේ බාහිර වෙබ් අඩවි වලට සබැඳි අඩංගු වන අතර ඒවායේ අන්තර්ගතය "
@@ -515,13 +527,13 @@ msgstr ""
 "නිශ්චිත සාක්ෂි නොමැතිව සම්බන්ධිත පිටුවල අන්තර්ගතය ස්ථිර ලෙස පාලනය කිරීම සාධාරණ නොවේ. කිසියම් "
 "උල්ලංගනයක් පිළිබඳව අප දැනුවත්වුවහොත්, අපි වහාම එවැනි සබැඳි ඉවත් කරන්නෙමු."
 
-#: src/components/screens/Legal.jsx:280 src/components/screens/Legal.jsx:298
-#: src/components/screens/Legal.jsx:319
+#: src/components/screens/Legal.jsx:298 src/components/screens/Legal.jsx:316
+#: src/components/screens/Legal.jsx:337
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "කතුහිමිකම"
 
-#: src/components/screens/Legal.jsx:281 src/components/screens/Legal.jsx:300
-#: src/components/screens/Legal.jsx:321
+#: src/components/screens/Legal.jsx:299 src/components/screens/Legal.jsx:318
+#: src/components/screens/Legal.jsx:339
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "ක්‍රියාකරුවන් විසින් නිර්මාණය කරන ලද මෙම පිටුවල අන්තර්ගතය සහ කෘතීන් ජර්මානු ප්‍රකාශන හිමිකම් නීතියට "
@@ -533,16 +545,16 @@ msgstr ""
 "කෙසේ වෙතත්, ප්‍රකාශන හිමිකම් උල්ලංගනය කිරීමක් පිළිබඳව ඔබ දැනුවත් නම්, කරුණාකර අපට දන්වන්න. "
 "කිසියම් උල්ලංගනයක් පිළිබඳව අප දැනුවත්වුවහොත්, අපි වහාම එවැනි අන්තර්ගතයන් ඉවත් කරන්නෙමු. "
 
-#: src/components/screens/Menu.jsx:113
+#: src/components/screens/Menu.jsx:127
 #: src/components/screens/Settings/ui.jsx:95
 msgid "settings-screen.header.headline"
 msgstr "සැකසුම්"
 
-#: src/components/screens/Menu.jsx:133
+#: src/components/screens/Menu.jsx:143
 msgid "menu-screen.intro.text"
 msgstr "වැදගත් වන්නේ භීතිකාව පැතිරවීම නොව පැහැදිලි බවක් ඇති කිරීම සහ නිවැරදි තොරතුරු පැතිරවීම ය."
 
-#: src/components/screens/Menu.jsx:171
+#: src/components/screens/Menu.jsx:181
 msgid "menu-screen.button.send-feedback"
 msgstr "ප්‍රතිචාරය යවන්න"
 
@@ -735,7 +747,7 @@ msgstr ""
 
 #: src/components/screens/TipCoronaWarnApp.jsx:14
 msgid "tips.corona-warn-app.link.google-play.text"
-msgstr ""
+msgstr "එය ගූගල් ප්ලේ වෙතින් ලබා ගන්න"
 
 #: src/components/screens/TipCoronaWarnApp.jsx:30
 #: src/components/screens/Tips.jsx:74
@@ -950,14 +962,14 @@ msgstr "අද"
 msgid "total"
 msgstr "සමස්ත"
 
-#: src/components/widgets/SearchBar.jsx:58
+#: src/components/widgets/SearchBar.jsx:78
 msgid "placeholder.search-input"
 msgstr "සොයන්න"
 
-#: src/components/widgets/Tip.jsx:157
+#: src/components/widgets/Tip.jsx:156
 msgid "tips.sources.headline"
 msgstr "මුලාශ්‍ර"
 
-#: src/components/widgets/Tip.jsx:167
+#: src/components/widgets/Tip.jsx:166
 msgid "tips.sources.last-updated"
 msgstr "අවසන් වරට යාවත්කාලීන කරන ලද්දේ:"

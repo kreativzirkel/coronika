@@ -7,7 +7,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 
-#: src/components/App/ui.jsx:144
+#: src/components/App/ui.jsx:100
+msgid "navigation.dashboard.label"
+msgstr "Щоденник"
+
+#: src/components/App/ui.jsx:103
+msgid "navigation.share.label"
+msgstr "Поділитися"
+
+#: src/components/App/ui.jsx:106
+msgid "navigation.tips.label"
+msgstr "Поради"
+
+#: src/components/App/ui.jsx:161
 msgid "app.share.message"
 msgstr ""
 "Не дозволяйте коронавірусу навести вас на паніку. Будьте в курсі та "
@@ -18,140 +30,140 @@ msgstr ""
 "Залишайтеся здоровими та не забувайте регулярно мити руки! ✋😉https://"
 "coronika.app/"
 
-#: src/components/App/ui.jsx:75
+#: src/components/App/ui.jsx:97
 msgid "navigation.directory.label"
 msgstr "Довідник"
 
-#: src/components/App/ui.jsx:78
-msgid "navigation.dashboard.label"
-msgstr "Щоденник"
-
-#: src/components/App/ui.jsx:81
-msgid "navigation.share.label"
-msgstr "Поділитися"
-
-#: src/components/App/ui.jsx:84
-msgid "navigation.tips.label"
-msgstr "Поради"
-
-#: src/components/partials/EntriesTabsView.jsx:1005
-msgid "entries.modals.select-location.button"
-msgstr "Виберіть"
-
-#: src/components/partials/EntriesTabsView.jsx:696
-#: src/components/screens/Export/createPdfFile.js:303
+#: src/components/partials/EntriesTabsView/index.jsx:831
+#: src/components/screens/Export/createPdfFile.js:317
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "осіб"
 
-#: src/components/partials/EntriesTabsView.jsx:706
-#: src/components/screens/Export/createPdfFile.js:389
+#: src/components/partials/EntriesTabsView/index.jsx:839
+#: src/components/screens/Export/createPdfFile.js:409
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "локації"
 
-#: src/components/partials/EntriesTabsView.jsx:718
+#: src/components/partials/EntriesTabsView/index.jsx:851
 msgid "entries.persons.list.new"
 msgstr "Нова людина"
 
-#: src/components/partials/EntriesTabsView.jsx:739
-#: src/components/partials/EntriesTabsView.jsx:789
+#: src/components/partials/EntriesTabsView/index.jsx:871
+#: src/components/partials/EntriesTabsView/index.jsx:922
 msgid "entries.search.list.empty"
 msgstr "Нічого не вдалося знайти при вашому пошуку."
 
-#: src/components/partials/EntriesTabsView.jsx:746
+#: src/components/partials/EntriesTabsView/index.jsx:878
 msgid "entries.persons.list.empty"
 msgstr ""
 "Ви ще не створили людину. Щоб розпочати роботу, ви можете імпортувати осіб "
 "із телефонної книги."
 
-#: src/components/partials/EntriesTabsView.jsx:750
+#: src/components/partials/EntriesTabsView/index.jsx:886
 msgid "entries.persons.list.import.button"
 msgstr "Імпортуйте зараз"
 
-#: src/components/partials/EntriesTabsView.jsx:769
+#: src/components/partials/EntriesTabsView/index.jsx:903
 msgid "entries.locations.list.new"
 msgstr "Нове місцезнаходження"
 
-#: src/components/partials/EntriesTabsView.jsx:792
+#: src/components/partials/EntriesTabsView/index.jsx:925
 msgid "entries.locations.list.empty"
 msgstr ""
 "Ви ще не створили місцезнаходження. Почніть зараз і створіть своє перше "
 "місце розташування."
 
-#: src/components/partials/EntriesTabsView.jsx:808
+#: src/components/partials/EntriesTabsView/index.jsx:941
 msgid "entries.selection.add"
 msgstr "Додати вибір"
 
-#: src/components/partials/EntriesTabsView.jsx:820
-msgid "entries.modals.update-person.headline"
-msgstr "Редагувати особу"
-
-#: src/components/partials/EntriesTabsView.jsx:821
-msgid "entries.modals.new-person.headline"
-msgstr "Нова людина"
-
-#: src/components/partials/EntriesTabsView.jsx:832
-msgid "entries.modals.new-person.placeholder.name"
-msgstr "Ім'я"
-
-#: src/components/partials/EntriesTabsView.jsx:844
-msgid "entries.modals.new-person.placeholder.phone-number"
-msgstr "Телефон"
-
-#: src/components/partials/EntriesTabsView.jsx:857
+#: src/components/partials/EntriesTabsView/index.jsx:951
 msgid "entries.modals.update-person.button"
 msgstr "Зберегти"
 
-#: src/components/partials/EntriesTabsView.jsx:858
+#: src/components/partials/EntriesTabsView/index.jsx:951
 msgid "entries.modals.new-person.button"
 msgstr "Додайте"
 
-#: src/components/partials/EntriesTabsView.jsx:870
-msgid "entries.modals.update-location.headline"
-msgstr "Редагувати місцеположення"
+#: src/components/partials/EntriesTabsView/index.jsx:954
+msgid "entries.modals.update-person.headline"
+msgstr "Редагувати особу"
 
-#: src/components/partials/EntriesTabsView.jsx:871
-msgid "entries.modals.new-location.headline"
-msgstr "Нове місцезнаходження"
+#: src/components/partials/EntriesTabsView/index.jsx:954
+msgid "entries.modals.new-person.headline"
+msgstr "Нова людина"
 
-#: src/components/partials/EntriesTabsView.jsx:882
-msgid "entries.modals.new-location.placeholder.title"
-msgstr "Назва"
-
-#: src/components/partials/EntriesTabsView.jsx:893
-msgid "entries.modals.new-location.placeholder.description"
-msgstr "Опис"
-
-#: src/components/partials/EntriesTabsView.jsx:905
-msgid "entries.modals.new-location.placeholder.phone-number"
-msgstr "Телефон"
-
-#: src/components/partials/EntriesTabsView.jsx:918
+#: src/components/partials/EntriesTabsView/index.jsx:969
+#: src/components/partials/EntriesTabsView/index.jsx:991
 msgid "entries.modals.update-location.button"
 msgstr "Зберегти"
 
-#: src/components/partials/EntriesTabsView.jsx:919
+#: src/components/partials/EntriesTabsView/index.jsx:970
 msgid "entries.modals.new-location.button"
 msgstr "Додайте"
 
-#: src/components/partials/EntriesTabsView.jsx:929
+#: src/components/partials/EntriesTabsView/index.jsx:974
+#: src/components/partials/EntriesTabsView/index.jsx:998
+msgid "entries.modals.update-location.headline"
+msgstr "Редагувати місцеположення"
+
+#: src/components/partials/EntriesTabsView/index.jsx:975
+msgid "entries.modals.new-location.headline"
+msgstr "Нове місцезнаходження"
+
+#: src/components/partials/EntriesTabsView/index.jsx:992
+msgid "entries.modals.select-location.button"
+msgstr "Виберіть"
+
+#: src/components/partials/EntriesTabsView/index.jsx:999
 msgid "entries.modals.select-location.headline"
 msgstr "Виберіть місцеположення"
 
-#: src/components/partials/EntriesTabsView.jsx:948
+#: src/components/partials/EntriesTabsView/Modals.jsx:207
+msgid "entries.modals.new-person.placeholder.name"
+msgstr "Ім'я"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:219
+msgid "entries.modals.new-person.placeholder.phone-number"
+msgstr "Телефон"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:292
+msgid "entries.modals.new-location.placeholder.title"
+msgstr "Назва"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:303
+msgid "entries.modals.new-location.placeholder.description"
+msgstr "Опис"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:315
+msgid "entries.modals.new-location.placeholder.phone-number"
+msgstr "Телефон"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:451
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Опис"
 
-#: src/components/partials/EntriesTabsView.jsx:979
-#: src/components/partials/EntriesTabsView.jsx:991
+#: src/components/partials/EntriesTabsView/Modals.jsx:478
+#: src/components/partials/EntriesTabsView/Modals.jsx:490
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: src/components/partials/EntriesTabsView.jsx:980
-#: src/components/partials/EntriesTabsView.jsx:992
+#: src/components/partials/EntriesTabsView/Modals.jsx:479
+#: src/components/partials/EntriesTabsView/Modals.jsx:491
 msgid "Confirm"
 msgstr "Підтвердіть"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:587
+#: src/components/partials/EntriesTabsView/Modals.jsx:659
+msgid "entries.modals.more.edit"
+msgstr "монтувати"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:593
+#: src/components/partials/EntriesTabsView/Modals.jsx:667
+msgid "entries.modals.more.delete"
+msgstr "видалити"
 
 #: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:83
 msgid "welcome-screen.slides.intro.headline"
@@ -198,7 +210,7 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Розпочати зараз"
 
-#: src/components/screens/About.jsx:57 src/components/screens/Menu.jsx:109
+#: src/components/screens/About.jsx:57 src/components/screens/Menu.jsx:123
 msgid "about-screen.header.headline"
 msgstr "Про Короніку"
 
@@ -206,48 +218,48 @@ msgstr "Про Короніку"
 msgid "add-entry-screen.header.headline"
 msgstr "Додати запис"
 
-#: src/components/screens/Dashboard/ui.jsx:149
-#: src/components/screens/Menu.jsx:128
+#: src/components/screens/Dashboard/ui.jsx:173
+#: src/components/screens/Menu.jsx:138
 msgid "menu-screen.header.headline"
 msgstr "Меню"
 
-#: src/components/screens/Dashboard/ui.jsx:159
+#: src/components/screens/Dashboard/ui.jsx:183
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Клацніть на сьогоднішню дату, щоб ввести своїх перших людей або "
 "місцеположення."
 
-#: src/components/screens/Dashboard/ui.jsx:161
+#: src/components/screens/Dashboard/ui.jsx:185
 msgid "Close"
 msgstr "Закрити"
 
-#: src/components/screens/Dashboard/ui.jsx:178
+#: src/components/screens/Dashboard/ui.jsx:206
 msgid "dashboard-screen.list.load-more"
 msgstr "завантажити ще"
 
-#: src/components/screens/Day/ui.jsx:58
+#: src/components/screens/Day/ui.jsx:73
 msgid "day-screen.header.headline"
 msgstr "Щоденний огляд"
 
-#: src/components/screens/Day/ui.jsx:65
+#: src/components/screens/Day/ui.jsx:86
 msgid "day-screen.locations.empty"
 msgstr "Ви не додали жодного місцезнаходження в цей день."
 
-#: src/components/screens/Day/ui.jsx:66
+#: src/components/screens/Day/ui.jsx:87
 msgid "day-screen.persons.empty"
 msgstr "Ви не додали жодної людини за цей день."
 
-#: src/components/screens/Day/ui.jsx:77
+#: src/components/screens/Day/ui.jsx:99
 msgid "day-screen.entries.add"
 msgstr "Додати запис"
 
-#: src/components/screens/Directory/logic.js:33
-#: src/components/screens/Directory/logic.js:67
+#: src/components/screens/Directory/importPersons.js:49
+#: src/components/screens/Directory/importPersons.js:59
 msgid "directory-screen.alerts.import-persons.missing-permission.title"
 msgstr "Відсутній дозвіл"
 
-#: src/components/screens/Directory/logic.js:34
-#: src/components/screens/Directory/logic.js:68
+#: src/components/screens/Directory/importPersons.js:50
+#: src/components/screens/Directory/importPersons.js:60
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
 msgstr ""
 "Дозвольте програмі отримувати доступ до контактів у налаштуваннях "
@@ -261,22 +273,22 @@ msgstr "Імпорт"
 msgid "directory-screen.header.headline"
 msgstr "Управління каталогом"
 
-#: src/components/screens/Directory/ui.jsx:158
+#: src/components/screens/Directory/ui.jsx:164
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Імпорт осіб"
 
-#: src/components/screens/Directory/ui.jsx:164
+#: src/components/screens/Directory/ui.jsx:170
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Імпортуйте осіб із телефонної книги, щоб ви могли розпочати роботу відразу. "
 "Усі ваші особи зберігаються на місцях. Жодні дані не відстежуються та не "
 "передаються."
 
-#: src/components/screens/Directory/ui.jsx:170
+#: src/components/screens/Directory/ui.jsx:176
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Імпорт..."
 
-#: src/components/screens/Directory/ui.jsx:171
+#: src/components/screens/Directory/ui.jsx:177
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Імпортуйте зараз"
 
@@ -286,7 +298,7 @@ msgstr "сторінки"
 
 #: src/components/screens/Export/createPdfFile.js:169
 #: src/components/screens/Export/createPdfFile.js:172
-#: src/components/screens/Export/createPdfFile.js:576
+#: src/components/screens/Export/createPdfFile.js:598
 #: src/components/screens/Export/createPdfFile.js:65
 #: src/components/screens/Export/logic.js:44
 #: src/components/screens/Export/logic.js:94
@@ -294,7 +306,7 @@ msgstr "сторінки"
 msgid "export-screen.header.headline"
 msgstr "Експорт"
 
-#: src/components/screens/Export/createPdfFile.js:292
+#: src/components/screens/Export/createPdfFile.js:306
 msgid "quantity"
 msgstr "кількість"
 
@@ -304,7 +316,7 @@ msgstr "може бути нерелевантним, оскільки цей з
 
 #: src/components/screens/Export/logic.js:57
 msgid "export-screen.alerts.save-file.success.title"
-msgstr ""
+msgstr "Успішно збережено"
 
 #: src/components/screens/Export/logic.js:58
 msgid "export-screen.alerts.save-file.success.message"
@@ -358,55 +370,55 @@ msgstr "Експорт ..."
 msgid "export-screen.export.button.default"
 msgstr "Експорт зараз"
 
-#: src/components/screens/Export/ui.jsx:169
+#: src/components/screens/Export/ui.jsx:174
 msgid "export-screen.modals.export-completed.headline"
 msgstr "Експорт завершено"
 
-#: src/components/screens/Export/ui.jsx:175
+#: src/components/screens/Export/ui.jsx:180
 msgid "export-screen.modals.export-completed.text"
 msgstr ""
 "Файл PDF з вашим оглядом створено успішно. Тепер ви можете зберегти або "
 "поділитися файлом."
 
-#: src/components/screens/Export/ui.jsx:180
+#: src/components/screens/Export/ui.jsx:185
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "Зберегти"
 
-#: src/components/screens/Legal.jsx:170 src/components/screens/Menu.jsx:117
+#: src/components/screens/Legal.jsx:188 src/components/screens/Menu.jsx:131
 msgid "legal-screen.header.headline"
 msgstr "Юридичні"
 
-#: src/components/screens/Legal.jsx:177
+#: src/components/screens/Legal.jsx:195
 msgid "legal-screen.tabs.privacy.label"
 msgstr "Конфіденційність"
 
-#: src/components/screens/Legal.jsx:182
+#: src/components/screens/Legal.jsx:200
 msgid "legal-screen.tabs.imprint.label"
 msgstr "Відбиток"
 
-#: src/components/screens/Legal.jsx:187
+#: src/components/screens/Legal.jsx:205
 msgid "legal-screen.tabs.licenses.label"
 msgstr "Ліцензії"
 
-#: src/components/screens/Legal.jsx:197 src/components/screens/Legal.jsx:213
-#: src/components/screens/Legal.jsx:242
+#: src/components/screens/Legal.jsx:215 src/components/screens/Legal.jsx:231
+#: src/components/screens/Legal.jsx:260
 msgid "legal-screen.privacy.section-1.headline"
 msgstr "Обробка даних додатка"
 
-#: src/components/screens/Legal.jsx:198 src/components/screens/Legal.jsx:215
-#: src/components/screens/Legal.jsx:244
+#: src/components/screens/Legal.jsx:216 src/components/screens/Legal.jsx:233
+#: src/components/screens/Legal.jsx:262
 msgid "legal-screen.privacy.section-1.text"
 msgstr ""
 "App Coronika обробляє особисті та пов’язані з місцем розташування дані "
 "виключно локально на смартфоні користувача."
 
-#: src/components/screens/Legal.jsx:199 src/components/screens/Legal.jsx:217
-#: src/components/screens/Legal.jsx:246
+#: src/components/screens/Legal.jsx:217 src/components/screens/Legal.jsx:235
+#: src/components/screens/Legal.jsx:264
 msgid "legal-screen.privacy.section-2.headline"
 msgstr "Особисті дані"
 
-#: src/components/screens/Legal.jsx:200 src/components/screens/Legal.jsx:219
-#: src/components/screens/Legal.jsx:248
+#: src/components/screens/Legal.jsx:218 src/components/screens/Legal.jsx:237
+#: src/components/screens/Legal.jsx:266
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
 "Користувач може створювати осіб у програмі. Ім'я та номер телефону "
@@ -415,13 +427,13 @@ msgstr ""
 "залишаються локально на смартфоні і тому перебувають у руках користувача. "
 "Дані ніколи не передаються постачальнику додатків або третім сторонам."
 
-#: src/components/screens/Legal.jsx:201 src/components/screens/Legal.jsx:221
-#: src/components/screens/Legal.jsx:250
+#: src/components/screens/Legal.jsx:219 src/components/screens/Legal.jsx:239
+#: src/components/screens/Legal.jsx:268
 msgid "legal-screen.privacy.section-3.headline"
 msgstr "Дані на основі місцезнаходження"
 
-#: src/components/screens/Legal.jsx:202 src/components/screens/Legal.jsx:223
-#: src/components/screens/Legal.jsx:252
+#: src/components/screens/Legal.jsx:220 src/components/screens/Legal.jsx:241
+#: src/components/screens/Legal.jsx:270
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
 "Користувач може створювати локації в додатку. Назва місця та опис "
@@ -430,13 +442,13 @@ msgstr ""
 "стосуються місцеположення, також залишаються локальними на смартфоні "
 "користувача та не передаються постачальнику додатків або третім сторонам."
 
-#: src/components/screens/Legal.jsx:203 src/components/screens/Legal.jsx:225
-#: src/components/screens/Legal.jsx:254
+#: src/components/screens/Legal.jsx:221 src/components/screens/Legal.jsx:243
+#: src/components/screens/Legal.jsx:272
 msgid "legal-screen.privacy.section-4.headline"
 msgstr "Щоденник"
 
-#: src/components/screens/Legal.jsx:204 src/components/screens/Legal.jsx:227
-#: src/components/screens/Legal.jsx:256
+#: src/components/screens/Legal.jsx:222 src/components/screens/Legal.jsx:245
+#: src/components/screens/Legal.jsx:274
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
 "У щоденнику користувач щодня призначає осіб та місця для окремих днів. Окрім "
@@ -444,13 +456,13 @@ msgstr ""
 "також зберігаються локально на смартфоні користувача та не передаються "
 "постачальнику додатків чи третім особам."
 
-#: src/components/screens/Legal.jsx:205 src/components/screens/Legal.jsx:229
-#: src/components/screens/Legal.jsx:258
+#: src/components/screens/Legal.jsx:223 src/components/screens/Legal.jsx:247
+#: src/components/screens/Legal.jsx:276
 msgid "legal-screen.privacy.section-5.headline"
 msgstr "Експорт"
 
-#: src/components/screens/Legal.jsx:206 src/components/screens/Legal.jsx:231
-#: src/components/screens/Legal.jsx:260
+#: src/components/screens/Legal.jsx:224 src/components/screens/Legal.jsx:249
+#: src/components/screens/Legal.jsx:278
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
 "У програмі користувач має функцію експорту для експортування розділу "
@@ -462,13 +474,13 @@ msgstr ""
 "обробку файлу PDF та даних, що містяться в ньому, і не нехай передає їх "
 "недбало."
 
-#: src/components/screens/Legal.jsx:207 src/components/screens/Legal.jsx:233
-#: src/components/screens/Legal.jsx:262
+#: src/components/screens/Legal.jsx:225 src/components/screens/Legal.jsx:251
+#: src/components/screens/Legal.jsx:280
 msgid "legal-screen.privacy.section-6.headline"
 msgstr "Передача даних та відстеження"
 
-#: src/components/screens/Legal.jsx:208 src/components/screens/Legal.jsx:235
-#: src/components/screens/Legal.jsx:264
+#: src/components/screens/Legal.jsx:226 src/components/screens/Legal.jsx:253
+#: src/components/screens/Legal.jsx:282
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
 "Додаток не забезпечує автоматичне відстеження або передачу даних "
@@ -476,13 +488,13 @@ msgstr ""
 "експорту. Однак, тільки користувач вирішує, кому передавати дані. В іншому "
 "випадку всі дані залишаються локально на смартфоні користувача."
 
-#: src/components/screens/Legal.jsx:274 src/components/screens/Legal.jsx:286
-#: src/components/screens/Legal.jsx:307
+#: src/components/screens/Legal.jsx:292 src/components/screens/Legal.jsx:304
+#: src/components/screens/Legal.jsx:325
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "Цей додаток \"Coronika\" управляється"
 
-#: src/components/screens/Legal.jsx:275 src/components/screens/Legal.jsx:288
-#: src/components/screens/Legal.jsx:309
+#: src/components/screens/Legal.jsx:293 src/components/screens/Legal.jsx:306
+#: src/components/screens/Legal.jsx:327
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -499,13 +511,13 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:276 src/components/screens/Legal.jsx:290
-#: src/components/screens/Legal.jsx:311
+#: src/components/screens/Legal.jsx:294 src/components/screens/Legal.jsx:308
+#: src/components/screens/Legal.jsx:329
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "Відповідальність за зміст"
 
-#: src/components/screens/Legal.jsx:277 src/components/screens/Legal.jsx:292
-#: src/components/screens/Legal.jsx:313
+#: src/components/screens/Legal.jsx:295 src/components/screens/Legal.jsx:310
+#: src/components/screens/Legal.jsx:331
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "Як постачальник послуг, ми несемо відповідальність за власний зміст на цих "
@@ -518,13 +530,13 @@ msgstr ""
 "з моменту пізнання конкретного порушення. Якщо нам стане відомо про будь-які "
 "подібні порушення, ми негайно видалемо такий контент."
 
-#: src/components/screens/Legal.jsx:278 src/components/screens/Legal.jsx:294
-#: src/components/screens/Legal.jsx:315
+#: src/components/screens/Legal.jsx:296 src/components/screens/Legal.jsx:312
+#: src/components/screens/Legal.jsx:333
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Відповідальність за посилання"
 
-#: src/components/screens/Legal.jsx:279 src/components/screens/Legal.jsx:296
-#: src/components/screens/Legal.jsx:317
+#: src/components/screens/Legal.jsx:297 src/components/screens/Legal.jsx:314
+#: src/components/screens/Legal.jsx:335
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Наша пропозиція містить посилання на зовнішні веб-сайти третіх сторін, на "
@@ -537,13 +549,13 @@ msgstr ""
 "порушення закону. Якщо нам стане відомо про порушення, ми негайно видалимо "
 "такі посилання."
 
-#: src/components/screens/Legal.jsx:280 src/components/screens/Legal.jsx:298
-#: src/components/screens/Legal.jsx:319
+#: src/components/screens/Legal.jsx:298 src/components/screens/Legal.jsx:316
+#: src/components/screens/Legal.jsx:337
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "Авторські права"
 
-#: src/components/screens/Legal.jsx:281 src/components/screens/Legal.jsx:300
-#: src/components/screens/Legal.jsx:321
+#: src/components/screens/Legal.jsx:299 src/components/screens/Legal.jsx:318
+#: src/components/screens/Legal.jsx:339
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "Зміст та твори на цих сторінках, створені операторами, підпадають під дію "
@@ -557,18 +569,18 @@ msgstr ""
 "авторських прав, повідомте нас про це. Якщо нам стане відомо про будь-які "
 "порушення, ми будемо негайно видаляти такий вміст."
 
-#: src/components/screens/Menu.jsx:113
+#: src/components/screens/Menu.jsx:127
 #: src/components/screens/Settings/ui.jsx:95
 msgid "settings-screen.header.headline"
 msgstr "Налаштування"
 
-#: src/components/screens/Menu.jsx:133
+#: src/components/screens/Menu.jsx:143
 msgid "menu-screen.intro.text"
 msgstr ""
 "Важливо не поширювати паніку, а створити чіткість і поширити правильну "
 "інформацію."
 
-#: src/components/screens/Menu.jsx:171
+#: src/components/screens/Menu.jsx:181
 msgid "menu-screen.button.send-feedback"
 msgstr "Надіслати відгук"
 
@@ -774,7 +786,7 @@ msgstr ""
 
 #: src/components/screens/TipCoronaWarnApp.jsx:14
 msgid "tips.corona-warn-app.link.google-play.text"
-msgstr ""
+msgstr "Отримайте це на Google Play"
 
 #: src/components/screens/TipCoronaWarnApp.jsx:30
 #: src/components/screens/Tips.jsx:74
@@ -1003,14 +1015,14 @@ msgstr "сьогодні"
 msgid "total"
 msgstr "всього"
 
-#: src/components/widgets/SearchBar.jsx:58
+#: src/components/widgets/SearchBar.jsx:78
 msgid "placeholder.search-input"
 msgstr "Пошук"
 
-#: src/components/widgets/Tip.jsx:157
+#: src/components/widgets/Tip.jsx:156
 msgid "tips.sources.headline"
 msgstr "Джерела"
 
-#: src/components/widgets/Tip.jsx:167
+#: src/components/widgets/Tip.jsx:166
 msgid "tips.sources.last-updated"
 msgstr "Останнє оновлення:"

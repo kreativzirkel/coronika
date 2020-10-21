@@ -2,21 +2,26 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import withViewportUnits from '../../utils/withViewportUnits';
 
-const TabBar = ({ children, vw }) => {
-  // noinspection JSUnresolvedFunction
-  const styles = StyleSheet.create({
+class TabBar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  styles = StyleSheet.create({
     tabBar: {
       display: 'flex',
       flexDirection: 'row',
-      height: vw(14),
-      paddingLeft: vw(1.8),
-      paddingRight: vw(1.8),
-      paddingTop: vw(2.5),
+      height: this.props.vw(14),
+      paddingLeft: this.props.vw(1.8),
+      paddingRight: this.props.vw(1.8),
+      paddingTop: this.props.vw(2.5),
       width: '100%',
     },
   });
 
-  return <View style={styles.tabBar}>{children}</View>;
-};
+  render() {
+    return <View style={this.styles.tabBar}>{this.props.children}</View>;
+  }
+}
 
 export default withViewportUnits(TabBar);

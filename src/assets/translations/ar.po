@@ -7,7 +7,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 
-#: src/components/App/ui.jsx:144
+#: src/components/App/ui.jsx:100
+msgid "navigation.dashboard.label"
+msgstr "مذكرات"
+
+#: src/components/App/ui.jsx:103
+msgid "navigation.share.label"
+msgstr "مشاركة"
+
+#: src/components/App/ui.jsx:106
+msgid "navigation.tips.label"
+msgstr "نصائح"
+
+#: src/components/App/ui.jsx:161
 msgid "app.share.message"
 msgstr ""
 "لا تدع فايروس كورونا يصيبك بالهلع. إبقى على اطلاع وساعد الآخرين. دوّن كل من "
@@ -15,138 +27,138 @@ msgstr ""
 "والتعقيم واقرأ الأخبار والمعلومات فقط من مصادر موثوقة. إبق بصحة جيدة ولا "
 "تنسى غسل يديك بشكلٍ منتظم. https://coronika.app/"
 
-#: src/components/App/ui.jsx:75
+#: src/components/App/ui.jsx:97
 msgid "navigation.directory.label"
 msgstr "الدليل"
 
-#: src/components/App/ui.jsx:78
-msgid "navigation.dashboard.label"
-msgstr "مذكرات"
-
-#: src/components/App/ui.jsx:81
-msgid "navigation.share.label"
-msgstr "مشاركة"
-
-#: src/components/App/ui.jsx:84
-msgid "navigation.tips.label"
-msgstr "نصائح"
-
-#: src/components/partials/EntriesTabsView.jsx:1005
-msgid "entries.modals.select-location.button"
-msgstr "تحديد"
-
-#: src/components/partials/EntriesTabsView.jsx:696
-#: src/components/screens/Export/createPdfFile.js:303
+#: src/components/partials/EntriesTabsView/index.jsx:831
+#: src/components/screens/Export/createPdfFile.js:317
 #: src/components/widgets/DayOverview.jsx:69
 msgid "persons"
 msgstr "الأشخاص"
 
-#: src/components/partials/EntriesTabsView.jsx:706
-#: src/components/screens/Export/createPdfFile.js:389
+#: src/components/partials/EntriesTabsView/index.jsx:839
+#: src/components/screens/Export/createPdfFile.js:409
 #: src/components/widgets/DayOverview.jsx:48
 msgid "locations"
 msgstr "المواقع"
 
-#: src/components/partials/EntriesTabsView.jsx:718
+#: src/components/partials/EntriesTabsView/index.jsx:851
 msgid "entries.persons.list.new"
 msgstr "شخص جديد"
 
-#: src/components/partials/EntriesTabsView.jsx:739
-#: src/components/partials/EntriesTabsView.jsx:789
+#: src/components/partials/EntriesTabsView/index.jsx:871
+#: src/components/partials/EntriesTabsView/index.jsx:922
 msgid "entries.search.list.empty"
 msgstr "لا يمكن العثور على شيء في بحثك."
 
-#: src/components/partials/EntriesTabsView.jsx:746
+#: src/components/partials/EntriesTabsView/index.jsx:878
 msgid "entries.persons.list.empty"
 msgstr ""
 "لم تقم بإنشاء شخص بعد. للبدء على الفور ، يمكنك استيراد الأشخاص من دليل "
 "الهاتف الخاص بك."
 
-#: src/components/partials/EntriesTabsView.jsx:750
+#: src/components/partials/EntriesTabsView/index.jsx:886
 msgid "entries.persons.list.import.button"
 msgstr "استيراد الآن"
 
-#: src/components/partials/EntriesTabsView.jsx:769
+#: src/components/partials/EntriesTabsView/index.jsx:903
 msgid "entries.locations.list.new"
 msgstr "موقع جديد"
 
-#: src/components/partials/EntriesTabsView.jsx:792
+#: src/components/partials/EntriesTabsView/index.jsx:925
 msgid "entries.locations.list.empty"
 msgstr "لم تقم بإنشاء موقع حتى الآن. ابدأ الآن وأنشئ موقعك الأول."
 
-#: src/components/partials/EntriesTabsView.jsx:808
+#: src/components/partials/EntriesTabsView/index.jsx:941
 msgid "entries.selection.add"
 msgstr "إضافة تحديد"
 
-#: src/components/partials/EntriesTabsView.jsx:820
-msgid "entries.modals.update-person.headline"
-msgstr "تحرير شخص"
-
-#: src/components/partials/EntriesTabsView.jsx:821
-msgid "entries.modals.new-person.headline"
-msgstr "شخص جديد"
-
-#: src/components/partials/EntriesTabsView.jsx:832
-msgid "entries.modals.new-person.placeholder.name"
-msgstr "اسم"
-
-#: src/components/partials/EntriesTabsView.jsx:844
-msgid "entries.modals.new-person.placeholder.phone-number"
-msgstr "هاتف"
-
-#: src/components/partials/EntriesTabsView.jsx:857
+#: src/components/partials/EntriesTabsView/index.jsx:951
 msgid "entries.modals.update-person.button"
 msgstr "حفظ"
 
-#: src/components/partials/EntriesTabsView.jsx:858
+#: src/components/partials/EntriesTabsView/index.jsx:951
 msgid "entries.modals.new-person.button"
 msgstr "أضف"
 
-#: src/components/partials/EntriesTabsView.jsx:870
-msgid "entries.modals.update-location.headline"
-msgstr "تحرير الموقع"
+#: src/components/partials/EntriesTabsView/index.jsx:954
+msgid "entries.modals.update-person.headline"
+msgstr "تحرير شخص"
 
-#: src/components/partials/EntriesTabsView.jsx:871
-msgid "entries.modals.new-location.headline"
-msgstr "موقع جديد"
+#: src/components/partials/EntriesTabsView/index.jsx:954
+msgid "entries.modals.new-person.headline"
+msgstr "شخص جديد"
 
-#: src/components/partials/EntriesTabsView.jsx:882
-msgid "entries.modals.new-location.placeholder.title"
-msgstr "عنوان"
-
-#: src/components/partials/EntriesTabsView.jsx:893
-msgid "entries.modals.new-location.placeholder.description"
-msgstr "وصف"
-
-#: src/components/partials/EntriesTabsView.jsx:905
-msgid "entries.modals.new-location.placeholder.phone-number"
-msgstr "هاتف"
-
-#: src/components/partials/EntriesTabsView.jsx:918
+#: src/components/partials/EntriesTabsView/index.jsx:969
+#: src/components/partials/EntriesTabsView/index.jsx:991
 msgid "entries.modals.update-location.button"
 msgstr "حفظ"
 
-#: src/components/partials/EntriesTabsView.jsx:919
+#: src/components/partials/EntriesTabsView/index.jsx:970
 msgid "entries.modals.new-location.button"
 msgstr "أضف"
 
-#: src/components/partials/EntriesTabsView.jsx:929
+#: src/components/partials/EntriesTabsView/index.jsx:974
+#: src/components/partials/EntriesTabsView/index.jsx:998
+msgid "entries.modals.update-location.headline"
+msgstr "تحرير الموقع"
+
+#: src/components/partials/EntriesTabsView/index.jsx:975
+msgid "entries.modals.new-location.headline"
+msgstr "موقع جديد"
+
+#: src/components/partials/EntriesTabsView/index.jsx:992
+msgid "entries.modals.select-location.button"
+msgstr "تحديد"
+
+#: src/components/partials/EntriesTabsView/index.jsx:999
 msgid "entries.modals.select-location.headline"
 msgstr "اختر موقعا"
 
-#: src/components/partials/EntriesTabsView.jsx:948
+#: src/components/partials/EntriesTabsView/Modals.jsx:207
+msgid "entries.modals.new-person.placeholder.name"
+msgstr "اسم"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:219
+msgid "entries.modals.new-person.placeholder.phone-number"
+msgstr "هاتف"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:292
+msgid "entries.modals.new-location.placeholder.title"
+msgstr "عنوان"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:303
+msgid "entries.modals.new-location.placeholder.description"
+msgstr "وصف"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:315
+msgid "entries.modals.new-location.placeholder.phone-number"
+msgstr "هاتف"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:451
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "وصف"
 
-#: src/components/partials/EntriesTabsView.jsx:979
-#: src/components/partials/EntriesTabsView.jsx:991
+#: src/components/partials/EntriesTabsView/Modals.jsx:478
+#: src/components/partials/EntriesTabsView/Modals.jsx:490
 msgid "Cancel"
 msgstr "إلغاء"
 
-#: src/components/partials/EntriesTabsView.jsx:980
-#: src/components/partials/EntriesTabsView.jsx:992
+#: src/components/partials/EntriesTabsView/Modals.jsx:479
+#: src/components/partials/EntriesTabsView/Modals.jsx:491
 msgid "Confirm"
 msgstr "مؤكد"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:587
+#: src/components/partials/EntriesTabsView/Modals.jsx:659
+msgid "entries.modals.more.edit"
+msgstr "تعديل"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:593
+#: src/components/partials/EntriesTabsView/Modals.jsx:667
+msgid "entries.modals.more.delete"
+msgstr "حذف"
 
 #: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:83
 msgid "welcome-screen.slides.intro.headline"
@@ -190,7 +202,7 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "ابدأ الآن"
 
-#: src/components/screens/About.jsx:57 src/components/screens/Menu.jsx:109
+#: src/components/screens/About.jsx:57 src/components/screens/Menu.jsx:123
 msgid "about-screen.header.headline"
 msgstr "حول كورونيكا"
 
@@ -198,46 +210,46 @@ msgstr "حول كورونيكا"
 msgid "add-entry-screen.header.headline"
 msgstr "إضافة إدخال"
 
-#: src/components/screens/Dashboard/ui.jsx:149
-#: src/components/screens/Menu.jsx:128
+#: src/components/screens/Dashboard/ui.jsx:173
+#: src/components/screens/Menu.jsx:138
 msgid "menu-screen.header.headline"
 msgstr "قائمة "
 
-#: src/components/screens/Dashboard/ui.jsx:159
+#: src/components/screens/Dashboard/ui.jsx:183
 msgid "dashboard-screen.first-start.hint"
 msgstr "انقر على تاريخ اليوم لإضافة الأشخاص أو المواقع الأولى."
 
-#: src/components/screens/Dashboard/ui.jsx:161
+#: src/components/screens/Dashboard/ui.jsx:185
 msgid "Close"
 msgstr "اغلاق"
 
-#: src/components/screens/Dashboard/ui.jsx:178
+#: src/components/screens/Dashboard/ui.jsx:206
 msgid "dashboard-screen.list.load-more"
 msgstr "تحميل المزيد"
 
-#: src/components/screens/Day/ui.jsx:58
+#: src/components/screens/Day/ui.jsx:73
 msgid "day-screen.header.headline"
 msgstr "نظرة يومية عامة "
 
-#: src/components/screens/Day/ui.jsx:65
+#: src/components/screens/Day/ui.jsx:86
 msgid "day-screen.locations.empty"
 msgstr "لم تضف أي مواقع لهذا اليوم."
 
-#: src/components/screens/Day/ui.jsx:66
+#: src/components/screens/Day/ui.jsx:87
 msgid "day-screen.persons.empty"
 msgstr "لم تقم بإضافة أي أشخاص لهذا اليوم."
 
-#: src/components/screens/Day/ui.jsx:77
+#: src/components/screens/Day/ui.jsx:99
 msgid "day-screen.entries.add"
 msgstr "إضافة إدخال"
 
-#: src/components/screens/Directory/logic.js:33
-#: src/components/screens/Directory/logic.js:67
+#: src/components/screens/Directory/importPersons.js:49
+#: src/components/screens/Directory/importPersons.js:59
 msgid "directory-screen.alerts.import-persons.missing-permission.title"
 msgstr "إذن مفقود"
 
-#: src/components/screens/Directory/logic.js:34
-#: src/components/screens/Directory/logic.js:68
+#: src/components/screens/Directory/importPersons.js:50
+#: src/components/screens/Directory/importPersons.js:60
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
 msgstr "اسمح للتطبيق بالوصول إلى جهات الاتصال في إعدادات الخصوصية بجهازك."
 
@@ -249,21 +261,21 @@ msgstr "استيراد"
 msgid "directory-screen.header.headline"
 msgstr "إدارة الدليل"
 
-#: src/components/screens/Directory/ui.jsx:158
+#: src/components/screens/Directory/ui.jsx:164
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "استيراد الأشخاص"
 
-#: src/components/screens/Directory/ui.jsx:164
+#: src/components/screens/Directory/ui.jsx:170
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "قم باستيراد الأشخاص من دفتر الهاتف الخاص بك حتى تتمكن من البدء على الفور. "
 "يتم تخزين جميع الأشخاص محليا. لا يتم تتبع أو مشاركة البيانات."
 
-#: src/components/screens/Directory/ui.jsx:170
+#: src/components/screens/Directory/ui.jsx:176
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "جارٍ الاستيراد ..."
 
-#: src/components/screens/Directory/ui.jsx:171
+#: src/components/screens/Directory/ui.jsx:177
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "استيراد الآن"
 
@@ -273,7 +285,7 @@ msgstr "الصفحة"
 
 #: src/components/screens/Export/createPdfFile.js:169
 #: src/components/screens/Export/createPdfFile.js:172
-#: src/components/screens/Export/createPdfFile.js:576
+#: src/components/screens/Export/createPdfFile.js:598
 #: src/components/screens/Export/createPdfFile.js:65
 #: src/components/screens/Export/logic.js:44
 #: src/components/screens/Export/logic.js:94
@@ -281,7 +293,7 @@ msgstr "الصفحة"
 msgid "export-screen.header.headline"
 msgstr "تصدير"
 
-#: src/components/screens/Export/createPdfFile.js:292
+#: src/components/screens/Export/createPdfFile.js:306
 msgid "quantity"
 msgstr "كمية"
 
@@ -291,7 +303,7 @@ msgstr "قد لا يكون ذا صلة لأن هذا الإدخال مضى عل�
 
 #: src/components/screens/Export/logic.js:57
 msgid "export-screen.alerts.save-file.success.title"
-msgstr ""
+msgstr "حفظ بنجاح"
 
 #: src/components/screens/Export/logic.js:58
 msgid "export-screen.alerts.save-file.success.message"
@@ -341,53 +353,53 @@ msgstr "جارٍ التصدير ..."
 msgid "export-screen.export.button.default"
 msgstr "تصدير الآن"
 
-#: src/components/screens/Export/ui.jsx:169
+#: src/components/screens/Export/ui.jsx:174
 msgid "export-screen.modals.export-completed.headline"
 msgstr "اكتمل التصدير"
 
-#: src/components/screens/Export/ui.jsx:175
+#: src/components/screens/Export/ui.jsx:180
 msgid "export-screen.modals.export-completed.text"
 msgstr "تم إنشاء ملف PDF مع نظرة عامة بنجاح. يمكنك الآن حفظ الملف أو مشاركته."
 
-#: src/components/screens/Export/ui.jsx:180
+#: src/components/screens/Export/ui.jsx:185
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "حفظ"
 
-#: src/components/screens/Legal.jsx:170 src/components/screens/Menu.jsx:117
+#: src/components/screens/Legal.jsx:188 src/components/screens/Menu.jsx:131
 msgid "legal-screen.header.headline"
 msgstr "قانوني"
 
-#: src/components/screens/Legal.jsx:177
+#: src/components/screens/Legal.jsx:195
 msgid "legal-screen.tabs.privacy.label"
 msgstr "خصوصية"
 
-#: src/components/screens/Legal.jsx:182
+#: src/components/screens/Legal.jsx:200
 msgid "legal-screen.tabs.imprint.label"
 msgstr "بصمة"
 
-#: src/components/screens/Legal.jsx:187
+#: src/components/screens/Legal.jsx:205
 msgid "legal-screen.tabs.licenses.label"
 msgstr "التراخيص"
 
-#: src/components/screens/Legal.jsx:197 src/components/screens/Legal.jsx:213
-#: src/components/screens/Legal.jsx:242
+#: src/components/screens/Legal.jsx:215 src/components/screens/Legal.jsx:231
+#: src/components/screens/Legal.jsx:260
 msgid "legal-screen.privacy.section-1.headline"
 msgstr "معالجة بيانات التطبيق"
 
-#: src/components/screens/Legal.jsx:198 src/components/screens/Legal.jsx:215
-#: src/components/screens/Legal.jsx:244
+#: src/components/screens/Legal.jsx:216 src/components/screens/Legal.jsx:233
+#: src/components/screens/Legal.jsx:262
 msgid "legal-screen.privacy.section-1.text"
 msgstr ""
 "يعالج تطبيق Coronika البيانات الشخصية والبيانات المتعلقة بالموقع محليًا حصريًا "
 "على الهاتف الذكي للمستخدم."
 
-#: src/components/screens/Legal.jsx:199 src/components/screens/Legal.jsx:217
-#: src/components/screens/Legal.jsx:246
+#: src/components/screens/Legal.jsx:217 src/components/screens/Legal.jsx:235
+#: src/components/screens/Legal.jsx:264
 msgid "legal-screen.privacy.section-2.headline"
 msgstr "بيانات شخصية"
 
-#: src/components/screens/Legal.jsx:200 src/components/screens/Legal.jsx:219
-#: src/components/screens/Legal.jsx:248
+#: src/components/screens/Legal.jsx:218 src/components/screens/Legal.jsx:237
+#: src/components/screens/Legal.jsx:266
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
 "يمكن للمستخدم إنشاء أشخاص داخل التطبيق. يتم حفظ الاسم ورقم الهاتف. علاوة على "
@@ -396,13 +408,13 @@ msgstr ""
 "الهاتف الذكي وبالتالي في أيدي المستخدم. لا يتم نقل البيانات مطلقًا إلى موفر "
 "التطبيق أو جهات خارجية."
 
-#: src/components/screens/Legal.jsx:201 src/components/screens/Legal.jsx:221
-#: src/components/screens/Legal.jsx:250
+#: src/components/screens/Legal.jsx:219 src/components/screens/Legal.jsx:239
+#: src/components/screens/Legal.jsx:268
 msgid "legal-screen.privacy.section-3.headline"
 msgstr "البيانات المتعلقة بالموقع"
 
-#: src/components/screens/Legal.jsx:202 src/components/screens/Legal.jsx:223
-#: src/components/screens/Legal.jsx:252
+#: src/components/screens/Legal.jsx:220 src/components/screens/Legal.jsx:241
+#: src/components/screens/Legal.jsx:270
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
 "يمكن للمستخدم إنشاء مواقع داخل التطبيق. يتم حفظ اسم الموقع والوصف. لا يتم "
@@ -410,13 +422,13 @@ msgstr ""
 "وقت. تظل البيانات المتعلقة بالموقع محلية أيضًا على الهاتف الذكي للمستخدم ولا "
 "يتم نقلها إلى مزود التطبيق أو الجهات الخارجية."
 
-#: src/components/screens/Legal.jsx:203 src/components/screens/Legal.jsx:225
-#: src/components/screens/Legal.jsx:254
+#: src/components/screens/Legal.jsx:221 src/components/screens/Legal.jsx:243
+#: src/components/screens/Legal.jsx:272
 msgid "legal-screen.privacy.section-4.headline"
 msgstr "مذكرات"
 
-#: src/components/screens/Legal.jsx:204 src/components/screens/Legal.jsx:227
-#: src/components/screens/Legal.jsx:256
+#: src/components/screens/Legal.jsx:222 src/components/screens/Legal.jsx:245
+#: src/components/screens/Legal.jsx:274
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
 "ضمن اليوميات ، يعين المستخدم الأشخاص والأماكن لأيام فردية على أساس يومي. "
@@ -424,13 +436,13 @@ msgstr ""
 "كما تظل اليوميات وجميع الإدخالات محليًا على الهاتف الذكي للمستخدم ولا يتم "
 "نقلها إلى مزود التطبيق أو الجهات الخارجية."
 
-#: src/components/screens/Legal.jsx:205 src/components/screens/Legal.jsx:229
-#: src/components/screens/Legal.jsx:258
+#: src/components/screens/Legal.jsx:223 src/components/screens/Legal.jsx:247
+#: src/components/screens/Legal.jsx:276
 msgid "legal-screen.privacy.section-5.headline"
 msgstr "تصدير"
 
-#: src/components/screens/Legal.jsx:206 src/components/screens/Legal.jsx:231
-#: src/components/screens/Legal.jsx:260
+#: src/components/screens/Legal.jsx:224 src/components/screens/Legal.jsx:249
+#: src/components/screens/Legal.jsx:278
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
 "داخل التطبيق ، يمتلك المستخدم وظيفة تصدير لتصدير قسم من اليوميات كملف PDF. "
@@ -440,13 +452,13 @@ msgstr ""
 "إبلاغ الأشخاص الآخرين عن العدوى المحتملة. المستخدم هو المسؤول عن معالجة ملف "
 "PDF والبيانات الواردة فيه بشكل مسؤول وعدم تمريره بلا مبالاة."
 
-#: src/components/screens/Legal.jsx:207 src/components/screens/Legal.jsx:233
-#: src/components/screens/Legal.jsx:262
+#: src/components/screens/Legal.jsx:225 src/components/screens/Legal.jsx:251
+#: src/components/screens/Legal.jsx:280
 msgid "legal-screen.privacy.section-6.headline"
 msgstr "نقل البيانات وتتبعها"
 
-#: src/components/screens/Legal.jsx:208 src/components/screens/Legal.jsx:235
-#: src/components/screens/Legal.jsx:264
+#: src/components/screens/Legal.jsx:226 src/components/screens/Legal.jsx:253
+#: src/components/screens/Legal.jsx:282
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
 "لا يوفر التطبيق تتبعًا آليًا أو نقل البيانات إلى مزود التطبيق أو الجهات "
@@ -454,13 +466,13 @@ msgstr ""
 "يتم تمرير البيانات. خلاف ذلك ، تبقى جميع البيانات محليا على الهاتف الذكي "
 "للمستخدم."
 
-#: src/components/screens/Legal.jsx:274 src/components/screens/Legal.jsx:286
-#: src/components/screens/Legal.jsx:307
+#: src/components/screens/Legal.jsx:292 src/components/screens/Legal.jsx:304
+#: src/components/screens/Legal.jsx:325
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "يتم تشغيل هذا التطبيق \"Coronika\" من قبل"
 
-#: src/components/screens/Legal.jsx:275 src/components/screens/Legal.jsx:288
-#: src/components/screens/Legal.jsx:309
+#: src/components/screens/Legal.jsx:293 src/components/screens/Legal.jsx:306
+#: src/components/screens/Legal.jsx:327
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -477,13 +489,13 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:276 src/components/screens/Legal.jsx:290
-#: src/components/screens/Legal.jsx:311
+#: src/components/screens/Legal.jsx:294 src/components/screens/Legal.jsx:308
+#: src/components/screens/Legal.jsx:329
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "المسؤولية عن المحتويات"
 
-#: src/components/screens/Legal.jsx:277 src/components/screens/Legal.jsx:292
-#: src/components/screens/Legal.jsx:313
+#: src/components/screens/Legal.jsx:295 src/components/screens/Legal.jsx:310
+#: src/components/screens/Legal.jsx:331
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "بصفتنا مقدم خدمة ، نحن مسؤولون عن المحتوى الخاص بنا على هذه الصفحات وفقًا "
@@ -494,13 +506,13 @@ msgstr ""
 "هذا الصدد ممكنة فقط من وقت معرفة التعدي الملموس. إذا علمنا بأي انتهاكات من "
 "هذا القبيل ، فسنزيل هذا المحتوى على الفور."
 
-#: src/components/screens/Legal.jsx:278 src/components/screens/Legal.jsx:294
-#: src/components/screens/Legal.jsx:315
+#: src/components/screens/Legal.jsx:296 src/components/screens/Legal.jsx:312
+#: src/components/screens/Legal.jsx:333
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "المسؤولية عن الروابط"
 
-#: src/components/screens/Legal.jsx:279 src/components/screens/Legal.jsx:296
-#: src/components/screens/Legal.jsx:317
+#: src/components/screens/Legal.jsx:297 src/components/screens/Legal.jsx:314
+#: src/components/screens/Legal.jsx:335
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "يحتوي عرضنا على روابط لمواقع خارجية لأطراف ثالثة ليس لنا تأثير على "
@@ -511,13 +523,13 @@ msgstr ""
 "محتويات الصفحات المرتبطة ليس معقولًا دون وجود دليل ملموس على انتهاك القانون. "
 "إذا علمنا بأي انتهاكات ، فسوف نزيل هذه الروابط على الفور."
 
-#: src/components/screens/Legal.jsx:280 src/components/screens/Legal.jsx:298
-#: src/components/screens/Legal.jsx:319
+#: src/components/screens/Legal.jsx:298 src/components/screens/Legal.jsx:316
+#: src/components/screens/Legal.jsx:337
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "حقوق النشر"
 
-#: src/components/screens/Legal.jsx:281 src/components/screens/Legal.jsx:300
-#: src/components/screens/Legal.jsx:321
+#: src/components/screens/Legal.jsx:299 src/components/screens/Legal.jsx:318
+#: src/components/screens/Legal.jsx:339
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "تخضع المحتويات والأعمال على هذه الصفحات التي أنشأها المشغلون لقانون حقوق "
@@ -529,16 +541,16 @@ msgstr ""
 "ومع ذلك ، إذا علمت بانتهاك حقوق الطبع والنشر ، فيرجى إبلاغنا بذلك. إذا علمنا "
 "بأي انتهاكات ، فسوف نزيل هذه المحتويات على الفور."
 
-#: src/components/screens/Menu.jsx:113
+#: src/components/screens/Menu.jsx:127
 #: src/components/screens/Settings/ui.jsx:95
 msgid "settings-screen.header.headline"
 msgstr "الإعدادات"
 
-#: src/components/screens/Menu.jsx:133
+#: src/components/screens/Menu.jsx:143
 msgid "menu-screen.intro.text"
 msgstr "من المهم عدم نشر الذعر ولكن لخلق الوضوح ونشر المعلومات الصحيحة."
 
-#: src/components/screens/Menu.jsx:171
+#: src/components/screens/Menu.jsx:181
 msgid "menu-screen.button.send-feedback"
 msgstr "ارسل رأيك"
 
@@ -736,7 +748,7 @@ msgstr ""
 
 #: src/components/screens/TipCoronaWarnApp.jsx:14
 msgid "tips.corona-warn-app.link.google-play.text"
-msgstr ""
+msgstr "احصل عليه من متجر جوجل للتطبيقات"
 
 #: src/components/screens/TipCoronaWarnApp.jsx:30
 #: src/components/screens/Tips.jsx:74
@@ -957,14 +969,14 @@ msgstr "اليوم"
 msgid "total"
 msgstr "مجموع"
 
-#: src/components/widgets/SearchBar.jsx:58
+#: src/components/widgets/SearchBar.jsx:78
 msgid "placeholder.search-input"
 msgstr "بحث"
 
-#: src/components/widgets/Tip.jsx:157
+#: src/components/widgets/Tip.jsx:156
 msgid "tips.sources.headline"
 msgstr "مصادر"
 
-#: src/components/widgets/Tip.jsx:167
+#: src/components/widgets/Tip.jsx:166
 msgid "tips.sources.last-updated"
 msgstr "آخر تحديث:"

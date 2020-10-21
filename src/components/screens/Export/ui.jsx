@@ -163,7 +163,12 @@ const Export = ({
         </View>
       </View>
 
-      <Modal isVisible={isExportResultModalVisible} style={styles.modal}>
+      <Modal
+        hideModalContentWhileAnimating
+        isVisible={isExportResultModalVisible}
+        statusBarTranslucent
+        style={styles.modal}
+        useNativeDriver>
         <View style={styles.modalContent}>
           <View style={styles.modalHeader}>
             <Text style={styles.modalHeaderText}>{__('export-screen.modals.export-completed.headline')}</Text>

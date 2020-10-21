@@ -12,6 +12,9 @@ const withViewportUnits = (WrappedComponent) => {
       this.state = {
         orientation: screenWidth < screenHeight ? 'portrait' : 'landscape',
       };
+
+      this.viewportHeight = this.viewportHeight.bind(this);
+      this.viewportWidth = this.viewportWidth.bind(this);
     }
 
     componentDidMount() {
@@ -49,8 +52,8 @@ const withViewportUnits = (WrappedComponent) => {
           {...props}
           orientation={orientation}
           ref={forwardedRef}
-          vh={(value) => this.viewportHeight(value)}
-          vw={(value) => this.viewportWidth(value)}
+          vh={this.viewportHeight}
+          vw={this.viewportWidth}
         />
       );
     }

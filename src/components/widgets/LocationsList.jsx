@@ -2,53 +2,140 @@ import UilEllipsisV from '@iconscout/react-native-unicons/icons/uil-ellipsis-v';
 import UilMinus from '@iconscout/react-native-unicons/icons/uil-minus';
 import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
 import cloneDeep from 'lodash/cloneDeep';
+import deepEqual from 'fast-deep-equal';
 import moment from 'moment';
 import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
-import ListItem from './ListItem';
 import ListItemSeparator from './ListItemSeparator';
 
 class LocationsListItemClass extends React.Component {
   constructor(props) {
     super(props);
 
-    this.swipeable = React.createRef();
+    this.openMore = this.openMore.bind(this);
+    this.toggleSelection = this.toggleSelection.bind(this);
   }
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
-    if (this.props.isLocationSelected !== nextProps.isLocationSelected) return true;
-
-    if (this.props.title !== nextProps.title) return true;
-
-    if (this.props.description !== nextProps.description) return true;
-
-    if (this.props.timestamp !== nextProps.timestamp) return true;
-
-    return false;
+    return (
+      this.props.isLocationSelected !== nextProps.isLocationSelected ||
+      this.props.title !== nextProps.title ||
+      this.props.description !== nextProps.description ||
+      this.props.phone !== nextProps.phone ||
+      this.props.timestamp !== nextProps.timestamp ||
+      this.props.timestampEnd !== nextProps.timestampEnd
+    );
   }
 
   openMore() {
-    const { isRTL } = this.props;
-
-    if (isRTL && this.swipeable.current.openLeft) {
-      this.swipeable.current.openLeft();
-    } else if (!isRTL && this.swipeable.current.openRight) {
-      this.swipeable.current.openRight();
-    }
+    if (this.props.onPressMore)
+      this.props.onPressMore(
+        this.props.id,
+        this.props.title,
+        this.props.description,
+        this.props.phone,
+        this.props.timestamp,
+        this.props.timestampEnd
+      );
   }
+
+  toggleSelection() {
+    if (this.props.toggleSelection) this.props.toggleSelection(this.props.id);
+  }
+
+  styles = StyleSheet.create({
+    location: {
+      backgroundColor: COLOR_SECONDARY,
+      borderRadius: this.props.vw(2.3),
+      flexDirection: 'column',
+      marginLeft: this.props.vw(2.5),
+      marginRight: this.props.vw(2.5),
+      marginTop: this.props.vw(2.3),
+      padding: this.props.vw(3),
+      paddingBottom: this.props.vw(3.8),
+      paddingTop: this.props.vw(3.8),
+    },
+    locationText: {
+      fontFamily: this.props.getFontFamilyRegular(),
+      fontSize: this.props.vw(4.2),
+    },
+    locationTextWithPadding: {
+      paddingRight: this.props.vw(9),
+    },
+    locationHeader: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
+    locationContent: {
+      flexDirection: 'column',
+    },
+    locationContentText: {
+      color: '#000000',
+      fontFamily: this.props.getFontFamilyRegular(),
+      fontSize: this.props.vw(3.8),
+      marginTop: this.props.vw(1),
+    },
+    locationContentDescription: {
+      color: '#b0b0b1',
+      fontSize: this.props.vw(3.5),
+    },
+    locationContentTime: {},
+    moreButton: {
+      alignItems: 'center',
+      bottom: 0,
+      flexDirection: 'row',
+      padding: this.props.vw(2),
+      position: 'absolute',
+      right: 0,
+      top: 0,
+      zIndex: 1,
+    },
+    selectButton: {
+      alignItems: 'center',
+      bottom: 0,
+      flexDirection: 'row',
+      marginBottom: -this.props.vw(1.25),
+      marginTop: -this.props.vw(1.25),
+      position: 'absolute',
+      right: 0,
+      top: 0,
+      zIndex: 1,
+    },
+    selectButtonInner: {
+      backgroundColor: 'transparent',
+      borderRadius: 50,
+    },
+    selectButtonInnerSelected: {
+      backgroundColor: COLOR_PRIMARY,
+    },
+    viewCounter: {
+      alignItems: 'center',
+      bottom: 0,
+      flexDirection: 'row',
+      marginBottom: -this.props.vw(1.2),
+      marginTop: -this.props.vw(1.2),
+      position: 'absolute',
+      right: 0,
+      top: 0,
+      zIndex: 1,
+    },
+    viewCounterText: {
+      color: COLOR_PRIMARY,
+      fontFamily: this.props.getFontFamilyBold(),
+      fontSize: this.props.vw(6),
+    },
+  });
 
   render() {
     const {
       allowDelete,
       allowSelection,
       allowUpdate,
-      deleteItem,
       description,
       counter,
-      id,
       isLocationSelected,
       selectedLocationDescription,
       selectedLocationTime,
@@ -56,93 +143,27 @@ class LocationsListItemClass extends React.Component {
       timestamp,
       timestampEnd,
       title,
-      toggleSelection,
-      updateItem,
-      getFontFamilyBold,
-      getFontFamilyRegular,
       vw,
     } = this.props;
 
-    const styles = StyleSheet.create({
-      location: {
-        backgroundColor: COLOR_SECONDARY,
-        borderRadius: vw(2.3),
-        flexDirection: 'column',
-        marginLeft: vw(2.5),
-        marginRight: vw(2.5),
-        marginTop: vw(2.3),
-        padding: vw(3),
-        paddingBottom: vw(3.8),
-        paddingTop: vw(3.8),
-      },
-      locationText: {
-        fontFamily: getFontFamilyRegular(),
-        fontSize: vw(4.2),
-      },
-      locationHeader: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-      },
-      locationContent: {
-        flexDirection: 'column',
-      },
-      locationContentText: {
-        color: '#000000',
-        fontFamily: getFontFamilyRegular(),
-        fontSize: vw(3.8),
-        marginTop: vw(1),
-      },
-      locationContentDescription: {
-        color: '#b0b0b1',
-        fontSize: vw(3.5),
-      },
-      locationContentTime: {},
-      moreButton: {
-        alignItems: 'center',
-        bottom: 0,
-        flexDirection: 'row',
-        padding: vw(2),
-        position: 'absolute',
-        right: 0,
-        top: 0,
-        zIndex: 1,
-      },
-      selectButton: {
-        alignItems: 'center',
-        flexDirection: 'row',
-        marginBottom: -vw(1.25),
-        marginTop: -vw(1.25),
-      },
-      selectButtonInner: {
-        borderRadius: 50,
-      },
-      selectButtonInnerSelected: {
-        backgroundColor: COLOR_PRIMARY,
-      },
-      viewCounter: {
-        marginBottom: -vw(1.2),
-        marginTop: -vw(1.2),
-      },
-      viewCounterText: {
-        color: COLOR_PRIMARY,
-        fontFamily: getFontFamilyBold(),
-        fontSize: vw(6),
-      },
-    });
-
     const LocationItem = () => (
-      <View style={styles.location}>
-        <View style={styles.locationHeader}>
-          <Text numberOfLines={1} style={styles.locationText}>
+      <View style={this.styles.location}>
+        <View style={this.styles.locationHeader}>
+          <Text
+            numberOfLines={1}
+            style={{
+              ...this.styles.locationText,
+              ...((allowDelete || allowSelection || allowUpdate || showCounter) && this.styles.locationTextWithPadding),
+            }}>
             {title}
           </Text>
 
           {allowSelection && (
-            <View style={styles.selectButton}>
+            <View style={this.styles.selectButton}>
               <View
                 style={{
-                  ...styles.selectButtonInner,
-                  ...(isLocationSelected && styles.selectButtonInnerSelected),
+                  ...this.styles.selectButtonInner,
+                  ...(isLocationSelected && this.styles.selectButtonInnerSelected),
                 }}>
                 {isLocationSelected ? (
                   <UilMinus size={vw(7)} color={'#ffffff'} />
@@ -154,30 +175,34 @@ class LocationsListItemClass extends React.Component {
           )}
 
           {showCounter && (
-            <View style={styles.viewCounter}>
-              <Text style={styles.viewCounterText}>{counter}</Text>
+            <View style={this.styles.viewCounter}>
+              <Text style={this.styles.viewCounterText}>{counter}</Text>
             </View>
           )}
         </View>
 
         {allowSelection && isLocationSelected && (
-          <View style={styles.locationContent}>
+          <View style={this.styles.locationContent}>
             {selectedLocationDescription.trim().length > 0 && (
-              <Text style={{ ...styles.locationContentText, ...styles.locationContentDescription }}>
+              <Text style={{ ...this.styles.locationContentText, ...this.styles.locationContentDescription }}>
                 {selectedLocationDescription}
               </Text>
             )}
-            <Text style={{ ...styles.locationContentText, ...styles.locationContentTime }}>{selectedLocationTime}</Text>
+            <Text style={{ ...this.styles.locationContentText, ...this.styles.locationContentTime }}>
+              {selectedLocationTime}
+            </Text>
           </View>
         )}
 
         {allowDelete && (
-          <View style={styles.locationContent}>
+          <View style={this.styles.locationContent}>
             {description.trim().length > 0 && (
-              <Text style={{ ...styles.locationContentText, ...styles.locationContentDescription }}>{description}</Text>
+              <Text style={{ ...this.styles.locationContentText, ...this.styles.locationContentDescription }}>
+                {description}
+              </Text>
             )}
             {timestamp > 0 && (
-              <Text style={{ ...styles.locationContentText, ...styles.locationContentTime }}>
+              <Text style={{ ...this.styles.locationContentText, ...this.styles.locationContentTime }}>
                 {moment(timestamp || 0).format('LT')}
                 {timestampEnd > 0 && timestampEnd > timestamp && ` - ${moment(timestampEnd).format('LT')}`}
               </Text>
@@ -185,60 +210,29 @@ class LocationsListItemClass extends React.Component {
           </View>
         )}
 
-        {allowDelete && (
-          <TouchableOpacity onPress={() => this.openMore()} style={styles.moreButton}>
+        {(allowDelete || allowUpdate) && (
+          <TouchableOpacity onPress={this.openMore} style={this.styles.moreButton}>
             <UilEllipsisV size={vw(7)} color={COLOR_PRIMARY} />
           </TouchableOpacity>
         )}
       </View>
     );
 
-    return (
-      <ListItem
-        allowDelete={allowDelete}
-        deleteItem={() => deleteItem(id, description, timestamp)}
-        ref={this.swipeable}>
-        {allowUpdate ? (
-          <TouchableOpacity onPress={() => updateItem(id)}>
-            <LocationItem />
-          </TouchableOpacity>
-        ) : allowSelection ? (
-          <TouchableOpacity onPress={() => toggleSelection(id)}>
-            <LocationItem />
-          </TouchableOpacity>
-        ) : (
-          <LocationItem />
-        )}
-      </ListItem>
+    return allowSelection ? (
+      <TouchableOpacity onPress={this.toggleSelection}>
+        <LocationItem />
+      </TouchableOpacity>
+    ) : (
+      <LocationItem />
     );
   }
 }
 
 const LocationsListItem = withI18n(withViewportUnits(LocationsListItemClass));
 
-const LocationsList = ({
-  allowDelete,
-  allowSelection,
-  allowUpdate,
-  deleteItem,
-  locations,
-  orderByLastUsage,
-  selectedLocations,
-  showCounter,
-  toggleSelection,
-  updateItem,
-  vw,
-}) => {
-  const styles = StyleSheet.create({
-    locationsList: {
-      flex: 1,
-      paddingBottom: vw(2.3),
-      width: '100%',
-    },
-  });
-
-  if (orderByLastUsage && locations) {
-    locations.sort((a, b) => {
+const sortLocations = (inputLocationsList, orderByLastUsage = false) => {
+  if (orderByLastUsage && inputLocationsList) {
+    inputLocationsList.sort((a, b) => {
       const lastUsedA = a.lastUsed || 0;
       const lastUsedB = b.lastUsed || 0;
 
@@ -262,73 +256,166 @@ const LocationsList = ({
       return 0;
     });
 
-    if (!locations.find(({ separatorItem }) => separatorItem === true)) {
-      locations = cloneDeep(locations);
-      for (const i in locations) {
-        if (Object.prototype.hasOwnProperty.call(locations, i)) {
-          const p = locations[i];
+    if (!inputLocationsList.find(({ separatorItem }) => separatorItem === true)) {
+      const locations = cloneDeep(inputLocationsList);
+      for (const i in inputLocationsList) {
+        if (Object.prototype.hasOwnProperty.call(inputLocationsList, i)) {
+          const p = inputLocationsList[i];
           const index = parseInt(i, 10);
 
           if (index === 0 && !p.lastUsed) break;
 
           if (index > 0 && !p.lastUsed) {
-            locations.splice(i, 0, { description: '', id: `locations-separator-${i}`, separatorItem: true, title: '' });
+            locations.splice(i, 0, {
+              description: '',
+              id: `locations-separator-${i}`,
+              separatorItem: true,
+              title: '',
+            });
             break;
           }
         }
       }
+
+      return locations;
     }
   }
 
-  return locations ? (
-    <FlatList
-      data={locations}
-      initialNumToRender={50}
-      keyExtractor={({ description, id, timestamp }) => `location-${id}-${description}-${timestamp}`}
-      renderItem={({ item: { counter, description, id, separatorItem, timestamp, timestampEnd, title } }) => {
-        if (separatorItem) {
-          return <ListItemSeparator />;
-        }
-
-        const selectedLocation = selectedLocations.find(({ id: locationId }) => locationId === id);
-        const isLocationSelected = allowSelection && selectedLocation;
-        let selectedLocationDescription = '';
-        let selectedLocationTime = '';
-
-        if (isLocationSelected) {
-          selectedLocationDescription = selectedLocation.description;
-          selectedLocationTime = moment(selectedLocation.timestamp || 0).format('LT');
-          if (selectedLocation.timestampEnd > 0 && selectedLocation.timestampEnd > selectedLocation.timestamp) {
-            selectedLocationTime = `${selectedLocationTime} - ${moment(selectedLocation.timestampEnd).format('LT')}`;
-          }
-        }
-
-        return (
-          <LocationsListItem
-            allowDelete={allowDelete}
-            allowSelection={allowSelection}
-            allowUpdate={allowUpdate}
-            counter={counter}
-            deleteItem={(locationId, locationDescription, locationTimestamp) =>
-              deleteItem(locationId, locationDescription, locationTimestamp)
-            }
-            description={description}
-            id={id}
-            isLocationSelected={isLocationSelected}
-            selectedLocationDescription={selectedLocationDescription}
-            selectedLocationTime={selectedLocationTime}
-            showCounter={showCounter}
-            timestamp={timestamp}
-            timestampEnd={timestampEnd}
-            title={title}
-            toggleSelection={(locationId) => toggleSelection(locationId)}
-            updateItem={(locationId) => updateItem(locationId)}
-          />
-        );
-      }}
-      style={styles.locationsList}
-    />
-  ) : null;
+  return inputLocationsList;
 };
+
+class LocationsList extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      locations: sortLocations(this.props.locations, this.props.orderByLastUsage),
+      locationsRaw: this.props.locations,
+      locationsLength: this.props.locations.length,
+      selectedLocationsLength: this.props.selectedLocations.length,
+    };
+
+    this.onPressMoreLocation = this.onPressMoreLocation.bind(this);
+    this.renderItem = this.renderItem.bind(this);
+    this.toggleSelection = this.toggleSelection.bind(this);
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    if (
+      props.locations.length !== state.locationsLength ||
+      props.selectedLocations.length !== state.selectedLocationsLength ||
+      !deepEqual(props.locations, state.locationsRaw)
+    ) {
+      return {
+        locations: sortLocations(props.locations, props.orderByLastUsage),
+        locationsRaw: props.locations,
+        locationsLength: props.locations.length,
+        selectedLocationsLength: props.selectedLocations.length,
+      };
+    }
+
+    return null;
+  }
+
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    return (
+      nextProps.locations.length !== this.state.locationsLength ||
+      nextProps.selectedLocations.length !== this.state.selectedLocationsLength ||
+      !deepEqual(nextProps.locations, this.state.locationsRaw)
+    );
+  }
+
+  styles = StyleSheet.create({
+    locationsList: {
+      flex: 1,
+      paddingBottom: this.props.vw(2.3),
+      width: '100%',
+    },
+  });
+
+  onPressMoreLocation(
+    locationId,
+    locationTitle,
+    locationDescription,
+    locationPhone,
+    locationTimestampStart,
+    locationTimestampEnd
+  ) {
+    if (this.props.openItemMore)
+      this.props.openItemMore(
+        locationId,
+        locationTitle,
+        locationDescription,
+        locationPhone,
+        locationTimestampStart,
+        locationTimestampEnd
+      );
+  }
+
+  toggleSelection(locationId) {
+    if (this.props.toggleSelection) this.props.toggleSelection(locationId);
+  }
+
+  renderItem({ item: { counter, description, id, phone, separatorItem, timestamp, timestampEnd, title } }) {
+    if (separatorItem) {
+      return <ListItemSeparator />;
+    }
+
+    const { allowDelete, allowSelection, allowUpdate, selectedLocations, showCounter } = this.props;
+    const selectedLocation = allowSelection ? selectedLocations.find(({ id: locationId }) => locationId === id) : null;
+    const isLocationSelected = allowSelection && selectedLocation;
+    let selectedLocationDescription = '';
+    let selectedLocationTime = '';
+
+    if (isLocationSelected) {
+      selectedLocationDescription = selectedLocation.description;
+      selectedLocationTime = moment(selectedLocation.timestamp || 0).format('LT');
+      if (selectedLocation.timestampEnd > 0 && selectedLocation.timestampEnd > selectedLocation.timestamp) {
+        selectedLocationTime = `${selectedLocationTime} - ${moment(selectedLocation.timestampEnd).format('LT')}`;
+      }
+    }
+
+    return (
+      <LocationsListItem
+        allowDelete={allowDelete}
+        allowSelection={allowSelection}
+        allowUpdate={allowUpdate}
+        counter={counter}
+        description={description}
+        id={id}
+        isLocationSelected={isLocationSelected}
+        onPressMore={this.onPressMoreLocation}
+        phone={phone}
+        selectedLocationDescription={selectedLocationDescription}
+        selectedLocationTime={selectedLocationTime}
+        showCounter={showCounter}
+        timestamp={timestamp}
+        timestampEnd={timestampEnd}
+        title={title}
+        toggleSelection={this.toggleSelection}
+      />
+    );
+  }
+
+  getItemKey({ description, id, timestamp, timestampEnd }) {
+    return `location-${id}-${description}-${timestamp}-${timestampEnd}`;
+  }
+
+  render() {
+    const { locations } = this.state;
+
+    return locations ? (
+      <FlatList
+        data={locations}
+        initialNumToRender={10}
+        keyExtractor={this.getItemKey}
+        removeClippedSubviews={true}
+        renderItem={this.renderItem}
+        style={this.styles.locationsList}
+        windowSize={5}
+      />
+    ) : null;
+  }
+}
 
 export default withViewportUnits(LocationsList);

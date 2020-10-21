@@ -1,33 +1,43 @@
-import React, { memo } from 'react';
+import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { COLOR_SECONDARY } from '../../constants';
 import withViewportUnits from '../../utils/withViewportUnits';
 
-const ListItemSeparator = ({ vw }) => {
-  const styles = StyleSheet.create({
+class ListItemSeparator extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    return false;
+  }
+
+  styles = StyleSheet.create({
     viewLine: {
       backgroundColor: COLOR_SECONDARY,
-      borderRadius: vw(2.3),
-      height: vw(1),
+      borderRadius: this.props.vw(2.3),
+      height: this.props.vw(1),
       width: '50%',
     },
     viewWrapper: {
       alignItems: 'center',
       flex: 1,
-      height: vw(12.8),
+      height: this.props.vw(12.8),
       justifyContent: 'center',
-      marginTop: vw(2.3),
-      paddingLeft: vw(2.5),
-      paddingRight: vw(2.5),
+      marginTop: this.props.vw(2.3),
+      paddingLeft: this.props.vw(2.5),
+      paddingRight: this.props.vw(2.5),
       width: '100%',
     },
   });
 
-  return (
-    <View style={styles.viewWrapper}>
-      <View style={styles.viewLine} />
-    </View>
-  );
-};
+  render() {
+    return (
+      <View style={this.styles.viewWrapper}>
+        <View style={this.styles.viewLine} />
+      </View>
+    );
+  }
+}
 
-export default memo(withViewportUnits(ListItemSeparator));
+export default withViewportUnits(ListItemSeparator);

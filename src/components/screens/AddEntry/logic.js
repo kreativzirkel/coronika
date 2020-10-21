@@ -5,7 +5,7 @@ import { addPersonToDay, addLocationToDay } from '../Dashboard/actions';
 import { updateLastUsageOfLocation, updateLastUsageOfPerson } from '../Directory/actions';
 import Screen from './ui';
 
-const addSelection = (selection, navigation) => async (dispatch, getState) => {
+const addSelection = (selection) => async (dispatch, getState) => {
   const {
     directory: { persons, locations },
     day: { timestamp },
@@ -34,8 +34,6 @@ const addSelection = (selection, navigation) => async (dispatch, getState) => {
       dispatch(updateLastUsageOfLocation(locationId));
     }
   );
-
-  navigation.navigate('Day');
 };
 
 const personsSortingFunction = (a, b) => {
@@ -82,7 +80,7 @@ const mapStateToProps = ({ directory: { persons, locations }, dashboard: { days 
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addSelection: (selection, navigation) => dispatch(addSelection(selection, navigation)),
+    addSelection: (selection) => dispatch(addSelection(selection)),
   };
 };
 

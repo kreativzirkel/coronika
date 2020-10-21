@@ -21,6 +21,26 @@ const generateTranslationFiles = (translationsDir) => {
   const pot = 'template.pot';
   const pathPot = path.resolve(translationsDir, pot);
 
+  // check if msgattrib is installed
+
+  let msgattribInstalled = true;
+
+  try {
+    const msgattribTest = spawnSync('msgattrib', ['-h']);
+
+    if (msgattribTest.error) {
+      // noinspection ExceptionCaughtLocallyJS
+      throw Error();
+    }
+  } catch (e) {
+    /* eslint-disable no-console */
+    console.log('');
+    // noinspection JSUnresolvedFunction
+    console.error(colors.red('msgattrib is not installed! Will not cleanup .PO files at the end!'));
+    /* eslint-enable no-console */
+    msgattribInstalled = false;
+  }
+
   // check if msgmerge is installed
 
   let msgmergeInstalled = true;
@@ -59,7 +79,7 @@ const generateTranslationFiles = (translationsDir) => {
         if (msgmergeInstalled) {
           const pathFileTemp = `${pathFile}_TEMP`;
 
-          const msgmerge = spawnSync('msgmerge', [pathFile, pathPot, '-o', pathFileTemp]);
+          const msgmerge = spawnSync('msgmerge', ['-N', pathFile, pathPot, '-o', pathFileTemp]);
 
           if (!fs.existsSync(pathFileTemp)) {
             /* eslint-disable-next-line no-console */
@@ -68,6 +88,12 @@ const generateTranslationFiles = (translationsDir) => {
             fs.unlinkSync(pathFile);
             fs.renameSync(pathFileTemp, pathFile);
           }
+        }
+
+        // use msgattrib to cleanup .PO files (remove obsolete entries, ...)
+
+        if (msgattribInstalled) {
+          spawnSync('msgattrib', ['--no-obsolete', `--ignore-file=${pathPot}`, '-o', pathFile, pathFile]);
         }
 
         // use po2json to create .JSON files for wordpress

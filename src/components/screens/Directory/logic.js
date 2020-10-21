@@ -1,74 +1,9 @@
-import { Alert, PermissionsAndroid, Platform } from 'react-native';
-import RNContacts from 'react-native-contacts';
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
-import { container } from '../../../utils/react';
 import withViewportUnits from '../../../utils/withViewportUnits';
-import {
-  importPersons as importPersonsAction,
-  removePerson,
-  removeLocation,
-  showImportPersonsModal,
-  hideImportPersonsModal,
-  enablePersonsImporting,
-  disablePersonsImporting,
-} from './actions';
+import { removePerson, removeLocation, showImportPersonsModal, hideImportPersonsModal } from './actions';
+import importPersons from './importPersons';
 import Screen from './ui';
-
-export const importPersons = (__, closeImportPersonsModal = false) => async (dispatch) => {
-  dispatch(enablePersonsImporting());
-
-  let permissionGranted = true;
-
-  if (Platform.OS === 'android') {
-    const permissionRequestResult = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.READ_CONTACTS);
-
-    permissionGranted = permissionRequestResult === 'granted';
-  }
-
-  if (permissionGranted) {
-    RNContacts.getAll((err, contacts) => {
-      if (err === 'denied') {
-        Alert.alert(
-          __('directory-screen.alerts.import-persons.missing-permission.title'),
-          __('directory-screen.alerts.import-persons.missing-permission.message')
-        );
-
-        dispatch(disablePersonsImporting());
-      } else {
-        const personsToImport = [];
-
-        contacts.forEach(({ familyName, givenName, middleName, phoneNumbers, recordID }) => {
-          // ignore company contacts
-          if (givenName && givenName.trim() !== '') {
-            personsToImport.push({
-              givenName,
-              middleName,
-              familyName,
-              phoneNumbers,
-              recordID,
-            });
-          }
-        });
-
-        dispatch(importPersonsAction(personsToImport));
-
-        if (closeImportPersonsModal) {
-          dispatch(hideImportPersonsModal());
-        }
-
-        dispatch(disablePersonsImporting());
-      }
-    });
-  } else {
-    dispatch(disablePersonsImporting());
-
-    Alert.alert(
-      __('directory-screen.alerts.import-persons.missing-permission.title'),
-      __('directory-screen.alerts.import-persons.missing-permission.message')
-    );
-  }
-};
 
 const personsSortingFunction = (a, b) => {
   const fullNameA = a.fullName.toLowerCase();
@@ -118,10 +53,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const Container = container(Screen, {
-  componentDidMount() {},
-});
-
-const Directory = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Container)));
+const Directory = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Screen)));
 
 export default Directory;

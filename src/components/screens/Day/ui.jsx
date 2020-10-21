@@ -8,38 +8,38 @@ import DayOverview from '../../widgets/DayOverview';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 
-const Day = ({
-  locations,
-  persons,
-  timestamp,
-  deleteLocationFromDay,
-  deletePersonFromDay,
-  navigation,
-  vw,
-  getFontFamilyRegular,
-  __,
-}) => {
-  // noinspection JSUnresolvedFunction
-  const styles = StyleSheet.create({
+class Day extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.deleteLocationFromDay = this.deleteLocationFromDay.bind(this);
+    this.deletePersonFromDay = this.deletePersonFromDay.bind(this);
+    this.goToAddEntry = this.goToAddEntry.bind(this);
+    this.updateSelectedLocation = this.updateSelectedLocation.bind(this);
+  }
+
+  today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
+
+  styles = StyleSheet.create({
     buttonAdd: {
       alignItems: 'center',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'center',
-      marginBottom: vw(7),
-      marginTop: vw(7),
+      marginBottom: this.props.vw(7),
+      marginTop: this.props.vw(7),
     },
     buttonAddIcon: {
-      marginRight: vw(1.5),
+      marginRight: this.props.vw(1.5),
     },
     buttonAddText: {
       color: COLOR_PRIMARY,
-      fontFamily: getFontFamilyRegular(),
-      fontSize: vw(5.5),
+      fontFamily: this.props.getFontFamilyRegular(),
+      fontSize: this.props.vw(5.5),
       textTransform: 'lowercase',
     },
     dayOverviewWrapper: {
-      marginBottom: vw(0.7),
+      marginBottom: this.props.vw(0.7),
       width: '100%',
     },
     wrapperAddEntry: {
@@ -49,36 +49,59 @@ const Day = ({
     },
   });
 
-  const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
+  goToAddEntry() {
+    this.props.navigation.navigate('AddEntry');
+  }
 
-  const goToAddEntry = () => navigation.navigate('AddEntry');
+  deleteLocationFromDay(id, description, time) {
+    if (this.props.deleteLocationFromDay) this.props.deleteLocationFromDay(id, description, time);
+  }
 
-  return (
-    <Layout>
-      <HeaderBack headline={__('day-screen.header.headline')} navigation={navigation} />
+  deletePersonFromDay(id) {
+    if (this.props.deletePersonFromDay) this.props.deletePersonFromDay(id);
+  }
 
-      <View style={styles.dayOverviewWrapper}>
-        <DayOverview isDark locations={locations.length} persons={persons.length} timestamp={timestamp} today={today} />
-      </View>
+  updateSelectedLocation(locationOld, locationUpdated) {
+    if (this.props.updateSelectedLocation) this.props.updateSelectedLocation(locationOld, locationUpdated);
+  }
 
-      <EntriesTabsView
-        customLocationsEmptyText={__('day-screen.locations.empty')}
-        customPersonsEmptyText={__('day-screen.persons.empty')}
-        deletePersonItem={(id) => deletePersonFromDay(id)}
-        deleteLocationItem={(id, description, time) => deleteLocationFromDay(id, description, time)}
-        hideCreateButton
-        locations={locations}
-        persons={persons}
-      />
+  render() {
+    const { locations, persons, timestamp, navigation, vw, __ } = this.props;
 
-      <View style={styles.wrapperAddEntry}>
-        <TouchableOpacity onPress={() => goToAddEntry()} style={styles.buttonAdd}>
-          <UilPlus color={COLOR_PRIMARY} size={vw(6)} style={styles.buttonAddIcon} />
-          <Text style={styles.buttonAddText}>{__('day-screen.entries.add')}</Text>
-        </TouchableOpacity>
-      </View>
-    </Layout>
-  );
-};
+    return (
+      <Layout>
+        <HeaderBack headline={__('day-screen.header.headline')} navigation={navigation} />
+
+        <View style={this.styles.dayOverviewWrapper}>
+          <DayOverview
+            isDark
+            locations={locations.length}
+            persons={persons.length}
+            timestamp={timestamp}
+            today={this.today}
+          />
+        </View>
+
+        <EntriesTabsView
+          customLocationsEmptyText={__('day-screen.locations.empty')}
+          customPersonsEmptyText={__('day-screen.persons.empty')}
+          deletePersonItem={this.deletePersonFromDay}
+          deleteLocationItem={this.deleteLocationFromDay}
+          hideCreateButton
+          locations={locations}
+          persons={persons}
+          updateSelectedLocation={this.updateSelectedLocation}
+        />
+
+        <View style={this.styles.wrapperAddEntry}>
+          <TouchableOpacity onPress={this.goToAddEntry} style={this.styles.buttonAdd}>
+            <UilPlus color={COLOR_PRIMARY} size={vw(6)} style={this.styles.buttonAddIcon} />
+            <Text style={this.styles.buttonAddText}>{__('day-screen.entries.add')}</Text>
+          </TouchableOpacity>
+        </View>
+      </Layout>
+    );
+  }
+}
 
 export default Day;

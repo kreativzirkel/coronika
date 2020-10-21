@@ -11,7 +11,8 @@ const AddEntry = ({ locations, persons, timestamp, addSelection, navigation, __ 
 
       <EntriesTabsView
         allowSelection
-        addSelection={(selection) => addSelection(selection, navigation)}
+        addSelection={(selection) => addSelection(selection)}
+        confirmSelection={() => navigation.navigate('Day')}
         locations={locations}
         orderByLastUsage
         persons={persons}

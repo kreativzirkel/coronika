@@ -84,45 +84,33 @@ const DayPersons = memo(({ isDark, persons, showIcons, styles, vw, __ }) => {
   );
 });
 
-const DayOverview = ({
-  isDark,
-  isEmphasized,
-  isTotal,
-  isTranslucent,
-  locations,
-  persons,
-  showIcons,
-  timestamp,
-  today,
-  formatTimeDistance,
-  vw,
-  getFontFamilyBold,
-  getFontFamilyRegular,
-  __,
-}) => {
-  // noinspection JSUnresolvedFunction
-  const styles = StyleSheet.create({
+class DayOverview extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  styles = StyleSheet.create({
     day: {
       backgroundColor: COLOR_SECONDARY,
-      borderRadius: vw(2.3),
+      borderRadius: this.props.vw(2.3),
       display: 'flex',
       flexDirection: 'row',
-      marginBottom: vw(2),
-      marginLeft: vw(2.5),
-      marginRight: vw(2.5),
-      padding: vw(3),
-      paddingBottom: vw(2.5),
-      paddingTop: vw(2.5),
+      marginBottom: this.props.vw(2),
+      marginLeft: this.props.vw(2.5),
+      marginRight: this.props.vw(2.5),
+      padding: this.props.vw(3),
+      paddingBottom: this.props.vw(2.5),
+      paddingTop: this.props.vw(2.5),
     },
     dayDark: {
       backgroundColor: '#000000',
     },
     dayEmphasized: {
       borderColor: COLOR_PRIMARY,
-      borderWidth: vw(0.5),
-      padding: vw(2.5),
-      paddingBottom: vw(2),
-      paddingTop: vw(2),
+      borderWidth: this.props.vw(0.5),
+      padding: this.props.vw(2.5),
+      paddingBottom: this.props.vw(2),
+      paddingTop: this.props.vw(2),
     },
     dayTranslucent: {
       opacity: 0.4,
@@ -131,12 +119,12 @@ const DayOverview = ({
       alignSelf: 'flex-end',
     },
     dayValue: {
-      fontFamily: getFontFamilyBold(),
-      fontSize: vw(7),
+      fontFamily: this.props.getFontFamilyBold(),
+      fontSize: this.props.vw(7),
       textTransform: 'lowercase',
     },
     dayValueDay: {
-      marginRight: vw(2.5),
+      marginRight: this.props.vw(2.5),
     },
     dayValueNumber: {
       color: COLOR_PRIMARY,
@@ -150,9 +138,9 @@ const DayOverview = ({
     },
     dayValueCaption: {
       color: '#707070',
-      fontFamily: getFontFamilyRegular(),
-      fontSize: vw(2.7),
-      marginBottom: vw(0.5),
+      fontFamily: this.props.getFontFamilyRegular(),
+      fontSize: this.props.vw(2.7),
+      marginBottom: this.props.vw(0.5),
       textTransform: 'lowercase',
     },
     dayValueCaptionDark: {
@@ -173,26 +161,45 @@ const DayOverview = ({
     dayLocationsWrapper: {
       flexGrow: 0,
       flexShrink: 0,
-      marginRight: vw(1.8),
+      marginRight: this.props.vw(1.8),
     },
   });
 
-  const currentDay = moment(timestamp);
-  const isToday = currentDay.diff(today) === 0;
+  currentDay = moment(this.props.timestamp);
+  isToday = this.currentDay.diff(this.props.today) === 0;
 
-  return (
-    <View
-      style={{
-        ...styles.day,
-        ...(isDark && styles.dayDark),
-        ...(isEmphasized && styles.dayEmphasized),
-        ...(isTranslucent && styles.dayTranslucent),
-      }}>
-      <DayDate {...{ formatTimeDistance, isDark, isToday, isTotal, styles, timestamp, today, __ }} />
-      <DayLocations {...{ isDark, locations, showIcons, styles, vw, __ }} />
-      <DayPersons {...{ isDark, persons, showIcons, styles, vw, __ }} />
-    </View>
-  );
-};
+  render() {
+    const {
+      formatTimeDistance,
+      isDark,
+      isEmphasized,
+      isTotal,
+      isTranslucent,
+      locations,
+      persons,
+      showIcons,
+      timestamp,
+      today,
+      vw,
+      __,
+    } = this.props;
+
+    return (
+      <View
+        style={{
+          ...this.styles.day,
+          ...(isDark && this.styles.dayDark),
+          ...(isEmphasized && this.styles.dayEmphasized),
+          ...(isTranslucent && this.styles.dayTranslucent),
+        }}>
+        <DayDate
+          {...{ formatTimeDistance, isDark, isToday: this.isToday, isTotal, styles: this.styles, timestamp, today, __ }}
+        />
+        <DayLocations {...{ isDark, locations, showIcons, styles: this.styles, vw, __ }} />
+        <DayPersons {...{ isDark, persons, showIcons, styles: this.styles, vw, __ }} />
+      </View>
+    );
+  }
+}
 
 export default memo(withI18n(withViewportUnits(DayOverview)));

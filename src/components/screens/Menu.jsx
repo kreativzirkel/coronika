@@ -10,18 +10,29 @@ import withViewportUnits from '../../utils/withViewportUnits';
 import { HeaderBack } from '../widgets/Header';
 import Layout from '../widgets/Layout';
 
-const Menu = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, __ }) => {
-  // noinspection JSUnresolvedFunction
-  const styles = StyleSheet.create({
+class Menu extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  sendFeedback() {
+    Linking.openURL('mailto:info@kreativzirkel.de?subject=Coronika').catch(() => {});
+  }
+
+  visitKreativzirkel() {
+    Linking.openURL('https://www.kreativzirkel.de/').catch(() => {});
+  }
+
+  styles = StyleSheet.create({
     contentText: {
-      fontFamily: getFontFamilyRegular(),
-      fontSize: vw(4.5),
-      lineHeight: vw(7),
+      fontFamily: this.props.getFontFamilyRegular(),
+      fontSize: this.props.vw(4.5),
+      lineHeight: this.props.vw(7),
     },
     feedbackButton: {
       color: COLOR_PRIMARY,
-      fontFamily: getFontFamilyBold(),
-      fontSize: vw(7),
+      fontFamily: this.props.getFontFamilyBold(),
+      fontSize: this.props.vw(7),
       textAlign: 'center',
     },
     madeByButton: {
@@ -31,20 +42,20 @@ const Menu = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, 
     },
     madeByText: {
       color: '#909091',
-      fontFamily: getFontFamilyRegular(),
-      fontSize: vw(3.5),
-      marginLeft: vw(2),
-      marginRight: vw(2),
+      fontFamily: this.props.getFontFamilyRegular(),
+      fontSize: this.props.vw(3.5),
+      marginLeft: this.props.vw(2),
+      marginRight: this.props.vw(2),
     },
     menuItemIcon: {
-      marginBottom: -vw(3),
-      marginRight: -vw(2),
-      marginTop: -vw(3),
+      marginBottom: -this.props.vw(3),
+      marginRight: -this.props.vw(2),
+      marginTop: -this.props.vw(3),
     },
     menuItemText: {
       color: '#000000',
-      fontFamily: getFontFamilyRegular(),
-      fontSize: vw(4.2),
+      fontFamily: this.props.getFontFamilyRegular(),
+      fontSize: this.props.vw(4.2),
     },
     menuItemTextWrapper: {
       width: '85%',
@@ -52,20 +63,20 @@ const Menu = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, 
     menuItemWrapper: {
       alignItems: 'center',
       backgroundColor: COLOR_SECONDARY,
-      borderRadius: vw(2.3),
+      borderRadius: this.props.vw(2.3),
       flexDirection: 'row',
       justifyContent: 'space-between',
-      marginTop: vw(2.3),
-      padding: vw(3),
-      paddingBottom: vw(3.8),
-      paddingTop: vw(3.8),
+      marginTop: this.props.vw(2.3),
+      padding: this.props.vw(3),
+      paddingBottom: this.props.vw(3.8),
+      paddingTop: this.props.vw(3.8),
     },
     view: {
       backgroundColor: '#ffffff',
       flex: 1,
       flexDirection: 'column',
       justifyContent: 'space-between',
-      padding: vw(2.5),
+      padding: this.props.vw(2.5),
       width: '100%',
     },
     viewInner: {
@@ -76,7 +87,7 @@ const Menu = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, 
       alignItems: 'center',
       flexDirection: 'column',
       justifyContent: 'center',
-      marginBottom: vw(5),
+      marginBottom: this.props.vw(5),
       width: '100%',
     },
     viewContent: {
@@ -84,96 +95,96 @@ const Menu = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, 
       width: '100%',
     },
     viewContentList: {
-      marginBottom: vw(10),
-      marginTop: vw(4),
+      marginBottom: this.props.vw(10),
+      marginTop: this.props.vw(4),
     },
     viewContentText: {
-      paddingLeft: vw(2.5),
-      paddingRight: vw(2.5),
-      paddingTop: vw(2.5),
+      paddingLeft: this.props.vw(2.5),
+      paddingRight: this.props.vw(2.5),
+      paddingTop: this.props.vw(2.5),
     },
     viewMadeBy: {
       alignItems: 'center',
       flexDirection: 'row',
       justifyContent: 'center',
-      marginBottom: vw(3),
+      marginBottom: this.props.vw(3),
       width: '100%',
     },
     viewMadeByBottom: {
-      flexDirection: isRTL ? 'row-reverse' : 'row',
+      flexDirection: this.props.isRTL ? 'row-reverse' : 'row',
     },
   });
 
-  const menuItems = [
-    {
-      headline: __('about-screen.header.headline'),
-      routeName: 'About',
-    },
-    {
-      headline: __('settings-screen.header.headline'),
-      routeName: 'Settings',
-    },
-    {
-      headline: __('legal-screen.header.headline'),
-      routeName: 'Legal',
-    },
-  ];
+  render() {
+    const { navigation, vw, isRTL, __ } = this.props;
 
-  const sendFeedback = () => Linking.openURL('mailto:info@kreativzirkel.de?subject=Coronika').catch(() => {});
+    const menuItems = [
+      {
+        headline: __('about-screen.header.headline'),
+        routeName: 'About',
+      },
+      {
+        headline: __('settings-screen.header.headline'),
+        routeName: 'Settings',
+      },
+      {
+        headline: __('legal-screen.header.headline'),
+        routeName: 'Legal',
+      },
+    ];
 
-  const visitKreativzirkel = () => Linking.openURL('https://www.kreativzirkel.de/').catch(() => {});
+    return (
+      <Layout backgroundColor={COLOR_SECONDARY}>
+        <HeaderBack headline={__('menu-screen.header.headline')} navigation={navigation} />
 
-  return (
-    <Layout backgroundColor={COLOR_SECONDARY}>
-      <HeaderBack headline={__('menu-screen.header.headline')} navigation={navigation} />
+        <View style={this.styles.view}>
+          <View style={this.styles.viewInner}>
+            <View style={{ ...this.styles.viewContent, ...this.styles.viewContentText }}>
+              <Text style={this.styles.contentText}>{__('menu-screen.intro.text')}</Text>
+            </View>
 
-      <View style={styles.view}>
-        <View style={styles.viewInner}>
-          <View style={{ ...styles.viewContent, ...styles.viewContentText }}>
-            <Text style={styles.contentText}>{__('menu-screen.intro.text')}</Text>
+            <View style={{ ...this.styles.viewContent, ...this.styles.viewContentList }}>
+              {menuItems.map(({ headline, routeName }, index) => (
+                <TouchableOpacity
+                  key={`menu-item-${index}`}
+                  onPress={() => navigation.navigate(routeName)}
+                  style={this.styles.menuItemWrapper}>
+                  <View style={this.styles.menuItemTextWrapper}>
+                    <Text style={this.styles.menuItemText}>{headline}</Text>
+                  </View>
+
+                  <View style={this.styles.menuItemIcon}>
+                    {isRTL ? (
+                      <UilArrowLeft size={vw(11)} color={COLOR_PRIMARY} />
+                    ) : (
+                      <UilArrowRight size={vw(11)} color={COLOR_PRIMARY} />
+                    )}
+                  </View>
+                </TouchableOpacity>
+              ))}
+            </View>
           </View>
 
-          <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
-            {menuItems.map(({ headline, routeName }, index) => (
-              <TouchableOpacity
-                key={`menu-item-${index}`}
-                onPress={() => navigation.navigate(routeName)}
-                style={styles.menuItemWrapper}>
-                <View style={styles.menuItemTextWrapper}>
-                  <Text style={styles.menuItemText}>{headline}</Text>
-                </View>
-
-                <View style={styles.menuItemIcon}>
-                  {isRTL ? (
-                    <UilArrowLeft size={vw(11)} color={COLOR_PRIMARY} />
-                  ) : (
-                    <UilArrowRight size={vw(11)} color={COLOR_PRIMARY} />
-                  )}
+          <View style={this.styles.viewBottom}>
+            <View style={this.styles.viewMadeBy}>
+              <TouchableOpacity onPress={this.visitKreativzirkel} style={this.styles.madeByButton}>
+                <Text style={this.styles.madeByText}>Coronika version {version} made</Text>
+                <View style={{ ...this.styles.viewMadeBy, ...this.styles.viewMadeByBottom }}>
+                  <Text style={this.styles.madeByText}>with</Text>
+                  <UilHeart color={'#ed2828'} size={vw(5.5)} />
+                  <Text style={this.styles.madeByText}>by Kreativzirkel</Text>
                 </View>
               </TouchableOpacity>
-            ))}
-          </View>
-        </View>
+            </View>
 
-        <View style={styles.viewBottom}>
-          <View style={styles.viewMadeBy}>
-            <TouchableOpacity onPress={() => visitKreativzirkel()} style={styles.madeByButton}>
-              <Text style={styles.madeByText}>Coronika version {version} made</Text>
-              <View style={{ ...styles.viewMadeBy, ...styles.viewMadeByBottom }}>
-                <Text style={styles.madeByText}>with</Text>
-                <UilHeart color={'#ed2828'} size={vw(5.5)} />
-                <Text style={styles.madeByText}>by Kreativzirkel</Text>
-              </View>
+            <TouchableOpacity onPress={this.sendFeedback}>
+              <Text style={this.styles.feedbackButton}>{__('menu-screen.button.send-feedback')}</Text>
             </TouchableOpacity>
           </View>
-
-          <TouchableOpacity onPress={() => sendFeedback()}>
-            <Text style={styles.feedbackButton}>{__('menu-screen.button.send-feedback')}</Text>
-          </TouchableOpacity>
         </View>
-      </View>
-    </Layout>
-  );
-};
+      </Layout>
+    );
+  }
+}
 
 export default memo(withI18n(withViewportUnits(Menu)));

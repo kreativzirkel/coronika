@@ -1,20 +1,11 @@
 import * as RNLocalize from 'react-native-localize';
 import { BackHandler } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
-import connect from 'react-redux/lib/connect/connect';
 import { SUPPORTED_LANGUAGES } from '../../../constants';
 import { changeLanguage } from '../../../i18n';
 import { container } from '../../../utils/react';
 import { configurePushNotifications } from '../Settings/logic';
 import Screen from './ui';
-
-const mapStateToProps = () => {
-  return {};
-};
-
-const mapDispatchToProps = () => {
-  return {};
-};
 
 const Container = container(Screen, {
   componentDidMount() {
@@ -63,6 +54,4 @@ const Container = container(Screen, {
   },
 });
 
-const Splash = connect(mapStateToProps, mapDispatchToProps)(Container);
-
-export default Splash;
+export default Container;
