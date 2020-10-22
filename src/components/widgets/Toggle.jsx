@@ -3,6 +3,7 @@ import UilToggleOn from '@iconscout/react-native-unicons/icons/uil-toggle-on';
 import React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY } from '../../constants';
+import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 
 class Toggle extends React.Component {
@@ -10,13 +11,12 @@ class Toggle extends React.Component {
     super(props);
 
     this.Icon = this.Icon.bind(this);
+    this.onPress = this.onPress.bind(this);
   }
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
     return nextProps.active !== this.props.active;
   }
-
-  color = this.props.active ? COLOR_PRIMARY : '#B0B0B1';
 
   size = this.props.vw(10);
 
@@ -34,26 +34,27 @@ class Toggle extends React.Component {
   IconComponent = this.props.active ? this.IconOnComponent : this.IconOffComponent;
 
   Icon() {
+    const { colors } = this.props;
     const Icon = this.IconComponent;
 
-    return <Icon color={this.color} size={this.size} />;
+    return <Icon color={this.props.active ? COLOR_PRIMARY : colors.GRAY_3} size={this.size} />;
+  }
+
+  onPress() {
+    if (this.props.onPress) this.props.onPress();
   }
 
   render() {
-    const { onPress, style } = this.props;
+    const { style } = this.props;
 
     return (
       <View style={{ ...this.styles.toggle, ...(style && style) }}>
-        {onPress ? (
-          <TouchableOpacity onPress={onPress}>
-            <this.Icon />
-          </TouchableOpacity>
-        ) : (
+        <TouchableOpacity onPress={this.onPress}>
           <this.Icon />
-        )}
+        </TouchableOpacity>
       </View>
     );
   }
 }
 
-export default withViewportUnits(Toggle);
+export default withColorScheme(withViewportUnits(Toggle));

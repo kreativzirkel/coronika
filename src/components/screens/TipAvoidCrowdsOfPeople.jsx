@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import { COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
 import { HeaderBack } from '../widgets/Header';
 import Layout from '../widgets/Layout';
@@ -22,7 +21,7 @@ const TipAvoidCrowdsOfPeople = ({ navigation, __ }) => {
   ];
 
   return (
-    <Layout backgroundColor={COLOR_SECONDARY}>
+    <Layout>
       <HeaderBack headline={__('tips-screen.header.headline')} navigation={navigation} />
 
       <Tip

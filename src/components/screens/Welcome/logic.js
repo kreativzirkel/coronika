@@ -1,6 +1,6 @@
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
-import { container } from '../../../utils/react';
+import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import { activateDefaultNotifications } from '../Settings/logic';
 import { setShowKey } from './actions';
@@ -31,10 +31,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const Container = container(Screen, {
-  componentDidMount() {},
-});
-
-const Welcome = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Container)));
+const Welcome = withColorScheme(withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Screen))));
 
 export default Welcome;

@@ -6,8 +6,9 @@ import deepEqual from 'fast-deep-equal';
 import moment from 'moment';
 import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
+import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 import ListItemSeparator from './ListItemSeparator';
 
@@ -48,7 +49,6 @@ class LocationsListItemClass extends React.Component {
 
   styles = StyleSheet.create({
     location: {
-      backgroundColor: COLOR_SECONDARY,
       borderRadius: this.props.vw(2.3),
       flexDirection: 'column',
       marginLeft: this.props.vw(2.5),
@@ -59,7 +59,7 @@ class LocationsListItemClass extends React.Component {
       paddingTop: this.props.vw(3.8),
     },
     locationText: {
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.2),
     },
     locationTextWithPadding: {
@@ -73,8 +73,7 @@ class LocationsListItemClass extends React.Component {
       flexDirection: 'column',
     },
     locationContentText: {
-      color: '#000000',
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(3.8),
       marginTop: this.props.vw(1),
     },
@@ -124,7 +123,7 @@ class LocationsListItemClass extends React.Component {
     },
     viewCounterText: {
       color: COLOR_PRIMARY,
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(6),
     },
   });
@@ -134,8 +133,9 @@ class LocationsListItemClass extends React.Component {
       allowDelete,
       allowSelection,
       allowUpdate,
-      description,
+      colors,
       counter,
+      description,
       isLocationSelected,
       selectedLocationDescription,
       selectedLocationTime,
@@ -147,12 +147,13 @@ class LocationsListItemClass extends React.Component {
     } = this.props;
 
     const LocationItem = () => (
-      <View style={this.styles.location}>
+      <View style={{ ...this.styles.location, backgroundColor: colors.SECONDARY }}>
         <View style={this.styles.locationHeader}>
           <Text
             numberOfLines={1}
             style={{
               ...this.styles.locationText,
+              color: colors.TEXT,
               ...((allowDelete || allowSelection || allowUpdate || showCounter) && this.styles.locationTextWithPadding),
             }}>
             {title}
@@ -166,7 +167,7 @@ class LocationsListItemClass extends React.Component {
                   ...(isLocationSelected && this.styles.selectButtonInnerSelected),
                 }}>
                 {isLocationSelected ? (
-                  <UilMinus size={vw(7)} color={'#ffffff'} />
+                  <UilMinus size={vw(7)} color={colors.TEXT_ALT} />
                 ) : (
                   <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
                 )}
@@ -184,11 +185,17 @@ class LocationsListItemClass extends React.Component {
         {allowSelection && isLocationSelected && (
           <View style={this.styles.locationContent}>
             {selectedLocationDescription.trim().length > 0 && (
-              <Text style={{ ...this.styles.locationContentText, ...this.styles.locationContentDescription }}>
+              <Text
+                style={{
+                  ...this.styles.locationContentText,
+                  ...this.styles.locationContentDescription,
+                  color: colors.GRAY_3,
+                }}>
                 {selectedLocationDescription}
               </Text>
             )}
-            <Text style={{ ...this.styles.locationContentText, ...this.styles.locationContentTime }}>
+            <Text
+              style={{ ...this.styles.locationContentText, color: colors.TEXT, ...this.styles.locationContentTime }}>
               {selectedLocationTime}
             </Text>
           </View>
@@ -197,12 +204,18 @@ class LocationsListItemClass extends React.Component {
         {allowDelete && (
           <View style={this.styles.locationContent}>
             {description.trim().length > 0 && (
-              <Text style={{ ...this.styles.locationContentText, ...this.styles.locationContentDescription }}>
+              <Text
+                style={{
+                  ...this.styles.locationContentText,
+                  ...this.styles.locationContentDescription,
+                  color: colors.GRAY_3,
+                }}>
                 {description}
               </Text>
             )}
             {timestamp > 0 && (
-              <Text style={{ ...this.styles.locationContentText, ...this.styles.locationContentTime }}>
+              <Text
+                style={{ ...this.styles.locationContentText, color: colors.TEXT, ...this.styles.locationContentTime }}>
                 {moment(timestamp || 0).format('LT')}
                 {timestampEnd > 0 && timestampEnd > timestamp && ` - ${moment(timestampEnd).format('LT')}`}
               </Text>
@@ -228,7 +241,7 @@ class LocationsListItemClass extends React.Component {
   }
 }
 
-const LocationsListItem = withI18n(withViewportUnits(LocationsListItemClass));
+const LocationsListItem = withColorScheme(withI18n(withViewportUnits(LocationsListItemClass)));
 
 const sortLocations = (inputLocationsList, orderByLastUsage = false) => {
   if (orderByLastUsage && inputLocationsList) {

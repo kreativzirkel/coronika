@@ -1,5 +1,6 @@
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
+import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import { removePerson, removeLocation, showImportPersonsModal, hideImportPersonsModal } from './actions';
 import importPersons from './importPersons';
@@ -53,6 +54,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const Directory = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Screen)));
+const Directory = withColorScheme(withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Screen))));
 
 export default Directory;

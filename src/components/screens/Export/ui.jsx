@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../../constants';
+import { COLOR_PRIMARY } from '../../../constants';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 import UilFile from '@iconscout/react-native-unicons/icons/uil-file';
@@ -9,6 +9,7 @@ import UilTimes from '@iconscout/react-native-unicons/icons/uil-times';
 import Modal from 'react-native-modal';
 
 const Export = ({
+  colors,
   isExporting,
   isExportResultModalVisible,
   createExport,
@@ -17,11 +18,10 @@ const Export = ({
   shareExportFile,
   navigation,
   vw,
-  getFontFamilyBold,
-  getFontFamilyRegular,
+  fontFamilyBold,
+  fontFamilyRegular,
   __,
 }) => {
-  // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     button: {
       alignItems: 'center',
@@ -35,21 +35,23 @@ const Export = ({
     },
     buttonText: {
       color: COLOR_PRIMARY,
-      fontFamily: getFontFamilyRegular(),
+      fontFamily: fontFamilyRegular,
       fontSize: vw(5.5),
       textAlign: 'center',
       textTransform: 'lowercase',
     },
     buttonTextDisabled: {
-      color: '#b0b0b1',
+      color: colors.GRAY_3,
     },
     contentHeadline: {
-      fontFamily: getFontFamilyBold(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyBold,
       fontSize: vw(7),
       textAlign: 'center',
     },
     contentText: {
-      fontFamily: getFontFamilyRegular(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyRegular,
       fontSize: vw(4.5),
       lineHeight: vw(7),
       textAlign: 'center',
@@ -59,7 +61,7 @@ const Export = ({
       margin: 0,
     },
     modalContent: {
-      backgroundColor: '#ffffff',
+      backgroundColor: colors.BACKGROUND,
       borderTopLeftRadius: vw(2.3),
       borderTopRightRadius: vw(2.3),
       padding: vw(3),
@@ -79,13 +81,15 @@ const Export = ({
       alignSelf: 'flex-start',
     },
     modalHeaderText: {
+      color: colors.TEXT,
       flex: 1,
-      fontFamily: getFontFamilyBold(),
+      fontFamily: fontFamilyBold,
       fontSize: vw(5),
       textTransform: 'lowercase',
     },
     modalText: {
-      fontFamily: getFontFamilyRegular(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyRegular,
       fontSize: vw(4.4),
       marginBottom: vw(7),
       paddingLeft: vw(3),
@@ -107,12 +111,12 @@ const Export = ({
       padding: vw(3.5),
     },
     modalButtonSecondary: {
-      backgroundColor: '#b0b0b1',
+      backgroundColor: colors.GRAY_3,
       width: 'auto',
     },
     modalButtonText: {
-      color: '#ffffff',
-      fontFamily: getFontFamilyBold(),
+      color: colors.TEXT_ALT,
+      fontFamily: fontFamilyBold,
       fontSize: vw(6),
       textTransform: 'lowercase',
     },
@@ -125,7 +129,7 @@ const Export = ({
     },
     view: {
       alignItems: 'center',
-      backgroundColor: '#ffffff',
+      backgroundColor: colors.BACKGROUND,
       flex: 1,
       flexDirection: 'column',
       height: '100%',
@@ -145,7 +149,7 @@ const Export = ({
   });
 
   return (
-    <Layout backgroundColor={COLOR_SECONDARY}>
+    <Layout>
       <HeaderBack headline={__('export-screen.header.headline')} navigation={navigation} />
 
       <View style={styles.view}>
@@ -164,8 +168,11 @@ const Export = ({
       </View>
 
       <Modal
+        backdropColor={colors.MODAL_BACKDROP_COLOR}
         hideModalContentWhileAnimating
         isVisible={isExportResultModalVisible}
+        onBackButtonPress={() => hideExportResultModal()}
+        onBackdropPress={() => hideExportResultModal()}
         statusBarTranslucent
         style={styles.modal}
         useNativeDriver>
@@ -188,7 +195,7 @@ const Export = ({
 
             <TouchableOpacity onPress={() => shareExportFile()} style={styles.modalButtonShare}>
               <View style={{ ...styles.modalButton, ...styles.modalButtonSecondary }}>
-                <UilShare color={'#ffffff'} size={vw(7)} />
+                <UilShare color={colors.TEXT_ALT} size={vw(7)} />
               </View>
             </TouchableOpacity>
           </View>

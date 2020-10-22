@@ -1,11 +1,12 @@
 import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import UilArrowRight from '@iconscout/react-native-unicons/icons/uil-arrow-right';
 import UilHeart from '@iconscout/react-native-unicons/icons/uil-heart';
-import React, { memo } from 'react';
+import React from 'react';
 import { Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { version } from '../../config';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
+import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 import { HeaderBack } from '../widgets/Header';
 import Layout from '../widgets/Layout';
@@ -25,13 +26,13 @@ class Menu extends React.Component {
 
   styles = StyleSheet.create({
     contentText: {
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.5),
       lineHeight: this.props.vw(7),
     },
     feedbackButton: {
       color: COLOR_PRIMARY,
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(7),
       textAlign: 'center',
     },
@@ -42,7 +43,7 @@ class Menu extends React.Component {
     },
     madeByText: {
       color: '#909091',
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(3.5),
       marginLeft: this.props.vw(2),
       marginRight: this.props.vw(2),
@@ -53,8 +54,7 @@ class Menu extends React.Component {
       marginTop: -this.props.vw(3),
     },
     menuItemText: {
-      color: '#000000',
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.2),
     },
     menuItemTextWrapper: {
@@ -62,7 +62,6 @@ class Menu extends React.Component {
     },
     menuItemWrapper: {
       alignItems: 'center',
-      backgroundColor: COLOR_SECONDARY,
       borderRadius: this.props.vw(2.3),
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -72,7 +71,6 @@ class Menu extends React.Component {
       paddingTop: this.props.vw(3.8),
     },
     view: {
-      backgroundColor: '#ffffff',
       flex: 1,
       flexDirection: 'column',
       justifyContent: 'space-between',
@@ -116,7 +114,31 @@ class Menu extends React.Component {
   });
 
   render() {
-    const { navigation, vw, isRTL, __ } = this.props;
+    const { colors, navigation, vw, isRTL, __ } = this.props;
+
+    const styles = {
+      ...this.styles,
+      contentText: {
+        ...this.styles.contentText,
+        color: colors.TEXT,
+      },
+      menuItemText: {
+        ...this.styles.menuItemText,
+        color: colors.TEXT,
+      },
+      menuItemWrapper: {
+        ...this.styles.menuItemWrapper,
+        backgroundColor: colors.SECONDARY,
+      },
+      madeByText: {
+        ...this.styles.madeByText,
+        color: colors.GRAY_4,
+      },
+      view: {
+        ...this.styles.view,
+        backgroundColor: colors.BACKGROUND,
+      },
+    };
 
     const menuItems = [
       {
@@ -134,26 +156,26 @@ class Menu extends React.Component {
     ];
 
     return (
-      <Layout backgroundColor={COLOR_SECONDARY}>
+      <Layout>
         <HeaderBack headline={__('menu-screen.header.headline')} navigation={navigation} />
 
-        <View style={this.styles.view}>
-          <View style={this.styles.viewInner}>
-            <View style={{ ...this.styles.viewContent, ...this.styles.viewContentText }}>
-              <Text style={this.styles.contentText}>{__('menu-screen.intro.text')}</Text>
+        <View style={styles.view}>
+          <View style={styles.viewInner}>
+            <View style={{ ...styles.viewContent, ...styles.viewContentText }}>
+              <Text style={styles.contentText}>{__('menu-screen.intro.text')}</Text>
             </View>
 
-            <View style={{ ...this.styles.viewContent, ...this.styles.viewContentList }}>
+            <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
               {menuItems.map(({ headline, routeName }, index) => (
                 <TouchableOpacity
                   key={`menu-item-${index}`}
                   onPress={() => navigation.navigate(routeName)}
-                  style={this.styles.menuItemWrapper}>
-                  <View style={this.styles.menuItemTextWrapper}>
-                    <Text style={this.styles.menuItemText}>{headline}</Text>
+                  style={styles.menuItemWrapper}>
+                  <View style={styles.menuItemTextWrapper}>
+                    <Text style={styles.menuItemText}>{headline}</Text>
                   </View>
 
-                  <View style={this.styles.menuItemIcon}>
+                  <View style={styles.menuItemIcon}>
                     {isRTL ? (
                       <UilArrowLeft size={vw(11)} color={COLOR_PRIMARY} />
                     ) : (
@@ -165,20 +187,20 @@ class Menu extends React.Component {
             </View>
           </View>
 
-          <View style={this.styles.viewBottom}>
-            <View style={this.styles.viewMadeBy}>
-              <TouchableOpacity onPress={this.visitKreativzirkel} style={this.styles.madeByButton}>
-                <Text style={this.styles.madeByText}>Coronika version {version} made</Text>
-                <View style={{ ...this.styles.viewMadeBy, ...this.styles.viewMadeByBottom }}>
-                  <Text style={this.styles.madeByText}>with</Text>
+          <View style={styles.viewBottom}>
+            <View style={styles.viewMadeBy}>
+              <TouchableOpacity onPress={this.visitKreativzirkel} style={styles.madeByButton}>
+                <Text style={styles.madeByText}>Coronika version {version} made</Text>
+                <View style={{ ...styles.viewMadeBy, ...styles.viewMadeByBottom }}>
+                  <Text style={styles.madeByText}>with</Text>
                   <UilHeart color={'#ed2828'} size={vw(5.5)} />
-                  <Text style={this.styles.madeByText}>by Kreativzirkel</Text>
+                  <Text style={styles.madeByText}>by Kreativzirkel</Text>
                 </View>
               </TouchableOpacity>
             </View>
 
             <TouchableOpacity onPress={this.sendFeedback}>
-              <Text style={this.styles.feedbackButton}>{__('menu-screen.button.send-feedback')}</Text>
+              <Text style={styles.feedbackButton}>{__('menu-screen.button.send-feedback')}</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -187,4 +209,4 @@ class Menu extends React.Component {
   }
 }
 
-export default memo(withI18n(withViewportUnits(Menu)));
+export default withColorScheme(withI18n(withViewportUnits(Menu)));

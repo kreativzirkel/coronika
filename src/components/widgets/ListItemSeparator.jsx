@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import { COLOR_SECONDARY } from '../../constants';
+import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 
 class ListItemSeparator extends React.Component {
@@ -14,7 +14,6 @@ class ListItemSeparator extends React.Component {
 
   styles = StyleSheet.create({
     viewLine: {
-      backgroundColor: COLOR_SECONDARY,
       borderRadius: this.props.vw(2.3),
       height: this.props.vw(1),
       width: '50%',
@@ -32,12 +31,14 @@ class ListItemSeparator extends React.Component {
   });
 
   render() {
+    const { colors } = this.props;
+
     return (
       <View style={this.styles.viewWrapper}>
-        <View style={this.styles.viewLine} />
+        <View style={{ ...this.styles.viewLine, backgroundColor: colors.SECONDARY }} />
       </View>
     );
   }
 }
 
-export default withViewportUnits(ListItemSeparator);
+export default withColorScheme(withViewportUnits(ListItemSeparator));

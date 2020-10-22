@@ -8,18 +8,17 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import App from './components/App/logic';
 import screens from './components/screens';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from './constants';
+import { COLOR_PRIMARY } from './constants';
 import configureStore from './createStore';
+import withColorScheme from './utils/withColorScheme';
 
 enableScreens();
 
 const styles = StyleSheet.create({
   appNavigatorWrapper: {
-    backgroundColor: COLOR_SECONDARY,
     flex: 1,
   },
   appNavigatorWrapperInner: {
-    backgroundColor: '#ffffff',
     bottom: 0,
     height: '50%',
     left: 0,
@@ -70,13 +69,13 @@ const AppNavigator = () => (
   </Stack.Navigator>
 );
 
-const AppNavigatorWrapper = () => (
-  <SafeAreaView style={styles.appNavigatorWrapper}>
-    <View style={styles.appNavigatorWrapperInner} />
+const AppNavigatorWrapper = withColorScheme(({ colors }) => (
+  <SafeAreaView style={{ ...styles.appNavigatorWrapper, backgroundColor: colors.SECONDARY }}>
+    <View style={{ ...styles.appNavigatorWrapperInner, backgroundColor: colors.BACKGROUND }} />
 
     <AppNavigator />
   </SafeAreaView>
-);
+));
 
 const Tab = createBottomTabNavigator();
 

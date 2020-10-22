@@ -3,12 +3,13 @@ import UilTimes from '@iconscout/react-native-unicons/icons/uil-times';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Modal from 'react-native-modal';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../../constants';
+import { COLOR_PRIMARY } from '../../../constants';
 import EntriesTabsView from '../../partials/EntriesTabsView';
 import Header from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 
 const Directory = ({
+  colors,
   isImportPersonsModalVisible,
   locations,
   persons,
@@ -19,11 +20,10 @@ const Directory = ({
   hideImportPersonsModal,
   importPersons,
   vw,
-  getFontFamilyBold,
-  getFontFamilyRegular,
+  fontFamilyBold,
+  fontFamilyRegular,
   __,
 }) => {
-  // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     header: {
       alignItems: 'center',
@@ -35,14 +35,15 @@ const Directory = ({
       flexDirection: 'row',
     },
     headerButtonText: {
-      color: '#555555',
-      fontFamily: getFontFamilyRegular(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyRegular,
       fontSize: vw(3.8),
       marginLeft: vw(1),
       textTransform: 'lowercase',
     },
     headerHeadline: {
-      fontFamily: getFontFamilyBold(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyBold,
       fontSize: vw(5),
       marginLeft: 'auto',
       textTransform: 'lowercase',
@@ -56,7 +57,7 @@ const Directory = ({
       margin: 0,
     },
     modalContent: {
-      backgroundColor: '#ffffff',
+      backgroundColor: colors.BACKGROUND,
       borderTopLeftRadius: vw(2.3),
       borderTopRightRadius: vw(2.3),
       padding: vw(3),
@@ -76,13 +77,15 @@ const Directory = ({
       alignSelf: 'flex-start',
     },
     modalHeaderText: {
+      color: colors.TEXT,
       flex: 1,
-      fontFamily: getFontFamilyBold(),
+      fontFamily: fontFamilyBold,
       fontSize: vw(5),
       textTransform: 'lowercase',
     },
     modalText: {
-      fontFamily: getFontFamilyRegular(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyRegular,
       fontSize: vw(4.4),
       marginBottom: vw(7),
       paddingLeft: vw(3),
@@ -101,8 +104,8 @@ const Directory = ({
       opacity: 0.2,
     },
     modalButtonText: {
-      color: '#ffffff',
-      fontFamily: getFontFamilyBold(),
+      color: colors.TEXT_ALT,
+      fontFamily: fontFamilyBold,
       fontSize: vw(6),
       textTransform: 'lowercase',
     },
@@ -114,24 +117,15 @@ const Directory = ({
       justifyContent: 'center',
       width: '100%',
     },
-    viewWrapper: {
-      alignItems: 'center',
-      backgroundColor: '#ffffff',
-      flex: 1,
-      flexDirection: 'column',
-      height: '100%',
-      justifyContent: 'center',
-      width: '100%',
-    },
   });
 
   return (
-    <Layout backgroundColor={COLOR_SECONDARY}>
+    <Layout>
       <View style={styles.view}>
         <Header>
           <View style={styles.header}>
             <TouchableOpacity onPress={() => showImportPersonsModal()} style={styles.headerButton}>
-              <UilImport size={vw(4.6)} color={'#000000'} />
+              <UilImport size={vw(4.6)} color={colors.TEXT} />
 
               <Text style={styles.headerButtonText}>{__('directory-screen.header.button.import')}</Text>
             </TouchableOpacity>
@@ -154,8 +148,11 @@ const Directory = ({
       </View>
 
       <Modal
+        backdropColor={colors.MODAL_BACKDROP_COLOR}
         hideModalContentWhileAnimating
         isVisible={isImportPersonsModalVisible}
+        onBackButtonPress={() => hideImportPersonsModal()}
+        onBackdropPress={() => hideImportPersonsModal()}
         statusBarTranslucent
         style={styles.modal}
         useNativeDriver>

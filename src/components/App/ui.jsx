@@ -5,8 +5,9 @@ import UilUserPlus from '@iconscout/react-native-unicons/icons/uil-user-plus';
 import React from 'react';
 import { Platform, Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
+import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 import screens from '../screens';
 
@@ -61,15 +62,8 @@ class TabNavigationItemClass extends React.Component {
       display: 'flex',
       flexDirection: 'column',
     },
-    navigationItemIcon: {
-      color: '#000000',
-    },
-    navigationItemIconFocused: {
-      color: '#ffffff',
-    },
     navigationItemIconWrapper: {
       alignItems: 'center',
-      backgroundColor: COLOR_SECONDARY,
       borderRadius: this.props.vw(2.3),
       height: this.props.vw(13),
       justifyContent: 'center',
@@ -80,7 +74,7 @@ class TabNavigationItemClass extends React.Component {
       backgroundColor: COLOR_PRIMARY,
     },
     navigationItemText: {
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(2.8),
       textAlign: 'center',
       textTransform: 'lowercase',
@@ -88,7 +82,7 @@ class TabNavigationItemClass extends React.Component {
   });
 
   render() {
-    const { isFocused, key, onPress, routeName, vw, __ } = this.props;
+    const { colors, colorScheme, isFocused, key, onPress, routeName, vw, __ } = this.props;
 
     let label;
 
@@ -111,16 +105,24 @@ class TabNavigationItemClass extends React.Component {
 
     const NavigationIcon = this.NavigationIconComponent;
 
+    const iconColor = isFocused ? colors.TEXT_ALT : colorScheme === 'dark' ? colors.GRAY_1 : '#000000';
+
     return (
       <TouchableOpacity key={key} onPress={onPress} style={this.styles.navigationItem}>
         <View
           style={{
             ...this.styles.navigationItemIconWrapper,
+            backgroundColor: colors.SECONDARY,
             ...(isFocused && this.styles.navigationItemIconWrapperFocused),
           }}>
-          <NavigationIcon size={vw(8)} color={isFocused ? '#ffffff' : '#000000'} />
+          <NavigationIcon size={vw(8)} color={iconColor} />
         </View>
-        <Text numberOfLines={1} style={this.styles.navigationItemText}>
+        <Text
+          numberOfLines={1}
+          style={{
+            ...this.styles.navigationItemText,
+            color: colorScheme === 'dark' ? colors.GRAY_1 : colors.TEXT,
+          }}>
           {label}
         </Text>
       </TouchableOpacity>
@@ -128,7 +130,7 @@ class TabNavigationItemClass extends React.Component {
   }
 }
 
-const TabNavigationItem = withI18n(withViewportUnits(TabNavigationItemClass));
+const TabNavigationItem = withColorScheme(withI18n(withViewportUnits(TabNavigationItemClass)));
 
 class AppNavigatorTabBarClass extends React.Component {
   constructor(props) {
@@ -138,7 +140,6 @@ class AppNavigatorTabBarClass extends React.Component {
   styles = StyleSheet.create({
     navigationBar: {
       alignItems: 'center',
-      backgroundColor: '#ffffff',
       display: 'flex',
       flexDirection: 'row',
       height: this.props.vw(22),
@@ -147,10 +148,10 @@ class AppNavigatorTabBarClass extends React.Component {
   });
 
   render() {
-    const { state, navigation, __ } = this.props;
+    const { colors, state, navigation, __ } = this.props;
 
     return (
-      <View style={this.styles.navigationBar}>
+      <View style={{ ...this.styles.navigationBar, backgroundColor: colors.BACKGROUND }}>
         {state.routes.map((route, index) => {
           const isFocused = state.index === index;
           const { name: routeName } = route;
@@ -189,7 +190,7 @@ class AppNavigatorTabBarClass extends React.Component {
   }
 }
 
-const AppNavigatorTabBar = withI18n(withViewportUnits(AppNavigatorTabBarClass));
+const AppNavigatorTabBar = withColorScheme(withI18n(withViewportUnits(AppNavigatorTabBarClass)));
 
 /*
 const isTabBarVisibleOnDashboard = (route) => {

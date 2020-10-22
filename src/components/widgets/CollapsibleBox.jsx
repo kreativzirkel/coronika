@@ -3,8 +3,9 @@ import UilAngleLeft from '@iconscout/react-native-unicons/icons/uil-angle-left';
 import UilAngleRight from '@iconscout/react-native-unicons/icons/uil-angle-right';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
+import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 
 class CollapsibleBox extends React.Component {
@@ -36,14 +37,12 @@ class CollapsibleBox extends React.Component {
       marginLeft: -this.props.vw(2),
     },
     headerHeadline: {
-      color: '#B0B0B1',
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.5),
       lineHeight: this.props.vw(7),
       textTransform: 'lowercase',
     },
     view: {
-      backgroundColor: COLOR_SECONDARY,
       borderRadius: this.props.vw(2.3),
       flexDirection: 'column',
       padding: this.props.vw(4),
@@ -51,28 +50,40 @@ class CollapsibleBox extends React.Component {
   });
 
   render() {
-    const { children, headline, style, vw, isRTL } = this.props;
+    const { children, colors, headline, style, vw, isRTL } = this.props;
     const { open } = this.state;
 
+    const styles = {
+      ...this.styles,
+      headerHeadline: {
+        ...this.styles.headerHeadline,
+        color: colors.GRAY_3,
+      },
+      view: {
+        ...this.styles.view,
+        backgroundColor: colors.SECONDARY,
+      },
+    };
+
     return (
-      <View style={{ ...this.styles.view, ...(style && style) }}>
-        <View style={this.styles.header}>
-          <TouchableOpacity onPress={this.toggle} style={this.styles.headerButton}>
+      <View style={{ ...styles.view, ...(style && style) }}>
+        <View style={styles.header}>
+          <TouchableOpacity onPress={this.toggle} style={styles.headerButton}>
             {open ? (
-              <UilAngleDown color={COLOR_PRIMARY} size={vw(7)} style={this.styles.headerIcon} />
+              <UilAngleDown color={COLOR_PRIMARY} size={vw(7)} style={styles.headerIcon} />
             ) : isRTL ? (
-              <UilAngleLeft color={COLOR_PRIMARY} size={vw(7)} style={this.styles.headerIcon} />
+              <UilAngleLeft color={COLOR_PRIMARY} size={vw(7)} style={styles.headerIcon} />
             ) : (
-              <UilAngleRight color={COLOR_PRIMARY} size={vw(7)} style={this.styles.headerIcon} />
+              <UilAngleRight color={COLOR_PRIMARY} size={vw(7)} style={styles.headerIcon} />
             )}
 
-            <Text style={this.styles.headerHeadline}>{headline}</Text>
+            <Text style={styles.headerHeadline}>{headline}</Text>
           </TouchableOpacity>
         </View>
-        {open && <View style={this.styles.content}>{children}</View>}
+        {open && <View style={styles.content}>{children}</View>}
       </View>
     );
   }
 }
 
-export default withI18n(withViewportUnits(CollapsibleBox));
+export default withColorScheme(withI18n(withViewportUnits(CollapsibleBox)));

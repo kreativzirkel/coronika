@@ -4,7 +4,7 @@ import { Platform } from 'react-native';
 import PushNotification from 'react-native-push-notification';
 import connect from 'react-redux/lib/connect/connect';
 import withI18n, { __ as __i18n } from '../../../i18n';
-import { container } from '../../../utils/react';
+import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import {
   disableNotificationDiary,
@@ -433,10 +433,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const Container = container(Screen, {
-  componentDidMount() {},
-});
-
-const Settings = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Container)));
+const Settings = withColorScheme(withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Screen))));
 
 export default Settings;

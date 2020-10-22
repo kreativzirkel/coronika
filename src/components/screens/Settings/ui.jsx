@@ -1,11 +1,11 @@
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { COLOR_SECONDARY } from '../../../constants';
 import Layout from '../../widgets/Layout';
 import { HeaderBack } from '../../widgets/Header';
 import Toggle from '../../widgets/Toggle';
 
 const Settings = ({
+  colors,
   notificationDiaryEnabled,
   notificationDisinfectSmartphoneEnabled,
   notificationWashingHandsOption1Enabled,
@@ -19,20 +19,22 @@ const Settings = ({
   enableNotificationWashingHandsOption2,
   navigation,
   vw,
-  getFontFamilyBold,
-  getFontFamilyRegular,
+  fontFamilyBold,
+  fontFamilyRegular,
   isRTL,
   __,
 }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     contentText: {
-      fontFamily: getFontFamilyRegular(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyRegular,
       fontSize: vw(4.5),
       lineHeight: vw(7),
     },
     contentTextHeadline: {
-      fontFamily: getFontFamilyBold(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyBold,
       fontSize: vw(5.1),
       lineHeight: vw(7),
       marginBottom: vw(1),
@@ -41,7 +43,8 @@ const Settings = ({
       textTransform: 'lowercase',
     },
     headline: {
-      fontFamily: getFontFamilyBold(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyBold,
       fontSize: vw(7),
       marginBottom: vw(4),
       paddingLeft: vw(2),
@@ -50,7 +53,7 @@ const Settings = ({
     },
     setting: {
       alignItems: 'center',
-      backgroundColor: COLOR_SECONDARY,
+      backgroundColor: colors.SECONDARY,
       borderRadius: vw(2.3),
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -60,7 +63,8 @@ const Settings = ({
       paddingTop: vw(3.8),
     },
     settingLabel: {
-      fontFamily: getFontFamilyRegular(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyRegular,
       fontSize: vw(4.2),
       width: '85%',
     },
@@ -69,7 +73,7 @@ const Settings = ({
       marginTop: -vw(2.5),
     },
     view: {
-      backgroundColor: '#ffffff',
+      backgroundColor: colors.BACKGROUND,
       flex: 1,
       flexDirection: 'column',
       width: '100%',
@@ -91,7 +95,7 @@ const Settings = ({
   );
 
   return (
-    <Layout backgroundColor={COLOR_SECONDARY}>
+    <Layout>
       <HeaderBack headline={__('settings-screen.header.headline')} navigation={navigation} />
 
       <View style={styles.view}>

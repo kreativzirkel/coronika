@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
+import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 
 class TabBarItem extends React.Component {
@@ -36,7 +37,7 @@ class TabBarItem extends React.Component {
       padding: this.props.vw(2.5),
     },
     tabBarItemActive: {
-      backgroundColor: '#ffffff',
+      //
     },
     tabBarItemInner: {
       alignItems: 'center',
@@ -49,8 +50,7 @@ class TabBarItem extends React.Component {
       marginRight: this.props.vw(1.5),
     },
     tabBarItemLabel: {
-      color: '#000000',
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(3.8),
       textTransform: 'lowercase',
     },
@@ -59,8 +59,7 @@ class TabBarItem extends React.Component {
     },
     tabBarItemCounter: {
       alignSelf: 'flex-start',
-      color: '#000000',
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(3.5),
       textTransform: 'lowercase',
       marginLeft: 3,
@@ -75,23 +74,33 @@ class TabBarItem extends React.Component {
   }
 
   render() {
-    const { active, counter, counterVisible, icon: Icon, label, vw } = this.props;
+    const { active, colors, counter, counterVisible, icon: Icon, label, vw } = this.props;
+
+    const styles = {
+      ...this.styles,
+      tabBarItemActive: {
+        ...this.styles.tabBarItemActive,
+        backgroundColor: colors.BACKGROUND,
+      },
+      tabBarItemLabel: {
+        ...this.styles.tabBarItemLabel,
+        color: colors.TEXT,
+      },
+      tabBarItemCounter: {
+        ...this.styles.tabBarItemCounter,
+        color: colors.TEXT,
+      },
+    };
 
     return (
-      <TouchableOpacity
-        onPress={this.onPress}
-        style={{ ...this.styles.tabBarItem, ...(active && this.styles.tabBarItemActive) }}>
-        <View style={this.styles.tabBarItemInner}>
-          {Icon && (
-            <Icon color={active ? COLOR_PRIMARY : '#000000'} size={vw(5.5)} style={this.styles.tabBarItemIcon} />
-          )}
-          <Text
-            numberOfLines={1}
-            style={{ ...this.styles.tabBarItemLabel, ...(active && this.styles.tabBarItemLabelActive) }}>
+      <TouchableOpacity onPress={this.onPress} style={{ ...styles.tabBarItem, ...(active && styles.tabBarItemActive) }}>
+        <View style={styles.tabBarItemInner}>
+          {Icon && <Icon color={active ? COLOR_PRIMARY : colors.TEXT} size={vw(5.5)} style={styles.tabBarItemIcon} />}
+          <Text numberOfLines={1} style={{ ...styles.tabBarItemLabel, ...(active && styles.tabBarItemLabelActive) }}>
             {label}
           </Text>
           {counterVisible && (
-            <Text style={{ ...this.styles.tabBarItemCounter, ...(active && this.styles.tabBarItemCounterActive) }}>
+            <Text style={{ ...styles.tabBarItemCounter, ...(active && styles.tabBarItemCounterActive) }}>
               {`(${counter})`}
             </Text>
           )}
@@ -101,4 +110,4 @@ class TabBarItem extends React.Component {
   }
 }
 
-export default withI18n(withViewportUnits(TabBarItem));
+export default withColorScheme(withI18n(withViewportUnits(TabBarItem)));

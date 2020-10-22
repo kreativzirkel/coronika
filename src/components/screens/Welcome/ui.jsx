@@ -5,25 +5,27 @@ import AppIntroSlider from 'react-native-app-intro-slider';
 import { COLOR_PRIMARY } from '../../../constants';
 import Layout from '../../widgets/Layout';
 
-export const getWelcomeStyles = (vw, getFontFamilyBold, getFontFamilyRegular) => {
+export const getWelcomeStyles = (vw, colors, fontFamilyBold, fontFamilyRegular) => {
   return StyleSheet.create({
     animation: {
       width: vw(55),
     },
     headline: {
-      fontFamily: getFontFamilyBold(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyBold,
       fontSize: vw(7),
       textAlign: 'center',
     },
     text: {
-      fontFamily: getFontFamilyRegular(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyRegular,
       fontSize: vw(4.5),
       lineHeight: vw(7),
       textAlign: 'center',
     },
     button: {
       color: COLOR_PRIMARY,
-      fontFamily: getFontFamilyBold(),
+      fontFamily: fontFamilyBold,
       fontSize: vw(7),
       textAlign: 'center',
     },
@@ -31,7 +33,8 @@ export const getWelcomeStyles = (vw, getFontFamilyBold, getFontFamilyRegular) =>
       marginTop: vw(2),
     },
     buttonSkipText: {
-      fontFamily: getFontFamilyRegular(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyRegular,
       fontSize: vw(3.5),
       textAlign: 'center',
       textDecorationLine: 'underline',
@@ -47,7 +50,7 @@ export const getWelcomeStyles = (vw, getFontFamilyBold, getFontFamilyRegular) =>
       justifyContent: 'center',
     },
     sliderPaginationDot: {
-      backgroundColor: '#000000',
+      backgroundColor: colors.TEXT,
       borderRadius: 0,
       height: 5,
       marginLeft: vw(0.8),
@@ -59,7 +62,7 @@ export const getWelcomeStyles = (vw, getFontFamilyBold, getFontFamilyRegular) =>
     },
     view: {
       alignItems: 'center',
-      backgroundColor: '#ffffff',
+      backgroundColor: colors.BACKGROUND,
       flex: 1,
       flexDirection: 'column',
       height: '100%',
@@ -76,24 +79,43 @@ export const getWelcomeStyles = (vw, getFontFamilyBold, getFontFamilyRegular) =>
 
 const slider = React.createRef();
 
-const Welcome = ({ activateNotifications, finish, navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
+const Welcome = ({
+  activateNotifications,
+  colors,
+  colorScheme,
+  finish,
+  navigation,
+  vw,
+  fontFamilyBold,
+  fontFamilyRegular,
+  __,
+}) => {
   const slides = [
     {
-      animation: require('../../../assets/animations/why.json'),
+      animation:
+        colorScheme === 'dark'
+          ? require('../../../assets/animations/why_dark.json')
+          : require('../../../assets/animations/why.json'),
       headline: __('welcome-screen.slides.intro.headline'),
       text: __('welcome-screen.slides.intro.text'),
       buttonText: __('welcome-screen.slides.intro.button'),
       key: 'welcome-slide-0',
     },
     {
-      animation: require('../../../assets/animations/what.json'),
+      animation:
+        colorScheme === 'dark'
+          ? require('../../../assets/animations/what_dark.json')
+          : require('../../../assets/animations/what.json'),
       headline: __('welcome-screen.slides.how-to.headline'),
       text: __('welcome-screen.slides.how-to.text'),
       buttonText: __('welcome-screen.slides.how-to.button'),
       key: 'welcome-slide-1',
     },
     {
-      animation: require('../../../assets/animations/wash.json'),
+      animation:
+        colorScheme === 'dark'
+          ? require('../../../assets/animations/wash_dark.json')
+          : require('../../../assets/animations/wash.json'),
       headline: __('welcome-screen.slides.notifications.headline'),
       text: __('welcome-screen.slides.notifications.text'),
       buttonSkipText: __('welcome-screen.slides.notifications.button-skip'),
@@ -102,7 +124,10 @@ const Welcome = ({ activateNotifications, finish, navigation, vw, getFontFamilyB
       requestPushNotificationsPermissions: true,
     },
     {
-      animation: require('../../../assets/animations/how.json'),
+      animation:
+        colorScheme === 'dark'
+          ? require('../../../assets/animations/how_dark.json')
+          : require('../../../assets/animations/how.json'),
       headline: __('welcome-screen.slides.local-data.headline'),
       text: __('welcome-screen.slides.local-data.text'),
       buttonText: __('welcome-screen.slides.local-data.button'),
@@ -110,7 +135,7 @@ const Welcome = ({ activateNotifications, finish, navigation, vw, getFontFamilyB
     },
   ];
 
-  const styles = getWelcomeStyles(vw, getFontFamilyBold, getFontFamilyRegular);
+  const styles = getWelcomeStyles(vw, colors, fontFamilyBold, fontFamilyRegular);
 
   const next = (index) => {
     const nextSlide = index + 1;
@@ -130,7 +155,7 @@ const Welcome = ({ activateNotifications, finish, navigation, vw, getFontFamilyB
   };
 
   return (
-    <Layout backgroundColor={'#ffffff'}>
+    <Layout backgroundColor={colors.BACKGROUND}>
       <View style={styles.view}>
         <AppIntroSlider
           data={slides}

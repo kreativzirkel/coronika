@@ -3,8 +3,9 @@ import UilSmile from '@iconscout/react-native-unicons/icons/uil-smile';
 import React, { memo } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import moment from 'moment';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
+import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 
 const DayDate = memo(({ formatTimeDistance, isDark, isToday, isTotal, styles, timestamp, today, __ }) => {
@@ -91,7 +92,6 @@ class DayOverview extends React.Component {
 
   styles = StyleSheet.create({
     day: {
-      backgroundColor: COLOR_SECONDARY,
       borderRadius: this.props.vw(2.3),
       display: 'flex',
       flexDirection: 'row',
@@ -103,7 +103,7 @@ class DayOverview extends React.Component {
       paddingTop: this.props.vw(2.5),
     },
     dayDark: {
-      backgroundColor: '#000000',
+      //
     },
     dayEmphasized: {
       borderColor: COLOR_PRIMARY,
@@ -119,7 +119,7 @@ class DayOverview extends React.Component {
       alignSelf: 'flex-end',
     },
     dayValue: {
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(7),
       textTransform: 'lowercase',
     },
@@ -131,20 +131,19 @@ class DayOverview extends React.Component {
       textAlign: 'right',
     },
     dayValueNumberEmpty: {
-      color: '#d6d6d6',
+      //
     },
     dayValueNumberDark: {
-      color: '#ffffff',
+      //
     },
     dayValueCaption: {
-      color: '#707070',
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(2.7),
       marginBottom: this.props.vw(0.5),
       textTransform: 'lowercase',
     },
     dayValueCaptionDark: {
-      color: '#ffffff',
+      //
     },
     dayValueWrapper: {
       flex: 1,
@@ -170,6 +169,8 @@ class DayOverview extends React.Component {
 
   render() {
     const {
+      colors,
+      colorScheme,
       formatTimeDistance,
       isDark,
       isEmphasized,
@@ -184,22 +185,54 @@ class DayOverview extends React.Component {
       __,
     } = this.props;
 
+    const styles = {
+      ...this.styles,
+      day: {
+        ...this.styles.day,
+        backgroundColor: colors.SECONDARY,
+      },
+      dayDark: {
+        ...this.styles.dayDark,
+        backgroundColor: colorScheme === 'dark' ? colors.DARK.TEXT : colors.DARK.BACKGROUND,
+      },
+      dayValue: {
+        ...this.styles.dayValue,
+        color: colors.TEXT,
+      },
+      dayValueNumberEmpty: {
+        ...this.styles.dayValueNumberEmpty,
+        color: colors.GRAY_2,
+      },
+      dayValueNumberDark: {
+        ...this.styles.dayValueNumberDark,
+        color: colors.TEXT_ALT,
+      },
+      dayValueCaption: {
+        ...this.styles.dayValueCaption,
+        color: colors.GRAY_1,
+      },
+      dayValueCaptionDark: {
+        ...this.styles.dayValueCaptionDark,
+        color: colors.DARK.TEXT,
+      },
+    };
+
     return (
       <View
         style={{
-          ...this.styles.day,
-          ...(isDark && this.styles.dayDark),
-          ...(isEmphasized && this.styles.dayEmphasized),
-          ...(isTranslucent && this.styles.dayTranslucent),
+          ...styles.day,
+          ...(isDark && styles.dayDark),
+          ...(isEmphasized && styles.dayEmphasized),
+          ...(isTranslucent && styles.dayTranslucent),
         }}>
         <DayDate
-          {...{ formatTimeDistance, isDark, isToday: this.isToday, isTotal, styles: this.styles, timestamp, today, __ }}
+          {...{ formatTimeDistance, isDark, isToday: this.isToday, isTotal, styles: styles, timestamp, today, __ }}
         />
-        <DayLocations {...{ isDark, locations, showIcons, styles: this.styles, vw, __ }} />
-        <DayPersons {...{ isDark, persons, showIcons, styles: this.styles, vw, __ }} />
+        <DayLocations {...{ isDark, locations, showIcons, styles: styles, vw, __ }} />
+        <DayPersons {...{ isDark, persons, showIcons, styles: styles, vw, __ }} />
       </View>
     );
   }
 }
 
-export default memo(withI18n(withViewportUnits(DayOverview)));
+export default memo(withColorScheme(withI18n(withViewportUnits(DayOverview))));

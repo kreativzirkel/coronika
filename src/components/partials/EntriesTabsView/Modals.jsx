@@ -4,8 +4,9 @@ import moment from 'moment';
 import React, { Fragment } from 'react';
 import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Modal from 'react-native-modal';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../../constants';
+import { COLOR_PRIMARY } from '../../../constants';
 import withI18n from '../../../i18n';
+import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import DateTimePickerModal from '../../widgets/DateTimePickerModal';
 
@@ -35,7 +36,6 @@ class ModalDefaultClass extends React.Component {
       margin: 0,
     },
     modalContent: {
-      backgroundColor: '#ffffff',
       borderTopLeftRadius: this.props.vw(2.3),
       borderTopRightRadius: this.props.vw(2.3),
       padding: this.props.vw(3),
@@ -56,7 +56,7 @@ class ModalDefaultClass extends React.Component {
     },
     modalHeaderText: {
       flex: 1,
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(5),
       textTransform: 'lowercase',
     },
@@ -73,17 +73,8 @@ class ModalDefaultClass extends React.Component {
       opacity: 0.2,
     },
     modalButtonText: {
-      color: '#ffffff',
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(6),
-      textTransform: 'lowercase',
-    },
-    modalButtonTextCounter: {
-      alignSelf: 'flex-start',
-      color: '#ffffff',
-      fontFamily: this.props.getFontFamilyBold(),
-      fontSize: this.props.vw(4),
-      marginLeft: this.props.vw(1.5),
       textTransform: 'lowercase',
     },
   });
@@ -99,22 +90,43 @@ class ModalDefaultClass extends React.Component {
   }
 
   render() {
-    const { buttonConfirmDisabled, buttonConfirmLabel, children, headline, isVisible, vw } = this.props;
+    const { buttonConfirmDisabled, buttonConfirmLabel, children, colors, headline, isVisible, vw } = this.props;
     const { renderedBefore } = this.state;
 
-    return renderedBefore || isVisible ? (
+    if (!renderedBefore && !isVisible) return null;
+
+    const styles = {
+      ...this.styles,
+      modalContent: {
+        ...this.styles.modalContent,
+        backgroundColor: colors.BACKGROUND,
+      },
+      modalHeaderText: {
+        ...this.styles.modalHeaderText,
+        color: colors.TEXT,
+      },
+      modalButtonText: {
+        ...this.styles.modalButtonText,
+        color: colors.TEXT_ALT,
+      },
+    };
+
+    return (
       <Modal
+        backdropColor={colors.MODAL_BACKDROP_COLOR}
         hideModalContentWhileAnimating
         isVisible={isVisible}
+        onBackButtonPress={this.onPressClose}
+        onBackdropPress={this.onPressClose}
         statusBarTranslucent
-        style={this.styles.modal}
+        style={styles.modal}
         useNativeDriver>
-        <KeyboardAvoidingView behavior={'padding'} enabled style={this.styles.modalContent}>
-          <View style={this.styles.modalHeader}>
-            <Text numberOfLines={1} style={this.styles.modalHeaderText}>
+        <KeyboardAvoidingView behavior={'padding'} enabled style={styles.modalContent}>
+          <View style={styles.modalHeader}>
+            <Text numberOfLines={1} style={styles.modalHeaderText}>
               {headline}
             </Text>
-            <TouchableOpacity onPress={this.onPressClose} style={this.styles.modalHeaderIcon}>
+            <TouchableOpacity onPress={this.onPressClose} style={styles.modalHeaderIcon}>
               <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
             </TouchableOpacity>
           </View>
@@ -125,20 +137,20 @@ class ModalDefaultClass extends React.Component {
             <TouchableOpacity disabled={buttonConfirmDisabled} onPress={this.onPressConfirm}>
               <View
                 style={{
-                  ...this.styles.modalButton,
-                  ...(buttonConfirmDisabled && this.styles.modalButtonDisabled),
+                  ...styles.modalButton,
+                  ...(buttonConfirmDisabled && styles.modalButtonDisabled),
                 }}>
-                <Text style={this.styles.modalButtonText}>{buttonConfirmLabel}</Text>
+                <Text style={styles.modalButtonText}>{buttonConfirmLabel}</Text>
               </View>
             </TouchableOpacity>
           )}
         </KeyboardAvoidingView>
       </Modal>
-    ) : null;
+    );
   }
 }
 
-const ModalDefault = withI18n(withViewportUnits(ModalDefaultClass));
+const ModalDefault = withColorScheme(withI18n(withViewportUnits(ModalDefaultClass)));
 
 class ModalPersonClass extends React.Component {
   constructor(props) {
@@ -160,10 +172,8 @@ class ModalPersonClass extends React.Component {
 
   styles = StyleSheet.create({
     modalTextInput: {
-      backgroundColor: COLOR_SECONDARY,
       borderRadius: this.props.vw(2.3),
-      color: '#000000',
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4),
       height: this.props.vw(15),
       marginBottom: this.props.vw(4),
@@ -183,6 +193,7 @@ class ModalPersonClass extends React.Component {
     const {
       buttonConfirmDisabled,
       buttonConfirmLabel,
+      colors,
       headline,
       isVisible,
       onPressClose,
@@ -191,6 +202,15 @@ class ModalPersonClass extends React.Component {
       personPhone,
       __,
     } = this.props;
+
+    const styles = {
+      ...this.styles,
+      modalTextInput: {
+        ...this.styles.modalTextInput,
+        backgroundColor: colors.SECONDARY,
+        color: colors.TEXT,
+      },
+    };
 
     return (
       <ModalDefault
@@ -206,7 +226,7 @@ class ModalPersonClass extends React.Component {
           onChangeText={this.setPersonName}
           placeholder={__('entries.modals.new-person.placeholder.name').toLowerCase()}
           placeholderTextColor={'#B0B0B1'}
-          style={this.styles.modalTextInput}
+          style={styles.modalTextInput}
           textContentType={'none'}
           value={personName}
         />
@@ -218,7 +238,7 @@ class ModalPersonClass extends React.Component {
           keyboardType={'phone-pad'}
           placeholder={__('entries.modals.new-person.placeholder.phone-number').toLowerCase()}
           placeholderTextColor={'#B0B0B1'}
-          style={this.styles.modalTextInput}
+          style={styles.modalTextInput}
           textContentType={'none'}
           value={personPhone}
         />
@@ -227,7 +247,7 @@ class ModalPersonClass extends React.Component {
   }
 }
 
-export const ModalPerson = withI18n(withViewportUnits(ModalPersonClass));
+export const ModalPerson = withColorScheme(withI18n(withViewportUnits(ModalPersonClass)));
 
 class ModalLocationClass extends React.Component {
   constructor(props) {
@@ -240,10 +260,8 @@ class ModalLocationClass extends React.Component {
 
   styles = StyleSheet.create({
     modalTextInput: {
-      backgroundColor: COLOR_SECONDARY,
       borderRadius: this.props.vw(2.3),
-      color: '#000000',
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4),
       height: this.props.vw(15),
       marginBottom: this.props.vw(4),
@@ -267,6 +285,7 @@ class ModalLocationClass extends React.Component {
     const {
       buttonConfirmDisabled,
       buttonConfirmLabel,
+      colors,
       headline,
       isVisible,
       locationDescription,
@@ -276,6 +295,15 @@ class ModalLocationClass extends React.Component {
       onPressConfirm,
       __,
     } = this.props;
+
+    const styles = {
+      ...this.styles,
+      modalTextInput: {
+        ...this.styles.modalTextInput,
+        backgroundColor: colors.SECONDARY,
+        color: colors.TEXT,
+      },
+    };
 
     return (
       <ModalDefault
@@ -291,7 +319,7 @@ class ModalLocationClass extends React.Component {
           onChangeText={this.setLocationTitle}
           placeholder={__('entries.modals.new-location.placeholder.title').toLowerCase()}
           placeholderTextColor={'#B0B0B1'}
-          style={this.styles.modalTextInput}
+          style={styles.modalTextInput}
           textContentType={'none'}
           value={locationTitle}
         />
@@ -302,7 +330,7 @@ class ModalLocationClass extends React.Component {
           onChangeText={this.setLocationDescription}
           placeholder={__('entries.modals.new-location.placeholder.description').toLowerCase()}
           placeholderTextColor={'#B0B0B1'}
-          style={this.styles.modalTextInput}
+          style={styles.modalTextInput}
           textContentType={'none'}
           value={locationDescription}
         />
@@ -314,7 +342,7 @@ class ModalLocationClass extends React.Component {
           keyboardType={'phone-pad'}
           placeholder={__('entries.modals.new-location.placeholder.phone-number').toLowerCase()}
           placeholderTextColor={'#B0B0B1'}
-          style={this.styles.modalTextInput}
+          style={styles.modalTextInput}
           textContentType={'none'}
           value={locationPhone}
         />
@@ -323,7 +351,7 @@ class ModalLocationClass extends React.Component {
   }
 }
 
-export const ModalLocation = withI18n(withViewportUnits(ModalLocationClass));
+export const ModalLocation = withColorScheme(withI18n(withViewportUnits(ModalLocationClass)));
 
 class ModalLocationSelectionClass extends React.Component {
   constructor(props) {
@@ -345,10 +373,8 @@ class ModalLocationSelectionClass extends React.Component {
 
   styles = StyleSheet.create({
     modalTextInput: {
-      backgroundColor: COLOR_SECONDARY,
       borderRadius: this.props.vw(2.3),
-      color: '#000000',
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4),
       height: this.props.vw(15),
       marginBottom: this.props.vw(4),
@@ -358,8 +384,7 @@ class ModalLocationSelectionClass extends React.Component {
       paddingTop: this.props.vw(4.9),
     },
     modalTextInputText: {
-      color: '#000000',
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4),
     },
     modalTimeInputContainer: {
@@ -373,7 +398,6 @@ class ModalLocationSelectionClass extends React.Component {
       marginTop: this.props.vw(4),
     },
     modalTimeInput: {
-      backgroundColor: '#b0b0b1',
       borderRadius: this.props.vw(2.3),
     },
   });
@@ -414,6 +438,7 @@ class ModalLocationSelectionClass extends React.Component {
     const {
       buttonConfirmDisabled,
       buttonConfirmLabel,
+      colors,
       headline,
       isVisible,
       locationDescription,
@@ -427,6 +452,23 @@ class ModalLocationSelectionClass extends React.Component {
     } = this.props;
     const { modalTimestampEndVisible, modalTimestampStartVisible } = this.state;
 
+    const styles = {
+      ...this.styles,
+      modalTextInput: {
+        ...this.styles.modalTextInput,
+        backgroundColor: colors.SECONDARY,
+        color: colors.TEXT,
+      },
+      modalTextInputText: {
+        ...this.styles.modalTextInputText,
+        color: colors.TEXT,
+      },
+      modalTimeInput: {
+        ...this.styles.modalTimeInput,
+        backgroundColor: colors.GRAY_3,
+      },
+    };
+
     return (
       <ModalDefault
         buttonConfirmDisabled={buttonConfirmDisabled}
@@ -439,7 +481,7 @@ class ModalLocationSelectionClass extends React.Component {
           autoCompleteType={'off'}
           autoCorrect={false}
           editable={false}
-          style={this.styles.modalTextInput}
+          style={styles.modalTextInput}
           textContentType={'none'}
           value={locationTitle}
         />
@@ -450,30 +492,30 @@ class ModalLocationSelectionClass extends React.Component {
           onChangeText={this.setLocationDescription}
           placeholder={__('entries.modals.select-location.placeholder.description').toLowerCase()}
           placeholderTextColor={'#B0B0B1'}
-          style={this.styles.modalTextInput}
+          style={styles.modalTextInput}
           textContentType={'none'}
           value={locationDescription}
         />
 
-        <View style={this.styles.modalTimeInputContainer}>
-          <TouchableOpacity onPress={this.openModalTimestampStart} style={this.styles.modalTimeInputWrapper}>
-            <View style={{ ...this.styles.modalTextInput, ...this.styles.modalTextInputTime }}>
-              <Text style={this.styles.modalTextInputText}>{moment(locationTimestampStart).format('LT')}</Text>
+        <View style={styles.modalTimeInputContainer}>
+          <TouchableOpacity onPress={this.openModalTimestampStart} style={styles.modalTimeInputWrapper}>
+            <View style={{ ...styles.modalTextInput, ...styles.modalTextInputTime }}>
+              <Text style={styles.modalTextInputText}>{moment(locationTimestampStart).format('LT')}</Text>
             </View>
           </TouchableOpacity>
 
-          <View style={this.styles.modalTimeInputDivider}>
+          <View style={styles.modalTimeInputDivider}>
             <UilMinus size={vw(7)} color={'#d6d6d6'} />
           </View>
 
-          <TouchableOpacity onPress={this.openModalTimestampEnd} style={this.styles.modalTimeInputWrapper}>
-            <View style={{ ...this.styles.modalTextInput, ...this.styles.modalTextInputTime }}>
-              <Text style={this.styles.modalTextInputText}>{moment(locationTimestampEnd).format('LT')}</Text>
+          <TouchableOpacity onPress={this.openModalTimestampEnd} style={styles.modalTimeInputWrapper}>
+            <View style={{ ...styles.modalTextInput, ...styles.modalTextInputTime }}>
+              <Text style={styles.modalTextInputText}>{moment(locationTimestampEnd).format('LT')}</Text>
             </View>
           </TouchableOpacity>
         </View>
 
-        <View style={this.styles.modalTimeInput}>
+        <View style={styles.modalTimeInput}>
           <DateTimePickerModal
             cancelTextIOS={__('Cancel')}
             confirmTextIOS={__('Confirm')}
@@ -503,7 +545,7 @@ class ModalLocationSelectionClass extends React.Component {
   }
 }
 
-export const ModalLocationSelection = withI18n(withViewportUnits(ModalLocationSelectionClass));
+export const ModalLocationSelection = withColorScheme(withI18n(withViewportUnits(ModalLocationSelectionClass)));
 
 class ModalLocationMoreClass extends React.Component {
   constructor(props) {
@@ -524,16 +566,15 @@ class ModalLocationMoreClass extends React.Component {
       padding: this.props.vw(3.5),
     },
     modalButtonDelete: {
-      backgroundColor: '#ff0000',
+      //
     },
     modalButtonText: {
-      color: '#ffffff',
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(6),
       textTransform: 'lowercase',
     },
     modalText: {
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.4),
       marginBottom: this.props.vw(5),
       paddingLeft: this.props.vw(3),
@@ -551,6 +592,7 @@ class ModalLocationMoreClass extends React.Component {
 
   render() {
     const {
+      colors,
       isVisible,
       isLocationPhoneVisible,
       locationDescription,
@@ -561,6 +603,22 @@ class ModalLocationMoreClass extends React.Component {
       onPressClose,
       __,
     } = this.props;
+
+    const styles = {
+      ...this.styles,
+      modalButtonDelete: {
+        ...this.styles.modalButtonDelete,
+        backgroundColor: colors.ERROR,
+      },
+      modalButtonText: {
+        ...this.styles.modalButtonText,
+        color: colors.TEXT_ALT,
+      },
+      modalText: {
+        ...this.styles.modalText,
+        color: colors.TEXT,
+      },
+    };
 
     const showDescription = !!locationDescription && locationDescription.trim().length > 0;
     const showPhone = isLocationPhoneVisible && !!locationPhone && locationPhone.trim().length > 0;
@@ -576,21 +634,21 @@ class ModalLocationMoreClass extends React.Component {
 
     return (
       <ModalDefault headline={locationTitle} isVisible={isVisible} onPressClose={onPressClose}>
-        {showDescription && <Text style={this.styles.modalText}>{locationDescription}</Text>}
+        {showDescription && <Text style={styles.modalText}>{locationDescription}</Text>}
 
-        {showPhone && <Text style={this.styles.modalText}>{locationPhone}</Text>}
+        {showPhone && <Text style={styles.modalText}>{locationPhone}</Text>}
 
-        {showTimestamp && <Text style={this.styles.modalText}>{timestampText}</Text>}
+        {showTimestamp && <Text style={styles.modalText}>{timestampText}</Text>}
 
         <TouchableOpacity onPress={this.onPressEdit}>
-          <View style={this.styles.modalButton}>
-            <Text style={this.styles.modalButtonText}>{__('entries.modals.more.edit')}</Text>
+          <View style={styles.modalButton}>
+            <Text style={styles.modalButtonText}>{__('entries.modals.more.edit')}</Text>
           </View>
         </TouchableOpacity>
 
         <TouchableOpacity onPress={this.onPressDelete}>
-          <View style={{ ...this.styles.modalButton, ...this.styles.modalButtonDelete }}>
-            <Text style={this.styles.modalButtonText}>{__('entries.modals.more.delete')}</Text>
+          <View style={{ ...styles.modalButton, ...styles.modalButtonDelete }}>
+            <Text style={styles.modalButtonText}>{__('entries.modals.more.delete')}</Text>
           </View>
         </TouchableOpacity>
       </ModalDefault>
@@ -598,7 +656,7 @@ class ModalLocationMoreClass extends React.Component {
   }
 }
 
-export const ModalLocationMore = withI18n(withViewportUnits(ModalLocationMoreClass));
+export const ModalLocationMore = withColorScheme(withI18n(withViewportUnits(ModalLocationMoreClass)));
 
 class ModalPersonMoreClass extends React.Component {
   constructor(props) {
@@ -619,16 +677,15 @@ class ModalPersonMoreClass extends React.Component {
       padding: this.props.vw(3.5),
     },
     modalButtonDelete: {
-      backgroundColor: '#ff0000',
+      //
     },
     modalButtonText: {
-      color: '#ffffff',
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(6),
       textTransform: 'lowercase',
     },
     modalText: {
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.4),
       marginBottom: this.props.vw(5),
       paddingLeft: this.props.vw(3),
@@ -645,26 +702,42 @@ class ModalPersonMoreClass extends React.Component {
   }
 
   render() {
-    const { allowDelete, allowUpdate, isVisible, personName, personPhone, onPressClose, __ } = this.props;
+    const { allowDelete, allowUpdate, colors, isVisible, personName, personPhone, onPressClose, __ } = this.props;
 
     const showPhone = allowUpdate && !!personPhone && personPhone.trim().length > 0;
 
+    const styles = {
+      ...this.styles,
+      modalButtonDelete: {
+        ...this.styles.modalButtonDelete,
+        backgroundColor: colors.ERROR,
+      },
+      modalButtonText: {
+        ...this.styles.modalButtonText,
+        color: colors.TEXT_ALT,
+      },
+      modalText: {
+        ...this.styles.modalText,
+        color: colors.TEXT,
+      },
+    };
+
     return (
       <ModalDefault headline={personName} isVisible={isVisible} onPressClose={onPressClose}>
-        {showPhone && <Text style={this.styles.modalText}>{personPhone}</Text>}
+        {showPhone && <Text style={styles.modalText}>{personPhone}</Text>}
 
         {allowUpdate && (
           <TouchableOpacity onPress={this.onPressEdit}>
-            <View style={this.styles.modalButton}>
-              <Text style={this.styles.modalButtonText}>{__('entries.modals.more.edit')}</Text>
+            <View style={styles.modalButton}>
+              <Text style={styles.modalButtonText}>{__('entries.modals.more.edit')}</Text>
             </View>
           </TouchableOpacity>
         )}
 
         {allowDelete && (
           <TouchableOpacity onPress={this.onPressDelete}>
-            <View style={{ ...this.styles.modalButton, ...this.styles.modalButtonDelete }}>
-              <Text style={this.styles.modalButtonText}>{__('entries.modals.more.delete')}</Text>
+            <View style={{ ...styles.modalButton, ...styles.modalButtonDelete }}>
+              <Text style={styles.modalButtonText}>{__('entries.modals.more.delete')}</Text>
             </View>
           </TouchableOpacity>
         )}
@@ -673,4 +746,4 @@ class ModalPersonMoreClass extends React.Component {
   }
 }
 
-export const ModalPersonMore = withI18n(withViewportUnits(ModalPersonMoreClass));
+export const ModalPersonMore = withColorScheme(withI18n(withViewportUnits(ModalPersonMoreClass)));

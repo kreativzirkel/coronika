@@ -1,6 +1,6 @@
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
-import { container } from '../../../utils/react';
+import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import Screen from './ui';
 
@@ -115,10 +115,6 @@ const mapDispatchToProps = (/* dispatch */) => {
   return {};
 };
 
-const Container = container(Screen, {
-  componentDidMount() {},
-});
-
-const Overview = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Container)));
+const Overview = withColorScheme(withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Screen))));
 
 export default Overview;

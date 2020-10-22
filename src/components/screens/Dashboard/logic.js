@@ -3,6 +3,7 @@ import connect from 'react-redux/lib/connect/connect';
 import { DAYS_LAST_USAGE, DAYS_OVERVIEW_MAX, DAYS_OVERVIEW_MIN, DAYS_TO_ADD } from '../../../constants';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
+import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import { setTimestamp as setTimestampDay } from '../Day/actions';
 import { resetLastUsageOfLocation, resetLastUsageOfPerson } from '../Directory/actions';
@@ -175,6 +176,6 @@ const Container = container(Screen, {
   },
 });
 
-const Dashboard = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Container)));
+const Dashboard = withColorScheme(withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Container))));
 
 export default Dashboard;

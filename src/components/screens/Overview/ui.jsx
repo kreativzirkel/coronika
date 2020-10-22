@@ -1,15 +1,14 @@
 import UilFile from '@iconscout/react-native-unicons/icons/uil-file';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { COLOR_PRIMARY, COLOR_SECONDARY, DAYS_OVERVIEW_MAX } from '../../../constants';
+import { COLOR_PRIMARY, DAYS_OVERVIEW_MAX } from '../../../constants';
 import EntriesTabsView from '../../partials/EntriesTabsView';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 import DayOverview from '../../widgets/DayOverview';
 import moment from 'moment';
 
-const Overview = ({ locations, persons, total, navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
-  // noinspection JSUnresolvedFunction
+const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamilyBold, fontFamilyRegular, __ }) => {
   const styles = StyleSheet.create({
     buttonAdd: {
       alignItems: 'center',
@@ -27,12 +26,12 @@ const Overview = ({ locations, persons, total, navigation, vw, getFontFamilyBold
     },
     buttonAddText: {
       color: COLOR_PRIMARY,
-      fontFamily: getFontFamilyRegular(),
+      fontFamily: fontFamilyRegular,
       fontSize: vw(5.5),
       textTransform: 'lowercase',
     },
     buttonAddTextDisabled: {
-      color: '#b0b0b1',
+      //
     },
     dayOverviewWrapper: {
       marginBottom: vw(0.7),
@@ -49,13 +48,13 @@ const Overview = ({ locations, persons, total, navigation, vw, getFontFamilyBold
     },
     headerButtonText: {
       color: '#555555',
-      fontFamily: getFontFamilyRegular(),
+      fontFamily: fontFamilyRegular,
       fontSize: vw(3.8),
       marginLeft: vw(1),
       textTransform: 'lowercase',
     },
     headerHeadline: {
-      fontFamily: getFontFamilyBold(),
+      fontFamily: fontFamilyBold,
       fontSize: vw(5),
       marginLeft: 'auto',
       textTransform: 'lowercase',
@@ -68,18 +67,8 @@ const Overview = ({ locations, persons, total, navigation, vw, getFontFamilyBold
       justifyContent: 'center',
       width: '100%',
     },
-    viewWrapper: {
-      alignItems: 'center',
-      backgroundColor: '#ffffff',
-      flex: 1,
-      flexDirection: 'column',
-      height: '100%',
-      justifyContent: 'center',
-      width: '100%',
-    },
     wrapperAddEntry: {
       alignItems: 'center',
-      backgroundColor: '#ffffff',
       justifyContent: 'center',
     },
   });
@@ -89,7 +78,7 @@ const Overview = ({ locations, persons, total, navigation, vw, getFontFamilyBold
   const totalTimespan = moment(today).subtract(DAYS_OVERVIEW_MAX, 'days');
 
   return (
-    <Layout backgroundColor={COLOR_SECONDARY}>
+    <Layout>
       <View style={styles.view}>
         <HeaderBack headline={__('overview-screen.header.headline')} navigation={navigation} />
 
@@ -114,17 +103,21 @@ const Overview = ({ locations, persons, total, navigation, vw, getFontFamilyBold
           showCounter
         />
 
-        <View style={styles.wrapperAddEntry}>
+        <View style={{ ...styles.wrapperAddEntry, backgroundColor: colors.BACKGROUND }}>
           <TouchableOpacity
             disabled={exportButtonDisabled}
             onPress={() => navigation.navigate('Export')}
             style={{ ...styles.buttonAdd, ...(exportButtonDisabled && styles.buttonAddDisabled) }}>
             <UilFile
-              color={exportButtonDisabled ? '#b0b0b1' : COLOR_PRIMARY}
+              color={exportButtonDisabled ? colors.GRAY_3 : COLOR_PRIMARY}
               size={vw(6)}
               style={styles.buttonAddIcon}
             />
-            <Text style={{ ...styles.buttonAddText, ...(exportButtonDisabled && styles.buttonAddTextDisabled) }}>
+            <Text
+              style={{
+                ...styles.buttonAddText,
+                ...(exportButtonDisabled && { ...styles.buttonAddTextDisabled, color: colors.GRAY_3 }),
+              }}>
               {__('overview-screen.export.button')}
             </Text>
           </TouchableOpacity>

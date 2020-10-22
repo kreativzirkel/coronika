@@ -1,10 +1,10 @@
 import { CommonActions } from '@react-navigation/native';
 import LottieView from 'lottie-react-native';
-import React, { memo } from 'react';
+import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
-import { COLOR_SECONDARY } from '../../constants';
 import withI18n from '../../i18n';
+import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 import Layout from '../widgets/Layout';
 import { HeaderBack } from '../widgets/Header';
@@ -12,24 +12,33 @@ import { getWelcomeStyles } from './Welcome/ui';
 
 const slider = React.createRef();
 
-const About = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) => {
+const About = ({ colors, colorScheme, navigation, vw, fontFamilyBold, fontFamilyRegular, __ }) => {
   const slides = [
     {
-      animation: require('../../assets/animations/why.json'),
+      animation:
+        colorScheme === 'dark'
+          ? require('../../assets/animations/why_dark.json')
+          : require('../../assets/animations/why.json'),
       headline: __('welcome-screen.slides.intro.headline'),
       text: __('welcome-screen.slides.intro.text'),
       buttonText: __('welcome-screen.slides.intro.button'),
       key: 'welcome-slide-0',
     },
     {
-      animation: require('../../assets/animations/what.json'),
+      animation:
+        colorScheme === 'dark'
+          ? require('../../assets/animations/what_dark.json')
+          : require('../../assets/animations/what.json'),
       headline: __('welcome-screen.slides.how-to.headline'),
       text: __('welcome-screen.slides.how-to.text'),
       buttonText: __('welcome-screen.slides.how-to.button'),
       key: 'welcome-slide-1',
     },
     {
-      animation: require('../../assets/animations/how.json'),
+      animation:
+        colorScheme === 'dark'
+          ? require('../../assets/animations/how_dark.json')
+          : require('../../assets/animations/how.json'),
       headline: __('welcome-screen.slides.local-data.headline'),
       text: __('welcome-screen.slides.local-data.text'),
       buttonText: __('welcome-screen.slides.local-data.button'),
@@ -37,7 +46,7 @@ const About = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) 
     },
   ];
 
-  const styles = getWelcomeStyles(vw, getFontFamilyBold, getFontFamilyRegular);
+  const styles = getWelcomeStyles(vw, colors, fontFamilyBold, fontFamilyRegular);
 
   const goBack = () => navigation.dispatch(CommonActions.goBack());
 
@@ -53,7 +62,7 @@ const About = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) 
   };
 
   return (
-    <Layout backgroundColor={COLOR_SECONDARY}>
+    <Layout>
       <HeaderBack headline={__('about-screen.header.headline')} navigation={navigation} />
 
       <View style={styles.view}>
@@ -97,4 +106,4 @@ const About = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, __ }) 
   );
 };
 
-export default memo(withI18n(withViewportUnits(About)));
+export default withColorScheme(withI18n(withViewportUnits(About)));

@@ -34,7 +34,7 @@ class Day extends React.Component {
     },
     buttonAddText: {
       color: COLOR_PRIMARY,
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(5.5),
       textTransform: 'lowercase',
     },
@@ -44,7 +44,6 @@ class Day extends React.Component {
     },
     wrapperAddEntry: {
       alignItems: 'center',
-      backgroundColor: '#ffffff',
       justifyContent: 'center',
     },
   });
@@ -66,7 +65,7 @@ class Day extends React.Component {
   }
 
   render() {
-    const { locations, persons, timestamp, navigation, vw, __ } = this.props;
+    const { colors, locations, persons, timestamp, navigation, vw, __ } = this.props;
 
     return (
       <Layout>
@@ -93,7 +92,7 @@ class Day extends React.Component {
           updateSelectedLocation={this.updateSelectedLocation}
         />
 
-        <View style={this.styles.wrapperAddEntry}>
+        <View style={{ ...this.styles.wrapperAddEntry, backgroundColor: colors.BACKGROUND }}>
           <TouchableOpacity onPress={this.goToAddEntry} style={this.styles.buttonAdd}>
             <UilPlus color={COLOR_PRIMARY} size={vw(6)} style={this.styles.buttonAddIcon} />
             <Text style={this.styles.buttonAddText}>{__('day-screen.entries.add')}</Text>

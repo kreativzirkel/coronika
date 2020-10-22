@@ -1,5 +1,6 @@
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
+import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import { addLocationToDay, removePersonFromDay, removeLocationFromDay } from '../Dashboard/actions';
 import Screen from './ui';
@@ -109,6 +110,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const Day = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Screen)));
+const Day = withColorScheme(withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Screen))));
 
 export default Day;

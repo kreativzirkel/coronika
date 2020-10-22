@@ -4,7 +4,6 @@ import { StyleSheet, View } from 'react-native';
 import { COLOR_PRIMARY } from '../../../constants';
 import Layout from '../../widgets/Layout';
 
-// noinspection JSUnresolvedFunction
 const styles = StyleSheet.create({
   animation: {
     width: '90%',
@@ -18,15 +17,21 @@ const styles = StyleSheet.create({
   },
 });
 
-const Splash = () => {
+const Splash = ({ colorScheme }) => {
+  const statusBarStyle = colorScheme === 'dark' ? 'dark-content' : 'light-content';
+
   return (
-    <Layout backgroundColor={COLOR_PRIMARY} hideHelperViews statusBarStyle={'light-content'}>
+    <Layout backgroundColor={COLOR_PRIMARY} hideHelperViews statusBarStyle={statusBarStyle}>
       <View style={styles.view}>
         <View>
           <LottieView
             autoPlay
             loop={false}
-            source={require('../../../assets/animations/splash.json')}
+            source={
+              colorScheme === 'dark'
+                ? require('../../../assets/animations/splash_dark.json')
+                : require('../../../assets/animations/splash.json')
+            }
             style={styles.animation}
           />
         </View>

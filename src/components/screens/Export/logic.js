@@ -3,6 +3,7 @@ import RNFS from 'react-native-fs';
 import Share from 'react-native-share';
 import connect from 'react-redux/lib/connect/connect';
 import withI18n, { __ } from '../../../i18n';
+import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import {
   disableExporting,
@@ -140,6 +141,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const Export = withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Screen)));
+const Export = withColorScheme(withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Screen))));
 
 export default Export;

@@ -1,23 +1,26 @@
 import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import UilArrowRight from '@iconscout/react-native-unicons/icons/uil-arrow-right';
-import React, { memo } from 'react';
+import React from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import { COLOR_PRIMARY } from '../../constants';
 import Header from '../widgets/Header';
 import Layout from '../widgets/Layout';
 import withI18n from '../../i18n';
+import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 
-const Tips = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, __ }) => {
+const Tips = ({ colors, navigation, vw, fontFamilyBold, fontFamilyRegular, isRTL, __ }) => {
   // noinspection JSUnresolvedFunction
   const styles = StyleSheet.create({
     contentText: {
-      fontFamily: getFontFamilyRegular(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyRegular,
       fontSize: vw(4.5),
       lineHeight: vw(7),
     },
     headerHeadline: {
-      fontFamily: getFontFamilyBold(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyBold,
       fontSize: vw(5),
       marginLeft: 'auto',
       textTransform: 'lowercase',
@@ -28,8 +31,8 @@ const Tips = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, 
       marginTop: -vw(3),
     },
     tipText: {
-      color: '#000000',
-      fontFamily: getFontFamilyRegular(),
+      color: colors.TEXT,
+      fontFamily: fontFamilyRegular,
       fontSize: vw(4.2),
     },
     tipTextWrapper: {
@@ -37,7 +40,7 @@ const Tips = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, 
     },
     tipWrapper: {
       alignItems: 'center',
-      backgroundColor: COLOR_SECONDARY,
+      backgroundColor: colors.SECONDARY,
       borderRadius: vw(2.3),
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -47,7 +50,7 @@ const Tips = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, 
       paddingTop: vw(3.8),
     },
     view: {
-      backgroundColor: '#ffffff',
+      backgroundColor: colors.BACKGROUND,
       flex: 1,
       flexDirection: 'column',
       padding: vw(2.5),
@@ -110,7 +113,7 @@ const Tips = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, 
   ];
 
   return (
-    <Layout backgroundColor={COLOR_SECONDARY}>
+    <Layout>
       <Header>
         <Text style={styles.headerHeadline}>{__('tips-screen.header.headline')}</Text>
       </Header>
@@ -147,4 +150,4 @@ const Tips = ({ navigation, vw, getFontFamilyBold, getFontFamilyRegular, isRTL, 
   );
 };
 
-export default memo(withI18n(withViewportUnits(Tips)));
+export default withColorScheme(withI18n(withViewportUnits(Tips)));

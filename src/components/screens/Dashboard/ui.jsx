@@ -5,7 +5,7 @@ import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native
 import DayOverview from '../../widgets/DayOverview';
 import Layout from '../../widgets/Layout';
 import Header from '../../widgets/Header';
-import { ALTERNATIVE_FONT_LANGUAGES, COLOR_PRIMARY, COLOR_SECONDARY, DAYS_OVERVIEW_MAX } from '../../../constants';
+import { ALTERNATIVE_FONT_LANGUAGES, COLOR_PRIMARY, DAYS_OVERVIEW_MAX } from '../../../constants';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -13,6 +13,8 @@ class Dashboard extends React.Component {
 
     this.closeFirstStartHint = this.closeFirstStartHint.bind(this);
     this.loadMoreDays = this.loadMoreDays.bind(this);
+    this.renderItem = this.renderItem.bind(this);
+    this.renderItemGetLayout = this.renderItemGetLayout.bind(this);
     this.openDay = this.openDay.bind(this);
     this.openMenu = this.openMenu.bind(this);
     this.openOverview = this.openOverview.bind(this);
@@ -42,7 +44,7 @@ class Dashboard extends React.Component {
     },
     headerHeadline: {
       alignSelf: 'flex-start',
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(5),
       textTransform: 'lowercase',
     },
@@ -63,15 +65,14 @@ class Dashboard extends React.Component {
       marginTop: this.props.vw(0.4),
     },
     headerButtonsItemText: {
-      color: '#555555',
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(3.8),
       marginLeft: this.props.vw(1),
       textTransform: 'lowercase',
     },
     loadMoreText: {
       color: COLOR_PRIMARY,
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.8),
       textTransform: 'lowercase',
     },
@@ -92,11 +93,10 @@ class Dashboard extends React.Component {
       width: '100%',
     },
     viewList: {
-      backgroundColor: '#ffffff',
+      //
     },
     viewHint: {
       alignItems: 'center',
-      backgroundColor: '#ffffff',
       flexDirection: 'column',
       justifyContent: 'center',
       opacity: 1,
@@ -110,7 +110,6 @@ class Dashboard extends React.Component {
     },
     viewHintInner: {
       alignItems: 'center',
-      backgroundColor: COLOR_SECONDARY,
       borderRadius: this.props.vw(2.3),
       flex: 1,
       flexDirection: 'column',
@@ -120,7 +119,7 @@ class Dashboard extends React.Component {
       width: '100%',
     },
     viewHintText: {
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.5),
       lineHeight: this.props.vw(7),
       textAlign: 'center',
@@ -130,7 +129,7 @@ class Dashboard extends React.Component {
     },
     viewHintButtonText: {
       color: COLOR_PRIMARY,
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(4.5),
       lineHeight: this.props.vw(7),
     },
@@ -156,31 +155,75 @@ class Dashboard extends React.Component {
     this.props.navigation.navigate('Overview');
   }
 
+  renderItemGetLayout(data, index) {
+    return {
+      length: this.listItemHeight,
+      offset: this.listItemHeight * index,
+      index,
+    };
+  }
+
+  renderItemKeyExtractor({ timestamp }) {
+    return timestamp.toString();
+  }
+
+  renderItem({ item: { loadMore, locations, persons, timestamp } }) {
+    const { firstStartHintVisible, __ } = this.props;
+
+    if (loadMore) {
+      return (
+        <View style={this.styles.loadMoreWrapper}>
+          <TouchableOpacity onPress={this.loadMoreDays}>
+            <Text style={this.styles.loadMoreText}>{__('dashboard-screen.list.load-more')}</Text>
+          </TouchableOpacity>
+        </View>
+      );
+    }
+
+    return (
+      <TouchableOpacity onPress={() => this.openDay(timestamp)}>
+        <DayOverview
+          isEmphasized={timestamp === this.today.valueOf()}
+          isTranslucent={firstStartHintVisible && timestamp !== this.today.valueOf()}
+          locations={locations.length}
+          persons={persons.length}
+          showIcons={firstStartHintVisible && timestamp === this.today.valueOf()}
+          timestamp={timestamp}
+          today={this.today}
+        />
+      </TouchableOpacity>
+    );
+  }
+
   render() {
-    const { days, firstStartHintVisible, total, vw, __ } = this.props;
+    const { colors, days, firstStartHintVisible, total, vw, __ } = this.props;
 
     return (
       <Layout>
         <View style={this.styles.view}>
           <Header>
             <View style={this.styles.headerContent}>
-              <Text style={this.styles.headerHeadline}>coronika</Text>
+              <Text style={{ ...this.styles.headerHeadline, color: colors.TEXT }}>coronika</Text>
 
               <View style={this.styles.headerButtons}>
                 <TouchableOpacity onPress={this.openMenu} style={this.styles.headerButtonsItem}>
-                  <UilBars color={'#000000'} size={vw(4.6)} style={this.styles.headerButtonsItemIconMenu} />
+                  <UilBars color={colors.TEXT} size={vw(4.6)} style={this.styles.headerButtonsItemIconMenu} />
 
-                  <Text style={this.styles.headerButtonsItemText}>{__('menu-screen.header.headline')}</Text>
+                  <Text style={{ ...this.styles.headerButtonsItemText, color: colors.TEXT }}>
+                    {__('menu-screen.header.headline')}
+                  </Text>
                 </TouchableOpacity>
               </View>
             </View>
           </Header>
 
-          <View style={{ ...this.styles.view, ...this.styles.viewList }}>
+          <View style={{ ...this.styles.view, ...this.styles.viewList, backgroundColor: colors.BACKGROUND }}>
             {firstStartHintVisible && (
-              <View style={this.styles.viewHint}>
-                <View style={this.styles.viewHintInner}>
-                  <Text style={this.styles.viewHintText}>{__('dashboard-screen.first-start.hint')}</Text>
+              <View style={{ ...this.styles.viewHint, backgroundColor: colors.BACKGROUND }}>
+                <View style={{ ...this.styles.viewHintInner, backgroundColor: colors.SECONDARY }}>
+                  <Text style={{ ...this.styles.viewHintText, color: colors.TEXT }}>
+                    {__('dashboard-screen.first-start.hint')}
+                  </Text>
                   <TouchableOpacity onPress={this.closeFirstStartHint} style={this.styles.viewHintButton}>
                     <Text style={this.styles.viewHintButtonText}>{__('Close')}</Text>
                   </TouchableOpacity>
@@ -191,39 +234,14 @@ class Dashboard extends React.Component {
             {days.length > 0 && (
               <FlatList
                 data={days}
-                getItemLayout={(data, index) => ({
-                  length: this.listItemHeight,
-                  offset: this.listItemHeight * index,
-                  index,
-                })}
+                getItemLayout={this.renderItemGetLayout}
+                initialNumToRender={10}
                 inverted
-                keyExtractor={({ timestamp }) => timestamp.toString()}
-                renderItem={({ item: { loadMore, locations, persons, timestamp } }) => {
-                  if (loadMore) {
-                    return (
-                      <View style={this.styles.loadMoreWrapper}>
-                        <TouchableOpacity onPress={this.loadMoreDays}>
-                          <Text style={this.styles.loadMoreText}>{__('dashboard-screen.list.load-more')}</Text>
-                        </TouchableOpacity>
-                      </View>
-                    );
-                  }
-
-                  return (
-                    <TouchableOpacity onPress={() => this.openDay(timestamp)}>
-                      <DayOverview
-                        isEmphasized={timestamp === this.today.valueOf()}
-                        isTranslucent={firstStartHintVisible && timestamp !== this.today.valueOf()}
-                        locations={locations.length}
-                        persons={persons.length}
-                        showIcons={firstStartHintVisible && timestamp === this.today.valueOf()}
-                        timestamp={timestamp}
-                        today={this.today}
-                      />
-                    </TouchableOpacity>
-                  );
-                }}
+                keyExtractor={this.renderItemKeyExtractor}
+                removeClippedSubviews={true}
+                renderItem={this.renderItem}
                 style={this.styles.daysList}
+                windowSize={5}
               />
             )}
 

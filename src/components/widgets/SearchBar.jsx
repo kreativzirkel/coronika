@@ -4,6 +4,7 @@ import React from 'react';
 import { StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
+import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 
 class SearchBar extends React.Component {
@@ -32,10 +33,8 @@ class SearchBar extends React.Component {
       zIndex: 2,
     },
     searchInput: {
-      backgroundColor: '#ffffff',
       borderRadius: 8,
-      color: '#000000',
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4),
       height: this.props.vw(13),
       marginLeft: this.props.vw(2.5),
@@ -58,7 +57,7 @@ class SearchBar extends React.Component {
   }
 
   render() {
-    const { innerRef, searchValue, vw, __ } = this.props;
+    const { colors, innerRef, searchValue, vw, __ } = this.props;
 
     return (
       <View style={this.styles.searchWrapper}>
@@ -79,7 +78,7 @@ class SearchBar extends React.Component {
           placeholderTextColor={'#B0B0B1'}
           ref={innerRef}
           returnKeyType={'search'}
-          style={this.styles.searchInput}
+          style={{ ...this.styles.searchInput, backgroundColor: colors.BACKGROUND, color: colors.TEXT }}
           textContentType={'none'}
           value={searchValue}
         />
@@ -88,5 +87,7 @@ class SearchBar extends React.Component {
   }
 }
 
-/* eslint-disable-next-line react/jsx-props-no-spreading */
-export default withI18n(withViewportUnits(React.forwardRef((props, ref) => <SearchBar innerRef={ref} {...props} />)));
+export default withColorScheme(
+  /* eslint-disable-next-line react/jsx-props-no-spreading */
+  withI18n(withViewportUnits(React.forwardRef((props, ref) => <SearchBar innerRef={ref} {...props} />)))
+);

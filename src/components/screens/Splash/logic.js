@@ -4,6 +4,7 @@ import SplashScreen from 'react-native-splash-screen';
 import { SUPPORTED_LANGUAGES } from '../../../constants';
 import { changeLanguage } from '../../../i18n';
 import { container } from '../../../utils/react';
+import withColorScheme from '../../../utils/withColorScheme';
 import { configurePushNotifications } from '../Settings/logic';
 import Screen from './ui';
 
@@ -54,4 +55,4 @@ const Container = container(Screen, {
   },
 });
 
-export default Container;
+export default withColorScheme(Container);

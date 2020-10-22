@@ -1,11 +1,9 @@
 import React from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
-import { COLOR_SECONDARY } from '../../constants';
+import withColorScheme from '../../utils/withColorScheme';
 
-// noinspection JSUnresolvedFunction
 const styles = StyleSheet.create({
   helperView: {
-    backgroundColor: '#ffffff',
     bottom: 0,
     height: '50%',
     left: 0,
@@ -21,18 +19,30 @@ const styles = StyleSheet.create({
 
 const Layout = ({
   children,
-  backgroundColor = COLOR_SECONDARY,
+  colorScheme,
+  colors,
+  backgroundColor,
   hideHelperViews = false,
   statusBarHidden = false,
-  statusBarStyle = 'dark-content',
-}) => (
-  <SafeAreaView style={{ ...styles.safeAreaView, backgroundColor }}>
-    <StatusBar animated={false} backgroundColor={backgroundColor} barStyle={statusBarStyle} hidden={statusBarHidden} />
+  statusBarStyle,
+}) => {
+  const backgroundColorValue = backgroundColor || colors.SECONDARY;
+  const statusBarStyleValue = statusBarStyle || (colorScheme === 'dark' ? 'light-content' : 'dark-content');
 
-    {!hideHelperViews && <View style={styles.helperView} />}
+  return (
+    <SafeAreaView style={{ ...styles.safeAreaView, backgroundColor: backgroundColorValue }}>
+      <StatusBar
+        animated={false}
+        backgroundColor={backgroundColorValue}
+        barStyle={statusBarStyleValue}
+        hidden={statusBarHidden}
+      />
 
-    {children}
-  </SafeAreaView>
-);
+      {!hideHelperViews && <View style={{ ...styles.helperView, backgroundColor: colors.BACKGROUND }} />}
 
-export default Layout;
+      {children}
+    </SafeAreaView>
+  );
+};
+
+export default withColorScheme(Layout);

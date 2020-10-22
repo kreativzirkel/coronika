@@ -1,9 +1,10 @@
 import UilExternalLinkAlt from '@iconscout/react-native-unicons/icons/uil-external-link-alt';
 import React from 'react';
 import { FlatList, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
 import licenses from '../../licenses';
+import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 import CollapsibleBox from '../widgets/CollapsibleBox';
 import { HeaderBack } from '../widgets/Header';
@@ -77,6 +78,7 @@ class Legal extends React.Component {
     this.openTabImprint = this.openTabImprint.bind(this);
     this.openTabLicenses = this.openTabLicenses.bind(this);
     this.openTabPolicy = this.openTabPolicy.bind(this);
+    this.renderLicenseItem = this.renderLicenseItem.bind(this);
   }
 
   openLink(url) {
@@ -99,24 +101,58 @@ class Legal extends React.Component {
     this.setState({ activeTab });
   }
 
+  renderLicenseItem({ item: { license, licenseUrl, name, repository, version } }) {
+    const { colors, vw } = this.props;
+    const hasVersion = version.toString().trim().length > 0;
+
+    return (
+      <View style={{ ...this.styles.licenseItem, backgroundColor: colors.SECONDARY }}>
+        <TouchableOpacity onPress={() => this.openLink(repository)} style={this.styles.licenseItemLink}>
+          <UilExternalLinkAlt color={COLOR_PRIMARY} size={vw(6)} />
+        </TouchableOpacity>
+        <Text style={{ ...this.styles.licenseItemName, color: colors.TEXT }}>{name}</Text>
+        <View style={this.styles.licenseItemContent}>
+          {hasVersion && <Text style={{ ...this.styles.licenseItemContentText, color: colors.TEXT }}>{version}</Text>}
+          {hasVersion && (
+            <Text
+              style={{
+                ...this.styles.licenseItemContentText,
+                color: colors.TEXT,
+                marginLeft: vw(2),
+                marginRight: vw(2),
+              }}>
+              {'-'}
+            </Text>
+          )}
+          <TouchableOpacity onPress={() => this.openLink(licenseUrl)} style={this.styles.licenseItemLicense}>
+            <Text style={{ ...this.styles.licenseItemContentText, color: colors.TEXT }}>{license}</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
+
+  renderLicenseItemKeyExtractor({ name }) {
+    return name;
+  }
+
   styles = StyleSheet.create({
     collapsible: {
       marginTop: this.props.vw(5),
     },
     contentText: {
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4),
       lineHeight: this.props.vw(6),
     },
     contentTextHeadline: {
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(4.5),
       lineHeight: this.props.vw(7),
       marginBottom: this.props.vw(1),
       marginTop: this.props.vw(2),
     },
     licenseItem: {
-      backgroundColor: COLOR_SECONDARY,
       borderRadius: this.props.vw(2.3),
       flexDirection: 'column',
       marginLeft: this.props.vw(2.5),
@@ -128,7 +164,7 @@ class Legal extends React.Component {
       paddingTop: this.props.vw(3.8),
     },
     licenseItemName: {
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(4),
       lineHeight: this.props.vw(5),
     },
@@ -140,7 +176,7 @@ class Legal extends React.Component {
       marginTop: this.props.vw(0.5),
     },
     licenseItemContentText: {
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(3.8),
     },
     licenseItemLink: {
@@ -161,11 +197,8 @@ class Legal extends React.Component {
       flex: 1,
       paddingBottom: this.props.vw(2.3),
     },
-    tabBarWrapper: {
-      backgroundColor: COLOR_SECONDARY,
-    },
+    tabBarWrapper: {},
     view: {
-      backgroundColor: '#ffffff',
       flex: 1,
       flexDirection: 'column',
       width: '100%',
@@ -180,15 +213,35 @@ class Legal extends React.Component {
   });
 
   render() {
-    const { currentLanguage, navigation, vw, __ } = this.props;
+    const { colors, currentLanguage, navigation, __ } = this.props;
     const { activeTab, licensesList } = this.state;
 
+    const styles = {
+      ...this.styles,
+      contentText: {
+        ...this.styles.contentText,
+        color: colors.TEXT,
+      },
+      contentTextHeadline: {
+        ...this.styles.contentTextHeadline,
+        color: colors.TEXT,
+      },
+      tabBarWrapper: {
+        ...this.styles.tabBarWrapper,
+        backgroundColor: colors.SECONDARY,
+      },
+      view: {
+        ...this.styles.view,
+        backgroundColor: colors.BACKGROUND,
+      },
+    };
+
     return (
-      <Layout backgroundColor={COLOR_SECONDARY}>
+      <Layout>
         <HeaderBack headline={__('legal-screen.header.headline')} navigation={navigation} />
 
-        <View style={this.styles.view}>
-          <View style={this.styles.tabBarWrapper}>
+        <View style={styles.view}>
+          <View style={styles.tabBarWrapper}>
             <TabBar>
               <TabBarItem
                 active={activeTab === TABS.POLICY}
@@ -208,78 +261,78 @@ class Legal extends React.Component {
             </TabBar>
           </View>
 
-          <View style={this.styles.viewTabContentWrapper}>
+          <View style={styles.viewTabContentWrapper}>
             {activeTab === TABS.POLICY && (
               <ScrollView>
-                <View style={this.styles.viewTabContent}>
-                  <Text style={this.styles.contentTextHeadline}>{__('legal-screen.privacy.section-1.headline')}</Text>
-                  <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-1.text')}</Text>
-                  <Text style={this.styles.contentTextHeadline}>{__('legal-screen.privacy.section-2.headline')}</Text>
-                  <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-2.text')}</Text>
-                  <Text style={this.styles.contentTextHeadline}>{__('legal-screen.privacy.section-3.headline')}</Text>
-                  <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-3.text')}</Text>
-                  <Text style={this.styles.contentTextHeadline}>{__('legal-screen.privacy.section-4.headline')}</Text>
-                  <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-4.text')}</Text>
-                  <Text style={this.styles.contentTextHeadline}>{__('legal-screen.privacy.section-5.headline')}</Text>
-                  <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-5.text')}</Text>
-                  <Text style={this.styles.contentTextHeadline}>{__('legal-screen.privacy.section-6.headline')}</Text>
-                  <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-6.text')}</Text>
+                <View style={styles.viewTabContent}>
+                  <Text style={styles.contentTextHeadline}>{__('legal-screen.privacy.section-1.headline')}</Text>
+                  <Text style={styles.contentText}>{__('legal-screen.privacy.section-1.text')}</Text>
+                  <Text style={styles.contentTextHeadline}>{__('legal-screen.privacy.section-2.headline')}</Text>
+                  <Text style={styles.contentText}>{__('legal-screen.privacy.section-2.text')}</Text>
+                  <Text style={styles.contentTextHeadline}>{__('legal-screen.privacy.section-3.headline')}</Text>
+                  <Text style={styles.contentText}>{__('legal-screen.privacy.section-3.text')}</Text>
+                  <Text style={styles.contentTextHeadline}>{__('legal-screen.privacy.section-4.headline')}</Text>
+                  <Text style={styles.contentText}>{__('legal-screen.privacy.section-4.text')}</Text>
+                  <Text style={styles.contentTextHeadline}>{__('legal-screen.privacy.section-5.headline')}</Text>
+                  <Text style={styles.contentText}>{__('legal-screen.privacy.section-5.text')}</Text>
+                  <Text style={styles.contentTextHeadline}>{__('legal-screen.privacy.section-6.headline')}</Text>
+                  <Text style={styles.contentText}>{__('legal-screen.privacy.section-6.text')}</Text>
 
                   {!['de', 'en'].includes(currentLanguage) && (
-                    <CollapsibleBox headline={'English version'} style={this.styles.collapsible}>
-                      <Text style={this.styles.contentTextHeadline}>
+                    <CollapsibleBox headline={'English version'} style={styles.collapsible}>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.privacy.section-1.headline', 'en')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-1.text', 'en')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-1.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.privacy.section-2.headline', 'en')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-2.text', 'en')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-2.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.privacy.section-3.headline', 'en')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-3.text', 'en')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-3.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.privacy.section-4.headline', 'en')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-4.text', 'en')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-4.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.privacy.section-5.headline', 'en')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-5.text', 'en')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-5.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.privacy.section-6.headline', 'en')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-6.text', 'en')}</Text>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-6.text', 'en')}</Text>
                     </CollapsibleBox>
                   )}
 
                   {currentLanguage !== 'de' && (
-                    <CollapsibleBox headline={'Deutsche Version'} style={this.styles.collapsible}>
-                      <Text style={this.styles.contentTextHeadline}>
+                    <CollapsibleBox headline={'Deutsche Version'} style={styles.collapsible}>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.privacy.section-1.headline', 'de')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-1.text', 'de')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-1.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.privacy.section-2.headline', 'de')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-2.text', 'de')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-2.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.privacy.section-3.headline', 'de')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-3.text', 'de')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-3.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.privacy.section-4.headline', 'de')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-4.text', 'de')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-4.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.privacy.section-5.headline', 'de')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-5.text', 'de')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-5.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.privacy.section-6.headline', 'de')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.privacy.section-6.text', 'de')}</Text>
+                      <Text style={styles.contentText}>{__('legal-screen.privacy.section-6.text', 'de')}</Text>
                     </CollapsibleBox>
                   )}
                 </View>
@@ -288,55 +341,55 @@ class Legal extends React.Component {
 
             {activeTab === TABS.IMPRINT && (
               <ScrollView>
-                <View style={this.styles.viewTabContent}>
-                  <Text style={this.styles.contentTextHeadline}>{__('legal-screen.imprint.section-1.headline')}</Text>
-                  <Text style={this.styles.contentText}>{__('legal-screen.imprint.section-1.text')}</Text>
-                  <Text style={this.styles.contentTextHeadline}>{__('legal-screen.imprint.section-2.headline')}</Text>
-                  <Text style={this.styles.contentText}>{__('legal-screen.imprint.section-2.text')}</Text>
-                  <Text style={this.styles.contentTextHeadline}>{__('legal-screen.imprint.section-3.headline')}</Text>
-                  <Text style={this.styles.contentText}>{__('legal-screen.imprint.section-3.text')}</Text>
-                  <Text style={this.styles.contentTextHeadline}>{__('legal-screen.imprint.section-4.headline')}</Text>
-                  <Text style={this.styles.contentText}>{__('legal-screen.imprint.section-4.text')}</Text>
+                <View style={styles.viewTabContent}>
+                  <Text style={styles.contentTextHeadline}>{__('legal-screen.imprint.section-1.headline')}</Text>
+                  <Text style={styles.contentText}>{__('legal-screen.imprint.section-1.text')}</Text>
+                  <Text style={styles.contentTextHeadline}>{__('legal-screen.imprint.section-2.headline')}</Text>
+                  <Text style={styles.contentText}>{__('legal-screen.imprint.section-2.text')}</Text>
+                  <Text style={styles.contentTextHeadline}>{__('legal-screen.imprint.section-3.headline')}</Text>
+                  <Text style={styles.contentText}>{__('legal-screen.imprint.section-3.text')}</Text>
+                  <Text style={styles.contentTextHeadline}>{__('legal-screen.imprint.section-4.headline')}</Text>
+                  <Text style={styles.contentText}>{__('legal-screen.imprint.section-4.text')}</Text>
 
                   {!['de', 'en'].includes(currentLanguage) && (
-                    <CollapsibleBox headline={'English version'} style={this.styles.collapsible}>
-                      <Text style={this.styles.contentTextHeadline}>
+                    <CollapsibleBox headline={'English version'} style={styles.collapsible}>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.imprint.section-1.headline', 'en')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.imprint.section-1.text', 'en')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-1.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.imprint.section-2.headline', 'en')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.imprint.section-2.text', 'en')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-2.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.imprint.section-3.headline', 'en')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.imprint.section-3.text', 'en')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-3.text', 'en')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.imprint.section-4.headline', 'en')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.imprint.section-4.text', 'en')}</Text>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-4.text', 'en')}</Text>
                     </CollapsibleBox>
                   )}
 
                   {currentLanguage !== 'de' && (
-                    <CollapsibleBox headline={'Deutsche Version'} style={this.styles.collapsible}>
-                      <Text style={this.styles.contentTextHeadline}>
+                    <CollapsibleBox headline={'Deutsche Version'} style={styles.collapsible}>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.imprint.section-1.headline', 'de')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.imprint.section-1.text', 'de')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-1.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.imprint.section-2.headline', 'de')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.imprint.section-2.text', 'de')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-2.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.imprint.section-3.headline', 'de')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.imprint.section-3.text', 'de')}</Text>
-                      <Text style={this.styles.contentTextHeadline}>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-3.text', 'de')}</Text>
+                      <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.imprint.section-4.headline', 'de')}
                       </Text>
-                      <Text style={this.styles.contentText}>{__('legal-screen.imprint.section-4.text', 'de')}</Text>
+                      <Text style={styles.contentText}>{__('legal-screen.imprint.section-4.text', 'de')}</Text>
                     </CollapsibleBox>
                   )}
                 </View>
@@ -344,38 +397,15 @@ class Legal extends React.Component {
             )}
 
             {activeTab === TABS.LICENSES && (
-              <View style={this.styles.licensesListWrapper}>
+              <View style={styles.licensesListWrapper}>
                 <FlatList
                   data={licensesList}
-                  initialNumToRender={50}
-                  keyExtractor={({ name }) => name}
-                  renderItem={({ item: { license, licenseUrl, name, repository, version } }) => {
-                    const hasVersion = version.toString().trim().length > 0;
-
-                    return (
-                      <View style={this.styles.licenseItem}>
-                        <TouchableOpacity onPress={() => this.openLink(repository)} style={this.styles.licenseItemLink}>
-                          <UilExternalLinkAlt color={COLOR_PRIMARY} size={vw(6)} />
-                        </TouchableOpacity>
-                        <Text style={this.styles.licenseItemName}>{name}</Text>
-                        <View style={this.styles.licenseItemContent}>
-                          {hasVersion && <Text style={this.styles.licenseItemContentText}>{version}</Text>}
-                          {hasVersion && (
-                            <Text
-                              style={{ ...this.styles.licenseItemContentText, marginLeft: vw(2), marginRight: vw(2) }}>
-                              {'-'}
-                            </Text>
-                          )}
-                          <TouchableOpacity
-                            onPress={() => this.openLink(licenseUrl)}
-                            style={this.styles.licenseItemLicense}>
-                            <Text style={this.styles.licenseItemContentText}>{license}</Text>
-                          </TouchableOpacity>
-                        </View>
-                      </View>
-                    );
-                  }}
-                  style={this.styles.licensesList}
+                  initialNumToRender={10}
+                  keyExtractor={this.renderLicenseItemKeyExtractor}
+                  removeClippedSubviews={true}
+                  renderItem={this.renderLicenseItem}
+                  windowSize={5}
+                  style={styles.licensesList}
                 />
               </View>
             )}
@@ -386,4 +416,4 @@ class Legal extends React.Component {
   }
 }
 
-export default withI18n(withViewportUnits(Legal));
+export default withColorScheme(withI18n(withViewportUnits(Legal)));

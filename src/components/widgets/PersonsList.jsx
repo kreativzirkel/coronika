@@ -6,7 +6,8 @@ import cloneDeep from 'lodash/cloneDeep';
 import deepEqual from 'fast-deep-equal';
 import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../constants';
+import { COLOR_PRIMARY } from '../../constants';
+import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 import ListItemSeparator from './ListItemSeparator';
 import withI18n from '../../i18n';
@@ -36,7 +37,6 @@ class PersonListItemClass extends React.Component {
       zIndex: 1,
     },
     person: {
-      backgroundColor: COLOR_SECONDARY,
       borderRadius: this.props.vw(2.3),
       flexDirection: 'row',
       justifyContent: 'space-between',
@@ -48,7 +48,7 @@ class PersonListItemClass extends React.Component {
       paddingTop: this.props.vw(3.8),
     },
     personText: {
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.2),
     },
     personTextIconImported: {
@@ -92,7 +92,7 @@ class PersonListItemClass extends React.Component {
     },
     viewCounterText: {
       color: COLOR_PRIMARY,
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(6),
     },
   });
@@ -112,6 +112,7 @@ class PersonListItemClass extends React.Component {
     const {
       allowPersonDelete,
       allowSelection,
+      colors,
       counter,
       fullName,
       isPersonSelected,
@@ -121,19 +122,19 @@ class PersonListItemClass extends React.Component {
     } = this.props;
 
     return (
-      <View style={this.styles.person}>
+      <View style={{ ...this.styles.person, backgroundColor: colors.SECONDARY }}>
         <View
           style={{
             ...this.styles.personTextWrapper,
             ...((allowPersonDelete || allowSelection || showCounter) && this.styles.personTextWrapperWithPadding),
           }}>
-          <Text numberOfLines={1} style={this.styles.personText}>
+          <Text numberOfLines={1} style={{ ...this.styles.personText, color: colors.TEXT }}>
             {fullName}
           </Text>
 
           {recordID !== undefined && (
             <View style={this.styles.personTextIconImported}>
-              <UilMobileAndroid color={'#b0b0b0'} size={vw(5)} />
+              <UilMobileAndroid color={colors.GRAY_3} size={vw(5)} />
             </View>
           )}
         </View>
@@ -146,7 +147,7 @@ class PersonListItemClass extends React.Component {
                 ...(isPersonSelected && this.styles.selectButtonInnerSelected),
               }}>
               {isPersonSelected ? (
-                <UilMinus size={vw(7)} color={'#ffffff'} />
+                <UilMinus size={vw(7)} color={colors.TEXT_ALT} />
               ) : (
                 <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
               )}
@@ -184,7 +185,7 @@ class PersonListItemClass extends React.Component {
   }
 }
 
-const PersonsListItem = withI18n(withViewportUnits(PersonListItemClass));
+const PersonsListItem = withColorScheme(withI18n(withViewportUnits(PersonListItemClass)));
 
 const sortPersons = (inputPersonsList, orderByLastUsage = false) => {
   if (orderByLastUsage && inputPersonsList) {

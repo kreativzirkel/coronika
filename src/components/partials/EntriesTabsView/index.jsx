@@ -8,8 +8,9 @@ import moment from 'moment';
 import React, { Fragment } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import ReactReduxContext from 'react-redux/lib/components/Context';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '../../../constants';
+import { COLOR_PRIMARY } from '../../../constants';
 import withI18n from '../../../i18n';
+import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import { addPerson, addLocation, updatePerson, updateLocation } from '../../screens/Directory/actions';
 import importPersons from '../../screens/Directory/importPersons';
@@ -623,7 +624,7 @@ class EntriesTabsView extends React.Component {
     },
     buttonCreateNewText: {
       color: COLOR_PRIMARY,
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.8),
       textTransform: 'lowercase',
     },
@@ -637,7 +638,7 @@ class EntriesTabsView extends React.Component {
     },
     personsImportButtonText: {
       color: COLOR_PRIMARY,
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.5),
       textTransform: 'lowercase',
     },
@@ -649,69 +650,10 @@ class EntriesTabsView extends React.Component {
       justifyContent: 'center',
     },
     entriesEmptyText: {
-      fontFamily: this.props.getFontFamilyRegular(),
+      fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.4),
       marginBottom: this.props.vw(4.5),
       textAlign: 'center',
-    },
-    modal: {
-      justifyContent: 'flex-end',
-      margin: 0,
-    },
-    modalContent: {
-      backgroundColor: '#ffffff',
-      borderTopLeftRadius: this.props.vw(2.3),
-      borderTopRightRadius: this.props.vw(2.3),
-      padding: this.props.vw(3),
-    },
-    modalHeader: {
-      alignItems: 'center',
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      marginBottom: this.props.vw(4.5),
-      paddingLeft: this.props.vw(3),
-      paddingRight: this.props.vw(3),
-      paddingTop: this.props.vw(2),
-      width: '100%',
-    },
-    modalHeaderIcon: {
-      alignSelf: 'flex-start',
-    },
-    modalHeaderText: {
-      flex: 1,
-      fontFamily: this.props.getFontFamilyBold(),
-      fontSize: this.props.vw(5),
-      textTransform: 'lowercase',
-    },
-    modalTextInput: {
-      backgroundColor: COLOR_SECONDARY,
-      borderRadius: this.props.vw(2.3),
-      color: '#000000',
-      fontFamily: this.props.getFontFamilyRegular(),
-      fontSize: this.props.vw(4),
-      height: this.props.vw(15),
-      marginBottom: this.props.vw(4),
-      padding: this.props.vw(4),
-    },
-    modalTextInputText: {
-      color: '#000000',
-      fontFamily: this.props.getFontFamilyRegular(),
-      fontSize: this.props.vw(4),
-    },
-    modalTimeInputContainer: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-    },
-    modalTimeInputWrapper: {
-      width: this.props.vw(38),
-    },
-    modalTimeInputDivider: {
-      marginTop: this.props.vw(4),
-    },
-    modalTimeInput: {
-      backgroundColor: '#b0b0b1',
-      borderRadius: this.props.vw(2.3),
     },
     modalButton: {
       alignItems: 'center',
@@ -726,22 +668,19 @@ class EntriesTabsView extends React.Component {
       opacity: 0.2,
     },
     modalButtonText: {
-      color: '#ffffff',
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(6),
       textTransform: 'lowercase',
     },
     modalButtonTextCounter: {
       alignSelf: 'flex-start',
-      color: '#ffffff',
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(4),
       marginLeft: this.props.vw(1.5),
       textTransform: 'lowercase',
     },
     tabContentWrapper: {
       alignItems: 'center',
-      backgroundColor: '#ffffff',
       flex: 1,
       flexDirection: 'column',
       height: '100%',
@@ -760,6 +699,7 @@ class EntriesTabsView extends React.Component {
     const {
       allowSelection,
       allowUpdate,
+      colors,
       persons,
       customPersonsEmptyText,
       customLocationsEmptyText,
@@ -842,7 +782,7 @@ class EntriesTabsView extends React.Component {
           </TabBar>
         )}
 
-        <View style={this.styles.tabContentWrapper}>
+        <View style={{ ...this.styles.tabContentWrapper, backgroundColor: colors.BACKGROUND }}>
           {activeTab === TABS.PERSONS && (
             <Fragment>
               {!hideCreateButton && (
@@ -868,14 +808,20 @@ class EntriesTabsView extends React.Component {
               ) : (
                 <View style={this.styles.entriesEmptyWrapper}>
                   {isSearchFilled ? (
-                    <Text style={this.styles.entriesEmptyText}>{__('entries.search.list.empty')}</Text>
+                    <Text style={{ ...this.styles.entriesEmptyText, color: colors.TEXT }}>
+                      {__('entries.search.list.empty')}
+                    </Text>
                   ) : (
                     <Fragment>
                       {customPersonsEmptyText ? (
-                        <Text style={this.styles.entriesEmptyText}>{customPersonsEmptyText}</Text>
+                        <Text style={{ ...this.styles.entriesEmptyText, color: colors.TEXT }}>
+                          {customPersonsEmptyText}
+                        </Text>
                       ) : (
                         <Fragment>
-                          <Text style={this.styles.entriesEmptyText}>{__('entries.persons.list.empty')}</Text>
+                          <Text style={{ ...this.styles.entriesEmptyText, color: colors.TEXT }}>
+                            {__('entries.persons.list.empty')}
+                          </Text>
                           <TouchableOpacity onPress={this.importPersons} style={this.styles.personsImportButton}>
                             <UilImport
                               color={COLOR_PRIMARY}
@@ -919,9 +865,11 @@ class EntriesTabsView extends React.Component {
               ) : (
                 <View style={this.styles.entriesEmptyWrapper}>
                   {isSearchFilled ? (
-                    <Text style={this.styles.entriesEmptyText}>{__('entries.search.list.empty')}</Text>
+                    <Text style={{ ...this.styles.entriesEmptyText, color: colors.TEXT }}>
+                      {__('entries.search.list.empty')}
+                    </Text>
                   ) : (
-                    <Text style={this.styles.entriesEmptyText}>
+                    <Text style={{ ...this.styles.entriesEmptyText, color: colors.TEXT }}>
                       {customLocationsEmptyText ? customLocationsEmptyText : __('entries.locations.list.empty')}
                     </Text>
                   )}
@@ -938,8 +886,14 @@ class EntriesTabsView extends React.Component {
                   ...(buttonAddSelectionDisabled && this.styles.modalButtonDisabled),
                   ...this.styles.buttonAddSelection,
                 }}>
-                <Text style={this.styles.modalButtonText}>{__('entries.selection.add')}</Text>
-                <Text style={this.styles.modalButtonTextCounter}>{`(${selectionCounter})`}</Text>
+                <Text style={{ ...this.styles.modalButtonText, color: colors.TEXT_ALT }}>
+                  {__('entries.selection.add')}
+                </Text>
+                <Text
+                  style={{
+                    ...this.styles.modalButtonTextCounter,
+                    color: colors.TEXT_ALT,
+                  }}>{`(${selectionCounter})`}</Text>
               </View>
             </TouchableOpacity>
           )}
@@ -1038,4 +992,4 @@ class EntriesTabsView extends React.Component {
 
 EntriesTabsView.contextType = ReactReduxContext;
 
-export default withI18n(withViewportUnits(EntriesTabsView));
+export default withColorScheme(withI18n(withViewportUnits(EntriesTabsView)));

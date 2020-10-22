@@ -1,12 +1,11 @@
 import React from 'react';
-import { COLOR_SECONDARY } from '../../../constants';
 import EntriesTabsView from '../../partials/EntriesTabsView';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 
 const AddEntry = ({ locations, persons, timestamp, addSelection, navigation, __ }) => {
   return (
-    <Layout backgroundColor={COLOR_SECONDARY}>
+    <Layout>
       <HeaderBack headline={__('add-entry-screen.header.headline')} navigation={navigation} />
 
       <EntriesTabsView

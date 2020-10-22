@@ -4,6 +4,7 @@ import { CommonActions } from '@react-navigation/native';
 import React from 'react';
 import { Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import withI18n from '../../i18n';
+import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 
 class HeaderClass extends React.Component {
@@ -50,7 +51,7 @@ class HeaderBackClass extends React.Component {
       justifyContent: Platform.OS === 'ios' ? 'space-between' : 'flex-end',
     },
     headerHeadline: {
-      fontFamily: this.props.getFontFamilyBold(),
+      fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(5),
       marginLeft: 'auto',
       textTransform: 'lowercase',
@@ -66,7 +67,7 @@ class HeaderBackClass extends React.Component {
   }
 
   render() {
-    const { headline, vw, isRTL } = this.props;
+    const { colors, headline, vw, isRTL } = this.props;
 
     return (
       <Header>
@@ -74,20 +75,20 @@ class HeaderBackClass extends React.Component {
           {Platform.OS === 'ios' && (
             <TouchableOpacity onPress={this.goBack} style={this.styles.headerBackButton}>
               {isRTL ? (
-                <UilArrowRight size={vw(12)} color={'#000000'} />
+                <UilArrowRight size={vw(12)} color={colors.TEXT} />
               ) : (
-                <UilArrowLeft size={vw(12)} color={'#000000'} />
+                <UilArrowLeft size={vw(12)} color={colors.TEXT} />
               )}
             </TouchableOpacity>
           )}
 
-          <Text style={this.styles.headerHeadline}>{headline}</Text>
+          <Text style={{ ...this.styles.headerHeadline, color: colors.TEXT }}>{headline}</Text>
         </View>
       </Header>
     );
   }
 }
 
-export const HeaderBack = withI18n(withViewportUnits(HeaderBackClass));
+export const HeaderBack = withColorScheme(withI18n(withViewportUnits(HeaderBackClass)));
 
 export default Header;

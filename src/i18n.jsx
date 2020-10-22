@@ -304,13 +304,15 @@ const withI18n = (WrappedComponent) => {
         i18n: { currentLanguage: i18nCurrentLanguage },
       } = getState();
 
+      const currentLanguage = i18nCurrentLanguage || DEFAULT_LANGUAGE;
+
       this.state = {
-        currentLanguage: i18nCurrentLanguage || DEFAULT_LANGUAGE,
+        currentLanguage,
+        fontFamilyBold: getFontFamilyBold(currentLanguage),
+        fontFamilyRegular: getFontFamilyRegular(currentLanguage),
       };
 
       this.formatTimeDistance = this.formatTimeDistance.bind(this);
-      this.getFontFamilyBoldI18n = this.getFontFamilyBoldI18n.bind(this);
-      this.getFontFamilyRegularI18n = this.getFontFamilyRegularI18n.bind(this);
       this.__i18n = this.__i18n.bind(this);
     }
 
@@ -321,7 +323,12 @@ const withI18n = (WrappedComponent) => {
 
       this.unsubscribeStore = subscribe(() => {
         const { i18n } = getState();
-        this.setState({ ...i18n });
+        const currentLanguage = i18n.currentLanguage;
+        this.setState({
+          ...i18n,
+          fontFamilyBold: getFontFamilyBold(currentLanguage),
+          fontFamilyRegular: getFontFamilyRegular(currentLanguage),
+        });
       });
     }
 
@@ -406,41 +413,17 @@ const withI18n = (WrappedComponent) => {
       return __(text, translationLanguage, translationMessages);
     }
 
-    getFontFamilyBoldI18n(language) {
-      let translationLanguage = language;
-
-      if (!translationLanguage) {
-        const { currentLanguage } = this.state;
-
-        translationLanguage = currentLanguage;
-      }
-
-      return getFontFamilyBold(translationLanguage);
-    }
-
-    getFontFamilyRegularI18n(language) {
-      let translationLanguage = language;
-
-      if (!translationLanguage) {
-        const { currentLanguage } = this.state;
-
-        translationLanguage = currentLanguage;
-      }
-
-      return getFontFamilyRegular(translationLanguage);
-    }
-
     render() {
       const { forwardedRef, ...props } = this.props;
-      const { currentLanguage, isRTL: isRTLState } = this.state;
+      const { currentLanguage, fontFamilyBold, fontFamilyRegular, isRTL: isRTLState } = this.state;
 
       return (
         /* eslint-disable react/jsx-props-no-spreading */
         <WrappedComponent
           {...{ ...props, currentLanguage }}
           formatTimeDistance={this.formatTimeDistance}
-          getFontFamilyBold={this.getFontFamilyBoldI18n}
-          getFontFamilyRegular={this.getFontFamilyRegularI18n}
+          fontFamilyBold={fontFamilyBold}
+          fontFamilyRegular={fontFamilyRegular}
           isRTL={isRTLState}
           ref={forwardedRef}
           __={this.__i18n}
