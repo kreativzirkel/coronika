@@ -43,12 +43,12 @@ const DayDate = memo(({ formatTimeDistance, isDark, isToday, isTotal, styles, ti
   );
 });
 
-const DayLocations = memo(({ isDark, locations, showIcons, styles, vw, __ }) => {
+const DayLocations = memo(({ colors, isDark, locations, showIcons, styles, vw, __ }) => {
   return (
     <View style={styles.dayLocationsWrapper}>
       <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('locations')}</Text>
       {showIcons ? (
-        <UilLocationPinAlt color={'#000000'} size={vw(8.2)} style={styles.dayIcon} />
+        <UilLocationPinAlt color={colors.TEXT} size={vw(8.2)} style={styles.dayIcon} />
       ) : (
         <Text
           style={{
@@ -64,12 +64,12 @@ const DayLocations = memo(({ isDark, locations, showIcons, styles, vw, __ }) => 
   );
 });
 
-const DayPersons = memo(({ isDark, persons, showIcons, styles, vw, __ }) => {
+const DayPersons = memo(({ colors, isDark, persons, showIcons, styles, vw, __ }) => {
   return (
     <View style={styles.dayPersonsWrapper}>
       <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('persons')}</Text>
       {showIcons ? (
-        <UilSmile color={'#000000'} size={vw(8.2)} style={styles.dayIcon} />
+        <UilSmile color={colors.TEXT} size={vw(8.2)} style={styles.dayIcon} />
       ) : (
         <Text
           style={{
@@ -228,8 +228,8 @@ class DayOverview extends React.Component {
         <DayDate
           {...{ formatTimeDistance, isDark, isToday: this.isToday, isTotal, styles: styles, timestamp, today, __ }}
         />
-        <DayLocations {...{ isDark, locations, showIcons, styles: styles, vw, __ }} />
-        <DayPersons {...{ isDark, persons, showIcons, styles: styles, vw, __ }} />
+        <DayLocations {...{ colors, isDark, locations, showIcons, styles: styles, vw, __ }} />
+        <DayPersons {...{ colors, isDark, persons, showIcons, styles: styles, vw, __ }} />
       </View>
     );
   }

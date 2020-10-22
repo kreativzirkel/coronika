@@ -75,7 +75,7 @@ class SearchBar extends React.Component {
           onChangeText={this.setSearchValue}
           /* onSubmitEditing={() => this.onSubmitEditing()} */
           placeholder={__('placeholder.search-input').toLowerCase()}
-          placeholderTextColor={'#B0B0B1'}
+          placeholderTextColor={colors.GRAY_3}
           ref={innerRef}
           returnKeyType={'search'}
           style={{ ...this.styles.searchInput, backgroundColor: colors.BACKGROUND, color: colors.TEXT }}

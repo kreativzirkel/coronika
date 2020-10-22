@@ -46,19 +46,6 @@ const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamil
     headerButton: {
       flexDirection: 'row',
     },
-    headerButtonText: {
-      color: '#555555',
-      fontFamily: fontFamilyRegular,
-      fontSize: vw(3.8),
-      marginLeft: vw(1),
-      textTransform: 'lowercase',
-    },
-    headerHeadline: {
-      fontFamily: fontFamilyBold,
-      fontSize: vw(5),
-      marginLeft: 'auto',
-      textTransform: 'lowercase',
-    },
     view: {
       alignItems: 'center',
       flex: 1,
