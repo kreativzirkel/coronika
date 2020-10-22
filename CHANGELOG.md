@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.6.0
+
+- Added dark mode
+- Locations can be edited after added to a day
+- Fixed bug of time picker opening again after closing it
+- Improved performance
+- Bug fixed and improvements
+
 ## 1.5.1
 
 - Bug fixes and improvements
