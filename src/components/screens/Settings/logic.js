@@ -126,6 +126,16 @@ const getDailyNotificationTimestamp = (hours, minutes = 0) => {
 };
 
 const setNotifications = (notifications, __, cb) => {
+  if (Platform.OS === 'android') {
+    PushNotification.createChannel({
+      channelId: 'coronika',
+      channelName: 'Coronika Notifications',
+      soundName: 'default',
+      importance: 4,
+      vibrate: true,
+    });
+  }
+
   if (Platform.OS === 'ios') PushNotificationIOS.removeAllDeliveredNotifications();
   PushNotification.cancelAllLocalNotifications();
 
@@ -137,6 +147,8 @@ const setNotifications = (notifications, __, cb) => {
   } = notifications;
 
   const defaultNotificationOptions = {
+    channelId: 'coronika',
+    ignoreInForeground: false,
     repeatType: 'day',
     smallIcon: 'ic_launcher',
     visibility: 'public',
