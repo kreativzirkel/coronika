@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.6.1
+
+- Fixed push notifications for android
+
 ## 1.6.0
 
 - Added dark mode

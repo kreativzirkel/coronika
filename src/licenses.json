@@ -101,7 +101,7 @@
         "licenseUrl": "https://github.com/jacse/react-native-app-intro-slider/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-contacts@6.0.2": {
+    "react-native-contacts@6.0.3": {
         "licenses": "MIT",
         "repository": "https://github.com/rt2zz/react-native-contacts",
         "licenseUrl": "https://github.com/rt2zz/react-native-contacts/raw/master/LICENSE",
