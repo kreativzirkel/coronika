@@ -88,6 +88,7 @@ class Day extends React.Component {
           deletePersonItem={this.deletePersonFromDay}
           deleteLocationItem={this.deleteLocationFromDay}
           hideCreateButton
+          hideSearchBar
           locations={locations}
           persons={persons}
           updateSelectedLocation={this.updateSelectedLocation}

@@ -705,6 +705,7 @@ class EntriesTabsView extends React.Component {
       customLocationsEmptyText,
       disableDeleteImportedPersons,
       hideCreateButton,
+      hideSearchBar,
       hideTabBar,
       isDirectory,
       locations,
@@ -754,12 +755,14 @@ class EntriesTabsView extends React.Component {
 
     return (
       <Fragment>
-        <SearchBar
-          onPressSearchIcon={this.onPressSearchIcon}
-          ref={this.searchInput}
-          searchValue={searchValue}
-          setSearchValue={this.setSearchValue}
-        />
+        {!hideSearchBar && (
+          <SearchBar
+            onPressSearchIcon={this.onPressSearchIcon}
+            ref={this.searchInput}
+            searchValue={searchValue}
+            setSearchValue={this.setSearchValue}
+          />
+        )}
 
         {!hideTabBar && (
           <TabBar>

@@ -40,6 +40,7 @@ const DayDate = memo(
             style={{
               ...styles.dayValue,
               ...(isReduced && styles.dayValueReduced),
+              ...(isSmall && styles.dayValueSmall),
               ...(isDark && styles.dayValueNumberDark),
             }}>
             {isTotal ? __('total') : moment(timestamp).format('dd DD.MMM')}

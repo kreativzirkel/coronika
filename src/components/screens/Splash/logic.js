@@ -2,9 +2,10 @@ import * as RNLocalize from 'react-native-localize';
 import { BackHandler } from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import { SUPPORTED_LANGUAGES } from '../../../constants';
-import { changeLanguage } from '../../../i18n';
+import withI18n, { changeLanguage } from '../../../i18n';
 import { container } from '../../../utils/react';
 import withColorScheme from '../../../utils/withColorScheme';
+import withViewportUnits from '../../../utils/withViewportUnits';
 import { configurePushNotifications } from '../Settings/logic';
 import Screen from './ui';
 
@@ -32,7 +33,7 @@ const Container = container(Screen, {
     const showWelcomeScreen = welcomeScreenShowKey !== showKey;
 
     (async () => {
-      await new Promise((resolve) => setTimeout(resolve, 3000));
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
       if (showWelcomeScreen) {
         navigation.navigate('Welcome');
@@ -55,4 +56,4 @@ const Container = container(Screen, {
   },
 });
 
-export default withColorScheme(Container);
+export default withColorScheme(withI18n(withViewportUnits(Container)));

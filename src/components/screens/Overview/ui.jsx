@@ -81,6 +81,7 @@ const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamil
         <View style={styles.dayOverviewWrapper}>
           <DayOverview
             isDark
+            isSmall
             isTotal
             locations={total.locations}
             persons={total.persons}
