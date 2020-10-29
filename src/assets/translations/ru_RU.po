@@ -7,249 +7,246 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 
-#: src/components/App/ui.jsx:100
-msgid "navigation.dashboard.label"
-msgstr "Дневник"
-
-#: src/components/App/ui.jsx:103
-msgid "navigation.share.label"
-msgstr "Поделиться"
-
-#: src/components/App/ui.jsx:106
-msgid "navigation.tips.label"
-msgstr "Советы"
-
-#: src/components/App/ui.jsx:161
-msgid "app.share.message"
+#: src/components/App/ui.jsx:79
+msgid "navigation.add-entry.label"
 msgstr ""
-"Не поддавйся панике из-за коронавируса. Будь в курсе и помогай "
-"окружающим... \n"
-"✅... записывая контакты и места, с которыми вы встречались или "
-"останавливались, \n"
-"✅... следуй гигиеническим советам \n"
-"✅... используй авторитетные источники информации \n"
-"Оставайся здоровыми и не забывай регулярно мыть руки! ✋😉 https://coronika."
-"app/"
 
-#: src/components/App/ui.jsx:97
+#: src/components/App/ui.jsx:82
 msgid "navigation.directory.label"
 msgstr "Каталог"
 
-#: src/components/partials/EntriesTabsView/index.jsx:831
+#: src/components/App/ui.jsx:85
+msgid "navigation.dashboard.label"
+msgstr "Дневник"
+
+#: src/components/App/ui.jsx:88
+msgid "navigation.overview.label"
+msgstr ""
+
+#: src/components/App/ui.jsx:91
+msgid "navigation.tips.label"
+msgstr "Советы"
+
+#: src/components/partials/EntriesTabsView/index.jsx:771
 #: src/components/screens/Export/createPdfFile.js:317
-#: src/components/widgets/DayOverview.jsx:69
+#: src/components/widgets/DayOverview.jsx:97
 msgid "persons"
 msgstr "лица"
 
-#: src/components/partials/EntriesTabsView/index.jsx:839
+#: src/components/partials/EntriesTabsView/index.jsx:779
 #: src/components/screens/Export/createPdfFile.js:409
-#: src/components/widgets/DayOverview.jsx:48
+#: src/components/widgets/DayOverview.jsx:76
 msgid "locations"
 msgstr "местоположения"
 
-#: src/components/partials/EntriesTabsView/index.jsx:851
+#: src/components/partials/EntriesTabsView/index.jsx:791
 msgid "entries.persons.list.new"
 msgstr "Новый человек"
 
-#: src/components/partials/EntriesTabsView/index.jsx:871
-#: src/components/partials/EntriesTabsView/index.jsx:922
+#: src/components/partials/EntriesTabsView/index.jsx:812
+#: src/components/partials/EntriesTabsView/index.jsx:869
 msgid "entries.search.list.empty"
 msgstr "Ничего не было найдено при вашем поиске."
 
-#: src/components/partials/EntriesTabsView/index.jsx:878
+#: src/components/partials/EntriesTabsView/index.jsx:823
 msgid "entries.persons.list.empty"
 msgstr ""
 "Ты еще не создал человека. Чтобы сразу приступить к работе, ты можешь "
 "импортировать людей из своей телефонной книги."
 
-#: src/components/partials/EntriesTabsView/index.jsx:886
+#: src/components/partials/EntriesTabsView/index.jsx:832
 msgid "entries.persons.list.import.button"
 msgstr "Импорт сейчас"
 
-#: src/components/partials/EntriesTabsView/index.jsx:903
+#: src/components/partials/EntriesTabsView/index.jsx:849
 msgid "entries.locations.list.new"
 msgstr "Новое местоположение"
 
-#: src/components/partials/EntriesTabsView/index.jsx:925
+#: src/components/partials/EntriesTabsView/index.jsx:873
 msgid "entries.locations.list.empty"
 msgstr ""
 "Ты еще не создал местоположение. Начни сейчас и создай своё первое "
 "местоположение."
 
-#: src/components/partials/EntriesTabsView/index.jsx:941
+#: src/components/partials/EntriesTabsView/index.jsx:890
 msgid "entries.selection.add"
 msgstr "Добавить выбор"
 
-#: src/components/partials/EntriesTabsView/index.jsx:951
+#: src/components/partials/EntriesTabsView/index.jsx:905
 msgid "entries.modals.update-person.button"
 msgstr "Сохранить"
 
-#: src/components/partials/EntriesTabsView/index.jsx:951
+#: src/components/partials/EntriesTabsView/index.jsx:905
 msgid "entries.modals.new-person.button"
 msgstr "Добавить"
 
-#: src/components/partials/EntriesTabsView/index.jsx:954
+#: src/components/partials/EntriesTabsView/index.jsx:908
 msgid "entries.modals.update-person.headline"
 msgstr "Редактор"
 
-#: src/components/partials/EntriesTabsView/index.jsx:954
+#: src/components/partials/EntriesTabsView/index.jsx:908
 msgid "entries.modals.new-person.headline"
 msgstr "Новый человек"
 
-#: src/components/partials/EntriesTabsView/index.jsx:969
-#: src/components/partials/EntriesTabsView/index.jsx:991
+#: src/components/partials/EntriesTabsView/index.jsx:923
+#: src/components/partials/EntriesTabsView/index.jsx:945
 msgid "entries.modals.update-location.button"
 msgstr "Сохранить"
 
-#: src/components/partials/EntriesTabsView/index.jsx:970
+#: src/components/partials/EntriesTabsView/index.jsx:924
 msgid "entries.modals.new-location.button"
 msgstr "Добавить"
 
-#: src/components/partials/EntriesTabsView/index.jsx:974
-#: src/components/partials/EntriesTabsView/index.jsx:998
+#: src/components/partials/EntriesTabsView/index.jsx:928
+#: src/components/partials/EntriesTabsView/index.jsx:952
 msgid "entries.modals.update-location.headline"
 msgstr "Редактировать местоположение"
 
-#: src/components/partials/EntriesTabsView/index.jsx:975
+#: src/components/partials/EntriesTabsView/index.jsx:929
 msgid "entries.modals.new-location.headline"
 msgstr "Новое место"
 
-#: src/components/partials/EntriesTabsView/index.jsx:992
+#: src/components/partials/EntriesTabsView/index.jsx:946
 msgid "entries.modals.select-location.button"
 msgstr "Выберите"
 
-#: src/components/partials/EntriesTabsView/index.jsx:999
+#: src/components/partials/EntriesTabsView/index.jsx:953
 msgid "entries.modals.select-location.headline"
 msgstr "Выбрать местоположение"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:207
+#: src/components/partials/EntriesTabsView/Modals.jsx:229
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Имя"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:219
+#: src/components/partials/EntriesTabsView/Modals.jsx:241
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Телефон"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:292
+#: src/components/partials/EntriesTabsView/Modals.jsx:322
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Название"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:303
+#: src/components/partials/EntriesTabsView/Modals.jsx:333
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Описание"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:315
+#: src/components/partials/EntriesTabsView/Modals.jsx:345
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "Телефон"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:451
+#: src/components/partials/EntriesTabsView/Modals.jsx:495
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Описание"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:478
-#: src/components/partials/EntriesTabsView/Modals.jsx:490
+#: src/components/partials/EntriesTabsView/Modals.jsx:522
+#: src/components/partials/EntriesTabsView/Modals.jsx:534
 msgid "Cancel"
 msgstr "Отменить"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:479
-#: src/components/partials/EntriesTabsView/Modals.jsx:491
+#: src/components/partials/EntriesTabsView/Modals.jsx:523
+#: src/components/partials/EntriesTabsView/Modals.jsx:535
 msgid "Confirm"
 msgstr "Подтвердить"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:587
-#: src/components/partials/EntriesTabsView/Modals.jsx:659
+#: src/components/partials/EntriesTabsView/Modals.jsx:647
+#: src/components/partials/EntriesTabsView/Modals.jsx:734
 msgid "entries.modals.more.edit"
 msgstr "редактирование"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:593
-#: src/components/partials/EntriesTabsView/Modals.jsx:667
+#: src/components/partials/EntriesTabsView/Modals.jsx:653
+#: src/components/partials/EntriesTabsView/Modals.jsx:742
 msgid "entries.modals.more.delete"
 msgstr "удалить"
 
-#: src/components/screens/About.jsx:19 src/components/screens/Welcome/ui.jsx:83
+#: src/components/screens/About.jsx:22 src/components/screens/Welcome/ui.jsx:99
 msgid "welcome-screen.slides.intro.headline"
 msgstr "Совместная борьба с корона-вирусом"
 
-#: src/components/screens/About.jsx:20 src/components/screens/Welcome/ui.jsx:84
+#: src/components/screens/About.jsx:23
+#: src/components/screens/Welcome/ui.jsx:100
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
 "Зарегистрируйте людей и места, реконструируйте пути заражения и помогите "
 "остановить распространение вируса."
 
-#: src/components/screens/About.jsx:21 src/components/screens/Welcome/ui.jsx:85
+#: src/components/screens/About.jsx:24
+#: src/components/screens/Welcome/ui.jsx:101
 msgid "welcome-screen.slides.intro.button"
 msgstr "Отлично, я тоже хочу помочь"
 
-#: src/components/screens/About.jsx:26 src/components/screens/Welcome/ui.jsx:90
+#: src/components/screens/About.jsx:32
+#: src/components/screens/Welcome/ui.jsx:109
 msgid "welcome-screen.slides.how-to.headline"
 msgstr "Дневник нашего коллективного здоровья"
 
-#: src/components/screens/About.jsx:27 src/components/screens/Welcome/ui.jsx:91
+#: src/components/screens/About.jsx:33
+#: src/components/screens/Welcome/ui.jsx:110
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
 "Запишите, с кем вы познакомились, какие общественные места вы посетили, и "
 "внесите свой вклад в здоровье каждого."
 
-#: src/components/screens/About.jsx:28 src/components/screens/Welcome/ui.jsx:92
+#: src/components/screens/About.jsx:34
+#: src/components/screens/Welcome/ui.jsx:111
 msgid "welcome-screen.slides.how-to.button"
 msgstr "Хорошо"
 
-#: src/components/screens/About.jsx:33
-#: src/components/screens/Welcome/ui.jsx:106
+#: src/components/screens/About.jsx:42
+#: src/components/screens/Welcome/ui.jsx:131
 msgid "welcome-screen.slides.local-data.headline"
 msgstr "Твои данные - только твои."
 
-#: src/components/screens/About.jsx:34
-#: src/components/screens/Welcome/ui.jsx:107
+#: src/components/screens/About.jsx:43
+#: src/components/screens/Welcome/ui.jsx:132
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 "Все данные, созданные и используемые компанией Coronika, хранятся локально и "
 "не будут отслеживаться или передаваться дальше."
 
-#: src/components/screens/About.jsx:35
-#: src/components/screens/Welcome/ui.jsx:108
+#: src/components/screens/About.jsx:44
+#: src/components/screens/Welcome/ui.jsx:133
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Начать сейчас"
 
-#: src/components/screens/About.jsx:57 src/components/screens/Menu.jsx:123
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:181
 msgid "about-screen.header.headline"
 msgstr "О Коронике"
 
-#: src/components/screens/AddEntry/ui.jsx:10
+#: src/components/screens/AddEntry/ui.jsx:22
 msgid "add-entry-screen.header.headline"
 msgstr "Добавить запись"
 
-#: src/components/screens/Dashboard/ui.jsx:173
-#: src/components/screens/Menu.jsx:138
+#: src/components/screens/Dashboard/ui.jsx:177
+msgid "dashboard-screen.list.load-more"
+msgstr "Загрузи больше"
+
+#: src/components/screens/Dashboard/ui.jsx:213
+#: src/components/screens/Menu.jsx:200
 msgid "menu-screen.header.headline"
 msgstr "Меню"
 
-#: src/components/screens/Dashboard/ui.jsx:183
+#: src/components/screens/Dashboard/ui.jsx:225
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Нажмите на сегодняшнюю дату, чтобы ввести ваши контакты или местоположение."
 
-#: src/components/screens/Dashboard/ui.jsx:185
+#: src/components/screens/Dashboard/ui.jsx:228
 msgid "Close"
 msgstr "Закрыть"
 
-#: src/components/screens/Dashboard/ui.jsx:206
-msgid "dashboard-screen.list.load-more"
-msgstr "Загрузи больше"
-
-#: src/components/screens/Day/ui.jsx:73
+#: src/components/screens/Day/ui.jsx:72
 msgid "day-screen.header.headline"
 msgstr "Ежедневный обзор"
 
-#: src/components/screens/Day/ui.jsx:86
+#: src/components/screens/Day/ui.jsx:85
 msgid "day-screen.locations.empty"
 msgstr "Вы не добавили ни одного места за этот день."
 
-#: src/components/screens/Day/ui.jsx:87
+#: src/components/screens/Day/ui.jsx:86
 msgid "day-screen.persons.empty"
 msgstr "Вы не добавили ни одного человека за этот день."
 
-#: src/components/screens/Day/ui.jsx:99
+#: src/components/screens/Day/ui.jsx:98
 msgid "day-screen.entries.add"
 msgstr "Добавить запись"
 
@@ -265,29 +262,29 @@ msgstr ""
 "Разрешите приложению доступ к контактам в настройках конфиденциальности "
 "вашего устройства."
 
-#: src/components/screens/Directory/ui.jsx:136
+#: src/components/screens/Directory/ui.jsx:130
 msgid "directory-screen.header.button.import"
 msgstr "Импорт"
 
-#: src/components/screens/Directory/ui.jsx:140
+#: src/components/screens/Directory/ui.jsx:134
 msgid "directory-screen.header.headline"
 msgstr "Каталог управления"
 
-#: src/components/screens/Directory/ui.jsx:164
+#: src/components/screens/Directory/ui.jsx:161
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "импортируемые лица"
 
-#: src/components/screens/Directory/ui.jsx:170
+#: src/components/screens/Directory/ui.jsx:167
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Импортируйте людей из телефонной книги, чтобы начать уже сейчас. Все ваши "
 "контакты хранятся локально. Никакие данные не отслеживаются и не передаются."
 
-#: src/components/screens/Directory/ui.jsx:176
+#: src/components/screens/Directory/ui.jsx:173
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Импорт..."
 
-#: src/components/screens/Directory/ui.jsx:177
+#: src/components/screens/Directory/ui.jsx:174
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Импорт сейчас"
 
@@ -299,9 +296,9 @@ msgstr "страница"
 #: src/components/screens/Export/createPdfFile.js:172
 #: src/components/screens/Export/createPdfFile.js:598
 #: src/components/screens/Export/createPdfFile.js:65
-#: src/components/screens/Export/logic.js:44
-#: src/components/screens/Export/logic.js:94
-#: src/components/screens/Export/ui.jsx:149
+#: src/components/screens/Export/logic.js:45
+#: src/components/screens/Export/logic.js:95
+#: src/components/screens/Export/ui.jsx:153
 msgid "export-screen.header.headline"
 msgstr "Экспорт"
 
@@ -313,109 +310,109 @@ msgstr "количество"
 msgid "export-screen.footer.hint-entries-possibly-irrelevant"
 msgstr "может не иметь значения, так как эта запись старше 14 дней."
 
-#: src/components/screens/Export/logic.js:57
+#: src/components/screens/Export/logic.js:58
 msgid "export-screen.alerts.save-file.success.title"
 msgstr "Успешно спасённый"
 
-#: src/components/screens/Export/logic.js:58
+#: src/components/screens/Export/logic.js:59
 msgid "export-screen.alerts.save-file.success.message"
 msgstr "Файл был успешно сохранен в каталоге загрузки вашего устройства."
 
-#: src/components/screens/Export/logic.js:63
+#: src/components/screens/Export/logic.js:64
 msgid "export-screen.alerts.save-file.error.title"
 msgstr "ошибка"
 
-#: src/components/screens/Export/logic.js:64
+#: src/components/screens/Export/logic.js:65
 msgid "export-screen.alerts.save-file.error.message"
 msgstr "Произошла ошибка при сохранении файла в каталоге загрузки устройства."
 
-#: src/components/screens/Export/logic.js:69
+#: src/components/screens/Export/logic.js:70
 msgid "export-screen.alerts.save-file.missing-permission.title"
 msgstr "Отсутствует разрешение"
 
-#: src/components/screens/Export/logic.js:70
+#: src/components/screens/Export/logic.js:71
 msgid "export-screen.alerts.save-file.missing-permission.message"
 msgstr ""
 "Разрешите приложению доступ к памяти в настройках конфиденциальности вашего "
 "устройства."
 
-#: src/components/screens/Export/ui.jsx:153
+#: src/components/screens/Export/ui.jsx:157
 msgid "export-screen.content.section-1.headline"
 msgstr "Ваш обзор"
 
-#: src/components/screens/Export/ui.jsx:154
+#: src/components/screens/Export/ui.jsx:158
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "Коллективно мы можем реконструировать пути заражения, информируя органы "
 "здравоохранения и окружающих вас людей."
 
-#: src/components/screens/Export/ui.jsx:155
+#: src/components/screens/Export/ui.jsx:159
 msgid "export-screen.content.section-2.headline"
 msgstr "С большой властью приходит большая ответственность"
 
-#: src/components/screens/Export/ui.jsx:156
+#: src/components/screens/Export/ui.jsx:160
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "Имейте в виду, что данные очень конфиденциальны. Мы настоятельно рекомендуем "
 "не делиться ими онлайн или со случайными людьми."
 
-#: src/components/screens/Export/ui.jsx:160
+#: src/components/screens/Export/ui.jsx:164
 msgid "export-screen.export.button.exporting"
 msgstr "Экспорт..."
 
-#: src/components/screens/Export/ui.jsx:160
+#: src/components/screens/Export/ui.jsx:164
 msgid "export-screen.export.button.default"
 msgstr "Экспорт сейчас"
 
-#: src/components/screens/Export/ui.jsx:174
+#: src/components/screens/Export/ui.jsx:181
 msgid "export-screen.modals.export-completed.headline"
 msgstr "Экспорт завершен"
 
-#: src/components/screens/Export/ui.jsx:180
+#: src/components/screens/Export/ui.jsx:187
 msgid "export-screen.modals.export-completed.text"
 msgstr ""
 "Файл PDF с Вашим обзором был создан успешно. Теперь вы можете сохранить или "
 "поделиться файлом."
 
-#: src/components/screens/Export/ui.jsx:185
+#: src/components/screens/Export/ui.jsx:192
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "Сохранить"
 
-#: src/components/screens/Legal.jsx:188 src/components/screens/Menu.jsx:131
+#: src/components/screens/Legal.jsx:241 src/components/screens/Menu.jsx:189
 msgid "legal-screen.header.headline"
 msgstr "Юридический"
 
-#: src/components/screens/Legal.jsx:195
+#: src/components/screens/Legal.jsx:248
 msgid "legal-screen.tabs.privacy.label"
 msgstr "Конфиденциальность"
 
-#: src/components/screens/Legal.jsx:200
+#: src/components/screens/Legal.jsx:253
 msgid "legal-screen.tabs.imprint.label"
 msgstr "Вывод"
 
-#: src/components/screens/Legal.jsx:205
+#: src/components/screens/Legal.jsx:258
 msgid "legal-screen.tabs.licenses.label"
 msgstr "Лицензии"
 
-#: src/components/screens/Legal.jsx:215 src/components/screens/Legal.jsx:231
-#: src/components/screens/Legal.jsx:260
+#: src/components/screens/Legal.jsx:268 src/components/screens/Legal.jsx:284
+#: src/components/screens/Legal.jsx:313
 msgid "legal-screen.privacy.section-1.headline"
 msgstr "Обработка данных приложения"
 
-#: src/components/screens/Legal.jsx:216 src/components/screens/Legal.jsx:233
-#: src/components/screens/Legal.jsx:262
+#: src/components/screens/Legal.jsx:269 src/components/screens/Legal.jsx:286
+#: src/components/screens/Legal.jsx:315
 msgid "legal-screen.privacy.section-1.text"
 msgstr ""
 "App Coronika обрабатывает персональные данные и данные, связанные с "
 "местоположением, исключительно локально на смартфоне пользователя."
 
-#: src/components/screens/Legal.jsx:217 src/components/screens/Legal.jsx:235
-#: src/components/screens/Legal.jsx:264
+#: src/components/screens/Legal.jsx:270 src/components/screens/Legal.jsx:288
+#: src/components/screens/Legal.jsx:317
 msgid "legal-screen.privacy.section-2.headline"
 msgstr "Личные данные"
 
-#: src/components/screens/Legal.jsx:218 src/components/screens/Legal.jsx:237
-#: src/components/screens/Legal.jsx:266
+#: src/components/screens/Legal.jsx:271 src/components/screens/Legal.jsx:290
+#: src/components/screens/Legal.jsx:319
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
 "Пользователь может создавать людей внутри приложения. Имя и номер телефона "
@@ -425,13 +422,13 @@ msgstr ""
 "пользователя. Данные никогда не передаются провайдеру приложения или третьим "
 "лицам."
 
-#: src/components/screens/Legal.jsx:219 src/components/screens/Legal.jsx:239
-#: src/components/screens/Legal.jsx:268
+#: src/components/screens/Legal.jsx:272 src/components/screens/Legal.jsx:292
+#: src/components/screens/Legal.jsx:321
 msgid "legal-screen.privacy.section-3.headline"
 msgstr "Данные о местоположении"
 
-#: src/components/screens/Legal.jsx:220 src/components/screens/Legal.jsx:241
-#: src/components/screens/Legal.jsx:270
+#: src/components/screens/Legal.jsx:273 src/components/screens/Legal.jsx:294
+#: src/components/screens/Legal.jsx:323
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
 "Пользователь может создавать локации внутри приложения. Название и описание "
@@ -441,13 +438,13 @@ msgstr ""
 "локальными на смартфоне пользователя и не передаются провайдеру приложения "
 "или третьим лицам."
 
-#: src/components/screens/Legal.jsx:221 src/components/screens/Legal.jsx:243
-#: src/components/screens/Legal.jsx:272
+#: src/components/screens/Legal.jsx:274 src/components/screens/Legal.jsx:296
+#: src/components/screens/Legal.jsx:325
 msgid "legal-screen.privacy.section-4.headline"
 msgstr "Дневник"
 
-#: src/components/screens/Legal.jsx:222 src/components/screens/Legal.jsx:245
-#: src/components/screens/Legal.jsx:274
+#: src/components/screens/Legal.jsx:275 src/components/screens/Legal.jsx:298
+#: src/components/screens/Legal.jsx:327
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
 "В дневнике пользователь ежедневно назначает лиц и места на отдельные дни. В "
@@ -455,13 +452,13 @@ msgstr ""
 "и все записи сохраняются также локально на смартфоне пользователя и не "
 "передаются провайдеру приложений или третьим лицам."
 
-#: src/components/screens/Legal.jsx:223 src/components/screens/Legal.jsx:247
-#: src/components/screens/Legal.jsx:276
+#: src/components/screens/Legal.jsx:276 src/components/screens/Legal.jsx:300
+#: src/components/screens/Legal.jsx:329
 msgid "legal-screen.privacy.section-5.headline"
 msgstr "Экспорт"
 
-#: src/components/screens/Legal.jsx:224 src/components/screens/Legal.jsx:249
-#: src/components/screens/Legal.jsx:278
+#: src/components/screens/Legal.jsx:277 src/components/screens/Legal.jsx:302
+#: src/components/screens/Legal.jsx:331
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
 "Внутри приложения пользователь имеет функцию экспорта для экспорта раздела "
@@ -474,13 +471,13 @@ msgstr ""
 "содержащимися в нем данными, а также за то, чтобы не передавать их по "
 "неосторожности."
 
-#: src/components/screens/Legal.jsx:225 src/components/screens/Legal.jsx:251
-#: src/components/screens/Legal.jsx:280
+#: src/components/screens/Legal.jsx:278 src/components/screens/Legal.jsx:304
+#: src/components/screens/Legal.jsx:333
 msgid "legal-screen.privacy.section-6.headline"
 msgstr "Передача данных и отслеживание"
 
-#: src/components/screens/Legal.jsx:226 src/components/screens/Legal.jsx:253
-#: src/components/screens/Legal.jsx:282
+#: src/components/screens/Legal.jsx:279 src/components/screens/Legal.jsx:306
+#: src/components/screens/Legal.jsx:335
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
 "Приложение не обеспечивает автоматического отслеживания или передачи данных "
@@ -489,13 +486,13 @@ msgstr ""
 "переданы данные. В противном случае все данные остаются локально на "
 "смартфоне пользователя."
 
-#: src/components/screens/Legal.jsx:292 src/components/screens/Legal.jsx:304
-#: src/components/screens/Legal.jsx:325
+#: src/components/screens/Legal.jsx:345 src/components/screens/Legal.jsx:357
+#: src/components/screens/Legal.jsx:378
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "Это приложение \"Короника\" управляется"
 
-#: src/components/screens/Legal.jsx:293 src/components/screens/Legal.jsx:306
-#: src/components/screens/Legal.jsx:327
+#: src/components/screens/Legal.jsx:346 src/components/screens/Legal.jsx:359
+#: src/components/screens/Legal.jsx:380
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -512,13 +509,13 @@ msgstr ""
 "Registration number: HRB 82252\n"
 "VAT ID: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:294 src/components/screens/Legal.jsx:308
-#: src/components/screens/Legal.jsx:329
+#: src/components/screens/Legal.jsx:347 src/components/screens/Legal.jsx:361
+#: src/components/screens/Legal.jsx:382
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "Ответственность за содержание"
 
-#: src/components/screens/Legal.jsx:295 src/components/screens/Legal.jsx:310
-#: src/components/screens/Legal.jsx:331
+#: src/components/screens/Legal.jsx:348 src/components/screens/Legal.jsx:363
+#: src/components/screens/Legal.jsx:384
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "Как поставщик услуг мы несем ответственность за наше собственное содержание "
@@ -532,13 +529,13 @@ msgstr ""
 "известно о конкретном нарушении. Если нам станет известно о таких "
 "нарушениях, мы немедленно удалим такую информацию."
 
-#: src/components/screens/Legal.jsx:296 src/components/screens/Legal.jsx:312
-#: src/components/screens/Legal.jsx:333
+#: src/components/screens/Legal.jsx:349 src/components/screens/Legal.jsx:365
+#: src/components/screens/Legal.jsx:386
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Ответственность за ссылки"
 
-#: src/components/screens/Legal.jsx:297 src/components/screens/Legal.jsx:314
-#: src/components/screens/Legal.jsx:335
+#: src/components/screens/Legal.jsx:350 src/components/screens/Legal.jsx:367
+#: src/components/screens/Legal.jsx:388
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Наше предложение содержит ссылки на внешние сайты третьих лиц, на содержание "
@@ -552,13 +549,13 @@ msgstr ""
 "не имеет смысла без конкретных доказательств нарушения закона. Если нам "
 "станет известно о каких-либо нарушениях, мы немедленно удалим такие ссылки."
 
-#: src/components/screens/Legal.jsx:298 src/components/screens/Legal.jsx:316
-#: src/components/screens/Legal.jsx:337
+#: src/components/screens/Legal.jsx:351 src/components/screens/Legal.jsx:369
+#: src/components/screens/Legal.jsx:390
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "Авторское право"
 
-#: src/components/screens/Legal.jsx:299 src/components/screens/Legal.jsx:318
-#: src/components/screens/Legal.jsx:339
+#: src/components/screens/Legal.jsx:352 src/components/screens/Legal.jsx:371
+#: src/components/screens/Legal.jsx:392
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "Содержание и работы на этих страницах, созданные операторами, подпадают под "
@@ -573,172 +570,188 @@ msgstr ""
 "станет известно о каких-либо нарушениях, мы немедленно удалим такое "
 "содержание."
 
-#: src/components/screens/Menu.jsx:127
-#: src/components/screens/Settings/ui.jsx:95
+#: src/components/screens/Menu.jsx:185
+#: src/components/screens/Settings/ui.jsx:99
 msgid "settings-screen.header.headline"
 msgstr "Настройки"
 
-#: src/components/screens/Menu.jsx:143
+#: src/components/screens/Menu.jsx:193
+msgid "menu-screen.items.share"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:205
 msgid "menu-screen.intro.text"
 msgstr ""
 "Важно не сеять панику, а создавать ясность и распространять правильную "
 "информацию."
 
-#: src/components/screens/Menu.jsx:181
+#: src/components/screens/Menu.jsx:243
 msgid "menu-screen.button.send-feedback"
 msgstr "Отправить отзыв"
 
-#: src/components/screens/Overview/ui.jsx:128
+#: src/components/screens/Menu.jsx:52
+msgid "app.share.message"
+msgstr ""
+"Не поддавйся панике из-за коронавируса. Будь в курсе и помогай "
+"окружающим... \n"
+"✅... записывая контакты и места, с которыми вы встречались или "
+"останавливались, \n"
+"✅... следуй гигиеническим советам \n"
+"✅... используй авторитетные источники информации \n"
+"Оставайся здоровыми и не забывай регулярно мыть руки! ✋😉 https://coronika."
+"app/"
+
+#: src/components/screens/Overview/ui.jsx:117
 msgid "overview-screen.export.button"
 msgstr "Обзор экспорта"
 
-#: src/components/screens/Overview/ui.jsx:94
+#: src/components/screens/Overview/ui.jsx:76
 msgid "overview-screen.header.headline"
 msgstr "Обзор"
 
-#: src/components/screens/Settings/logic.js:150
+#: src/components/screens/Settings/logic.js:162
 msgid "notifications.diary.headline"
 msgstr "📒 Зарегистрируйте ваши контакты"
 
-#: src/components/screens/Settings/logic.js:151
+#: src/components/screens/Settings/logic.js:163
 msgid "notifications.diary.text"
 msgstr ""
 "Зарегистрируйте ваши близкие контакты и помогите замедлить распространение "
 "коронавируса."
 
-#: src/components/screens/Settings/logic.js:166
+#: src/components/screens/Settings/logic.js:178
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽 Держите экран в чистоте."
 
-#: src/components/screens/Settings/logic.js:167
+#: src/components/screens/Settings/logic.js:179
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr ""
 "Очистите экран от многочисленных микробов, бактерий и других патогенных "
 "микроорганизмов."
 
-#: src/components/screens/Settings/logic.js:170
+#: src/components/screens/Settings/logic.js:182
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 Дезинфекция телефона."
 
-#: src/components/screens/Settings/logic.js:171
+#: src/components/screens/Settings/logic.js:183
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr ""
 "Держать телефон дезинфицированным - еще один умный способ держать микробов "
 "подальше от кончиков пальцев."
 
-#: src/components/screens/Settings/logic.js:174
+#: src/components/screens/Settings/logic.js:186
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Продезинфицируйте  экран смартфона."
 
-#: src/components/screens/Settings/logic.js:175
+#: src/components/screens/Settings/logic.js:187
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr ""
 "Очистите поверхность телефона от микробов, протерев его дезинфицирующей "
 "салфеткой."
 
-#: src/components/screens/Settings/logic.js:191
-#: src/components/screens/Settings/logic.js:224
-#: src/components/screens/Settings/logic.js:239
+#: src/components/screens/Settings/logic.js:203
+#: src/components/screens/Settings/logic.js:236
+#: src/components/screens/Settings/logic.js:251
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "Если вы были на улице, тщательно вымойте руки."
 
-#: src/components/screens/Settings/logic.js:192
-#: src/components/screens/Settings/logic.js:225
-#: src/components/screens/Settings/logic.js:240
+#: src/components/screens/Settings/logic.js:204
+#: src/components/screens/Settings/logic.js:237
+#: src/components/screens/Settings/logic.js:252
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 Помойте руки"
 
-#: src/components/screens/Settings/logic.js:196
-#: src/components/screens/Settings/logic.js:229
-#: src/components/screens/Settings/logic.js:244
+#: src/components/screens/Settings/logic.js:208
+#: src/components/screens/Settings/logic.js:241
+#: src/components/screens/Settings/logic.js:256
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Мытье рук - один из самых простых способов защитить себя и других от "
 "болезней."
 
-#: src/components/screens/Settings/logic.js:197
-#: src/components/screens/Settings/logic.js:230
-#: src/components/screens/Settings/logic.js:245
+#: src/components/screens/Settings/logic.js:209
+#: src/components/screens/Settings/logic.js:242
+#: src/components/screens/Settings/logic.js:257
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Вы мыли руки?"
 
-#: src/components/screens/Settings/logic.js:201
-#: src/components/screens/Settings/logic.js:234
-#: src/components/screens/Settings/logic.js:249
+#: src/components/screens/Settings/logic.js:213
+#: src/components/screens/Settings/logic.js:246
+#: src/components/screens/Settings/logic.js:261
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Практикуйте тщательное мытье рук и не забывайте мыть кончики пальцев и "
 "пространство между пальцами."
 
-#: src/components/screens/Settings/logic.js:202
-#: src/components/screens/Settings/logic.js:235
-#: src/components/screens/Settings/logic.js:250
+#: src/components/screens/Settings/logic.js:214
+#: src/components/screens/Settings/logic.js:247
+#: src/components/screens/Settings/logic.js:262
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 Не забывайте о советах!"
 
-#: src/components/screens/Settings/ui.jsx:100
+#: src/components/screens/Settings/ui.jsx:104
 msgid "settings-screen.notifications.headline"
 msgstr "Уведомления"
 
-#: src/components/screens/Settings/ui.jsx:104
+#: src/components/screens/Settings/ui.jsx:108
 msgid "settings-screen.notifications.washing-hands.headline"
 msgstr "Напоминание помыть руки"
 
-#: src/components/screens/Settings/ui.jsx:108
+#: src/components/screens/Settings/ui.jsx:112
 msgid "settings-screen.notifications.washing-hands.option-1.label"
 msgstr "напоминать 3 раза в день"
 
-#: src/components/screens/Settings/ui.jsx:117
+#: src/components/screens/Settings/ui.jsx:121
 msgid "settings-screen.notifications.washing-hands.option-2.label"
 msgstr "напоминать 6 раз в день"
 
-#: src/components/screens/Settings/ui.jsx:128
+#: src/components/screens/Settings/ui.jsx:132
 msgid "settings-screen.notifications.disinfect-smartphone.headline"
 msgstr "Напоминание о необходимости дезинфекции телефона"
 
-#: src/components/screens/Settings/ui.jsx:132
+#: src/components/screens/Settings/ui.jsx:136
 msgid "settings-screen.notifications.disinfect-smartphone.option.label"
 msgstr "напоминать ежедневно"
 
-#: src/components/screens/Settings/ui.jsx:142
+#: src/components/screens/Settings/ui.jsx:146
 msgid "settings-screen.notifications.diary.headline"
 msgstr "Напоминание об использовании дневника"
 
-#: src/components/screens/Settings/ui.jsx:145
+#: src/components/screens/Settings/ui.jsx:149
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "напоминать ежедневно"
 
-#: src/components/screens/TipAmIInfected.jsx:15
+#: src/components/screens/TipAmIInfected.jsx:14
 msgid "tips.am-i-infected.list.item-1"
 msgstr "Оставайся дома"
 
-#: src/components/screens/TipAmIInfected.jsx:16
+#: src/components/screens/TipAmIInfected.jsx:15
 msgid "tips.am-i-infected.list.item-2"
 msgstr "Вызови врача"
 
-#: src/components/screens/TipAmIInfected.jsx:17
+#: src/components/screens/TipAmIInfected.jsx:16
 msgid "tips.am-i-infected.list.item-3"
 msgstr "Расскажи о своем дневнике Короники"
 
-#: src/components/screens/TipAmIInfected.jsx:22
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:26
-#: src/components/screens/TipCoronaWarnApp.jsx:27
-#: src/components/screens/TipCoughingSneezing.jsx:32
-#: src/components/screens/TipDistanceAndMouthguard.jsx:18
-#: src/components/screens/TipMouthguard.jsx:27
-#: src/components/screens/TipNotFeelingWell.jsx:23
-#: src/components/screens/TipReliableSources.jsx:18
-#: src/components/screens/TipWashingHands.jsx:24
-#: src/components/screens/Tips.jsx:115
+#: src/components/screens/TipAmIInfected.jsx:21
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:25
+#: src/components/screens/TipCoronaWarnApp.jsx:26
+#: src/components/screens/TipCoughingSneezing.jsx:31
+#: src/components/screens/TipDistanceAndMouthguard.jsx:17
+#: src/components/screens/TipMouthguard.jsx:26
+#: src/components/screens/TipNotFeelingWell.jsx:22
+#: src/components/screens/TipReliableSources.jsx:17
+#: src/components/screens/TipWashingHands.jsx:23
+#: src/components/screens/Tips.jsx:119
 msgid "tips-screen.header.headline"
 msgstr "советы по гигиене"
 
-#: src/components/screens/TipAmIInfected.jsx:25
-#: src/components/screens/Tips.jsx:103
+#: src/components/screens/TipAmIInfected.jsx:24
+#: src/components/screens/Tips.jsx:107
 msgid "tips.am-i-infected.headline"
 msgstr "Боюсь, я заразился коронавирусом, что делать?"
 
-#: src/components/screens/TipAmIInfected.jsx:29
+#: src/components/screens/TipAmIInfected.jsx:28
 msgid "tips.am-i-infected.text"
 msgstr ""
 "Если ты беспокоишься о том, что мог заразиться, оставайся дома, чтобы не "
@@ -748,34 +761,34 @@ msgstr ""
 "чтобы сдержать распространение болезни. В этом случае ты можешь просто "
 "экспортировать свой дневник."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:17
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:16
 msgid "tips.avoid-crowds-of-people.list.item-1"
 msgstr "избегай больших общественных собраний, если они не важны."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:17
 msgid "tips.avoid-crowds-of-people.list.item-2"
 msgstr ""
 "для преодаления небольших расстояний, пройдись пешком, вместо поездки на "
 "общественном транспорте"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:18
 msgid "tips.avoid-crowds-of-people.list.item-3"
 msgstr "мой руки регулярно и тщательно"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:19
 msgid "tips.avoid-crowds-of-people.list.item-4"
 msgstr "держаться на расстоянии примерно в 2 метра от людей."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:21
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:20
 msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "прикрывай кашель и чихание локтем или салфеткой."
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:29
-#: src/components/screens/Tips.jsx:86
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:28
+#: src/components/screens/Tips.jsx:89
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Избегай толп людей"
 
-#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:33
+#: src/components/screens/TipAvoidCrowdsOfPeople.jsx:32
 msgid "tips.avoid-crowds-of-people.text"
 msgstr ""
 "По возможности избегайте поездок, пользования общественным транспортом и "
@@ -783,25 +796,17 @@ msgstr ""
 "минимуму и избегать посещения массовых мероприятий. Граждане старше 60 лет "
 "должны получить вакцину против пневмококковой инфекции."
 
-#: src/components/screens/TipCoronaWarnApp.jsx:10
-#, fuzzy
-msgid "tips.corona-warn-app.link.app-store.text"
-msgstr ""
-"Вымыть руки легко, и это один из самых эффективных способов предотвратить "
-"распространение микробов. Чистые руки могут остановить распространение "
-"микробов. Каждый раз следуйте этим пяти шагам:"
-
-#: src/components/screens/TipCoronaWarnApp.jsx:14
+#: src/components/screens/TipCoronaWarnApp.jsx:13
 msgid "tips.corona-warn-app.link.google-play.text"
 msgstr "Скачать в Google Play"
 
-#: src/components/screens/TipCoronaWarnApp.jsx:30
-#: src/components/screens/Tips.jsx:74
+#: src/components/screens/TipCoronaWarnApp.jsx:29
+#: src/components/screens/Tips.jsx:77
 #, fuzzy
 msgid "tips.corona-warn-app.headline"
 msgstr "Мытьё рук"
 
-#: src/components/screens/TipCoronaWarnApp.jsx:32
+#: src/components/screens/TipCoronaWarnApp.jsx:31
 #, fuzzy
 msgid "tips.corona-warn-app.text-1"
 msgstr ""
@@ -809,7 +814,7 @@ msgstr ""
 "распространение микробов. Чистые руки могут остановить распространение "
 "микробов. Каждый раз следуйте этим пяти шагам:"
 
-#: src/components/screens/TipCoronaWarnApp.jsx:32
+#: src/components/screens/TipCoronaWarnApp.jsx:31
 #, fuzzy
 msgid "tips.corona-warn-app.text-2"
 msgstr ""
@@ -817,43 +822,51 @@ msgstr ""
 "распространение микробов. Чистые руки могут остановить распространение "
 "микробов. Каждый раз следуйте этим пяти шагам:"
 
-#: src/components/screens/TipCoughingSneezing.jsx:23
+#: src/components/screens/TipCoronaWarnApp.jsx:9
+#, fuzzy
+msgid "tips.corona-warn-app.link.app-store.text"
+msgstr ""
+"Вымыть руки легко, и это один из самых эффективных способов предотвратить "
+"распространение микробов. Чистые руки могут остановить распространение "
+"микробов. Каждый раз следуйте этим пяти шагам:"
+
+#: src/components/screens/TipCoughingSneezing.jsx:22
 msgid "tips.coughing-sneezing.list.item-1"
 msgstr "держись на расстоянии примерно в 2 метра между тобой и другими людьми."
 
-#: src/components/screens/TipCoughingSneezing.jsx:24
+#: src/components/screens/TipCoughingSneezing.jsx:23
 msgid "tips.coughing-sneezing.list.item-2"
 msgstr "отворачиваться от людей"
 
-#: src/components/screens/TipCoughingSneezing.jsx:25
+#: src/components/screens/TipCoughingSneezing.jsx:24
 msgid "tips.coughing-sneezing.list.item-3"
 msgstr "прикрывая кашель и чихание локтем или салфеткой."
 
-#: src/components/screens/TipCoughingSneezing.jsx:26
+#: src/components/screens/TipCoughingSneezing.jsx:25
 msgid "tips.coughing-sneezing.list.item-4"
 msgstr "надлежащее удаление тканей"
 
-#: src/components/screens/TipCoughingSneezing.jsx:27
+#: src/components/screens/TipCoughingSneezing.jsx:26
 msgid "tips.coughing-sneezing.list.item-5"
 msgstr "вымыть руки после этого"
 
-#: src/components/screens/TipCoughingSneezing.jsx:35
-#: src/components/screens/Tips.jsx:95
+#: src/components/screens/TipCoughingSneezing.jsx:34
+#: src/components/screens/Tips.jsx:98
 msgid "tips.coughing-sneezing.headline"
 msgstr "Сильный кашель и чихание"
 
-#: src/components/screens/TipCoughingSneezing.jsx:39
+#: src/components/screens/TipCoughingSneezing.jsx:38
 msgid "tips.coughing-sneezing.text"
 msgstr ""
 "Чтобы предотвратить распространение вирусов, пожалуйста, обратите внимание:"
 
-#: src/components/screens/TipDistanceAndMouthguard.jsx:21
-#: src/components/screens/Tips.jsx:78
+#: src/components/screens/TipDistanceAndMouthguard.jsx:20
+#: src/components/screens/Tips.jsx:81
 #, fuzzy
 msgid "tips.distance-and-mouthguard.headline"
 msgstr "защита рта, да или нет?"
 
-#: src/components/screens/TipDistanceAndMouthguard.jsx:23
+#: src/components/screens/TipDistanceAndMouthguard.jsx:22
 #, fuzzy
 msgid "tips.distance-and-mouthguard.text-1"
 msgstr ""
@@ -862,7 +875,7 @@ msgstr ""
 "борьбы с инфекцией. Просто наденьте маску, если в других случаях ваш "
 "медицинский работник может порекомендовать вам соблюдать правила гигиены."
 
-#: src/components/screens/TipDistanceAndMouthguard.jsx:23
+#: src/components/screens/TipDistanceAndMouthguard.jsx:22
 #, fuzzy
 msgid "tips.distance-and-mouthguard.text-2"
 msgstr ""
@@ -871,32 +884,32 @@ msgstr ""
 "борьбы с инфекцией. Просто наденьте маску, если в других случаях ваш "
 "медицинский работник может порекомендовать вам соблюдать правила гигиены."
 
-#: src/components/screens/TipMouthguard.jsx:19
+#: src/components/screens/TipMouthguard.jsx:18
 msgid "tips.mouthguard.list.item-1"
 msgstr "маска сделана из бумаги"
 
-#: src/components/screens/TipMouthguard.jsx:20
+#: src/components/screens/TipMouthguard.jsx:19
 msgid "tips.mouthguard.list.item-2"
 msgstr "маска не прилегает плотно к лицу или протекает."
 
-#: src/components/screens/TipMouthguard.jsx:21
+#: src/components/screens/TipMouthguard.jsx:20
 msgid "tips.mouthguard.list.item-3"
 msgstr "намокает при дыхании"
 
-#: src/components/screens/TipMouthguard.jsx:22
+#: src/components/screens/TipMouthguard.jsx:21
 msgid "tips.mouthguard.list.item-4"
 msgstr "не сменялась ежедневно"
 
-#: src/components/screens/TipMouthguard.jsx:30
-#: src/components/screens/Tips.jsx:90
+#: src/components/screens/TipMouthguard.jsx:29
+#: src/components/screens/Tips.jsx:93
 msgid "tips.mouthguard.headline"
 msgstr "защита рта, да или нет?"
 
-#: src/components/screens/TipMouthguard.jsx:33
+#: src/components/screens/TipMouthguard.jsx:32
 msgid "tips.mouthguard.list.intro"
 msgstr "Ношение маски вне операции не имеет никакого эффекта, если:"
 
-#: src/components/screens/TipMouthguard.jsx:35
+#: src/components/screens/TipMouthguard.jsx:34
 msgid "tips.mouthguard.text-1"
 msgstr ""
 "Маски необходимы для всех секторов здравоохранения. Для больных людей или "
@@ -904,131 +917,131 @@ msgstr ""
 "борьбы с инфекцией. Просто наденьте маску, если в других случаях ваш "
 "медицинский работник может порекомендовать вам соблюдать правила гигиены."
 
-#: src/components/screens/TipMouthguard.jsx:35
+#: src/components/screens/TipMouthguard.jsx:34
 msgid "tips.mouthguard.text-2"
 msgstr ""
 "Медицинский работник носит маски в качестве барьера, и они помогают "
 "предотвратить распространение крошечных капель при кашле или чихании."
 
-#: src/components/screens/TipNotFeelingWell.jsx:15
+#: src/components/screens/TipNotFeelingWell.jsx:14
 msgid "tips.not-feeling-well.list.item-1"
 msgstr "респираторные симптомы"
 
-#: src/components/screens/TipNotFeelingWell.jsx:16
+#: src/components/screens/TipNotFeelingWell.jsx:15
 msgid "tips.not-feeling-well.list.item-2"
 msgstr "лихорадка"
 
-#: src/components/screens/TipNotFeelingWell.jsx:17
+#: src/components/screens/TipNotFeelingWell.jsx:16
 msgid "tips.not-feeling-well.list.item-3"
 msgstr "кашлять"
 
-#: src/components/screens/TipNotFeelingWell.jsx:18
+#: src/components/screens/TipNotFeelingWell.jsx:17
 msgid "tips.not-feeling-well.list.item-4"
 msgstr "нехватка воздуха"
 
-#: src/components/screens/TipNotFeelingWell.jsx:26
-#: src/components/screens/Tips.jsx:99
+#: src/components/screens/TipNotFeelingWell.jsx:25
+#: src/components/screens/Tips.jsx:102
 msgid "tips.not-feeling-well.headline"
 msgstr "Я плохо себя чувствую, у меня вирус ?"
 
-#: src/components/screens/TipNotFeelingWell.jsx:29
+#: src/components/screens/TipNotFeelingWell.jsx:28
 msgid "tips.not-feeling-well.list.intro"
 msgstr "Типичные симптомы КОВИД-19 по данным ВОЗ:"
 
-#: src/components/screens/TipNotFeelingWell.jsx:31
+#: src/components/screens/TipNotFeelingWell.jsx:30
 msgid "tips.not-feeling-well.text"
 msgstr ""
 "Не каждый пациент с гриппоподобными симптомами также является носителем "
 "вируса SARS-CoV-2. Вы всегда должны сообщать о своих симптомах и звонить "
 "врачу."
 
-#: src/components/screens/TipReliableSources.jsx:21
-#: src/components/screens/Tips.jsx:107
+#: src/components/screens/TipReliableSources.jsx:20
+#: src/components/screens/Tips.jsx:111
 msgid "tips.reliable-sources.headline"
 msgstr "Где я могу найти надежные источники?"
 
-#: src/components/screens/TipReliableSources.jsx:24
+#: src/components/screens/TipReliableSources.jsx:23
 msgid "tips.reliable-sources.text"
 msgstr "Информационные сайты"
 
-#: src/components/screens/Tips.jsx:120
+#: src/components/screens/Tips.jsx:124
 msgid "tips-screen.intro.text"
 msgstr ""
 "Здесь ты найдешь информацию, которая поможет максимально снизить риск "
 "заражения и поступить правильно в случае заражения."
 
-#: src/components/screens/TipWashingHands.jsx:15
+#: src/components/screens/TipWashingHands.jsx:14
 msgid "tips.washing-hands.list.item-1"
 msgstr ""
 "Намочите руки чистой проточной водой (теплой или холодной), выключите кран и "
 "нанесите мыло."
 
-#: src/components/screens/TipWashingHands.jsx:16
+#: src/components/screens/TipWashingHands.jsx:15
 msgid "tips.washing-hands.list.item-2"
 msgstr ""
 "Вытрите руки, натирая их вместе с мылом. Вспеньте тыльную стороку кистей, "
 "между пальцами и под ногтями."
 
-#: src/components/screens/TipWashingHands.jsx:17
+#: src/components/screens/TipWashingHands.jsx:16
 msgid "tips.washing-hands.list.item-3"
 msgstr ""
 "Мойте руки тщательно : тыльные стороны кистей, большие пальцы, между "
 "пальцами и под ногтями в течение примерно 30-60 секунд."
 
-#: src/components/screens/TipWashingHands.jsx:18
+#: src/components/screens/TipWashingHands.jsx:17
 msgid "tips.washing-hands.list.item-4"
 msgstr "Хорошо промойте руки под чистой, проточной водой."
 
-#: src/components/screens/TipWashingHands.jsx:19
+#: src/components/screens/TipWashingHands.jsx:18
 msgid "tips.washing-hands.list.item-5"
 msgstr "Высушите руки чистым полотенцем или высушите их воздухом."
 
-#: src/components/screens/TipWashingHands.jsx:27
-#: src/components/screens/Tips.jsx:82
+#: src/components/screens/TipWashingHands.jsx:26
+#: src/components/screens/Tips.jsx:85
 msgid "tips.washing-hands.headline"
 msgstr "Мытьё рук"
 
-#: src/components/screens/TipWashingHands.jsx:31
+#: src/components/screens/TipWashingHands.jsx:30
 msgid "tips.washing-hands.text"
 msgstr ""
 "Вымыть руки легко, и это один из самых эффективных способов предотвратить "
 "распространение микробов. Чистые руки могут остановить распространение "
 "микробов. Каждый раз следуйте этим пяти шагам:"
 
-#: src/components/screens/Welcome/ui.jsx:100
-msgid "welcome-screen.slides.notifications.button"
-msgstr "Активировать сейчас"
-
-#: src/components/screens/Welcome/ui.jsx:97
+#: src/components/screens/Welcome/ui.jsx:119
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "Ты помыл руки?"
 
-#: src/components/screens/Welcome/ui.jsx:98
+#: src/components/screens/Welcome/ui.jsx:120
 msgid "welcome-screen.slides.notifications.text"
 msgstr ""
 "Активируйте уведомления и регулярно напоминайте о необходимости мытья рук во "
 "избежание заражения."
 
-#: src/components/screens/Welcome/ui.jsx:99
+#: src/components/screens/Welcome/ui.jsx:121
 msgid "welcome-screen.slides.notifications.button-skip"
 msgstr "Пропустить"
 
-#: src/components/widgets/DayOverview.jsx:21
+#: src/components/screens/Welcome/ui.jsx:122
+msgid "welcome-screen.slides.notifications.button"
+msgstr "Активировать сейчас"
+
+#: src/components/widgets/DayOverview.jsx:32
 msgid "today"
 msgstr "сегодня"
 
-#: src/components/widgets/DayOverview.jsx:27
+#: src/components/widgets/DayOverview.jsx:43
 msgid "total"
 msgstr "всего"
 
-#: src/components/widgets/SearchBar.jsx:78
+#: src/components/widgets/SearchBar.jsx:77
 msgid "placeholder.search-input"
 msgstr "Поиск"
 
-#: src/components/widgets/Tip.jsx:156
+#: src/components/widgets/Tip.jsx:190
 msgid "tips.sources.headline"
 msgstr "Источники"
 
-#: src/components/widgets/Tip.jsx:166
+#: src/components/widgets/Tip.jsx:200
 msgid "tips.sources.last-updated"
 msgstr "Последнее обновление:"

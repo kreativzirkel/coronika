@@ -2,7 +2,7 @@ import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import UilArrowRight from '@iconscout/react-native-unicons/icons/uil-arrow-right';
 import UilHeart from '@iconscout/react-native-unicons/icons/uil-heart';
 import React from 'react';
-import { Linking, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Linking, Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { version } from '../../config';
 import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
@@ -11,9 +11,33 @@ import withViewportUnits from '../../utils/withViewportUnits';
 import { HeaderBack } from '../widgets/Header';
 import Layout from '../widgets/Layout';
 
+const onShare = async (message) => {
+  try {
+    const result = await Share.share({
+      message,
+      title: 'coronika',
+    });
+
+    if (result.action === Share.sharedAction) {
+      if (result.activityType) {
+        // shared with activity type of result.activityType
+      } else {
+        // shared
+      }
+    } else if (result.action === Share.dismissedAction) {
+      // dismissed
+    }
+  } catch (error) {
+    // error
+  }
+};
+
 class Menu extends React.Component {
   constructor(props) {
     super(props);
+
+    this.onPressMenuItem = this.onPressMenuItem.bind(this);
+    this.shareApp = this.shareApp.bind(this);
   }
 
   sendFeedback() {
@@ -22,6 +46,18 @@ class Menu extends React.Component {
 
   visitKreativzirkel() {
     Linking.openURL('https://www.kreativzirkel.de/').catch(() => {});
+  }
+
+  shareApp() {
+    onShare(this.props.__('app.share.message'));
+  }
+
+  onPressMenuItem(routeName) {
+    if (routeName === 'Share') {
+      this.shareApp();
+    } else {
+      this.props.navigation.navigate(routeName);
+    }
   }
 
   styles = StyleSheet.create({
@@ -153,6 +189,10 @@ class Menu extends React.Component {
         headline: __('legal-screen.header.headline'),
         routeName: 'Legal',
       },
+      {
+        headline: __('menu-screen.items.share'),
+        routeName: 'Share',
+      },
     ];
 
     return (
@@ -169,7 +209,7 @@ class Menu extends React.Component {
               {menuItems.map(({ headline, routeName }, index) => (
                 <TouchableOpacity
                   key={`menu-item-${index}`}
-                  onPress={() => navigation.navigate(routeName)}
+                  onPress={() => this.onPressMenuItem(routeName)}
                   style={styles.menuItemWrapper}>
                   <View style={styles.menuItemTextWrapper}>
                     <Text style={styles.menuItemText}>{headline}</Text>

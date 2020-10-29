@@ -1,36 +1,19 @@
 import UilBookOpen from '@iconscout/react-native-unicons/icons/uil-book-open';
+import UilFileExport from '@iconscout/react-native-unicons/icons/uil-file-export';
 import UilHeartMedical from '@iconscout/react-native-unicons/icons/uil-heart-medical';
-import UilShareAlt from '@iconscout/react-native-unicons/icons/uil-share-alt';
-import UilUserPlus from '@iconscout/react-native-unicons/icons/uil-user-plus';
-import React from 'react';
-import { Platform, Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
+import UilUserSquare from '@iconscout/react-native-unicons/icons/uil-user-square';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import moment from 'moment';
+import React from 'react';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import ReactReduxContext from 'react-redux/lib/components/Context';
 import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
 import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 import screens from '../screens';
-
-const onShare = async (message) => {
-  try {
-    const result = await Share.share({
-      message,
-      title: 'coronika',
-    });
-
-    if (result.action === Share.sharedAction) {
-      if (result.activityType) {
-        // shared with activity type of result.activityType
-      } else {
-        // shared
-      }
-    } else if (result.action === Share.dismissedAction) {
-      // dismissed
-    }
-  } catch (error) {
-    // error
-  }
-};
+import { setTimestamp as setTimestampDay } from '../screens/Day/actions';
 
 const Tab = createBottomTabNavigator();
 
@@ -41,14 +24,17 @@ class TabNavigationItemClass extends React.Component {
     this.NavigationIconComponent = null;
 
     switch (this.props.routeName) {
+      case 'NavigationAddEntry':
+        this.NavigationIconComponent = UilPlus;
+        break;
       case 'Directory':
-        this.NavigationIconComponent = UilUserPlus;
+        this.NavigationIconComponent = UilUserSquare;
         break;
       case 'Dashboard':
         this.NavigationIconComponent = UilBookOpen;
         break;
-      case 'Share':
-        this.NavigationIconComponent = UilShareAlt;
+      case 'Overview':
+        this.NavigationIconComponent = UilFileExport;
         break;
       case 'Tips':
         this.NavigationIconComponent = UilHeartMedical;
@@ -61,21 +47,23 @@ class TabNavigationItemClass extends React.Component {
       alignItems: 'center',
       display: 'flex',
       flexDirection: 'column',
+      marginTop: this.props.vw(0.5),
+      width: this.props.vw(95 / this.props.numberOfItems),
     },
     navigationItemIconWrapper: {
       alignItems: 'center',
-      borderRadius: this.props.vw(2.3),
-      height: this.props.vw(13),
+      height: this.props.vw(9.5),
       justifyContent: 'center',
-      marginBottom: this.props.vw(1.5),
-      width: this.props.vw(13),
+      marginBottom: this.props.vw(0.5),
+      width: this.props.vw(9.5),
     },
-    navigationItemIconWrapperFocused: {
+    navigationItemIconWrapperCircle: {
       backgroundColor: COLOR_PRIMARY,
+      borderRadius: this.props.vw(5),
     },
     navigationItemText: {
       fontFamily: this.props.fontFamilyRegular,
-      fontSize: this.props.vw(2.8),
+      fontSize: this.props.vw(2.75),
       textAlign: 'center',
       textTransform: 'lowercase',
     },
@@ -87,14 +75,17 @@ class TabNavigationItemClass extends React.Component {
     let label;
 
     switch (routeName) {
+      case 'NavigationAddEntry':
+        label = __('navigation.add-entry.label');
+        break;
       case 'Directory':
         label = __('navigation.directory.label');
         break;
       case 'Dashboard':
         label = __('navigation.dashboard.label');
         break;
-      case 'Share':
-        label = __('navigation.share.label');
+      case 'Overview':
+        label = __('navigation.overview.label');
         break;
       case 'Tips':
         label = __('navigation.tips.label');
@@ -105,23 +96,24 @@ class TabNavigationItemClass extends React.Component {
 
     const NavigationIcon = this.NavigationIconComponent;
 
-    const iconColor = isFocused ? colors.TEXT_ALT : colorScheme === 'dark' ? colors.GRAY_1 : '#000000';
+    const iconColor = isFocused ? colors.TEXT : colorScheme === 'dark' ? colors.GRAY_2 : colors.GRAY_4;
+
+    const isItemNavigationAddEntry = routeName === 'NavigationAddEntry';
 
     return (
       <TouchableOpacity key={key} onPress={onPress} style={this.styles.navigationItem}>
         <View
           style={{
             ...this.styles.navigationItemIconWrapper,
-            backgroundColor: colors.SECONDARY,
-            ...(isFocused && this.styles.navigationItemIconWrapperFocused),
+            ...(isItemNavigationAddEntry && this.styles.navigationItemIconWrapperCircle),
           }}>
-          <NavigationIcon size={vw(8)} color={iconColor} />
+          <NavigationIcon size={vw(9)} color={isItemNavigationAddEntry ? colors.TEXT_ALT : iconColor} />
         </View>
         <Text
-          numberOfLines={1}
+          // numberOfLines={1}
           style={{
             ...this.styles.navigationItemText,
-            color: colorScheme === 'dark' ? colors.GRAY_1 : colors.TEXT,
+            color: colorScheme === 'dark' ? colors.GRAY_2 : colors.GRAY_4,
           }}>
           {label}
         </Text>
@@ -133,22 +125,38 @@ class TabNavigationItemClass extends React.Component {
 const TabNavigationItem = withColorScheme(withI18n(withViewportUnits(TabNavigationItemClass)));
 
 class AppNavigatorTabBarClass extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
+
+    this.onPressNavigationAddEntry = this.onPressNavigationAddEntry.bind(this);
+  }
+
+  onPressNavigationAddEntry() {
+    const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0).valueOf();
+
+    const {
+      store: { dispatch },
+    } = this.context;
+
+    dispatch(setTimestampDay(today));
+
+    this.props.navigation.navigate('Dashboard');
+    this.props.navigation.navigate('AddEntry');
   }
 
   styles = StyleSheet.create({
     navigationBar: {
-      alignItems: 'center',
+      alignItems: 'flex-start',
       display: 'flex',
       flexDirection: 'row',
-      height: this.props.vw(22),
+      height: this.props.vw(20),
       justifyContent: 'space-evenly',
+      paddingTop: this.props.vw(2),
     },
   });
 
   render() {
-    const { colors, state, navigation, __ } = this.props;
+    const { colors, state, navigation } = this.props;
 
     return (
       <View style={{ ...this.styles.navigationBar, backgroundColor: colors.BACKGROUND }}>
@@ -157,9 +165,8 @@ class AppNavigatorTabBarClass extends React.Component {
           const { name: routeName } = route;
 
           const onPress = () => {
-            if (routeName === 'Share') {
-              // noinspection JSIgnoredPromiseFromCall
-              onShare(__('app.share.message'));
+            if (routeName === 'NavigationAddEntry') {
+              this.onPressNavigationAddEntry();
             } else if (routeName === 'Dashboard' && isFocused) {
               const subNavigationRouteName = route.state
                 ? route.state.routes[route.state.index].name
@@ -180,6 +187,7 @@ class AppNavigatorTabBarClass extends React.Component {
             <TabNavigationItem
               isFocused={isFocused}
               key={`main-navigation-item-${index}`}
+              numberOfItems={state.routes.length}
               onPress={onPress}
               routeName={routeName}
             />
@@ -189,6 +197,8 @@ class AppNavigatorTabBarClass extends React.Component {
     );
   }
 }
+
+AppNavigatorTabBarClass.contextType = ReactReduxContext;
 
 const AppNavigatorTabBar = withColorScheme(withI18n(withViewportUnits(AppNavigatorTabBarClass)));
 
@@ -206,14 +216,15 @@ const AppNavigator = () => (
     initialRouteName={'Dashboard'}
     /* eslint-disable-next-line react/jsx-props-no-spreading */
     tabBar={(props) => <AppNavigatorTabBar {...props} />}>
-    {Platform.OS !== 'ios' && <Tab.Screen component={screens.Tips} name={'Tips'} />}
     <Tab.Screen component={screens.Directory} name={'Directory'} />
     <Tab.Screen
       component={screens.Dashboard}
       name={'Dashboard'}
       // options={({ route }) => ({ tabBarVisible: isTabBarVisibleOnDashboard(route) })}
     />
-    <Tab.Screen component={View} name={'Share'} />
+    <Tab.Screen component={View} name={'NavigationAddEntry'} />
+    <Tab.Screen component={screens.Overview} name={'Overview'} />
+    <Tab.Screen component={screens.Tips} name={'Tips'} />
   </Tab.Navigator>
 );
 

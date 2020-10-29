@@ -74,6 +74,7 @@ class Day extends React.Component {
         <View style={this.styles.dayOverviewWrapper}>
           <DayOverview
             isDark
+            isSmall
             locations={locations.length}
             persons={persons.length}
             timestamp={timestamp}

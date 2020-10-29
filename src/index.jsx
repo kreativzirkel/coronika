@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import React from 'react';
-import { Platform, SafeAreaView, StyleSheet, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 import { enableScreens } from 'react-native-screens';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -36,8 +36,6 @@ const styles = StyleSheet.create({
 
 const Stack = createStackNavigator();
 
-const showTips = Platform.OS !== 'ios';
-
 const AppNavigator = () => (
   <Stack.Navigator
     headerMode={'none'}
@@ -55,17 +53,16 @@ const AppNavigator = () => (
     <Stack.Screen component={screens.Export} name={'Export'} />
     <Stack.Screen component={screens.Legal} name={'Legal'} />
     <Stack.Screen component={screens.Menu} name={'Menu'} />
-    <Stack.Screen component={screens.Overview} name={'Overview'} />
     <Stack.Screen component={screens.Settings} name={'Settings'} />
-    {showTips && <Stack.Screen component={screens.TipAmIInfected} name={'TipAmIInfected'} />}
-    {showTips && <Stack.Screen component={screens.TipAvoidCrowdsOfPeople} name={'TipAvoidCrowdsOfPeople'} />}
-    {showTips && <Stack.Screen component={screens.TipCoronaWarnApp} name={'TipCoronaWarnApp'} />}
-    {showTips && <Stack.Screen component={screens.TipCoughingSneezing} name={'TipCoughingSneezing'} />}
-    {showTips && <Stack.Screen component={screens.TipDistanceAndMouthguard} name={'TipDistanceAndMouthguard'} />}
-    {showTips && <Stack.Screen component={screens.TipMouthguard} name={'TipMouthguard'} />}
-    {showTips && <Stack.Screen component={screens.TipNotFeelingWell} name={'TipNotFeelingWell'} />}
-    {showTips && <Stack.Screen component={screens.TipReliableSources} name={'TipReliableSources'} />}
-    {showTips && <Stack.Screen component={screens.TipWashingHands} name={'TipWashingHands'} />}
+    <Stack.Screen component={screens.TipAmIInfected} name={'TipAmIInfected'} />
+    <Stack.Screen component={screens.TipAvoidCrowdsOfPeople} name={'TipAvoidCrowdsOfPeople'} />
+    <Stack.Screen component={screens.TipCoronaWarnApp} name={'TipCoronaWarnApp'} />
+    <Stack.Screen component={screens.TipCoughingSneezing} name={'TipCoughingSneezing'} />
+    <Stack.Screen component={screens.TipDistanceAndMouthguard} name={'TipDistanceAndMouthguard'} />
+    <Stack.Screen component={screens.TipMouthguard} name={'TipMouthguard'} />
+    <Stack.Screen component={screens.TipNotFeelingWell} name={'TipNotFeelingWell'} />
+    <Stack.Screen component={screens.TipReliableSources} name={'TipReliableSources'} />
+    <Stack.Screen component={screens.TipWashingHands} name={'TipWashingHands'} />
   </Stack.Navigator>
 );
 

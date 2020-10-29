@@ -8,42 +8,75 @@ import withI18n from '../../i18n';
 import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 
-const DayDate = memo(({ formatTimeDistance, isDark, isToday, isTotal, styles, timestamp, today, __ }) => {
-  return (
-    <View style={styles.dayDateWrapper}>
-      {isTotal && (
-        <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>
-          {formatTimeDistance(moment(timestamp).add(1, 'minute').valueOf(), today.valueOf())}
-        </Text>
-      )}
-
-      {!isTotal && (
-        <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>
-          {isToday ? __('today') : moment(timestamp).from(today)}
-        </Text>
-      )}
-
-      {isTotal && (
-        <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark) }}>
-          {isTotal ? __('total') : moment(timestamp).format('dd DD.MMM')}
-        </Text>
-      )}
-
-      {!isTotal && (
-        <View style={styles.dayValueWrapper}>
-          <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark), ...styles.dayValueDay }}>
-            {moment(timestamp).format('dd')}
+const DayDate = memo(
+  /* eslint-disable-next-line complexity */ // TODO: reduce complexity
+  ({ formatTimeDistance, isDark, isReduced, isSmall, isToday, isTotal, styles, timestamp, today, __ }) => {
+    return (
+      <View style={{ ...styles.dayDateWrapper, ...(isReduced && styles.dayDateWrapperReduced) }}>
+        {isTotal && (
+          <Text
+            style={{
+              ...styles.dayValueCaption,
+              ...(isReduced && styles.dayValueCaptionReduced),
+              ...(isDark && styles.dayValueNumberDark),
+            }}>
+            {formatTimeDistance(moment(timestamp).add(1, 'minute').valueOf(), today.valueOf())}
           </Text>
-          <Text style={{ ...styles.dayValue, ...(isDark && styles.dayValueNumberDark) }}>
-            {moment(timestamp).format('DD.MMM')}
-          </Text>
-        </View>
-      )}
-    </View>
-  );
-});
+        )}
 
-const DayLocations = memo(({ colors, isDark, locations, showIcons, styles, vw, __ }) => {
+        {!isTotal && (
+          <Text
+            style={{
+              ...styles.dayValueCaption,
+              ...(isReduced && styles.dayValueCaptionReduced),
+              ...(isDark && styles.dayValueNumberDark),
+            }}>
+            {isToday ? __('today') : moment(timestamp).from(today)}
+          </Text>
+        )}
+
+        {isTotal && (
+          <Text
+            style={{
+              ...styles.dayValue,
+              ...(isReduced && styles.dayValueReduced),
+              ...(isDark && styles.dayValueNumberDark),
+            }}>
+            {isTotal ? __('total') : moment(timestamp).format('dd DD.MMM')}
+          </Text>
+        )}
+
+        {!isTotal && (
+          <View style={styles.dayValueWrapper}>
+            <Text
+              style={{
+                ...styles.dayValue,
+                ...(isReduced && styles.dayValueReduced),
+                ...(isSmall && styles.dayValueSmall),
+                ...(isDark && styles.dayValueNumberDark),
+                ...styles.dayValueDay,
+                ...(isReduced && styles.dayValueDayReduced),
+                ...(isSmall && styles.dayValueDaySmall),
+              }}>
+              {moment(timestamp).format('dd')}
+            </Text>
+            <Text
+              style={{
+                ...styles.dayValue,
+                ...(isReduced && styles.dayValueReduced),
+                ...(isSmall && styles.dayValueSmall),
+                ...(isDark && styles.dayValueNumberDark),
+              }}>
+              {moment(timestamp).format('DD.MMM')}
+            </Text>
+          </View>
+        )}
+      </View>
+    );
+  }
+);
+
+const DayLocations = memo(({ colors, isDark, isSmall, locations, showIcons, styles, vw, __ }) => {
   return (
     <View style={styles.dayLocationsWrapper}>
       <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('locations')}</Text>
@@ -53,6 +86,7 @@ const DayLocations = memo(({ colors, isDark, locations, showIcons, styles, vw, _
         <Text
           style={{
             ...styles.dayValue,
+            ...(isSmall && styles.dayValueSmall),
             ...styles.dayValueNumber,
             ...(!locations && styles.dayValueNumberEmpty),
             ...(isDark && styles.dayValueNumberDark),
@@ -64,7 +98,7 @@ const DayLocations = memo(({ colors, isDark, locations, showIcons, styles, vw, _
   );
 });
 
-const DayPersons = memo(({ colors, isDark, persons, showIcons, styles, vw, __ }) => {
+const DayPersons = memo(({ colors, isDark, isSmall, persons, showIcons, styles, vw, __ }) => {
   return (
     <View style={styles.dayPersonsWrapper}>
       <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('persons')}</Text>
@@ -74,6 +108,7 @@ const DayPersons = memo(({ colors, isDark, persons, showIcons, styles, vw, __ })
         <Text
           style={{
             ...styles.dayValue,
+            ...(isSmall && styles.dayValueSmall),
             ...styles.dayValueNumber,
             ...(!persons && styles.dayValueNumberEmpty),
             ...(isDark && styles.dayValueNumberDark),
@@ -123,8 +158,20 @@ class DayOverview extends React.Component {
       fontSize: this.props.vw(7),
       textTransform: 'lowercase',
     },
+    dayValueReduced: {
+      fontSize: this.props.vw(4.5),
+    },
+    dayValueSmall: {
+      fontSize: this.props.vw(5.5),
+    },
     dayValueDay: {
       marginRight: this.props.vw(2.5),
+    },
+    dayValueDayReduced: {
+      marginRight: this.props.vw(1.5),
+    },
+    dayValueDaySmall: {
+      marginRight: this.props.vw(1.8),
     },
     dayValueNumber: {
       color: COLOR_PRIMARY,
@@ -142,16 +189,23 @@ class DayOverview extends React.Component {
       marginBottom: this.props.vw(0.5),
       textTransform: 'lowercase',
     },
+    dayValueCaptionReduced: {
+      marginBottom: 0,
+    },
     dayValueCaptionDark: {
       //
     },
     dayValueWrapper: {
-      flex: 1,
       flexDirection: 'row',
     },
     dayDateWrapper: {
       flex: 1,
       flexDirection: 'column',
+    },
+    dayDateWrapperReduced: {
+      alignItems: 'center',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
     },
     dayPersonsWrapper: {
       flexGrow: 0,
@@ -174,6 +228,8 @@ class DayOverview extends React.Component {
       formatTimeDistance,
       isDark,
       isEmphasized,
+      isReduced,
+      isSmall,
       isTotal,
       isTranslucent,
       locations,
@@ -226,10 +282,21 @@ class DayOverview extends React.Component {
           ...(isTranslucent && styles.dayTranslucent),
         }}>
         <DayDate
-          {...{ formatTimeDistance, isDark, isToday: this.isToday, isTotal, styles: styles, timestamp, today, __ }}
+          {...{
+            formatTimeDistance,
+            isDark,
+            isReduced,
+            isSmall,
+            isToday: this.isToday,
+            isTotal,
+            styles: styles,
+            timestamp,
+            today,
+            __,
+          }}
         />
-        <DayLocations {...{ colors, isDark, locations, showIcons, styles: styles, vw, __ }} />
-        <DayPersons {...{ colors, isDark, persons, showIcons, styles: styles, vw, __ }} />
+        {!isReduced && <DayLocations {...{ colors, isDark, isSmall, locations, showIcons, styles: styles, vw, __ }} />}
+        {!isReduced && <DayPersons {...{ colors, isDark, isSmall, persons, showIcons, styles: styles, vw, __ }} />}
       </View>
     );
   }

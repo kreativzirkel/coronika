@@ -121,29 +121,31 @@ class ModalDefaultClass extends React.Component {
         statusBarTranslucent
         style={styles.modal}
         useNativeDriver>
-        <KeyboardAvoidingView behavior={'padding'} enabled style={styles.modalContent}>
-          <View style={styles.modalHeader}>
-            <Text numberOfLines={1} style={styles.modalHeaderText}>
-              {headline}
-            </Text>
-            <TouchableOpacity onPress={this.onPressClose} style={styles.modalHeaderIcon}>
-              <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
-            </TouchableOpacity>
+        <KeyboardAvoidingView behavior={'padding'} enabled>
+          <View style={styles.modalContent}>
+            <View style={styles.modalHeader}>
+              <Text numberOfLines={1} style={styles.modalHeaderText}>
+                {headline}
+              </Text>
+              <TouchableOpacity onPress={this.onPressClose} style={styles.modalHeaderIcon}>
+                <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
+              </TouchableOpacity>
+            </View>
+
+            <Fragment>{children}</Fragment>
+
+            {this.showConfirmationButton && (
+              <TouchableOpacity disabled={buttonConfirmDisabled} onPress={this.onPressConfirm}>
+                <View
+                  style={{
+                    ...styles.modalButton,
+                    ...(buttonConfirmDisabled && styles.modalButtonDisabled),
+                  }}>
+                  <Text style={styles.modalButtonText}>{buttonConfirmLabel}</Text>
+                </View>
+              </TouchableOpacity>
+            )}
           </View>
-
-          <Fragment>{children}</Fragment>
-
-          {this.showConfirmationButton && (
-            <TouchableOpacity disabled={buttonConfirmDisabled} onPress={this.onPressConfirm}>
-              <View
-                style={{
-                  ...styles.modalButton,
-                  ...(buttonConfirmDisabled && styles.modalButtonDisabled),
-                }}>
-                <Text style={styles.modalButtonText}>{buttonConfirmLabel}</Text>
-              </View>
-            </TouchableOpacity>
-          )}
         </KeyboardAvoidingView>
       </Modal>
     );

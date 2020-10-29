@@ -1,5 +1,6 @@
 import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
+import withViewportUnits from '../../../utils/withViewportUnits';
 import { addPersonToDay, addLocationToDay } from '../Dashboard/actions';
 import { updateLastUsageOfLocation, updateLastUsageOfPerson } from '../Directory/actions';
 import Screen from './ui';
@@ -83,6 +84,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const AddEntry = withI18n(connect(mapStateToProps, mapDispatchToProps)(Screen));
+const AddEntry = withViewportUnits(withI18n(connect(mapStateToProps, mapDispatchToProps)(Screen)));
 
 export default AddEntry;

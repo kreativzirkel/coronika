@@ -101,6 +101,7 @@ const Tips = ({ colors, navigation, vw, fontFamilyBold, fontFamilyRegular, isRTL
     {
       headline: __('tips.not-feeling-well.headline'),
       routeName: 'TipNotFeelingWell',
+      hide: true,
     },
     {
       headline: __('tips.am-i-infected.headline'),

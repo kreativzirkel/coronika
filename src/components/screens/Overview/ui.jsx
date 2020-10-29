@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, DAYS_OVERVIEW_MAX } from '../../../constants';
 import EntriesTabsView from '../../partials/EntriesTabsView';
-import { HeaderBack } from '../../widgets/Header';
+import Header from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 import DayOverview from '../../widgets/DayOverview';
 import moment from 'moment';
@@ -37,14 +37,17 @@ const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamil
       marginBottom: vw(0.7),
       width: '100%',
     },
-    header: {
-      alignItems: 'center',
+    headerContent: {
       flex: 1,
-      flexDirection: 'row',
+      flexDirection: 'row-reverse',
       justifyContent: 'space-between',
+      width: '100%',
     },
-    headerButton: {
-      flexDirection: 'row',
+    headerHeadline: {
+      alignSelf: 'flex-start',
+      fontFamily: fontFamilyBold,
+      fontSize: vw(5),
+      textTransform: 'lowercase',
     },
     view: {
       alignItems: 'center',
@@ -67,7 +70,13 @@ const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamil
   return (
     <Layout>
       <View style={styles.view}>
-        <HeaderBack headline={__('overview-screen.header.headline')} navigation={navigation} />
+        <Header>
+          <View style={styles.headerContent}>
+            <Text style={{ ...styles.headerHeadline, color: colors.TEXT }}>
+              {__('overview-screen.header.headline')}
+            </Text>
+          </View>
+        </Header>
 
         <View style={styles.dayOverviewWrapper}>
           <DayOverview
