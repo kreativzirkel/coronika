@@ -15,3 +15,5 @@ export const enableNotificationWashingHandsOption2 = () => ({
 });
 
 export const disableNotificationWashingHands = () => ({ type: 'DISABLE_NOTIFICATION_WASHING_HANDS_SETTINGS' });
+
+export const setColorScheme = (colorScheme) => ({ type: 'SET_COLOR_SCHEME_SETTINGS', colorScheme });

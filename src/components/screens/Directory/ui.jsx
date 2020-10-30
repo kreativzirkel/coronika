@@ -34,10 +34,13 @@ const Directory = ({
     headerButton: {
       flexDirection: 'row',
     },
+    headerButtonItemIcon: {
+      marginTop: vw(0.3),
+    },
     headerButtonText: {
       color: colors.TEXT,
       fontFamily: fontFamilyRegular,
-      fontSize: vw(3.8),
+      fontSize: vw(4.2),
       marginLeft: vw(1),
       textTransform: 'lowercase',
     },
@@ -45,7 +48,7 @@ const Directory = ({
       color: colors.TEXT,
       fontFamily: fontFamilyBold,
       fontSize: vw(5),
-      marginLeft: 'auto',
+      marginRight: 'auto',
       textTransform: 'lowercase',
     },
     headerHeadlineWrapper: {
@@ -125,15 +128,15 @@ const Directory = ({
       <View style={styles.view}>
         <Header>
           <View style={styles.header}>
-            <TouchableOpacity onPress={() => showImportPersonsModal()} style={styles.headerButton}>
-              <UilImport size={vw(4.6)} color={colors.TEXT} />
-
-              <Text style={styles.headerButtonText}>{__('directory-screen.header.button.import')}</Text>
-            </TouchableOpacity>
-
             <View style={styles.headerHeadlineWrapper}>
               <Text style={styles.headerHeadline}>{__('directory-screen.header.headline')}</Text>
             </View>
+
+            <TouchableOpacity onPress={() => showImportPersonsModal()} style={styles.headerButton}>
+              <UilImport size={vw(4.8)} color={colors.TEXT} style={styles.headerButtonItemIcon} />
+
+              <Text style={styles.headerButtonText}>{__('directory-screen.header.button.import')}</Text>
+            </TouchableOpacity>
           </View>
         </Header>
 

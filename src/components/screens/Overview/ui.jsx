@@ -7,6 +7,7 @@ import Header from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 import DayOverview from '../../widgets/DayOverview';
 import moment from 'moment';
+import UilBars from '@iconscout/react-native-unicons/icons/uil-bars';
 
 const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamilyBold, fontFamilyRegular, __ }) => {
   const styles = StyleSheet.create({
@@ -39,7 +40,7 @@ const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamil
     },
     headerContent: {
       flex: 1,
-      flexDirection: 'row-reverse',
+      flexDirection: 'row',
       justifyContent: 'space-between',
       width: '100%',
     },
@@ -47,6 +48,28 @@ const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamil
       alignSelf: 'flex-start',
       fontFamily: fontFamilyBold,
       fontSize: vw(5),
+      textTransform: 'lowercase',
+    },
+    headerButtons: {
+      alignItems: 'center',
+      flexDirection: 'row',
+    },
+    headerButtonsItem: {
+      alignItems: 'center',
+      flexDirection: 'row',
+      marginLeft: vw(3),
+      marginTop: -vw(2),
+      marginBottom: -vw(2),
+      paddingTop: vw(2),
+      paddingBottom: vw(2),
+    },
+    headerButtonsItemIconMenu: {
+      marginTop: vw(0.6),
+    },
+    headerButtonsItemText: {
+      fontFamily: fontFamilyRegular,
+      fontSize: vw(4.2),
+      marginLeft: vw(1),
       textTransform: 'lowercase',
     },
     view: {
@@ -75,6 +98,16 @@ const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamil
             <Text style={{ ...styles.headerHeadline, color: colors.TEXT }}>
               {__('overview-screen.header.headline')}
             </Text>
+
+            <View style={styles.headerButtons}>
+              <TouchableOpacity onPress={() => navigation.navigate('Menu')} style={styles.headerButtonsItem}>
+                <UilBars color={colors.TEXT} size={vw(4.8)} style={styles.headerButtonsItemIconMenu} />
+
+                <Text style={{ ...styles.headerButtonsItemText, color: colors.TEXT }}>
+                  {__('menu-screen.header.headline')}
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </Header>
 

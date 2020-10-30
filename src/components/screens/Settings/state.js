@@ -1,4 +1,5 @@
 const initialState = {
+  colorScheme: 'light',
   notificationDiaryEnabled: false,
   notificationDisinfectSmartphoneEnabled: false,
   notificationWashingHandsEnabled: false,
@@ -43,6 +44,9 @@ export default (state = initialState, action = { type: null }) => {
         notificationWashingHandsOption1Enabled: false,
         notificationWashingHandsOption2Enabled: false,
       };
+
+    case 'SET_COLOR_SCHEME_SETTINGS':
+      return { ...state, colorScheme: action.colorScheme };
 
     default:
       return state;

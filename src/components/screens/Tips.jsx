@@ -8,6 +8,7 @@ import Layout from '../widgets/Layout';
 import withI18n from '../../i18n';
 import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
+import UilBars from '@iconscout/react-native-unicons/icons/uil-bars';
 
 const Tips = ({ colors, navigation, vw, fontFamilyBold, fontFamilyRegular, isRTL, __ }) => {
   // noinspection JSUnresolvedFunction
@@ -18,11 +19,39 @@ const Tips = ({ colors, navigation, vw, fontFamilyBold, fontFamilyRegular, isRTL
       fontSize: vw(4.2),
       lineHeight: vw(6.5),
     },
+    headerContent: {
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      width: '100%',
+    },
     headerHeadline: {
       color: colors.TEXT,
       fontFamily: fontFamilyBold,
       fontSize: vw(5),
-      marginLeft: 'auto',
+      marginRight: 'auto',
+      textTransform: 'lowercase',
+    },
+    headerButtons: {
+      alignItems: 'center',
+      flexDirection: 'row',
+    },
+    headerButtonsItem: {
+      alignItems: 'center',
+      flexDirection: 'row',
+      marginLeft: vw(3),
+      marginTop: -vw(2),
+      marginBottom: -vw(2),
+      paddingTop: vw(2),
+      paddingBottom: vw(2),
+    },
+    headerButtonsItemIconMenu: {
+      marginTop: vw(0.6),
+    },
+    headerButtonsItemText: {
+      fontFamily: fontFamilyRegular,
+      fontSize: vw(4.2),
+      marginLeft: vw(1),
       textTransform: 'lowercase',
     },
     tipIcon: {
@@ -116,7 +145,19 @@ const Tips = ({ colors, navigation, vw, fontFamilyBold, fontFamilyRegular, isRTL
   return (
     <Layout>
       <Header>
-        <Text style={styles.headerHeadline}>{__('tips-screen.header.headline')}</Text>
+        <View style={styles.headerContent}>
+          <Text style={styles.headerHeadline}>{__('tips-screen.header.headline')}</Text>
+
+          <View style={styles.headerButtons}>
+            <TouchableOpacity onPress={() => navigation.navigate('Menu')} style={styles.headerButtonsItem}>
+              <UilBars color={colors.TEXT} size={vw(4.8)} style={styles.headerButtonsItemIconMenu} />
+
+              <Text style={{ ...styles.headerButtonsItemText, color: colors.TEXT }}>
+                {__('menu-screen.header.headline')}
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </Header>
 
       <ScrollView style={styles.view}>

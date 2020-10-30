@@ -1,13 +1,22 @@
 import React from 'react';
 import { Appearance } from 'react-native';
 import { COLOR_SECONDARY } from '../constants';
+import { ReactReduxContext } from 'react-redux';
+import { setColorScheme } from '../components/screens/Settings/actions';
 
 const withColorScheme = (WrappedComponent) => {
   class WithColorScheme extends React.Component {
-    constructor(props) {
-      super(props);
+    constructor(props, context) {
+      super(props, context);
 
-      const scheme = Appearance.getColorScheme() || 'light';
+      const {
+        store: { getState },
+      } = context;
+      const {
+        settings: { colorScheme: settingsColorScheme },
+      } = getState();
+
+      const scheme = Appearance.getColorScheme() || settingsColorScheme || 'light';
 
       this.state = {
         colorScheme: scheme,
@@ -52,8 +61,18 @@ const withColorScheme = (WrappedComponent) => {
       };
     }
 
-    appearanceListener({ colorScheme }) {
-      const scheme = colorScheme || 'light';
+    appearanceListener() {
+      const {
+        store: { dispatch, getState },
+      } = this.context;
+
+      const {
+        settings: { colorScheme: settingsColorScheme },
+      } = getState();
+
+      const scheme = Appearance.getColorScheme() || settingsColorScheme || 'light';
+
+      dispatch(setColorScheme(scheme));
 
       this.setState({ colorScheme: scheme, colors: this.getColors(scheme) });
     }
@@ -81,6 +100,8 @@ const withColorScheme = (WrappedComponent) => {
       );
     }
   }
+
+  WithColorScheme.contextType = ReactReduxContext;
 
   return React.forwardRef((props, ref) => {
     /* eslint-disable-next-line react/jsx-props-no-spreading */
