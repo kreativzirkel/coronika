@@ -44,8 +44,6 @@ class PersonListItemClass extends React.Component {
       marginRight: this.props.vw(2.5),
       marginTop: this.props.vw(2.3),
       padding: this.props.vw(3),
-      paddingBottom: this.props.vw(3.8),
-      paddingTop: this.props.vw(3.8),
     },
     personText: {
       fontFamily: this.props.fontFamilyRegular,
@@ -283,7 +281,7 @@ class PersonsList extends React.Component {
     );
   }
 
-  listItemHeight = this.props.vw(15.4);
+  listItemHeight = this.props.vw(13.6);
 
   styles = StyleSheet.create({
     personsList: {

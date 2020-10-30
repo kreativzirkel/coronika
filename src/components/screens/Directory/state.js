@@ -32,6 +32,7 @@ const addPersonToList = (persons, person) => {
       } else {
         importPerson.id = c.id;
         importPerson.lastUsed = c.lastUsed;
+        importPerson.emailAddresses = [...c.emailAddresses];
         importPerson.phoneNumbers = [...c.phoneNumbers];
       }
     }

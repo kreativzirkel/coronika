@@ -21,7 +21,7 @@ class ListItemSeparator extends React.Component {
     viewWrapper: {
       alignItems: 'center',
       flex: 1,
-      height: this.props.vw(12.8),
+      height: this.props.vw(11.3),
       justifyContent: 'center',
       marginTop: this.props.vw(2.3),
       paddingLeft: this.props.vw(2.5),

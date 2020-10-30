@@ -4,49 +4,24 @@ import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import Screen from './ui';
 
-const sortByCounter = (a, b) => {
-  if (a.counter < b.counter) {
-    return 1;
-  }
-  if (a.counter > b.counter) {
-    return -1;
-  }
+export const sortByFullName = (a, b) => {
+  const fullNameA = a.fullName.toLowerCase();
+  const fullNameB = b.fullName.toLowerCase();
+
+  if (fullNameA < fullNameB) return -1;
+  if (fullNameA > fullNameB) return 1;
 
   return 0;
 };
 
-export const sortByCounterAndFullName = (a, b) => {
-  let sortResult = sortByCounter(a, b);
+export const sortByTitle = (a, b) => {
+  const titleA = a.title.toLowerCase();
+  const titleB = b.title.toLowerCase();
 
-  if (sortResult === 0) {
-    const fullNameA = a.fullName.toLowerCase();
-    const fullNameB = b.fullName.toLowerCase();
+  if (titleA < titleB) return -1;
+  if (titleA > titleB) return 1;
 
-    if (fullNameA < fullNameB) {
-      sortResult = -1;
-    } else if (fullNameA > fullNameB) {
-      sortResult = 1;
-    }
-  }
-
-  return sortResult;
-};
-
-export const sortByCounterAndTitle = (a, b) => {
-  let sortResult = sortByCounter(a, b);
-
-  if (sortResult === 0) {
-    const titleA = a.title.toLowerCase();
-    const titleB = b.title.toLowerCase();
-
-    if (titleA < titleB) {
-      sortResult = -1;
-    } else if (titleA > titleB) {
-      sortResult = 1;
-    }
-  }
-
-  return sortResult;
+  return 0;
 };
 
 const mapStateToProps = ({
@@ -102,8 +77,8 @@ const mapStateToProps = ({
     });
   });
 
-  const locationsSorted = Object.values(locations).sort((a, b) => sortByCounterAndTitle(a, b));
-  const personsSorted = Object.values(persons).sort((a, b) => sortByCounterAndFullName(a, b));
+  const locationsSorted = Object.values(locations).sort((a, b) => sortByTitle(a, b));
+  const personsSorted = Object.values(persons).sort((a, b) => sortByFullName(a, b));
 
   return { locations: locationsSorted, persons: personsSorted, total };
 };

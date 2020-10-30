@@ -55,8 +55,6 @@ class LocationsListItemClass extends React.Component {
       marginRight: this.props.vw(2.5),
       marginTop: this.props.vw(2.3),
       padding: this.props.vw(3),
-      paddingBottom: this.props.vw(3.8),
-      paddingTop: this.props.vw(3.8),
     },
     locationText: {
       fontFamily: this.props.fontFamilyRegular,

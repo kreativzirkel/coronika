@@ -23,13 +23,14 @@ const importPersons = (__, closeImportPersonsModal = false) => async (dispatch) 
       .then((contacts) => {
         const personsToImport = [];
 
-        contacts.forEach(({ familyName, givenName, middleName, phoneNumbers, recordID }) => {
+        contacts.forEach(({ familyName, givenName, middleName, emailAddresses, phoneNumbers, recordID }) => {
           // ignore company contacts
           if (givenName && givenName.trim() !== '') {
             personsToImport.push({
               givenName,
               middleName,
               familyName,
+              emailAddresses,
               phoneNumbers,
               recordID,
             });

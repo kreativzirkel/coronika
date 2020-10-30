@@ -7,6 +7,7 @@ import EntriesTabsView from '../../partials/EntriesTabsView';
 import DayOverview from '../../widgets/DayOverview';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
+import ModalSwitchDay from '../../widgets/ModalSwitchDay';
 
 class Day extends React.Component {
   constructor(props) {
@@ -65,21 +66,36 @@ class Day extends React.Component {
   }
 
   render() {
-    const { colors, locations, persons, timestamp, navigation, vw, __ } = this.props;
+    const {
+      colors,
+      daysList,
+      isDateSwitcherModalVisible,
+      locations,
+      persons,
+      timestamp,
+      hideDateSwitcherModal,
+      showDateSwitcherModal,
+      setTimestamp,
+      navigation,
+      vw,
+      __,
+    } = this.props;
 
     return (
       <Layout>
         <HeaderBack headline={__('day-screen.header.headline')} navigation={navigation} />
 
         <View style={this.styles.dayOverviewWrapper}>
-          <DayOverview
-            isDark
-            isSmall
-            locations={locations.length}
-            persons={persons.length}
-            timestamp={timestamp}
-            today={this.today}
-          />
+          <TouchableOpacity onPress={showDateSwitcherModal}>
+            <DayOverview
+              isDark
+              isSmall
+              locations={locations.length}
+              persons={persons.length}
+              timestamp={timestamp}
+              today={this.today}
+            />
+          </TouchableOpacity>
         </View>
 
         <EntriesTabsView
@@ -100,6 +116,13 @@ class Day extends React.Component {
             <Text style={this.styles.buttonAddText}>{__('day-screen.entries.add')}</Text>
           </TouchableOpacity>
         </View>
+
+        <ModalSwitchDay
+          closeModal={hideDateSwitcherModal}
+          days={daysList}
+          isVisible={isDateSwitcherModalVisible}
+          setTimestamp={setTimestamp}
+        />
       </Layout>
     );
   }

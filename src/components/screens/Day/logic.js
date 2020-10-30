@@ -3,6 +3,7 @@ import withI18n from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import { addLocationToDay, removePersonFromDay, removeLocationFromDay } from '../Dashboard/actions';
+import { setTimestamp, showDateSwitcherModal, hideDateSwitcherModal } from './actions';
 import Screen from './ui';
 
 const deletePersonFromDay = (personId) => async (dispatch, getState) => {
@@ -79,17 +80,27 @@ const locationsSortingFunction = (a, b) => {
   return 0;
 };
 
-const mapStateToProps = ({ dashboard: { days }, day: { searchValue, timestamp } }) => {
+const mapStateToProps = ({ dashboard: { days }, day: { isDateSwitcherModalVisible, timestamp } }) => {
   const dayPersons = days[timestamp]?.persons || [];
   const dayLocations = days[timestamp]?.locations || [];
 
   dayPersons.sort((a, b) => personsSortingFunction(a, b));
   dayLocations.sort((a, b) => locationsSortingFunction(a, b));
 
+  const daysList = Object.keys(days)
+    .map((key) => parseInt(key, 10))
+    .sort((a, b) => {
+      if (a > b) return -1;
+      if (a < b) return 1;
+
+      return 0;
+    });
+
   return {
+    daysList,
+    isDateSwitcherModalVisible,
     persons: dayPersons,
     locations: dayLocations,
-    searchValue,
     timestamp,
   };
 };
@@ -101,6 +112,9 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(deleteLocationFromDay(locationId, description, time)),
     updateSelectedLocation: (locationOld, locationUpdated) =>
       dispatch(updateSelectedLocation(locationOld, locationUpdated)),
+    setTimestamp: (timestamp) => dispatch(setTimestamp(timestamp)),
+    showDateSwitcherModal: () => dispatch(showDateSwitcherModal()),
+    hideDateSwitcherModal: () => dispatch(hideDateSwitcherModal()),
   };
 };
 
