@@ -75,8 +75,6 @@ const Tips = ({ colors, navigation, vw, fontFamilyBold, fontFamilyRegular, isRTL
       justifyContent: 'space-between',
       marginTop: vw(2.3),
       padding: vw(3),
-      paddingBottom: vw(3.8),
-      paddingTop: vw(3.8),
     },
     view: {
       backgroundColor: colors.BACKGROUND,
@@ -92,7 +90,7 @@ const Tips = ({ colors, navigation, vw, fontFamilyBold, fontFamilyRegular, isRTL
     },
     viewContentList: {
       marginBottom: vw(10),
-      marginTop: vw(4),
+      marginTop: vw(2),
     },
     viewContentText: {
       paddingLeft: vw(2.5),
@@ -179,9 +177,9 @@ const Tips = ({ colors, navigation, vw, fontFamilyBold, fontFamilyRegular, isRTL
 
                 <View style={styles.tipIcon}>
                   {isRTL ? (
-                    <UilArrowLeft size={vw(11)} color={COLOR_PRIMARY} />
+                    <UilArrowLeft size={vw(9)} color={COLOR_PRIMARY} />
                   ) : (
-                    <UilArrowRight size={vw(11)} color={COLOR_PRIMARY} />
+                    <UilArrowRight size={vw(9)} color={COLOR_PRIMARY} />
                   )}
                 </View>
               </TouchableOpacity>

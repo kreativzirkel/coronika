@@ -109,14 +109,7 @@ class TabNavigationItemClass extends React.Component {
           }}>
           <NavigationIcon size={vw(9)} color={isItemNavigationAddEntry ? colors.TEXT_ALT : iconColor} />
         </View>
-        <Text
-          // numberOfLines={1}
-          style={{
-            ...this.styles.navigationItemText,
-            color: colorScheme === 'dark' ? colors.GRAY_2 : colors.GRAY_4,
-          }}>
-          {label}
-        </Text>
+        <Text style={{ ...this.styles.navigationItemText, color: iconColor }}>{label}</Text>
       </TouchableOpacity>
     );
   }

@@ -203,7 +203,7 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "දැන් පටන් ගන්න"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:181
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:195
 msgid "about-screen.header.headline"
 msgstr "කොරොනිකා තතු"
 
@@ -225,7 +225,9 @@ msgid "dashboard-screen.list.load-more"
 msgstr "තවත් පටවන්න"
 
 #: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:200
+#: src/components/screens/Menu.jsx:222
+#: src/components/screens/Overview/ui.jsx:107
+#: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
 msgstr "මෙනුව"
 
@@ -263,29 +265,29 @@ msgstr "අවසරය නොමැත"
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
 msgstr "ඔබගේ උපාංගයේ රහස්‍යතා සැකසුම් තුළ ඔබගේ සම්බන්ධතා වෙත ප්‍රවේශ වීමට යෙදුමට ඉඩ දෙන්න."
 
-#: src/components/screens/Directory/ui.jsx:131
-msgid "directory-screen.header.button.import"
-msgstr "ආනයන"
-
-#: src/components/screens/Directory/ui.jsx:135
+#: src/components/screens/Directory/ui.jsx:132
 msgid "directory-screen.header.headline"
 msgstr "නාමාවලිය කළමනාකරණය කරන්න"
 
-#: src/components/screens/Directory/ui.jsx:162
+#: src/components/screens/Directory/ui.jsx:138
+msgid "directory-screen.header.button.import"
+msgstr "ආනයන"
+
+#: src/components/screens/Directory/ui.jsx:165
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "පුද්ගලයින් ආනයනය කරන්න"
 
-#: src/components/screens/Directory/ui.jsx:168
+#: src/components/screens/Directory/ui.jsx:171
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "ඔබගේ දුරකථන පොතෙන් පුද්ගලයින් ආනයනය කරන්න එවිට ඔබට වහාම ආරම්භ කළ හැකිය. ඔබගේ සියලු "
 "පුද්ගලයින් දේශීයව ගබඩා කර ඇත. දත්ත කිසිවක් නිරීක්ෂණය කර හෝ බෙදාගෙන නොමැත."
 
-#: src/components/screens/Directory/ui.jsx:174
+#: src/components/screens/Directory/ui.jsx:177
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "ආනයනය ..."
 
-#: src/components/screens/Directory/ui.jsx:175
+#: src/components/screens/Directory/ui.jsx:178
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "දැන් ආයාත කරන්න"
 
@@ -377,7 +379,7 @@ msgstr ""
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "සුරකින්න"
 
-#: src/components/screens/Legal.jsx:241 src/components/screens/Menu.jsx:189
+#: src/components/screens/Legal.jsx:241 src/components/screens/Menu.jsx:207
 msgid "legal-screen.header.headline"
 msgstr "නීතිමය"
 
@@ -553,20 +555,28 @@ msgstr ""
 "කෙසේ වෙතත්, ප්‍රකාශන හිමිකම් උල්ලංගනය කිරීමක් පිළිබඳව ඔබ දැනුවත් නම්, කරුණාකර අපට දන්වන්න. "
 "කිසියම් උල්ලංගනයක් පිළිබඳව අප දැනුවත්වුවහොත්, අපි වහාම එවැනි අන්තර්ගතයන් ඉවත් කරන්නෙමු. "
 
-#: src/components/screens/Menu.jsx:185
+#: src/components/screens/Menu.jsx:199
+msgid "menu-screen.items.faq"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:203
 #: src/components/screens/Settings/ui.jsx:99
 msgid "settings-screen.header.headline"
 msgstr "සැකසුම්"
 
-#: src/components/screens/Menu.jsx:193
+#: src/components/screens/Menu.jsx:211
 msgid "menu-screen.items.share"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:205
+#: src/components/screens/Menu.jsx:215
+msgid "menu-screen.items.website"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:228
 msgid "menu-screen.intro.text"
 msgstr "වැදගත් වන්නේ භීතිකාව පැතිරවීම නොව පැහැදිලි බවක් ඇති කිරීම සහ නිවැරදි තොරතුරු පැතිරවීම ය."
 
-#: src/components/screens/Menu.jsx:243
+#: src/components/screens/Menu.jsx:267
 msgid "menu-screen.button.send-feedback"
 msgstr "ප්‍රතිචාරය යවන්න"
 
@@ -580,21 +590,21 @@ msgstr ""
 "✅…පිළිගත් තොරතුරු ප්‍රභවයන් භාවිතා කරන්න\n"
 "නිරෝගීව සිටින්න, නිතිපතා අත් සේදීමට මතක තබා ගන්න! ✋😉 https://coronika.app/"
 
-#: src/components/screens/Overview/ui.jsx:118
-msgid "overview-screen.export.button"
-msgstr "දළ විශ්ලේෂණය අපනයනය"
-
-#: src/components/screens/Overview/ui.jsx:76
-msgid "overview-screen.header.headline"
-msgstr "දළ විශ්ලේෂණය"
-
-#: src/components/screens/Overview/ui.jsx:94
+#: src/components/screens/Overview/ui.jsx:127
 msgid "overview-screen.persons.empty"
 msgstr ""
 
-#: src/components/screens/Overview/ui.jsx:95
+#: src/components/screens/Overview/ui.jsx:128
 msgid "overview-screen.locations.empty"
 msgstr ""
+
+#: src/components/screens/Overview/ui.jsx:152
+msgid "overview-screen.export.button"
+msgstr "දළ විශ්ලේෂණය අපනයනය"
+
+#: src/components/screens/Overview/ui.jsx:99
+msgid "overview-screen.header.headline"
+msgstr "දළ විශ්ලේෂණය"
 
 #: src/components/screens/Settings/logic.js:162
 msgid "notifications.diary.headline"
@@ -697,7 +707,7 @@ msgstr "දිනපොත භාවිතා කිරීමට මතක් �
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "දිනපතා මතක් කරන්න"
 
-#: src/components/screens/Splash/ui.jsx:53
+#: src/components/screens/Splash.jsx:113
 msgid "splash-screen.supported-by.headline"
 msgstr ""
 
@@ -722,12 +732,12 @@ msgstr "ඔබේ කොරොනිකා දිනපොත ගැන කි�
 #: src/components/screens/TipNotFeelingWell.jsx:22
 #: src/components/screens/TipReliableSources.jsx:17
 #: src/components/screens/TipWashingHands.jsx:23
-#: src/components/screens/Tips.jsx:119
+#: src/components/screens/Tips.jsx:147
 msgid "tips-screen.header.headline"
 msgstr "සනීපාරක්ෂක ඉඟි"
 
 #: src/components/screens/TipAmIInfected.jsx:24
-#: src/components/screens/Tips.jsx:107
+#: src/components/screens/Tips.jsx:134
 msgid "tips.am-i-infected.headline"
 msgstr "මට කිරීටක වෛරසය ආසාදනය වී ඇතැයි මම බිය වෙමි, මට කුමක් කළ හැකිද?"
 
@@ -761,7 +771,7 @@ msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "ඔබේ වැලමිට හෝ ටිෂු එකක් භාවිතයෙන් කැස්ස සහ කිවිසුම් ආවරණය කරන්න"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:28
-#: src/components/screens/Tips.jsx:89
+#: src/components/screens/Tips.jsx:116
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "සෙනග අතරට යාමෙන් වළකින්න"
 
@@ -777,7 +787,7 @@ msgid "tips.corona-warn-app.link.google-play.text"
 msgstr "එය ගූගල් ප්ලේ වෙතින් ලබා ගන්න"
 
 #: src/components/screens/TipCoronaWarnApp.jsx:29
-#: src/components/screens/Tips.jsx:77
+#: src/components/screens/Tips.jsx:104
 #, fuzzy
 msgid "tips.corona-warn-app.headline"
 msgstr "ඔබේ අත් සේදීමෙන්"
@@ -824,7 +834,7 @@ msgid "tips.coughing-sneezing.list.item-5"
 msgstr "පසුව ඔබේ අත් සෝදන්න"
 
 #: src/components/screens/TipCoughingSneezing.jsx:34
-#: src/components/screens/Tips.jsx:98
+#: src/components/screens/Tips.jsx:125
 msgid "tips.coughing-sneezing.headline"
 msgstr "කැස්ස සහ කිවිසුම් යාම සඳහා නිසි ක්‍රමය"
 
@@ -833,7 +843,7 @@ msgid "tips.coughing-sneezing.text"
 msgstr "වෛරස් පැතිරීම වැළැක්වීම සඳහා කරුණාකර පහත සඳහන් කරුණු කෙරෙහි අවධානය යොමු කරන්න:"
 
 #: src/components/screens/TipDistanceAndMouthguard.jsx:20
-#: src/components/screens/Tips.jsx:81
+#: src/components/screens/Tips.jsx:108
 #, fuzzy
 msgid "tips.distance-and-mouthguard.headline"
 msgstr "මුඛාරක්ෂකය, ඔව් හෝ නැත?"
@@ -873,7 +883,7 @@ msgid "tips.mouthguard.list.item-4"
 msgstr "එය සෑම දිනකම කිහිප වතාවක් ප්‍රතිස්ථාපනය නොවේ"
 
 #: src/components/screens/TipMouthguard.jsx:29
-#: src/components/screens/Tips.jsx:93
+#: src/components/screens/Tips.jsx:120
 msgid "tips.mouthguard.headline"
 msgstr "මුඛාරක්ෂකය, ඔව් හෝ නැත?"
 
@@ -912,7 +922,7 @@ msgid "tips.not-feeling-well.list.item-4"
 msgstr "හුස්ම හිරවීම"
 
 #: src/components/screens/TipNotFeelingWell.jsx:25
-#: src/components/screens/Tips.jsx:102
+#: src/components/screens/Tips.jsx:129
 msgid "tips.not-feeling-well.headline"
 msgstr "මට සනීප නැහැ, මට කොරෝනා වයිරස් තිබේද?"
 
@@ -927,7 +937,7 @@ msgstr ""
 "පිළිබඳව ඔබ සැමවිටම ඔබව දැනුවත් කර ඔබේ වෛද්‍යවරයා අමතන්න."
 
 #: src/components/screens/TipReliableSources.jsx:20
-#: src/components/screens/Tips.jsx:111
+#: src/components/screens/Tips.jsx:138
 msgid "tips.reliable-sources.headline"
 msgstr "මට විශ්වාසදායක ප්‍රභවයන් සොයාගත හැක්කේ කොතැනින්ද?"
 
@@ -935,7 +945,7 @@ msgstr "මට විශ්වාසදායක ප්‍රභවයන් ස
 msgid "tips.reliable-sources.text"
 msgstr "තොරතුරු සහිත වෙබ් අඩවි"
 
-#: src/components/screens/Tips.jsx:124
+#: src/components/screens/Tips.jsx:163
 msgid "tips-screen.intro.text"
 msgstr ""
 "ආසාදනය වීමේ අවදානම හැකිතාක් දුරට අඩු කිරීමට සහ ආසාදනයක් ඇති වූ විට නිවැරදි දේ කිරීමට ඔබට "
@@ -962,7 +972,7 @@ msgid "tips.washing-hands.list.item-5"
 msgstr "පිරිසිදු තුවායක් හෝ වාතය භාවිතයෙන් ඔබේ දෑත් වියළා ගන්න."
 
 #: src/components/screens/TipWashingHands.jsx:26
-#: src/components/screens/Tips.jsx:85
+#: src/components/screens/Tips.jsx:112
 msgid "tips.washing-hands.headline"
 msgstr "ඔබේ අත් සේදීමෙන්"
 

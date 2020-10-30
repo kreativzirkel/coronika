@@ -208,7 +208,7 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Розпочати зараз"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:181
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:195
 msgid "about-screen.header.headline"
 msgstr "Про Короніку"
 
@@ -230,7 +230,9 @@ msgid "dashboard-screen.list.load-more"
 msgstr "завантажити ще"
 
 #: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:200
+#: src/components/screens/Menu.jsx:222
+#: src/components/screens/Overview/ui.jsx:107
+#: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
 msgstr "Меню"
 
@@ -272,30 +274,30 @@ msgstr ""
 "Дозвольте програмі отримувати доступ до контактів у налаштуваннях "
 "конфіденційності вашого пристрою."
 
-#: src/components/screens/Directory/ui.jsx:131
-msgid "directory-screen.header.button.import"
-msgstr "Імпорт"
-
-#: src/components/screens/Directory/ui.jsx:135
+#: src/components/screens/Directory/ui.jsx:132
 msgid "directory-screen.header.headline"
 msgstr "Управління каталогом"
 
-#: src/components/screens/Directory/ui.jsx:162
+#: src/components/screens/Directory/ui.jsx:138
+msgid "directory-screen.header.button.import"
+msgstr "Імпорт"
+
+#: src/components/screens/Directory/ui.jsx:165
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Імпорт осіб"
 
-#: src/components/screens/Directory/ui.jsx:168
+#: src/components/screens/Directory/ui.jsx:171
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Імпортуйте осіб із телефонної книги, щоб ви могли розпочати роботу відразу. "
 "Усі ваші особи зберігаються на місцях. Жодні дані не відстежуються та не "
 "передаються."
 
-#: src/components/screens/Directory/ui.jsx:174
+#: src/components/screens/Directory/ui.jsx:177
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Імпорт..."
 
-#: src/components/screens/Directory/ui.jsx:175
+#: src/components/screens/Directory/ui.jsx:178
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Імпортуйте зараз"
 
@@ -391,7 +393,7 @@ msgstr ""
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "Зберегти"
 
-#: src/components/screens/Legal.jsx:241 src/components/screens/Menu.jsx:189
+#: src/components/screens/Legal.jsx:241 src/components/screens/Menu.jsx:207
 msgid "legal-screen.header.headline"
 msgstr "Юридичні"
 
@@ -576,22 +578,30 @@ msgstr ""
 "авторських прав, повідомте нас про це. Якщо нам стане відомо про будь-які "
 "порушення, ми будемо негайно видаляти такий вміст."
 
-#: src/components/screens/Menu.jsx:185
+#: src/components/screens/Menu.jsx:199
+msgid "menu-screen.items.faq"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:203
 #: src/components/screens/Settings/ui.jsx:99
 msgid "settings-screen.header.headline"
 msgstr "Налаштування"
 
-#: src/components/screens/Menu.jsx:193
+#: src/components/screens/Menu.jsx:211
 msgid "menu-screen.items.share"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:205
+#: src/components/screens/Menu.jsx:215
+msgid "menu-screen.items.website"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:228
 msgid "menu-screen.intro.text"
 msgstr ""
 "Важливо не поширювати паніку, а створити чіткість і поширити правильну "
 "інформацію."
 
-#: src/components/screens/Menu.jsx:243
+#: src/components/screens/Menu.jsx:267
 msgid "menu-screen.button.send-feedback"
 msgstr "Надіслати відгук"
 
@@ -606,21 +616,21 @@ msgstr ""
 "Залишайтеся здоровими та не забувайте регулярно мити руки! ✋😉https://"
 "coronika.app/"
 
-#: src/components/screens/Overview/ui.jsx:118
-msgid "overview-screen.export.button"
-msgstr "Огляд експорту"
-
-#: src/components/screens/Overview/ui.jsx:76
-msgid "overview-screen.header.headline"
-msgstr "Огляд"
-
-#: src/components/screens/Overview/ui.jsx:94
+#: src/components/screens/Overview/ui.jsx:127
 msgid "overview-screen.persons.empty"
 msgstr ""
 
-#: src/components/screens/Overview/ui.jsx:95
+#: src/components/screens/Overview/ui.jsx:128
 msgid "overview-screen.locations.empty"
 msgstr ""
+
+#: src/components/screens/Overview/ui.jsx:152
+msgid "overview-screen.export.button"
+msgstr "Огляд експорту"
+
+#: src/components/screens/Overview/ui.jsx:99
+msgid "overview-screen.header.headline"
+msgstr "Огляд"
 
 #: src/components/screens/Settings/logic.js:162
 msgid "notifications.diary.headline"
@@ -730,7 +740,7 @@ msgstr "Нагадування про використання щоденник�
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "нагадуйте щодня"
 
-#: src/components/screens/Splash/ui.jsx:53
+#: src/components/screens/Splash.jsx:113
 msgid "splash-screen.supported-by.headline"
 msgstr ""
 
@@ -755,12 +765,12 @@ msgstr "Розкажіть про свій щоденник Coronika"
 #: src/components/screens/TipNotFeelingWell.jsx:22
 #: src/components/screens/TipReliableSources.jsx:17
 #: src/components/screens/TipWashingHands.jsx:23
-#: src/components/screens/Tips.jsx:119
+#: src/components/screens/Tips.jsx:147
 msgid "tips-screen.header.headline"
 msgstr "Поради щодо гігієни"
 
 #: src/components/screens/TipAmIInfected.jsx:24
-#: src/components/screens/Tips.jsx:107
+#: src/components/screens/Tips.jsx:134
 msgid "tips.am-i-infected.headline"
 msgstr "Побоюсь, що заразився коронавірусом, що я можу зробити?"
 
@@ -797,7 +807,7 @@ msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "Прикрвайте кашель і чхання ліктям або тканиною"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:28
-#: src/components/screens/Tips.jsx:89
+#: src/components/screens/Tips.jsx:116
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Уникайте натовпу людей"
 
@@ -815,7 +825,7 @@ msgid "tips.corona-warn-app.link.google-play.text"
 msgstr "Отримайте це на Google Play"
 
 #: src/components/screens/TipCoronaWarnApp.jsx:29
-#: src/components/screens/Tips.jsx:77
+#: src/components/screens/Tips.jsx:104
 #, fuzzy
 msgid "tips.corona-warn-app.headline"
 msgstr "Миття рук"
@@ -865,7 +875,7 @@ msgid "tips.coughing-sneezing.list.item-5"
 msgstr "мийте руки після цього"
 
 #: src/components/screens/TipCoughingSneezing.jsx:34
-#: src/components/screens/Tips.jsx:98
+#: src/components/screens/Tips.jsx:125
 msgid "tips.coughing-sneezing.headline"
 msgstr "сильний кашель і чхання"
 
@@ -874,7 +884,7 @@ msgid "tips.coughing-sneezing.text"
 msgstr "Щоб запобігти поширенню вірусів, зверніть увагу на:"
 
 #: src/components/screens/TipDistanceAndMouthguard.jsx:20
-#: src/components/screens/Tips.jsx:81
+#: src/components/screens/Tips.jsx:108
 #, fuzzy
 msgid "tips.distance-and-mouthguard.headline"
 msgstr "Носіння маски, так чи ні?"
@@ -916,7 +926,7 @@ msgid "tips.mouthguard.list.item-4"
 msgstr "не змінюється щодня"
 
 #: src/components/screens/TipMouthguard.jsx:29
-#: src/components/screens/Tips.jsx:93
+#: src/components/screens/Tips.jsx:120
 msgid "tips.mouthguard.headline"
 msgstr "Носіння маски, так чи ні?"
 
@@ -956,7 +966,7 @@ msgid "tips.not-feeling-well.list.item-4"
 msgstr "задишка"
 
 #: src/components/screens/TipNotFeelingWell.jsx:25
-#: src/components/screens/Tips.jsx:102
+#: src/components/screens/Tips.jsx:129
 msgid "tips.not-feeling-well.headline"
 msgstr "Я не почуваюся добре, чи є у мене вірус?"
 
@@ -971,7 +981,7 @@ msgstr ""
 "CoV-2. Ви завжди повинні інформувати про свої симптоми та викликати лікаря."
 
 #: src/components/screens/TipReliableSources.jsx:20
-#: src/components/screens/Tips.jsx:111
+#: src/components/screens/Tips.jsx:138
 msgid "tips.reliable-sources.headline"
 msgstr "Де можна знайти надійні джерела?"
 
@@ -979,7 +989,7 @@ msgstr "Де можна знайти надійні джерела?"
 msgid "tips.reliable-sources.text"
 msgstr "Інформаційні веб-сайти"
 
-#: src/components/screens/Tips.jsx:124
+#: src/components/screens/Tips.jsx:163
 msgid "tips-screen.intro.text"
 msgstr ""
 "Тут ви знайдете знання, які допомагають вам максимально знизити ризик "
@@ -1012,7 +1022,7 @@ msgid "tips.washing-hands.list.item-5"
 msgstr "Висушіть руки чистим рушником або висушіть їх на повітрі."
 
 #: src/components/screens/TipWashingHands.jsx:26
-#: src/components/screens/Tips.jsx:85
+#: src/components/screens/Tips.jsx:112
 msgid "tips.washing-hands.headline"
 msgstr "Миття рук"
 

@@ -207,7 +207,7 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Aloita nyt"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:181
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:195
 msgid "about-screen.header.headline"
 msgstr "Coronikasta"
 
@@ -229,7 +229,9 @@ msgid "dashboard-screen.list.load-more"
 msgstr "lataa lisää"
 
 #: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:200
+#: src/components/screens/Menu.jsx:222
+#: src/components/screens/Overview/ui.jsx:107
+#: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
 msgstr "Valikko"
 
@@ -271,29 +273,29 @@ msgstr ""
 "Anna sovelluksen käyttää laitteesi yksityisyysasetuksissa olevia "
 "yhteystietoja."
 
-#: src/components/screens/Directory/ui.jsx:131
-msgid "directory-screen.header.button.import"
-msgstr "Tuonti"
-
-#: src/components/screens/Directory/ui.jsx:135
+#: src/components/screens/Directory/ui.jsx:132
 msgid "directory-screen.header.headline"
 msgstr "Hallinnoi hakemistoa"
 
-#: src/components/screens/Directory/ui.jsx:162
+#: src/components/screens/Directory/ui.jsx:138
+msgid "directory-screen.header.button.import"
+msgstr "Tuonti"
+
+#: src/components/screens/Directory/ui.jsx:165
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Tuo yhteystietoja"
 
-#: src/components/screens/Directory/ui.jsx:168
+#: src/components/screens/Directory/ui.jsx:171
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Tuo yhteystietoja puhelimestasi, jotta voit aloittaa heti. Kaikki "
 "yhteystiedot varastoidaan paikallisesti. Tietoja ei seurata tai jaeta."
 
-#: src/components/screens/Directory/ui.jsx:174
+#: src/components/screens/Directory/ui.jsx:177
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Tuodaan ..."
 
-#: src/components/screens/Directory/ui.jsx:175
+#: src/components/screens/Directory/ui.jsx:178
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Tuo nyt"
 
@@ -385,7 +387,7 @@ msgstr ""
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "Tallenna"
 
-#: src/components/screens/Legal.jsx:241 src/components/screens/Menu.jsx:189
+#: src/components/screens/Legal.jsx:241 src/components/screens/Menu.jsx:207
 msgid "legal-screen.header.headline"
 msgstr "oikeudellinen"
 
@@ -574,22 +576,30 @@ msgstr ""
 "tekijänoikeusloukkauksia, ilmoita meille siitä. Jos saamme tietoomme "
 "rikkomuksia, poistamme tällaisen sisällön heti."
 
-#: src/components/screens/Menu.jsx:185
+#: src/components/screens/Menu.jsx:199
+msgid "menu-screen.items.faq"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:203
 #: src/components/screens/Settings/ui.jsx:99
 msgid "settings-screen.header.headline"
 msgstr "Asetukset"
 
-#: src/components/screens/Menu.jsx:193
+#: src/components/screens/Menu.jsx:211
 msgid "menu-screen.items.share"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:205
+#: src/components/screens/Menu.jsx:215
+msgid "menu-screen.items.website"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:228
 msgid "menu-screen.intro.text"
 msgstr ""
 "Tärkeää ei ole levittää paniikkia, vaan luoda selkeyttä ja levittää "
 "paikkansapitävää tietoa."
 
-#: src/components/screens/Menu.jsx:243
+#: src/components/screens/Menu.jsx:267
 msgid "menu-screen.button.send-feedback"
 msgstr "Lähetä palautetta"
 
@@ -602,21 +612,21 @@ msgstr ""
 "luotettavista lähteistä. Pysy terveenä ja muista pestä kätesi säännöllisesti!"
 "✋😉 https://coronika.app/"
 
-#: src/components/screens/Overview/ui.jsx:118
-msgid "overview-screen.export.button"
-msgstr "Vie yleiskatsaus"
-
-#: src/components/screens/Overview/ui.jsx:76
-msgid "overview-screen.header.headline"
-msgstr "Yleiskatsaus"
-
-#: src/components/screens/Overview/ui.jsx:94
+#: src/components/screens/Overview/ui.jsx:127
 msgid "overview-screen.persons.empty"
 msgstr ""
 
-#: src/components/screens/Overview/ui.jsx:95
+#: src/components/screens/Overview/ui.jsx:128
 msgid "overview-screen.locations.empty"
 msgstr ""
+
+#: src/components/screens/Overview/ui.jsx:152
+msgid "overview-screen.export.button"
+msgstr "Vie yleiskatsaus"
+
+#: src/components/screens/Overview/ui.jsx:99
+msgid "overview-screen.header.headline"
+msgstr "Yleiskatsaus"
 
 #: src/components/screens/Settings/logic.js:162
 msgid "notifications.diary.headline"
@@ -726,7 +736,7 @@ msgstr "Muistutus päiväkirjan käytöstä"
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "Muistuta päivittäin"
 
-#: src/components/screens/Splash/ui.jsx:53
+#: src/components/screens/Splash.jsx:113
 msgid "splash-screen.supported-by.headline"
 msgstr ""
 
@@ -751,12 +761,12 @@ msgstr "Kerro Coronika-päiväkirjastasi"
 #: src/components/screens/TipNotFeelingWell.jsx:22
 #: src/components/screens/TipReliableSources.jsx:17
 #: src/components/screens/TipWashingHands.jsx:23
-#: src/components/screens/Tips.jsx:119
+#: src/components/screens/Tips.jsx:147
 msgid "tips-screen.header.headline"
 msgstr "Hygieniavinkkejä"
 
 #: src/components/screens/TipAmIInfected.jsx:24
-#: src/components/screens/Tips.jsx:107
+#: src/components/screens/Tips.jsx:134
 msgid "tips.am-i-infected.headline"
 msgstr "Pelkään, että sain koronaviruksen, mitä voin tehdä?"
 
@@ -791,7 +801,7 @@ msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "Yski tai aivasta kyynärpäähäsi tai nenäliinaan."
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:28
-#: src/components/screens/Tips.jsx:89
+#: src/components/screens/Tips.jsx:116
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Vältä väkijoukkoja"
 
@@ -808,7 +818,7 @@ msgid "tips.corona-warn-app.link.google-play.text"
 msgstr "Get it on Google Play"
 
 #: src/components/screens/TipCoronaWarnApp.jsx:29
-#: src/components/screens/Tips.jsx:77
+#: src/components/screens/Tips.jsx:104
 msgid "tips.corona-warn-app.headline"
 msgstr ""
 
@@ -845,7 +855,7 @@ msgid "tips.coughing-sneezing.list.item-5"
 msgstr "Pese kädet jälkeenpäin"
 
 #: src/components/screens/TipCoughingSneezing.jsx:34
-#: src/components/screens/Tips.jsx:98
+#: src/components/screens/Tips.jsx:125
 msgid "tips.coughing-sneezing.headline"
 msgstr "Oikeanlainen yskiminen ja aivastelu"
 
@@ -854,7 +864,7 @@ msgid "tips.coughing-sneezing.text"
 msgstr "Estä virusten leviäminen kiinnittämällä huomiota:"
 
 #: src/components/screens/TipDistanceAndMouthguard.jsx:20
-#: src/components/screens/Tips.jsx:81
+#: src/components/screens/Tips.jsx:108
 msgid "tips.distance-and-mouthguard.headline"
 msgstr ""
 
@@ -883,7 +893,7 @@ msgid "tips.mouthguard.list.item-4"
 msgstr "Sitä ei vaihdeta päivittäin"
 
 #: src/components/screens/TipMouthguard.jsx:29
-#: src/components/screens/Tips.jsx:93
+#: src/components/screens/Tips.jsx:120
 msgid "tips.mouthguard.headline"
 msgstr "Suusuojus, kyllä ​​vai ei?"
 
@@ -924,7 +934,7 @@ msgid "tips.not-feeling-well.list.item-4"
 msgstr "hengenahdistus"
 
 #: src/components/screens/TipNotFeelingWell.jsx:25
-#: src/components/screens/Tips.jsx:102
+#: src/components/screens/Tips.jsx:129
 msgid "tips.not-feeling-well.headline"
 msgstr "En voi hyvin, onko minulla virus?"
 
@@ -940,7 +950,7 @@ msgstr ""
 "soittaa lääkärillesi."
 
 #: src/components/screens/TipReliableSources.jsx:20
-#: src/components/screens/Tips.jsx:111
+#: src/components/screens/Tips.jsx:138
 msgid "tips.reliable-sources.headline"
 msgstr "Mistä voin löytää luotettavia lähteitä?"
 
@@ -948,7 +958,7 @@ msgstr "Mistä voin löytää luotettavia lähteitä?"
 msgid "tips.reliable-sources.text"
 msgstr "Informatiiviset verkkosivustot"
 
-#: src/components/screens/Tips.jsx:124
+#: src/components/screens/Tips.jsx:163
 msgid "tips-screen.intro.text"
 msgstr ""
 "Täältä löydät tietoa, joka auttaa sinua vähentämään infektioriskiä "
@@ -978,7 +988,7 @@ msgid "tips.washing-hands.list.item-5"
 msgstr "Kuivaa kädet puhtaaseen pyyhkeeseen tai ilmakuivaa ne."
 
 #: src/components/screens/TipWashingHands.jsx:26
-#: src/components/screens/Tips.jsx:85
+#: src/components/screens/Tips.jsx:112
 msgid "tips.washing-hands.headline"
 msgstr "Käsien pesu"
 

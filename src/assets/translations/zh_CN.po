@@ -198,7 +198,7 @@ msgstr "Coronika创建和使用的所有数据都存储在本地，不会被跟�
 msgid "welcome-screen.slides.local-data.button"
 msgstr "现在开始"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:181
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:195
 msgid "about-screen.header.headline"
 msgstr "关于Coronika"
 
@@ -220,7 +220,9 @@ msgid "dashboard-screen.list.load-more"
 msgstr "装载更多"
 
 #: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:200
+#: src/components/screens/Menu.jsx:222
+#: src/components/screens/Overview/ui.jsx:107
+#: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
 msgstr "菜单"
 
@@ -258,29 +260,29 @@ msgstr "未获许可"
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
 msgstr "允许应用程序在设备的隐私设置中访问您的联系人。"
 
-#: src/components/screens/Directory/ui.jsx:131
-msgid "directory-screen.header.button.import"
-msgstr "导入"
-
-#: src/components/screens/Directory/ui.jsx:135
+#: src/components/screens/Directory/ui.jsx:132
 msgid "directory-screen.header.headline"
 msgstr "管理目录"
 
-#: src/components/screens/Directory/ui.jsx:162
+#: src/components/screens/Directory/ui.jsx:138
+msgid "directory-screen.header.button.import"
+msgstr "导入"
+
+#: src/components/screens/Directory/ui.jsx:165
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "导入联系人"
 
-#: src/components/screens/Directory/ui.jsx:168
+#: src/components/screens/Directory/ui.jsx:171
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "从电话簿中导入联系人，以便您可以立即开始。 您所有的联系人都存储在本地。数据不"
 "会被跟踪或共享。"
 
-#: src/components/screens/Directory/ui.jsx:174
+#: src/components/screens/Directory/ui.jsx:177
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "导入中..."
 
-#: src/components/screens/Directory/ui.jsx:175
+#: src/components/screens/Directory/ui.jsx:178
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "现在导入"
 
@@ -366,7 +368,7 @@ msgstr "带有您的总览的PDF文件已成功创建。您现在可以保存或
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "保存"
 
-#: src/components/screens/Legal.jsx:241 src/components/screens/Menu.jsx:189
+#: src/components/screens/Legal.jsx:241 src/components/screens/Menu.jsx:207
 msgid "legal-screen.header.headline"
 msgstr "法律方面"
 
@@ -527,20 +529,28 @@ msgstr ""
 "权。特别是，第三方的内容都会被标明。如果您发现有侵犯版权的情况，请及时通知我"
 "们。如果我们发现任何侵权行为，我们将立即删除这些内容。"
 
-#: src/components/screens/Menu.jsx:185
+#: src/components/screens/Menu.jsx:199
+msgid "menu-screen.items.faq"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:203
 #: src/components/screens/Settings/ui.jsx:99
 msgid "settings-screen.header.headline"
 msgstr "设置"
 
-#: src/components/screens/Menu.jsx:193
+#: src/components/screens/Menu.jsx:211
 msgid "menu-screen.items.share"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:205
+#: src/components/screens/Menu.jsx:215
+msgid "menu-screen.items.website"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:228
 msgid "menu-screen.intro.text"
 msgstr "重要的是，不要散布恐慌，而是要建立起真实信息的透明化，传递正确的信息。"
 
-#: src/components/screens/Menu.jsx:243
+#: src/components/screens/Menu.jsx:267
 msgid "menu-screen.button.send-feedback"
 msgstr "发送反馈信息"
 
@@ -553,21 +563,21 @@ msgstr ""
 "✅…从正规网站获取信息 来帮助您身边的人\n"
 "保持健康，不要忘记勤洗手！ ✋😉 https://coronika.app/"
 
-#: src/components/screens/Overview/ui.jsx:118
-msgid "overview-screen.export.button"
-msgstr "导出概要"
-
-#: src/components/screens/Overview/ui.jsx:76
-msgid "overview-screen.header.headline"
-msgstr "概要"
-
-#: src/components/screens/Overview/ui.jsx:94
+#: src/components/screens/Overview/ui.jsx:127
 msgid "overview-screen.persons.empty"
 msgstr ""
 
-#: src/components/screens/Overview/ui.jsx:95
+#: src/components/screens/Overview/ui.jsx:128
 msgid "overview-screen.locations.empty"
 msgstr ""
+
+#: src/components/screens/Overview/ui.jsx:152
+msgid "overview-screen.export.button"
+msgstr "导出概要"
+
+#: src/components/screens/Overview/ui.jsx:99
+msgid "overview-screen.header.headline"
+msgstr "概要"
 
 #: src/components/screens/Settings/logic.js:162
 msgid "notifications.diary.headline"
@@ -669,7 +679,7 @@ msgstr "提醒使用日记"
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "每日提醒"
 
-#: src/components/screens/Splash/ui.jsx:53
+#: src/components/screens/Splash.jsx:113
 msgid "splash-screen.supported-by.headline"
 msgstr ""
 
@@ -694,12 +704,12 @@ msgstr "讲述您的Coronika日记"
 #: src/components/screens/TipNotFeelingWell.jsx:22
 #: src/components/screens/TipReliableSources.jsx:17
 #: src/components/screens/TipWashingHands.jsx:23
-#: src/components/screens/Tips.jsx:119
+#: src/components/screens/Tips.jsx:147
 msgid "tips-screen.header.headline"
 msgstr "卫生提示"
 
 #: src/components/screens/TipAmIInfected.jsx:24
-#: src/components/screens/Tips.jsx:107
+#: src/components/screens/Tips.jsx:134
 msgid "tips.am-i-infected.headline"
 msgstr "担心自己得了新冠状病毒，该怎么办？"
 
@@ -732,7 +742,7 @@ msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "用肘部或纸巾遮住咳嗽和打喷嚏"
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:28
-#: src/components/screens/Tips.jsx:89
+#: src/components/screens/Tips.jsx:116
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "避免人群拥挤"
 
@@ -747,7 +757,7 @@ msgid "tips.corona-warn-app.link.google-play.text"
 msgstr "在Google Play上获取"
 
 #: src/components/screens/TipCoronaWarnApp.jsx:29
-#: src/components/screens/Tips.jsx:77
+#: src/components/screens/Tips.jsx:104
 #, fuzzy
 msgid "tips.corona-warn-app.headline"
 msgstr "正确的洗手"
@@ -794,7 +804,7 @@ msgid "tips.coughing-sneezing.list.item-5"
 msgstr "然后要洗手"
 
 #: src/components/screens/TipCoughingSneezing.jsx:34
-#: src/components/screens/Tips.jsx:98
+#: src/components/screens/Tips.jsx:125
 msgid "tips.coughing-sneezing.headline"
 msgstr "正确的咳嗽和打喷嚏"
 
@@ -803,7 +813,7 @@ msgid "tips.coughing-sneezing.text"
 msgstr "为防止病毒传播，请注意："
 
 #: src/components/screens/TipDistanceAndMouthguard.jsx:20
-#: src/components/screens/Tips.jsx:81
+#: src/components/screens/Tips.jsx:108
 #, fuzzy
 msgid "tips.distance-and-mouthguard.headline"
 msgstr "戴口罩，需要还是不需要？"
@@ -841,7 +851,7 @@ msgid "tips.mouthguard.list.item-4"
 msgstr "没有多次更换"
 
 #: src/components/screens/TipMouthguard.jsx:29
-#: src/components/screens/Tips.jsx:93
+#: src/components/screens/Tips.jsx:120
 msgid "tips.mouthguard.headline"
 msgstr "戴口罩，需要还是不需要？"
 
@@ -878,7 +888,7 @@ msgid "tips.not-feeling-well.list.item-4"
 msgstr "呼吸急促"
 
 #: src/components/screens/TipNotFeelingWell.jsx:25
-#: src/components/screens/Tips.jsx:102
+#: src/components/screens/Tips.jsx:129
 msgid "tips.not-feeling-well.headline"
 msgstr "我感觉不舒服，我有病毒吗？"
 
@@ -893,7 +903,7 @@ msgstr ""
 "症状并打电话给医生。"
 
 #: src/components/screens/TipReliableSources.jsx:20
-#: src/components/screens/Tips.jsx:111
+#: src/components/screens/Tips.jsx:138
 msgid "tips.reliable-sources.headline"
 msgstr "在哪里可以找到可靠的信息？"
 
@@ -901,7 +911,7 @@ msgstr "在哪里可以找到可靠的信息？"
 msgid "tips.reliable-sources.text"
 msgstr "消息丰富的网站"
 
-#: src/components/screens/Tips.jsx:124
+#: src/components/screens/Tips.jsx:163
 msgid "tips-screen.intro.text"
 msgstr "在这里，您可以找到有助于减少感染风险并在感染时采取正确措施的知识。"
 
@@ -926,7 +936,7 @@ msgid "tips.washing-hands.list.item-5"
 msgstr "用干净的毛巾擦干双手或风干。"
 
 #: src/components/screens/TipWashingHands.jsx:26
-#: src/components/screens/Tips.jsx:85
+#: src/components/screens/Tips.jsx:112
 msgid "tips.washing-hands.headline"
 msgstr "正确的洗手"
 

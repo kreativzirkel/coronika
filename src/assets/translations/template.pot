@@ -196,7 +196,7 @@ msgid "welcome-screen.slides.local-data.button"
 msgstr ""
 
 #: src/components/screens/About.jsx:66
-#: src/components/screens/Menu.jsx:181
+#: src/components/screens/Menu.jsx:195
 msgid "about-screen.header.headline"
 msgstr ""
 
@@ -218,7 +218,9 @@ msgid "dashboard-screen.list.load-more"
 msgstr ""
 
 #: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:200
+#: src/components/screens/Menu.jsx:222
+#: src/components/screens/Overview/ui.jsx:107
+#: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
 msgstr ""
 
@@ -256,27 +258,27 @@ msgstr ""
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
 msgstr ""
 
-#: src/components/screens/Directory/ui.jsx:131
-msgid "directory-screen.header.button.import"
-msgstr ""
-
-#: src/components/screens/Directory/ui.jsx:135
+#: src/components/screens/Directory/ui.jsx:132
 msgid "directory-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/Directory/ui.jsx:162
+#: src/components/screens/Directory/ui.jsx:138
+msgid "directory-screen.header.button.import"
+msgstr ""
+
+#: src/components/screens/Directory/ui.jsx:165
 msgid "directory-screen.modals.import-persons.headline"
 msgstr ""
 
-#: src/components/screens/Directory/ui.jsx:168
+#: src/components/screens/Directory/ui.jsx:171
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 
-#: src/components/screens/Directory/ui.jsx:174
+#: src/components/screens/Directory/ui.jsx:177
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr ""
 
-#: src/components/screens/Directory/ui.jsx:175
+#: src/components/screens/Directory/ui.jsx:178
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr ""
 
@@ -363,7 +365,7 @@ msgid "export-screen.modals.export-completed.button.save"
 msgstr ""
 
 #: src/components/screens/Legal.jsx:241
-#: src/components/screens/Menu.jsx:189
+#: src/components/screens/Menu.jsx:207
 msgid "legal-screen.header.headline"
 msgstr ""
 
@@ -499,20 +501,28 @@ msgstr ""
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:185
+#: src/components/screens/Menu.jsx:199
+msgid "menu-screen.items.faq"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:203
 #: src/components/screens/Settings/ui.jsx:99
 msgid "settings-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:193
+#: src/components/screens/Menu.jsx:211
 msgid "menu-screen.items.share"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:205
+#: src/components/screens/Menu.jsx:215
+msgid "menu-screen.items.website"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:228
 msgid "menu-screen.intro.text"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:243
+#: src/components/screens/Menu.jsx:267
 msgid "menu-screen.button.send-feedback"
 msgstr ""
 
@@ -520,20 +530,20 @@ msgstr ""
 msgid "app.share.message"
 msgstr ""
 
-#: src/components/screens/Overview/ui.jsx:118
-msgid "overview-screen.export.button"
-msgstr ""
-
-#: src/components/screens/Overview/ui.jsx:76
-msgid "overview-screen.header.headline"
-msgstr ""
-
-#: src/components/screens/Overview/ui.jsx:94
+#: src/components/screens/Overview/ui.jsx:127
 msgid "overview-screen.persons.empty"
 msgstr ""
 
-#: src/components/screens/Overview/ui.jsx:95
+#: src/components/screens/Overview/ui.jsx:128
 msgid "overview-screen.locations.empty"
+msgstr ""
+
+#: src/components/screens/Overview/ui.jsx:152
+msgid "overview-screen.export.button"
+msgstr ""
+
+#: src/components/screens/Overview/ui.jsx:99
+msgid "overview-screen.header.headline"
 msgstr ""
 
 #: src/components/screens/Settings/logic.js:162
@@ -636,7 +646,7 @@ msgstr ""
 msgid "settings-screen.notifications.diary.option.label"
 msgstr ""
 
-#: src/components/screens/Splash/ui.jsx:53
+#: src/components/screens/Splash.jsx:113
 msgid "splash-screen.supported-by.headline"
 msgstr ""
 
@@ -661,12 +671,12 @@ msgstr ""
 #: src/components/screens/TipNotFeelingWell.jsx:22
 #: src/components/screens/TipReliableSources.jsx:17
 #: src/components/screens/TipWashingHands.jsx:23
-#: src/components/screens/Tips.jsx:119
+#: src/components/screens/Tips.jsx:147
 msgid "tips-screen.header.headline"
 msgstr ""
 
 #: src/components/screens/TipAmIInfected.jsx:24
-#: src/components/screens/Tips.jsx:107
+#: src/components/screens/Tips.jsx:134
 msgid "tips.am-i-infected.headline"
 msgstr ""
 
@@ -695,7 +705,7 @@ msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr ""
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:28
-#: src/components/screens/Tips.jsx:89
+#: src/components/screens/Tips.jsx:116
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr ""
 
@@ -708,7 +718,7 @@ msgid "tips.corona-warn-app.link.google-play.text"
 msgstr ""
 
 #: src/components/screens/TipCoronaWarnApp.jsx:29
-#: src/components/screens/Tips.jsx:77
+#: src/components/screens/Tips.jsx:104
 msgid "tips.corona-warn-app.headline"
 msgstr ""
 
@@ -745,7 +755,7 @@ msgid "tips.coughing-sneezing.list.item-5"
 msgstr ""
 
 #: src/components/screens/TipCoughingSneezing.jsx:34
-#: src/components/screens/Tips.jsx:98
+#: src/components/screens/Tips.jsx:125
 msgid "tips.coughing-sneezing.headline"
 msgstr ""
 
@@ -754,7 +764,7 @@ msgid "tips.coughing-sneezing.text"
 msgstr ""
 
 #: src/components/screens/TipDistanceAndMouthguard.jsx:20
-#: src/components/screens/Tips.jsx:81
+#: src/components/screens/Tips.jsx:108
 msgid "tips.distance-and-mouthguard.headline"
 msgstr ""
 
@@ -783,7 +793,7 @@ msgid "tips.mouthguard.list.item-4"
 msgstr ""
 
 #: src/components/screens/TipMouthguard.jsx:29
-#: src/components/screens/Tips.jsx:93
+#: src/components/screens/Tips.jsx:120
 msgid "tips.mouthguard.headline"
 msgstr ""
 
@@ -816,7 +826,7 @@ msgid "tips.not-feeling-well.list.item-4"
 msgstr ""
 
 #: src/components/screens/TipNotFeelingWell.jsx:25
-#: src/components/screens/Tips.jsx:102
+#: src/components/screens/Tips.jsx:129
 msgid "tips.not-feeling-well.headline"
 msgstr ""
 
@@ -829,7 +839,7 @@ msgid "tips.not-feeling-well.text"
 msgstr ""
 
 #: src/components/screens/TipReliableSources.jsx:20
-#: src/components/screens/Tips.jsx:111
+#: src/components/screens/Tips.jsx:138
 msgid "tips.reliable-sources.headline"
 msgstr ""
 
@@ -837,7 +847,7 @@ msgstr ""
 msgid "tips.reliable-sources.text"
 msgstr ""
 
-#: src/components/screens/Tips.jsx:124
+#: src/components/screens/Tips.jsx:163
 msgid "tips-screen.intro.text"
 msgstr ""
 
@@ -862,7 +872,7 @@ msgid "tips.washing-hands.list.item-5"
 msgstr ""
 
 #: src/components/screens/TipWashingHands.jsx:26
-#: src/components/screens/Tips.jsx:85
+#: src/components/screens/Tips.jsx:112
 msgid "tips.washing-hands.headline"
 msgstr ""
 

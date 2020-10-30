@@ -207,7 +207,7 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Comienza ahora"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:181
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:195
 msgid "about-screen.header.headline"
 msgstr "Sobre Coronika"
 
@@ -229,7 +229,9 @@ msgid "dashboard-screen.list.load-more"
 msgstr "carga más"
 
 #: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:200
+#: src/components/screens/Menu.jsx:222
+#: src/components/screens/Overview/ui.jsx:107
+#: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
 msgstr "Menú"
 
@@ -270,30 +272,30 @@ msgstr ""
 "Permita que la aplicación acceda a los contactos en la configuración de "
 "privacidad de su dispositivo."
 
-#: src/components/screens/Directory/ui.jsx:131
-msgid "directory-screen.header.button.import"
-msgstr "Importación"
-
-#: src/components/screens/Directory/ui.jsx:135
+#: src/components/screens/Directory/ui.jsx:132
 msgid "directory-screen.header.headline"
 msgstr "Administrar el directorio"
 
-#: src/components/screens/Directory/ui.jsx:162
+#: src/components/screens/Directory/ui.jsx:138
+msgid "directory-screen.header.button.import"
+msgstr "Importación"
+
+#: src/components/screens/Directory/ui.jsx:165
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Personas importadas"
 
-#: src/components/screens/Directory/ui.jsx:168
+#: src/components/screens/Directory/ui.jsx:171
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Importa contactos de tu agenda telefónica para que puedas empezar de "
 "inmediato. Todos tus contactos están almacenadas localmente. No se rastreará "
 "ni se compartirá ningún dato."
 
-#: src/components/screens/Directory/ui.jsx:174
+#: src/components/screens/Directory/ui.jsx:177
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Importar..."
 
-#: src/components/screens/Directory/ui.jsx:175
+#: src/components/screens/Directory/ui.jsx:178
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Importar ahora"
 
@@ -391,7 +393,7 @@ msgstr ""
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "Guardar"
 
-#: src/components/screens/Legal.jsx:241 src/components/screens/Menu.jsx:189
+#: src/components/screens/Legal.jsx:241 src/components/screens/Menu.jsx:207
 msgid "legal-screen.header.headline"
 msgstr "Legal"
 
@@ -587,22 +589,30 @@ msgstr ""
 "tenemos conocimiento de alguna infracción, eliminaremos dichos contenidos "
 "inmediatamente."
 
-#: src/components/screens/Menu.jsx:185
+#: src/components/screens/Menu.jsx:199
+msgid "menu-screen.items.faq"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:203
 #: src/components/screens/Settings/ui.jsx:99
 msgid "settings-screen.header.headline"
 msgstr "Ajustes"
 
-#: src/components/screens/Menu.jsx:193
+#: src/components/screens/Menu.jsx:211
 msgid "menu-screen.items.share"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:205
+#: src/components/screens/Menu.jsx:215
+msgid "menu-screen.items.website"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:228
 msgid "menu-screen.intro.text"
 msgstr ""
 "Es importante no propagar el pánico, sino crear claridad y difundir "
 "información correcta."
 
-#: src/components/screens/Menu.jsx:243
+#: src/components/screens/Menu.jsx:267
 msgid "menu-screen.button.send-feedback"
 msgstr "Envíe sus comentarios."
 
@@ -617,21 +627,21 @@ msgstr ""
 "¡Mantente sano y recuerda lavarte las manos regularmente! ✋😉 https://"
 "coronika.app/"
 
-#: src/components/screens/Overview/ui.jsx:118
-msgid "overview-screen.export.button"
-msgstr "Resumen de la exportación"
-
-#: src/components/screens/Overview/ui.jsx:76
-msgid "overview-screen.header.headline"
-msgstr "Visión general"
-
-#: src/components/screens/Overview/ui.jsx:94
+#: src/components/screens/Overview/ui.jsx:127
 msgid "overview-screen.persons.empty"
 msgstr ""
 
-#: src/components/screens/Overview/ui.jsx:95
+#: src/components/screens/Overview/ui.jsx:128
 msgid "overview-screen.locations.empty"
 msgstr ""
+
+#: src/components/screens/Overview/ui.jsx:152
+msgid "overview-screen.export.button"
+msgstr "Resumen de la exportación"
+
+#: src/components/screens/Overview/ui.jsx:99
+msgid "overview-screen.header.headline"
+msgstr "Visión general"
 
 #: src/components/screens/Settings/logic.js:162
 msgid "notifications.diary.headline"
@@ -741,7 +751,7 @@ msgstr "Recordatorio para usar el diario"
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "recuerda a diario"
 
-#: src/components/screens/Splash/ui.jsx:53
+#: src/components/screens/Splash.jsx:113
 msgid "splash-screen.supported-by.headline"
 msgstr ""
 
@@ -766,12 +776,12 @@ msgstr "Háblanos de tu diario de Coronika"
 #: src/components/screens/TipNotFeelingWell.jsx:22
 #: src/components/screens/TipReliableSources.jsx:17
 #: src/components/screens/TipWashingHands.jsx:23
-#: src/components/screens/Tips.jsx:119
+#: src/components/screens/Tips.jsx:147
 msgid "tips-screen.header.headline"
 msgstr "Consejos de higiene"
 
 #: src/components/screens/TipAmIInfected.jsx:24
-#: src/components/screens/Tips.jsx:107
+#: src/components/screens/Tips.jsx:134
 msgid "tips.am-i-infected.headline"
 msgstr "Me temo que tengo el coronavirus, ¿qué puedo hacer?"
 
@@ -810,7 +820,7 @@ msgid "tips.avoid-crowds-of-people.list.item-5"
 msgstr "cubriendo tus toses y estornudos con el codo o un pañuelo."
 
 #: src/components/screens/TipAvoidCrowdsOfPeople.jsx:28
-#: src/components/screens/Tips.jsx:89
+#: src/components/screens/Tips.jsx:116
 msgid "tips.avoid-crowds-of-people.headline"
 msgstr "Evita las multitudes de personas"
 
@@ -828,7 +838,7 @@ msgid "tips.corona-warn-app.link.google-play.text"
 msgstr "Disponible en Google Play"
 
 #: src/components/screens/TipCoronaWarnApp.jsx:29
-#: src/components/screens/Tips.jsx:77
+#: src/components/screens/Tips.jsx:104
 msgid "tips.corona-warn-app.headline"
 msgstr ""
 
@@ -867,7 +877,7 @@ msgid "tips.coughing-sneezing.list.item-5"
 msgstr "Lávate las manos después."
 
 #: src/components/screens/TipCoughingSneezing.jsx:34
-#: src/components/screens/Tips.jsx:98
+#: src/components/screens/Tips.jsx:125
 msgid "tips.coughing-sneezing.headline"
 msgstr "Toser y estornudar de manera adecuada"
 
@@ -876,7 +886,7 @@ msgid "tips.coughing-sneezing.text"
 msgstr "Para evitar la propagación del virus, por favor, preste atención a..:"
 
 #: src/components/screens/TipDistanceAndMouthguard.jsx:20
-#: src/components/screens/Tips.jsx:81
+#: src/components/screens/Tips.jsx:108
 msgid "tips.distance-and-mouthguard.headline"
 msgstr ""
 
@@ -905,7 +915,7 @@ msgid "tips.mouthguard.list.item-4"
 msgstr "no se cambia diariamente"
 
 #: src/components/screens/TipMouthguard.jsx:29
-#: src/components/screens/Tips.jsx:93
+#: src/components/screens/Tips.jsx:120
 msgid "tips.mouthguard.headline"
 msgstr "Protector bucal, ¿sí o no?"
 
@@ -945,7 +955,7 @@ msgid "tips.not-feeling-well.list.item-4"
 msgstr "falta de aliento..."
 
 #: src/components/screens/TipNotFeelingWell.jsx:25
-#: src/components/screens/Tips.jsx:102
+#: src/components/screens/Tips.jsx:129
 msgid "tips.not-feeling-well.headline"
 msgstr "No me siento bien, ¿tengo el virus?"
 
@@ -961,7 +971,7 @@ msgstr ""
 "síntomas y llamar a su médico."
 
 #: src/components/screens/TipReliableSources.jsx:20
-#: src/components/screens/Tips.jsx:111
+#: src/components/screens/Tips.jsx:138
 msgid "tips.reliable-sources.headline"
 msgstr "¿Dónde puedo encontrar fuentes fiables?"
 
@@ -969,7 +979,7 @@ msgstr "¿Dónde puedo encontrar fuentes fiables?"
 msgid "tips.reliable-sources.text"
 msgstr "Sitios web informativos"
 
-#: src/components/screens/Tips.jsx:124
+#: src/components/screens/Tips.jsx:163
 msgid "tips-screen.intro.text"
 msgstr ""
 "Aquí encontrarás conocimientos que te ayudarán a reducir el riesgo de "
@@ -1003,7 +1013,7 @@ msgid "tips.washing-hands.list.item-5"
 msgstr "Sécate las manos con una toalla limpia o déjalas secar al aire."
 
 #: src/components/screens/TipWashingHands.jsx:26
-#: src/components/screens/Tips.jsx:85
+#: src/components/screens/Tips.jsx:112
 msgid "tips.washing-hands.headline"
 msgstr "Lavarse las manos"
 

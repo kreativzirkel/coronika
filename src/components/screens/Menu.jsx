@@ -2,7 +2,7 @@ import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import UilArrowRight from '@iconscout/react-native-unicons/icons/uil-arrow-right';
 import UilHeart from '@iconscout/react-native-unicons/icons/uil-heart';
 import React from 'react';
-import { Linking, Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Linking, ScrollView, Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { version } from '../../config';
 import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
@@ -53,10 +53,18 @@ class Menu extends React.Component {
   }
 
   onPressMenuItem(routeName) {
-    if (routeName === 'Share') {
-      this.shareApp();
-    } else {
-      this.props.navigation.navigate(routeName);
+    switch (routeName) {
+      case 'FAQ':
+        Linking.openURL('https://www.coronika.app/faqs').catch(() => {});
+        break;
+      case 'Share':
+        this.shareApp();
+        break;
+      case 'Website':
+        Linking.openURL('https://www.coronika.app/').catch(() => {});
+        break;
+      default:
+        this.props.navigation.navigate(routeName);
     }
   }
 
@@ -69,7 +77,7 @@ class Menu extends React.Component {
     feedbackButton: {
       color: COLOR_PRIMARY,
       fontFamily: this.props.fontFamilyBold,
-      fontSize: this.props.vw(6),
+      fontSize: this.props.vw(5.5),
       textAlign: 'center',
     },
     madeByButton: {
@@ -103,25 +111,28 @@ class Menu extends React.Component {
       justifyContent: 'space-between',
       marginTop: this.props.vw(2.3),
       padding: this.props.vw(3),
-      paddingBottom: this.props.vw(3.8),
-      paddingTop: this.props.vw(3.8),
     },
     view: {
       flex: 1,
       flexDirection: 'column',
       justifyContent: 'space-between',
       padding: this.props.vw(2.5),
+      paddingBottom: this.props.vw(1),
       width: '100%',
     },
     viewInner: {
       flex: 1,
       width: '100%',
     },
+    viewInnerContent: {
+      height: '100%',
+    },
     viewBottom: {
       alignItems: 'center',
       flexDirection: 'column',
       justifyContent: 'center',
-      marginBottom: this.props.vw(5),
+      paddingBottom: this.props.vw(3),
+      paddingTop: this.props.vw(3),
       width: '100%',
     },
     viewContent: {
@@ -129,8 +140,7 @@ class Menu extends React.Component {
       width: '100%',
     },
     viewContentList: {
-      marginBottom: this.props.vw(10),
-      marginTop: this.props.vw(4),
+      marginTop: this.props.vw(2),
     },
     viewContentText: {
       paddingLeft: this.props.vw(2.5),
@@ -141,7 +151,7 @@ class Menu extends React.Component {
       alignItems: 'center',
       flexDirection: 'row',
       justifyContent: 'center',
-      marginBottom: this.props.vw(3),
+      marginBottom: this.props.vw(1),
       width: '100%',
     },
     viewMadeByBottom: {
@@ -174,12 +184,20 @@ class Menu extends React.Component {
         ...this.styles.view,
         backgroundColor: colors.BACKGROUND,
       },
+      viewInnerContent: {
+        ...this.styles.viewInnerContent,
+        backgroundColor: colors.BACKGROUND,
+      },
     };
 
     const menuItems = [
       {
         headline: __('about-screen.header.headline'),
         routeName: 'About',
+      },
+      {
+        headline: __('menu-screen.items.faq'),
+        routeName: 'FAQ',
       },
       {
         headline: __('settings-screen.header.headline'),
@@ -193,6 +211,10 @@ class Menu extends React.Component {
         headline: __('menu-screen.items.share'),
         routeName: 'Share',
       },
+      {
+        headline: __('menu-screen.items.website'),
+        routeName: 'Website',
+      },
     ];
 
     return (
@@ -201,30 +223,32 @@ class Menu extends React.Component {
 
         <View style={styles.view}>
           <View style={styles.viewInner}>
-            <View style={{ ...styles.viewContent, ...styles.viewContentText }}>
-              <Text style={styles.contentText}>{__('menu-screen.intro.text')}</Text>
-            </View>
+            <ScrollView style={styles.viewInnerContent}>
+              <View style={{ ...styles.viewContent, ...styles.viewContentText }}>
+                <Text style={styles.contentText}>{__('menu-screen.intro.text')}</Text>
+              </View>
 
-            <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
-              {menuItems.map(({ headline, routeName }, index) => (
-                <TouchableOpacity
-                  key={`menu-item-${index}`}
-                  onPress={() => this.onPressMenuItem(routeName)}
-                  style={styles.menuItemWrapper}>
-                  <View style={styles.menuItemTextWrapper}>
-                    <Text style={styles.menuItemText}>{headline}</Text>
-                  </View>
+              <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
+                {menuItems.map(({ headline, routeName }, index) => (
+                  <TouchableOpacity
+                    key={`menu-item-${index}`}
+                    onPress={() => this.onPressMenuItem(routeName)}
+                    style={styles.menuItemWrapper}>
+                    <View style={styles.menuItemTextWrapper}>
+                      <Text style={styles.menuItemText}>{headline}</Text>
+                    </View>
 
-                  <View style={styles.menuItemIcon}>
-                    {isRTL ? (
-                      <UilArrowLeft size={vw(11)} color={COLOR_PRIMARY} />
-                    ) : (
-                      <UilArrowRight size={vw(11)} color={COLOR_PRIMARY} />
-                    )}
-                  </View>
-                </TouchableOpacity>
-              ))}
-            </View>
+                    <View style={styles.menuItemIcon}>
+                      {isRTL ? (
+                        <UilArrowLeft size={vw(9)} color={COLOR_PRIMARY} />
+                      ) : (
+                        <UilArrowRight size={vw(9)} color={COLOR_PRIMARY} />
+                      )}
+                    </View>
+                  </TouchableOpacity>
+                ))}
+              </View>
+            </ScrollView>
           </View>
 
           <View style={styles.viewBottom}>
