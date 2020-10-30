@@ -91,8 +91,8 @@ const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamil
         </View>
 
         <EntriesTabsView
-          customPersonsEmptyText={' '}
-          customLocationsEmptyText={' '}
+          customPersonsEmptyText={__('overview-screen.persons.empty')}
+          customLocationsEmptyText={__('overview-screen.locations.empty')}
           disableDeleteImportedPersons
           hideCreateButton
           locations={locations}

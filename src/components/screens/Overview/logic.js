@@ -73,12 +73,9 @@ const mapStateToProps = ({
   const persons = {};
 
   const daysSorted = Object.values(days).sort((a, b) => {
-    if (a.timestamp < b.timestamp) {
-      return 1;
-    }
-    if (a.timestamp > b.timestamp) {
-      return -1;
-    }
+    if (a.timestamp < b.timestamp) return 1;
+
+    if (a.timestamp > b.timestamp) return -1;
 
     return 0;
   });

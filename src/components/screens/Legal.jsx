@@ -108,7 +108,7 @@ class Legal extends React.Component {
     return (
       <View style={{ ...this.styles.licenseItem, backgroundColor: colors.SECONDARY }}>
         <TouchableOpacity onPress={() => this.openLink(repository)} style={this.styles.licenseItemLink}>
-          <UilExternalLinkAlt color={COLOR_PRIMARY} size={vw(6)} />
+          <UilExternalLinkAlt color={COLOR_PRIMARY} size={vw(5.5)} />
         </TouchableOpacity>
         <Text style={{ ...this.styles.licenseItemName, color: colors.TEXT }}>{name}</Text>
         <View style={this.styles.licenseItemContent}>
@@ -159,14 +159,14 @@ class Legal extends React.Component {
       marginRight: this.props.vw(2.5),
       marginTop: this.props.vw(2.3),
       padding: this.props.vw(3),
-      paddingBottom: this.props.vw(3.8),
+      paddingBottom: this.props.vw(2.5),
       paddingRight: this.props.vw(13),
-      paddingTop: this.props.vw(3.8),
+      paddingTop: this.props.vw(2.5),
     },
     licenseItemName: {
       fontFamily: this.props.fontFamilyBold,
-      fontSize: this.props.vw(4),
-      lineHeight: this.props.vw(5),
+      fontSize: this.props.vw(3.6),
+      lineHeight: this.props.vw(4.7),
     },
     licenseItemLicense: {
       alignSelf: 'flex-start',
@@ -177,7 +177,7 @@ class Legal extends React.Component {
     },
     licenseItemContentText: {
       fontFamily: this.props.fontFamilyRegular,
-      fontSize: this.props.vw(3.8),
+      fontSize: this.props.vw(3.2),
     },
     licenseItemLink: {
       alignItems: 'center',

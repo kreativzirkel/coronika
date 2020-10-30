@@ -629,6 +629,14 @@ msgstr "Aperçu des exportations"
 msgid "overview-screen.header.headline"
 msgstr "Vue d'ensemble"
 
+#: src/components/screens/Overview/ui.jsx:94
+msgid "overview-screen.persons.empty"
+msgstr ""
+
+#: src/components/screens/Overview/ui.jsx:95
+msgid "overview-screen.locations.empty"
+msgstr ""
+
 #: src/components/screens/Settings/logic.js:162
 msgid "notifications.diary.headline"
 msgstr "📒 Enregistre vos contacts"
@@ -738,6 +746,10 @@ msgstr "Rappel d'utiliser le journal intime"
 #: src/components/screens/Settings/ui.jsx:149
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "rappeler quotidiennement"
+
+#: src/components/screens/Splash/ui.jsx:53
+msgid "splash-screen.supported-by.headline"
+msgstr ""
 
 #: src/components/screens/TipAmIInfected.jsx:14
 msgid "tips.am-i-infected.list.item-1"

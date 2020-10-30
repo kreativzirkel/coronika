@@ -58,11 +58,11 @@ class Dashboard extends React.Component {
       paddingBottom: this.props.vw(2),
     },
     headerButtonsItemIconMenu: {
-      marginTop: this.props.vw(0.4),
+      marginTop: this.props.vw(0.6),
     },
     headerButtonsItemText: {
       fontFamily: this.props.fontFamilyRegular,
-      fontSize: this.props.vw(3.8),
+      fontSize: this.props.vw(4.2),
       marginLeft: this.props.vw(1),
       textTransform: 'lowercase',
     },
@@ -205,7 +205,7 @@ class Dashboard extends React.Component {
 
               <View style={this.styles.headerButtons}>
                 <TouchableOpacity onPress={this.openMenu} style={this.styles.headerButtonsItem}>
-                  <UilBars color={colors.TEXT} size={vw(4.6)} style={this.styles.headerButtonsItemIconMenu} />
+                  <UilBars color={colors.TEXT} size={vw(4.8)} style={this.styles.headerButtonsItemIconMenu} />
 
                   <Text style={{ ...this.styles.headerButtonsItemText, color: colors.TEXT }}>
                     {__('menu-screen.header.headline')}

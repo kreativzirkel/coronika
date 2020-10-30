@@ -63,24 +63,18 @@ const personsSortingFunction = (a, b) => {
 };
 
 const locationsSortingFunction = (a, b) => {
-  const titleA = a.title.toLowerCase();
-  const titleB = b.title.toLowerCase();
-  if (titleA < titleB) {
-    return -1;
-  }
-  if (titleA > titleB) {
-    return 1;
-  }
-
   const timestampA = a.timestamp || 0;
   const timestampB = b.timestamp || 0;
 
-  if (timestampA < timestampB) {
-    return -1;
-  }
-  if (timestampA > timestampB) {
-    return 1;
-  }
+  if (timestampA < timestampB) return -1;
+
+  if (timestampA > timestampB) return 1;
+
+  const titleA = a.title.toLowerCase();
+  const titleB = b.title.toLowerCase();
+  if (titleA < titleB) return -1;
+
+  if (titleA > titleB) return 1;
 
   return 0;
 };

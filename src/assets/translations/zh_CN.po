@@ -561,6 +561,14 @@ msgstr "导出概要"
 msgid "overview-screen.header.headline"
 msgstr "概要"
 
+#: src/components/screens/Overview/ui.jsx:94
+msgid "overview-screen.persons.empty"
+msgstr ""
+
+#: src/components/screens/Overview/ui.jsx:95
+msgid "overview-screen.locations.empty"
+msgstr ""
+
 #: src/components/screens/Settings/logic.js:162
 msgid "notifications.diary.headline"
 msgstr "📒 添加您的联系人"
@@ -660,6 +668,10 @@ msgstr "提醒使用日记"
 #: src/components/screens/Settings/ui.jsx:149
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "每日提醒"
+
+#: src/components/screens/Splash/ui.jsx:53
+msgid "splash-screen.supported-by.headline"
+msgstr ""
 
 #: src/components/screens/TipAmIInfected.jsx:14
 msgid "tips.am-i-infected.list.item-1"

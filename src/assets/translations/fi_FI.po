@@ -610,6 +610,14 @@ msgstr "Vie yleiskatsaus"
 msgid "overview-screen.header.headline"
 msgstr "Yleiskatsaus"
 
+#: src/components/screens/Overview/ui.jsx:94
+msgid "overview-screen.persons.empty"
+msgstr ""
+
+#: src/components/screens/Overview/ui.jsx:95
+msgid "overview-screen.locations.empty"
+msgstr ""
+
 #: src/components/screens/Settings/logic.js:162
 msgid "notifications.diary.headline"
 msgstr "📒 Kirjaa ylös kontaktisi"
@@ -717,6 +725,10 @@ msgstr "Muistutus päiväkirjan käytöstä"
 #: src/components/screens/Settings/ui.jsx:149
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "Muistuta päivittäin"
+
+#: src/components/screens/Splash/ui.jsx:53
+msgid "splash-screen.supported-by.headline"
+msgstr ""
 
 #: src/components/screens/TipAmIInfected.jsx:14
 msgid "tips.am-i-infected.list.item-1"
