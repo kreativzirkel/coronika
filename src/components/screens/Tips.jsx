@@ -15,8 +15,8 @@ const Tips = ({ colors, navigation, vw, fontFamilyBold, fontFamilyRegular, isRTL
     contentText: {
       color: colors.TEXT,
       fontFamily: fontFamilyRegular,
-      fontSize: vw(4.5),
-      lineHeight: vw(7),
+      fontSize: vw(4.2),
+      lineHeight: vw(6.5),
     },
     headerHeadline: {
       color: colors.TEXT,

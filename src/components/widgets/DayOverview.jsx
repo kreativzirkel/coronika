@@ -205,7 +205,7 @@ class DayOverview extends React.Component {
     },
     dayDateWrapperReduced: {
       alignItems: 'center',
-      flexDirection: 'row',
+      flexDirection: 'row-reverse',
       justifyContent: 'space-between',
     },
     dayPersonsWrapper: {
@@ -218,9 +218,6 @@ class DayOverview extends React.Component {
       marginRight: this.props.vw(1.8),
     },
   });
-
-  currentDay = moment(this.props.timestamp);
-  isToday = this.currentDay.diff(this.props.today) === 0;
 
   render() {
     const {
@@ -274,6 +271,9 @@ class DayOverview extends React.Component {
       },
     };
 
+    const currentDay = moment(this.props.timestamp);
+    const isToday = currentDay.diff(this.props.today) === 0;
+
     return (
       <View
         style={{
@@ -288,7 +288,7 @@ class DayOverview extends React.Component {
             isDark,
             isReduced,
             isSmall,
-            isToday: this.isToday,
+            isToday,
             isTotal,
             styles: styles,
             timestamp,

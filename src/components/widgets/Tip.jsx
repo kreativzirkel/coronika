@@ -15,13 +15,13 @@ class Tip extends React.Component {
   styles = StyleSheet.create({
     contentHeadline: {
       fontFamily: this.props.fontFamilyBold,
-      fontSize: this.props.vw(7),
+      fontSize: this.props.vw(6),
       marginBottom: this.props.vw(3),
     },
     contentText: {
       fontFamily: this.props.fontFamilyRegular,
-      fontSize: this.props.vw(4.5),
-      lineHeight: this.props.vw(7),
+      fontSize: this.props.vw(4.2),
+      lineHeight: this.props.vw(6.5),
     },
     contentTextParagraph: {
       marginTop: this.props.vw(3),
@@ -47,8 +47,8 @@ class Tip extends React.Component {
     },
     listItemText: {
       fontFamily: this.props.fontFamilyRegular,
-      fontSize: this.props.vw(4.5),
-      lineHeight: this.props.vw(7),
+      fontSize: this.props.vw(4.2),
+      lineHeight: this.props.vw(6.5),
       marginTop: this.props.vw(2),
     },
     scrollView: {
@@ -71,8 +71,8 @@ class Tip extends React.Component {
     },
     viewLinksText: {
       fontFamily: this.props.fontFamilyRegular,
-      fontSize: this.props.vw(4.5),
-      lineHeight: this.props.vw(7),
+      fontSize: this.props.vw(4.2),
+      lineHeight: this.props.vw(6.5),
       textDecorationLine: 'underline',
     },
     viewLinksButton: {

@@ -5,7 +5,7 @@ import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native
 import DayOverview from '../../widgets/DayOverview';
 import Layout from '../../widgets/Layout';
 import Header from '../../widgets/Header';
-import { ALTERNATIVE_FONT_LANGUAGES, COLOR_PRIMARY, DAYS_OVERVIEW_MAX } from '../../../constants';
+import { ALTERNATIVE_FONT_LANGUAGES, COLOR_PRIMARY } from '../../../constants';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -19,10 +19,6 @@ class Dashboard extends React.Component {
     this.openMenu = this.openMenu.bind(this);
     this.openOverview = this.openOverview.bind(this);
   }
-
-  today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
-
-  totalTimespan = moment(this.today).subtract(DAYS_OVERVIEW_MAX, 'days');
 
   listItemHeight = ALTERNATIVE_FONT_LANGUAGES.includes(this.props.currentLanguage)
     ? this.props.vw(18.9)
@@ -180,23 +176,25 @@ class Dashboard extends React.Component {
       );
     }
 
+    const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
+
     return (
       <TouchableOpacity onPress={() => this.openDay(timestamp)}>
         <DayOverview
-          isEmphasized={timestamp === this.today.valueOf()}
-          isTranslucent={firstStartHintVisible && timestamp !== this.today.valueOf()}
+          isEmphasized={timestamp === today.valueOf()}
+          isTranslucent={firstStartHintVisible && timestamp !== today.valueOf()}
           locations={locations.length}
           persons={persons.length}
-          showIcons={firstStartHintVisible && timestamp === this.today.valueOf()}
+          showIcons={firstStartHintVisible && timestamp === today.valueOf()}
           timestamp={timestamp}
-          today={this.today}
+          today={today}
         />
       </TouchableOpacity>
     );
   }
 
   render() {
-    const { colors, days, firstStartHintVisible, total, vw, __ } = this.props;
+    const { colors, days, firstStartHintVisible, vw, __ } = this.props;
 
     return (
       <Layout>
@@ -244,18 +242,6 @@ class Dashboard extends React.Component {
                 windowSize={5}
               />
             )}
-
-            <TouchableOpacity onPress={this.openOverview} style={this.styles.buttonOverview}>
-              <DayOverview
-                isDark
-                isTotal
-                isTranslucent={firstStartHintVisible}
-                locations={total.locations}
-                persons={total.persons}
-                timestamp={this.totalTimespan.valueOf()}
-                today={this.today}
-              />
-            </TouchableOpacity>
           </View>
         </View>
       </Layout>

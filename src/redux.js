@@ -1,3 +1,4 @@
+import addEntry from './components/screens/AddEntry/state';
 import app from './components/App/state';
 import dashboard from './components/screens/Dashboard/state';
 import day from './components/screens/Day/state';
@@ -9,6 +10,7 @@ import settings from './components/screens/Settings/state';
 import welcome from './components/screens/Welcome/state';
 
 export const reducers = {
+  addEntry,
   app,
   dashboard,
   day,

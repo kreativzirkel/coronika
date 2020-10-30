@@ -27,88 +27,88 @@ msgstr ""
 msgid "navigation.tips.label"
 msgstr "نصائح"
 
-#: src/components/partials/EntriesTabsView/index.jsx:771
+#: src/components/partials/EntriesTabsView/index.jsx:780
 #: src/components/screens/Export/createPdfFile.js:317
-#: src/components/widgets/DayOverview.jsx:97
+#: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "الأشخاص"
 
-#: src/components/partials/EntriesTabsView/index.jsx:779
+#: src/components/partials/EntriesTabsView/index.jsx:788
 #: src/components/screens/Export/createPdfFile.js:409
-#: src/components/widgets/DayOverview.jsx:76
+#: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "المواقع"
 
-#: src/components/partials/EntriesTabsView/index.jsx:791
+#: src/components/partials/EntriesTabsView/index.jsx:800
 msgid "entries.persons.list.new"
 msgstr "شخص جديد"
 
-#: src/components/partials/EntriesTabsView/index.jsx:812
-#: src/components/partials/EntriesTabsView/index.jsx:869
+#: src/components/partials/EntriesTabsView/index.jsx:822
+#: src/components/partials/EntriesTabsView/index.jsx:881
 msgid "entries.search.list.empty"
 msgstr "لا يمكن العثور على شيء في بحثك."
 
-#: src/components/partials/EntriesTabsView/index.jsx:823
+#: src/components/partials/EntriesTabsView/index.jsx:833
 msgid "entries.persons.list.empty"
 msgstr ""
 "لم تقم بإنشاء شخص بعد. للبدء على الفور ، يمكنك استيراد الأشخاص من دليل "
 "الهاتف الخاص بك."
 
-#: src/components/partials/EntriesTabsView/index.jsx:832
+#: src/components/partials/EntriesTabsView/index.jsx:842
 msgid "entries.persons.list.import.button"
 msgstr "استيراد الآن"
 
-#: src/components/partials/EntriesTabsView/index.jsx:849
+#: src/components/partials/EntriesTabsView/index.jsx:860
 msgid "entries.locations.list.new"
 msgstr "موقع جديد"
 
-#: src/components/partials/EntriesTabsView/index.jsx:873
+#: src/components/partials/EntriesTabsView/index.jsx:885
 msgid "entries.locations.list.empty"
 msgstr "لم تقم بإنشاء موقع حتى الآن. ابدأ الآن وأنشئ موقعك الأول."
 
-#: src/components/partials/EntriesTabsView/index.jsx:890
+#: src/components/partials/EntriesTabsView/index.jsx:903
 msgid "entries.selection.add"
 msgstr "إضافة تحديد"
 
-#: src/components/partials/EntriesTabsView/index.jsx:905
+#: src/components/partials/EntriesTabsView/index.jsx:918
 msgid "entries.modals.update-person.button"
 msgstr "حفظ"
 
-#: src/components/partials/EntriesTabsView/index.jsx:905
+#: src/components/partials/EntriesTabsView/index.jsx:918
 msgid "entries.modals.new-person.button"
 msgstr "أضف"
 
-#: src/components/partials/EntriesTabsView/index.jsx:908
+#: src/components/partials/EntriesTabsView/index.jsx:921
 msgid "entries.modals.update-person.headline"
 msgstr "تحرير شخص"
 
-#: src/components/partials/EntriesTabsView/index.jsx:908
+#: src/components/partials/EntriesTabsView/index.jsx:921
 msgid "entries.modals.new-person.headline"
 msgstr "شخص جديد"
 
-#: src/components/partials/EntriesTabsView/index.jsx:923
-#: src/components/partials/EntriesTabsView/index.jsx:945
+#: src/components/partials/EntriesTabsView/index.jsx:936
+#: src/components/partials/EntriesTabsView/index.jsx:958
 msgid "entries.modals.update-location.button"
 msgstr "حفظ"
 
-#: src/components/partials/EntriesTabsView/index.jsx:924
+#: src/components/partials/EntriesTabsView/index.jsx:937
 msgid "entries.modals.new-location.button"
 msgstr "أضف"
 
-#: src/components/partials/EntriesTabsView/index.jsx:928
-#: src/components/partials/EntriesTabsView/index.jsx:952
+#: src/components/partials/EntriesTabsView/index.jsx:941
+#: src/components/partials/EntriesTabsView/index.jsx:965
 msgid "entries.modals.update-location.headline"
 msgstr "تحرير الموقع"
 
-#: src/components/partials/EntriesTabsView/index.jsx:929
+#: src/components/partials/EntriesTabsView/index.jsx:942
 msgid "entries.modals.new-location.headline"
 msgstr "موقع جديد"
 
-#: src/components/partials/EntriesTabsView/index.jsx:946
+#: src/components/partials/EntriesTabsView/index.jsx:959
 msgid "entries.modals.select-location.button"
 msgstr "تحديد"
 
-#: src/components/partials/EntriesTabsView/index.jsx:953
+#: src/components/partials/EntriesTabsView/index.jsx:966
 msgid "entries.modals.select-location.headline"
 msgstr "اختر موقعا"
 
@@ -207,42 +207,51 @@ msgstr "ابدأ الآن"
 msgid "about-screen.header.headline"
 msgstr "حول كورونيكا"
 
-#: src/components/screens/AddEntry/ui.jsx:22
+#: src/components/screens/AddEntry/ui.jsx:177
 msgid "add-entry-screen.header.headline"
 msgstr "إضافة إدخال"
 
-#: src/components/screens/Dashboard/ui.jsx:177
+#: src/components/screens/AddEntry/ui.jsx:207
+msgid "add-entry-screen.modals.switch-day.headline"
+msgstr ""
+
+#: src/components/screens/AddEntry/ui.jsx:75
+#: src/components/widgets/DayOverview.jsx:34
+msgid "today"
+msgstr "اليوم"
+
+#: src/components/screens/Dashboard/ui.jsx:173
 msgid "dashboard-screen.list.load-more"
 msgstr "تحميل المزيد"
 
-#: src/components/screens/Dashboard/ui.jsx:213
+#: src/components/screens/Dashboard/ui.jsx:211
 #: src/components/screens/Menu.jsx:200
 msgid "menu-screen.header.headline"
 msgstr "قائمة "
 
-#: src/components/screens/Dashboard/ui.jsx:225
+#: src/components/screens/Dashboard/ui.jsx:223
 msgid "dashboard-screen.first-start.hint"
 msgstr "انقر على تاريخ اليوم لإضافة الأشخاص أو المواقع الأولى."
 
-#: src/components/screens/Dashboard/ui.jsx:228
+#: src/components/screens/Dashboard/ui.jsx:226
 msgid "Close"
 msgstr "اغلاق"
+
+#: src/components/screens/Day/ui.jsx:100
+msgid "day-screen.entries.add"
+msgstr "إضافة إدخال"
 
 #: src/components/screens/Day/ui.jsx:72
 msgid "day-screen.header.headline"
 msgstr "نظرة يومية عامة "
 
-#: src/components/screens/Day/ui.jsx:85
+#: src/components/screens/Day/ui.jsx:86
 msgid "day-screen.locations.empty"
 msgstr "لم تضف أي مواقع لهذا اليوم."
 
-#: src/components/screens/Day/ui.jsx:86
+#: src/components/screens/Day/ui.jsx:87
 msgid "day-screen.persons.empty"
 msgstr "لم تقم بإضافة أي أشخاص لهذا اليوم."
-
-#: src/components/screens/Day/ui.jsx:98
-msgid "day-screen.entries.add"
-msgstr "إضافة إدخال"
 
 #: src/components/screens/Directory/importPersons.js:49
 #: src/components/screens/Directory/importPersons.js:59
@@ -254,29 +263,29 @@ msgstr "إذن مفقود"
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
 msgstr "اسمح للتطبيق بالوصول إلى جهات الاتصال في إعدادات الخصوصية بجهازك."
 
-#: src/components/screens/Directory/ui.jsx:130
+#: src/components/screens/Directory/ui.jsx:131
 msgid "directory-screen.header.button.import"
 msgstr "استيراد"
 
-#: src/components/screens/Directory/ui.jsx:134
+#: src/components/screens/Directory/ui.jsx:135
 msgid "directory-screen.header.headline"
 msgstr "إدارة الدليل"
 
-#: src/components/screens/Directory/ui.jsx:161
+#: src/components/screens/Directory/ui.jsx:162
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "استيراد الأشخاص"
 
-#: src/components/screens/Directory/ui.jsx:167
+#: src/components/screens/Directory/ui.jsx:168
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "قم باستيراد الأشخاص من دفتر الهاتف الخاص بك حتى تتمكن من البدء على الفور. "
 "يتم تخزين جميع الأشخاص محليا. لا يتم تتبع أو مشاركة البيانات."
 
-#: src/components/screens/Directory/ui.jsx:173
+#: src/components/screens/Directory/ui.jsx:174
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "جارٍ الاستيراد ..."
 
-#: src/components/screens/Directory/ui.jsx:174
+#: src/components/screens/Directory/ui.jsx:175
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "استيراد الآن"
 
@@ -290,7 +299,7 @@ msgstr "الصفحة"
 #: src/components/screens/Export/createPdfFile.js:65
 #: src/components/screens/Export/logic.js:45
 #: src/components/screens/Export/logic.js:95
-#: src/components/screens/Export/ui.jsx:153
+#: src/components/screens/Export/ui.jsx:154
 msgid "export-screen.header.headline"
 msgstr "تصدير"
 
@@ -326,43 +335,43 @@ msgstr "إذن مفقود"
 msgid "export-screen.alerts.save-file.missing-permission.message"
 msgstr "اسمح للتطبيق بالوصول إلى الذاكرة في إعدادات خصوصية جهازك."
 
-#: src/components/screens/Export/ui.jsx:157
+#: src/components/screens/Export/ui.jsx:158
 msgid "export-screen.content.section-1.headline"
 msgstr "نظرة عامة"
 
-#: src/components/screens/Export/ui.jsx:158
+#: src/components/screens/Export/ui.jsx:159
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "بشكل جماعي يمكننا إعادة بناء مسارات العدوى عن طريق إبلاغ السلطات الصحية "
 "والأشخاص من حولك."
 
-#: src/components/screens/Export/ui.jsx:159
+#: src/components/screens/Export/ui.jsx:160
 msgid "export-screen.content.section-2.headline"
 msgstr "مع القوة الكبيرة تأتي مسؤولية كبيرة"
 
-#: src/components/screens/Export/ui.jsx:160
+#: src/components/screens/Export/ui.jsx:161
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "ضع في اعتبارك أن البيانات حساسة للغاية. نوصي بشدة بعدم مشاركتها عبر الإنترنت "
 "أو مع أشخاص عشوائيين."
 
-#: src/components/screens/Export/ui.jsx:164
+#: src/components/screens/Export/ui.jsx:165
 msgid "export-screen.export.button.exporting"
 msgstr "جارٍ التصدير ..."
 
-#: src/components/screens/Export/ui.jsx:164
+#: src/components/screens/Export/ui.jsx:165
 msgid "export-screen.export.button.default"
 msgstr "تصدير الآن"
 
-#: src/components/screens/Export/ui.jsx:181
+#: src/components/screens/Export/ui.jsx:182
 msgid "export-screen.modals.export-completed.headline"
 msgstr "اكتمل التصدير"
 
-#: src/components/screens/Export/ui.jsx:187
+#: src/components/screens/Export/ui.jsx:188
 msgid "export-screen.modals.export-completed.text"
 msgstr "تم إنشاء ملف PDF مع نظرة عامة بنجاح. يمكنك الآن حفظ الملف أو مشاركته."
 
-#: src/components/screens/Export/ui.jsx:192
+#: src/components/screens/Export/ui.jsx:193
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "حفظ"
 
@@ -567,7 +576,7 @@ msgstr ""
 "والتعقيم واقرأ الأخبار والمعلومات فقط من مصادر موثوقة. إبق بصحة جيدة ولا "
 "تنسى غسل يديك بشكلٍ منتظم. https://coronika.app/"
 
-#: src/components/screens/Overview/ui.jsx:117
+#: src/components/screens/Overview/ui.jsx:118
 msgid "overview-screen.export.button"
 msgstr "نظرة عامة على التصدير"
 
@@ -974,11 +983,7 @@ msgstr "تخطى"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "نشط الآن"
 
-#: src/components/widgets/DayOverview.jsx:32
-msgid "today"
-msgstr "اليوم"
-
-#: src/components/widgets/DayOverview.jsx:43
+#: src/components/widgets/DayOverview.jsx:46
 msgid "total"
 msgstr "مجموع"
 

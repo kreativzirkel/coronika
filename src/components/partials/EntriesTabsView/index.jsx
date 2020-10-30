@@ -6,7 +6,7 @@ import UilUser from '@iconscout/react-native-unicons/icons/uil-user';
 import deepEqual from 'fast-deep-equal/es6';
 import moment from 'moment';
 import React, { Fragment } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Keyboard, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
 import ReactReduxContext from 'react-redux/lib/components/Context';
 import { COLOR_PRIMARY } from '../../../constants';
 import withI18n from '../../../i18n';
@@ -174,6 +174,7 @@ class EntriesTabsView extends React.Component {
     const { searchValue } = this.state;
 
     if (searchValue.length > 0) {
+      Keyboard.dismiss();
       this.setSearchValue('');
     } else {
       this.searchInput.current.focus();
@@ -264,6 +265,7 @@ class EntriesTabsView extends React.Component {
   }
 
   openModalNewPerson() {
+    Keyboard.dismiss();
     this.setState({
       isUpdatePersonMode: false,
       isModalNewPersonVisible: true,
@@ -332,6 +334,7 @@ class EntriesTabsView extends React.Component {
   }
 
   openModalNewLocation() {
+    Keyboard.dismiss();
     this.setState({
       isUpdateLocationMode: false,
       isModalNewLocationVisible: true,
@@ -393,10 +396,12 @@ class EntriesTabsView extends React.Component {
   }
 
   openTabLocations() {
+    Keyboard.dismiss();
     this.setActiveTab(TABS.LOCATIONS);
   }
 
   openTabPersons() {
+    Keyboard.dismiss();
     this.setActiveTab(TABS.PERSONS);
   }
 
@@ -616,8 +621,8 @@ class EntriesTabsView extends React.Component {
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'center',
-      marginBottom: 24,
-      marginTop: 24,
+      marginBottom: this.props.vw(4),
+      marginTop: this.props.vw(5),
     },
     buttonCreateNewIcon: {
       marginRight: this.props.vw(1.5),
@@ -625,7 +630,7 @@ class EntriesTabsView extends React.Component {
     buttonCreateNewText: {
       color: COLOR_PRIMARY,
       fontFamily: this.props.fontFamilyRegular,
-      fontSize: this.props.vw(4.8),
+      fontSize: this.props.vw(4),
       textTransform: 'lowercase',
     },
     personsImportButton: {
@@ -651,7 +656,8 @@ class EntriesTabsView extends React.Component {
     },
     entriesEmptyText: {
       fontFamily: this.props.fontFamilyRegular,
-      fontSize: this.props.vw(4.4),
+      fontSize: this.props.vw(4.2),
+      lineHeight: this.props.vw(6.5),
       marginBottom: this.props.vw(4.5),
       textAlign: 'center',
     },
@@ -669,13 +675,13 @@ class EntriesTabsView extends React.Component {
     },
     modalButtonText: {
       fontFamily: this.props.fontFamilyBold,
-      fontSize: this.props.vw(6),
+      fontSize: this.props.vw(5),
       textTransform: 'lowercase',
     },
     modalButtonTextCounter: {
       alignSelf: 'flex-start',
       fontFamily: this.props.fontFamilyBold,
-      fontSize: this.props.vw(4),
+      fontSize: this.props.vw(3.5),
       marginLeft: this.props.vw(1.5),
       textTransform: 'lowercase',
     },
@@ -809,37 +815,39 @@ class EntriesTabsView extends React.Component {
                   toggleSelection={this.togglePersonSelection}
                 />
               ) : (
-                <View style={this.styles.entriesEmptyWrapper}>
-                  {isSearchFilled ? (
-                    <Text style={{ ...this.styles.entriesEmptyText, color: colors.TEXT }}>
-                      {__('entries.search.list.empty')}
-                    </Text>
-                  ) : (
-                    <Fragment>
-                      {customPersonsEmptyText ? (
-                        <Text style={{ ...this.styles.entriesEmptyText, color: colors.TEXT }}>
-                          {customPersonsEmptyText}
-                        </Text>
-                      ) : (
-                        <Fragment>
+                <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+                  <View style={this.styles.entriesEmptyWrapper}>
+                    {isSearchFilled ? (
+                      <Text style={{ ...this.styles.entriesEmptyText, color: colors.TEXT }}>
+                        {__('entries.search.list.empty')}
+                      </Text>
+                    ) : (
+                      <Fragment>
+                        {customPersonsEmptyText ? (
                           <Text style={{ ...this.styles.entriesEmptyText, color: colors.TEXT }}>
-                            {__('entries.persons.list.empty')}
+                            {customPersonsEmptyText}
                           </Text>
-                          <TouchableOpacity onPress={this.importPersons} style={this.styles.personsImportButton}>
-                            <UilImport
-                              color={COLOR_PRIMARY}
-                              size={vw(5.5)}
-                              style={this.styles.personsImportButtonIcon}
-                            />
-                            <Text style={this.styles.personsImportButtonText}>
-                              {__('entries.persons.list.import.button')}
+                        ) : (
+                          <Fragment>
+                            <Text style={{ ...this.styles.entriesEmptyText, color: colors.TEXT }}>
+                              {__('entries.persons.list.empty')}
                             </Text>
-                          </TouchableOpacity>
-                        </Fragment>
-                      )}
-                    </Fragment>
-                  )}
-                </View>
+                            <TouchableOpacity onPress={this.importPersons} style={this.styles.personsImportButton}>
+                              <UilImport
+                                color={COLOR_PRIMARY}
+                                size={vw(5.5)}
+                                style={this.styles.personsImportButtonIcon}
+                              />
+                              <Text style={this.styles.personsImportButtonText}>
+                                {__('entries.persons.list.import.button')}
+                              </Text>
+                            </TouchableOpacity>
+                          </Fragment>
+                        )}
+                      </Fragment>
+                    )}
+                  </View>
+                </TouchableWithoutFeedback>
               )}
             </Fragment>
           )}
@@ -866,17 +874,19 @@ class EntriesTabsView extends React.Component {
                   toggleSelection={this.toggleLocationSelection}
                 />
               ) : (
-                <View style={this.styles.entriesEmptyWrapper}>
-                  {isSearchFilled ? (
-                    <Text style={{ ...this.styles.entriesEmptyText, color: colors.TEXT }}>
-                      {__('entries.search.list.empty')}
-                    </Text>
-                  ) : (
-                    <Text style={{ ...this.styles.entriesEmptyText, color: colors.TEXT }}>
-                      {customLocationsEmptyText ? customLocationsEmptyText : __('entries.locations.list.empty')}
-                    </Text>
-                  )}
-                </View>
+                <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+                  <View style={this.styles.entriesEmptyWrapper}>
+                    {isSearchFilled ? (
+                      <Text style={{ ...this.styles.entriesEmptyText, color: colors.TEXT }}>
+                        {__('entries.search.list.empty')}
+                      </Text>
+                    ) : (
+                      <Text style={{ ...this.styles.entriesEmptyText, color: colors.TEXT }}>
+                        {customLocationsEmptyText ? customLocationsEmptyText : __('entries.locations.list.empty')}
+                      </Text>
+                    )}
+                  </View>
+                </TouchableWithoutFeedback>
               )}
             </Fragment>
           )}

@@ -29,25 +29,25 @@
         "licenseUrl": "https://github.com/react-native-community/react-native-masked-view",
         "parents": "coronika"
     },
-    "@react-native-community/push-notification-ios@1.6.1": {
+    "@react-native-community/push-notification-ios@1.7.1": {
         "licenses": "MIT",
         "repository": "https://github.com/react-native-community/push-notification-ios",
         "licenseUrl": "https://github.com/react-native-community/push-notification-ios/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "@react-navigation/bottom-tabs@5.9.2": {
+    "@react-navigation/bottom-tabs@5.10.1": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "@react-navigation/native@5.7.6": {
+    "@react-navigation/native@5.8.1": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "@react-navigation/stack@5.9.3": {
+    "@react-navigation/stack@5.11.0": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
@@ -167,13 +167,13 @@
         "licenseUrl": "https://github.com/th3rdwave/react-native-safe-area-context/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-screens@2.11.0": {
+    "react-native-screens@2.12.0": {
         "licenses": "MIT",
         "repository": "https://github.com/kmagiera/react-native-screens",
         "licenseUrl": "https://github.com/kmagiera/react-native-screens/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-share@4.0.2": {
+    "react-native-share@4.0.4": {
         "licenses": "MIT",
         "repository": "https://github.com/react-native-community/react-native-share",
         "licenseUrl": "https://github.com/react-native-community/react-native-share/raw/master/LICENSE",
@@ -197,7 +197,7 @@
         "licenseUrl": "https://github.com/facebook/react-native/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-redux@7.2.1": {
+    "react-redux@7.2.2": {
         "licenses": "MIT",
         "repository": "https://github.com/reduxjs/react-redux",
         "licenseUrl": "https://github.com/reduxjs/react-redux/raw/master/LICENSE.md",

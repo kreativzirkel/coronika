@@ -4,6 +4,7 @@ const initialState = {
   days: {},
   firstStartHintConfirmed: false,
   firstStartHintVisible: false,
+  lastUpdated: 0,
 };
 
 export default (state = initialState, action = { type: null }) => {
@@ -107,6 +108,9 @@ export default (state = initialState, action = { type: null }) => {
 
     case 'HIDE_FIRST_START_HINT_DASHBOARD':
       return { ...state, firstStartHintVisible: false };
+
+    case 'SET_LAST_UPDATED_DASHBOARD':
+      return { ...state, lastUpdated: action.lastUpdated };
 
     default:
       return state;

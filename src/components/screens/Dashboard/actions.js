@@ -31,3 +31,5 @@ export const confirmFirstStartHint = () => ({ type: 'CONFIRM_FIRST_START_HINT_DA
 export const showFirstStartHint = () => ({ type: 'SHOW_FIRST_START_HINT_DASHBOARD' });
 
 export const hideFirstStartHint = () => ({ type: 'HIDE_FIRST_START_HINT_DASHBOARD' });
+
+export const setLastUpdated = (lastUpdated) => ({ type: 'SET_LAST_UPDATED_DASHBOARD', lastUpdated });

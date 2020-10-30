@@ -27,90 +27,90 @@ msgstr "Übersicht"
 msgid "navigation.tips.label"
 msgstr "Tipps"
 
-#: src/components/partials/EntriesTabsView/index.jsx:771
+#: src/components/partials/EntriesTabsView/index.jsx:780
 #: src/components/screens/Export/createPdfFile.js:317
-#: src/components/widgets/DayOverview.jsx:97
+#: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "Personen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:779
+#: src/components/partials/EntriesTabsView/index.jsx:788
 #: src/components/screens/Export/createPdfFile.js:409
-#: src/components/widgets/DayOverview.jsx:76
+#: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "Orte"
 
-#: src/components/partials/EntriesTabsView/index.jsx:791
+#: src/components/partials/EntriesTabsView/index.jsx:800
 msgid "entries.persons.list.new"
 msgstr "Neue Person anlegen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:812
-#: src/components/partials/EntriesTabsView/index.jsx:869
+#: src/components/partials/EntriesTabsView/index.jsx:822
+#: src/components/partials/EntriesTabsView/index.jsx:881
 msgid "entries.search.list.empty"
 msgstr "Zu deiner Suche konnte nichts gefunden werden."
 
-#: src/components/partials/EntriesTabsView/index.jsx:823
+#: src/components/partials/EntriesTabsView/index.jsx:833
 msgid "entries.persons.list.empty"
 msgstr ""
 "Du hast noch keine Person angelegt. Um direkt loszulegen, kannst du Personen "
 "aus deinem Telefonbuch importieren."
 
-#: src/components/partials/EntriesTabsView/index.jsx:832
+#: src/components/partials/EntriesTabsView/index.jsx:842
 msgid "entries.persons.list.import.button"
 msgstr "Jetzt importieren"
 
-#: src/components/partials/EntriesTabsView/index.jsx:849
+#: src/components/partials/EntriesTabsView/index.jsx:860
 msgid "entries.locations.list.new"
 msgstr "Neuen Ort anlegen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:873
+#: src/components/partials/EntriesTabsView/index.jsx:885
 msgid "entries.locations.list.empty"
 msgstr ""
 "Du hast noch keinen Ort angelegt. Beginne jetzt und erstelle deinen ersten "
 "Ort."
 
-#: src/components/partials/EntriesTabsView/index.jsx:890
+#: src/components/partials/EntriesTabsView/index.jsx:903
 msgid "entries.selection.add"
 msgstr "Auswahl hinzufügen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:905
+#: src/components/partials/EntriesTabsView/index.jsx:918
 msgid "entries.modals.update-person.button"
 msgstr "Speichern"
 
-#: src/components/partials/EntriesTabsView/index.jsx:905
+#: src/components/partials/EntriesTabsView/index.jsx:918
 msgid "entries.modals.new-person.button"
 msgstr "Hinzufügen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:908
+#: src/components/partials/EntriesTabsView/index.jsx:921
 msgid "entries.modals.update-person.headline"
 msgstr "Person bearbeiten"
 
-#: src/components/partials/EntriesTabsView/index.jsx:908
+#: src/components/partials/EntriesTabsView/index.jsx:921
 msgid "entries.modals.new-person.headline"
 msgstr "Neue Person"
 
-#: src/components/partials/EntriesTabsView/index.jsx:923
-#: src/components/partials/EntriesTabsView/index.jsx:945
+#: src/components/partials/EntriesTabsView/index.jsx:936
+#: src/components/partials/EntriesTabsView/index.jsx:958
 msgid "entries.modals.update-location.button"
 msgstr "Speichern"
 
-#: src/components/partials/EntriesTabsView/index.jsx:924
+#: src/components/partials/EntriesTabsView/index.jsx:937
 msgid "entries.modals.new-location.button"
 msgstr "Hinzufügen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:928
-#: src/components/partials/EntriesTabsView/index.jsx:952
+#: src/components/partials/EntriesTabsView/index.jsx:941
+#: src/components/partials/EntriesTabsView/index.jsx:965
 msgid "entries.modals.update-location.headline"
 msgstr "Ort bearbeiten"
 
-#: src/components/partials/EntriesTabsView/index.jsx:929
+#: src/components/partials/EntriesTabsView/index.jsx:942
 msgid "entries.modals.new-location.headline"
 msgstr "Neuer Ort"
 
-#: src/components/partials/EntriesTabsView/index.jsx:946
+#: src/components/partials/EntriesTabsView/index.jsx:959
 msgid "entries.modals.select-location.button"
 msgstr "Auswählen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:953
+#: src/components/partials/EntriesTabsView/index.jsx:966
 msgid "entries.modals.select-location.headline"
 msgstr "Ort auswählen"
 
@@ -212,43 +212,52 @@ msgstr "Jetzt anfangen"
 msgid "about-screen.header.headline"
 msgstr "Über Coronika"
 
-#: src/components/screens/AddEntry/ui.jsx:22
+#: src/components/screens/AddEntry/ui.jsx:177
 msgid "add-entry-screen.header.headline"
 msgstr "Eintrag hinzufügen"
 
-#: src/components/screens/Dashboard/ui.jsx:177
+#: src/components/screens/AddEntry/ui.jsx:207
+msgid "add-entry-screen.modals.switch-day.headline"
+msgstr "Tag auswählen"
+
+#: src/components/screens/AddEntry/ui.jsx:75
+#: src/components/widgets/DayOverview.jsx:34
+msgid "today"
+msgstr "heute"
+
+#: src/components/screens/Dashboard/ui.jsx:173
 msgid "dashboard-screen.list.load-more"
 msgstr "mehr laden"
 
-#: src/components/screens/Dashboard/ui.jsx:213
+#: src/components/screens/Dashboard/ui.jsx:211
 #: src/components/screens/Menu.jsx:200
 msgid "menu-screen.header.headline"
 msgstr "Menü"
 
-#: src/components/screens/Dashboard/ui.jsx:225
+#: src/components/screens/Dashboard/ui.jsx:223
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Klicke auf den heutigen Tag, um deine ersten Personen oder Orte einzutragen."
 
-#: src/components/screens/Dashboard/ui.jsx:228
+#: src/components/screens/Dashboard/ui.jsx:226
 msgid "Close"
 msgstr "Schließen"
+
+#: src/components/screens/Day/ui.jsx:100
+msgid "day-screen.entries.add"
+msgstr "Eintrag hinzufügen"
 
 #: src/components/screens/Day/ui.jsx:72
 msgid "day-screen.header.headline"
 msgstr "Tagesübersicht"
 
-#: src/components/screens/Day/ui.jsx:85
+#: src/components/screens/Day/ui.jsx:86
 msgid "day-screen.locations.empty"
 msgstr "Du hast für diesen Tag noch keine Orte hinzugefügt."
 
-#: src/components/screens/Day/ui.jsx:86
+#: src/components/screens/Day/ui.jsx:87
 msgid "day-screen.persons.empty"
 msgstr "Du hast für diesen Tag noch keine Personen hinzugefügt."
-
-#: src/components/screens/Day/ui.jsx:98
-msgid "day-screen.entries.add"
-msgstr "Eintrag hinzufügen"
 
 #: src/components/screens/Directory/importPersons.js:49
 #: src/components/screens/Directory/importPersons.js:59
@@ -262,30 +271,30 @@ msgstr ""
 "Erlaube der App den Zugriff auf deine Kontakte in den Privatsphäre "
 "Einstellungen deines Gerätes."
 
-#: src/components/screens/Directory/ui.jsx:130
+#: src/components/screens/Directory/ui.jsx:131
 msgid "directory-screen.header.button.import"
 msgstr "Import"
 
-#: src/components/screens/Directory/ui.jsx:134
+#: src/components/screens/Directory/ui.jsx:135
 msgid "directory-screen.header.headline"
 msgstr "Verzeichnis verwalten"
 
-#: src/components/screens/Directory/ui.jsx:161
+#: src/components/screens/Directory/ui.jsx:162
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Personen importieren"
 
-#: src/components/screens/Directory/ui.jsx:167
+#: src/components/screens/Directory/ui.jsx:168
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Importiere Personen aus deinem Telefonbuch, damit du direkt loslegen kannst. "
 "Alle deine Personen werden lokal gespeichert. Keine Daten werden getrackt "
 "oder weitergegeben."
 
-#: src/components/screens/Directory/ui.jsx:173
+#: src/components/screens/Directory/ui.jsx:174
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Importieren..."
 
-#: src/components/screens/Directory/ui.jsx:174
+#: src/components/screens/Directory/ui.jsx:175
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Jetzt importieren"
 
@@ -299,7 +308,7 @@ msgstr "Seite"
 #: src/components/screens/Export/createPdfFile.js:65
 #: src/components/screens/Export/logic.js:45
 #: src/components/screens/Export/logic.js:95
-#: src/components/screens/Export/ui.jsx:153
+#: src/components/screens/Export/ui.jsx:154
 msgid "export-screen.header.headline"
 msgstr "Export"
 
@@ -342,45 +351,45 @@ msgstr ""
 "Erlaube der App den Zugriff auf den Speicher in den Privatsphäre "
 "Einstellungen deines Gerätes."
 
-#: src/components/screens/Export/ui.jsx:157
+#: src/components/screens/Export/ui.jsx:158
 msgid "export-screen.content.section-1.headline"
 msgstr "Deine Übersicht"
 
-#: src/components/screens/Export/ui.jsx:158
+#: src/components/screens/Export/ui.jsx:159
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "Zusammen können wir Infektionswege nachvollziehen, indem wir "
 "Gesundheitsbehörden und Menschen in deinem Umfeld informieren"
 
-#: src/components/screens/Export/ui.jsx:159
+#: src/components/screens/Export/ui.jsx:160
 msgid "export-screen.content.section-2.headline"
 msgstr "Mit großer Macht kommt große Verantwortung"
 
-#: src/components/screens/Export/ui.jsx:160
+#: src/components/screens/Export/ui.jsx:161
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "Bitte bedenke, dass es sich um sensible Daten handelt. Wir empfehlen dir "
 "daher, sie nicht online oder mit Fremden zu teilen."
 
-#: src/components/screens/Export/ui.jsx:164
+#: src/components/screens/Export/ui.jsx:165
 msgid "export-screen.export.button.exporting"
 msgstr "Exportieren..."
 
-#: src/components/screens/Export/ui.jsx:164
+#: src/components/screens/Export/ui.jsx:165
 msgid "export-screen.export.button.default"
 msgstr "Jetzt exportieren"
 
-#: src/components/screens/Export/ui.jsx:181
+#: src/components/screens/Export/ui.jsx:182
 msgid "export-screen.modals.export-completed.headline"
 msgstr "Export abgeschlossen"
 
-#: src/components/screens/Export/ui.jsx:187
+#: src/components/screens/Export/ui.jsx:188
 msgid "export-screen.modals.export-completed.text"
 msgstr ""
 "Die PDF Datei mit deiner Übersicht wurde erfolgreich erstellt. Du kannst die "
 "Datei nun speichern oder teilen."
 
-#: src/components/screens/Export/ui.jsx:192
+#: src/components/screens/Export/ui.jsx:193
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "Speichern"
 
@@ -608,7 +617,7 @@ msgstr ""
 "Bleib gesund und vergiss nicht dir die Hände regelmäßig zu waschen! ✋😉 "
 "https://coronika.app/"
 
-#: src/components/screens/Overview/ui.jsx:117
+#: src/components/screens/Overview/ui.jsx:118
 msgid "overview-screen.export.button"
 msgstr "Übersicht exportieren"
 
@@ -1017,11 +1026,7 @@ msgstr "Überspringen"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Jetzt aktivieren"
 
-#: src/components/widgets/DayOverview.jsx:32
-msgid "today"
-msgstr "heute"
-
-#: src/components/widgets/DayOverview.jsx:43
+#: src/components/widgets/DayOverview.jsx:46
 msgid "total"
 msgstr "gesamt"
 

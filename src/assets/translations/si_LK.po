@@ -27,88 +27,88 @@ msgstr ""
 msgid "navigation.tips.label"
 msgstr "ඉඟි"
 
-#: src/components/partials/EntriesTabsView/index.jsx:771
+#: src/components/partials/EntriesTabsView/index.jsx:780
 #: src/components/screens/Export/createPdfFile.js:317
-#: src/components/widgets/DayOverview.jsx:97
+#: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "පුද්ගලයන්"
 
-#: src/components/partials/EntriesTabsView/index.jsx:779
+#: src/components/partials/EntriesTabsView/index.jsx:788
 #: src/components/screens/Export/createPdfFile.js:409
-#: src/components/widgets/DayOverview.jsx:76
+#: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "ස්ථාන"
 
-#: src/components/partials/EntriesTabsView/index.jsx:791
+#: src/components/partials/EntriesTabsView/index.jsx:800
 msgid "entries.persons.list.new"
 msgstr "නව පුද්ගලයෙක්"
 
-#: src/components/partials/EntriesTabsView/index.jsx:812
-#: src/components/partials/EntriesTabsView/index.jsx:869
+#: src/components/partials/EntriesTabsView/index.jsx:822
+#: src/components/partials/EntriesTabsView/index.jsx:881
 msgid "entries.search.list.empty"
 msgstr "ඔබගේ සෙවුමෙන් කිසිවක් සොයාගත නොහැකි විය."
 
-#: src/components/partials/EntriesTabsView/index.jsx:823
+#: src/components/partials/EntriesTabsView/index.jsx:833
 msgid "entries.persons.list.empty"
 msgstr ""
 "ඔබ තවම පුද්ගලයෙකු නිර්මාණය කර නැත. වහාම ආරම්භ කිරීම සඳහා, ඔබට ඔබගේ දුරකථන පොතෙන් "
 "පුද්ගලයින් ආනයනය කළ හැකිය."
 
-#: src/components/partials/EntriesTabsView/index.jsx:832
+#: src/components/partials/EntriesTabsView/index.jsx:842
 msgid "entries.persons.list.import.button"
 msgstr "දැන් ආයාත කරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:849
+#: src/components/partials/EntriesTabsView/index.jsx:860
 msgid "entries.locations.list.new"
 msgstr "නව ස්ථානය"
 
-#: src/components/partials/EntriesTabsView/index.jsx:873
+#: src/components/partials/EntriesTabsView/index.jsx:885
 msgid "entries.locations.list.empty"
 msgstr "ඔබ තවම ස්ථානයක් නිර්මාණය කර නැත. දැන් ආරම්භ කර ඔබේ පළමු ස්ථානය සාදන්න."
 
-#: src/components/partials/EntriesTabsView/index.jsx:890
+#: src/components/partials/EntriesTabsView/index.jsx:903
 msgid "entries.selection.add"
 msgstr "තේරීම එක් කරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:905
+#: src/components/partials/EntriesTabsView/index.jsx:918
 msgid "entries.modals.update-person.button"
 msgstr "සුරකින්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:905
+#: src/components/partials/EntriesTabsView/index.jsx:918
 msgid "entries.modals.new-person.button"
 msgstr "එකතු කරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:908
+#: src/components/partials/EntriesTabsView/index.jsx:921
 msgid "entries.modals.update-person.headline"
 msgstr "පුද්ගල විස්තර සංස්කරණය කරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:908
+#: src/components/partials/EntriesTabsView/index.jsx:921
 msgid "entries.modals.new-person.headline"
 msgstr "නව පුද්ගලයෙක්"
 
-#: src/components/partials/EntriesTabsView/index.jsx:923
-#: src/components/partials/EntriesTabsView/index.jsx:945
+#: src/components/partials/EntriesTabsView/index.jsx:936
+#: src/components/partials/EntriesTabsView/index.jsx:958
 msgid "entries.modals.update-location.button"
 msgstr "සුරකින්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:924
+#: src/components/partials/EntriesTabsView/index.jsx:937
 msgid "entries.modals.new-location.button"
 msgstr "එකතු කරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:928
-#: src/components/partials/EntriesTabsView/index.jsx:952
+#: src/components/partials/EntriesTabsView/index.jsx:941
+#: src/components/partials/EntriesTabsView/index.jsx:965
 msgid "entries.modals.update-location.headline"
 msgstr "ස්ථානය සංස්කරණය කරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:929
+#: src/components/partials/EntriesTabsView/index.jsx:942
 msgid "entries.modals.new-location.headline"
 msgstr "නව ස්ථානය"
 
-#: src/components/partials/EntriesTabsView/index.jsx:946
+#: src/components/partials/EntriesTabsView/index.jsx:959
 msgid "entries.modals.select-location.button"
 msgstr "තෝරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:953
+#: src/components/partials/EntriesTabsView/index.jsx:966
 msgid "entries.modals.select-location.headline"
 msgstr "ස්ථානය තෝරන්න"
 
@@ -207,42 +207,51 @@ msgstr "දැන් පටන් ගන්න"
 msgid "about-screen.header.headline"
 msgstr "කොරොනිකා තතු"
 
-#: src/components/screens/AddEntry/ui.jsx:22
+#: src/components/screens/AddEntry/ui.jsx:177
 msgid "add-entry-screen.header.headline"
 msgstr "ප්‍රවේශය එක් කරන්න"
 
-#: src/components/screens/Dashboard/ui.jsx:177
+#: src/components/screens/AddEntry/ui.jsx:207
+msgid "add-entry-screen.modals.switch-day.headline"
+msgstr ""
+
+#: src/components/screens/AddEntry/ui.jsx:75
+#: src/components/widgets/DayOverview.jsx:34
+msgid "today"
+msgstr "අද"
+
+#: src/components/screens/Dashboard/ui.jsx:173
 msgid "dashboard-screen.list.load-more"
 msgstr "තවත් පටවන්න"
 
-#: src/components/screens/Dashboard/ui.jsx:213
+#: src/components/screens/Dashboard/ui.jsx:211
 #: src/components/screens/Menu.jsx:200
 msgid "menu-screen.header.headline"
 msgstr "මෙනුව"
 
-#: src/components/screens/Dashboard/ui.jsx:225
+#: src/components/screens/Dashboard/ui.jsx:223
 msgid "dashboard-screen.first-start.hint"
 msgstr "ඔබගේ පළමු පුද්ගලයින් හෝ ස්ථාන ඇතුළත් කිරීමට අද දිනය තෝරන්න"
 
-#: src/components/screens/Dashboard/ui.jsx:228
+#: src/components/screens/Dashboard/ui.jsx:226
 msgid "Close"
 msgstr "වසන්න"
+
+#: src/components/screens/Day/ui.jsx:100
+msgid "day-screen.entries.add"
+msgstr "ප්‍රවේශය එක් කරන්න"
 
 #: src/components/screens/Day/ui.jsx:72
 msgid "day-screen.header.headline"
 msgstr "දෛනික දළ විශ්ලේෂණය"
 
-#: src/components/screens/Day/ui.jsx:85
+#: src/components/screens/Day/ui.jsx:86
 msgid "day-screen.locations.empty"
 msgstr "ඔබ මේ දිනය සඳහා කිසිදු ස්ථානයක් එකතු කර නැත."
 
-#: src/components/screens/Day/ui.jsx:86
+#: src/components/screens/Day/ui.jsx:87
 msgid "day-screen.persons.empty"
 msgstr "ඔබ මේ දිනය සඳහා කිසිදු පුද්ගලයෙකු එකතු කර නැත."
-
-#: src/components/screens/Day/ui.jsx:98
-msgid "day-screen.entries.add"
-msgstr "ප්‍රවේශය එක් කරන්න"
 
 #: src/components/screens/Directory/importPersons.js:49
 #: src/components/screens/Directory/importPersons.js:59
@@ -254,29 +263,29 @@ msgstr "අවසරය නොමැත"
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
 msgstr "ඔබගේ උපාංගයේ රහස්‍යතා සැකසුම් තුළ ඔබගේ සම්බන්ධතා වෙත ප්‍රවේශ වීමට යෙදුමට ඉඩ දෙන්න."
 
-#: src/components/screens/Directory/ui.jsx:130
+#: src/components/screens/Directory/ui.jsx:131
 msgid "directory-screen.header.button.import"
 msgstr "ආනයන"
 
-#: src/components/screens/Directory/ui.jsx:134
+#: src/components/screens/Directory/ui.jsx:135
 msgid "directory-screen.header.headline"
 msgstr "නාමාවලිය කළමනාකරණය කරන්න"
 
-#: src/components/screens/Directory/ui.jsx:161
+#: src/components/screens/Directory/ui.jsx:162
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "පුද්ගලයින් ආනයනය කරන්න"
 
-#: src/components/screens/Directory/ui.jsx:167
+#: src/components/screens/Directory/ui.jsx:168
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "ඔබගේ දුරකථන පොතෙන් පුද්ගලයින් ආනයනය කරන්න එවිට ඔබට වහාම ආරම්භ කළ හැකිය. ඔබගේ සියලු "
 "පුද්ගලයින් දේශීයව ගබඩා කර ඇත. දත්ත කිසිවක් නිරීක්ෂණය කර හෝ බෙදාගෙන නොමැත."
 
-#: src/components/screens/Directory/ui.jsx:173
+#: src/components/screens/Directory/ui.jsx:174
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "ආනයනය ..."
 
-#: src/components/screens/Directory/ui.jsx:174
+#: src/components/screens/Directory/ui.jsx:175
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "දැන් ආයාත කරන්න"
 
@@ -290,7 +299,7 @@ msgstr "පිටුව"
 #: src/components/screens/Export/createPdfFile.js:65
 #: src/components/screens/Export/logic.js:45
 #: src/components/screens/Export/logic.js:95
-#: src/components/screens/Export/ui.jsx:153
+#: src/components/screens/Export/ui.jsx:154
 msgid "export-screen.header.headline"
 msgstr "අපනයන"
 
@@ -326,45 +335,45 @@ msgstr "අවසරය නොමැත"
 msgid "export-screen.alerts.save-file.missing-permission.message"
 msgstr "ඔබගේ උපාංගයේ රහස්‍යතා සැකසුම් තුළ ඇති ගබඩාවට ප්‍රවේශ වීමට යෙදුමට ඉඩ දෙන්න."
 
-#: src/components/screens/Export/ui.jsx:157
+#: src/components/screens/Export/ui.jsx:158
 msgid "export-screen.content.section-1.headline"
 msgstr "ඔබේ දළ විශ්ලේෂණය"
 
-#: src/components/screens/Export/ui.jsx:158
+#: src/components/screens/Export/ui.jsx:159
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "සෞඛ්‍ය බලධාරීන් සහ ඔබ අවට සිටින පුද්ගලයින් දැනුවත් කිරීමෙන් අපට සාමූහිකව ආසාදන මාර්ග ප්‍රතිනිර්මාණය "
 "කළ හැකිය."
 
-#: src/components/screens/Export/ui.jsx:159
+#: src/components/screens/Export/ui.jsx:160
 msgid "export-screen.content.section-2.headline"
 msgstr "විශාල බලයක් සමඟ විශාල වගකීමක් පැමිණේ"
 
-#: src/components/screens/Export/ui.jsx:160
+#: src/components/screens/Export/ui.jsx:161
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "දත්ත ඉතා සංවේදී බව මතක තබා ගන්න. එය සබැඳිව හෝ අහඹු පුද්ගලයින් සමඟ බෙදා නොගන්නා ලෙස අපි "
 "තරයේ නිර්දේශ කරමු."
 
-#: src/components/screens/Export/ui.jsx:164
+#: src/components/screens/Export/ui.jsx:165
 msgid "export-screen.export.button.exporting"
 msgstr "අපනයනය ..."
 
-#: src/components/screens/Export/ui.jsx:164
+#: src/components/screens/Export/ui.jsx:165
 msgid "export-screen.export.button.default"
 msgstr "දැන් අපනයනය කරන්න"
 
-#: src/components/screens/Export/ui.jsx:181
+#: src/components/screens/Export/ui.jsx:182
 msgid "export-screen.modals.export-completed.headline"
 msgstr "අපනයනය අවසන්"
 
-#: src/components/screens/Export/ui.jsx:187
+#: src/components/screens/Export/ui.jsx:188
 msgid "export-screen.modals.export-completed.text"
 msgstr ""
 "ඔබගේ දළ විශ්ලේෂණය සහිත PDF ගොනුව සාර්ථකව නිර්මාණය කරන ලදි. ඔබට දැන් ගොනුව සුරැකීමට හෝ "
 "බෙදා ගැනීමට හැකිය."
 
-#: src/components/screens/Export/ui.jsx:192
+#: src/components/screens/Export/ui.jsx:193
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "සුරකින්න"
 
@@ -571,7 +580,7 @@ msgstr ""
 "✅…පිළිගත් තොරතුරු ප්‍රභවයන් භාවිතා කරන්න\n"
 "නිරෝගීව සිටින්න, නිතිපතා අත් සේදීමට මතක තබා ගන්න! ✋😉 https://coronika.app/"
 
-#: src/components/screens/Overview/ui.jsx:117
+#: src/components/screens/Overview/ui.jsx:118
 msgid "overview-screen.export.button"
 msgstr "දළ විශ්ලේෂණය අපනයනය"
 
@@ -967,11 +976,7 @@ msgstr "මඟ හරින්න"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "දැන් ක්‍රියාත්මක කරන්න"
 
-#: src/components/widgets/DayOverview.jsx:32
-msgid "today"
-msgstr "අද"
-
-#: src/components/widgets/DayOverview.jsx:43
+#: src/components/widgets/DayOverview.jsx:46
 msgid "total"
 msgstr "සමස්ත"
 

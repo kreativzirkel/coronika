@@ -46,14 +46,14 @@ const Export = ({
     contentHeadline: {
       color: colors.TEXT,
       fontFamily: fontFamilyBold,
-      fontSize: vw(7),
+      fontSize: vw(6),
       textAlign: 'center',
     },
     contentText: {
       color: colors.TEXT,
       fontFamily: fontFamilyRegular,
-      fontSize: vw(4.5),
-      lineHeight: vw(7),
+      fontSize: vw(4.2),
+      lineHeight: vw(6.5),
       textAlign: 'center',
     },
     modal: {
@@ -90,7 +90,8 @@ const Export = ({
     modalText: {
       color: colors.TEXT,
       fontFamily: fontFamilyRegular,
-      fontSize: vw(4.4),
+      fontSize: vw(4.2),
+      lineHeight: vw(6.5),
       marginBottom: vw(7),
       paddingLeft: vw(3),
       paddingRight: vw(3),
@@ -117,7 +118,7 @@ const Export = ({
     modalButtonText: {
       color: colors.TEXT_ALT,
       fontFamily: fontFamilyBold,
-      fontSize: vw(6),
+      fontSize: vw(5),
       textTransform: 'lowercase',
     },
     modalButtonSecondaryText: {},
@@ -180,7 +181,7 @@ const Export = ({
           <View style={styles.modalHeader}>
             <Text style={styles.modalHeaderText}>{__('export-screen.modals.export-completed.headline')}</Text>
             <TouchableOpacity onPress={() => hideExportResultModal()} style={styles.modalHeaderIcon}>
-              <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
+              <UilTimes size={vw(8)} color={COLOR_PRIMARY} />
             </TouchableOpacity>
           </View>
 
@@ -195,7 +196,7 @@ const Export = ({
 
             <TouchableOpacity onPress={() => shareExportFile()} style={styles.modalButtonShare}>
               <View style={{ ...styles.modalButton, ...styles.modalButtonSecondary }}>
-                <UilShare color={colors.TEXT_ALT} size={vw(7)} />
+                <UilShare color={colors.TEXT_ALT} size={vw(6.6)} />
               </View>
             </TouchableOpacity>
           </View>

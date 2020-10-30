@@ -27,90 +27,90 @@ msgstr ""
 msgid "navigation.tips.label"
 msgstr "Porady"
 
-#: src/components/partials/EntriesTabsView/index.jsx:771
+#: src/components/partials/EntriesTabsView/index.jsx:780
 #: src/components/screens/Export/createPdfFile.js:317
-#: src/components/widgets/DayOverview.jsx:97
+#: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "osoby"
 
-#: src/components/partials/EntriesTabsView/index.jsx:779
+#: src/components/partials/EntriesTabsView/index.jsx:788
 #: src/components/screens/Export/createPdfFile.js:409
-#: src/components/widgets/DayOverview.jsx:76
+#: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "lokalizacje"
 
-#: src/components/partials/EntriesTabsView/index.jsx:791
+#: src/components/partials/EntriesTabsView/index.jsx:800
 msgid "entries.persons.list.new"
 msgstr "Nowa osoba"
 
-#: src/components/partials/EntriesTabsView/index.jsx:812
-#: src/components/partials/EntriesTabsView/index.jsx:869
+#: src/components/partials/EntriesTabsView/index.jsx:822
+#: src/components/partials/EntriesTabsView/index.jsx:881
 msgid "entries.search.list.empty"
 msgstr "Nic nie znaleziono na twoich poszukiwaniach."
 
-#: src/components/partials/EntriesTabsView/index.jsx:823
+#: src/components/partials/EntriesTabsView/index.jsx:833
 msgid "entries.persons.list.empty"
 msgstr ""
 "Jeszcze nie nakładeś osobe. Aby zacząć od razu, możesz importować osoby z "
 "książki telefonicznej."
 
-#: src/components/partials/EntriesTabsView/index.jsx:832
+#: src/components/partials/EntriesTabsView/index.jsx:842
 msgid "entries.persons.list.import.button"
 msgstr "Importuj teraz"
 
-#: src/components/partials/EntriesTabsView/index.jsx:849
+#: src/components/partials/EntriesTabsView/index.jsx:860
 msgid "entries.locations.list.new"
 msgstr "Nowa lokalizacja"
 
-#: src/components/partials/EntriesTabsView/index.jsx:873
+#: src/components/partials/EntriesTabsView/index.jsx:885
 msgid "entries.locations.list.empty"
 msgstr ""
 "Nie stworzyłeś jeszcze lokalizacji. Zacznij teraz i stwórz swoją pierwszą "
 "lokalizację."
 
-#: src/components/partials/EntriesTabsView/index.jsx:890
+#: src/components/partials/EntriesTabsView/index.jsx:903
 msgid "entries.selection.add"
 msgstr "Dodaj wybór"
 
-#: src/components/partials/EntriesTabsView/index.jsx:905
+#: src/components/partials/EntriesTabsView/index.jsx:918
 msgid "entries.modals.update-person.button"
 msgstr "Zapisz"
 
-#: src/components/partials/EntriesTabsView/index.jsx:905
+#: src/components/partials/EntriesTabsView/index.jsx:918
 msgid "entries.modals.new-person.button"
 msgstr "Dodaj"
 
-#: src/components/partials/EntriesTabsView/index.jsx:908
+#: src/components/partials/EntriesTabsView/index.jsx:921
 msgid "entries.modals.update-person.headline"
 msgstr "osoba opracować"
 
-#: src/components/partials/EntriesTabsView/index.jsx:908
+#: src/components/partials/EntriesTabsView/index.jsx:921
 msgid "entries.modals.new-person.headline"
 msgstr "Nowa osoba"
 
-#: src/components/partials/EntriesTabsView/index.jsx:923
-#: src/components/partials/EntriesTabsView/index.jsx:945
+#: src/components/partials/EntriesTabsView/index.jsx:936
+#: src/components/partials/EntriesTabsView/index.jsx:958
 msgid "entries.modals.update-location.button"
 msgstr "Zapisz"
 
-#: src/components/partials/EntriesTabsView/index.jsx:924
+#: src/components/partials/EntriesTabsView/index.jsx:937
 msgid "entries.modals.new-location.button"
 msgstr "Dodaj"
 
-#: src/components/partials/EntriesTabsView/index.jsx:928
-#: src/components/partials/EntriesTabsView/index.jsx:952
+#: src/components/partials/EntriesTabsView/index.jsx:941
+#: src/components/partials/EntriesTabsView/index.jsx:965
 msgid "entries.modals.update-location.headline"
 msgstr "Miejsce edycji"
 
-#: src/components/partials/EntriesTabsView/index.jsx:929
+#: src/components/partials/EntriesTabsView/index.jsx:942
 msgid "entries.modals.new-location.headline"
 msgstr "Nowa lokalizacja"
 
-#: src/components/partials/EntriesTabsView/index.jsx:946
+#: src/components/partials/EntriesTabsView/index.jsx:959
 msgid "entries.modals.select-location.button"
 msgstr "Wybierz"
 
-#: src/components/partials/EntriesTabsView/index.jsx:953
+#: src/components/partials/EntriesTabsView/index.jsx:966
 msgid "entries.modals.select-location.headline"
 msgstr "Wybierz lokalizację"
 
@@ -212,44 +212,53 @@ msgstr "Zacznij teraz"
 msgid "about-screen.header.headline"
 msgstr "O Coronika"
 
-#: src/components/screens/AddEntry/ui.jsx:22
+#: src/components/screens/AddEntry/ui.jsx:177
 msgid "add-entry-screen.header.headline"
 msgstr "Dodaj wpis"
 
-#: src/components/screens/Dashboard/ui.jsx:177
+#: src/components/screens/AddEntry/ui.jsx:207
+msgid "add-entry-screen.modals.switch-day.headline"
+msgstr ""
+
+#: src/components/screens/AddEntry/ui.jsx:75
+#: src/components/widgets/DayOverview.jsx:34
+msgid "today"
+msgstr "Dziś"
+
+#: src/components/screens/Dashboard/ui.jsx:173
 msgid "dashboard-screen.list.load-more"
 msgstr "Załaduj więcej"
 
-#: src/components/screens/Dashboard/ui.jsx:213
+#: src/components/screens/Dashboard/ui.jsx:211
 #: src/components/screens/Menu.jsx:200
 msgid "menu-screen.header.headline"
 msgstr "Menu"
 
-#: src/components/screens/Dashboard/ui.jsx:225
+#: src/components/screens/Dashboard/ui.jsx:223
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Kliknij na dzisiejszą datę, aby wprowadzić swoje pierwsze osoby lub "
 "lokalizacje."
 
-#: src/components/screens/Dashboard/ui.jsx:228
+#: src/components/screens/Dashboard/ui.jsx:226
 msgid "Close"
 msgstr "Zamknij"
+
+#: src/components/screens/Day/ui.jsx:100
+msgid "day-screen.entries.add"
+msgstr "Dodaj wpis"
 
 #: src/components/screens/Day/ui.jsx:72
 msgid "day-screen.header.headline"
 msgstr "Codzienny przegląd"
 
-#: src/components/screens/Day/ui.jsx:85
+#: src/components/screens/Day/ui.jsx:86
 msgid "day-screen.locations.empty"
 msgstr "Nie dodałeś żadnych lokalizacji na ten dzień."
 
-#: src/components/screens/Day/ui.jsx:86
+#: src/components/screens/Day/ui.jsx:87
 msgid "day-screen.persons.empty"
 msgstr "Nie dodałeś żadnych osób na ten dzień."
-
-#: src/components/screens/Day/ui.jsx:98
-msgid "day-screen.entries.add"
-msgstr "Dodaj wpis"
 
 #: src/components/screens/Directory/importPersons.js:49
 #: src/components/screens/Directory/importPersons.js:59
@@ -263,30 +272,30 @@ msgstr ""
 "Pozwól aplikacji na dostęp do kontaktów w ustawieniach prywatności "
 "urządzenia."
 
-#: src/components/screens/Directory/ui.jsx:130
+#: src/components/screens/Directory/ui.jsx:131
 msgid "directory-screen.header.button.import"
 msgstr "Import"
 
-#: src/components/screens/Directory/ui.jsx:134
+#: src/components/screens/Directory/ui.jsx:135
 msgid "directory-screen.header.headline"
 msgstr "Zarządzaj katalog"
 
-#: src/components/screens/Directory/ui.jsx:161
+#: src/components/screens/Directory/ui.jsx:162
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "importować osoby"
 
-#: src/components/screens/Directory/ui.jsx:167
+#: src/components/screens/Directory/ui.jsx:168
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Importuj osoby z książki telefonicznej, aby móc od razu zacząć. Wszystkie "
 "Twoje osoby są przechowywane na miejscu. Żadne dane nie są śledzone ani "
 "udostępniane."
 
-#: src/components/screens/Directory/ui.jsx:173
+#: src/components/screens/Directory/ui.jsx:174
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Importowanie..."
 
-#: src/components/screens/Directory/ui.jsx:174
+#: src/components/screens/Directory/ui.jsx:175
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Import teraz"
 
@@ -300,7 +309,7 @@ msgstr "Strona"
 #: src/components/screens/Export/createPdfFile.js:65
 #: src/components/screens/Export/logic.js:45
 #: src/components/screens/Export/logic.js:95
-#: src/components/screens/Export/ui.jsx:153
+#: src/components/screens/Export/ui.jsx:154
 msgid "export-screen.header.headline"
 msgstr "Eksportuj"
 
@@ -338,45 +347,45 @@ msgid "export-screen.alerts.save-file.missing-permission.message"
 msgstr ""
 "Pozwól aplikacji na dostęp do pamięci w ustawieniach prywatności urządzenia."
 
-#: src/components/screens/Export/ui.jsx:157
+#: src/components/screens/Export/ui.jsx:158
 msgid "export-screen.content.section-1.headline"
 msgstr "Twój przegląd"
 
-#: src/components/screens/Export/ui.jsx:158
+#: src/components/screens/Export/ui.jsx:159
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "Wspólnie możemy odtworzyć drogi zakażenia, informując o tym władze zdrowotne "
 "i osoby z otoczenia."
 
-#: src/components/screens/Export/ui.jsx:159
+#: src/components/screens/Export/ui.jsx:160
 msgid "export-screen.content.section-2.headline"
 msgstr "Z wielką siłą przychodzi duża odpowiedzialność"
 
-#: src/components/screens/Export/ui.jsx:160
+#: src/components/screens/Export/ui.jsx:161
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "Należy pamiętać, że dane te są bardzo wrażliwe. Zalecamy, aby nie "
 "udostępniać ich online lub przypadkowym osobom."
 
-#: src/components/screens/Export/ui.jsx:164
+#: src/components/screens/Export/ui.jsx:165
 msgid "export-screen.export.button.exporting"
 msgstr "Wywóz..."
 
-#: src/components/screens/Export/ui.jsx:164
+#: src/components/screens/Export/ui.jsx:165
 msgid "export-screen.export.button.default"
 msgstr "Eksport teraz"
 
-#: src/components/screens/Export/ui.jsx:181
+#: src/components/screens/Export/ui.jsx:182
 msgid "export-screen.modals.export-completed.headline"
 msgstr "Eksport zakończony"
 
-#: src/components/screens/Export/ui.jsx:187
+#: src/components/screens/Export/ui.jsx:188
 msgid "export-screen.modals.export-completed.text"
 msgstr ""
 "Plik PDF z Twoim przeglądem został utworzony pomyślnie. Możesz teraz zapisać "
 "lub udostępnić plik."
 
-#: src/components/screens/Export/ui.jsx:192
+#: src/components/screens/Export/ui.jsx:193
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "Zapisz"
 
@@ -597,7 +606,7 @@ msgstr ""
 "✅...korzystajcie z renomowanych źródeł informacji \n"
 "Bądźcie zdrowi i pamiętajcie o regularnym myciu rąk! ✋😉 https://coronika.app/"
 
-#: src/components/screens/Overview/ui.jsx:117
+#: src/components/screens/Overview/ui.jsx:118
 msgid "overview-screen.export.button"
 msgstr "Eksportuj Przegląd"
 
@@ -993,11 +1002,7 @@ msgstr "przeskoczyć"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Aktywuj teraz"
 
-#: src/components/widgets/DayOverview.jsx:32
-msgid "today"
-msgstr "Dziś"
-
-#: src/components/widgets/DayOverview.jsx:43
+#: src/components/widgets/DayOverview.jsx:46
 msgid "total"
 msgstr "Łącznie"
 

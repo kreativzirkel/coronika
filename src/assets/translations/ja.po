@@ -27,89 +27,89 @@ msgstr ""
 msgid "navigation.tips.label"
 msgstr "ヒント"
 
-#: src/components/partials/EntriesTabsView/index.jsx:771
+#: src/components/partials/EntriesTabsView/index.jsx:780
 #: src/components/screens/Export/createPdfFile.js:317
-#: src/components/widgets/DayOverview.jsx:97
+#: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "連絡先"
 
-#: src/components/partials/EntriesTabsView/index.jsx:779
+#: src/components/partials/EntriesTabsView/index.jsx:788
 #: src/components/screens/Export/createPdfFile.js:409
-#: src/components/widgets/DayOverview.jsx:76
+#: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "場所"
 
-#: src/components/partials/EntriesTabsView/index.jsx:791
+#: src/components/partials/EntriesTabsView/index.jsx:800
 msgid "entries.persons.list.new"
 msgstr "新しい連絡先"
 
-#: src/components/partials/EntriesTabsView/index.jsx:812
-#: src/components/partials/EntriesTabsView/index.jsx:869
+#: src/components/partials/EntriesTabsView/index.jsx:822
+#: src/components/partials/EntriesTabsView/index.jsx:881
 msgid "entries.search.list.empty"
 msgstr "何も見つかりませんでした。"
 
-#: src/components/partials/EntriesTabsView/index.jsx:823
+#: src/components/partials/EntriesTabsView/index.jsx:833
 msgid "entries.persons.list.empty"
 msgstr ""
 "連絡先はまだ追加されていません。 すぐに開始するには、電話帳から連絡先をイン"
 "ポートしてください。"
 
-#: src/components/partials/EntriesTabsView/index.jsx:832
+#: src/components/partials/EntriesTabsView/index.jsx:842
 msgid "entries.persons.list.import.button"
 msgstr "今すぐインポート"
 
-#: src/components/partials/EntriesTabsView/index.jsx:849
+#: src/components/partials/EntriesTabsView/index.jsx:860
 msgid "entries.locations.list.new"
 msgstr "新しい場所"
 
-#: src/components/partials/EntriesTabsView/index.jsx:873
+#: src/components/partials/EntriesTabsView/index.jsx:885
 msgid "entries.locations.list.empty"
 msgstr ""
 "場所がまだ作成されていません。 今から開始し、最初の場所を作成してください。"
 
-#: src/components/partials/EntriesTabsView/index.jsx:890
+#: src/components/partials/EntriesTabsView/index.jsx:903
 msgid "entries.selection.add"
 msgstr "選択を追加"
 
-#: src/components/partials/EntriesTabsView/index.jsx:905
+#: src/components/partials/EntriesTabsView/index.jsx:918
 msgid "entries.modals.update-person.button"
 msgstr "セーブ"
 
-#: src/components/partials/EntriesTabsView/index.jsx:905
+#: src/components/partials/EntriesTabsView/index.jsx:918
 msgid "entries.modals.new-person.button"
 msgstr "追加"
 
-#: src/components/partials/EntriesTabsView/index.jsx:908
+#: src/components/partials/EntriesTabsView/index.jsx:921
 msgid "entries.modals.update-person.headline"
 msgstr "連絡先を編集"
 
-#: src/components/partials/EntriesTabsView/index.jsx:908
+#: src/components/partials/EntriesTabsView/index.jsx:921
 msgid "entries.modals.new-person.headline"
 msgstr "新しい連絡先"
 
-#: src/components/partials/EntriesTabsView/index.jsx:923
-#: src/components/partials/EntriesTabsView/index.jsx:945
+#: src/components/partials/EntriesTabsView/index.jsx:936
+#: src/components/partials/EntriesTabsView/index.jsx:958
 msgid "entries.modals.update-location.button"
 msgstr "セーブ"
 
-#: src/components/partials/EntriesTabsView/index.jsx:924
+#: src/components/partials/EntriesTabsView/index.jsx:937
 msgid "entries.modals.new-location.button"
 msgstr "追加"
 
-#: src/components/partials/EntriesTabsView/index.jsx:928
-#: src/components/partials/EntriesTabsView/index.jsx:952
+#: src/components/partials/EntriesTabsView/index.jsx:941
+#: src/components/partials/EntriesTabsView/index.jsx:965
 msgid "entries.modals.update-location.headline"
 msgstr "場所を編集"
 
-#: src/components/partials/EntriesTabsView/index.jsx:929
+#: src/components/partials/EntriesTabsView/index.jsx:942
 msgid "entries.modals.new-location.headline"
 msgstr "新しい場所"
 
-#: src/components/partials/EntriesTabsView/index.jsx:946
+#: src/components/partials/EntriesTabsView/index.jsx:959
 msgid "entries.modals.select-location.button"
 msgstr "選択する"
 
-#: src/components/partials/EntriesTabsView/index.jsx:953
+#: src/components/partials/EntriesTabsView/index.jsx:966
 msgid "entries.modals.select-location.headline"
 msgstr "場所を選択"
 
@@ -209,42 +209,51 @@ msgstr "今すぐ始める"
 msgid "about-screen.header.headline"
 msgstr "コロニカについて"
 
-#: src/components/screens/AddEntry/ui.jsx:22
+#: src/components/screens/AddEntry/ui.jsx:177
 msgid "add-entry-screen.header.headline"
 msgstr "エントリを追加"
 
-#: src/components/screens/Dashboard/ui.jsx:177
+#: src/components/screens/AddEntry/ui.jsx:207
+msgid "add-entry-screen.modals.switch-day.headline"
+msgstr ""
+
+#: src/components/screens/AddEntry/ui.jsx:75
+#: src/components/widgets/DayOverview.jsx:34
+msgid "today"
+msgstr "今日"
+
+#: src/components/screens/Dashboard/ui.jsx:173
 msgid "dashboard-screen.list.load-more"
 msgstr "もっと読み込む"
 
-#: src/components/screens/Dashboard/ui.jsx:213
+#: src/components/screens/Dashboard/ui.jsx:211
 #: src/components/screens/Menu.jsx:200
 msgid "menu-screen.header.headline"
 msgstr "メニュー"
 
-#: src/components/screens/Dashboard/ui.jsx:225
+#: src/components/screens/Dashboard/ui.jsx:223
 msgid "dashboard-screen.first-start.hint"
 msgstr "今日の日付をクリックして、最初の人や場所を入力します。"
 
-#: src/components/screens/Dashboard/ui.jsx:228
+#: src/components/screens/Dashboard/ui.jsx:226
 msgid "Close"
 msgstr "閉じる"
+
+#: src/components/screens/Day/ui.jsx:100
+msgid "day-screen.entries.add"
+msgstr "エントリを追加"
 
 #: src/components/screens/Day/ui.jsx:72
 msgid "day-screen.header.headline"
 msgstr "毎日の概要"
 
-#: src/components/screens/Day/ui.jsx:85
+#: src/components/screens/Day/ui.jsx:86
 msgid "day-screen.locations.empty"
 msgstr "この日の場所は追加されていません。"
 
-#: src/components/screens/Day/ui.jsx:86
+#: src/components/screens/Day/ui.jsx:87
 msgid "day-screen.persons.empty"
 msgstr "この日は連絡先を追加していません。"
-
-#: src/components/screens/Day/ui.jsx:98
-msgid "day-screen.entries.add"
-msgstr "エントリを追加"
 
 #: src/components/screens/Directory/importPersons.js:49
 #: src/components/screens/Directory/importPersons.js:59
@@ -258,29 +267,29 @@ msgstr ""
 "お使いのデバイスのプライバシー設定で、アプリが連絡先にアクセスできるようにし"
 "ます。"
 
-#: src/components/screens/Directory/ui.jsx:130
+#: src/components/screens/Directory/ui.jsx:131
 msgid "directory-screen.header.button.import"
 msgstr "インポート"
 
-#: src/components/screens/Directory/ui.jsx:134
+#: src/components/screens/Directory/ui.jsx:135
 msgid "directory-screen.header.headline"
 msgstr "ディレクトリの管理"
 
-#: src/components/screens/Directory/ui.jsx:161
+#: src/components/screens/Directory/ui.jsx:162
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "連絡先をインポート"
 
-#: src/components/screens/Directory/ui.jsx:167
+#: src/components/screens/Directory/ui.jsx:168
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "電話帳から連絡先をインポートして、すぐに開始できるようにします。 すべての人は"
 "ローカルに保存されます。 データは追跡または共有されません。"
 
-#: src/components/screens/Directory/ui.jsx:173
+#: src/components/screens/Directory/ui.jsx:174
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "インポートしています..."
 
-#: src/components/screens/Directory/ui.jsx:174
+#: src/components/screens/Directory/ui.jsx:175
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "今すぐインポート"
 
@@ -294,7 +303,7 @@ msgstr "ページ"
 #: src/components/screens/Export/createPdfFile.js:65
 #: src/components/screens/Export/logic.js:45
 #: src/components/screens/Export/logic.js:95
-#: src/components/screens/Export/ui.jsx:153
+#: src/components/screens/Export/ui.jsx:154
 msgid "export-screen.header.headline"
 msgstr "書き出す"
 
@@ -334,45 +343,45 @@ msgstr ""
 "お使いのデバイスのプライバシー設定で、アプリケーションがメモリにアクセスでき"
 "るようにします。"
 
-#: src/components/screens/Export/ui.jsx:157
+#: src/components/screens/Export/ui.jsx:158
 msgid "export-screen.content.section-1.headline"
 msgstr "あなたの概況"
 
-#: src/components/screens/Export/ui.jsx:158
+#: src/components/screens/Export/ui.jsx:159
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "保健当局と周囲の人々に情報を提供することで、感染経路をまとめて再構築できま"
 "す。"
 
-#: src/components/screens/Export/ui.jsx:159
+#: src/components/screens/Export/ui.jsx:160
 msgid "export-screen.content.section-2.headline"
 msgstr "大きな権力には大きな責任が伴います"
 
-#: src/components/screens/Export/ui.jsx:160
+#: src/components/screens/Export/ui.jsx:161
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "データは非常に機密性が高いことに注意してください。 オンラインまたはランダムな"
 "人と共有しないことを強くお勧めします。"
 
-#: src/components/screens/Export/ui.jsx:164
+#: src/components/screens/Export/ui.jsx:165
 msgid "export-screen.export.button.exporting"
 msgstr "エクスポート..."
 
-#: src/components/screens/Export/ui.jsx:164
+#: src/components/screens/Export/ui.jsx:165
 msgid "export-screen.export.button.default"
 msgstr "今すぐエクスポート"
 
-#: src/components/screens/Export/ui.jsx:181
+#: src/components/screens/Export/ui.jsx:182
 msgid "export-screen.modals.export-completed.headline"
 msgstr "エクスポート完了"
 
-#: src/components/screens/Export/ui.jsx:187
+#: src/components/screens/Export/ui.jsx:188
 msgid "export-screen.modals.export-completed.text"
 msgstr ""
 "無事に概要が記載されたPDFファイルが作成されました。これで保存や共有ができるよ"
 "うになりました。"
 
-#: src/components/screens/Export/ui.jsx:192
+#: src/components/screens/Export/ui.jsx:193
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "セーブ"
 
@@ -583,7 +592,7 @@ msgstr ""
 "✅…正規サイトから正しい情報を取得して、身の周りの人を助けましょう。マメに手洗"
 "いし、健康を守りましょう。 ✋😉 https://coronika.app/"
 
-#: src/components/screens/Overview/ui.jsx:117
+#: src/components/screens/Overview/ui.jsx:118
 msgid "overview-screen.export.button"
 msgstr "エクスポートの概要"
 
@@ -983,11 +992,7 @@ msgstr "スキップ"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "今すぐ活性化する"
 
-#: src/components/widgets/DayOverview.jsx:32
-msgid "today"
-msgstr "今日"
-
-#: src/components/widgets/DayOverview.jsx:43
+#: src/components/widgets/DayOverview.jsx:46
 msgid "total"
 msgstr "合計"
 

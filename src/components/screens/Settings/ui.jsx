@@ -35,8 +35,8 @@ const Settings = ({
     contentTextHeadline: {
       color: colors.TEXT,
       fontFamily: fontFamilyBold,
-      fontSize: vw(5.1),
-      lineHeight: vw(7),
+      fontSize: vw(4.8),
+      lineHeight: vw(6.5),
       marginBottom: vw(1),
       paddingLeft: vw(2),
       paddingRight: vw(2),
@@ -45,7 +45,7 @@ const Settings = ({
     headline: {
       color: colors.TEXT,
       fontFamily: fontFamilyBold,
-      fontSize: vw(7),
+      fontSize: vw(6),
       marginBottom: vw(4),
       paddingLeft: vw(2),
       paddingRight: vw(2),

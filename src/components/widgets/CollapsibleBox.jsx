@@ -38,8 +38,8 @@ class CollapsibleBox extends React.Component {
     },
     headerHeadline: {
       fontFamily: this.props.fontFamilyRegular,
-      fontSize: this.props.vw(4.5),
-      lineHeight: this.props.vw(7),
+      fontSize: this.props.vw(4.2),
+      lineHeight: this.props.vw(6.5),
       textTransform: 'lowercase',
     },
     view: {

@@ -63,13 +63,13 @@ class Menu extends React.Component {
   styles = StyleSheet.create({
     contentText: {
       fontFamily: this.props.fontFamilyRegular,
-      fontSize: this.props.vw(4.5),
-      lineHeight: this.props.vw(7),
+      fontSize: this.props.vw(4.2),
+      lineHeight: this.props.vw(6),
     },
     feedbackButton: {
       color: COLOR_PRIMARY,
       fontFamily: this.props.fontFamilyBold,
-      fontSize: this.props.vw(7),
+      fontSize: this.props.vw(6),
       textAlign: 'center',
     },
     madeByButton: {

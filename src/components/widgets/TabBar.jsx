@@ -11,7 +11,7 @@ class TabBar extends React.Component {
     tabBar: {
       display: 'flex',
       flexDirection: 'row',
-      height: this.props.vw(14),
+      height: this.props.vw(13.1),
       paddingLeft: this.props.vw(1.8),
       paddingRight: this.props.vw(1.8),
       paddingTop: this.props.vw(2.5),

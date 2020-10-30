@@ -35,8 +35,8 @@ class SearchBar extends React.Component {
     searchInput: {
       borderRadius: 8,
       fontFamily: this.props.fontFamilyRegular,
-      fontSize: this.props.vw(4),
-      height: this.props.vw(13),
+      fontSize: this.props.vw(3.8),
+      height: this.props.vw(11),
       marginLeft: this.props.vw(2.5),
       marginRight: this.props.vw(2.5),
       padding: this.props.vw(3.5),
@@ -63,9 +63,9 @@ class SearchBar extends React.Component {
       <View style={this.styles.searchWrapper}>
         <TouchableOpacity onPress={this.onPressSearchIcon} style={this.styles.searchIcon}>
           {searchValue.length > 0 ? (
-            <UilTimes size={vw(8)} color={COLOR_PRIMARY} />
+            <UilTimes size={vw(6.5)} color={COLOR_PRIMARY} />
           ) : (
-            <UilSearch size={vw(8)} color={COLOR_PRIMARY} />
+            <UilSearch size={vw(6.5)} color={COLOR_PRIMARY} />
           )}
         </TouchableOpacity>
 

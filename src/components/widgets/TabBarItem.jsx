@@ -51,7 +51,7 @@ class TabBarItem extends React.Component {
     },
     tabBarItemLabel: {
       fontFamily: this.props.fontFamilyRegular,
-      fontSize: this.props.vw(3.8),
+      fontSize: this.props.vw(3.6),
       textTransform: 'lowercase',
     },
     tabBarItemLabelActive: {
@@ -60,7 +60,7 @@ class TabBarItem extends React.Component {
     tabBarItemCounter: {
       alignSelf: 'flex-start',
       fontFamily: this.props.fontFamilyRegular,
-      fontSize: this.props.vw(3.5),
+      fontSize: this.props.vw(3.3),
       textTransform: 'lowercase',
       marginLeft: 3,
     },
@@ -95,7 +95,7 @@ class TabBarItem extends React.Component {
     return (
       <TouchableOpacity onPress={this.onPress} style={{ ...styles.tabBarItem, ...(active && styles.tabBarItemActive) }}>
         <View style={styles.tabBarItemInner}>
-          {Icon && <Icon color={active ? COLOR_PRIMARY : colors.TEXT} size={vw(5.5)} style={styles.tabBarItemIcon} />}
+          {Icon && <Icon color={active ? COLOR_PRIMARY : colors.TEXT} size={vw(4.8)} style={styles.tabBarItemIcon} />}
           <Text numberOfLines={1} style={{ ...styles.tabBarItemLabel, ...(active && styles.tabBarItemLabelActive) }}>
             {label}
           </Text>

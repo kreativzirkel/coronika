@@ -74,7 +74,7 @@ class ModalDefaultClass extends React.Component {
     },
     modalButtonText: {
       fontFamily: this.props.fontFamilyBold,
-      fontSize: this.props.vw(6),
+      fontSize: this.props.vw(5),
       textTransform: 'lowercase',
     },
   });
@@ -128,7 +128,7 @@ class ModalDefaultClass extends React.Component {
                 {headline}
               </Text>
               <TouchableOpacity onPress={this.onPressClose} style={styles.modalHeaderIcon}>
-                <UilTimes size={vw(9)} color={COLOR_PRIMARY} />
+                <UilTimes size={vw(8)} color={COLOR_PRIMARY} />
               </TouchableOpacity>
             </View>
 
@@ -572,7 +572,7 @@ class ModalLocationMoreClass extends React.Component {
     },
     modalButtonText: {
       fontFamily: this.props.fontFamilyBold,
-      fontSize: this.props.vw(6),
+      fontSize: this.props.vw(5),
       textTransform: 'lowercase',
     },
     modalText: {
@@ -683,7 +683,7 @@ class ModalPersonMoreClass extends React.Component {
     },
     modalButtonText: {
       fontFamily: this.props.fontFamilyBold,
-      fontSize: this.props.vw(6),
+      fontSize: this.props.vw(5),
       textTransform: 'lowercase',
     },
     modalText: {

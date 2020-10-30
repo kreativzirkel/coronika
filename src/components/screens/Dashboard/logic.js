@@ -7,7 +7,13 @@ import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import { setTimestamp as setTimestampDay } from '../Day/actions';
 import { resetLastUsageOfLocation, resetLastUsageOfPerson } from '../Directory/actions';
-import { initializeDays, hideFirstStartHint, confirmFirstStartHint, showFirstStartHint } from './actions';
+import {
+  initializeDays,
+  hideFirstStartHint,
+  confirmFirstStartHint,
+  showFirstStartHint,
+  setLastUpdated,
+} from './actions';
 import Screen from './ui';
 
 const loadDays = () => async (dispatch, getState) => {
@@ -111,26 +117,9 @@ const mapStateToProps = ({ dashboard: { days, firstStartHintVisible } }) => {
     daysList.push({ loadMore: true, timestamp: 'load-more' });
   }
 
-  const total = Object.values(days)
-    .map(({ persons, locations }) => ({
-      persons: persons.map(({ id }) => id),
-      locations: locations.map(({ id }) => id),
-    }))
-    .reduce(
-      (accumulator, currentValue) => ({
-        persons: [...accumulator.persons, ...currentValue.persons],
-        locations: [...accumulator.locations, ...currentValue.locations],
-      }),
-      { persons: [], locations: [] }
-    );
-
-  total.locations = [...new Set(total.locations)].length;
-  total.persons = [...new Set(total.persons)].length;
-
   return {
     days: daysList,
     firstStartHintVisible,
-    total,
   };
 };
 
@@ -173,6 +162,21 @@ const Container = container(Screen, {
         }
       }
     })();
+  },
+  componentDidUpdate() {
+    const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0).valueOf();
+    const {
+      store: { dispatch, getState },
+    } = this.context;
+
+    const {
+      dashboard: { lastUpdated },
+    } = getState();
+
+    if (lastUpdated !== today) {
+      dispatch(setLastUpdated(today));
+      dispatch(loadDays());
+    }
   },
 });
 

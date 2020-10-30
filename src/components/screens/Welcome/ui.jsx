@@ -13,14 +13,14 @@ export const getWelcomeStyles = (vw, colors, fontFamilyBold, fontFamilyRegular) 
     headline: {
       color: colors.TEXT,
       fontFamily: fontFamilyBold,
-      fontSize: vw(7),
+      fontSize: vw(6),
       textAlign: 'center',
     },
     text: {
       color: colors.TEXT,
       fontFamily: fontFamilyRegular,
-      fontSize: vw(4.5),
-      lineHeight: vw(7),
+      fontSize: vw(4.2),
+      lineHeight: vw(6.5),
       textAlign: 'center',
     },
     button: {
