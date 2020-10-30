@@ -2,7 +2,7 @@ import React from 'react';
 import { Appearance } from 'react-native';
 import { COLOR_SECONDARY } from '../constants';
 import { ReactReduxContext } from 'react-redux';
-import { setColorScheme } from '../components/screens/Settings/actions';
+import { setColorScheme as setColorSchemeSettings } from '../components/screens/Settings/actions';
 
 const withColorScheme = (WrappedComponent) => {
   class WithColorScheme extends React.Component {
@@ -72,7 +72,7 @@ const withColorScheme = (WrappedComponent) => {
 
       const scheme = Appearance.getColorScheme() || settingsColorScheme || 'light';
 
-      dispatch(setColorScheme(scheme));
+      dispatch(setColorSchemeSettings(scheme));
 
       this.setState({ colorScheme: scheme, colors: this.getColors(scheme) });
     }

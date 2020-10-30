@@ -36,7 +36,7 @@ const Export = ({
     buttonText: {
       color: COLOR_PRIMARY,
       fontFamily: fontFamilyRegular,
-      fontSize: vw(5.5),
+      fontSize: vw(4.8),
       textAlign: 'center',
       textTransform: 'lowercase',
     },
@@ -160,7 +160,7 @@ const Export = ({
           <Text style={styles.contentHeadline}>{__('export-screen.content.section-2.headline')}</Text>
           <Text style={styles.contentText}>{__('export-screen.content.section-2.text')}</Text>
           <TouchableOpacity disabled={isExporting} onPress={() => createExport()} style={styles.button}>
-            <UilFile color={isExporting ? '#b0b0b1' : COLOR_PRIMARY} size={vw(6.5)} style={styles.buttonIcon} />
+            <UilFile color={isExporting ? '#b0b0b1' : COLOR_PRIMARY} size={vw(5)} style={styles.buttonIcon} />
             <Text style={{ ...styles.buttonText, ...(isExporting && styles.buttonTextDisabled) }}>
               {isExporting ? __('export-screen.export.button.exporting') : __('export-screen.export.button.default')}
             </Text>

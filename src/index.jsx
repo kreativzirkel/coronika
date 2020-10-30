@@ -3,13 +3,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import React from 'react';
 import { SafeAreaView, StyleSheet, View } from 'react-native';
+import * as RNLocalize from 'react-native-localize';
 import { enableScreens } from 'react-native-screens';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import App from './components/App/logic';
 import screens from './components/screens';
-import { COLOR_PRIMARY } from './constants';
+import { COLOR_PRIMARY, SUPPORTED_LANGUAGES } from './constants';
 import configureStore from './createStore';
+import { changeLanguage } from './i18n';
 import withColorScheme from './utils/withColorScheme';
 
 enableScreens();
@@ -86,16 +88,34 @@ const InitialNavigator = () => (
 
 const Loading = () => <View style={styles.loading} />;
 
-export default () => {
-  const { persistor, store } = configureStore();
+class AppContainer extends React.PureComponent {
+  constructor(props) {
+    super(props);
 
-  return (
-    <PersistGate loading={<Loading />} persistor={persistor}>
-      <Provider store={store}>
-        <NavigationContainer>
-          <InitialNavigator />
-        </NavigationContainer>
-      </Provider>
-    </PersistGate>
-  );
-};
+    const { persistor, store } = configureStore();
+    this.persistor = persistor;
+    this.store = store;
+
+    const bestAvailableLanguage = RNLocalize.findBestAvailableLanguage(SUPPORTED_LANGUAGES);
+
+    if (bestAvailableLanguage) {
+      const { dispatch } = store;
+
+      dispatch(changeLanguage(bestAvailableLanguage.languageTag.substring(0, 2)));
+    }
+  }
+
+  render() {
+    return (
+      <PersistGate loading={<Loading />} persistor={this.persistor}>
+        <Provider store={this.store}>
+          <NavigationContainer>
+            <InitialNavigator />
+          </NavigationContainer>
+        </Provider>
+      </PersistGate>
+    );
+  }
+}
+
+export default AppContainer;

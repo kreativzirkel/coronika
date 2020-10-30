@@ -11,27 +11,27 @@ import UilBars from '@iconscout/react-native-unicons/icons/uil-bars';
 
 const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamilyBold, fontFamilyRegular, __ }) => {
   const styles = StyleSheet.create({
-    buttonAdd: {
+    buttonExport: {
       alignItems: 'center',
       display: 'flex',
       flexDirection: 'row',
       justifyContent: 'center',
-      marginBottom: vw(7),
-      marginTop: vw(7),
+      marginBottom: vw(5),
+      marginTop: vw(5),
     },
-    buttonAddDisabled: {
+    buttonExportDisabled: {
       opacity: 0.5,
     },
-    buttonAddIcon: {
+    buttonExportIcon: {
       marginRight: vw(1.5),
     },
-    buttonAddText: {
+    buttonExportText: {
       color: COLOR_PRIMARY,
       fontFamily: fontFamilyRegular,
-      fontSize: vw(5.5),
+      fontSize: vw(4.8),
       textTransform: 'lowercase',
     },
-    buttonAddTextDisabled: {
+    buttonExportTextDisabled: {
       //
     },
     dayOverviewWrapper: {
@@ -80,7 +80,7 @@ const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamil
       justifyContent: 'center',
       width: '100%',
     },
-    wrapperAddEntry: {
+    wrapperExportEntries: {
       alignItems: 'center',
       justifyContent: 'center',
     },
@@ -128,25 +128,26 @@ const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamil
           customLocationsEmptyText={__('overview-screen.locations.empty')}
           disableDeleteImportedPersons
           hideCreateButton
+          hideSearchBar
           locations={locations}
           persons={persons}
           showCounter
         />
 
-        <View style={{ ...styles.wrapperAddEntry, backgroundColor: colors.BACKGROUND }}>
+        <View style={{ ...styles.wrapperExportEntries, backgroundColor: colors.BACKGROUND }}>
           <TouchableOpacity
             disabled={exportButtonDisabled}
             onPress={() => navigation.navigate('Export')}
-            style={{ ...styles.buttonAdd, ...(exportButtonDisabled && styles.buttonAddDisabled) }}>
+            style={{ ...styles.buttonExport, ...(exportButtonDisabled && styles.buttonExportDisabled) }}>
             <UilFile
               color={exportButtonDisabled ? colors.GRAY_3 : COLOR_PRIMARY}
-              size={vw(6)}
-              style={styles.buttonAddIcon}
+              size={vw(5)}
+              style={styles.buttonExportIcon}
             />
             <Text
               style={{
-                ...styles.buttonAddText,
-                ...(exportButtonDisabled && { ...styles.buttonAddTextDisabled, color: colors.GRAY_3 }),
+                ...styles.buttonExportText,
+                ...(exportButtonDisabled && { ...styles.buttonExportTextDisabled, color: colors.GRAY_3 }),
               }}>
               {__('overview-screen.export.button')}
             </Text>

@@ -8,7 +8,7 @@ import Legal from './Legal';
 import Menu from './Menu';
 import Overview from './Overview/logic';
 import Settings from './Settings/logic';
-import Splash from './Splash/logic';
+import Splash from './Splash';
 import Tips from './Tips';
 import TipAmIInfected from './TipAmIInfected';
 import TipAvoidCrowdsOfPeople from './TipAvoidCrowdsOfPeople';
