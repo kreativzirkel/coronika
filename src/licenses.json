@@ -35,19 +35,19 @@
         "licenseUrl": "https://github.com/react-native-community/push-notification-ios/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "@react-navigation/bottom-tabs@5.10.1": {
+    "@react-navigation/bottom-tabs@5.10.2": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "@react-navigation/native@5.8.1": {
+    "@react-navigation/native@5.8.2": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "@react-navigation/stack@5.11.0": {
+    "@react-navigation/stack@5.11.1": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
@@ -131,7 +131,7 @@
         "licenseUrl": "https://github.com/wix/react-native-interactable/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-localize@1.4.2": {
+    "react-native-localize@1.4.3": {
         "licenses": "MIT",
         "repository": "https://github.com/react-native-community/react-native-localize",
         "licenseUrl": "https://github.com/react-native-community/react-native-localize/raw/master/LICENSE",

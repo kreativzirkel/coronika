@@ -2,11 +2,12 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import React from 'react';
-import { SafeAreaView, StyleSheet, View } from 'react-native';
+import { Appearance, Dimensions, SafeAreaView, StyleSheet, View } from 'react-native';
 import * as RNLocalize from 'react-native-localize';
 import { enableScreens } from 'react-native-screens';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
+import { setColorScheme as setColorSchemeApp, setScreenDimensions } from './components/App/actions';
 import App from './components/App/logic';
 import screens from './components/screens';
 import { COLOR_PRIMARY, SUPPORTED_LANGUAGES } from './constants';
@@ -96,13 +97,58 @@ class AppContainer extends React.PureComponent {
     this.persistor = persistor;
     this.store = store;
 
+    const { dispatch } = store;
+
+    /* determine language */
     const bestAvailableLanguage = RNLocalize.findBestAvailableLanguage(SUPPORTED_LANGUAGES);
 
     if (bestAvailableLanguage) {
-      const { dispatch } = store;
-
       dispatch(changeLanguage(bestAvailableLanguage.languageTag.substring(0, 2)));
     }
+
+    /* determine color scheme */
+    const scheme = Appearance.getColorScheme() || 'light';
+
+    dispatch(setColorSchemeApp(scheme));
+
+    /* determine screen dimensions */
+    const screenHeight = Dimensions.get('window').height;
+    const screenWidth = Dimensions.get('window').width;
+
+    dispatch(setScreenDimensions(screenHeight, screenWidth));
+
+    this.appearanceListener = this.appearanceListener.bind(this);
+  }
+
+  componentDidMount() {
+    Appearance.addChangeListener(this.appearanceListener);
+
+    Dimensions.addEventListener('change', (newDimensions) => {
+      const { dispatch } = this.store;
+
+      const screenHeight = newDimensions.window.height;
+      const screenWidth = newDimensions.window.width;
+
+      dispatch(setScreenDimensions(screenHeight, screenWidth));
+    });
+  }
+
+  componentWillUnmount() {
+    Appearance.removeChangeListener(this.appearanceListener);
+
+    Dimensions.removeEventListener('change', () => {});
+  }
+
+  appearanceListener() {
+    const { dispatch, getState } = this.store;
+
+    const {
+      app: { colorScheme: appColorScheme },
+    } = getState();
+
+    const scheme = Appearance.getColorScheme() || appColorScheme || 'light';
+
+    dispatch(setColorSchemeApp(scheme));
   }
 
   render() {

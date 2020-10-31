@@ -1,8 +1,6 @@
 import React from 'react';
-import { Appearance } from 'react-native';
 import { COLOR_SECONDARY } from '../constants';
 import { ReactReduxContext } from 'react-redux';
-import { setColorScheme as setColorSchemeSettings } from '../components/screens/Settings/actions';
 
 const withColorScheme = (WrappedComponent) => {
   class WithColorScheme extends React.Component {
@@ -13,17 +11,16 @@ const withColorScheme = (WrappedComponent) => {
         store: { getState },
       } = context;
       const {
-        settings: { colorScheme: settingsColorScheme },
+        app: { colorScheme: appColorScheme },
       } = getState();
 
-      const scheme = Appearance.getColorScheme() || settingsColorScheme || 'light';
+      const scheme = appColorScheme || 'light';
 
       this.state = {
         colorScheme: scheme,
         colors: this.getColors(scheme),
       };
 
-      this.appearanceListener = this.appearanceListener.bind(this);
       this.getColors = this.getColors.bind(this);
     }
 
@@ -61,28 +58,22 @@ const withColorScheme = (WrappedComponent) => {
       };
     }
 
-    appearanceListener() {
+    componentDidMount() {
       const {
-        store: { dispatch, getState },
+        store: { getState, subscribe },
       } = this.context;
 
-      const {
-        settings: { colorScheme: settingsColorScheme },
-      } = getState();
+      this.unsubscribeStore = subscribe(() => {
+        const {
+          app: { colorScheme },
+        } = getState();
 
-      const scheme = Appearance.getColorScheme() || settingsColorScheme || 'light';
-
-      dispatch(setColorSchemeSettings(scheme));
-
-      this.setState({ colorScheme: scheme, colors: this.getColors(scheme) });
-    }
-
-    componentDidMount() {
-      Appearance.addChangeListener(this.appearanceListener);
+        this.setState({ colorScheme, colors: this.getColors(colorScheme) });
+      });
     }
 
     componentWillUnmount() {
-      Appearance.removeChangeListener(this.appearanceListener);
+      if (this.unsubscribeStore) this.unsubscribeStore();
     }
 
     render() {

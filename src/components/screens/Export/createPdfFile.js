@@ -5,7 +5,7 @@ import { Platform } from 'react-native';
 import RNFS from 'react-native-fs';
 import { DAYS_RELEVANT } from '../../../constants';
 import { __, getFontFamilyBold, getFontFamilyRegular } from '../../../i18n';
-import { sortByCounterAndFullName, sortByCounterAndTitle } from '../Overview/logic';
+import { sortByFullName, sortByTitle } from '../Overview/logic';
 
 const PAGE_MARGINS = {
   BOTTOM: 56.6928, // 2cm
@@ -297,8 +297,8 @@ const createPdfFile = async (options = {}) => {
     });
   });
 
-  const locationsSorted = Object.values(locations).sort((a, b) => sortByCounterAndTitle(a, b));
-  const personsSorted = Object.values(persons).sort((a, b) => sortByCounterAndFullName(a, b));
+  const locationsSorted = Object.values(locations).sort((a, b) => sortByTitle(a, b));
+  const personsSorted = Object.values(persons).sort((a, b) => sortByFullName(a, b));
 
   const subheadlineTextSize = 14;
   const subheadlineTextHeight = customFontBold.heightAtSize(subheadlineTextSize / 1.6);

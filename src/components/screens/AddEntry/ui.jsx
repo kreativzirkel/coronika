@@ -13,9 +13,6 @@ const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
 class AddEntry extends React.Component {
   constructor(props, context) {
     super(props, context);
-
-    this.daysListRenderItem = this.daysListRenderItem.bind(this);
-    this.onPressDaysListItem = this.onPressDaysListItem.bind(this);
   }
 
   styles = StyleSheet.create({
