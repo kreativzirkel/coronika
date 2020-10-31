@@ -27,134 +27,138 @@ msgstr "Übersicht"
 msgid "navigation.tips.label"
 msgstr "Tipps"
 
-#: src/components/partials/EntriesTabsView/index.jsx:780
+#: src/components/partials/EntriesTabsView/index.jsx:795
 #: src/components/screens/Export/createPdfFile.js:317
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "Personen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:788
+#: src/components/partials/EntriesTabsView/index.jsx:803
 #: src/components/screens/Export/createPdfFile.js:409
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "Orte"
 
-#: src/components/partials/EntriesTabsView/index.jsx:800
+#: src/components/partials/EntriesTabsView/index.jsx:815
 msgid "entries.persons.list.new"
 msgstr "Neue Person anlegen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:822
-#: src/components/partials/EntriesTabsView/index.jsx:881
+#: src/components/partials/EntriesTabsView/index.jsx:837
+#: src/components/partials/EntriesTabsView/index.jsx:896
 msgid "entries.search.list.empty"
 msgstr "Zu deiner Suche konnte nichts gefunden werden."
 
-#: src/components/partials/EntriesTabsView/index.jsx:833
+#: src/components/partials/EntriesTabsView/index.jsx:848
 msgid "entries.persons.list.empty"
 msgstr ""
 "Du hast noch keine Person angelegt. Um direkt loszulegen, kannst du Personen "
 "aus deinem Telefonbuch importieren."
 
-#: src/components/partials/EntriesTabsView/index.jsx:842
+#: src/components/partials/EntriesTabsView/index.jsx:857
 msgid "entries.persons.list.import.button"
 msgstr "Jetzt importieren"
 
-#: src/components/partials/EntriesTabsView/index.jsx:860
+#: src/components/partials/EntriesTabsView/index.jsx:875
 msgid "entries.locations.list.new"
 msgstr "Neuen Ort anlegen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:885
+#: src/components/partials/EntriesTabsView/index.jsx:900
 msgid "entries.locations.list.empty"
 msgstr ""
 "Du hast noch keinen Ort angelegt. Beginne jetzt und erstelle deinen ersten "
 "Ort."
 
-#: src/components/partials/EntriesTabsView/index.jsx:903
+#: src/components/partials/EntriesTabsView/index.jsx:918
 msgid "entries.selection.add"
 msgstr "Auswahl hinzufügen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:918
+#: src/components/partials/EntriesTabsView/index.jsx:933
 msgid "entries.modals.update-person.button"
 msgstr "Speichern"
 
-#: src/components/partials/EntriesTabsView/index.jsx:918
+#: src/components/partials/EntriesTabsView/index.jsx:933
 msgid "entries.modals.new-person.button"
 msgstr "Hinzufügen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:921
+#: src/components/partials/EntriesTabsView/index.jsx:936
 msgid "entries.modals.update-person.headline"
 msgstr "Person bearbeiten"
 
-#: src/components/partials/EntriesTabsView/index.jsx:921
+#: src/components/partials/EntriesTabsView/index.jsx:936
 msgid "entries.modals.new-person.headline"
 msgstr "Neue Person"
 
-#: src/components/partials/EntriesTabsView/index.jsx:936
-#: src/components/partials/EntriesTabsView/index.jsx:958
+#: src/components/partials/EntriesTabsView/index.jsx:953
+#: src/components/partials/EntriesTabsView/index.jsx:975
 msgid "entries.modals.update-location.button"
 msgstr "Speichern"
 
-#: src/components/partials/EntriesTabsView/index.jsx:937
+#: src/components/partials/EntriesTabsView/index.jsx:954
 msgid "entries.modals.new-location.button"
 msgstr "Hinzufügen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:941
-#: src/components/partials/EntriesTabsView/index.jsx:965
+#: src/components/partials/EntriesTabsView/index.jsx:958
+#: src/components/partials/EntriesTabsView/index.jsx:982
 msgid "entries.modals.update-location.headline"
 msgstr "Ort bearbeiten"
 
-#: src/components/partials/EntriesTabsView/index.jsx:942
+#: src/components/partials/EntriesTabsView/index.jsx:959
 msgid "entries.modals.new-location.headline"
 msgstr "Neuer Ort"
 
-#: src/components/partials/EntriesTabsView/index.jsx:959
+#: src/components/partials/EntriesTabsView/index.jsx:976
 msgid "entries.modals.select-location.button"
 msgstr "Auswählen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:966
+#: src/components/partials/EntriesTabsView/index.jsx:983
 msgid "entries.modals.select-location.headline"
 msgstr "Ort auswählen"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:229
+#: src/components/partials/EntriesTabsView/Modals.jsx:236
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Vorname Nachname"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:241
+#: src/components/partials/EntriesTabsView/Modals.jsx:248
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Telefon"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:322
+#: src/components/partials/EntriesTabsView/Modals.jsx:259
+msgid "entries.modals.new-person.placeholder.mail"
+msgstr "E-Mail"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:340
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Titel"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:333
+#: src/components/partials/EntriesTabsView/Modals.jsx:351
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Beschreibung"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:345
+#: src/components/partials/EntriesTabsView/Modals.jsx:363
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "Telefon"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:495
+#: src/components/partials/EntriesTabsView/Modals.jsx:513
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Beschreibung"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:522
-#: src/components/partials/EntriesTabsView/Modals.jsx:534
+#: src/components/partials/EntriesTabsView/Modals.jsx:540
+#: src/components/partials/EntriesTabsView/Modals.jsx:552
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:523
-#: src/components/partials/EntriesTabsView/Modals.jsx:535
+#: src/components/partials/EntriesTabsView/Modals.jsx:541
+#: src/components/partials/EntriesTabsView/Modals.jsx:553
 msgid "Confirm"
 msgstr "Bestätigen"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:647
-#: src/components/partials/EntriesTabsView/Modals.jsx:734
+#: src/components/partials/EntriesTabsView/Modals.jsx:665
+#: src/components/partials/EntriesTabsView/Modals.jsx:765
 msgid "entries.modals.more.edit"
 msgstr "bearbeiten"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:653
-#: src/components/partials/EntriesTabsView/Modals.jsx:742
+#: src/components/partials/EntriesTabsView/Modals.jsx:671
+#: src/components/partials/EntriesTabsView/Modals.jsx:773
 msgid "entries.modals.more.delete"
 msgstr "löschen"
 
@@ -212,18 +216,9 @@ msgstr "Jetzt anfangen"
 msgid "about-screen.header.headline"
 msgstr "Über Coronika"
 
-#: src/components/screens/AddEntry/ui.jsx:177
+#: src/components/screens/AddEntry/ui.jsx:42
 msgid "add-entry-screen.header.headline"
 msgstr "Eintrag hinzufügen"
-
-#: src/components/screens/AddEntry/ui.jsx:207
-msgid "add-entry-screen.modals.switch-day.headline"
-msgstr "Tag auswählen"
-
-#: src/components/screens/AddEntry/ui.jsx:75
-#: src/components/widgets/DayOverview.jsx:34
-msgid "today"
-msgstr "heute"
 
 #: src/components/screens/Dashboard/ui.jsx:173
 msgid "dashboard-screen.list.load-more"
@@ -245,29 +240,29 @@ msgstr ""
 msgid "Close"
 msgstr "Schließen"
 
-#: src/components/screens/Day/ui.jsx:100
-msgid "day-screen.entries.add"
-msgstr "Eintrag hinzufügen"
-
-#: src/components/screens/Day/ui.jsx:72
-msgid "day-screen.header.headline"
-msgstr "Tagesübersicht"
-
-#: src/components/screens/Day/ui.jsx:86
+#: src/components/screens/Day/ui.jsx:102
 msgid "day-screen.locations.empty"
 msgstr "Du hast für diesen Tag noch keine Orte hinzugefügt."
 
-#: src/components/screens/Day/ui.jsx:87
+#: src/components/screens/Day/ui.jsx:103
 msgid "day-screen.persons.empty"
 msgstr "Du hast für diesen Tag noch keine Personen hinzugefügt."
 
-#: src/components/screens/Directory/importPersons.js:49
-#: src/components/screens/Directory/importPersons.js:59
-msgid "directory-screen.alerts.import-persons.missing-permission.title"
-msgstr "Fehlende Berechtigung"
+#: src/components/screens/Day/ui.jsx:116
+msgid "day-screen.entries.add"
+msgstr "Eintrag hinzufügen"
+
+#: src/components/screens/Day/ui.jsx:86
+msgid "day-screen.header.headline"
+msgstr "Tagesübersicht"
 
 #: src/components/screens/Directory/importPersons.js:50
 #: src/components/screens/Directory/importPersons.js:60
+msgid "directory-screen.alerts.import-persons.missing-permission.title"
+msgstr "Fehlende Berechtigung"
+
+#: src/components/screens/Directory/importPersons.js:51
+#: src/components/screens/Directory/importPersons.js:61
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
 msgstr ""
 "Erlaube der App den Zugriff auf deine Kontakte in den Privatsphäre "
@@ -395,41 +390,46 @@ msgstr ""
 msgid "export-screen.modals.export-completed.button.save"
 msgstr "Speichern"
 
-#: src/components/screens/Legal.jsx:241 src/components/screens/Menu.jsx:207
+#: src/components/screens/Legal/index.jsx:243
+#: src/components/screens/Menu.jsx:207
 msgid "legal-screen.header.headline"
 msgstr "Rechtliches"
 
-#: src/components/screens/Legal.jsx:248
+#: src/components/screens/Legal/index.jsx:250
 msgid "legal-screen.tabs.privacy.label"
 msgstr "Datenschutz"
 
-#: src/components/screens/Legal.jsx:253
+#: src/components/screens/Legal/index.jsx:255
 msgid "legal-screen.tabs.imprint.label"
 msgstr "Impressum"
 
-#: src/components/screens/Legal.jsx:258
+#: src/components/screens/Legal/index.jsx:260
 msgid "legal-screen.tabs.licenses.label"
 msgstr "Lizenzen"
 
-#: src/components/screens/Legal.jsx:268 src/components/screens/Legal.jsx:284
-#: src/components/screens/Legal.jsx:313
+#: src/components/screens/Legal/index.jsx:270
+#: src/components/screens/Legal/index.jsx:286
+#: src/components/screens/Legal/index.jsx:315
 msgid "legal-screen.privacy.section-1.headline"
 msgstr "Datenverarbeitung der App"
 
-#: src/components/screens/Legal.jsx:269 src/components/screens/Legal.jsx:286
-#: src/components/screens/Legal.jsx:315
+#: src/components/screens/Legal/index.jsx:271
+#: src/components/screens/Legal/index.jsx:288
+#: src/components/screens/Legal/index.jsx:317
 msgid "legal-screen.privacy.section-1.text"
 msgstr ""
 "Die App Coronika verarbeitet personen- und ortsbezogene Daten ausschließlich "
 "lokal auf dem Smartphone des Nutzers."
 
-#: src/components/screens/Legal.jsx:270 src/components/screens/Legal.jsx:288
-#: src/components/screens/Legal.jsx:317
+#: src/components/screens/Legal/index.jsx:272
+#: src/components/screens/Legal/index.jsx:290
+#: src/components/screens/Legal/index.jsx:319
 msgid "legal-screen.privacy.section-2.headline"
 msgstr "Personenbezogene Daten"
 
-#: src/components/screens/Legal.jsx:271 src/components/screens/Legal.jsx:290
-#: src/components/screens/Legal.jsx:319
+#: src/components/screens/Legal/index.jsx:273
+#: src/components/screens/Legal/index.jsx:292
+#: src/components/screens/Legal/index.jsx:321
 msgid "legal-screen.privacy.section-2.text"
 msgstr ""
 "Der Nutzer kann innerhalb der App Personen anlegen. Dabei wird der Name und "
@@ -440,13 +440,15 @@ msgstr ""
 "Nutzers. Eine Übermittlung der Daten an den App-Anbieter oder dritte "
 "Parteien findet zu keiner Zeit statt."
 
-#: src/components/screens/Legal.jsx:272 src/components/screens/Legal.jsx:292
-#: src/components/screens/Legal.jsx:321
+#: src/components/screens/Legal/index.jsx:274
+#: src/components/screens/Legal/index.jsx:294
+#: src/components/screens/Legal/index.jsx:323
 msgid "legal-screen.privacy.section-3.headline"
 msgstr "Ortsbezogene Daten"
 
-#: src/components/screens/Legal.jsx:273 src/components/screens/Legal.jsx:294
-#: src/components/screens/Legal.jsx:323
+#: src/components/screens/Legal/index.jsx:275
+#: src/components/screens/Legal/index.jsx:296
+#: src/components/screens/Legal/index.jsx:325
 msgid "legal-screen.privacy.section-3.text"
 msgstr ""
 "Der Nutzer kann innerhalb der App Orte anlegen. Dabei werden der Name des "
@@ -455,13 +457,15 @@ msgstr ""
 "bleiben die ortsbezogenen Daten lokal auf dem Smartphone des Nutzers und "
 "werden nicht an den App-Anbieter oder dritte Parteien übermittelt."
 
-#: src/components/screens/Legal.jsx:274 src/components/screens/Legal.jsx:296
-#: src/components/screens/Legal.jsx:325
+#: src/components/screens/Legal/index.jsx:276
+#: src/components/screens/Legal/index.jsx:298
+#: src/components/screens/Legal/index.jsx:327
 msgid "legal-screen.privacy.section-4.headline"
 msgstr "Tagebuch"
 
-#: src/components/screens/Legal.jsx:275 src/components/screens/Legal.jsx:298
-#: src/components/screens/Legal.jsx:327
+#: src/components/screens/Legal/index.jsx:277
+#: src/components/screens/Legal/index.jsx:300
+#: src/components/screens/Legal/index.jsx:329
 msgid "legal-screen.privacy.section-4.text"
 msgstr ""
 "Im Rahmen des Tagebuchs ordnet der Nutzer auf täglicher Basis Personen und "
@@ -470,13 +474,15 @@ msgstr ""
 "bleiben ebenfalls lokal auf dem Smartphone des Nutzers und werden nicht an "
 "den App-Anbieter oder an dritte Parteien übermittelt."
 
-#: src/components/screens/Legal.jsx:276 src/components/screens/Legal.jsx:300
-#: src/components/screens/Legal.jsx:329
+#: src/components/screens/Legal/index.jsx:278
+#: src/components/screens/Legal/index.jsx:302
+#: src/components/screens/Legal/index.jsx:331
 msgid "legal-screen.privacy.section-5.headline"
 msgstr "Export"
 
-#: src/components/screens/Legal.jsx:277 src/components/screens/Legal.jsx:302
-#: src/components/screens/Legal.jsx:331
+#: src/components/screens/Legal/index.jsx:279
+#: src/components/screens/Legal/index.jsx:304
+#: src/components/screens/Legal/index.jsx:333
 msgid "legal-screen.privacy.section-5.text"
 msgstr ""
 "Innerhalb der App steht dem Nutzer eine Export-Funktion zur Verfügung, um "
@@ -490,13 +496,15 @@ msgstr ""
 "enthaltenen Daten verantwortlich zu behandeln und diese nicht unbedacht "
 "weiterzugeben."
 
-#: src/components/screens/Legal.jsx:278 src/components/screens/Legal.jsx:304
-#: src/components/screens/Legal.jsx:333
+#: src/components/screens/Legal/index.jsx:280
+#: src/components/screens/Legal/index.jsx:306
+#: src/components/screens/Legal/index.jsx:335
 msgid "legal-screen.privacy.section-6.headline"
 msgstr "Datenweitergabe und Tracking"
 
-#: src/components/screens/Legal.jsx:279 src/components/screens/Legal.jsx:306
-#: src/components/screens/Legal.jsx:335
+#: src/components/screens/Legal/index.jsx:281
+#: src/components/screens/Legal/index.jsx:308
+#: src/components/screens/Legal/index.jsx:337
 msgid "legal-screen.privacy.section-6.text"
 msgstr ""
 "Die App bietet keine automatisierte Trackingfunktion sowie Datenweitergabe "
@@ -505,13 +513,15 @@ msgstr ""
 "die Daten weitergibt. Ansonsten bleiben alle Daten lokal auf dem Smartphone "
 "des Nutzers."
 
-#: src/components/screens/Legal.jsx:345 src/components/screens/Legal.jsx:357
-#: src/components/screens/Legal.jsx:378
+#: src/components/screens/Legal/index.jsx:353
+#: src/components/screens/Legal/index.jsx:371
+#: src/components/screens/Legal/index.jsx:398
 msgid "legal-screen.imprint.section-1.headline"
 msgstr "Diese App 'Coronika' wird betrieben von"
 
-#: src/components/screens/Legal.jsx:346 src/components/screens/Legal.jsx:359
-#: src/components/screens/Legal.jsx:380
+#: src/components/screens/Legal/index.jsx:354
+#: src/components/screens/Legal/index.jsx:373
+#: src/components/screens/Legal/index.jsx:400
 msgid "legal-screen.imprint.section-1.text"
 msgstr ""
 "Kreativzirkel UG (haftungsbeschränkt)\n"
@@ -527,13 +537,15 @@ msgstr ""
 "Registernummer: HRB 82252\n"
 "USt-IdNr.: DE 300 611 389"
 
-#: src/components/screens/Legal.jsx:347 src/components/screens/Legal.jsx:361
-#: src/components/screens/Legal.jsx:382
+#: src/components/screens/Legal/index.jsx:355
+#: src/components/screens/Legal/index.jsx:375
+#: src/components/screens/Legal/index.jsx:402
 msgid "legal-screen.imprint.section-2.headline"
 msgstr "Haftung für Inhalte"
 
-#: src/components/screens/Legal.jsx:348 src/components/screens/Legal.jsx:363
-#: src/components/screens/Legal.jsx:384
+#: src/components/screens/Legal/index.jsx:356
+#: src/components/screens/Legal/index.jsx:377
+#: src/components/screens/Legal/index.jsx:404
 msgid "legal-screen.imprint.section-2.text"
 msgstr ""
 "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf "
@@ -547,13 +559,15 @@ msgstr ""
 "Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden "
 "Rechtsverletzungen werden wir diese Inhalte umgehend entfernen."
 
-#: src/components/screens/Legal.jsx:349 src/components/screens/Legal.jsx:365
-#: src/components/screens/Legal.jsx:386
+#: src/components/screens/Legal/index.jsx:357
+#: src/components/screens/Legal/index.jsx:379
+#: src/components/screens/Legal/index.jsx:406
 msgid "legal-screen.imprint.section-3.headline"
 msgstr "Haftung für Links"
 
-#: src/components/screens/Legal.jsx:350 src/components/screens/Legal.jsx:367
-#: src/components/screens/Legal.jsx:388
+#: src/components/screens/Legal/index.jsx:358
+#: src/components/screens/Legal/index.jsx:381
+#: src/components/screens/Legal/index.jsx:408
 msgid "legal-screen.imprint.section-3.text"
 msgstr ""
 "Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte "
@@ -567,13 +581,15 @@ msgstr ""
 "Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend "
 "entfernen."
 
-#: src/components/screens/Legal.jsx:351 src/components/screens/Legal.jsx:369
-#: src/components/screens/Legal.jsx:390
+#: src/components/screens/Legal/index.jsx:359
+#: src/components/screens/Legal/index.jsx:383
+#: src/components/screens/Legal/index.jsx:410
 msgid "legal-screen.imprint.section-4.headline"
 msgstr "Urheberrecht"
 
-#: src/components/screens/Legal.jsx:352 src/components/screens/Legal.jsx:371
-#: src/components/screens/Legal.jsx:392
+#: src/components/screens/Legal/index.jsx:360
+#: src/components/screens/Legal/index.jsx:385
+#: src/components/screens/Legal/index.jsx:412
 msgid "legal-screen.imprint.section-4.text"
 msgstr ""
 "Die durch die Betreiber erstellten Inhalte und Werke auf diesen Seiten "
@@ -1048,9 +1064,18 @@ msgstr "Überspringen"
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Jetzt aktivieren"
 
+#: src/components/widgets/DayOverview.jsx:34
+#: src/components/widgets/ModalSwitchDay.jsx:70
+msgid "today"
+msgstr "heute"
+
 #: src/components/widgets/DayOverview.jsx:46
 msgid "total"
 msgstr "gesamt"
+
+#: src/components/widgets/ModalSwitchDay.jsx:171
+msgid "add-entry-screen.modals.switch-day.headline"
+msgstr "Tag auswählen"
 
 #: src/components/widgets/SearchBar.jsx:77
 msgid "placeholder.search-input"

@@ -96,6 +96,7 @@ class EntriesTabsView extends React.Component {
       isUpdateLocationMode: false,
       personName: '',
       personPhone: '',
+      personMail: '',
       locationDescription: '',
       locationPhone: '',
       locationTitle: '',
@@ -143,6 +144,7 @@ class EntriesTabsView extends React.Component {
     this.setLocationTitle = this.setLocationTitle.bind(this);
     this.setPersonName = this.setPersonName.bind(this);
     this.setPersonPhone = this.setPersonPhone.bind(this);
+    this.setPersonMail = this.setPersonMail.bind(this);
     this.setSearchValue = this.setSearchValue.bind(this);
     this.setSelectLocationDescription = this.setSelectLocationDescription.bind(this);
     this.toggleLocationSelection = this.toggleLocationSelection.bind(this);
@@ -186,10 +188,11 @@ class EntriesTabsView extends React.Component {
       store: { dispatch, getState },
     } = this.context;
     const { allowSelection } = this.props;
-    const { personName, personPhone } = this.state;
+    const { personName, personPhone, personMail } = this.state;
     const person = {
       fullName: personName,
       phoneNumbers: [{ label: 'phone', number: personPhone }],
+      emailAddresses: [{ label: 'mail', email: personMail }],
     };
 
     await dispatch(await addPerson(person));
@@ -200,7 +203,8 @@ class EntriesTabsView extends React.Component {
       } = getState();
 
       const addedPerson = persons.find(
-        ({ fullName, phoneNumbers }) => fullName === personName && phoneNumbers[0].number === personPhone
+        ({ fullName, phoneNumbers, emailAddresses }) =>
+          fullName === personName && phoneNumbers[0].number === personPhone && emailAddresses[0].email === personMail
       );
 
       if (addedPerson) {
@@ -271,6 +275,7 @@ class EntriesTabsView extends React.Component {
       isModalNewPersonVisible: true,
       personName: '',
       personPhone: '',
+      personMail: '',
     });
   }
 
@@ -352,11 +357,12 @@ class EntriesTabsView extends React.Component {
     this.setState({ isModalSelectLocationVisible: false });
   }
 
-  openModalMorePerson(personId, personName, personPhone) {
+  openModalMorePerson(personId, personName, personPhone, personMail) {
     this.setState({
       personId,
       personName,
       personPhone,
+      personMail,
       isModalMorePersonVisible: true,
     });
   }
@@ -411,6 +417,10 @@ class EntriesTabsView extends React.Component {
 
   setPersonPhone(personPhone) {
     this.setState({ personPhone });
+  }
+
+  setPersonMail(personMail) {
+    this.setState({ personMail });
   }
 
   setLocationDescription(locationDescription) {
@@ -545,14 +555,17 @@ class EntriesTabsView extends React.Component {
 
   editPerson(personId) {
     const { persons } = this.props;
-    const { fullName: personName, phoneNumbers } = persons.find(({ id }) => id === personId);
+    const { fullName: personName, phoneNumbers, emailAddresses } = persons.find(({ id }) => id === personId);
     const personPhone = phoneNumbers[0]?.number || '';
+    const personMail = emailAddresses[0]?.email || '';
+
     this.setState({
       personId,
       isUpdatePersonMode: true,
       isModalNewPersonVisible: true,
       personName,
       personPhone,
+      personMail,
     });
   }
 
@@ -560,11 +573,12 @@ class EntriesTabsView extends React.Component {
     const {
       store: { dispatch },
     } = this.context;
-    const { personId, personName, personPhone } = this.state;
+    const { personId, personName, personPhone, personMail } = this.state;
     const person = {
       id: personId,
       fullName: personName,
       phoneNumbers: [{ label: 'phone', number: personPhone }],
+      emailAddresses: [{ label: 'mail', email: personMail }],
     };
 
     dispatch(updatePerson(person));
@@ -731,6 +745,7 @@ class EntriesTabsView extends React.Component {
       isUpdateLocationMode,
       personName,
       personPhone,
+      personMail,
       locationDescription,
       locationPhone,
       locationTitle,
@@ -923,10 +938,12 @@ class EntriesTabsView extends React.Component {
           isVisible={isModalNewPersonVisible}
           personName={personName}
           personPhone={personPhone}
+          personMail={personMail}
           onPressClose={this.closeModalNewPerson}
           onPressConfirm={isUpdatePersonMode ? this.updatePerson : this.addNewPerson}
           setPersonName={this.setPersonName}
           setPersonPhone={this.setPersonPhone}
+          setPersonMail={this.setPersonMail}
         />
 
         <ModalLocation
@@ -994,6 +1011,7 @@ class EntriesTabsView extends React.Component {
           isVisible={isModalMorePersonVisible}
           personName={personName}
           personPhone={personPhone}
+          personMail={personMail}
           onPressClose={this.closeModalMorePerson}
           onPressDelete={this.onPressMorePersonDelete}
           onPressEdit={this.onPressMorePersonEdit}

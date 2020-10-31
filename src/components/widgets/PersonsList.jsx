@@ -97,7 +97,12 @@ class PersonListItemClass extends React.Component {
 
   openMore() {
     if (this.props.onPressMore)
-      this.props.onPressMore(this.props.id, this.props.fullName, this.props.phoneNumbers[0]?.number);
+      this.props.onPressMore(
+        this.props.id,
+        this.props.fullName,
+        this.props.phoneNumbers[0]?.number,
+        this.props.emailAddresses[0]?.email
+      );
   }
 
   toggleSelection = () => {
@@ -291,15 +296,15 @@ class PersonsList extends React.Component {
     },
   });
 
-  onPressMorePerson(personId, personName, personPhone) {
-    if (this.props.openItemMore) this.props.openItemMore(personId, personName, personPhone);
+  onPressMorePerson(personId, personName, personPhone, personMail) {
+    if (this.props.openItemMore) this.props.openItemMore(personId, personName, personPhone, personMail);
   }
 
   toggleSelection(id) {
     if (this.props.toggleSelection) this.props.toggleSelection(id);
   }
 
-  renderItem({ item: { counter, fullName, id, phoneNumbers, recordID, separatorItem } }) {
+  renderItem({ item: { counter, emailAddresses, fullName, id, phoneNumbers, recordID, separatorItem } }) {
     if (separatorItem) {
       return <ListItemSeparator />;
     }
@@ -319,6 +324,7 @@ class PersonsList extends React.Component {
         allowPersonUpdate={allowUpdate && recordID === undefined}
         allowSelection={allowSelection}
         counter={counter}
+        emailAddresses={emailAddresses}
         fullName={fullName}
         id={id}
         isPersonSelected={allowSelection && selectedPersons.includes(id)}
