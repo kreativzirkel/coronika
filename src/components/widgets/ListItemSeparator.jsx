@@ -31,11 +31,17 @@ class ListItemSeparator extends React.Component {
   });
 
   render() {
-    const { colors } = this.props;
+    const { colors, colorScheme, inverted } = this.props;
+
+    const backgroundColor = inverted
+      ? colorScheme === 'dark'
+        ? colors.LIGHT.SECONDARY
+        : colors.DARK.SECONDARY
+      : colors.SECONDARY;
 
     return (
       <View style={this.styles.viewWrapper}>
-        <View style={{ ...this.styles.viewLine, backgroundColor: colors.SECONDARY }} />
+        <View style={{ ...this.styles.viewLine, backgroundColor }} />
       </View>
     );
   }

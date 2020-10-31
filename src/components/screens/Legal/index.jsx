@@ -1,16 +1,18 @@
 import UilExternalLinkAlt from '@iconscout/react-native-unicons/icons/uil-external-link-alt';
-import React from 'react';
-import { FlatList, Linking, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { COLOR_PRIMARY } from '../../constants';
-import withI18n from '../../i18n';
-import licenses from '../../licenses';
-import withColorScheme from '../../utils/withColorScheme';
-import withViewportUnits from '../../utils/withViewportUnits';
-import CollapsibleBox from '../widgets/CollapsibleBox';
-import { HeaderBack } from '../widgets/Header';
-import Layout from '../widgets/Layout';
-import TabBar from '../widgets/TabBar';
-import TabBarItem from '../widgets/TabBarItem';
+import React, { Fragment } from 'react';
+import { FlatList, Linking, Platform, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { COLOR_PRIMARY } from '../../../constants';
+import withI18n from '../../../i18n';
+import licenses from '../../../licenses';
+import withColorScheme from '../../../utils/withColorScheme';
+import withViewportUnits from '../../../utils/withViewportUnits';
+import CollapsibleBox from '../../widgets/CollapsibleBox';
+import { HeaderBack } from '../../widgets/Header';
+import Layout from '../../widgets/Layout';
+import ListItemSeparator from '../../widgets/ListItemSeparator';
+import TabBar from '../../widgets/TabBar';
+import TabBarItem from '../../widgets/TabBarItem';
+import ImprintBjoernSteigerStiftung from './ImprintBjoernSteigerStiftung';
 
 const TABS = {
   IMPRINT: 0,
@@ -18,7 +20,7 @@ const TABS = {
   POLICY: 2,
 };
 
-class Legal extends React.Component {
+class Index extends React.Component {
   constructor(props) {
     super(props);
 
@@ -342,6 +344,12 @@ class Legal extends React.Component {
             {activeTab === TABS.IMPRINT && (
               <ScrollView>
                 <View style={styles.viewTabContent}>
+                  {Platform.OS === 'ios' && (
+                    <Fragment>
+                      <ImprintBjoernSteigerStiftung />
+                      <ListItemSeparator />
+                    </Fragment>
+                  )}
                   <Text style={styles.contentTextHeadline}>{__('legal-screen.imprint.section-1.headline')}</Text>
                   <Text style={styles.contentText}>{__('legal-screen.imprint.section-1.text')}</Text>
                   <Text style={styles.contentTextHeadline}>{__('legal-screen.imprint.section-2.headline')}</Text>
@@ -353,6 +361,12 @@ class Legal extends React.Component {
 
                   {!['de', 'en'].includes(currentLanguage) && (
                     <CollapsibleBox headline={'English version'} style={styles.collapsible}>
+                      {Platform.OS === 'ios' && (
+                        <Fragment>
+                          <ImprintBjoernSteigerStiftung />
+                          <ListItemSeparator inverted />
+                        </Fragment>
+                      )}
                       <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.imprint.section-1.headline', 'en')}
                       </Text>
@@ -374,6 +388,12 @@ class Legal extends React.Component {
 
                   {currentLanguage !== 'de' && (
                     <CollapsibleBox headline={'Deutsche Version'} style={styles.collapsible}>
+                      {Platform.OS === 'ios' && (
+                        <Fragment>
+                          <ImprintBjoernSteigerStiftung />
+                          <ListItemSeparator inverted />
+                        </Fragment>
+                      )}
                       <Text style={styles.contentTextHeadline}>
                         {__('legal-screen.imprint.section-1.headline', 'de')}
                       </Text>
@@ -416,4 +436,4 @@ class Legal extends React.Component {
   }
 }
 
-export default withColorScheme(withI18n(withViewportUnits(Legal)));
+export default withColorScheme(withI18n(withViewportUnits(Index)));
