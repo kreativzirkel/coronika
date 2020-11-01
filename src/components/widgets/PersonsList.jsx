@@ -99,9 +99,11 @@ class PersonListItemClass extends React.Component {
     if (this.props.onPressMore)
       this.props.onPressMore(
         this.props.id,
+        this.props.fullNameDisplay,
         this.props.fullName,
         this.props.phoneNumbers?.[0]?.number,
-        this.props.emailAddresses?.[0]?.email
+        this.props.emailAddresses?.[0]?.email,
+        this.props.recordID
       );
   }
 
@@ -113,26 +115,30 @@ class PersonListItemClass extends React.Component {
 
   PersonItemComponent() {
     const {
-      allowPersonDelete,
+      allowPersonMore,
       allowSelection,
       colors,
       counter,
       fullName,
+      fullNameDisplay,
       isPersonSelected,
       recordID,
       showCounter,
       vw,
     } = this.props;
 
+    const displayName =
+      recordID !== undefined && !!fullNameDisplay && fullNameDisplay.trim().length > 0 ? fullNameDisplay : fullName;
+
     return (
       <View style={{ ...this.styles.person, backgroundColor: colors.SECONDARY }}>
         <View
           style={{
             ...this.styles.personTextWrapper,
-            ...((allowPersonDelete || allowSelection || showCounter) && this.styles.personTextWrapperWithPadding),
+            ...((allowPersonMore || allowSelection || showCounter) && this.styles.personTextWrapperWithPadding),
           }}>
           <Text numberOfLines={1} style={{ ...this.styles.personText, color: colors.TEXT }}>
-            {fullName}
+            {displayName}
           </Text>
 
           {recordID !== undefined && (
@@ -158,7 +164,7 @@ class PersonListItemClass extends React.Component {
           </View>
         )}
 
-        {allowPersonDelete && (
+        {allowPersonMore && (
           <TouchableOpacity onPress={this.openMore} style={this.styles.moreButton}>
             <UilEllipsisV size={vw(7)} color={COLOR_PRIMARY} />
           </TouchableOpacity>
@@ -296,36 +302,32 @@ class PersonsList extends React.Component {
     },
   });
 
-  onPressMorePerson(personId, personName, personPhone, personMail) {
-    if (this.props.openItemMore) this.props.openItemMore(personId, personName, personPhone, personMail);
+  onPressMorePerson(personId, personDisplayName, personName, personPhone, personMail, personRecordId) {
+    if (this.props.openItemMore)
+      this.props.openItemMore(personId, personDisplayName, personName, personPhone, personMail, personRecordId);
   }
 
   toggleSelection(id) {
     if (this.props.toggleSelection) this.props.toggleSelection(id);
   }
 
-  renderItem({ item: { counter, emailAddresses, fullName, id, phoneNumbers, recordID, separatorItem } }) {
+  renderItem({
+    item: { counter, emailAddresses, fullName, fullNameDisplay, id, phoneNumbers, recordID, separatorItem },
+  }) {
     if (separatorItem) {
       return <ListItemSeparator />;
     }
 
-    const {
-      allowDelete,
-      allowSelection,
-      allowUpdate,
-      disableDeleteImportedPersons,
-      selectedPersons,
-      showCounter,
-    } = this.props;
+    const { allowMore, allowSelection, selectedPersons, showCounter } = this.props;
 
     return (
       <PersonsListItem
-        allowPersonDelete={allowDelete && (recordID !== undefined ? !disableDeleteImportedPersons : true)}
-        allowPersonUpdate={allowUpdate && recordID === undefined}
+        allowPersonMore={allowMore}
         allowSelection={allowSelection}
         counter={counter}
         emailAddresses={emailAddresses}
         fullName={fullName}
+        fullNameDisplay={fullNameDisplay}
         id={id}
         isPersonSelected={allowSelection && selectedPersons.includes(id)}
         onPressMore={this.onPressMorePerson}

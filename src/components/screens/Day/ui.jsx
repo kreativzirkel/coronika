@@ -99,6 +99,8 @@ class Day extends React.Component {
         </View>
 
         <EntriesTabsView
+          allowDelete
+          allowMore
           customLocationsEmptyText={__('day-screen.locations.empty')}
           customPersonsEmptyText={__('day-screen.persons.empty')}
           deletePersonItem={this.deletePersonFromDay}

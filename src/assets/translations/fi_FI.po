@@ -27,137 +27,141 @@ msgstr ""
 msgid "navigation.tips.label"
 msgstr "Vinkit"
 
-#: src/components/partials/EntriesTabsView/index.jsx:795
+#: src/components/partials/EntriesTabsView/index.jsx:1001
+#: src/components/partials/EntriesTabsView/index.jsx:979
+msgid "entries.modals.update-location.button"
+msgstr "Tallenna"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1002
+msgid "entries.modals.select-location.button"
+msgstr "Valitse"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1008
+#: src/components/partials/EntriesTabsView/index.jsx:984
+msgid "entries.modals.update-location.headline"
+msgstr "Muokkaa sijaintia"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1009
+msgid "entries.modals.select-location.headline"
+msgstr "Valitse sijainti"
+
+#: src/components/partials/EntriesTabsView/index.jsx:820
 #: src/components/screens/Export/createPdfFile.js:317
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "Yhteystiedot"
 
-#: src/components/partials/EntriesTabsView/index.jsx:803
+#: src/components/partials/EntriesTabsView/index.jsx:828
 #: src/components/screens/Export/createPdfFile.js:409
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "Sijainnit"
 
-#: src/components/partials/EntriesTabsView/index.jsx:815
+#: src/components/partials/EntriesTabsView/index.jsx:840
 msgid "entries.persons.list.new"
 msgstr "Uusi yhteystieto"
 
-#: src/components/partials/EntriesTabsView/index.jsx:837
-#: src/components/partials/EntriesTabsView/index.jsx:896
+#: src/components/partials/EntriesTabsView/index.jsx:860
+#: src/components/partials/EntriesTabsView/index.jsx:919
 msgid "entries.search.list.empty"
 msgstr "Hakusi ei tuottanut tuloksia."
 
-#: src/components/partials/EntriesTabsView/index.jsx:848
+#: src/components/partials/EntriesTabsView/index.jsx:871
 msgid "entries.persons.list.empty"
 msgstr ""
 "Et ole vielä luonut yhteystietoa. Aloittaaksesi heti, voit tuoda "
 "yhteystietoja puhelinluettelosta."
 
-#: src/components/partials/EntriesTabsView/index.jsx:857
+#: src/components/partials/EntriesTabsView/index.jsx:880
 msgid "entries.persons.list.import.button"
 msgstr "Tuo nyt"
 
-#: src/components/partials/EntriesTabsView/index.jsx:875
+#: src/components/partials/EntriesTabsView/index.jsx:898
 msgid "entries.locations.list.new"
 msgstr "Uusi sijainti"
 
-#: src/components/partials/EntriesTabsView/index.jsx:900
+#: src/components/partials/EntriesTabsView/index.jsx:923
 msgid "entries.locations.list.empty"
 msgstr ""
 "Et ole vielä luonut sijaintia. Aloita nyt ja luo ensimmäinen sijaintisi."
 
-#: src/components/partials/EntriesTabsView/index.jsx:918
+#: src/components/partials/EntriesTabsView/index.jsx:941
 msgid "entries.selection.add"
 msgstr "Lisää valinta"
 
-#: src/components/partials/EntriesTabsView/index.jsx:933
+#: src/components/partials/EntriesTabsView/index.jsx:956
 msgid "entries.modals.update-person.button"
 msgstr "Tallenna"
 
-#: src/components/partials/EntriesTabsView/index.jsx:933
+#: src/components/partials/EntriesTabsView/index.jsx:956
 msgid "entries.modals.new-person.button"
 msgstr "Lisää"
 
-#: src/components/partials/EntriesTabsView/index.jsx:936
+#: src/components/partials/EntriesTabsView/index.jsx:959
 msgid "entries.modals.update-person.headline"
 msgstr "Muokkaa yhteystietoa"
 
-#: src/components/partials/EntriesTabsView/index.jsx:936
+#: src/components/partials/EntriesTabsView/index.jsx:959
 msgid "entries.modals.new-person.headline"
 msgstr "Uusi yhteystieto"
 
-#: src/components/partials/EntriesTabsView/index.jsx:953
-#: src/components/partials/EntriesTabsView/index.jsx:975
-msgid "entries.modals.update-location.button"
-msgstr "Tallenna"
-
-#: src/components/partials/EntriesTabsView/index.jsx:954
+#: src/components/partials/EntriesTabsView/index.jsx:980
 msgid "entries.modals.new-location.button"
 msgstr "Lisää"
 
-#: src/components/partials/EntriesTabsView/index.jsx:958
-#: src/components/partials/EntriesTabsView/index.jsx:982
-msgid "entries.modals.update-location.headline"
-msgstr "Muokkaa sijaintia"
-
-#: src/components/partials/EntriesTabsView/index.jsx:959
+#: src/components/partials/EntriesTabsView/index.jsx:985
 msgid "entries.modals.new-location.headline"
 msgstr "Uusi sijainti"
 
-#: src/components/partials/EntriesTabsView/index.jsx:976
-msgid "entries.modals.select-location.button"
-msgstr "Valitse"
-
-#: src/components/partials/EntriesTabsView/index.jsx:983
-msgid "entries.modals.select-location.headline"
-msgstr "Valitse sijainti"
-
-#: src/components/partials/EntriesTabsView/Modals.jsx:236
+#: src/components/partials/EntriesTabsView/Modals.jsx:252
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Nimi"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:248
+#: src/components/partials/EntriesTabsView/Modals.jsx:264
+msgid "entries.modals.new-person.placeholder.display-name"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:278
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Puhelin"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:259
+#: src/components/partials/EntriesTabsView/Modals.jsx:291
 msgid "entries.modals.new-person.placeholder.mail"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:340
+#: src/components/partials/EntriesTabsView/Modals.jsx:373
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Otsikko"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:351
+#: src/components/partials/EntriesTabsView/Modals.jsx:384
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Kuvaus"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:363
+#: src/components/partials/EntriesTabsView/Modals.jsx:396
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "Puhelin"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:513
+#: src/components/partials/EntriesTabsView/Modals.jsx:553
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Kuvaus"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:540
-#: src/components/partials/EntriesTabsView/Modals.jsx:552
+#: src/components/partials/EntriesTabsView/Modals.jsx:580
+#: src/components/partials/EntriesTabsView/Modals.jsx:592
 msgid "Cancel"
 msgstr "Peruuta"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:541
-#: src/components/partials/EntriesTabsView/Modals.jsx:553
+#: src/components/partials/EntriesTabsView/Modals.jsx:581
+#: src/components/partials/EntriesTabsView/Modals.jsx:593
 msgid "Confirm"
 msgstr "Vahvista"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:665
-#: src/components/partials/EntriesTabsView/Modals.jsx:765
+#: src/components/partials/EntriesTabsView/Modals.jsx:705
+#: src/components/partials/EntriesTabsView/Modals.jsx:813
 msgid "entries.modals.more.edit"
 msgstr "muokata"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:671
-#: src/components/partials/EntriesTabsView/Modals.jsx:773
+#: src/components/partials/EntriesTabsView/Modals.jsx:711
+#: src/components/partials/EntriesTabsView/Modals.jsx:821
 msgid "entries.modals.more.delete"
 msgstr "poistaa"
 
@@ -241,15 +245,15 @@ msgstr ""
 msgid "Close"
 msgstr "Sulje"
 
-#: src/components/screens/Day/ui.jsx:102
+#: src/components/screens/Day/ui.jsx:104
 msgid "day-screen.locations.empty"
 msgstr "Et ole lisännyt yhtään sijaintia tälle päivälle."
 
-#: src/components/screens/Day/ui.jsx:103
+#: src/components/screens/Day/ui.jsx:105
 msgid "day-screen.persons.empty"
 msgstr "Et ole lisännyt yhteystietoja tälle päivälle."
 
-#: src/components/screens/Day/ui.jsx:116
+#: src/components/screens/Day/ui.jsx:118
 msgid "day-screen.entries.add"
 msgstr "Lisää merkintä"
 
@@ -277,21 +281,21 @@ msgstr "Hallinnoi hakemistoa"
 msgid "directory-screen.header.button.import"
 msgstr "Tuonti"
 
-#: src/components/screens/Directory/ui.jsx:165
+#: src/components/screens/Directory/ui.jsx:164
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Tuo yhteystietoja"
 
-#: src/components/screens/Directory/ui.jsx:171
+#: src/components/screens/Directory/ui.jsx:170
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Tuo yhteystietoja puhelimestasi, jotta voit aloittaa heti. Kaikki "
 "yhteystiedot varastoidaan paikallisesti. Tietoja ei seurata tai jaeta."
 
-#: src/components/screens/Directory/ui.jsx:177
+#: src/components/screens/Directory/ui.jsx:176
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Tuodaan ..."
 
-#: src/components/screens/Directory/ui.jsx:178
+#: src/components/screens/Directory/ui.jsx:177
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Tuo nyt"
 
@@ -637,7 +641,7 @@ msgstr ""
 msgid "overview-screen.locations.empty"
 msgstr ""
 
-#: src/components/screens/Overview/ui.jsx:152
+#: src/components/screens/Overview/ui.jsx:151
 msgid "overview-screen.export.button"
 msgstr "Vie yleiskatsaus"
 
@@ -1060,7 +1064,7 @@ msgid "total"
 msgstr "Yhteensä"
 
 #: src/components/widgets/ModalSwitchDay.jsx:171
-msgid "add-entry-screen.modals.switch-day.headline"
+msgid "modals-switch-day.headline"
 msgstr ""
 
 #: src/components/widgets/SearchBar.jsx:77

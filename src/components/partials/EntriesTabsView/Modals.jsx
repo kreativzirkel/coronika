@@ -158,6 +158,7 @@ class ModalPersonClass extends React.Component {
   constructor(props) {
     super(props);
 
+    this.setPersonDisplayName = this.setPersonDisplayName.bind(this);
     this.setPersonName = this.setPersonName.bind(this);
     this.setPersonPhone = this.setPersonPhone.bind(this);
     this.setPersonMail = this.setPersonMail.bind(this);
@@ -166,6 +167,7 @@ class ModalPersonClass extends React.Component {
   shouldComponentUpdate(nextProps, nextState, nextContext) {
     return (
       nextProps.isVisible !== this.props.isVisible ||
+      nextProps.personDisplayName !== this.props.personDisplayName ||
       nextProps.personName !== this.props.personName ||
       nextProps.personPhone !== this.props.personPhone ||
       nextProps.personMail !== this.props.personMail ||
@@ -175,6 +177,13 @@ class ModalPersonClass extends React.Component {
   }
 
   styles = StyleSheet.create({
+    modalText: {
+      fontFamily: this.props.fontFamilyRegular,
+      fontSize: this.props.vw(4.4),
+      marginBottom: this.props.vw(5),
+      paddingLeft: this.props.vw(3),
+      paddingRight: this.props.vw(3),
+    },
     modalTextInput: {
       borderRadius: this.props.vw(2.3),
       fontFamily: this.props.fontFamilyRegular,
@@ -183,7 +192,14 @@ class ModalPersonClass extends React.Component {
       marginBottom: this.props.vw(4),
       padding: this.props.vw(4),
     },
+    modalTextInputDisabled: {
+      //
+    },
   });
+
+  setPersonDisplayName(value) {
+    if (this.props.setPersonDisplayName) this.props.setPersonDisplayName(value);
+  }
 
   setPersonName(value) {
     if (this.props.setPersonName) this.props.setPersonName(value);
@@ -203,9 +219,11 @@ class ModalPersonClass extends React.Component {
       buttonConfirmLabel,
       colors,
       headline,
+      isImported,
       isVisible,
       onPressClose,
       onPressConfirm,
+      personDisplayName,
       personName,
       personPhone,
       personMail,
@@ -214,6 +232,10 @@ class ModalPersonClass extends React.Component {
 
     const styles = {
       ...this.styles,
+      modalText: {
+        ...this.styles.modalText,
+        color: colors.TEXT,
+      },
       modalTextInput: {
         ...this.styles.modalTextInput,
         backgroundColor: colors.SECONDARY,
@@ -229,39 +251,60 @@ class ModalPersonClass extends React.Component {
         isVisible={isVisible}
         onPressClose={onPressClose}
         onPressConfirm={onPressConfirm}>
-        <TextInput
-          autoCompleteType={'off'}
-          autoCorrect={false}
-          onChangeText={this.setPersonName}
-          placeholder={__('entries.modals.new-person.placeholder.name').toLowerCase()}
-          placeholderTextColor={'#B0B0B1'}
-          style={styles.modalTextInput}
-          textContentType={'none'}
-          value={personName}
-        />
+        {!isImported && (
+          <TextInput
+            autoCompleteType={'off'}
+            autoCorrect={false}
+            onChangeText={this.setPersonName}
+            placeholder={__('entries.modals.new-person.placeholder.name').toLowerCase()}
+            placeholderTextColor={'#B0B0B1'}
+            style={styles.modalTextInput}
+            textContentType={'none'}
+            value={personName}
+          />
+        )}
 
-        <TextInput
-          autoCompleteType={'off'}
-          autoCorrect={false}
-          onChangeText={this.setPersonPhone}
-          keyboardType={'phone-pad'}
-          placeholder={__('entries.modals.new-person.placeholder.phone-number').toLowerCase()}
-          placeholderTextColor={'#B0B0B1'}
-          style={styles.modalTextInput}
-          textContentType={'none'}
-          value={personPhone}
-        />
+        {isImported && <Text style={styles.modalText}>{personName}</Text>}
 
-        <TextInput
-          autoCompleteType={'off'}
-          autoCorrect={false}
-          onChangeText={this.setPersonMail}
-          placeholder={__('entries.modals.new-person.placeholder.mail').toLowerCase()}
-          placeholderTextColor={'#B0B0B1'}
-          style={styles.modalTextInput}
-          textContentType={'none'}
-          value={personMail}
-        />
+        {isImported && (
+          <TextInput
+            autoCompleteType={'off'}
+            autoCorrect={false}
+            onChangeText={this.setPersonDisplayName}
+            placeholder={__('entries.modals.new-person.placeholder.display-name').toLowerCase()}
+            placeholderTextColor={'#B0B0B1'}
+            style={styles.modalTextInput}
+            textContentType={'none'}
+            value={personDisplayName}
+          />
+        )}
+
+        {!isImported && (
+          <TextInput
+            autoCompleteType={'off'}
+            autoCorrect={false}
+            onChangeText={this.setPersonPhone}
+            keyboardType={'phone-pad'}
+            placeholder={__('entries.modals.new-person.placeholder.phone-number').toLowerCase()}
+            placeholderTextColor={'#B0B0B1'}
+            style={styles.modalTextInput}
+            textContentType={'none'}
+            value={personPhone}
+          />
+        )}
+
+        {!isImported && (
+          <TextInput
+            autoCompleteType={'off'}
+            autoCorrect={false}
+            onChangeText={this.setPersonMail}
+            placeholder={__('entries.modals.new-person.placeholder.mail').toLowerCase()}
+            placeholderTextColor={'#B0B0B1'}
+            style={styles.modalTextInput}
+            textContentType={'none'}
+            value={personMail}
+          />
+        )}
       </ModalDefault>
     );
   }
@@ -392,6 +435,13 @@ class ModalLocationSelectionClass extends React.Component {
   }
 
   styles = StyleSheet.create({
+    modalText: {
+      fontFamily: this.props.fontFamilyRegular,
+      fontSize: this.props.vw(4.4),
+      marginBottom: this.props.vw(5),
+      paddingLeft: this.props.vw(3),
+      paddingRight: this.props.vw(3),
+    },
     modalTextInput: {
       borderRadius: this.props.vw(2.3),
       fontFamily: this.props.fontFamilyRegular,
@@ -474,6 +524,10 @@ class ModalLocationSelectionClass extends React.Component {
 
     const styles = {
       ...this.styles,
+      modalText: {
+        ...this.styles.modalText,
+        color: colors.TEXT,
+      },
       modalTextInput: {
         ...this.styles.modalTextInput,
         backgroundColor: colors.SECONDARY,
@@ -497,14 +551,7 @@ class ModalLocationSelectionClass extends React.Component {
         isVisible={isVisible}
         onPressClose={onPressClose}
         onPressConfirm={onPressConfirm}>
-        <TextInput
-          autoCompleteType={'off'}
-          autoCorrect={false}
-          editable={false}
-          style={styles.modalTextInput}
-          textContentType={'none'}
-          value={locationTitle}
-        />
+        <Text style={styles.modalText}>{locationTitle}</Text>
 
         <TextInput
           autoCompleteType={'off'}
@@ -726,7 +773,9 @@ class ModalPersonMoreClass extends React.Component {
       allowDelete,
       allowUpdate,
       colors,
+      isImported,
       isVisible,
+      personDisplayName,
       personName,
       personPhone,
       personMail,
@@ -734,8 +783,15 @@ class ModalPersonMoreClass extends React.Component {
       __,
     } = this.props;
 
-    const showPhone = allowUpdate && !!personPhone && personPhone.trim().length > 0;
-    const showMail = allowUpdate && !!personMail && personMail.trim().length > 0;
+    const headline = isImported
+      ? !!personDisplayName && personDisplayName.trim().length > 0
+        ? personDisplayName
+        : personName
+      : personName;
+
+    const showName = isImported && !!personDisplayName && personDisplayName.trim().length > 0;
+    const showPhone = allowUpdate && !isImported && !!personPhone && personPhone.trim().length > 0;
+    const showMail = allowUpdate && !isImported && !!personMail && personMail.trim().length > 0;
 
     const styles = {
       ...this.styles,
@@ -754,7 +810,9 @@ class ModalPersonMoreClass extends React.Component {
     };
 
     return (
-      <ModalDefault headline={personName} isVisible={isVisible} onPressClose={onPressClose}>
+      <ModalDefault headline={headline} isVisible={isVisible} onPressClose={onPressClose}>
+        {showName && <Text style={styles.modalText}>{personName}</Text>}
+
         {showPhone && <Text style={styles.modalText}>{personPhone}</Text>}
 
         {showMail && <Text style={styles.modalText}>{personMail}</Text>}

@@ -2,6 +2,7 @@ import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
+import { removeLocationFromAllDays, removePersonFromAllDays } from '../Dashboard/actions';
 import { removePerson, removeLocation, showImportPersonsModal, hideImportPersonsModal } from './actions';
 import importPersons from './importPersons';
 import Screen from './ui';
@@ -32,6 +33,16 @@ const locationsSortingFunction = (a, b) => {
   return 0;
 };
 
+const removePersonAsync = (personId) => async (dispatch) => {
+  dispatch(removePersonFromAllDays(personId));
+  dispatch(removePerson(personId));
+};
+
+const removeLocationAsync = (locationId) => async (dispatch) => {
+  dispatch(removeLocationFromAllDays(locationId));
+  dispatch(removeLocation(locationId));
+};
+
 const mapStateToProps = ({ directory: { persons, personsImporting, isImportPersonsModalVisible, locations } }) => {
   persons.sort((a, b) => personsSortingFunction(a, b));
   locations.sort((a, b) => locationsSortingFunction(a, b));
@@ -46,8 +57,8 @@ const mapStateToProps = ({ directory: { persons, personsImporting, isImportPerso
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    deletePerson: (personId) => dispatch(removePerson(personId)),
-    deleteLocation: (locationId) => dispatch(removeLocation(locationId)),
+    deletePerson: (personId) => dispatch(removePersonAsync(personId)),
+    deleteLocation: (locationId) => dispatch(removeLocationAsync(locationId)),
     showImportPersonsModal: () => dispatch(showImportPersonsModal()),
     hideImportPersonsModal: () => dispatch(hideImportPersonsModal()),
     importPersons: (__) => dispatch(importPersons(__, true)),

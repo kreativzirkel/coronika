@@ -94,9 +94,11 @@ class EntriesTabsView extends React.Component {
       isModalSelectLocationVisible: false,
       isUpdatePersonMode: false,
       isUpdateLocationMode: false,
+      personDisplayName: '',
       personName: '',
       personPhone: '',
       personMail: '',
+      personRecordId: undefined,
       locationDescription: '',
       locationPhone: '',
       locationTitle: '',
@@ -142,6 +144,7 @@ class EntriesTabsView extends React.Component {
     this.setLocationDescription = this.setLocationDescription.bind(this);
     this.setLocationPhone = this.setLocationPhone.bind(this);
     this.setLocationTitle = this.setLocationTitle.bind(this);
+    this.setPersonDisplayName = this.setPersonDisplayName.bind(this);
     this.setPersonName = this.setPersonName.bind(this);
     this.setPersonPhone = this.setPersonPhone.bind(this);
     this.setPersonMail = this.setPersonMail.bind(this);
@@ -273,9 +276,11 @@ class EntriesTabsView extends React.Component {
     this.setState({
       isUpdatePersonMode: false,
       isModalNewPersonVisible: true,
+      personDisplayName: '',
       personName: '',
       personPhone: '',
       personMail: '',
+      personRecordId: undefined,
     });
   }
 
@@ -357,12 +362,14 @@ class EntriesTabsView extends React.Component {
     this.setState({ isModalSelectLocationVisible: false });
   }
 
-  openModalMorePerson(personId, personName, personPhone, personMail) {
+  openModalMorePerson(personId, personDisplayName, personName, personPhone, personMail, personRecordId) {
     this.setState({
       personId,
+      personDisplayName: personDisplayName || '',
       personName,
       personPhone: personPhone || '',
       personMail: personMail || '',
+      personRecordId,
       isModalMorePersonVisible: true,
     });
   }
@@ -409,6 +416,10 @@ class EntriesTabsView extends React.Component {
   openTabPersons() {
     Keyboard.dismiss();
     this.setActiveTab(TABS.PERSONS);
+  }
+
+  setPersonDisplayName(personDisplayName) {
+    this.setState({ personDisplayName });
   }
 
   setPersonName(personName) {
@@ -573,13 +584,25 @@ class EntriesTabsView extends React.Component {
     const {
       store: { dispatch },
     } = this.context;
-    const { personId, personName, personPhone, personMail } = this.state;
-    const person = {
+    const { personId, personDisplayName, personName, personPhone, personMail, personRecordId } = this.state;
+    let person = {
       id: personId,
-      fullName: personName,
-      phoneNumbers: [{ label: 'phone', number: personPhone }],
-      emailAddresses: [{ label: 'mail', email: personMail }],
     };
+
+    if (personRecordId !== undefined) {
+      person = {
+        ...person,
+        fullNameDisplay: personDisplayName,
+        recordID: personRecordId,
+      };
+    } else {
+      person = {
+        ...person,
+        fullName: personName,
+        phoneNumbers: [{ label: 'phone', number: personPhone }],
+        emailAddresses: [{ label: 'mail', email: personMail }],
+      };
+    }
 
     dispatch(updatePerson(person));
 
@@ -710,20 +733,20 @@ class EntriesTabsView extends React.Component {
   });
 
   allowLocationDeletion = typeof this.props.deleteLocationItem === 'function';
-  allowPersonDeletion = typeof this.props.deletePersonItem === 'function';
   keyboardAvoidingViewBehavior = 'padding';
 
   // TODO: reduce complexity!!
   /* eslint-disable-next-line complexity */
   render() {
     const {
+      allowDelete,
+      allowMore,
       allowSelection,
       allowUpdate,
       colors,
       persons,
       customPersonsEmptyText,
       customLocationsEmptyText,
-      disableDeleteImportedPersons,
       hideCreateButton,
       hideSearchBar,
       hideTabBar,
@@ -743,9 +766,11 @@ class EntriesTabsView extends React.Component {
       isModalSelectLocationVisible,
       isUpdatePersonMode,
       isUpdateLocationMode,
+      personDisplayName,
       personName,
       personPhone,
       personMail,
+      personRecordId,
       locationDescription,
       locationPhone,
       locationTitle,
@@ -818,11 +843,9 @@ class EntriesTabsView extends React.Component {
 
               {filteredPersons && filteredPersons.length ? (
                 <PersonsList
-                  allowDelete={this.allowPersonDeletion}
+                  allowMore={allowMore || isDirectory}
                   allowSelection={allowSelection}
-                  allowUpdate={allowUpdate}
                   persons={filteredPersons}
-                  disableDeleteImportedPersons={disableDeleteImportedPersons}
                   openItemMore={this.openModalMorePerson}
                   orderByLastUsage={orderByLastUsage}
                   selectedPersons={selectedPersons}
@@ -935,12 +958,15 @@ class EntriesTabsView extends React.Component {
           headline={
             isUpdatePersonMode ? __('entries.modals.update-person.headline') : __('entries.modals.new-person.headline')
           }
+          isImported={personRecordId !== undefined}
           isVisible={isModalNewPersonVisible}
+          personDisplayName={personDisplayName}
           personName={personName}
           personPhone={personPhone}
           personMail={personMail}
           onPressClose={this.closeModalNewPerson}
           onPressConfirm={isUpdatePersonMode ? this.updatePerson : this.addNewPerson}
+          setPersonDisplayName={this.setPersonDisplayName}
           setPersonName={this.setPersonName}
           setPersonPhone={this.setPersonPhone}
           setPersonMail={this.setPersonMail}
@@ -1006,9 +1032,11 @@ class EntriesTabsView extends React.Component {
         />
 
         <ModalPersonMore
-          allowDelete={this.allowPersonDeletion}
+          allowDelete={allowDelete || personRecordId === undefined} // TODO: allow delete depending on recordID
           allowUpdate={isDirectory}
+          isImported={personRecordId !== undefined}
           isVisible={isModalMorePersonVisible}
+          personDisplayName={personDisplayName}
           personName={personName}
           personPhone={personPhone}
           personMail={personMail}

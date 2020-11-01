@@ -126,7 +126,6 @@ const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamil
         <EntriesTabsView
           customPersonsEmptyText={__('overview-screen.persons.empty')}
           customLocationsEmptyText={__('overview-screen.locations.empty')}
-          disableDeleteImportedPersons
           hideCreateButton
           hideSearchBar
           locations={locations}

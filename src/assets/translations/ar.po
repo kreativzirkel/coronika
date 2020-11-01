@@ -27,136 +27,140 @@ msgstr ""
 msgid "navigation.tips.label"
 msgstr "نصائح"
 
-#: src/components/partials/EntriesTabsView/index.jsx:795
+#: src/components/partials/EntriesTabsView/index.jsx:1001
+#: src/components/partials/EntriesTabsView/index.jsx:979
+msgid "entries.modals.update-location.button"
+msgstr "حفظ"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1002
+msgid "entries.modals.select-location.button"
+msgstr "تحديد"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1008
+#: src/components/partials/EntriesTabsView/index.jsx:984
+msgid "entries.modals.update-location.headline"
+msgstr "تحرير الموقع"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1009
+msgid "entries.modals.select-location.headline"
+msgstr "اختر موقعا"
+
+#: src/components/partials/EntriesTabsView/index.jsx:820
 #: src/components/screens/Export/createPdfFile.js:317
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "الأشخاص"
 
-#: src/components/partials/EntriesTabsView/index.jsx:803
+#: src/components/partials/EntriesTabsView/index.jsx:828
 #: src/components/screens/Export/createPdfFile.js:409
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "المواقع"
 
-#: src/components/partials/EntriesTabsView/index.jsx:815
+#: src/components/partials/EntriesTabsView/index.jsx:840
 msgid "entries.persons.list.new"
 msgstr "شخص جديد"
 
-#: src/components/partials/EntriesTabsView/index.jsx:837
-#: src/components/partials/EntriesTabsView/index.jsx:896
+#: src/components/partials/EntriesTabsView/index.jsx:860
+#: src/components/partials/EntriesTabsView/index.jsx:919
 msgid "entries.search.list.empty"
 msgstr "لا يمكن العثور على شيء في بحثك."
 
-#: src/components/partials/EntriesTabsView/index.jsx:848
+#: src/components/partials/EntriesTabsView/index.jsx:871
 msgid "entries.persons.list.empty"
 msgstr ""
 "لم تقم بإنشاء شخص بعد. للبدء على الفور ، يمكنك استيراد الأشخاص من دليل "
 "الهاتف الخاص بك."
 
-#: src/components/partials/EntriesTabsView/index.jsx:857
+#: src/components/partials/EntriesTabsView/index.jsx:880
 msgid "entries.persons.list.import.button"
 msgstr "استيراد الآن"
 
-#: src/components/partials/EntriesTabsView/index.jsx:875
+#: src/components/partials/EntriesTabsView/index.jsx:898
 msgid "entries.locations.list.new"
 msgstr "موقع جديد"
 
-#: src/components/partials/EntriesTabsView/index.jsx:900
+#: src/components/partials/EntriesTabsView/index.jsx:923
 msgid "entries.locations.list.empty"
 msgstr "لم تقم بإنشاء موقع حتى الآن. ابدأ الآن وأنشئ موقعك الأول."
 
-#: src/components/partials/EntriesTabsView/index.jsx:918
+#: src/components/partials/EntriesTabsView/index.jsx:941
 msgid "entries.selection.add"
 msgstr "إضافة تحديد"
 
-#: src/components/partials/EntriesTabsView/index.jsx:933
+#: src/components/partials/EntriesTabsView/index.jsx:956
 msgid "entries.modals.update-person.button"
 msgstr "حفظ"
 
-#: src/components/partials/EntriesTabsView/index.jsx:933
+#: src/components/partials/EntriesTabsView/index.jsx:956
 msgid "entries.modals.new-person.button"
 msgstr "أضف"
 
-#: src/components/partials/EntriesTabsView/index.jsx:936
+#: src/components/partials/EntriesTabsView/index.jsx:959
 msgid "entries.modals.update-person.headline"
 msgstr "تحرير شخص"
 
-#: src/components/partials/EntriesTabsView/index.jsx:936
+#: src/components/partials/EntriesTabsView/index.jsx:959
 msgid "entries.modals.new-person.headline"
 msgstr "شخص جديد"
 
-#: src/components/partials/EntriesTabsView/index.jsx:953
-#: src/components/partials/EntriesTabsView/index.jsx:975
-msgid "entries.modals.update-location.button"
-msgstr "حفظ"
-
-#: src/components/partials/EntriesTabsView/index.jsx:954
+#: src/components/partials/EntriesTabsView/index.jsx:980
 msgid "entries.modals.new-location.button"
 msgstr "أضف"
 
-#: src/components/partials/EntriesTabsView/index.jsx:958
-#: src/components/partials/EntriesTabsView/index.jsx:982
-msgid "entries.modals.update-location.headline"
-msgstr "تحرير الموقع"
-
-#: src/components/partials/EntriesTabsView/index.jsx:959
+#: src/components/partials/EntriesTabsView/index.jsx:985
 msgid "entries.modals.new-location.headline"
 msgstr "موقع جديد"
 
-#: src/components/partials/EntriesTabsView/index.jsx:976
-msgid "entries.modals.select-location.button"
-msgstr "تحديد"
-
-#: src/components/partials/EntriesTabsView/index.jsx:983
-msgid "entries.modals.select-location.headline"
-msgstr "اختر موقعا"
-
-#: src/components/partials/EntriesTabsView/Modals.jsx:236
+#: src/components/partials/EntriesTabsView/Modals.jsx:252
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "اسم"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:248
+#: src/components/partials/EntriesTabsView/Modals.jsx:264
+msgid "entries.modals.new-person.placeholder.display-name"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:278
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "هاتف"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:259
+#: src/components/partials/EntriesTabsView/Modals.jsx:291
 msgid "entries.modals.new-person.placeholder.mail"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:340
+#: src/components/partials/EntriesTabsView/Modals.jsx:373
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "عنوان"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:351
+#: src/components/partials/EntriesTabsView/Modals.jsx:384
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "وصف"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:363
+#: src/components/partials/EntriesTabsView/Modals.jsx:396
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "هاتف"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:513
+#: src/components/partials/EntriesTabsView/Modals.jsx:553
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "وصف"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:540
-#: src/components/partials/EntriesTabsView/Modals.jsx:552
+#: src/components/partials/EntriesTabsView/Modals.jsx:580
+#: src/components/partials/EntriesTabsView/Modals.jsx:592
 msgid "Cancel"
 msgstr "إلغاء"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:541
-#: src/components/partials/EntriesTabsView/Modals.jsx:553
+#: src/components/partials/EntriesTabsView/Modals.jsx:581
+#: src/components/partials/EntriesTabsView/Modals.jsx:593
 msgid "Confirm"
 msgstr "مؤكد"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:665
-#: src/components/partials/EntriesTabsView/Modals.jsx:765
+#: src/components/partials/EntriesTabsView/Modals.jsx:705
+#: src/components/partials/EntriesTabsView/Modals.jsx:813
 msgid "entries.modals.more.edit"
 msgstr "تعديل"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:671
-#: src/components/partials/EntriesTabsView/Modals.jsx:773
+#: src/components/partials/EntriesTabsView/Modals.jsx:711
+#: src/components/partials/EntriesTabsView/Modals.jsx:821
 msgid "entries.modals.more.delete"
 msgstr "حذف"
 
@@ -235,15 +239,15 @@ msgstr "انقر على تاريخ اليوم لإضافة الأشخاص أو �
 msgid "Close"
 msgstr "اغلاق"
 
-#: src/components/screens/Day/ui.jsx:102
+#: src/components/screens/Day/ui.jsx:104
 msgid "day-screen.locations.empty"
 msgstr "لم تضف أي مواقع لهذا اليوم."
 
-#: src/components/screens/Day/ui.jsx:103
+#: src/components/screens/Day/ui.jsx:105
 msgid "day-screen.persons.empty"
 msgstr "لم تقم بإضافة أي أشخاص لهذا اليوم."
 
-#: src/components/screens/Day/ui.jsx:116
+#: src/components/screens/Day/ui.jsx:118
 msgid "day-screen.entries.add"
 msgstr "إضافة إدخال"
 
@@ -269,21 +273,21 @@ msgstr "إدارة الدليل"
 msgid "directory-screen.header.button.import"
 msgstr "استيراد"
 
-#: src/components/screens/Directory/ui.jsx:165
+#: src/components/screens/Directory/ui.jsx:164
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "استيراد الأشخاص"
 
-#: src/components/screens/Directory/ui.jsx:171
+#: src/components/screens/Directory/ui.jsx:170
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "قم باستيراد الأشخاص من دفتر الهاتف الخاص بك حتى تتمكن من البدء على الفور. "
 "يتم تخزين جميع الأشخاص محليا. لا يتم تتبع أو مشاركة البيانات."
 
-#: src/components/screens/Directory/ui.jsx:177
+#: src/components/screens/Directory/ui.jsx:176
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "جارٍ الاستيراد ..."
 
-#: src/components/screens/Directory/ui.jsx:178
+#: src/components/screens/Directory/ui.jsx:177
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "استيراد الآن"
 
@@ -611,7 +615,7 @@ msgstr ""
 msgid "overview-screen.locations.empty"
 msgstr ""
 
-#: src/components/screens/Overview/ui.jsx:152
+#: src/components/screens/Overview/ui.jsx:151
 msgid "overview-screen.export.button"
 msgstr "نظرة عامة على التصدير"
 
@@ -1048,7 +1052,7 @@ msgid "total"
 msgstr "مجموع"
 
 #: src/components/widgets/ModalSwitchDay.jsx:171
-msgid "add-entry-screen.modals.switch-day.headline"
+msgid "modals-switch-day.headline"
 msgstr ""
 
 #: src/components/widgets/SearchBar.jsx:77

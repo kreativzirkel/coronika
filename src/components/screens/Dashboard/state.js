@@ -60,6 +60,17 @@ export default (state = initialState, action = { type: null }) => {
       return { ...state, days };
     }
 
+    case 'REMOVE_PERSON_FROM_ALL_DAYS_DASHBOARD': {
+      const personId = action.personId;
+      const days = cloneDeep(state.days);
+
+      Object.keys(days).forEach((timestamp) => {
+        days[timestamp].persons = days[timestamp].persons.filter(({ id }) => id !== personId);
+      });
+
+      return { ...state, days };
+    }
+
     case 'ADD_LOCATION_TO_DAY_DASHBOARD': {
       const timestamp = action.timestamp;
       const location = action.location;
@@ -96,6 +107,17 @@ export default (state = initialState, action = { type: null }) => {
             (id === locationId && (description !== locationDescription || timestamp !== locationTimestamp))
         );
       }
+
+      return { ...state, days };
+    }
+
+    case 'REMOVE_LOCATION_FROM_ALL_DAYS_DASHBOARD': {
+      const locationId = action.locationId;
+      const days = cloneDeep(state.days);
+
+      Object.keys(days).forEach((timestamp) => {
+        days[timestamp].locations = days[timestamp].locations.filter(({ id }) => id !== locationId);
+      });
 
       return { ...state, days };
     }

@@ -27,137 +27,141 @@ msgstr ""
 msgid "navigation.tips.label"
 msgstr "Consejos"
 
-#: src/components/partials/EntriesTabsView/index.jsx:795
+#: src/components/partials/EntriesTabsView/index.jsx:1001
+#: src/components/partials/EntriesTabsView/index.jsx:979
+msgid "entries.modals.update-location.button"
+msgstr "Guardar"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1002
+msgid "entries.modals.select-location.button"
+msgstr "Seleccionar"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1008
+#: src/components/partials/EntriesTabsView/index.jsx:984
+msgid "entries.modals.update-location.headline"
+msgstr "Editar la ubicación"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1009
+msgid "entries.modals.select-location.headline"
+msgstr "Selecciona el lugar"
+
+#: src/components/partials/EntriesTabsView/index.jsx:820
 #: src/components/screens/Export/createPdfFile.js:317
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "personas"
 
-#: src/components/partials/EntriesTabsView/index.jsx:803
+#: src/components/partials/EntriesTabsView/index.jsx:828
 #: src/components/screens/Export/createPdfFile.js:409
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "lugares"
 
-#: src/components/partials/EntriesTabsView/index.jsx:815
+#: src/components/partials/EntriesTabsView/index.jsx:840
 msgid "entries.persons.list.new"
 msgstr "Nueva persona"
 
-#: src/components/partials/EntriesTabsView/index.jsx:837
-#: src/components/partials/EntriesTabsView/index.jsx:896
+#: src/components/partials/EntriesTabsView/index.jsx:860
+#: src/components/partials/EntriesTabsView/index.jsx:919
 msgid "entries.search.list.empty"
 msgstr "No se pudo encontrar nada en su búsqueda."
 
-#: src/components/partials/EntriesTabsView/index.jsx:848
+#: src/components/partials/EntriesTabsView/index.jsx:871
 msgid "entries.persons.list.empty"
 msgstr ""
 "Aún no has creado una persona. Para empezar de inmediato, puedes importar "
 "personas de tu agenda telefónica."
 
-#: src/components/partials/EntriesTabsView/index.jsx:857
+#: src/components/partials/EntriesTabsView/index.jsx:880
 msgid "entries.persons.list.import.button"
 msgstr "Importar ahora"
 
-#: src/components/partials/EntriesTabsView/index.jsx:875
+#: src/components/partials/EntriesTabsView/index.jsx:898
 msgid "entries.locations.list.new"
 msgstr "Nueva ubicación"
 
-#: src/components/partials/EntriesTabsView/index.jsx:900
+#: src/components/partials/EntriesTabsView/index.jsx:923
 msgid "entries.locations.list.empty"
 msgstr ""
 "Aún no has creado una ubicación. Empieza ahora y crea tu primera ubicación."
 
-#: src/components/partials/EntriesTabsView/index.jsx:918
+#: src/components/partials/EntriesTabsView/index.jsx:941
 msgid "entries.selection.add"
 msgstr "Añadir selección"
 
-#: src/components/partials/EntriesTabsView/index.jsx:933
+#: src/components/partials/EntriesTabsView/index.jsx:956
 msgid "entries.modals.update-person.button"
 msgstr "Guardar"
 
-#: src/components/partials/EntriesTabsView/index.jsx:933
+#: src/components/partials/EntriesTabsView/index.jsx:956
 msgid "entries.modals.new-person.button"
 msgstr "Añadir"
 
-#: src/components/partials/EntriesTabsView/index.jsx:936
+#: src/components/partials/EntriesTabsView/index.jsx:959
 msgid "entries.modals.update-person.headline"
 msgstr "Editar persona"
 
-#: src/components/partials/EntriesTabsView/index.jsx:936
+#: src/components/partials/EntriesTabsView/index.jsx:959
 msgid "entries.modals.new-person.headline"
 msgstr "Nueva persona"
 
-#: src/components/partials/EntriesTabsView/index.jsx:953
-#: src/components/partials/EntriesTabsView/index.jsx:975
-msgid "entries.modals.update-location.button"
-msgstr "Guardar"
-
-#: src/components/partials/EntriesTabsView/index.jsx:954
+#: src/components/partials/EntriesTabsView/index.jsx:980
 msgid "entries.modals.new-location.button"
 msgstr "Añadir"
 
-#: src/components/partials/EntriesTabsView/index.jsx:958
-#: src/components/partials/EntriesTabsView/index.jsx:982
-msgid "entries.modals.update-location.headline"
-msgstr "Editar la ubicación"
-
-#: src/components/partials/EntriesTabsView/index.jsx:959
+#: src/components/partials/EntriesTabsView/index.jsx:985
 msgid "entries.modals.new-location.headline"
 msgstr "Nueva ubicación"
 
-#: src/components/partials/EntriesTabsView/index.jsx:976
-msgid "entries.modals.select-location.button"
-msgstr "Seleccionar"
-
-#: src/components/partials/EntriesTabsView/index.jsx:983
-msgid "entries.modals.select-location.headline"
-msgstr "Selecciona el lugar"
-
-#: src/components/partials/EntriesTabsView/Modals.jsx:236
+#: src/components/partials/EntriesTabsView/Modals.jsx:252
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Nombre"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:248
+#: src/components/partials/EntriesTabsView/Modals.jsx:264
+msgid "entries.modals.new-person.placeholder.display-name"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:278
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Teléfono"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:259
+#: src/components/partials/EntriesTabsView/Modals.jsx:291
 msgid "entries.modals.new-person.placeholder.mail"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:340
+#: src/components/partials/EntriesTabsView/Modals.jsx:373
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Título"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:351
+#: src/components/partials/EntriesTabsView/Modals.jsx:384
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Descripción"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:363
+#: src/components/partials/EntriesTabsView/Modals.jsx:396
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "Teléfono"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:513
+#: src/components/partials/EntriesTabsView/Modals.jsx:553
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Descripción"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:540
-#: src/components/partials/EntriesTabsView/Modals.jsx:552
+#: src/components/partials/EntriesTabsView/Modals.jsx:580
+#: src/components/partials/EntriesTabsView/Modals.jsx:592
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:541
-#: src/components/partials/EntriesTabsView/Modals.jsx:553
+#: src/components/partials/EntriesTabsView/Modals.jsx:581
+#: src/components/partials/EntriesTabsView/Modals.jsx:593
 msgid "Confirm"
 msgstr "Confirmar"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:665
-#: src/components/partials/EntriesTabsView/Modals.jsx:765
+#: src/components/partials/EntriesTabsView/Modals.jsx:705
+#: src/components/partials/EntriesTabsView/Modals.jsx:813
 msgid "entries.modals.more.edit"
 msgstr "editar"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:671
-#: src/components/partials/EntriesTabsView/Modals.jsx:773
+#: src/components/partials/EntriesTabsView/Modals.jsx:711
+#: src/components/partials/EntriesTabsView/Modals.jsx:821
 msgid "entries.modals.more.delete"
 msgstr "eliminar"
 
@@ -240,15 +244,15 @@ msgstr ""
 msgid "Close"
 msgstr "Cerrar"
 
-#: src/components/screens/Day/ui.jsx:102
+#: src/components/screens/Day/ui.jsx:104
 msgid "day-screen.locations.empty"
 msgstr "No has añadido ninguna localización para este día."
 
-#: src/components/screens/Day/ui.jsx:103
+#: src/components/screens/Day/ui.jsx:105
 msgid "day-screen.persons.empty"
 msgstr "No ha añadido ninguna persona para este día."
 
-#: src/components/screens/Day/ui.jsx:116
+#: src/components/screens/Day/ui.jsx:118
 msgid "day-screen.entries.add"
 msgstr "Añadir entrada"
 
@@ -276,22 +280,22 @@ msgstr "Administrar el directorio"
 msgid "directory-screen.header.button.import"
 msgstr "Importación"
 
-#: src/components/screens/Directory/ui.jsx:165
+#: src/components/screens/Directory/ui.jsx:164
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Personas importadas"
 
-#: src/components/screens/Directory/ui.jsx:171
+#: src/components/screens/Directory/ui.jsx:170
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Importa contactos de tu agenda telefónica para que puedas empezar de "
 "inmediato. Todos tus contactos están almacenadas localmente. No se rastreará "
 "ni se compartirá ningún dato."
 
-#: src/components/screens/Directory/ui.jsx:177
+#: src/components/screens/Directory/ui.jsx:176
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Importar..."
 
-#: src/components/screens/Directory/ui.jsx:178
+#: src/components/screens/Directory/ui.jsx:177
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Importar ahora"
 
@@ -652,7 +656,7 @@ msgstr ""
 msgid "overview-screen.locations.empty"
 msgstr ""
 
-#: src/components/screens/Overview/ui.jsx:152
+#: src/components/screens/Overview/ui.jsx:151
 msgid "overview-screen.export.button"
 msgstr "Resumen de la exportación"
 
@@ -1085,7 +1089,7 @@ msgid "total"
 msgstr "total"
 
 #: src/components/widgets/ModalSwitchDay.jsx:171
-msgid "add-entry-screen.modals.switch-day.headline"
+msgid "modals-switch-day.headline"
 msgstr ""
 
 #: src/components/widgets/SearchBar.jsx:77

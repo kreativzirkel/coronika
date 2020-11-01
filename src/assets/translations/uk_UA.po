@@ -27,138 +27,142 @@ msgstr ""
 msgid "navigation.tips.label"
 msgstr "Поради"
 
-#: src/components/partials/EntriesTabsView/index.jsx:795
+#: src/components/partials/EntriesTabsView/index.jsx:1001
+#: src/components/partials/EntriesTabsView/index.jsx:979
+msgid "entries.modals.update-location.button"
+msgstr "Зберегти"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1002
+msgid "entries.modals.select-location.button"
+msgstr "Виберіть"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1008
+#: src/components/partials/EntriesTabsView/index.jsx:984
+msgid "entries.modals.update-location.headline"
+msgstr "Редагувати місцеположення"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1009
+msgid "entries.modals.select-location.headline"
+msgstr "Виберіть місцеположення"
+
+#: src/components/partials/EntriesTabsView/index.jsx:820
 #: src/components/screens/Export/createPdfFile.js:317
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "осіб"
 
-#: src/components/partials/EntriesTabsView/index.jsx:803
+#: src/components/partials/EntriesTabsView/index.jsx:828
 #: src/components/screens/Export/createPdfFile.js:409
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "локації"
 
-#: src/components/partials/EntriesTabsView/index.jsx:815
+#: src/components/partials/EntriesTabsView/index.jsx:840
 msgid "entries.persons.list.new"
 msgstr "Нова людина"
 
-#: src/components/partials/EntriesTabsView/index.jsx:837
-#: src/components/partials/EntriesTabsView/index.jsx:896
+#: src/components/partials/EntriesTabsView/index.jsx:860
+#: src/components/partials/EntriesTabsView/index.jsx:919
 msgid "entries.search.list.empty"
 msgstr "Нічого не вдалося знайти при вашому пошуку."
 
-#: src/components/partials/EntriesTabsView/index.jsx:848
+#: src/components/partials/EntriesTabsView/index.jsx:871
 msgid "entries.persons.list.empty"
 msgstr ""
 "Ви ще не створили людину. Щоб розпочати роботу, ви можете імпортувати осіб "
 "із телефонної книги."
 
-#: src/components/partials/EntriesTabsView/index.jsx:857
+#: src/components/partials/EntriesTabsView/index.jsx:880
 msgid "entries.persons.list.import.button"
 msgstr "Імпортуйте зараз"
 
-#: src/components/partials/EntriesTabsView/index.jsx:875
+#: src/components/partials/EntriesTabsView/index.jsx:898
 msgid "entries.locations.list.new"
 msgstr "Нове місцезнаходження"
 
-#: src/components/partials/EntriesTabsView/index.jsx:900
+#: src/components/partials/EntriesTabsView/index.jsx:923
 msgid "entries.locations.list.empty"
 msgstr ""
 "Ви ще не створили місцезнаходження. Почніть зараз і створіть своє перше "
 "місце розташування."
 
-#: src/components/partials/EntriesTabsView/index.jsx:918
+#: src/components/partials/EntriesTabsView/index.jsx:941
 msgid "entries.selection.add"
 msgstr "Додати вибір"
 
-#: src/components/partials/EntriesTabsView/index.jsx:933
+#: src/components/partials/EntriesTabsView/index.jsx:956
 msgid "entries.modals.update-person.button"
 msgstr "Зберегти"
 
-#: src/components/partials/EntriesTabsView/index.jsx:933
+#: src/components/partials/EntriesTabsView/index.jsx:956
 msgid "entries.modals.new-person.button"
 msgstr "Додайте"
 
-#: src/components/partials/EntriesTabsView/index.jsx:936
+#: src/components/partials/EntriesTabsView/index.jsx:959
 msgid "entries.modals.update-person.headline"
 msgstr "Редагувати особу"
 
-#: src/components/partials/EntriesTabsView/index.jsx:936
+#: src/components/partials/EntriesTabsView/index.jsx:959
 msgid "entries.modals.new-person.headline"
 msgstr "Нова людина"
 
-#: src/components/partials/EntriesTabsView/index.jsx:953
-#: src/components/partials/EntriesTabsView/index.jsx:975
-msgid "entries.modals.update-location.button"
-msgstr "Зберегти"
-
-#: src/components/partials/EntriesTabsView/index.jsx:954
+#: src/components/partials/EntriesTabsView/index.jsx:980
 msgid "entries.modals.new-location.button"
 msgstr "Додайте"
 
-#: src/components/partials/EntriesTabsView/index.jsx:958
-#: src/components/partials/EntriesTabsView/index.jsx:982
-msgid "entries.modals.update-location.headline"
-msgstr "Редагувати місцеположення"
-
-#: src/components/partials/EntriesTabsView/index.jsx:959
+#: src/components/partials/EntriesTabsView/index.jsx:985
 msgid "entries.modals.new-location.headline"
 msgstr "Нове місцезнаходження"
 
-#: src/components/partials/EntriesTabsView/index.jsx:976
-msgid "entries.modals.select-location.button"
-msgstr "Виберіть"
-
-#: src/components/partials/EntriesTabsView/index.jsx:983
-msgid "entries.modals.select-location.headline"
-msgstr "Виберіть місцеположення"
-
-#: src/components/partials/EntriesTabsView/Modals.jsx:236
+#: src/components/partials/EntriesTabsView/Modals.jsx:252
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Ім'я"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:248
+#: src/components/partials/EntriesTabsView/Modals.jsx:264
+msgid "entries.modals.new-person.placeholder.display-name"
+msgstr ""
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:278
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Телефон"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:259
+#: src/components/partials/EntriesTabsView/Modals.jsx:291
 msgid "entries.modals.new-person.placeholder.mail"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:340
+#: src/components/partials/EntriesTabsView/Modals.jsx:373
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Назва"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:351
+#: src/components/partials/EntriesTabsView/Modals.jsx:384
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Опис"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:363
+#: src/components/partials/EntriesTabsView/Modals.jsx:396
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "Телефон"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:513
+#: src/components/partials/EntriesTabsView/Modals.jsx:553
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Опис"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:540
-#: src/components/partials/EntriesTabsView/Modals.jsx:552
+#: src/components/partials/EntriesTabsView/Modals.jsx:580
+#: src/components/partials/EntriesTabsView/Modals.jsx:592
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:541
-#: src/components/partials/EntriesTabsView/Modals.jsx:553
+#: src/components/partials/EntriesTabsView/Modals.jsx:581
+#: src/components/partials/EntriesTabsView/Modals.jsx:593
 msgid "Confirm"
 msgstr "Підтвердіть"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:665
-#: src/components/partials/EntriesTabsView/Modals.jsx:765
+#: src/components/partials/EntriesTabsView/Modals.jsx:705
+#: src/components/partials/EntriesTabsView/Modals.jsx:813
 msgid "entries.modals.more.edit"
 msgstr "монтувати"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:671
-#: src/components/partials/EntriesTabsView/Modals.jsx:773
+#: src/components/partials/EntriesTabsView/Modals.jsx:711
+#: src/components/partials/EntriesTabsView/Modals.jsx:821
 msgid "entries.modals.more.delete"
 msgstr "видалити"
 
@@ -242,15 +246,15 @@ msgstr ""
 msgid "Close"
 msgstr "Закрити"
 
-#: src/components/screens/Day/ui.jsx:102
+#: src/components/screens/Day/ui.jsx:104
 msgid "day-screen.locations.empty"
 msgstr "Ви не додали жодного місцезнаходження в цей день."
 
-#: src/components/screens/Day/ui.jsx:103
+#: src/components/screens/Day/ui.jsx:105
 msgid "day-screen.persons.empty"
 msgstr "Ви не додали жодної людини за цей день."
 
-#: src/components/screens/Day/ui.jsx:116
+#: src/components/screens/Day/ui.jsx:118
 msgid "day-screen.entries.add"
 msgstr "Додати запис"
 
@@ -278,22 +282,22 @@ msgstr "Управління каталогом"
 msgid "directory-screen.header.button.import"
 msgstr "Імпорт"
 
-#: src/components/screens/Directory/ui.jsx:165
+#: src/components/screens/Directory/ui.jsx:164
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Імпорт осіб"
 
-#: src/components/screens/Directory/ui.jsx:171
+#: src/components/screens/Directory/ui.jsx:170
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Імпортуйте осіб із телефонної книги, щоб ви могли розпочати роботу відразу. "
 "Усі ваші особи зберігаються на місцях. Жодні дані не відстежуються та не "
 "передаються."
 
-#: src/components/screens/Directory/ui.jsx:177
+#: src/components/screens/Directory/ui.jsx:176
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Імпорт..."
 
-#: src/components/screens/Directory/ui.jsx:178
+#: src/components/screens/Directory/ui.jsx:177
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Імпортуйте зараз"
 
@@ -641,7 +645,7 @@ msgstr ""
 msgid "overview-screen.locations.empty"
 msgstr ""
 
-#: src/components/screens/Overview/ui.jsx:152
+#: src/components/screens/Overview/ui.jsx:151
 msgid "overview-screen.export.button"
 msgstr "Огляд експорту"
 
@@ -1094,7 +1098,7 @@ msgid "total"
 msgstr "всього"
 
 #: src/components/widgets/ModalSwitchDay.jsx:171
-msgid "add-entry-screen.modals.switch-day.headline"
+msgid "modals-switch-day.headline"
 msgstr ""
 
 #: src/components/widgets/SearchBar.jsx:77

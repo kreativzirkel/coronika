@@ -12,6 +12,8 @@ export const removePersonFromDay = (timestamp, personId) => ({
   personId,
 });
 
+export const removePersonFromAllDays = (personId) => ({ type: 'REMOVE_PERSON_FROM_ALL_DAYS_DASHBOARD', personId });
+
 export const addLocationToDay = (timestamp, location) => ({
   type: 'ADD_LOCATION_TO_DAY_DASHBOARD',
   timestamp,
@@ -24,6 +26,11 @@ export const removeLocationFromDay = (timestamp, locationId, locationDescription
   locationId,
   locationDescription,
   locationTimestamp,
+});
+
+export const removeLocationFromAllDays = (locationId) => ({
+  type: 'REMOVE_LOCATION_FROM_ALL_DAYS_DASHBOARD',
+  locationId,
 });
 
 export const confirmFirstStartHint = () => ({ type: 'CONFIRM_FIRST_START_HINT_DASHBOARD' });

@@ -19,6 +19,7 @@ const addPersonToList = (persons, person) => {
       } else {
         importPerson.id = c.id;
         importPerson.lastUsed = c.lastUsed;
+        importPerson.fullNameDisplay = c.fullNameDisplay;
       }
     }
 

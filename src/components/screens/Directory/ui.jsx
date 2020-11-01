@@ -132,7 +132,7 @@ const Directory = ({
               <Text style={styles.headerHeadline}>{__('directory-screen.header.headline')}</Text>
             </View>
 
-            <TouchableOpacity onPress={() => showImportPersonsModal()} style={styles.headerButton}>
+            <TouchableOpacity onPress={showImportPersonsModal} style={styles.headerButton}>
               <UilImport size={vw(4.8)} color={colors.TEXT} style={styles.headerButtonItemIcon} />
 
               <Text style={styles.headerButtonText}>{__('directory-screen.header.button.import')}</Text>
@@ -143,9 +143,8 @@ const Directory = ({
         <EntriesTabsView
           allowUpdate
           persons={persons}
-          deleteLocationItem={(id) => deleteLocation(id)}
-          deletePersonItem={(id) => deletePerson(id)}
-          disableDeleteImportedPersons
+          deleteLocationItem={deleteLocation}
+          deletePersonItem={deletePerson}
           isDirectory
           locations={locations}
         />
@@ -155,15 +154,15 @@ const Directory = ({
         backdropColor={colors.MODAL_BACKDROP_COLOR}
         hideModalContentWhileAnimating
         isVisible={isImportPersonsModalVisible}
-        onBackButtonPress={() => hideImportPersonsModal()}
-        onBackdropPress={() => hideImportPersonsModal()}
+        onBackButtonPress={hideImportPersonsModal}
+        onBackdropPress={hideImportPersonsModal}
         statusBarTranslucent
         style={styles.modal}
         useNativeDriver>
         <View style={styles.modalContent}>
           <View style={styles.modalHeader}>
             <Text style={styles.modalHeaderText}>{__('directory-screen.modals.import-persons.headline')}</Text>
-            <TouchableOpacity onPress={() => hideImportPersonsModal()} style={styles.modalHeaderIcon}>
+            <TouchableOpacity onPress={hideImportPersonsModal} style={styles.modalHeaderIcon}>
               <UilTimes size={vw(8)} color={COLOR_PRIMARY} />
             </TouchableOpacity>
           </View>

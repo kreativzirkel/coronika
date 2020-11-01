@@ -168,7 +168,7 @@ class ModalSwitchDay extends React.Component {
         <View style={styles.modalContent}>
           <View style={styles.modalHeader}>
             <Text numberOfLines={1} style={styles.modalHeaderText}>
-              {__('add-entry-screen.modals.switch-day.headline')}
+              {__('modals-switch-day.headline')}
             </Text>
             <TouchableOpacity onPress={this.closeModal} style={styles.modalHeaderIcon}>
               <UilTimes size={vw(8)} color={COLOR_PRIMARY} />
