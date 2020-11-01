@@ -100,8 +100,8 @@ class PersonListItemClass extends React.Component {
       this.props.onPressMore(
         this.props.id,
         this.props.fullName,
-        this.props.phoneNumbers[0]?.number,
-        this.props.emailAddresses[0]?.email
+        this.props.phoneNumbers?.[0]?.number,
+        this.props.emailAddresses?.[0]?.email
       );
   }
 

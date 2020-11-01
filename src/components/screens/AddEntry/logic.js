@@ -11,31 +11,25 @@ import { Keyboard } from 'react-native';
 
 const addSelection = (selection) => async (dispatch, getState) => {
   const {
-    directory: { persons, locations },
     day: { timestamp },
   } = getState();
 
   selection.persons.forEach((personId) => {
-    const person = persons.find(({ id }) => id === personId);
-
-    if (person) {
-      dispatch(addPersonToDay(timestamp, person));
-      dispatch(updateLastUsageOfPerson(personId));
-    }
+    dispatch(addPersonToDay(timestamp, personId));
+    dispatch(updateLastUsageOfPerson(personId));
   });
 
   selection.locations.forEach(
-    ({ description, id: locationId, timestamp: locationTimestamp, timestampEnd: locationTimestampEnd }) => {
-      const location = locations.find(({ id }) => id === locationId);
+    ({ description, id, timestamp: locationTimestamp, timestampEnd: locationTimestampEnd }) => {
       const newLocation = {
-        ...location,
+        id,
         description,
         timestamp: locationTimestamp,
         timestampEnd: locationTimestampEnd,
       };
 
       dispatch(addLocationToDay(timestamp, newLocation));
-      dispatch(updateLastUsageOfLocation(locationId));
+      dispatch(updateLastUsageOfLocation(id));
     }
   );
 };

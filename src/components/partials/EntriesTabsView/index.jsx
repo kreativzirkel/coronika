@@ -361,8 +361,8 @@ class EntriesTabsView extends React.Component {
     this.setState({
       personId,
       personName,
-      personPhone,
-      personMail,
+      personPhone: personPhone || '',
+      personMail: personMail || '',
       isModalMorePersonVisible: true,
     });
   }
@@ -556,8 +556,8 @@ class EntriesTabsView extends React.Component {
   editPerson(personId) {
     const { persons } = this.props;
     const { fullName: personName, phoneNumbers, emailAddresses } = persons.find(({ id }) => id === personId);
-    const personPhone = phoneNumbers[0]?.number || '';
-    const personMail = emailAddresses[0]?.email || '';
+    const personPhone = phoneNumbers?.[0]?.number || '';
+    const personMail = emailAddresses?.[0]?.email || '';
 
     this.setState({
       personId,

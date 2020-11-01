@@ -35,13 +35,11 @@ const updateSelectedLocation = (locationOld, locationUpdated) => async (dispatch
   } = locationUpdated;
 
   const {
-    directory: { locations },
     day: { timestamp },
   } = getState();
 
-  const location = locations.find(({ id }) => id === locationUpdatedId);
   const updatedLocation = {
-    ...location,
+    id: locationUpdatedId,
     description: locationUpdatedDescription,
     timestamp: locationUpdatedTimestamp,
     timestampEnd: locationUpdatedTimestampEnd,
@@ -80,9 +78,19 @@ const locationsSortingFunction = (a, b) => {
   return 0;
 };
 
-const mapStateToProps = ({ dashboard: { days }, day: { isDateSwitcherModalVisible, timestamp } }) => {
-  const dayPersons = days[timestamp]?.persons || [];
-  const dayLocations = days[timestamp]?.locations || [];
+const mapStateToProps = ({
+  dashboard: { days },
+  day: { isDateSwitcherModalVisible, timestamp },
+  directory: { locations, persons },
+}) => {
+  let dayPersons = days[timestamp]?.persons || [];
+  let dayLocations = days[timestamp]?.locations || [];
+
+  dayPersons = dayPersons.map(({ id }) => persons.find((p) => p.id === id));
+  dayLocations = dayLocations.map(({ id, title, ...dayLocationProps }) => ({
+    ...(locations.find((location) => location.id === id) || {}),
+    ...dayLocationProps,
+  }));
 
   dayPersons.sort((a, b) => personsSortingFunction(a, b));
   dayLocations.sort((a, b) => locationsSortingFunction(a, b));

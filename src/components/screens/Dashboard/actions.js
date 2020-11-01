@@ -4,7 +4,7 @@ export const initializeDays = (addTimestamps, minTimestamp) => ({
   minTimestamp,
 });
 
-export const addPersonToDay = (timestamp, person) => ({ type: 'ADD_PERSON_TO_DAY_DASHBOARD', timestamp, person });
+export const addPersonToDay = (timestamp, personId) => ({ type: 'ADD_PERSON_TO_DAY_DASHBOARD', timestamp, personId });
 
 export const removePersonFromDay = (timestamp, personId) => ({
   type: 'REMOVE_PERSON_FROM_DAY_DASHBOARD',

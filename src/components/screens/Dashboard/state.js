@@ -38,11 +38,11 @@ export default (state = initialState, action = { type: null }) => {
 
     case 'ADD_PERSON_TO_DAY_DASHBOARD': {
       const timestamp = action.timestamp;
-      const person = action.person;
+      const personId = action.personId;
       const days = cloneDeep(state.days);
 
-      if (!days[timestamp].persons.find(({ id }) => id === person.id)) {
-        days[timestamp].persons.push(person);
+      if (!days[timestamp].persons.find(({ id }) => id === personId)) {
+        days[timestamp].persons.push({ id: personId });
       }
 
       return { ...state, days };
