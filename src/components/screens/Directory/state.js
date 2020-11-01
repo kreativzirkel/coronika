@@ -4,7 +4,9 @@ import { v4 as uuidv4 } from 'uuid';
 const initialState = {
   persons: [],
   personsImporting: false,
+  isHidePersonsModalVisible: false,
   isImportPersonsModalVisible: false,
+  isMoreModalVisible: false,
   locations: [],
 };
 
@@ -20,6 +22,7 @@ const addPersonToList = (persons, person) => {
         importPerson.id = c.id;
         importPerson.lastUsed = c.lastUsed;
         importPerson.fullNameDisplay = c.fullNameDisplay;
+        importPerson.hidden = c.hidden;
       }
     }
 
@@ -48,6 +51,8 @@ const addPersonToList = (persons, person) => {
   return resultList;
 };
 
+// TODO: reduce complexity!
+/* eslint-disable-next-line complexity */
 export default (state = initialState, action = { type: null }) => {
   switch (action.type) {
     case 'ADD_PERSON_DIRECTORY': {
@@ -58,6 +63,18 @@ export default (state = initialState, action = { type: null }) => {
 
     case 'REMOVE_PERSON_DIRECTORY': {
       const persons = state.persons.filter(({ id }) => id !== action.personId);
+
+      return { ...state, persons };
+    }
+
+    case 'HIDE_PERSON_DIRECTORY': {
+      const personId = action.personId;
+      const persons = state.persons.filter(({ id }) => id !== personId);
+
+      persons.push({
+        ...state.persons.find(({ id }) => id === personId),
+        hidden: true,
+      });
 
       return { ...state, persons };
     }
@@ -121,11 +138,23 @@ export default (state = initialState, action = { type: null }) => {
       return { ...state, persons };
     }
 
+    case 'SHOW_HIDE_PERSONS_MODAL_DIRECTORY':
+      return { ...state, isHidePersonsModalVisible: true };
+
+    case 'HIDE_HIDE_PERSONS_MODAL_DIRECTORY':
+      return { ...state, isHidePersonsModalVisible: false };
+
     case 'SHOW_IMPORT_PERSONS_MODAL_DIRECTORY':
       return { ...state, isImportPersonsModalVisible: true };
 
     case 'HIDE_IMPORT_PERSONS_MODAL_DIRECTORY':
       return { ...state, isImportPersonsModalVisible: false };
+
+    case 'SHOW_MORE_MODAL_DIRECTORY':
+      return { ...state, isMoreModalVisible: true };
+
+    case 'HIDE_MORE_MODAL_DIRECTORY':
+      return { ...state, isMoreModalVisible: false };
 
     case 'ENABLE_PERSONS_IMPORTING_DIRECTORY':
       return { ...state, personsImporting: true };
@@ -172,6 +201,20 @@ export default (state = initialState, action = { type: null }) => {
       persons.push({
         ...state.persons.find(({ id }) => id === action.id),
         lastUsed: Date.now(),
+      });
+
+      return { ...state, persons };
+    }
+
+    case 'UPDATE_HIDDEN_PERSONS_DIRECTORY': {
+      const persons = [];
+      const hiddenPersons = action.hiddenPersons;
+
+      state.persons.forEach((person) => {
+        persons.push({
+          ...person,
+          hidden: hiddenPersons.includes(person.id),
+        });
       });
 
       return { ...state, persons };

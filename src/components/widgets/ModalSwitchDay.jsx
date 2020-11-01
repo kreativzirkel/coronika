@@ -1,12 +1,12 @@
+import UilTimes from '@iconscout/react-native-unicons/icons/uil-times';
+import moment from 'moment';
 import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import moment from 'moment';
+import Modal from 'react-native-modal';
 import withColorScheme from '../../utils/withColorScheme';
 import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
-import UilTimes from '@iconscout/react-native-unicons/icons/uil-times';
 import { COLOR_PRIMARY } from '../../constants';
-import Modal from 'react-native-modal';
 
 const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
 

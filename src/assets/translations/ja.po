@@ -27,143 +27,147 @@ msgstr ""
 msgid "navigation.tips.label"
 msgstr "ヒント"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1001
-#: src/components/partials/EntriesTabsView/index.jsx:979
+#: src/components/partials/EntriesTabsView/index.jsx:1013
+#: src/components/partials/EntriesTabsView/index.jsx:991
 msgid "entries.modals.update-location.button"
 msgstr "セーブ"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1002
+#: src/components/partials/EntriesTabsView/index.jsx:1014
 msgid "entries.modals.select-location.button"
 msgstr "選択する"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1008
-#: src/components/partials/EntriesTabsView/index.jsx:984
+#: src/components/partials/EntriesTabsView/index.jsx:1020
+#: src/components/partials/EntriesTabsView/index.jsx:996
 msgid "entries.modals.update-location.headline"
 msgstr "場所を編集"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1009
+#: src/components/partials/EntriesTabsView/index.jsx:1021
 msgid "entries.modals.select-location.headline"
 msgstr "場所を選択"
 
-#: src/components/partials/EntriesTabsView/index.jsx:820
+#: src/components/partials/EntriesTabsView/index.jsx:831
 #: src/components/screens/Export/createPdfFile.js:317
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "連絡先"
 
-#: src/components/partials/EntriesTabsView/index.jsx:828
+#: src/components/partials/EntriesTabsView/index.jsx:839
 #: src/components/screens/Export/createPdfFile.js:409
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "場所"
 
-#: src/components/partials/EntriesTabsView/index.jsx:840
+#: src/components/partials/EntriesTabsView/index.jsx:851
 msgid "entries.persons.list.new"
 msgstr "新しい連絡先"
 
-#: src/components/partials/EntriesTabsView/index.jsx:860
-#: src/components/partials/EntriesTabsView/index.jsx:919
+#: src/components/partials/EntriesTabsView/index.jsx:872
+#: src/components/partials/EntriesTabsView/index.jsx:931
 msgid "entries.search.list.empty"
 msgstr "何も見つかりませんでした。"
 
-#: src/components/partials/EntriesTabsView/index.jsx:871
+#: src/components/partials/EntriesTabsView/index.jsx:883
 msgid "entries.persons.list.empty"
 msgstr ""
 "連絡先はまだ追加されていません。 すぐに開始するには、電話帳から連絡先をイン"
 "ポートしてください。"
 
-#: src/components/partials/EntriesTabsView/index.jsx:880
+#: src/components/partials/EntriesTabsView/index.jsx:892
 msgid "entries.persons.list.import.button"
 msgstr "今すぐインポート"
 
-#: src/components/partials/EntriesTabsView/index.jsx:898
+#: src/components/partials/EntriesTabsView/index.jsx:910
 msgid "entries.locations.list.new"
 msgstr "新しい場所"
 
-#: src/components/partials/EntriesTabsView/index.jsx:923
+#: src/components/partials/EntriesTabsView/index.jsx:935
 msgid "entries.locations.list.empty"
 msgstr ""
 "場所がまだ作成されていません。 今から開始し、最初の場所を作成してください。"
 
-#: src/components/partials/EntriesTabsView/index.jsx:941
+#: src/components/partials/EntriesTabsView/index.jsx:953
 msgid "entries.selection.add"
 msgstr "選択を追加"
 
-#: src/components/partials/EntriesTabsView/index.jsx:956
+#: src/components/partials/EntriesTabsView/index.jsx:968
 msgid "entries.modals.update-person.button"
 msgstr "セーブ"
 
-#: src/components/partials/EntriesTabsView/index.jsx:956
+#: src/components/partials/EntriesTabsView/index.jsx:968
 msgid "entries.modals.new-person.button"
 msgstr "追加"
 
-#: src/components/partials/EntriesTabsView/index.jsx:959
+#: src/components/partials/EntriesTabsView/index.jsx:971
 msgid "entries.modals.update-person.headline"
 msgstr "連絡先を編集"
 
-#: src/components/partials/EntriesTabsView/index.jsx:959
+#: src/components/partials/EntriesTabsView/index.jsx:971
 msgid "entries.modals.new-person.headline"
 msgstr "新しい連絡先"
 
-#: src/components/partials/EntriesTabsView/index.jsx:980
+#: src/components/partials/EntriesTabsView/index.jsx:992
 msgid "entries.modals.new-location.button"
 msgstr "追加"
 
-#: src/components/partials/EntriesTabsView/index.jsx:985
+#: src/components/partials/EntriesTabsView/index.jsx:997
 msgid "entries.modals.new-location.headline"
 msgstr "新しい場所"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:252
+#: src/components/partials/EntriesTabsView/Modals.jsx:259
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "名前"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:264
+#: src/components/partials/EntriesTabsView/Modals.jsx:274
 msgid "entries.modals.new-person.placeholder.display-name"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:278
+#: src/components/partials/EntriesTabsView/Modals.jsx:288
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "電話"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:291
+#: src/components/partials/EntriesTabsView/Modals.jsx:301
 msgid "entries.modals.new-person.placeholder.mail"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:373
+#: src/components/partials/EntriesTabsView/Modals.jsx:383
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "タイトル"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:384
+#: src/components/partials/EntriesTabsView/Modals.jsx:394
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "説明"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:396
+#: src/components/partials/EntriesTabsView/Modals.jsx:406
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "電話"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:553
+#: src/components/partials/EntriesTabsView/Modals.jsx:560
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "説明"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:580
-#: src/components/partials/EntriesTabsView/Modals.jsx:592
+#: src/components/partials/EntriesTabsView/Modals.jsx:587
+#: src/components/partials/EntriesTabsView/Modals.jsx:599
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:581
-#: src/components/partials/EntriesTabsView/Modals.jsx:593
+#: src/components/partials/EntriesTabsView/Modals.jsx:588
+#: src/components/partials/EntriesTabsView/Modals.jsx:600
 msgid "Confirm"
 msgstr "確認"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:705
-#: src/components/partials/EntriesTabsView/Modals.jsx:813
+#: src/components/partials/EntriesTabsView/Modals.jsx:712
+#: src/components/partials/EntriesTabsView/Modals.jsx:844
 msgid "entries.modals.more.edit"
 msgstr "へんしゅう"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:711
-#: src/components/partials/EntriesTabsView/Modals.jsx:821
+#: src/components/partials/EntriesTabsView/Modals.jsx:718
+#: src/components/partials/EntriesTabsView/Modals.jsx:863
 msgid "entries.modals.more.delete"
 msgstr "抹消"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:854
+msgid "entries.modals.more.hide"
+msgstr ""
 
 #: src/components/screens/About.jsx:22
 #: src/components/screens/Welcome/ui.jsx:100
@@ -249,7 +253,7 @@ msgstr "この日の場所は追加されていません。"
 msgid "day-screen.persons.empty"
 msgstr "この日は連絡先を追加していません。"
 
-#: src/components/screens/Day/ui.jsx:118
+#: src/components/screens/Day/ui.jsx:119
 msgid "day-screen.entries.add"
 msgstr "エントリを追加"
 
@@ -269,29 +273,40 @@ msgstr ""
 "お使いのデバイスのプライバシー設定で、アプリが連絡先にアクセスできるようにし"
 "ます。"
 
-#: src/components/screens/Directory/ui.jsx:132
+#: src/components/screens/Directory/ModalHidePersons.jsx:206
+#: src/components/screens/Directory/ui.jsx:189
+msgid "directory-screen.modals.hide-persons.headline"
+msgstr ""
+
+#: src/components/screens/Directory/ModalHidePersons.jsx:239
+msgid "directory-screen.modals.hide-persons.button.save"
+msgstr ""
+
+#: src/components/screens/Directory/ui.jsx:147
 msgid "directory-screen.header.headline"
 msgstr "ディレクトリの管理"
 
-#: src/components/screens/Directory/ui.jsx:138
-msgid "directory-screen.header.button.import"
-msgstr "インポート"
+#: src/components/screens/Directory/ui.jsx:153
+#: src/components/screens/Directory/ui.jsx:180
+msgid "directory-screen.header.button.more"
+msgstr ""
 
-#: src/components/screens/Directory/ui.jsx:164
+#: src/components/screens/Directory/ui.jsx:197
+#: src/components/screens/Directory/ui.jsx:222
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "連絡先をインポート"
 
-#: src/components/screens/Directory/ui.jsx:170
+#: src/components/screens/Directory/ui.jsx:228
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "電話帳から連絡先をインポートして、すぐに開始できるようにします。 すべての人は"
 "ローカルに保存されます。 データは追跡または共有されません。"
 
-#: src/components/screens/Directory/ui.jsx:176
+#: src/components/screens/Directory/ui.jsx:234
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "インポートしています..."
 
-#: src/components/screens/Directory/ui.jsx:177
+#: src/components/screens/Directory/ui.jsx:235
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "今すぐインポート"
 

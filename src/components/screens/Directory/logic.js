@@ -3,7 +3,18 @@ import withI18n from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import { removeLocationFromAllDays, removePersonFromAllDays } from '../Dashboard/actions';
-import { removePerson, removeLocation, showImportPersonsModal, hideImportPersonsModal } from './actions';
+import {
+  removePerson,
+  hidePerson,
+  removeLocation,
+  showHidePersonsModal,
+  hideHidePersonsModal,
+  showImportPersonsModal,
+  hideImportPersonsModal,
+  showMoreModal,
+  hideMoreModal,
+  updateHiddenPersons,
+} from './actions';
 import importPersons from './importPersons';
 import Screen from './ui';
 
@@ -43,24 +54,62 @@ const removeLocationAsync = (locationId) => async (dispatch) => {
   dispatch(removeLocation(locationId));
 };
 
-const mapStateToProps = ({ directory: { persons, personsImporting, isImportPersonsModalVisible, locations } }) => {
+const showHidePersonsModalAsync = () => async (dispatch) => {
+  dispatch(hideMoreModal());
+
+  setTimeout(() => {
+    dispatch(showHidePersonsModal());
+  }, 500);
+};
+
+const showImportPersonsModalAsync = () => async (dispatch) => {
+  dispatch(hideMoreModal());
+
+  setTimeout(() => {
+    dispatch(showImportPersonsModal());
+  }, 500);
+};
+
+const confirmHiddenPersonsSelection = (selectedPersons) => async (dispatch) => {
+  dispatch(hideHidePersonsModal());
+  dispatch(updateHiddenPersons(selectedPersons));
+};
+
+const mapStateToProps = ({
+  directory: {
+    persons,
+    personsImporting,
+    isHidePersonsModalVisible,
+    isImportPersonsModalVisible,
+    isMoreModalVisible,
+    locations,
+  },
+}) => {
   persons.sort((a, b) => personsSortingFunction(a, b));
   locations.sort((a, b) => locationsSortingFunction(a, b));
 
   return {
     persons,
     personsImporting,
+    isHidePersonsModalVisible,
     isImportPersonsModalVisible,
+    isMoreModalVisible,
     locations,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    confirmHiddenPersonsSelection: (selectedPersons) => dispatch(confirmHiddenPersonsSelection(selectedPersons)),
     deletePerson: (personId) => dispatch(removePersonAsync(personId)),
+    hidePerson: (personId) => dispatch(hidePerson(personId)),
     deleteLocation: (locationId) => dispatch(removeLocationAsync(locationId)),
-    showImportPersonsModal: () => dispatch(showImportPersonsModal()),
+    showHidePersonsModal: () => dispatch(showHidePersonsModalAsync()),
+    hideHidePersonsModal: () => dispatch(hideHidePersonsModal()),
+    showImportPersonsModal: () => dispatch(showImportPersonsModalAsync()),
     hideImportPersonsModal: () => dispatch(hideImportPersonsModal()),
+    showMoreModal: () => dispatch(showMoreModal()),
+    hideMoreModal: () => dispatch(hideMoreModal()),
     importPersons: (__) => dispatch(importPersons(__, true)),
   };
 };

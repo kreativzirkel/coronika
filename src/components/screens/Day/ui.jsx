@@ -109,6 +109,7 @@ class Day extends React.Component {
           hideSearchBar
           locations={locations}
           persons={persons}
+          showHiddenPersons
           updateSelectedLocation={this.updateSelectedLocation}
         />
 

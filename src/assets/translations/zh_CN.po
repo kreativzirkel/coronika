@@ -27,140 +27,144 @@ msgstr ""
 msgid "navigation.tips.label"
 msgstr "小贴士"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1001
-#: src/components/partials/EntriesTabsView/index.jsx:979
+#: src/components/partials/EntriesTabsView/index.jsx:1013
+#: src/components/partials/EntriesTabsView/index.jsx:991
 msgid "entries.modals.update-location.button"
 msgstr "保存"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1002
+#: src/components/partials/EntriesTabsView/index.jsx:1014
 msgid "entries.modals.select-location.button"
 msgstr "选项"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1008
-#: src/components/partials/EntriesTabsView/index.jsx:984
+#: src/components/partials/EntriesTabsView/index.jsx:1020
+#: src/components/partials/EntriesTabsView/index.jsx:996
 msgid "entries.modals.update-location.headline"
 msgstr "修改地点"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1009
+#: src/components/partials/EntriesTabsView/index.jsx:1021
 msgid "entries.modals.select-location.headline"
 msgstr "选择地点"
 
-#: src/components/partials/EntriesTabsView/index.jsx:820
+#: src/components/partials/EntriesTabsView/index.jsx:831
 #: src/components/screens/Export/createPdfFile.js:317
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "联系人"
 
-#: src/components/partials/EntriesTabsView/index.jsx:828
+#: src/components/partials/EntriesTabsView/index.jsx:839
 #: src/components/screens/Export/createPdfFile.js:409
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "地点"
 
-#: src/components/partials/EntriesTabsView/index.jsx:840
+#: src/components/partials/EntriesTabsView/index.jsx:851
 msgid "entries.persons.list.new"
 msgstr "新联系人"
 
-#: src/components/partials/EntriesTabsView/index.jsx:860
-#: src/components/partials/EntriesTabsView/index.jsx:919
+#: src/components/partials/EntriesTabsView/index.jsx:872
+#: src/components/partials/EntriesTabsView/index.jsx:931
 msgid "entries.search.list.empty"
 msgstr "没有搜索到相关内容。"
 
-#: src/components/partials/EntriesTabsView/index.jsx:871
+#: src/components/partials/EntriesTabsView/index.jsx:883
 msgid "entries.persons.list.empty"
 msgstr "您尚未添加第一个联系人。从电话簿中导入联系人，以便您可以立即开始使用。"
 
-#: src/components/partials/EntriesTabsView/index.jsx:880
+#: src/components/partials/EntriesTabsView/index.jsx:892
 msgid "entries.persons.list.import.button"
 msgstr "现在导入"
 
-#: src/components/partials/EntriesTabsView/index.jsx:898
+#: src/components/partials/EntriesTabsView/index.jsx:910
 msgid "entries.locations.list.new"
 msgstr "新地点"
 
-#: src/components/partials/EntriesTabsView/index.jsx:923
+#: src/components/partials/EntriesTabsView/index.jsx:935
 msgid "entries.locations.list.empty"
 msgstr "您尚未创建新地点。 现在开始并创建您的第一个地点。"
 
-#: src/components/partials/EntriesTabsView/index.jsx:941
+#: src/components/partials/EntriesTabsView/index.jsx:953
 msgid "entries.selection.add"
 msgstr "添加选项"
 
-#: src/components/partials/EntriesTabsView/index.jsx:956
+#: src/components/partials/EntriesTabsView/index.jsx:968
 msgid "entries.modals.update-person.button"
 msgstr "保存"
 
-#: src/components/partials/EntriesTabsView/index.jsx:956
+#: src/components/partials/EntriesTabsView/index.jsx:968
 msgid "entries.modals.new-person.button"
 msgstr "添加"
 
-#: src/components/partials/EntriesTabsView/index.jsx:959
+#: src/components/partials/EntriesTabsView/index.jsx:971
 msgid "entries.modals.update-person.headline"
 msgstr "编辑联系人"
 
-#: src/components/partials/EntriesTabsView/index.jsx:959
+#: src/components/partials/EntriesTabsView/index.jsx:971
 msgid "entries.modals.new-person.headline"
 msgstr "新联系人"
 
-#: src/components/partials/EntriesTabsView/index.jsx:980
+#: src/components/partials/EntriesTabsView/index.jsx:992
 msgid "entries.modals.new-location.button"
 msgstr "添加"
 
-#: src/components/partials/EntriesTabsView/index.jsx:985
+#: src/components/partials/EntriesTabsView/index.jsx:997
 msgid "entries.modals.new-location.headline"
 msgstr "新地点"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:252
+#: src/components/partials/EntriesTabsView/Modals.jsx:259
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "姓名"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:264
+#: src/components/partials/EntriesTabsView/Modals.jsx:274
 msgid "entries.modals.new-person.placeholder.display-name"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:278
+#: src/components/partials/EntriesTabsView/Modals.jsx:288
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "电话"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:291
+#: src/components/partials/EntriesTabsView/Modals.jsx:301
 msgid "entries.modals.new-person.placeholder.mail"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:373
+#: src/components/partials/EntriesTabsView/Modals.jsx:383
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "标题"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:384
+#: src/components/partials/EntriesTabsView/Modals.jsx:394
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "描述"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:396
+#: src/components/partials/EntriesTabsView/Modals.jsx:406
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "电话"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:553
+#: src/components/partials/EntriesTabsView/Modals.jsx:560
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "描述"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:580
-#: src/components/partials/EntriesTabsView/Modals.jsx:592
+#: src/components/partials/EntriesTabsView/Modals.jsx:587
+#: src/components/partials/EntriesTabsView/Modals.jsx:599
 msgid "Cancel"
 msgstr "取消"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:581
-#: src/components/partials/EntriesTabsView/Modals.jsx:593
+#: src/components/partials/EntriesTabsView/Modals.jsx:588
+#: src/components/partials/EntriesTabsView/Modals.jsx:600
 msgid "Confirm"
 msgstr "确认"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:705
-#: src/components/partials/EntriesTabsView/Modals.jsx:813
+#: src/components/partials/EntriesTabsView/Modals.jsx:712
+#: src/components/partials/EntriesTabsView/Modals.jsx:844
 msgid "entries.modals.more.edit"
 msgstr "编辑"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:711
-#: src/components/partials/EntriesTabsView/Modals.jsx:821
+#: src/components/partials/EntriesTabsView/Modals.jsx:718
+#: src/components/partials/EntriesTabsView/Modals.jsx:863
 msgid "entries.modals.more.delete"
 msgstr "删去"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:854
+msgid "entries.modals.more.hide"
+msgstr ""
 
 #: src/components/screens/About.jsx:22
 #: src/components/screens/Welcome/ui.jsx:100
@@ -242,7 +246,7 @@ msgstr "您当天没有添加任何地点。"
 msgid "day-screen.persons.empty"
 msgstr "您今天没有添加任何联系人。"
 
-#: src/components/screens/Day/ui.jsx:118
+#: src/components/screens/Day/ui.jsx:119
 msgid "day-screen.entries.add"
 msgstr "添加条目"
 
@@ -260,29 +264,40 @@ msgstr "未获许可"
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
 msgstr "允许应用程序在设备的隐私设置中访问您的联系人。"
 
-#: src/components/screens/Directory/ui.jsx:132
+#: src/components/screens/Directory/ModalHidePersons.jsx:206
+#: src/components/screens/Directory/ui.jsx:189
+msgid "directory-screen.modals.hide-persons.headline"
+msgstr ""
+
+#: src/components/screens/Directory/ModalHidePersons.jsx:239
+msgid "directory-screen.modals.hide-persons.button.save"
+msgstr ""
+
+#: src/components/screens/Directory/ui.jsx:147
 msgid "directory-screen.header.headline"
 msgstr "管理目录"
 
-#: src/components/screens/Directory/ui.jsx:138
-msgid "directory-screen.header.button.import"
-msgstr "导入"
+#: src/components/screens/Directory/ui.jsx:153
+#: src/components/screens/Directory/ui.jsx:180
+msgid "directory-screen.header.button.more"
+msgstr ""
 
-#: src/components/screens/Directory/ui.jsx:164
+#: src/components/screens/Directory/ui.jsx:197
+#: src/components/screens/Directory/ui.jsx:222
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "导入联系人"
 
-#: src/components/screens/Directory/ui.jsx:170
+#: src/components/screens/Directory/ui.jsx:228
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "从电话簿中导入联系人，以便您可以立即开始。 您所有的联系人都存储在本地。数据不"
 "会被跟踪或共享。"
 
-#: src/components/screens/Directory/ui.jsx:176
+#: src/components/screens/Directory/ui.jsx:234
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "导入中..."
 
-#: src/components/screens/Directory/ui.jsx:177
+#: src/components/screens/Directory/ui.jsx:235
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "现在导入"
 

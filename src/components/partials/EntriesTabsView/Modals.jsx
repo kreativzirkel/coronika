@@ -731,6 +731,7 @@ class ModalPersonMoreClass extends React.Component {
 
     this.onPressDelete = this.onPressDelete.bind(this);
     this.onPressEdit = this.onPressEdit.bind(this);
+    this.onPressHide = this.onPressHide.bind(this);
   }
 
   styles = StyleSheet.create({
@@ -743,6 +744,9 @@ class ModalPersonMoreClass extends React.Component {
       marginBottom: this.props.vw(5),
       padding: this.props.vw(3.5),
     },
+    modalButtonDefault: {
+      //
+    },
     modalButtonDelete: {
       //
     },
@@ -750,6 +754,9 @@ class ModalPersonMoreClass extends React.Component {
       fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(5),
       textTransform: 'lowercase',
+    },
+    modalButtonDefaultText: {
+      //
     },
     modalText: {
       fontFamily: this.props.fontFamilyRegular,
@@ -768,9 +775,14 @@ class ModalPersonMoreClass extends React.Component {
     if (this.props.onPressEdit) this.props.onPressEdit();
   }
 
+  onPressHide() {
+    if (this.props.onPressHide) this.props.onPressHide();
+  }
+
   render() {
     const {
       allowDelete,
+      allowHide,
       allowUpdate,
       colors,
       isImported,
@@ -795,6 +807,10 @@ class ModalPersonMoreClass extends React.Component {
 
     const styles = {
       ...this.styles,
+      modalButtonDefault: {
+        ...this.styles.modalButtonDefault,
+        backgroundColor: colors.SECONDARY,
+      },
       modalButtonDelete: {
         ...this.styles.modalButtonDelete,
         backgroundColor: colors.ERROR,
@@ -802,6 +818,10 @@ class ModalPersonMoreClass extends React.Component {
       modalButtonText: {
         ...this.styles.modalButtonText,
         color: colors.TEXT_ALT,
+      },
+      modalButtonDefaultText: {
+        ...this.styles.modalButtonDefaultText,
+        color: colors.TEXT,
       },
       modalText: {
         ...this.styles.modalText,
@@ -819,8 +839,20 @@ class ModalPersonMoreClass extends React.Component {
 
         {allowUpdate && (
           <TouchableOpacity onPress={this.onPressEdit}>
-            <View style={styles.modalButton}>
-              <Text style={styles.modalButtonText}>{__('entries.modals.more.edit')}</Text>
+            <View style={{ ...styles.modalButton, ...styles.modalButtonDefault }}>
+              <Text style={{ ...styles.modalButtonText, ...styles.modalButtonDefaultText }}>
+                {__('entries.modals.more.edit')}
+              </Text>
+            </View>
+          </TouchableOpacity>
+        )}
+
+        {allowHide && (
+          <TouchableOpacity onPress={this.onPressHide}>
+            <View style={{ ...styles.modalButton, ...styles.modalButtonDefault }}>
+              <Text style={{ ...styles.modalButtonText, ...styles.modalButtonDefaultText }}>
+                {__('entries.modals.more.hide')}
+              </Text>
             </View>
           </TouchableOpacity>
         )}

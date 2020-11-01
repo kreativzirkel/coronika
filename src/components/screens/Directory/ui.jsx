@@ -1,4 +1,4 @@
-import UilImport from '@iconscout/react-native-unicons/icons/uil-import';
+import UilEllipsisH from '@iconscout/react-native-unicons/icons/uil-ellipsis-h';
 import UilTimes from '@iconscout/react-native-unicons/icons/uil-times';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
@@ -7,17 +7,26 @@ import { COLOR_PRIMARY } from '../../../constants';
 import EntriesTabsView from '../../partials/EntriesTabsView';
 import Header from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
+import ModalHidePersons from './ModalHidePersons';
 
 const Directory = ({
   colors,
+  confirmHiddenPersonsSelection,
+  isHidePersonsModalVisible,
   isImportPersonsModalVisible,
+  isMoreModalVisible,
   locations,
   persons,
   personsImporting,
   deleteLocation,
   deletePerson,
+  hidePerson,
+  showHidePersonsModal,
+  hideHidePersonsModal,
   showImportPersonsModal,
   hideImportPersonsModal,
+  showMoreModal,
+  hideMoreModal,
   importPersons,
   vw,
   fontFamilyBold,
@@ -35,7 +44,7 @@ const Directory = ({
       flexDirection: 'row',
     },
     headerButtonItemIcon: {
-      marginTop: vw(0.3),
+      marginTop: vw(0.5),
     },
     headerButtonText: {
       color: colors.TEXT,
@@ -104,6 +113,9 @@ const Directory = ({
       marginBottom: vw(5),
       padding: vw(3.5),
     },
+    modalButtonDefault: {
+      backgroundColor: colors.SECONDARY,
+    },
     modalButtonDisabled: {
       opacity: 0.2,
     },
@@ -112,6 +124,9 @@ const Directory = ({
       fontFamily: fontFamilyBold,
       fontSize: vw(5),
       textTransform: 'lowercase',
+    },
+    modalButtonDefaultText: {
+      color: colors.TEXT,
     },
     view: {
       alignItems: 'center',
@@ -132,10 +147,10 @@ const Directory = ({
               <Text style={styles.headerHeadline}>{__('directory-screen.header.headline')}</Text>
             </View>
 
-            <TouchableOpacity onPress={showImportPersonsModal} style={styles.headerButton}>
-              <UilImport size={vw(4.8)} color={colors.TEXT} style={styles.headerButtonItemIcon} />
+            <TouchableOpacity onPress={showMoreModal} style={styles.headerButton}>
+              <UilEllipsisH size={vw(4.8)} color={colors.TEXT} style={styles.headerButtonItemIcon} />
 
-              <Text style={styles.headerButtonText}>{__('directory-screen.header.button.import')}</Text>
+              <Text style={styles.headerButtonText}>{__('directory-screen.header.button.more')}</Text>
             </TouchableOpacity>
           </View>
         </Header>
@@ -145,10 +160,53 @@ const Directory = ({
           persons={persons}
           deleteLocationItem={deleteLocation}
           deletePersonItem={deletePerson}
+          hidePersonItem={hidePerson}
           isDirectory
           locations={locations}
         />
       </View>
+
+      <Modal
+        backdropColor={colors.MODAL_BACKDROP_COLOR}
+        hideModalContentWhileAnimating
+        isVisible={isMoreModalVisible}
+        onBackButtonPress={hideMoreModal}
+        onBackdropPress={hideMoreModal}
+        statusBarTranslucent
+        style={styles.modal}
+        useNativeDriver>
+        <View style={styles.modalContent}>
+          <View style={styles.modalHeader}>
+            <Text style={styles.modalHeaderText}>{__('directory-screen.header.button.more')}</Text>
+            <TouchableOpacity onPress={hideMoreModal} style={styles.modalHeaderIcon}>
+              <UilTimes size={vw(8)} color={COLOR_PRIMARY} />
+            </TouchableOpacity>
+          </View>
+
+          <TouchableOpacity onPress={showHidePersonsModal}>
+            <View style={{ ...styles.modalButton, ...styles.modalButtonDefault }}>
+              <Text style={{ ...styles.modalButtonText, ...styles.modalButtonDefaultText }}>
+                {__('directory-screen.modals.hide-persons.headline')}
+              </Text>
+            </View>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={showImportPersonsModal}>
+            <View style={{ ...styles.modalButton, ...styles.modalButtonDefault }}>
+              <Text style={{ ...styles.modalButtonText, ...styles.modalButtonDefaultText }}>
+                {__('directory-screen.modals.import-persons.headline')}
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+      </Modal>
+
+      <ModalHidePersons
+        closeModal={hideHidePersonsModal}
+        confirmSelection={confirmHiddenPersonsSelection}
+        isVisible={isHidePersonsModalVisible}
+        persons={persons}
+      />
 
       <Modal
         backdropColor={colors.MODAL_BACKDROP_COLOR}

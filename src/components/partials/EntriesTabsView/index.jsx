@@ -134,6 +134,7 @@ class EntriesTabsView extends React.Component {
     this.onPressMoreLocationEdit = this.onPressMoreLocationEdit.bind(this);
     this.onPressMorePersonDelete = this.onPressMorePersonDelete.bind(this);
     this.onPressMorePersonEdit = this.onPressMorePersonEdit.bind(this);
+    this.onPressMorePersonHide = this.onPressMorePersonHide.bind(this);
     this.onPressSearchIcon = this.onPressSearchIcon.bind(this);
     this.openModalMoreLocation = this.openModalMoreLocation.bind(this);
     this.openModalMorePerson = this.openModalMorePerson.bind(this);
@@ -388,6 +389,14 @@ class EntriesTabsView extends React.Component {
     setTimeout(() => {
       this.editPerson(personId);
     }, 500);
+  }
+
+  onPressMorePersonHide() {
+    this.closeModalMorePerson();
+
+    const { personId } = this.state;
+
+    if (this.props.hidePersonItem) this.props.hidePersonItem(personId);
   }
 
   onPressMorePersonDelete() {
@@ -754,6 +763,7 @@ class EntriesTabsView extends React.Component {
       locations,
       orderByLastUsage,
       showCounter,
+      showHiddenPersons,
       vw,
       __,
     } = this.props;
@@ -792,9 +802,10 @@ class EntriesTabsView extends React.Component {
     const selectionCounter = selectedLocations.length + selectedPersons.length;
 
     const isSearchFilled = searchValue.trim().length > 0;
+    const visiblePersons = showHiddenPersons ? persons : persons.filter(({ hidden }) => !hidden);
     const filteredPersons = isSearchFilled
-      ? persons.filter(({ fullName }) => fullName.toLowerCase().indexOf(searchValue.trim().toLowerCase()) !== -1)
-      : persons;
+      ? visiblePersons.filter(({ fullName }) => fullName.toLowerCase().indexOf(searchValue.trim().toLowerCase()) !== -1)
+      : visiblePersons;
     const filteredLocations = isSearchFilled
       ? locations.filter(({ title }) => title.toLowerCase().indexOf(searchValue.trim().toLowerCase()) !== -1)
       : locations;
@@ -850,6 +861,7 @@ class EntriesTabsView extends React.Component {
                   orderByLastUsage={orderByLastUsage}
                   selectedPersons={selectedPersons}
                   showCounter={showCounter}
+                  showHiddenPersons={showHiddenPersons}
                   toggleSelection={this.togglePersonSelection}
                 />
               ) : (
@@ -1032,7 +1044,8 @@ class EntriesTabsView extends React.Component {
         />
 
         <ModalPersonMore
-          allowDelete={allowDelete || personRecordId === undefined} // TODO: allow delete depending on recordID
+          allowDelete={allowDelete || personRecordId === undefined}
+          allowHide={isDirectory}
           allowUpdate={isDirectory}
           isImported={personRecordId !== undefined}
           isVisible={isModalMorePersonVisible}
@@ -1043,6 +1056,7 @@ class EntriesTabsView extends React.Component {
           onPressClose={this.closeModalMorePerson}
           onPressDelete={this.onPressMorePersonDelete}
           onPressEdit={this.onPressMorePersonEdit}
+          onPressHide={this.onPressMorePersonHide}
         />
       </Fragment>
     );

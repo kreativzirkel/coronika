@@ -27,142 +27,146 @@ msgstr ""
 msgid "navigation.tips.label"
 msgstr "sfaturi"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1001
-#: src/components/partials/EntriesTabsView/index.jsx:979
+#: src/components/partials/EntriesTabsView/index.jsx:1013
+#: src/components/partials/EntriesTabsView/index.jsx:991
 msgid "entries.modals.update-location.button"
 msgstr "Salveaza"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1002
+#: src/components/partials/EntriesTabsView/index.jsx:1014
 msgid "entries.modals.select-location.button"
 msgstr "Selecteaza"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1008
-#: src/components/partials/EntriesTabsView/index.jsx:984
+#: src/components/partials/EntriesTabsView/index.jsx:1020
+#: src/components/partials/EntriesTabsView/index.jsx:996
 msgid "entries.modals.update-location.headline"
 msgstr "Editeaza locația"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1009
+#: src/components/partials/EntriesTabsView/index.jsx:1021
 msgid "entries.modals.select-location.headline"
 msgstr "Selecteaza locația"
 
-#: src/components/partials/EntriesTabsView/index.jsx:820
+#: src/components/partials/EntriesTabsView/index.jsx:831
 #: src/components/screens/Export/createPdfFile.js:317
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "persoane"
 
-#: src/components/partials/EntriesTabsView/index.jsx:828
+#: src/components/partials/EntriesTabsView/index.jsx:839
 #: src/components/screens/Export/createPdfFile.js:409
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "locații"
 
-#: src/components/partials/EntriesTabsView/index.jsx:840
+#: src/components/partials/EntriesTabsView/index.jsx:851
 msgid "entries.persons.list.new"
 msgstr "Persoană nouă"
 
-#: src/components/partials/EntriesTabsView/index.jsx:860
-#: src/components/partials/EntriesTabsView/index.jsx:919
+#: src/components/partials/EntriesTabsView/index.jsx:872
+#: src/components/partials/EntriesTabsView/index.jsx:931
 msgid "entries.search.list.empty"
 msgstr "Nu s-a putut găsi nimic în căutarea ta."
 
-#: src/components/partials/EntriesTabsView/index.jsx:871
+#: src/components/partials/EntriesTabsView/index.jsx:883
 msgid "entries.persons.list.empty"
 msgstr ""
 "Nu ai creat o persoană. Pentru a începe imediat, poti importa persoane din "
 "agenda telefonică."
 
-#: src/components/partials/EntriesTabsView/index.jsx:880
+#: src/components/partials/EntriesTabsView/index.jsx:892
 msgid "entries.persons.list.import.button"
 msgstr "Importa acum"
 
-#: src/components/partials/EntriesTabsView/index.jsx:898
+#: src/components/partials/EntriesTabsView/index.jsx:910
 msgid "entries.locations.list.new"
 msgstr "Locație nouă"
 
-#: src/components/partials/EntriesTabsView/index.jsx:923
+#: src/components/partials/EntriesTabsView/index.jsx:935
 msgid "entries.locations.list.empty"
 msgstr "Încă nu ai creat o locație. Începe acum și creaza prima locație."
 
-#: src/components/partials/EntriesTabsView/index.jsx:941
+#: src/components/partials/EntriesTabsView/index.jsx:953
 msgid "entries.selection.add"
 msgstr "Adăuga selecția"
 
-#: src/components/partials/EntriesTabsView/index.jsx:956
+#: src/components/partials/EntriesTabsView/index.jsx:968
 msgid "entries.modals.update-person.button"
 msgstr "Salveaza"
 
-#: src/components/partials/EntriesTabsView/index.jsx:956
+#: src/components/partials/EntriesTabsView/index.jsx:968
 msgid "entries.modals.new-person.button"
 msgstr "Adăuga"
 
-#: src/components/partials/EntriesTabsView/index.jsx:959
+#: src/components/partials/EntriesTabsView/index.jsx:971
 msgid "entries.modals.update-person.headline"
 msgstr "Editează persoana"
 
-#: src/components/partials/EntriesTabsView/index.jsx:959
+#: src/components/partials/EntriesTabsView/index.jsx:971
 msgid "entries.modals.new-person.headline"
 msgstr "Persoană nouă"
 
-#: src/components/partials/EntriesTabsView/index.jsx:980
+#: src/components/partials/EntriesTabsView/index.jsx:992
 msgid "entries.modals.new-location.button"
 msgstr "Adăuga"
 
-#: src/components/partials/EntriesTabsView/index.jsx:985
+#: src/components/partials/EntriesTabsView/index.jsx:997
 msgid "entries.modals.new-location.headline"
 msgstr "Locație nouă"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:252
+#: src/components/partials/EntriesTabsView/Modals.jsx:259
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Nume"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:264
+#: src/components/partials/EntriesTabsView/Modals.jsx:274
 msgid "entries.modals.new-person.placeholder.display-name"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:278
+#: src/components/partials/EntriesTabsView/Modals.jsx:288
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Telefon"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:291
+#: src/components/partials/EntriesTabsView/Modals.jsx:301
 msgid "entries.modals.new-person.placeholder.mail"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:373
+#: src/components/partials/EntriesTabsView/Modals.jsx:383
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Titlu"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:384
+#: src/components/partials/EntriesTabsView/Modals.jsx:394
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Descriere"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:396
+#: src/components/partials/EntriesTabsView/Modals.jsx:406
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "Telefon"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:553
+#: src/components/partials/EntriesTabsView/Modals.jsx:560
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Descriere"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:580
-#: src/components/partials/EntriesTabsView/Modals.jsx:592
+#: src/components/partials/EntriesTabsView/Modals.jsx:587
+#: src/components/partials/EntriesTabsView/Modals.jsx:599
 msgid "Cancel"
 msgstr "Anuleaza"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:581
-#: src/components/partials/EntriesTabsView/Modals.jsx:593
+#: src/components/partials/EntriesTabsView/Modals.jsx:588
+#: src/components/partials/EntriesTabsView/Modals.jsx:600
 msgid "Confirm"
 msgstr "Confirma"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:705
-#: src/components/partials/EntriesTabsView/Modals.jsx:813
+#: src/components/partials/EntriesTabsView/Modals.jsx:712
+#: src/components/partials/EntriesTabsView/Modals.jsx:844
 msgid "entries.modals.more.edit"
 msgstr "edita"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:711
-#: src/components/partials/EntriesTabsView/Modals.jsx:821
+#: src/components/partials/EntriesTabsView/Modals.jsx:718
+#: src/components/partials/EntriesTabsView/Modals.jsx:863
 msgid "entries.modals.more.delete"
 msgstr "șterge"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:854
+msgid "entries.modals.more.hide"
+msgstr ""
 
 #: src/components/screens/About.jsx:22
 #: src/components/screens/Welcome/ui.jsx:100
@@ -252,7 +256,7 @@ msgstr "Nu ai adăugat nicio locație pentru această zi."
 msgid "day-screen.persons.empty"
 msgstr "Nu ai adăugat nicio persoană pentru această zi."
 
-#: src/components/screens/Day/ui.jsx:118
+#: src/components/screens/Day/ui.jsx:119
 msgid "day-screen.entries.add"
 msgstr "Adaugă înregistrare"
 
@@ -272,30 +276,41 @@ msgstr ""
 "Permiteți aplicației să acceseze contactele din setările de "
 "confidențialitate ale dispozitivului."
 
-#: src/components/screens/Directory/ui.jsx:132
+#: src/components/screens/Directory/ModalHidePersons.jsx:206
+#: src/components/screens/Directory/ui.jsx:189
+msgid "directory-screen.modals.hide-persons.headline"
+msgstr ""
+
+#: src/components/screens/Directory/ModalHidePersons.jsx:239
+msgid "directory-screen.modals.hide-persons.button.save"
+msgstr ""
+
+#: src/components/screens/Directory/ui.jsx:147
 msgid "directory-screen.header.headline"
 msgstr "Gestioneaza registru"
 
-#: src/components/screens/Directory/ui.jsx:138
-msgid "directory-screen.header.button.import"
-msgstr "Import"
+#: src/components/screens/Directory/ui.jsx:153
+#: src/components/screens/Directory/ui.jsx:180
+msgid "directory-screen.header.button.more"
+msgstr ""
 
-#: src/components/screens/Directory/ui.jsx:164
+#: src/components/screens/Directory/ui.jsx:197
+#: src/components/screens/Directory/ui.jsx:222
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Import persoane"
 
-#: src/components/screens/Directory/ui.jsx:170
+#: src/components/screens/Directory/ui.jsx:228
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Importa persoane din agenda telefonică pentru a putea începe imediat. Toate "
 "persoanele tale sunt stocate local. Nici o data nu este urmărită sau "
 "partajată."
 
-#: src/components/screens/Directory/ui.jsx:176
+#: src/components/screens/Directory/ui.jsx:234
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Se importă ..."
 
-#: src/components/screens/Directory/ui.jsx:177
+#: src/components/screens/Directory/ui.jsx:235
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Importa acum"
 

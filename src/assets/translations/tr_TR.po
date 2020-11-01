@@ -27,143 +27,147 @@ msgstr ""
 msgid "navigation.tips.label"
 msgstr "İpuçları"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1001
-#: src/components/partials/EntriesTabsView/index.jsx:979
+#: src/components/partials/EntriesTabsView/index.jsx:1013
+#: src/components/partials/EntriesTabsView/index.jsx:991
 msgid "entries.modals.update-location.button"
 msgstr "Kayıt etmek"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1002
+#: src/components/partials/EntriesTabsView/index.jsx:1014
 msgid "entries.modals.select-location.button"
 msgstr "Seçmek"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1008
-#: src/components/partials/EntriesTabsView/index.jsx:984
+#: src/components/partials/EntriesTabsView/index.jsx:1020
+#: src/components/partials/EntriesTabsView/index.jsx:996
 msgid "entries.modals.update-location.headline"
 msgstr "Konumunu düzenle"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1009
+#: src/components/partials/EntriesTabsView/index.jsx:1021
 msgid "entries.modals.select-location.headline"
 msgstr "Konum seçin"
 
-#: src/components/partials/EntriesTabsView/index.jsx:820
+#: src/components/partials/EntriesTabsView/index.jsx:831
 #: src/components/screens/Export/createPdfFile.js:317
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "Kişiler"
 
-#: src/components/partials/EntriesTabsView/index.jsx:828
+#: src/components/partials/EntriesTabsView/index.jsx:839
 #: src/components/screens/Export/createPdfFile.js:409
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "Konum"
 
-#: src/components/partials/EntriesTabsView/index.jsx:840
+#: src/components/partials/EntriesTabsView/index.jsx:851
 msgid "entries.persons.list.new"
 msgstr "Yeni kişi"
 
-#: src/components/partials/EntriesTabsView/index.jsx:860
-#: src/components/partials/EntriesTabsView/index.jsx:919
+#: src/components/partials/EntriesTabsView/index.jsx:872
+#: src/components/partials/EntriesTabsView/index.jsx:931
 msgid "entries.search.list.empty"
 msgstr "Aramanızda hiçbir şey bulunamadı."
 
-#: src/components/partials/EntriesTabsView/index.jsx:871
+#: src/components/partials/EntriesTabsView/index.jsx:883
 msgid "entries.persons.list.empty"
 msgstr ""
 "Henüz bir kişi oluşturmadınız. Hemen başlamak için telefon defterinizden "
 "kişileri aktarabilirsiniz."
 
-#: src/components/partials/EntriesTabsView/index.jsx:880
+#: src/components/partials/EntriesTabsView/index.jsx:892
 msgid "entries.persons.list.import.button"
 msgstr "Şimdi aktar "
 
-#: src/components/partials/EntriesTabsView/index.jsx:898
+#: src/components/partials/EntriesTabsView/index.jsx:910
 msgid "entries.locations.list.new"
 msgstr "Yeni konum"
 
-#: src/components/partials/EntriesTabsView/index.jsx:923
+#: src/components/partials/EntriesTabsView/index.jsx:935
 msgid "entries.locations.list.empty"
 msgstr ""
 "Henüz bir konum oluşturmadınız. Şimdi başlayın ve ilk konumunuzu oluşturun."
 
-#: src/components/partials/EntriesTabsView/index.jsx:941
+#: src/components/partials/EntriesTabsView/index.jsx:953
 msgid "entries.selection.add"
 msgstr "Seçim ekle"
 
-#: src/components/partials/EntriesTabsView/index.jsx:956
+#: src/components/partials/EntriesTabsView/index.jsx:968
 msgid "entries.modals.update-person.button"
 msgstr "Kayıt etmek"
 
-#: src/components/partials/EntriesTabsView/index.jsx:956
+#: src/components/partials/EntriesTabsView/index.jsx:968
 msgid "entries.modals.new-person.button"
 msgstr "Ekle"
 
-#: src/components/partials/EntriesTabsView/index.jsx:959
+#: src/components/partials/EntriesTabsView/index.jsx:971
 msgid "entries.modals.update-person.headline"
 msgstr "Kişiyi düzenle"
 
-#: src/components/partials/EntriesTabsView/index.jsx:959
+#: src/components/partials/EntriesTabsView/index.jsx:971
 msgid "entries.modals.new-person.headline"
 msgstr "Yeni kişi"
 
-#: src/components/partials/EntriesTabsView/index.jsx:980
+#: src/components/partials/EntriesTabsView/index.jsx:992
 msgid "entries.modals.new-location.button"
 msgstr "Ekle"
 
-#: src/components/partials/EntriesTabsView/index.jsx:985
+#: src/components/partials/EntriesTabsView/index.jsx:997
 msgid "entries.modals.new-location.headline"
 msgstr "Yeni konum"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:252
+#: src/components/partials/EntriesTabsView/Modals.jsx:259
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Adı ve soyadı"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:264
+#: src/components/partials/EntriesTabsView/Modals.jsx:274
 msgid "entries.modals.new-person.placeholder.display-name"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:278
+#: src/components/partials/EntriesTabsView/Modals.jsx:288
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Telefon"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:291
+#: src/components/partials/EntriesTabsView/Modals.jsx:301
 msgid "entries.modals.new-person.placeholder.mail"
 msgstr ""
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:373
+#: src/components/partials/EntriesTabsView/Modals.jsx:383
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Başlık"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:384
+#: src/components/partials/EntriesTabsView/Modals.jsx:394
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Tanım "
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:396
+#: src/components/partials/EntriesTabsView/Modals.jsx:406
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "Telefon"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:553
+#: src/components/partials/EntriesTabsView/Modals.jsx:560
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Tanım "
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:580
-#: src/components/partials/EntriesTabsView/Modals.jsx:592
+#: src/components/partials/EntriesTabsView/Modals.jsx:587
+#: src/components/partials/EntriesTabsView/Modals.jsx:599
 msgid "Cancel"
 msgstr "İptal etmek"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:581
-#: src/components/partials/EntriesTabsView/Modals.jsx:593
+#: src/components/partials/EntriesTabsView/Modals.jsx:588
+#: src/components/partials/EntriesTabsView/Modals.jsx:600
 msgid "Confirm"
 msgstr "Onaylamak"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:705
-#: src/components/partials/EntriesTabsView/Modals.jsx:813
+#: src/components/partials/EntriesTabsView/Modals.jsx:712
+#: src/components/partials/EntriesTabsView/Modals.jsx:844
 msgid "entries.modals.more.edit"
 msgstr "düzenle"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:711
-#: src/components/partials/EntriesTabsView/Modals.jsx:821
+#: src/components/partials/EntriesTabsView/Modals.jsx:718
+#: src/components/partials/EntriesTabsView/Modals.jsx:863
 msgid "entries.modals.more.delete"
 msgstr "sil"
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:854
+msgid "entries.modals.more.hide"
+msgstr ""
 
 #: src/components/screens/About.jsx:22
 #: src/components/screens/Welcome/ui.jsx:100
@@ -249,7 +253,7 @@ msgstr "Bu gün için herhangi bir yer eklemediniz."
 msgid "day-screen.persons.empty"
 msgstr "Bu gün için hiç kişi eklemediniz."
 
-#: src/components/screens/Day/ui.jsx:118
+#: src/components/screens/Day/ui.jsx:119
 msgid "day-screen.entries.add"
 msgstr "Giriş ekle"
 
@@ -269,29 +273,40 @@ msgstr ""
 "Uygulamanın cihazınızın gizlilik ayarlarındaki kişilere erişmesine izin "
 "verin."
 
-#: src/components/screens/Directory/ui.jsx:132
+#: src/components/screens/Directory/ModalHidePersons.jsx:206
+#: src/components/screens/Directory/ui.jsx:189
+msgid "directory-screen.modals.hide-persons.headline"
+msgstr ""
+
+#: src/components/screens/Directory/ModalHidePersons.jsx:239
+msgid "directory-screen.modals.hide-persons.button.save"
+msgstr ""
+
+#: src/components/screens/Directory/ui.jsx:147
 msgid "directory-screen.header.headline"
 msgstr "Rehberi yönet"
 
-#: src/components/screens/Directory/ui.jsx:138
-msgid "directory-screen.header.button.import"
-msgstr "Aktar "
+#: src/components/screens/Directory/ui.jsx:153
+#: src/components/screens/Directory/ui.jsx:180
+msgid "directory-screen.header.button.more"
+msgstr ""
 
-#: src/components/screens/Directory/ui.jsx:164
+#: src/components/screens/Directory/ui.jsx:197
+#: src/components/screens/Directory/ui.jsx:222
 msgid "directory-screen.modals.import-persons.headline"
 msgstr "Kişileri aktar "
 
-#: src/components/screens/Directory/ui.jsx:170
+#: src/components/screens/Directory/ui.jsx:228
 msgid "directory-screen.modals.import-persons.text"
 msgstr ""
 "Hemen başlayabilmeniz için kişileri telefon defterinizden aktarın. Tüm "
 "kişileriniz yerel olarak saklanır. Hiçbir veri izlenmez veya paylaşılmaz."
 
-#: src/components/screens/Directory/ui.jsx:176
+#: src/components/screens/Directory/ui.jsx:234
 msgid "directory-screen.modals.import-persons.button.importing"
 msgstr "Aktarılıyor ..."
 
-#: src/components/screens/Directory/ui.jsx:177
+#: src/components/screens/Directory/ui.jsx:235
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Şimdi aktar "
 
