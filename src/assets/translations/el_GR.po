@@ -162,53 +162,54 @@ msgstr "επεξεργασία"
 msgid "entries.modals.more.delete"
 msgstr "διαγράφω"
 
-#: src/components/screens/About.jsx:22 src/components/screens/Welcome/ui.jsx:99
+#: src/components/screens/About.jsx:22
+#: src/components/screens/Welcome/ui.jsx:100
 msgid "welcome-screen.slides.intro.headline"
 msgstr "Καταπολέμηση του κορωνοϊού μαζί"
 
 #: src/components/screens/About.jsx:23
-#: src/components/screens/Welcome/ui.jsx:100
+#: src/components/screens/Welcome/ui.jsx:101
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
 "Κατέγραψε άτομα και τοποθεσίες, ανακατασκεύασε τις διαδρομές μόλυνσης και "
 "βοήθησε να σταματήσει η διάδοση."
 
 #: src/components/screens/About.jsx:24
-#: src/components/screens/Welcome/ui.jsx:101
+#: src/components/screens/Welcome/ui.jsx:102
 msgid "welcome-screen.slides.intro.button"
 msgstr "Τέλεια, θέλω να βοηθήσω κι εγώ"
 
 #: src/components/screens/About.jsx:32
-#: src/components/screens/Welcome/ui.jsx:109
+#: src/components/screens/Welcome/ui.jsx:110
 msgid "welcome-screen.slides.how-to.headline"
 msgstr "Ένα ημερολόγιο για τη υγεία μας"
 
 #: src/components/screens/About.jsx:33
-#: src/components/screens/Welcome/ui.jsx:110
+#: src/components/screens/Welcome/ui.jsx:111
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
 "Σημειώσε ποιον έχεις συναντήσει, τους δημόσιους χώρους που έχεις επισκεφθεί "
 "και σύμβαλλε στην υγεία όλων."
 
 #: src/components/screens/About.jsx:34
-#: src/components/screens/Welcome/ui.jsx:111
+#: src/components/screens/Welcome/ui.jsx:112
 msgid "welcome-screen.slides.how-to.button"
 msgstr "εντάξει"
 
 #: src/components/screens/About.jsx:42
-#: src/components/screens/Welcome/ui.jsx:131
+#: src/components/screens/Welcome/ui.jsx:144
 msgid "welcome-screen.slides.local-data.headline"
 msgstr "Τα δεδομένα σου είναι μόνο δικά σου"
 
 #: src/components/screens/About.jsx:43
-#: src/components/screens/Welcome/ui.jsx:132
+#: src/components/screens/Welcome/ui.jsx:145
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 "Όλα τα δεδομένα που δημιουργούνται και χρησιμοποιούνται από την Coronika "
 "αποθηκεύονται τοπικά και δεν παρακολουθούνται ούτε διαβιβάζονται."
 
 #: src/components/screens/About.jsx:44
-#: src/components/screens/Welcome/ui.jsx:133
+#: src/components/screens/Welcome/ui.jsx:146
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Ξεκίνα τώρα"
 
@@ -257,13 +258,13 @@ msgstr "Προσθήκη καταχώρησης"
 msgid "day-screen.header.headline"
 msgstr "Ημερήσια επισκόπηση"
 
-#: src/components/screens/Directory/importPersons.js:50
-#: src/components/screens/Directory/importPersons.js:60
+#: src/components/screens/Directory/importPersons.js:52
+#: src/components/screens/Directory/importPersons.js:64
 msgid "directory-screen.alerts.import-persons.missing-permission.title"
 msgstr "Δεν υπάρχει άδεια"
 
-#: src/components/screens/Directory/importPersons.js:51
-#: src/components/screens/Directory/importPersons.js:61
+#: src/components/screens/Directory/importPersons.js:53
+#: src/components/screens/Directory/importPersons.js:65
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
 msgstr ""
 "Επιτρέψτε στην εφαρμογή να έχει πρόσβαση στις επαφές στις ρυθμίσεις "
@@ -658,82 +659,82 @@ msgstr "Σύνοψη εξαγωγών"
 msgid "overview-screen.header.headline"
 msgstr "Σύνοψη "
 
-#: src/components/screens/Settings/logic.js:162
+#: src/components/screens/Settings/logic.js:160
 msgid "notifications.diary.headline"
 msgstr "📒 Κατέγραψε τις επαφές σου"
 
-#: src/components/screens/Settings/logic.js:163
+#: src/components/screens/Settings/logic.js:161
 msgid "notifications.diary.text"
 msgstr ""
 "Κατέγραψε τις στενές επαφές σου και κάνε μια συμβολή στην επιβράδυνση της "
 "εξάπλωσης του κορωνοϊού."
 
-#: src/components/screens/Settings/logic.js:178
+#: src/components/screens/Settings/logic.js:176
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽 Κράτα την οθόνη σου καθαρή"
 
-#: src/components/screens/Settings/logic.js:179
+#: src/components/screens/Settings/logic.js:177
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr ""
 "Απομάκρυνε από την οθόνη σου διάφορα μικρόβια, βακτήρια και άλλα παθογόνα."
 
-#: src/components/screens/Settings/logic.js:182
+#: src/components/screens/Settings/logic.js:180
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 Καθάρισε το τηλέφωνό σου"
 
-#: src/components/screens/Settings/logic.js:183
+#: src/components/screens/Settings/logic.js:181
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr ""
 "Κρατώντας το τηλέφωνο σου καθαρό είναι άλλος ένας έξυπνος τρόπος για να "
 "κρατήσεις τα μικρόβια μακριά από τα δάχτυλά σου."
 
-#: src/components/screens/Settings/logic.js:186
+#: src/components/screens/Settings/logic.js:184
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Καθάρισε την οθόνη του smartphone σου"
 
-#: src/components/screens/Settings/logic.js:187
+#: src/components/screens/Settings/logic.js:185
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr ""
 "Απομάκρυνε τα μικρόβια καθαρίζοντας την οθόνη σου με ένα απολυμαντικό "
 "καθαριστικό."
 
-#: src/components/screens/Settings/logic.js:203
-#: src/components/screens/Settings/logic.js:236
-#: src/components/screens/Settings/logic.js:251
+#: src/components/screens/Settings/logic.js:201
+#: src/components/screens/Settings/logic.js:234
+#: src/components/screens/Settings/logic.js:249
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "Εάν έχεις βγεί έξω, καθάρισε τα χέρια σου καλά."
 
-#: src/components/screens/Settings/logic.js:204
-#: src/components/screens/Settings/logic.js:237
-#: src/components/screens/Settings/logic.js:252
+#: src/components/screens/Settings/logic.js:202
+#: src/components/screens/Settings/logic.js:235
+#: src/components/screens/Settings/logic.js:250
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 Πλύνε τα χέρια σου"
 
-#: src/components/screens/Settings/logic.js:208
-#: src/components/screens/Settings/logic.js:241
-#: src/components/screens/Settings/logic.js:256
+#: src/components/screens/Settings/logic.js:206
+#: src/components/screens/Settings/logic.js:239
+#: src/components/screens/Settings/logic.js:254
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Το πλύσιμο των χεριών σου είναι ένας από τους απλούστερους τρόπους για να "
 "προστατέψεις τον εαυτό σου και τους άλλους από ασθένειες."
 
-#: src/components/screens/Settings/logic.js:209
-#: src/components/screens/Settings/logic.js:242
-#: src/components/screens/Settings/logic.js:257
+#: src/components/screens/Settings/logic.js:207
+#: src/components/screens/Settings/logic.js:240
+#: src/components/screens/Settings/logic.js:255
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Έπλυνες τα χέρια σου;"
 
-#: src/components/screens/Settings/logic.js:213
-#: src/components/screens/Settings/logic.js:246
-#: src/components/screens/Settings/logic.js:261
+#: src/components/screens/Settings/logic.js:211
+#: src/components/screens/Settings/logic.js:244
+#: src/components/screens/Settings/logic.js:259
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Πλείνε τα χέρια σου με προσοχή και μην ξεχάσεις να καθαρίσεις τις άκρες των "
 "δακτύλων σου και το διάστημα μεταξύ των δακτύλων."
 
-#: src/components/screens/Settings/logic.js:214
-#: src/components/screens/Settings/logic.js:247
-#: src/components/screens/Settings/logic.js:262
+#: src/components/screens/Settings/logic.js:212
+#: src/components/screens/Settings/logic.js:245
+#: src/components/screens/Settings/logic.js:260
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 Μην ξεχάσεις τις άκρες των δαχτύλων σου!"
 
@@ -1065,23 +1066,39 @@ msgstr ""
 "χέρια μπορούν να σταματήσουν τη διάδοση μικροβίων. Απλά ακολούθησε αυτά τα "
 "πέντε βήματα:"
 
-#: src/components/screens/Welcome/ui.jsx:119
+#: src/components/screens/Welcome/ui.jsx:120
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "Έπλυνες τα χέρια σου;"
 
-#: src/components/screens/Welcome/ui.jsx:120
+#: src/components/screens/Welcome/ui.jsx:121
 msgid "welcome-screen.slides.notifications.text"
 msgstr ""
 "Ενεργοποίησε τις ειδοποιήσεις σου και θα υπενθυμίζεσε τακτικά να πλένεις τα "
 "χέρια σου για να αποφύγεις τη μόλυνση."
 
-#: src/components/screens/Welcome/ui.jsx:121
+#: src/components/screens/Welcome/ui.jsx:122
 msgid "welcome-screen.slides.notifications.button-skip"
 msgstr "Παράλειψη"
 
-#: src/components/screens/Welcome/ui.jsx:122
+#: src/components/screens/Welcome/ui.jsx:123
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Ενεργοποίηση τώρα"
+
+#: src/components/screens/Welcome/ui.jsx:132
+msgid "welcome-screen.slides.import-contacts.headline"
+msgstr ""
+
+#: src/components/screens/Welcome/ui.jsx:133
+msgid "welcome-screen.slides.import-contacts.text"
+msgstr ""
+
+#: src/components/screens/Welcome/ui.jsx:134
+msgid "welcome-screen.slides.import-contacts.button-skip"
+msgstr ""
+
+#: src/components/screens/Welcome/ui.jsx:135
+msgid "welcome-screen.slides.import-contacts.button"
+msgstr ""
 
 #: src/components/widgets/DayOverview.jsx:34
 #: src/components/widgets/ModalSwitchDay.jsx:70

@@ -73,6 +73,13 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+
+  UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LaunchScreen" bundle:[NSBundle mainBundle]];
+    UIViewController *launchScreenViewController = [storyboard instantiateInitialViewController];
+
+    launchScreenViewController.view.frame = self.window.bounds;
+    rootView.loadingView = launchScreenViewController.view;
+
   // Define UNUserNotificationCenter
   UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
   center.delegate = self;

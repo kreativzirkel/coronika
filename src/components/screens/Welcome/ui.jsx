@@ -53,9 +53,9 @@ export const getWelcomeStyles = (vw, colors, fontFamilyBold, fontFamilyRegular) 
       backgroundColor: colors.TEXT,
       borderRadius: 0,
       height: 5,
-      marginLeft: vw(0.8),
-      marginRight: vw(0.8),
-      width: vw(15),
+      marginLeft: vw(1),
+      marginRight: vw(1),
+      width: vw(12),
     },
     sliderPaginationDotActive: {
       backgroundColor: COLOR_PRIMARY,
@@ -84,6 +84,7 @@ const Welcome = ({
   colors,
   colorScheme,
   finish,
+  importContacts,
   navigation,
   vw,
   fontFamilyBold,
@@ -126,12 +127,24 @@ const Welcome = ({
     {
       animation:
         colorScheme === 'dark'
+          ? require('../../../assets/animations/import-contacts_dark.json')
+          : require('../../../assets/animations/import-contacts.json'),
+      headline: __('welcome-screen.slides.import-contacts.headline'),
+      text: __('welcome-screen.slides.import-contacts.text'),
+      buttonSkipText: __('welcome-screen.slides.import-contacts.button-skip'),
+      buttonText: __('welcome-screen.slides.import-contacts.button'),
+      key: 'welcome-slide-3',
+      requestContactsPermissions: true,
+    },
+    {
+      animation:
+        colorScheme === 'dark'
           ? require('../../../assets/animations/how_dark.json')
           : require('../../../assets/animations/how.json'),
       headline: __('welcome-screen.slides.local-data.headline'),
       text: __('welcome-screen.slides.local-data.text'),
       buttonText: __('welcome-screen.slides.local-data.button'),
-      key: 'welcome-slide-3',
+      key: 'welcome-slide-4',
     },
   ];
 
@@ -148,6 +161,12 @@ const Welcome = ({
     }
   };
 
+  const requestContacts = (index) => {
+    importContacts(__, () => {
+      next(index);
+    });
+  };
+
   const requestPushPermissions = (index) => {
     activateNotifications(__, () => {
       next(index);
@@ -161,16 +180,34 @@ const Welcome = ({
           data={slides}
           ref={slider}
           renderItem={({
-            item: { animation, headline, text, buttonSkipText, buttonText, key, requestPushNotificationsPermissions },
+            item: {
+              animation,
+              headline,
+              text,
+              buttonSkipText,
+              buttonText,
+              key,
+              requestContactsPermissions,
+              requestPushNotificationsPermissions,
+            },
             index,
           }) => {
+            const onPressNext = () => {
+              if (requestContactsPermissions) {
+                requestContacts(index);
+              } else if (requestPushNotificationsPermissions) {
+                requestPushPermissions(index);
+              } else {
+                next(index);
+              }
+            };
+
             return (
               <View key={key} style={{ ...styles.view, ...styles.viewSlide }}>
                 <LottieView autoPlay loop source={animation} style={styles.animation} />
                 <Text style={styles.headline}>{headline}</Text>
                 <Text style={styles.text}>{text}</Text>
-                <TouchableOpacity
-                  onPress={() => (requestPushNotificationsPermissions ? requestPushPermissions(index) : next(index))}>
+                <TouchableOpacity onPress={onPressNext}>
                   <Text style={styles.button}>{buttonText}</Text>
                 </TouchableOpacity>
                 {buttonSkipText && (

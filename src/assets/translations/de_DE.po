@@ -162,53 +162,54 @@ msgstr "bearbeiten"
 msgid "entries.modals.more.delete"
 msgstr "löschen"
 
-#: src/components/screens/About.jsx:22 src/components/screens/Welcome/ui.jsx:99
+#: src/components/screens/About.jsx:22
+#: src/components/screens/Welcome/ui.jsx:100
 msgid "welcome-screen.slides.intro.headline"
 msgstr "Gemeinsam das Coronavirus eindämmen."
 
 #: src/components/screens/About.jsx:23
-#: src/components/screens/Welcome/ui.jsx:100
+#: src/components/screens/Welcome/ui.jsx:101
 msgid "welcome-screen.slides.intro.text"
 msgstr ""
 "Zusammen können wir Infektionswege nachvollziehen und so eine Ausbreitung "
 "eindämmen."
 
 #: src/components/screens/About.jsx:24
-#: src/components/screens/Welcome/ui.jsx:101
+#: src/components/screens/Welcome/ui.jsx:102
 msgid "welcome-screen.slides.intro.button"
 msgstr "Super, ich will mithelfen!"
 
 #: src/components/screens/About.jsx:32
-#: src/components/screens/Welcome/ui.jsx:109
+#: src/components/screens/Welcome/ui.jsx:110
 msgid "welcome-screen.slides.how-to.headline"
 msgstr "Ein Tagebuch mit Orten und Personen"
 
 #: src/components/screens/About.jsx:33
-#: src/components/screens/Welcome/ui.jsx:110
+#: src/components/screens/Welcome/ui.jsx:111
 msgid "welcome-screen.slides.how-to.text"
 msgstr ""
 "Trage ein, wen du getroffen hast, an welchen öffentlichen Orten du dich "
 "aufgehalten hast und leiste einen Beitrag zur Gesundheit aller."
 
 #: src/components/screens/About.jsx:34
-#: src/components/screens/Welcome/ui.jsx:111
+#: src/components/screens/Welcome/ui.jsx:112
 msgid "welcome-screen.slides.how-to.button"
 msgstr "Alles klar"
 
 #: src/components/screens/About.jsx:42
-#: src/components/screens/Welcome/ui.jsx:131
+#: src/components/screens/Welcome/ui.jsx:144
 msgid "welcome-screen.slides.local-data.headline"
 msgstr "Deine Daten gehören dir!"
 
 #: src/components/screens/About.jsx:43
-#: src/components/screens/Welcome/ui.jsx:132
+#: src/components/screens/Welcome/ui.jsx:145
 msgid "welcome-screen.slides.local-data.text"
 msgstr ""
 "Alle Informationen, die du in Coronika anlegst werden lokal gespeichert. "
 "Keine Daten werden getrackt oder weitergegeben."
 
 #: src/components/screens/About.jsx:44
-#: src/components/screens/Welcome/ui.jsx:133
+#: src/components/screens/Welcome/ui.jsx:146
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Jetzt anfangen"
 
@@ -256,13 +257,13 @@ msgstr "Eintrag hinzufügen"
 msgid "day-screen.header.headline"
 msgstr "Tagesübersicht"
 
-#: src/components/screens/Directory/importPersons.js:50
-#: src/components/screens/Directory/importPersons.js:60
+#: src/components/screens/Directory/importPersons.js:52
+#: src/components/screens/Directory/importPersons.js:64
 msgid "directory-screen.alerts.import-persons.missing-permission.title"
 msgstr "Fehlende Berechtigung"
 
-#: src/components/screens/Directory/importPersons.js:51
-#: src/components/screens/Directory/importPersons.js:61
+#: src/components/screens/Directory/importPersons.js:53
+#: src/components/screens/Directory/importPersons.js:65
 msgid "directory-screen.alerts.import-persons.missing-permission.message"
 msgstr ""
 "Erlaube der App den Zugriff auf deine Kontakte in den Privatsphäre "
@@ -659,81 +660,81 @@ msgstr "Übersicht exportieren"
 msgid "overview-screen.header.headline"
 msgstr "Übersicht"
 
-#: src/components/screens/Settings/logic.js:162
+#: src/components/screens/Settings/logic.js:160
 msgid "notifications.diary.headline"
 msgstr "📒 Trage deine Kontakte ein"
 
-#: src/components/screens/Settings/logic.js:163
+#: src/components/screens/Settings/logic.js:161
 msgid "notifications.diary.text"
 msgstr ""
 "Trage deine engen Kontakte ein und unterstütze bei der Eindämmung des Virus."
 
-#: src/components/screens/Settings/logic.js:178
+#: src/components/screens/Settings/logic.js:176
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽 Halte deinen Bildschirm sauber"
 
-#: src/components/screens/Settings/logic.js:179
+#: src/components/screens/Settings/logic.js:177
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr ""
 "Desinfiziere deinen Screen von unzähligen Keimen, Bakterien und anderen "
 "Erregern."
 
-#: src/components/screens/Settings/logic.js:182
+#: src/components/screens/Settings/logic.js:180
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 Desinfiziere dein Handy"
 
-#: src/components/screens/Settings/logic.js:183
+#: src/components/screens/Settings/logic.js:181
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr ""
 "Die Reinigung deines Handys ist eine smarte Methode, um Erreger an deinen "
 "Händen zu reduzieren."
 
-#: src/components/screens/Settings/logic.js:186
+#: src/components/screens/Settings/logic.js:184
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Reinige dein Smartphone"
 
-#: src/components/screens/Settings/logic.js:187
+#: src/components/screens/Settings/logic.js:185
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "Befreie dein Handy von möglichen Keimen mit einem Desinfektionstuch."
 
-#: src/components/screens/Settings/logic.js:203
-#: src/components/screens/Settings/logic.js:236
-#: src/components/screens/Settings/logic.js:251
+#: src/components/screens/Settings/logic.js:201
+#: src/components/screens/Settings/logic.js:234
+#: src/components/screens/Settings/logic.js:249
 msgid "notifications.washing-hands.variant-1.text"
 msgstr ""
 "Wenn du unterwegs warst, solltest du zunächst deine Hände gründlich waschen."
 
-#: src/components/screens/Settings/logic.js:204
-#: src/components/screens/Settings/logic.js:237
-#: src/components/screens/Settings/logic.js:252
+#: src/components/screens/Settings/logic.js:202
+#: src/components/screens/Settings/logic.js:235
+#: src/components/screens/Settings/logic.js:250
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧Händewaschen"
 
-#: src/components/screens/Settings/logic.js:208
-#: src/components/screens/Settings/logic.js:241
-#: src/components/screens/Settings/logic.js:256
+#: src/components/screens/Settings/logic.js:206
+#: src/components/screens/Settings/logic.js:239
+#: src/components/screens/Settings/logic.js:254
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Regelmäßiges Händewaschen ist die einfachste Maßnahme, um einer Infektion "
 "vorzubeugen."
 
-#: src/components/screens/Settings/logic.js:209
-#: src/components/screens/Settings/logic.js:242
-#: src/components/screens/Settings/logic.js:257
+#: src/components/screens/Settings/logic.js:207
+#: src/components/screens/Settings/logic.js:240
+#: src/components/screens/Settings/logic.js:255
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧Hände gewaschen? "
 
-#: src/components/screens/Settings/logic.js:213
-#: src/components/screens/Settings/logic.js:246
-#: src/components/screens/Settings/logic.js:261
+#: src/components/screens/Settings/logic.js:211
+#: src/components/screens/Settings/logic.js:244
+#: src/components/screens/Settings/logic.js:259
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Wasche deine Hände bewusst und denke auch an die Kuppen und Stellen zwischen "
 "den Fingern. "
 
-#: src/components/screens/Settings/logic.js:214
-#: src/components/screens/Settings/logic.js:247
-#: src/components/screens/Settings/logic.js:262
+#: src/components/screens/Settings/logic.js:212
+#: src/components/screens/Settings/logic.js:245
+#: src/components/screens/Settings/logic.js:260
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧Fingerkuppen nicht vergessen!"
 
@@ -1046,23 +1047,41 @@ msgstr ""
 "Eine der effizientesten Maßnahmen zur Verhinderung einer weiteren "
 "Ausbreitung von Keimen ist gründliches Händewaschen:"
 
-#: src/components/screens/Welcome/ui.jsx:119
+#: src/components/screens/Welcome/ui.jsx:120
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "Hände gewaschen?"
 
-#: src/components/screens/Welcome/ui.jsx:120
+#: src/components/screens/Welcome/ui.jsx:121
 msgid "welcome-screen.slides.notifications.text"
 msgstr ""
 "Aktiviere deine Benachrichtigungen und werde so regelmäßig ans Händewaschen "
 "erinnert, um einer Infektion vorzubeugen."
 
-#: src/components/screens/Welcome/ui.jsx:121
+#: src/components/screens/Welcome/ui.jsx:122
 msgid "welcome-screen.slides.notifications.button-skip"
 msgstr "Überspringen"
 
-#: src/components/screens/Welcome/ui.jsx:122
+#: src/components/screens/Welcome/ui.jsx:123
 msgid "welcome-screen.slides.notifications.button"
 msgstr "Jetzt aktivieren"
+
+#: src/components/screens/Welcome/ui.jsx:132
+msgid "welcome-screen.slides.import-contacts.headline"
+msgstr "Personen importieren"
+
+#: src/components/screens/Welcome/ui.jsx:133
+msgid "welcome-screen.slides.import-contacts.text"
+msgstr ""
+"Coronika kann Personen aus deinem Telefonbuch importieren, damit du direkt "
+"loslegen kannst."
+
+#: src/components/screens/Welcome/ui.jsx:134
+msgid "welcome-screen.slides.import-contacts.button-skip"
+msgstr "Überspringen"
+
+#: src/components/screens/Welcome/ui.jsx:135
+msgid "welcome-screen.slides.import-contacts.button"
+msgstr "Jetzt importieren"
 
 #: src/components/widgets/DayOverview.jsx:34
 #: src/components/widgets/ModalSwitchDay.jsx:70

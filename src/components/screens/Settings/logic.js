@@ -101,9 +101,7 @@ export const activateDefaultNotifications = (__, cb) => async (dispatch, getStat
   if (Platform.OS === 'ios') {
     PushNotification.requestPermissions().then((grant) => {
       if (Platform.OS === 'ios' && !grant.alert && !grant.badge && !grant.sound) {
-        if (cb) {
-          cb();
-        }
+        if (cb) cb();
 
         return;
       }
@@ -289,9 +287,7 @@ const setupNotifications = (notifications, __, cb, timeout = 1000) => {
     if (Platform.OS === 'ios') {
       PushNotification.requestPermissions().then((grant) => {
         if (Platform.OS === 'ios' && !grant.alert && !grant.badge && !grant.sound) {
-          if (cb) {
-            cb();
-          }
+          if (cb) cb();
 
           return;
         }

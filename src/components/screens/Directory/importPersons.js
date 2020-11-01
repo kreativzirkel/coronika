@@ -7,7 +7,7 @@ import {
   importPersons as importPersonsAction,
 } from './actions';
 
-const importPersons = (__, closeImportPersonsModal = false) => async (dispatch) => {
+const importPersons = (__, closeImportPersonsModal = false, cb = undefined) => async (dispatch) => {
   dispatch(enablePersonsImporting());
 
   let permissionGranted = true;
@@ -44,6 +44,8 @@ const importPersons = (__, closeImportPersonsModal = false) => async (dispatch) 
         }
 
         dispatch(disablePersonsImporting());
+
+        if (cb) cb();
       })
       .catch(() => {
         Alert.alert(
@@ -52,6 +54,8 @@ const importPersons = (__, closeImportPersonsModal = false) => async (dispatch) 
         );
 
         dispatch(disablePersonsImporting());
+
+        if (cb) cb();
       });
   } else {
     dispatch(disablePersonsImporting());
@@ -60,6 +64,8 @@ const importPersons = (__, closeImportPersonsModal = false) => async (dispatch) 
       __('directory-screen.alerts.import-persons.missing-permission.title'),
       __('directory-screen.alerts.import-persons.missing-permission.message')
     );
+
+    if (cb) cb();
   }
 };
 
