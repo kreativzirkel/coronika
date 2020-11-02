@@ -2,6 +2,14 @@ import connect from 'react-redux/lib/connect/connect';
 import withI18n from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
+import {
+  showLocationOverviewModal,
+  hideLocationOverviewModal,
+  showPersonOverviewModal,
+  hidePersonOverviewModal,
+  setSelectedLocationId,
+  setSelectedPersonId,
+} from './actions';
 import Screen from './ui';
 
 export const sortByFullName = (a, b) => {
@@ -24,9 +32,20 @@ export const sortByTitle = (a, b) => {
   return 0;
 };
 
+const selectLocation = (locationId) => async (dispatch) => {
+  dispatch(setSelectedLocationId(locationId));
+  dispatch(showLocationOverviewModal());
+};
+
+const selectPerson = (personId) => async (dispatch) => {
+  dispatch(setSelectedPersonId(personId));
+  dispatch(showPersonOverviewModal());
+};
+
 const mapStateToProps = ({
   dashboard: { days },
   directory: { locations: directoryLocations, persons: directoryPersons },
+  overview: { isLocationOverviewModalVisible, isPersonOverviewModalVisible, selectedLocationId, selectedPersonId },
 }) => {
   const total = Object.values(days)
     .map(({ persons, locations }) => ({
@@ -80,11 +99,25 @@ const mapStateToProps = ({
   const locationsSorted = Object.values(locations).sort((a, b) => sortByTitle(a, b));
   const personsSorted = Object.values(persons).sort((a, b) => sortByFullName(a, b));
 
-  return { locations: locationsSorted, persons: personsSorted, total };
+  return {
+    days,
+    isLocationOverviewModalVisible,
+    isPersonOverviewModalVisible,
+    selectedLocationId,
+    selectedPersonId,
+    locations: locationsSorted,
+    persons: personsSorted,
+    total,
+  };
 };
 
-const mapDispatchToProps = (/* dispatch */) => {
-  return {};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    hideLocationOverviewModal: () => dispatch(hideLocationOverviewModal()),
+    hidePersonOverviewModal: () => dispatch(hidePersonOverviewModal()),
+    selectLocation: (locationId) => dispatch(selectLocation(locationId)),
+    selectPerson: (personId) => dispatch(selectPerson(personId)),
+  };
 };
 
 const Overview = withColorScheme(withI18n(withViewportUnits(connect(mapStateToProps, mapDispatchToProps)(Screen))));

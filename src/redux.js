@@ -6,6 +6,7 @@ import directory from './components/screens/Directory/state';
 import { reducer as entriesTabsView } from './components/partials/EntriesTabsView';
 import exportState from './components/screens/Export/state';
 import { reducer as i18n } from './i18n';
+import overview from './components/screens/Overview/state';
 import settings from './components/screens/Settings/state';
 import welcome from './components/screens/Welcome/state';
 
@@ -18,6 +19,7 @@ export const reducers = {
   entriesTabsView,
   export: exportState,
   i18n,
+  overview,
   settings,
   welcome,
 };

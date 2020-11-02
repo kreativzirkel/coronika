@@ -8,8 +8,6 @@ import withI18n from '../../i18n';
 import withViewportUnits from '../../utils/withViewportUnits';
 import { COLOR_PRIMARY } from '../../constants';
 
-const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
-
 class DaysListItemClass extends React.Component {
   constructor(props) {
     super(props);
@@ -57,6 +55,7 @@ class DaysListItemClass extends React.Component {
     const { colors, timestamp, __ } = this.props;
 
     const currentDay = moment(timestamp);
+    const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
     const isToday = currentDay.diff(today) === 0;
 
     return (

@@ -1,15 +1,36 @@
+import UilBars from '@iconscout/react-native-unicons/icons/uil-bars';
 import UilFile from '@iconscout/react-native-unicons/icons/uil-file';
+import moment from 'moment';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, DAYS_OVERVIEW_MAX } from '../../../constants';
 import EntriesTabsView from '../../partials/EntriesTabsView';
+import DayOverview from '../../widgets/DayOverview';
 import Header from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
-import DayOverview from '../../widgets/DayOverview';
-import moment from 'moment';
-import UilBars from '@iconscout/react-native-unicons/icons/uil-bars';
+import ModalLocationOverview from './ModalLocationOverview';
+import ModalPersonOverview from './ModalPersonOverview';
 
-const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamilyBold, fontFamilyRegular, __ }) => {
+const Overview = ({
+  colors,
+  days,
+  isLocationOverviewModalVisible,
+  isPersonOverviewModalVisible,
+  selectedLocationId,
+  selectedPersonId,
+  locations,
+  persons,
+  total,
+  hideLocationOverviewModal,
+  hidePersonOverviewModal,
+  selectLocation,
+  selectPerson,
+  navigation,
+  vw,
+  fontFamilyBold,
+  fontFamilyRegular,
+  __,
+}) => {
   const styles = StyleSheet.create({
     buttonExport: {
       alignItems: 'center',
@@ -129,6 +150,8 @@ const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamil
           hideCreateButton
           hideSearchBar
           locations={locations}
+          onPressLocationItem={selectLocation}
+          onPressPersonItem={selectPerson}
           persons={persons}
           showCounter
         />
@@ -153,6 +176,22 @@ const Overview = ({ colors, locations, persons, total, navigation, vw, fontFamil
           </TouchableOpacity>
         </View>
       </View>
+
+      <ModalLocationOverview
+        closeModal={hideLocationOverviewModal}
+        days={days}
+        isVisible={isLocationOverviewModalVisible}
+        locationId={selectedLocationId}
+        locations={locations}
+      />
+
+      <ModalPersonOverview
+        closeModal={hidePersonOverviewModal}
+        days={days}
+        isVisible={isPersonOverviewModalVisible}
+        personId={selectedPersonId}
+        persons={persons}
+      />
     </Layout>
   );
 };

@@ -275,22 +275,22 @@ const createPdfFile = async (options = {}) => {
       }
     });
 
-    day.persons.forEach(({ fullName, id, phoneNumbers }) => {
+    day.persons.forEach(({ id }) => {
       if (Object.values(persons).find((p) => p.id === id)) {
         persons[id].counter += 1;
-        persons[id].phoneNumbers = [...persons[id].phoneNumbers, ...phoneNumbers];
+        persons[id].phoneNumbers = [...persons[id].phoneNumbers];
         if (day.timestamp > persons[id].lastUsage) {
           persons[id].lastUsage = day.timestamp;
         }
       } else {
-        const defaultPersonFullName = directoryPersons?.find((p) => p.id === id)?.fullName;
-        const defaultPersonPhoneNumbers = directoryPersons?.find((p) => p.id === id)?.phoneNumbers;
+        const defaultPersonFullName = directoryPersons?.find((p) => p.id === id)?.fullName || '';
+        const defaultPersonPhoneNumbers = directoryPersons?.find((p) => p.id === id)?.phoneNumbers || [];
 
         persons[id] = {
           counter: 1,
-          fullName: defaultPersonFullName || fullName,
+          fullName: defaultPersonFullName,
           id,
-          phoneNumbers: [...defaultPersonPhoneNumbers, ...phoneNumbers],
+          phoneNumbers: [...defaultPersonPhoneNumbers],
           lastUsage: day.timestamp,
         };
       }

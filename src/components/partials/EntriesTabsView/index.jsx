@@ -135,6 +135,8 @@ class EntriesTabsView extends React.Component {
     this.onPressMorePersonDelete = this.onPressMorePersonDelete.bind(this);
     this.onPressMorePersonEdit = this.onPressMorePersonEdit.bind(this);
     this.onPressMorePersonHide = this.onPressMorePersonHide.bind(this);
+    this.onPressLocationItem = this.onPressLocationItem.bind(this);
+    this.onPressPersonItem = this.onPressPersonItem.bind(this);
     this.onPressSearchIcon = this.onPressSearchIcon.bind(this);
     this.openModalMoreLocation = this.openModalMoreLocation.bind(this);
     this.openModalMorePerson = this.openModalMorePerson.bind(this);
@@ -405,6 +407,14 @@ class EntriesTabsView extends React.Component {
     const { personId } = this.state;
 
     this.deletePerson(personId);
+  }
+
+  onPressLocationItem(locationId) {
+    if (this.props.onPressLocationItem) this.props.onPressLocationItem(locationId);
+  }
+
+  onPressPersonItem(personId) {
+    if (this.props.onPressPersonItem) this.props.onPressPersonItem(personId);
   }
 
   setActiveTab(activeTab) {
@@ -761,6 +771,8 @@ class EntriesTabsView extends React.Component {
       hideTabBar,
       isDirectory,
       locations,
+      onPressLocationItem,
+      onPressPersonItem,
       orderByLastUsage,
       showCounter,
       showHiddenPersons,
@@ -857,6 +869,7 @@ class EntriesTabsView extends React.Component {
                   allowMore={allowMore || isDirectory}
                   allowSelection={allowSelection}
                   persons={filteredPersons}
+                  onPressItem={onPressPersonItem ? this.onPressPersonItem : null}
                   openItemMore={this.openModalMorePerson}
                   orderByLastUsage={orderByLastUsage}
                   selectedPersons={selectedPersons}
@@ -917,6 +930,7 @@ class EntriesTabsView extends React.Component {
                   allowSelection={allowSelection}
                   allowUpdate={allowUpdate}
                   locations={filteredLocations}
+                  onPressItem={onPressLocationItem ? this.onPressLocationItem : null}
                   openItemMore={this.openModalMoreLocation}
                   orderByLastUsage={orderByLastUsage}
                   selectedLocations={selectedLocations}

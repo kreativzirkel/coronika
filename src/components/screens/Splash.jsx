@@ -32,7 +32,7 @@ class Splash extends React.Component {
     const showWelcomeScreen = welcomeScreenShowKey !== showKey;
 
     (async () => {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 1500));
 
       if (showWelcomeScreen) {
         navigation.navigate('Welcome');

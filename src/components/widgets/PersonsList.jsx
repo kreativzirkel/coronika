@@ -16,6 +16,7 @@ class PersonListItemClass extends React.Component {
   constructor(props) {
     super(props);
 
+    this.onPress = this.onPress.bind(this);
     this.openMore = this.openMore.bind(this);
     this.PersonItemComponent = this.PersonItemComponent.bind(this);
     this.toggleSelection = this.toggleSelection.bind(this);
@@ -94,6 +95,10 @@ class PersonListItemClass extends React.Component {
       fontSize: this.props.vw(6),
     },
   });
+
+  onPress() {
+    if (this.props.onPress) this.props.onPress(this.props.id);
+  }
 
   openMore() {
     if (this.props.onPressMore)
@@ -180,12 +185,16 @@ class PersonListItemClass extends React.Component {
   }
 
   render() {
-    const { allowSelection } = this.props;
+    const { allowSelection, onPress } = this.props;
 
     const PersonItem = this.PersonItemComponent;
 
     return allowSelection ? (
       <TouchableOpacity onPress={this.toggleSelection}>
+        <PersonItem />
+      </TouchableOpacity>
+    ) : onPress ? (
+      <TouchableOpacity onPress={this.onPress}>
         <PersonItem />
       </TouchableOpacity>
     ) : (
@@ -262,6 +271,7 @@ class PersonsList extends React.Component {
     };
 
     this.getItemLayout = this.getItemLayout.bind(this);
+    this.onPressPerson = this.onPressPerson.bind(this);
     this.onPressMorePerson = this.onPressMorePerson.bind(this);
     this.renderItem = this.renderItem.bind(this);
     this.toggleSelection = this.toggleSelection.bind(this);
@@ -302,6 +312,10 @@ class PersonsList extends React.Component {
     },
   });
 
+  onPressPerson(personId) {
+    if (this.props.onPressItem) this.props.onPressItem(personId);
+  }
+
   onPressMorePerson(personId, personDisplayName, personName, personPhone, personMail, personRecordId) {
     if (this.props.openItemMore)
       this.props.openItemMore(personId, personDisplayName, personName, personPhone, personMail, personRecordId);
@@ -318,7 +332,7 @@ class PersonsList extends React.Component {
       return <ListItemSeparator />;
     }
 
-    const { allowMore, allowSelection, selectedPersons, showCounter } = this.props;
+    const { allowMore, allowSelection, onPressItem, selectedPersons, showCounter } = this.props;
 
     return (
       <PersonsListItem
@@ -330,6 +344,7 @@ class PersonsList extends React.Component {
         fullNameDisplay={fullNameDisplay}
         id={id}
         isPersonSelected={allowSelection && selectedPersons.includes(id)}
+        onPress={onPressItem ? this.onPressPerson : null}
         onPressMore={this.onPressMorePerson}
         phoneNumbers={phoneNumbers}
         recordID={recordID}

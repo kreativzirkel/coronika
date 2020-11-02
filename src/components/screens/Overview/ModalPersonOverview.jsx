@@ -1,7 +1,6 @@
-import UilCheckCircle from '@iconscout/react-native-unicons/icons/uil-check-circle';
-import UilCircle from '@iconscout/react-native-unicons/icons/uil-circle';
 import UilTimes from '@iconscout/react-native-unicons/icons/uil-times';
 import deepEqual from 'fast-deep-equal';
+import moment from 'moment';
 import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Modal from 'react-native-modal';
@@ -10,22 +9,20 @@ import withI18n from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 
-class PersonsListItemClass extends React.Component {
+class PersonOverviewListItemClass extends React.Component {
   constructor(props) {
     super(props);
-
-    this.onPress = this.onPress.bind(this);
   }
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
-    return nextProps.isSelected !== this.props.isSelected;
+    return false;
   }
 
   styles = StyleSheet.create({
-    person: {
-      alignItems: 'center',
+    day: {
       borderRadius: this.props.vw(2.3),
       flexDirection: 'row',
+      justifyContent: 'space-between',
       marginLeft: this.props.vw(2.5),
       marginRight: this.props.vw(2.5),
       marginTop: this.props.vw(2.3),
@@ -33,52 +30,84 @@ class PersonsListItemClass extends React.Component {
       paddingBottom: this.props.vw(3.8),
       paddingTop: this.props.vw(3.8),
     },
-    personText: {
+    dayText: {
       fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.2),
-      marginLeft: this.props.vw(3),
+    },
+    dayTextCaption: {
+      fontFamily: this.props.fontFamilyRegular,
+      fontSize: this.props.vw(3),
+    },
+    dayTextWrapper: {
+      alignItems: 'center',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      flex: 1,
     },
   });
 
-  onPress() {
-    if (this.props.onPress) this.props.onPress(this.props.id);
-  }
-
   render() {
-    const { colors, isSelected, personName, vw } = this.props;
+    const { colors, timestamp, __ } = this.props;
+
+    const currentDay = moment(timestamp);
+    const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
+    const isToday = currentDay.diff(today) === 0;
 
     return (
-      <TouchableOpacity onPress={this.onPress}>
-        <View style={{ ...this.styles.person, backgroundColor: colors.SECONDARY }}>
-          {isSelected ? (
-            <UilCheckCircle size={vw(5.5)} color={COLOR_PRIMARY} />
-          ) : (
-            <UilCircle size={vw(5.5)} color={colors.TEXT} />
-          )}
-          <Text numberOfLines={1} style={{ ...this.styles.personText, color: colors.TEXT }}>
-            {personName}
+      <View style={{ ...this.styles.day, backgroundColor: colors.SECONDARY }}>
+        <View style={this.styles.dayTextWrapper}>
+          <Text numberOfLines={1} style={{ ...this.styles.dayText, color: colors.TEXT }}>
+            {currentDay.format('dd')} {currentDay.format('DD.MMM')}
+          </Text>
+          <Text numberOfLines={1} style={{ ...this.styles.dayTextCaption, color: colors.TEXT }}>
+            {isToday ? __('today') : currentDay.from(today)}
           </Text>
         </View>
-      </TouchableOpacity>
+      </View>
     );
   }
 }
 
-const PersonsListItem = withColorScheme(withI18n(withViewportUnits(PersonsListItemClass)));
+const PersonOverviewListItem = withColorScheme(withI18n(withViewportUnits(PersonOverviewListItemClass)));
 
-class ModalHidePersons extends React.Component {
+const getPersonTimestamps = (days, personId) => {
+  return Object.keys(days)
+    .filter((timestamp) => days[timestamp].persons.find(({ id }) => id === personId))
+    .map((key) => parseInt(key, 10))
+    .sort((a, b) => {
+      if (a > b) return -1;
+      if (a < b) return 1;
+
+      return 0;
+    });
+};
+
+const getPersonName = (persons, personId) => {
+  const person = persons.find(({ id }) => id === personId);
+  if (person) {
+    return person.recordID !== undefined && !!person.fullNameDisplay && person.fullNameDisplay.trim().length > 0
+      ? person.fullNameDisplay
+      : person.fullName;
+  }
+
+  return '';
+};
+
+class ModalPersonOverview extends React.Component {
   constructor(props) {
     super(props);
 
+    const { days, personId, persons } = this.props;
+
     this.state = {
-      persons: this.props.persons,
+      days,
+      daysList: getPersonTimestamps(days, personId),
+      personId,
+      personName: getPersonName(persons, personId),
       renderedBefore: false,
-      selectedPersons: this.props.persons.filter(({ hidden }) => hidden).map(({ id }) => id),
     };
 
     this.closeModal = this.closeModal.bind(this);
-    this.onPressConfirmSelection = this.onPressConfirmSelection.bind(this);
-    this.onPressPersonsListItem = this.onPressPersonsListItem.bind(this);
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -88,11 +117,13 @@ class ModalHidePersons extends React.Component {
       update = { ...update, renderedBefore: true };
     }
 
-    if (!deepEqual(props.persons, state.persons)) {
+    if (props.personId !== state.personId || !deepEqual(props.days, state.days)) {
       update = {
         ...update,
-        persons: props.persons,
-        selectedPersons: props.persons.filter(({ hidden }) => hidden).map(({ id }) => id),
+        days: props.days,
+        daysList: getPersonTimestamps(props.days, props.personId),
+        personId: props.personId,
+        personName: getPersonName(props.persons, props.personId),
       };
     }
 
@@ -103,14 +134,14 @@ class ModalHidePersons extends React.Component {
     return (
       nextProps.isVisible !== this.props.isVisible ||
       nextState.renderedBefore !== this.state.renderedBefore ||
-      nextState.selectedPersons.length !== this.state.selectedPersons.length ||
-      !deepEqual(nextProps.persons, this.state.persons)
+      nextProps.personId !== this.props.personId ||
+      !deepEqual(nextProps.days, this.state.days)
     );
   }
 
   styles = StyleSheet.create({
     personsList: {
-      height: this.props.vh(60),
+      height: this.props.vh(35),
     },
     modal: {
       justifyContent: 'flex-end',
@@ -162,26 +193,17 @@ class ModalHidePersons extends React.Component {
     if (this.props.closeModal) this.props.closeModal();
   }
 
-  personsListGetItemKey({ id }) {
-    return `persons-list-item-${id}`;
+  personOverviewListGetItemKey(timestamp) {
+    return `person-overview-list-item-${timestamp}`;
   }
 
-  onPressConfirmSelection() {
-    if (this.props.confirmSelection) this.props.confirmSelection(this.state.selectedPersons);
-  }
-
-  onPressPersonsListItem(personId) {
-    const { selectedPersons } = this.state;
-    if (selectedPersons.includes(personId)) {
-      this.setState({ selectedPersons: selectedPersons.filter((id) => id !== personId) });
-    } else {
-      this.setState({ selectedPersons: [...selectedPersons, personId] });
-    }
+  personOverviewRenderItem({ item }) {
+    return <PersonOverviewListItem timestamp={item} />;
   }
 
   render() {
-    const { colors, persons, isVisible, vw, __ } = this.props;
-    const { renderedBefore, selectedPersons } = this.state;
+    const { colors, isVisible, vw } = this.props;
+    const { daysList, personName, renderedBefore } = this.state;
 
     if (!renderedBefore && !isVisible) return null;
 
@@ -214,7 +236,7 @@ class ModalHidePersons extends React.Component {
         <View style={styles.modalContent}>
           <View style={styles.modalHeader}>
             <Text numberOfLines={1} style={styles.modalHeaderText}>
-              {__('directory-screen.modals.hide-persons.headline')}
+              {personName}
             </Text>
             <TouchableOpacity onPress={this.closeModal} style={styles.modalHeaderIcon}>
               <UilTimes size={vw(8)} color={COLOR_PRIMARY} />
@@ -222,38 +244,18 @@ class ModalHidePersons extends React.Component {
           </View>
 
           <FlatList
-            data={persons}
+            data={daysList}
             initialNumToRender={10}
-            keyExtractor={this.personsListGetItemKey}
+            keyExtractor={this.personOverviewListGetItemKey}
             removeClippedSubviews={true}
-            renderItem={({ item: { id, fullName, fullNameDisplay, recordID } }) => {
-              const personName =
-                recordID !== undefined && !!fullNameDisplay && fullNameDisplay.trim().length > 0
-                  ? fullNameDisplay
-                  : fullName;
-
-              return (
-                <PersonsListItem
-                  id={id}
-                  onPress={this.onPressPersonsListItem}
-                  personName={personName}
-                  isSelected={selectedPersons.includes(id)}
-                />
-              );
-            }}
+            renderItem={this.personOverviewRenderItem}
             style={styles.personsList}
             windowSize={5}
           />
-
-          <TouchableOpacity onPress={this.onPressConfirmSelection}>
-            <View style={styles.modalButton}>
-              <Text style={styles.modalButtonText}>{__('directory-screen.modals.hide-persons.button.save')}</Text>
-            </View>
-          </TouchableOpacity>
         </View>
       </Modal>
     );
   }
 }
 
-export default withColorScheme(withI18n(withViewportUnits(ModalHidePersons)));
+export default withColorScheme(withI18n(withViewportUnits(ModalPersonOverview)));

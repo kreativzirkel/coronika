@@ -16,6 +16,7 @@ class LocationsListItemClass extends React.Component {
   constructor(props) {
     super(props);
 
+    this.onPress = this.onPress.bind(this);
     this.openMore = this.openMore.bind(this);
     this.toggleSelection = this.toggleSelection.bind(this);
   }
@@ -29,6 +30,10 @@ class LocationsListItemClass extends React.Component {
       this.props.timestamp !== nextProps.timestamp ||
       this.props.timestampEnd !== nextProps.timestampEnd
     );
+  }
+
+  onPress() {
+    if (this.props.onPress) this.props.onPress(this.props.id);
   }
 
   openMore() {
@@ -135,6 +140,7 @@ class LocationsListItemClass extends React.Component {
       counter,
       description,
       isLocationSelected,
+      onPress,
       selectedLocationDescription,
       selectedLocationTime,
       showCounter,
@@ -233,6 +239,10 @@ class LocationsListItemClass extends React.Component {
       <TouchableOpacity onPress={this.toggleSelection}>
         <LocationItem />
       </TouchableOpacity>
+    ) : onPress ? (
+      <TouchableOpacity onPress={this.onPress}>
+        <LocationItem />
+      </TouchableOpacity>
     ) : (
       <LocationItem />
     );
@@ -299,6 +309,7 @@ class LocationsList extends React.Component {
       selectedLocationsLength: this.props.selectedLocations.length,
     };
 
+    this.onPressLocation = this.onPressLocation.bind(this);
     this.onPressMoreLocation = this.onPressMoreLocation.bind(this);
     this.renderItem = this.renderItem.bind(this);
     this.toggleSelection = this.toggleSelection.bind(this);
@@ -337,6 +348,10 @@ class LocationsList extends React.Component {
     },
   });
 
+  onPressLocation(locationId) {
+    if (this.props.onPressItem) this.props.onPressItem(locationId);
+  }
+
   onPressMoreLocation(
     locationId,
     locationTitle,
@@ -365,7 +380,7 @@ class LocationsList extends React.Component {
       return <ListItemSeparator />;
     }
 
-    const { allowDelete, allowSelection, allowUpdate, selectedLocations, showCounter } = this.props;
+    const { allowDelete, allowSelection, allowUpdate, onPressItem, selectedLocations, showCounter } = this.props;
     const selectedLocation = allowSelection ? selectedLocations.find(({ id: locationId }) => locationId === id) : null;
     const isLocationSelected = allowSelection && selectedLocation;
     let selectedLocationDescription = '';
@@ -388,6 +403,7 @@ class LocationsList extends React.Component {
         description={description}
         id={id}
         isLocationSelected={isLocationSelected}
+        onPress={onPressItem ? this.onPressLocation : null}
         onPressMore={this.onPressMoreLocation}
         phone={phone}
         selectedLocationDescription={selectedLocationDescription}
