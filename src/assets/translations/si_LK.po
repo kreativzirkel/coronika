@@ -27,88 +27,88 @@ msgstr ""
 msgid "navigation.tips.label"
 msgstr "ඉඟි"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1005
-#: src/components/partials/EntriesTabsView/index.jsx:1027
+#: src/components/partials/EntriesTabsView/index.jsx:1013
+#: src/components/partials/EntriesTabsView/index.jsx:1035
 msgid "entries.modals.update-location.button"
 msgstr "සුරකින්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1006
+#: src/components/partials/EntriesTabsView/index.jsx:1014
 msgid "entries.modals.new-location.button"
 msgstr "එකතු කරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1010
-#: src/components/partials/EntriesTabsView/index.jsx:1034
+#: src/components/partials/EntriesTabsView/index.jsx:1018
+#: src/components/partials/EntriesTabsView/index.jsx:1042
 msgid "entries.modals.update-location.headline"
 msgstr "ස්ථානය සංස්කරණය කරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1011
+#: src/components/partials/EntriesTabsView/index.jsx:1019
 msgid "entries.modals.new-location.headline"
 msgstr "නව ස්ථානය"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1028
+#: src/components/partials/EntriesTabsView/index.jsx:1036
 msgid "entries.modals.select-location.button"
 msgstr "තෝරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1035
+#: src/components/partials/EntriesTabsView/index.jsx:1043
 msgid "entries.modals.select-location.headline"
 msgstr "ස්ථානය තෝරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:843
-#: src/components/screens/Export/createPdfFile.js:347
+#: src/components/partials/EntriesTabsView/index.jsx:851
+#: src/components/screens/Export/createPdfFile.js:346
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "පුද්ගලයන්"
 
-#: src/components/partials/EntriesTabsView/index.jsx:851
-#: src/components/screens/Export/createPdfFile.js:439
+#: src/components/partials/EntriesTabsView/index.jsx:859
+#: src/components/screens/Export/createPdfFile.js:438
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "ස්ථාන"
 
-#: src/components/partials/EntriesTabsView/index.jsx:863
+#: src/components/partials/EntriesTabsView/index.jsx:871
 msgid "entries.persons.list.new"
 msgstr "නව පුද්ගලයෙක්"
 
-#: src/components/partials/EntriesTabsView/index.jsx:885
-#: src/components/partials/EntriesTabsView/index.jsx:945
+#: src/components/partials/EntriesTabsView/index.jsx:893
+#: src/components/partials/EntriesTabsView/index.jsx:953
 msgid "entries.search.list.empty"
 msgstr "ඔබගේ සෙවුමෙන් කිසිවක් සොයාගත නොහැකි විය."
 
-#: src/components/partials/EntriesTabsView/index.jsx:896
+#: src/components/partials/EntriesTabsView/index.jsx:904
 msgid "entries.persons.list.empty"
 msgstr ""
 "ඔබ තවම පුද්ගලයෙකු නිර්මාණය කර නැත. වහාම ආරම්භ කිරීම සඳහා, ඔබට ඔබගේ දුරකථන පොතෙන් "
 "පුද්ගලයින් ආනයනය කළ හැකිය."
 
-#: src/components/partials/EntriesTabsView/index.jsx:905
+#: src/components/partials/EntriesTabsView/index.jsx:913
 msgid "entries.persons.list.import.button"
 msgstr "දැන් ආයාත කරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:923
+#: src/components/partials/EntriesTabsView/index.jsx:931
 msgid "entries.locations.list.new"
 msgstr "නව ස්ථානය"
 
-#: src/components/partials/EntriesTabsView/index.jsx:949
+#: src/components/partials/EntriesTabsView/index.jsx:957
 msgid "entries.locations.list.empty"
 msgstr "ඔබ තවම ස්ථානයක් නිර්මාණය කර නැත. දැන් ආරම්භ කර ඔබේ පළමු ස්ථානය සාදන්න."
 
-#: src/components/partials/EntriesTabsView/index.jsx:967
+#: src/components/partials/EntriesTabsView/index.jsx:975
 msgid "entries.selection.add"
 msgstr "තේරීම එක් කරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:982
+#: src/components/partials/EntriesTabsView/index.jsx:990
 msgid "entries.modals.update-person.button"
 msgstr "සුරකින්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:982
+#: src/components/partials/EntriesTabsView/index.jsx:990
 msgid "entries.modals.new-person.button"
 msgstr "එකතු කරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:985
+#: src/components/partials/EntriesTabsView/index.jsx:993
 msgid "entries.modals.update-person.headline"
 msgstr "පුද්ගල විස්තර සංස්කරණය කරන්න"
 
-#: src/components/partials/EntriesTabsView/index.jsx:985
+#: src/components/partials/EntriesTabsView/index.jsx:993
 msgid "entries.modals.new-person.headline"
 msgstr "නව පුද්ගලයෙක්"
 
@@ -323,7 +323,7 @@ msgstr "පිටුව"
 msgid "export-screen.header.headline"
 msgstr "අපනයන"
 
-#: src/components/screens/Export/createPdfFile.js:336
+#: src/components/screens/Export/createPdfFile.js:335
 msgid "quantity"
 msgstr "ප්‍රමාණය"
 

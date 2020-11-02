@@ -27,90 +27,90 @@ msgstr "Übersicht"
 msgid "navigation.tips.label"
 msgstr "Tipps"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1005
-#: src/components/partials/EntriesTabsView/index.jsx:1027
+#: src/components/partials/EntriesTabsView/index.jsx:1013
+#: src/components/partials/EntriesTabsView/index.jsx:1035
 msgid "entries.modals.update-location.button"
 msgstr "Speichern"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1006
+#: src/components/partials/EntriesTabsView/index.jsx:1014
 msgid "entries.modals.new-location.button"
 msgstr "Hinzufügen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1010
-#: src/components/partials/EntriesTabsView/index.jsx:1034
+#: src/components/partials/EntriesTabsView/index.jsx:1018
+#: src/components/partials/EntriesTabsView/index.jsx:1042
 msgid "entries.modals.update-location.headline"
 msgstr "Ort bearbeiten"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1011
+#: src/components/partials/EntriesTabsView/index.jsx:1019
 msgid "entries.modals.new-location.headline"
 msgstr "Neuer Ort"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1028
+#: src/components/partials/EntriesTabsView/index.jsx:1036
 msgid "entries.modals.select-location.button"
 msgstr "Auswählen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1035
+#: src/components/partials/EntriesTabsView/index.jsx:1043
 msgid "entries.modals.select-location.headline"
 msgstr "Ort auswählen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:843
-#: src/components/screens/Export/createPdfFile.js:347
+#: src/components/partials/EntriesTabsView/index.jsx:851
+#: src/components/screens/Export/createPdfFile.js:346
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "Personen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:851
-#: src/components/screens/Export/createPdfFile.js:439
+#: src/components/partials/EntriesTabsView/index.jsx:859
+#: src/components/screens/Export/createPdfFile.js:438
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "Orte"
 
-#: src/components/partials/EntriesTabsView/index.jsx:863
+#: src/components/partials/EntriesTabsView/index.jsx:871
 msgid "entries.persons.list.new"
 msgstr "Neue Person anlegen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:885
-#: src/components/partials/EntriesTabsView/index.jsx:945
+#: src/components/partials/EntriesTabsView/index.jsx:893
+#: src/components/partials/EntriesTabsView/index.jsx:953
 msgid "entries.search.list.empty"
 msgstr "Zu deiner Suche konnte nichts gefunden werden."
 
-#: src/components/partials/EntriesTabsView/index.jsx:896
+#: src/components/partials/EntriesTabsView/index.jsx:904
 msgid "entries.persons.list.empty"
 msgstr ""
 "Du hast noch keine Person angelegt. Um direkt loszulegen, kannst du Personen "
 "aus deinem Telefonbuch importieren."
 
-#: src/components/partials/EntriesTabsView/index.jsx:905
+#: src/components/partials/EntriesTabsView/index.jsx:913
 msgid "entries.persons.list.import.button"
 msgstr "Jetzt importieren"
 
-#: src/components/partials/EntriesTabsView/index.jsx:923
+#: src/components/partials/EntriesTabsView/index.jsx:931
 msgid "entries.locations.list.new"
 msgstr "Neuen Ort anlegen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:949
+#: src/components/partials/EntriesTabsView/index.jsx:957
 msgid "entries.locations.list.empty"
 msgstr ""
 "Du hast noch keinen Ort angelegt. Beginne jetzt und erstelle deinen ersten "
 "Ort."
 
-#: src/components/partials/EntriesTabsView/index.jsx:967
+#: src/components/partials/EntriesTabsView/index.jsx:975
 msgid "entries.selection.add"
 msgstr "Auswahl hinzufügen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:982
+#: src/components/partials/EntriesTabsView/index.jsx:990
 msgid "entries.modals.update-person.button"
 msgstr "Speichern"
 
-#: src/components/partials/EntriesTabsView/index.jsx:982
+#: src/components/partials/EntriesTabsView/index.jsx:990
 msgid "entries.modals.new-person.button"
 msgstr "Hinzufügen"
 
-#: src/components/partials/EntriesTabsView/index.jsx:985
+#: src/components/partials/EntriesTabsView/index.jsx:993
 msgid "entries.modals.update-person.headline"
 msgstr "Person bearbeiten"
 
-#: src/components/partials/EntriesTabsView/index.jsx:985
+#: src/components/partials/EntriesTabsView/index.jsx:993
 msgid "entries.modals.new-person.headline"
 msgstr "Neue Person"
 
@@ -333,7 +333,7 @@ msgstr "Seite"
 msgid "export-screen.header.headline"
 msgstr "Export"
 
-#: src/components/screens/Export/createPdfFile.js:336
+#: src/components/screens/Export/createPdfFile.js:335
 msgid "quantity"
 msgstr "Anzahl"
 
