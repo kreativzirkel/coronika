@@ -190,6 +190,8 @@ class EntriesTabsView extends React.Component {
   }
 
   async addNewPerson() {
+    Keyboard.dismiss();
+
     const {
       store: { dispatch, getState },
     } = this.context;
@@ -222,6 +224,8 @@ class EntriesTabsView extends React.Component {
   }
 
   async addNewLocation() {
+    Keyboard.dismiss();
+
     const {
       store: { dispatch, getState },
     } = this.context;
@@ -600,6 +604,8 @@ class EntriesTabsView extends React.Component {
   }
 
   updatePerson() {
+    Keyboard.dismiss();
+
     const {
       store: { dispatch },
     } = this.context;
@@ -648,6 +654,8 @@ class EntriesTabsView extends React.Component {
   }
 
   updateLocation() {
+    Keyboard.dismiss();
+
     const {
       store: { dispatch },
     } = this.context;

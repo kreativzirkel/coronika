@@ -1,4 +1,4 @@
-import { Alert, PermissionsAndroid, Platform } from 'react-native';
+import { Alert, Keyboard, PermissionsAndroid, Platform } from 'react-native';
 import RNFS from 'react-native-fs';
 import Share from 'react-native-share';
 import connect from 'react-redux/lib/connect/connect';
@@ -144,6 +144,7 @@ const shareExportFilePdf = () => async (dispatch, getState) => {
 };
 
 const createExport = () => async (dispatch, getState) => {
+  Keyboard.dismiss();
   dispatch(enableExporting());
   dispatch(hideExportRequestUserDataModal());
   dispatch(resetExportFilename());
