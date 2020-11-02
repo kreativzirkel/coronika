@@ -22,7 +22,7 @@ const TipAmIInfected = ({ navigation, __ }) => {
 
       <Tip
         headline={__('tips.am-i-infected.headline')}
-        lastUpdated={1586174400000}
+        lastUpdated={1604188800000}
         steps={steps}
         sources={sources}
         texts={[__('tips.am-i-infected.text')]}

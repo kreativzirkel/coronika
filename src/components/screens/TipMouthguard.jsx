@@ -27,7 +27,7 @@ const TipMouthguard = ({ navigation, __ }) => {
 
       <Tip
         headline={__('tips.mouthguard.headline')}
-        lastUpdated={1584489600000}
+        lastUpdated={1604188800000}
         steps={steps}
         stepsIntroText={__('tips.mouthguard.list.intro')}
         sources={sources}

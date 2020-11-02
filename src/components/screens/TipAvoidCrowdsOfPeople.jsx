@@ -26,7 +26,7 @@ const TipAvoidCrowdsOfPeople = ({ navigation, __ }) => {
 
       <Tip
         headline={__('tips.avoid-crowds-of-people.headline')}
-        lastUpdated={1584489600000}
+        lastUpdated={1604188800000}
         steps={steps}
         sources={sources}
         texts={[__('tips.avoid-crowds-of-people.text')]}

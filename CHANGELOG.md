@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.7.0
+
+- People can be hidden to reduce the list
+- Detailed information on individual entries can be called up in the overview
+- Added button for quick creation of entries
+- Days can now be changed simply by clicking on the date
+- Visited locations are displayed chronologically on a daily level
+- E-mail addresses can be added to persons
+- E-mail addresses are taken into account when importing persons
+- The displayed name of imported persons can be customized
+- Added link to frequently asked questions to the menu
+- CSV export added (compatibility to SORMAS)
+- Bug fixes and improvements
+
 ## 1.6.1
 
 - Fixed push notifications for android

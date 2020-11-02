@@ -23,7 +23,7 @@ const TipNotFeelingWell = ({ navigation, __ }) => {
 
       <Tip
         headline={__('tips.not-feeling-well.headline')}
-        lastUpdated={1586174400000}
+        lastUpdated={1604188800000}
         steps={steps}
         stepsIntroText={__('tips.not-feeling-well.list.intro')}
         sources={sources}

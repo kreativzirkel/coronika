@@ -32,7 +32,7 @@ const TipCoughingSneezing = ({ navigation, __ }) => {
 
       <Tip
         headline={__('tips.coughing-sneezing.headline')}
-        lastUpdated={1584489600000}
+        lastUpdated={1604188800000}
         steps={steps}
         sources={sources}
         texts={[__('tips.coughing-sneezing.text')]}
