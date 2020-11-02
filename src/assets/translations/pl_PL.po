@@ -27,92 +27,92 @@ msgstr ""
 msgid "navigation.tips.label"
 msgstr "Porady"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1013
-#: src/components/partials/EntriesTabsView/index.jsx:991
+#: src/components/partials/EntriesTabsView/index.jsx:1005
+#: src/components/partials/EntriesTabsView/index.jsx:1027
 msgid "entries.modals.update-location.button"
 msgstr "Zapisz"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1014
-msgid "entries.modals.select-location.button"
-msgstr "Wybierz"
+#: src/components/partials/EntriesTabsView/index.jsx:1006
+msgid "entries.modals.new-location.button"
+msgstr "Dodaj"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1020
-#: src/components/partials/EntriesTabsView/index.jsx:996
+#: src/components/partials/EntriesTabsView/index.jsx:1010
+#: src/components/partials/EntriesTabsView/index.jsx:1034
 msgid "entries.modals.update-location.headline"
 msgstr "Miejsce edycji"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1021
+#: src/components/partials/EntriesTabsView/index.jsx:1011
+msgid "entries.modals.new-location.headline"
+msgstr "Nowa lokalizacja"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1028
+msgid "entries.modals.select-location.button"
+msgstr "Wybierz"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1035
 msgid "entries.modals.select-location.headline"
 msgstr "Wybierz lokalizację"
 
-#: src/components/partials/EntriesTabsView/index.jsx:831
-#: src/components/screens/Export/createPdfFile.js:317
+#: src/components/partials/EntriesTabsView/index.jsx:843
+#: src/components/screens/Export/createPdfFile.js:347
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "osoby"
 
-#: src/components/partials/EntriesTabsView/index.jsx:839
-#: src/components/screens/Export/createPdfFile.js:409
+#: src/components/partials/EntriesTabsView/index.jsx:851
+#: src/components/screens/Export/createPdfFile.js:439
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "lokalizacje"
 
-#: src/components/partials/EntriesTabsView/index.jsx:851
+#: src/components/partials/EntriesTabsView/index.jsx:863
 msgid "entries.persons.list.new"
 msgstr "Nowa osoba"
 
-#: src/components/partials/EntriesTabsView/index.jsx:872
-#: src/components/partials/EntriesTabsView/index.jsx:931
+#: src/components/partials/EntriesTabsView/index.jsx:885
+#: src/components/partials/EntriesTabsView/index.jsx:945
 msgid "entries.search.list.empty"
 msgstr "Nic nie znaleziono na twoich poszukiwaniach."
 
-#: src/components/partials/EntriesTabsView/index.jsx:883
+#: src/components/partials/EntriesTabsView/index.jsx:896
 msgid "entries.persons.list.empty"
 msgstr ""
 "Jeszcze nie nakładeś osobe. Aby zacząć od razu, możesz importować osoby z "
 "książki telefonicznej."
 
-#: src/components/partials/EntriesTabsView/index.jsx:892
+#: src/components/partials/EntriesTabsView/index.jsx:905
 msgid "entries.persons.list.import.button"
 msgstr "Importuj teraz"
 
-#: src/components/partials/EntriesTabsView/index.jsx:910
+#: src/components/partials/EntriesTabsView/index.jsx:923
 msgid "entries.locations.list.new"
 msgstr "Nowa lokalizacja"
 
-#: src/components/partials/EntriesTabsView/index.jsx:935
+#: src/components/partials/EntriesTabsView/index.jsx:949
 msgid "entries.locations.list.empty"
 msgstr ""
 "Nie stworzyłeś jeszcze lokalizacji. Zacznij teraz i stwórz swoją pierwszą "
 "lokalizację."
 
-#: src/components/partials/EntriesTabsView/index.jsx:953
+#: src/components/partials/EntriesTabsView/index.jsx:967
 msgid "entries.selection.add"
 msgstr "Dodaj wybór"
 
-#: src/components/partials/EntriesTabsView/index.jsx:968
+#: src/components/partials/EntriesTabsView/index.jsx:982
 msgid "entries.modals.update-person.button"
 msgstr "Zapisz"
 
-#: src/components/partials/EntriesTabsView/index.jsx:968
+#: src/components/partials/EntriesTabsView/index.jsx:982
 msgid "entries.modals.new-person.button"
 msgstr "Dodaj"
 
-#: src/components/partials/EntriesTabsView/index.jsx:971
+#: src/components/partials/EntriesTabsView/index.jsx:985
 msgid "entries.modals.update-person.headline"
 msgstr "osoba opracować"
 
-#: src/components/partials/EntriesTabsView/index.jsx:971
+#: src/components/partials/EntriesTabsView/index.jsx:985
 msgid "entries.modals.new-person.headline"
 msgstr "Nowa osoba"
-
-#: src/components/partials/EntriesTabsView/index.jsx:992
-msgid "entries.modals.new-location.button"
-msgstr "Dodaj"
-
-#: src/components/partials/EntriesTabsView/index.jsx:997
-msgid "entries.modals.new-location.headline"
-msgstr "Nowa lokalizacja"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:259
 msgid "entries.modals.new-person.placeholder.name"
@@ -156,17 +156,17 @@ msgstr "Anuluj"
 msgid "Confirm"
 msgstr "Potwierdzić"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:712
-#: src/components/partials/EntriesTabsView/Modals.jsx:844
+#: src/components/partials/EntriesTabsView/Modals.jsx:727
+#: src/components/partials/EntriesTabsView/Modals.jsx:860
 msgid "entries.modals.more.edit"
 msgstr "edytować"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:718
-#: src/components/partials/EntriesTabsView/Modals.jsx:863
+#: src/components/partials/EntriesTabsView/Modals.jsx:734
+#: src/components/partials/EntriesTabsView/Modals.jsx:879
 msgid "entries.modals.more.delete"
 msgstr "usunąć"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:854
+#: src/components/partials/EntriesTabsView/Modals.jsx:870
 msgid "entries.modals.more.hide"
 msgstr ""
 
@@ -221,7 +221,7 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Zacznij teraz"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:195
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:193
 msgid "about-screen.header.headline"
 msgstr "O Coronika"
 
@@ -234,8 +234,8 @@ msgid "dashboard-screen.list.load-more"
 msgstr "Załaduj więcej"
 
 #: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:222
-#: src/components/screens/Overview/ui.jsx:107
+#: src/components/screens/Menu.jsx:220
+#: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
 msgstr "Menu"
@@ -278,12 +278,12 @@ msgstr ""
 "Pozwól aplikacji na dostęp do kontaktów w ustawieniach prywatności "
 "urządzenia."
 
-#: src/components/screens/Directory/ModalHidePersons.jsx:206
+#: src/components/screens/Directory/ModalHidePersons.jsx:217
 #: src/components/screens/Directory/ui.jsx:189
 msgid "directory-screen.modals.hide-persons.headline"
 msgstr ""
 
-#: src/components/screens/Directory/ModalHidePersons.jsx:239
+#: src/components/screens/Directory/ModalHidePersons.jsx:250
 msgid "directory-screen.modals.hide-persons.button.save"
 msgstr ""
 
@@ -316,98 +316,126 @@ msgstr "Importowanie..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Import teraz"
 
-#: src/components/screens/Export/createPdfFile.js:123
-msgid "page"
-msgstr "Strona"
-
-#: src/components/screens/Export/createPdfFile.js:169
-#: src/components/screens/Export/createPdfFile.js:172
-#: src/components/screens/Export/createPdfFile.js:598
-#: src/components/screens/Export/createPdfFile.js:65
-#: src/components/screens/Export/logic.js:45
-#: src/components/screens/Export/logic.js:95
-#: src/components/screens/Export/ui.jsx:154
-msgid "export-screen.header.headline"
-msgstr "Eksportuj"
-
-#: src/components/screens/Export/createPdfFile.js:306
-msgid "quantity"
-msgstr "Ilość"
-
-#: src/components/screens/Export/createPdfFile.js:95
+#: src/components/screens/Export/createPdfFile.js:106
 msgid "export-screen.footer.hint-entries-possibly-irrelevant"
 msgstr "może nie mieć znaczenia, ponieważ ten wpis jest starszy niż 14 dni."
 
-#: src/components/screens/Export/logic.js:58
+#: src/components/screens/Export/createPdfFile.js:134
+msgid "page"
+msgstr "Strona"
+
+#: src/components/screens/Export/createPdfFile.js:188
+#: src/components/screens/Export/createPdfFile.js:191
+#: src/components/screens/Export/createPdfFile.js:74
+#: src/components/screens/Export/logic.js:116
+#: src/components/screens/Export/logic.js:51
+#: src/components/screens/Export/ui.jsx:191
+msgid "export-screen.header.headline"
+msgstr "Eksportuj"
+
+#: src/components/screens/Export/createPdfFile.js:336
+msgid "quantity"
+msgstr "Ilość"
+
+#: src/components/screens/Export/logic.js:64
 msgid "export-screen.alerts.save-file.success.title"
 msgstr ""
 
-#: src/components/screens/Export/logic.js:59
+#: src/components/screens/Export/logic.js:65
 msgid "export-screen.alerts.save-file.success.message"
 msgstr "Plik został pomyślnie zapisany w katalogu pobierania urządzenia."
 
-#: src/components/screens/Export/logic.js:64
+#: src/components/screens/Export/logic.js:70
 msgid "export-screen.alerts.save-file.error.title"
 msgstr "Błąd"
 
-#: src/components/screens/Export/logic.js:65
+#: src/components/screens/Export/logic.js:71
 msgid "export-screen.alerts.save-file.error.message"
 msgstr ""
 "Podczas zapisywania pliku w katalogu pobierania urządzenia wystąpił błąd."
 
-#: src/components/screens/Export/logic.js:70
+#: src/components/screens/Export/logic.js:76
 msgid "export-screen.alerts.save-file.missing-permission.title"
 msgstr "Brakujące zezwolenie"
 
-#: src/components/screens/Export/logic.js:71
+#: src/components/screens/Export/logic.js:77
 msgid "export-screen.alerts.save-file.missing-permission.message"
 msgstr ""
 "Pozwól aplikacji na dostęp do pamięci w ustawieniach prywatności urządzenia."
 
-#: src/components/screens/Export/ui.jsx:158
+#: src/components/screens/Export/ui.jsx:195
 msgid "export-screen.content.section-1.headline"
 msgstr "Twój przegląd"
 
-#: src/components/screens/Export/ui.jsx:159
+#: src/components/screens/Export/ui.jsx:196
 msgid "export-screen.content.section-1.text"
 msgstr ""
 "Wspólnie możemy odtworzyć drogi zakażenia, informując o tym władze zdrowotne "
 "i osoby z otoczenia."
 
-#: src/components/screens/Export/ui.jsx:160
+#: src/components/screens/Export/ui.jsx:197
 msgid "export-screen.content.section-2.headline"
 msgstr "Z wielką siłą przychodzi duża odpowiedzialność"
 
-#: src/components/screens/Export/ui.jsx:161
+#: src/components/screens/Export/ui.jsx:198
 msgid "export-screen.content.section-2.text"
 msgstr ""
 "Należy pamiętać, że dane te są bardzo wrażliwe. Zalecamy, aby nie "
 "udostępniać ich online lub przypadkowym osobom."
 
-#: src/components/screens/Export/ui.jsx:165
+#: src/components/screens/Export/ui.jsx:202
 msgid "export-screen.export.button.exporting"
 msgstr "Wywóz..."
 
-#: src/components/screens/Export/ui.jsx:165
+#: src/components/screens/Export/ui.jsx:202
+#: src/components/screens/Export/ui.jsx:267
 msgid "export-screen.export.button.default"
 msgstr "Eksport teraz"
 
-#: src/components/screens/Export/ui.jsx:182
+#: src/components/screens/Export/ui.jsx:220
+msgid "export-screen.modals.request-user-data.headline"
+msgstr ""
+
+#: src/components/screens/Export/ui.jsx:226
+msgid "export-screen.modals.request-user-data.text"
+msgstr ""
+
+#: src/components/screens/Export/ui.jsx:232
+msgid "export-screen.modals.request-user-data.placeholder.first-name"
+msgstr ""
+
+#: src/components/screens/Export/ui.jsx:243
+msgid "export-screen.modals.request-user-data.placeholder.last-name"
+msgstr ""
+
+#: src/components/screens/Export/ui.jsx:254
+msgid "export-screen.modals.request-user-data.placeholder.case-id"
+msgstr ""
+
+#: src/components/screens/Export/ui.jsx:285
 msgid "export-screen.modals.export-completed.headline"
 msgstr "Eksport zakończony"
 
-#: src/components/screens/Export/ui.jsx:188
+#: src/components/screens/Export/ui.jsx:291
 msgid "export-screen.modals.export-completed.text"
 msgstr ""
 "Plik PDF z Twoim przeglądem został utworzony pomyślnie. Możesz teraz zapisać "
 "lub udostępnić plik."
 
-#: src/components/screens/Export/ui.jsx:193
-msgid "export-screen.modals.export-completed.button.save"
-msgstr "Zapisz"
+#: src/components/screens/Export/ui.jsx:293
+msgid "export-screen.modals.export-completed.text.csv"
+msgstr ""
+
+#: src/components/screens/Export/ui.jsx:297
+msgid "export-screen.modals.export-completed.csv.headline"
+msgstr ""
+
+#: src/components/screens/Export/ui.jsx:315
+msgid "export-screen.modals.export-completed.pdf.headline"
+msgstr ""
 
 #: src/components/screens/Legal/index.jsx:243
-#: src/components/screens/Menu.jsx:207
+#: src/components/screens/Menu.jsx:205
 msgid "legal-screen.header.headline"
 msgstr "Prawne"
 
@@ -615,30 +643,24 @@ msgstr ""
 "prosimy o poinformowanie nas o tym fakcie. Jeżeli dowiemy się o naruszeniu "
 "praw autorskich, treści te zostaną natychmiast usunięte."
 
-#: src/components/screens/Menu.jsx:199
+#: src/components/screens/Menu.jsx:197
 msgid "menu-screen.items.faq"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:203
+#: src/components/screens/Menu.jsx:201
 #: src/components/screens/Settings/ui.jsx:99
 msgid "settings-screen.header.headline"
 msgstr "Ustawienia"
 
-#: src/components/screens/Menu.jsx:211
+#: src/components/screens/Menu.jsx:209
 msgid "menu-screen.items.share"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:215
+#: src/components/screens/Menu.jsx:213
 msgid "menu-screen.items.website"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:228
-msgid "menu-screen.intro.text"
-msgstr ""
-"Ważne jest, aby nie szerzyć paniki, ale tworzyć jasność i rozpowszechniać "
-"prawidłowe informacje."
-
-#: src/components/screens/Menu.jsx:267
+#: src/components/screens/Menu.jsx:261
 msgid "menu-screen.button.send-feedback"
 msgstr "Wyślij informację zwrotną"
 
@@ -652,21 +674,28 @@ msgstr ""
 "✅...korzystajcie z renomowanych źródeł informacji \n"
 "Bądźcie zdrowi i pamiętajcie o regularnym myciu rąk! ✋😉 https://coronika.app/"
 
-#: src/components/screens/Overview/ui.jsx:127
+#: src/components/screens/Overview/ModalLocationOverview.jsx:76
+#: src/components/screens/Overview/ModalPersonOverview.jsx:63
+#: src/components/widgets/DayOverview.jsx:34
+#: src/components/widgets/ModalSwitchDay.jsx:69
+msgid "today"
+msgstr "Dziś"
+
+#: src/components/screens/Overview/ui.jsx:120
+msgid "overview-screen.header.headline"
+msgstr "Przegląd"
+
+#: src/components/screens/Overview/ui.jsx:148
 msgid "overview-screen.persons.empty"
 msgstr ""
 
-#: src/components/screens/Overview/ui.jsx:128
+#: src/components/screens/Overview/ui.jsx:149
 msgid "overview-screen.locations.empty"
 msgstr ""
 
-#: src/components/screens/Overview/ui.jsx:151
+#: src/components/screens/Overview/ui.jsx:174
 msgid "overview-screen.export.button"
 msgstr "Eksportuj Przegląd"
-
-#: src/components/screens/Overview/ui.jsx:99
-msgid "overview-screen.header.headline"
-msgstr "Przegląd"
 
 #: src/components/screens/Settings/logic.js:160
 msgid "notifications.diary.headline"
@@ -1076,16 +1105,11 @@ msgstr ""
 msgid "welcome-screen.slides.import-contacts.button"
 msgstr ""
 
-#: src/components/widgets/DayOverview.jsx:34
-#: src/components/widgets/ModalSwitchDay.jsx:70
-msgid "today"
-msgstr "Dziś"
-
 #: src/components/widgets/DayOverview.jsx:46
 msgid "total"
 msgstr "Łącznie"
 
-#: src/components/widgets/ModalSwitchDay.jsx:171
+#: src/components/widgets/ModalSwitchDay.jsx:170
 msgid "modals-switch-day.headline"
 msgstr ""
 

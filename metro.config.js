@@ -9,6 +9,7 @@ const defaultSourceExts = require('metro-config/src/defaults/defaults').sourceEx
 
 module.exports = {
   resolver: {
+    extraNodeModules: require('node-libs-react-native'),
     sourceExts: [...defaultSourceExts, 'jsx'],
   },
   transformer: {

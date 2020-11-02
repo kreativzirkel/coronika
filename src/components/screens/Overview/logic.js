@@ -85,13 +85,23 @@ const mapStateToProps = ({
       }
     });
 
-    day.persons.forEach(({ fullName, id }) => {
+    day.persons.forEach(({ id }) => {
       if (Object.values(persons).find((p) => p.id === id)) {
         persons[id].counter += 1;
       } else {
-        const defaultPersonFullName = directoryPersons?.find((p) => p.id === id)?.fullName;
+        let fullName = '';
+        const directoryPerson = directoryPersons?.find((p) => p.id === id);
 
-        persons[id] = { counter: 1, fullName: defaultPersonFullName || fullName, id };
+        if (directoryPerson) {
+          fullName =
+            directoryPerson.recordID !== undefined &&
+            !!directoryPerson.fullNameDisplay &&
+            directoryPerson.fullNameDisplay.trim().length > 0
+              ? directoryPerson.fullNameDisplay
+              : directoryPerson.fullName;
+        }
+
+        persons[id] = { counter: 1, fullName, id };
       }
     });
   });

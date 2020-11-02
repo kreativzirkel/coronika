@@ -8,11 +8,18 @@ import withViewportUnits from '../../../utils/withViewportUnits';
 import {
   disableExporting,
   enableExporting,
+  hideExportRequestUserDataModal,
   hideExportResultModal,
   resetExportFilename,
-  setExportFilename,
+  setExportFilenameCsv,
+  setExportFilenamePdf,
+  showExportRequestUserDataModal,
   showExportResultModal,
+  setUserCaseId,
+  setUserFirstName,
+  setUserLastName,
 } from './actions';
+import createCsvFile from './createCsvFile';
 import createPdfFile from './createPdfFile';
 import Screen from './ui';
 
@@ -20,11 +27,11 @@ const exportFileTempDirectory = RNFS.DocumentDirectoryPath;
 
 const deleteOldExportFiles = async () => {
   const files = await RNFS.readDir(exportFileTempDirectory);
-  const exportFileRegex = /^\d{12}[\s_]{1}coronika[\s_]{1}(.*).pdf/;
-  const exportFileArabicRegex = /^[\u0660-\u0669]{12}[\s_]{1}coronika[\s_]{1}(.*).pdf/;
+  const exportFilePdfRegex = /^contacts_(.*).pdf$/;
+  const exportFileCsvRegex = /^contacts_(.*).csv$/;
 
   files.forEach((f) => {
-    if (f.isFile() && (exportFileRegex.test(f.name) || exportFileArabicRegex.test(f.name))) {
+    if (f.isFile() && (exportFilePdfRegex.test(f.name) || exportFileCsvRegex.test(f.name))) {
       RNFS.unlink(`${exportFileTempDirectory}/${f.name}`);
     }
   });
@@ -35,9 +42,8 @@ const closeExportResultModal = () => async (dispatch) => {
   dispatch(hideExportResultModal());
 };
 
-const saveExportFile = () => async (dispatch, getState) => {
+const saveExportFile = (exportFilename, mimeType) => async (dispatch, getState) => {
   const {
-    export: { exportFilename },
     i18n: { currentLanguage },
   } = getState();
 
@@ -76,7 +82,7 @@ const saveExportFile = () => async (dispatch, getState) => {
       await Share.open({
         saveToFiles: true,
         title,
-        type: 'application/pdf',
+        type: mimeType,
         url: exportFilePath,
       });
     } catch (e) {
@@ -85,9 +91,24 @@ const saveExportFile = () => async (dispatch, getState) => {
   }
 };
 
-const shareExportFile = () => async (dispatch, getState) => {
+const saveExportFileCsv = () => async (dispatch, getState) => {
   const {
-    export: { exportFilename },
+    export: { exportFilenameCsv },
+  } = getState();
+
+  dispatch(saveExportFile(exportFilenameCsv, 'text/csv'));
+};
+
+const saveExportFilePdf = () => async (dispatch, getState) => {
+  const {
+    export: { exportFilenamePdf },
+  } = getState();
+
+  dispatch(saveExportFile(exportFilenamePdf, 'application/pdf'));
+};
+
+const shareExportFile = (exportFilename, mimeType) => async (dispatch, getState) => {
+  const {
     i18n: { currentLanguage },
   } = getState();
 
@@ -98,7 +119,7 @@ const shareExportFile = () => async (dispatch, getState) => {
     await Share.open({
       showAppsToView: true,
       title,
-      type: 'application/pdf',
+      type: mimeType,
       url: Platform.OS === 'android' ? `file://${exportFilePath}` : exportFilePath,
     });
   } catch (e) {
@@ -106,8 +127,25 @@ const shareExportFile = () => async (dispatch, getState) => {
   }
 };
 
+const shareExportFileCsv = () => async (dispatch, getState) => {
+  const {
+    export: { exportFilenameCsv },
+  } = getState();
+
+  dispatch(shareExportFile(exportFilenameCsv, 'text/csv'));
+};
+
+const shareExportFilePdf = () => async (dispatch, getState) => {
+  const {
+    export: { exportFilenamePdf },
+  } = getState();
+
+  dispatch(shareExportFile(exportFilenamePdf, 'application/pdf'));
+};
+
 const createExport = () => async (dispatch, getState) => {
   dispatch(enableExporting());
+  dispatch(hideExportRequestUserDataModal());
   dispatch(resetExportFilename());
 
   await deleteOldExportFiles();
@@ -115,29 +153,82 @@ const createExport = () => async (dispatch, getState) => {
   const {
     dashboard: { days },
     directory: { persons: directoryPersons, locations: directoryLocations },
+    export: { userFirstName, userLastName, userCaseId },
     i18n: { currentLanguage },
   } = getState();
 
-  const { content, filename } = await createPdfFile({ currentLanguage, days, directoryLocations, directoryPersons });
-  const pdfPath = `${exportFileTempDirectory}/${filename}`;
+  const { content: contentPdf, filename: filenamePdf } = await createPdfFile({
+    currentLanguage,
+    days,
+    directoryLocations,
+    directoryPersons,
+    userFirstName,
+    userLastName,
+    userCaseId,
+  });
+  const pdfPath = `${exportFileTempDirectory}/${filenamePdf}`;
 
-  dispatch(setExportFilename(filename));
+  dispatch(setExportFilenamePdf(filenamePdf));
 
-  await RNFS.writeFile(pdfPath, content, 'base64');
+  await RNFS.writeFile(pdfPath, contentPdf, 'base64');
 
-  dispatch(showExportResultModal());
+  const { content: contentCsv, filename: filenameCsv } = await createCsvFile({
+    days,
+    directoryPersons,
+    userFirstName,
+    userLastName,
+    userCaseId,
+  });
+  const csvPath = `${exportFileTempDirectory}/${filenameCsv}`;
+
+  dispatch(setExportFilenameCsv(filenameCsv));
+
+  await RNFS.writeFile(csvPath, contentCsv, 'utf8');
+
+  setTimeout(() => {
+    dispatch(showExportResultModal());
+  }, 500);
 };
 
-const mapStateToProps = ({ export: { isExporting, isExportResultModalVisible } }) => {
-  return { isExporting, isExportResultModalVisible };
+const mapStateToProps = ({
+  export: {
+    isExporting,
+    isExportRequestUserDataModalVisible,
+    isExportResultModalVisible,
+    userFirstName,
+    userLastName,
+    userCaseId,
+  },
+}) => {
+  const buttonCreateExportDisabled =
+    userFirstName.trim().length < 1 ||
+    userLastName.trim().length < 1 ||
+    `${userFirstName} ${userLastName}`.replace(/\s/g, '').length < 5;
+
+  return {
+    buttonCreateExportDisabled,
+    isExporting,
+    isExportRequestUserDataModalVisible,
+    isExportResultModalVisible,
+    userFirstName,
+    userLastName,
+    userCaseId,
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     createExport: () => dispatch(createExport()),
+    hideExportRequestUserDataModal: () => dispatch(hideExportRequestUserDataModal()),
     hideExportResultModal: () => dispatch(closeExportResultModal()),
-    saveExportFile: () => dispatch(saveExportFile()),
-    shareExportFile: () => dispatch(shareExportFile()),
+    saveExportFileCsv: () => dispatch(saveExportFileCsv()),
+    saveExportFilePdf: () => dispatch(saveExportFilePdf()),
+    shareExportFileCsv: () => dispatch(shareExportFileCsv()),
+    shareExportFilePdf: () => dispatch(shareExportFilePdf()),
+    showExportRequestUserDataModal: () => dispatch(showExportRequestUserDataModal()),
+    setUserFirstName: (userFirstName) => dispatch(setUserFirstName(userFirstName)),
+    setUserLastName: (userLastName) => dispatch(setUserLastName(userLastName)),
+    setUserCaseId: (userCaseId) => dispatch(setUserCaseId(userCaseId)),
   };
 };
 

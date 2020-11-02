@@ -53,6 +53,12 @@
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
         "parents": "coronika"
     },
+    "csv-stringify@5.5.1": {
+        "licenses": "MIT",
+        "repository": "https://github.com/adaltas/node-csv-stringify",
+        "licenseUrl": "https://github.com/adaltas/node-csv-stringify/raw/master/LICENSE",
+        "parents": "coronika"
+    },
     "date-fns@2.16.1": {
         "licenses": "MIT",
         "repository": "https://github.com/date-fns/date-fns",
@@ -87,6 +93,12 @@
         "licenses": "MIT",
         "repository": "https://github.com/moment/moment",
         "licenseUrl": "https://github.com/moment/moment/raw/master/LICENSE",
+        "parents": "coronika"
+    },
+    "node-libs-react-native@1.2.0": {
+        "licenses": "MIT",
+        "repository": "https://github.com/parshap/node-libs-react-native",
+        "licenseUrl": "https://github.com/parshap/node-libs-react-native/raw/master/LICENSE",
         "parents": "coronika"
     },
     "pdf-lib@1.11.2": {

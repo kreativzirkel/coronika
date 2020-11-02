@@ -118,6 +118,7 @@ class Menu extends React.Component {
       justifyContent: 'space-between',
       padding: this.props.vw(2.5),
       paddingBottom: this.props.vw(1),
+      paddingTop: 0,
       width: '100%',
     },
     viewInner: {
@@ -138,9 +139,6 @@ class Menu extends React.Component {
     viewContent: {
       flexDirection: 'column',
       width: '100%',
-    },
-    viewContentList: {
-      marginTop: this.props.vw(2),
     },
     viewContentText: {
       paddingLeft: this.props.vw(2.5),
@@ -224,11 +222,7 @@ class Menu extends React.Component {
         <View style={styles.view}>
           <View style={styles.viewInner}>
             <ScrollView style={styles.viewInnerContent}>
-              <View style={{ ...styles.viewContent, ...styles.viewContentText }}>
-                <Text style={styles.contentText}>{__('menu-screen.intro.text')}</Text>
-              </View>
-
-              <View style={{ ...styles.viewContent, ...styles.viewContentList }}>
+              <View style={styles.viewContent}>
                 {menuItems.map(({ headline, routeName }, index) => (
                   <TouchableOpacity
                     key={`menu-item-${index}`}

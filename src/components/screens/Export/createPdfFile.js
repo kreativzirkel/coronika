@@ -37,7 +37,16 @@ const chooseFont = (text, currentLanguage, font, fontDefault) => {
   return font;
 };
 
-const addHeaderFooter = (pdfDoc, days, exportTime, currentLanguage, fonts, showFooterHintForIrrelevantEntries) => {
+const addHeaderFooter = (
+  pdfDoc,
+  days,
+  exportTime,
+  userName,
+  userCaseId,
+  currentLanguage,
+  fonts,
+  showFooterHintForIrrelevantEntries
+) => {
   const { customFontBold, customFontRegular, customFontJetBrainsMonoBold, customFontJetBrainsMonoRegular } = fonts;
 
   const chooseFontRegular = (text) =>
@@ -78,7 +87,9 @@ const addHeaderFooter = (pdfDoc, days, exportTime, currentLanguage, fonts, showF
     const dayStart = Math.min(...timestamps);
     const dayEnd = Math.max(...timestamps);
 
-    const timespanText = `${moment(dayStart).format('L')} - ${moment(dayEnd).format('L')}`;
+    const userText = `${userName}${userCaseId && userCaseId.trim().length > 0 ? ` (${userCaseId})` : ''}`;
+
+    const timespanText = `${userText} | ${moment(dayStart).format('L')} - ${moment(dayEnd).format('L')}`;
     const timespanTextFont = chooseFontRegular(timespanText);
     const timespanTextSize = 10;
     const timespanTextHeight = timespanTextFont.heightAtSize(timespanTextSize / 1.6);
@@ -153,7 +164,15 @@ const addHeaderFooter = (pdfDoc, days, exportTime, currentLanguage, fonts, showF
 };
 
 const createPdfFile = async (options = {}) => {
-  const { currentLanguage, days, directoryLocations, directoryPersons } = options;
+  const {
+    currentLanguage,
+    days,
+    directoryLocations,
+    directoryPersons,
+    userFirstName,
+    userLastName,
+    userCaseId,
+  } = options;
 
   let showFooterHintForIrrelevantEntries = false;
   const exportTime = new Date();
@@ -278,19 +297,29 @@ const createPdfFile = async (options = {}) => {
     day.persons.forEach(({ id }) => {
       if (Object.values(persons).find((p) => p.id === id)) {
         persons[id].counter += 1;
-        persons[id].phoneNumbers = [...persons[id].phoneNumbers];
         if (day.timestamp > persons[id].lastUsage) {
           persons[id].lastUsage = day.timestamp;
         }
       } else {
-        const defaultPersonFullName = directoryPersons?.find((p) => p.id === id)?.fullName || '';
-        const defaultPersonPhoneNumbers = directoryPersons?.find((p) => p.id === id)?.phoneNumbers || [];
+        let fullName = '';
+        let phoneNumbers = [];
+        const directoryPerson = directoryPersons?.find((p) => p.id === id);
+
+        if (directoryPerson) {
+          fullName =
+            directoryPerson.recordID !== undefined &&
+            !!directoryPerson.fullNameDisplay &&
+            directoryPerson.fullNameDisplay.trim().length > 0
+              ? directoryPerson.fullNameDisplay
+              : directoryPerson.fullName;
+          phoneNumbers = directoryPerson.phoneNumbers || [];
+        }
 
         persons[id] = {
           counter: 1,
-          fullName: defaultPersonFullName,
+          fullName,
           id,
-          phoneNumbers: [...defaultPersonPhoneNumbers],
+          phoneNumbers,
           lastUsage: day.timestamp,
         };
       }
@@ -580,10 +609,14 @@ const createPdfFile = async (options = {}) => {
     }
   });
 
+  const userName = `${userFirstName.trim()} ${userLastName.trim()}`.trim();
+
   addHeaderFooter(
     pdfDoc,
     days,
     exportTime,
+    userName,
+    userCaseId,
     currentLanguage,
     {
       customFontBold,
@@ -595,10 +628,9 @@ const createPdfFile = async (options = {}) => {
   );
 
   const content = await pdfDoc.saveAsBase64();
-  const filename = `${exportTimeFormatted} coronika ${__(
-    'export-screen.header.headline',
-    currentLanguage
-  ).toLowerCase()}.pdf`;
+  const filename = `contacts${
+    userCaseId.trim().length > 0 ? `_${userCaseId.trim()}` : ''
+  }_${userFirstName.trim()}_${userLastName.trim()}.pdf`;
 
   return { content, filename };
 };

@@ -23,7 +23,11 @@ class PersonListItemClass extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
-    return this.props.isPersonSelected !== nextProps.isPersonSelected || this.props.fullName !== nextProps.fullName;
+    return (
+      this.props.isPersonSelected !== nextProps.isPersonSelected ||
+      this.props.fullName !== nextProps.fullName ||
+      this.props.fullNameDisplay !== nextProps.fullNameDisplay
+    );
   }
 
   styles = StyleSheet.create({
