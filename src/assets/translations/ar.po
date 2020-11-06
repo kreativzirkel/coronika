@@ -9,7 +9,7 @@ msgstr ""
 
 #: src/components/App/ui.jsx:79
 msgid "navigation.add-entry.label"
-msgstr ""
+msgstr "إضافة إدخال"
 
 #: src/components/App/ui.jsx:82
 msgid "navigation.directory.label"
@@ -21,7 +21,7 @@ msgstr "مذكرات"
 
 #: src/components/App/ui.jsx:88
 msgid "navigation.overview.label"
-msgstr ""
+msgstr "نظرة عامة"
 
 #: src/components/App/ui.jsx:91
 msgid "navigation.tips.label"
@@ -67,7 +67,7 @@ msgstr "المواقع"
 
 #: src/components/partials/EntriesTabsView/index.jsx:871
 msgid "entries.persons.list.new"
-msgstr "شخص جديد"
+msgstr "قم بإنشاء شخص جديد"
 
 #: src/components/partials/EntriesTabsView/index.jsx:893
 #: src/components/partials/EntriesTabsView/index.jsx:953
@@ -86,7 +86,7 @@ msgstr "استيراد الآن"
 
 #: src/components/partials/EntriesTabsView/index.jsx:931
 msgid "entries.locations.list.new"
-msgstr "موقع جديد"
+msgstr "إنشاء موقع جديد"
 
 #: src/components/partials/EntriesTabsView/index.jsx:957
 msgid "entries.locations.list.empty"
@@ -118,7 +118,7 @@ msgstr "اسم"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:274
 msgid "entries.modals.new-person.placeholder.display-name"
-msgstr ""
+msgstr "اسم العرض"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:288
 msgid "entries.modals.new-person.placeholder.phone-number"
@@ -126,7 +126,7 @@ msgstr "هاتف"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:301
 msgid "entries.modals.new-person.placeholder.mail"
-msgstr ""
+msgstr "البريد الإلكتروني"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:383
 msgid "entries.modals.new-location.placeholder.title"
@@ -166,7 +166,7 @@ msgstr "حذف"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:870
 msgid "entries.modals.more.hide"
-msgstr ""
+msgstr "إخفاء"
 
 #: src/components/screens/About.jsx:22
 #: src/components/screens/Welcome/ui.jsx:100
@@ -272,11 +272,11 @@ msgstr "اسمح للتطبيق بالوصول إلى جهات الاتصال ف
 #: src/components/screens/Directory/ModalHidePersons.jsx:217
 #: src/components/screens/Directory/ui.jsx:189
 msgid "directory-screen.modals.hide-persons.headline"
-msgstr ""
+msgstr "إخفاء الأشخاص"
 
 #: src/components/screens/Directory/ModalHidePersons.jsx:250
 msgid "directory-screen.modals.hide-persons.button.save"
-msgstr ""
+msgstr "حفظ"
 
 #: src/components/screens/Directory/ui.jsx:147
 msgid "directory-screen.header.headline"
@@ -285,7 +285,7 @@ msgstr "إدارة الدليل"
 #: src/components/screens/Directory/ui.jsx:153
 #: src/components/screens/Directory/ui.jsx:180
 msgid "directory-screen.header.button.more"
-msgstr ""
+msgstr "أكثر"
 
 #: src/components/screens/Directory/ui.jsx:197
 #: src/components/screens/Directory/ui.jsx:222
@@ -382,19 +382,22 @@ msgstr "تصدير الآن"
 
 #: src/components/screens/Export/ui.jsx:220
 msgid "export-screen.modals.request-user-data.headline"
-msgstr ""
+msgstr "تحضير التصدير"
 
 #: src/components/screens/Export/ui.jsx:226
 msgid "export-screen.modals.request-user-data.text"
 msgstr ""
+"للتأكد من اكتمال التصدير وإمكانية تعيينه ، الرجاء إدخال الاسم الأول والأخير. "
+"إذا كنت بالفعل على اتصال بإدارة الصحة وتلقيت معرف الحالة ، يرجى إدخال هذا "
+"أيضًا."
 
 #: src/components/screens/Export/ui.jsx:232
 msgid "export-screen.modals.request-user-data.placeholder.first-name"
-msgstr ""
+msgstr "الاسم الاول"
 
 #: src/components/screens/Export/ui.jsx:243
 msgid "export-screen.modals.request-user-data.placeholder.last-name"
-msgstr ""
+msgstr "الكنية"
 
 #: src/components/screens/Export/ui.jsx:254
 msgid "export-screen.modals.request-user-data.placeholder.case-id"
@@ -406,19 +409,22 @@ msgstr "اكتمل التصدير"
 
 #: src/components/screens/Export/ui.jsx:291
 msgid "export-screen.modals.export-completed.text"
-msgstr "تم إنشاء ملف PDF مع نظرة عامة بنجاح. يمكنك الآن حفظ الملف أو مشاركته."
+msgstr ""
+"تم إنشاء تصدير النظرة العامة الخاصة بك بنجاح. يمكنك الآن مشاركته أو حفظه."
 
 #: src/components/screens/Export/ui.jsx:293
 msgid "export-screen.modals.export-completed.text.csv"
 msgstr ""
+"إذا كان قسم الصحة العامة لديك يعمل مع برنامج SORMAS ، فيجب عليك اختيار ملف "
+"CSV."
 
 #: src/components/screens/Export/ui.jsx:297
 msgid "export-screen.modals.export-completed.csv.headline"
-msgstr ""
+msgstr "ملف CSV"
 
 #: src/components/screens/Export/ui.jsx:315
 msgid "export-screen.modals.export-completed.pdf.headline"
-msgstr ""
+msgstr "ملف PDF"
 
 #: src/components/screens/Legal/index.jsx:243
 #: src/components/screens/Menu.jsx:205
@@ -619,7 +625,7 @@ msgstr ""
 
 #: src/components/screens/Menu.jsx:197
 msgid "menu-screen.items.faq"
-msgstr ""
+msgstr "أسئلة مكررة"
 
 #: src/components/screens/Menu.jsx:201
 #: src/components/screens/Settings/ui.jsx:99
@@ -628,11 +634,11 @@ msgstr "الإعدادات"
 
 #: src/components/screens/Menu.jsx:209
 msgid "menu-screen.items.share"
-msgstr ""
+msgstr "شارك هذا التطبيق"
 
 #: src/components/screens/Menu.jsx:213
 msgid "menu-screen.items.website"
-msgstr ""
+msgstr "زيارة الموقع"
 
 #: src/components/screens/Menu.jsx:261
 msgid "menu-screen.button.send-feedback"
@@ -659,11 +665,11 @@ msgstr "نظرة عامة"
 
 #: src/components/screens/Overview/ui.jsx:148
 msgid "overview-screen.persons.empty"
-msgstr ""
+msgstr "لم تقم بإضافة أي شخص إلى يومياتك."
 
 #: src/components/screens/Overview/ui.jsx:149
 msgid "overview-screen.locations.empty"
-msgstr ""
+msgstr "لم تقم بإضافة أي مكان إلى يومياتك."
 
 #: src/components/screens/Overview/ui.jsx:174
 msgid "overview-screen.export.button"
@@ -1074,19 +1080,20 @@ msgstr "نشط الآن"
 
 #: src/components/screens/Welcome/ui.jsx:132
 msgid "welcome-screen.slides.import-contacts.headline"
-msgstr ""
+msgstr "استيراد الأشخاص"
 
 #: src/components/screens/Welcome/ui.jsx:133
 msgid "welcome-screen.slides.import-contacts.text"
 msgstr ""
+"يمكن لـ Coronika استيراد الأشخاص من دفتر هاتفك حتى تتمكن من البدء على الفور."
 
 #: src/components/screens/Welcome/ui.jsx:134
 msgid "welcome-screen.slides.import-contacts.button-skip"
-msgstr ""
+msgstr "تخطى"
 
 #: src/components/screens/Welcome/ui.jsx:135
 msgid "welcome-screen.slides.import-contacts.button"
-msgstr ""
+msgstr "الاستيراد الآن"
 
 #: src/components/widgets/DayOverview.jsx:46
 msgid "total"
@@ -1094,7 +1101,7 @@ msgstr "مجموع"
 
 #: src/components/widgets/ModalSwitchDay.jsx:170
 msgid "modals-switch-day.headline"
-msgstr ""
+msgstr "حدد اليوم"
 
 #: src/components/widgets/SearchBar.jsx:77
 msgid "placeholder.search-input"

@@ -110,7 +110,7 @@ class ModalHidePersons extends React.Component {
 
   styles = StyleSheet.create({
     personsList: {
-      height: this.props.vh(60),
+      maxHeight: this.props.vh(60),
     },
     modal: {
       justifyContent: 'flex-end',

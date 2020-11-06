@@ -9,7 +9,7 @@ msgstr ""
 
 #: src/components/App/ui.jsx:79
 msgid "navigation.add-entry.label"
-msgstr ""
+msgstr "Lisää merkintä"
 
 #: src/components/App/ui.jsx:82
 msgid "navigation.directory.label"
@@ -21,7 +21,7 @@ msgstr "Päiväkirja"
 
 #: src/components/App/ui.jsx:88
 msgid "navigation.overview.label"
-msgstr ""
+msgstr "Yleiskatsaus"
 
 #: src/components/App/ui.jsx:91
 msgid "navigation.tips.label"
@@ -67,7 +67,7 @@ msgstr "Sijainnit"
 
 #: src/components/partials/EntriesTabsView/index.jsx:871
 msgid "entries.persons.list.new"
-msgstr "Uusi yhteystieto"
+msgstr "Luo uusi henkilö"
 
 #: src/components/partials/EntriesTabsView/index.jsx:893
 #: src/components/partials/EntriesTabsView/index.jsx:953
@@ -86,7 +86,7 @@ msgstr "Tuo nyt"
 
 #: src/components/partials/EntriesTabsView/index.jsx:931
 msgid "entries.locations.list.new"
-msgstr "Uusi sijainti"
+msgstr "Luo uusi sijainti"
 
 #: src/components/partials/EntriesTabsView/index.jsx:957
 msgid "entries.locations.list.empty"
@@ -119,7 +119,7 @@ msgstr "Nimi"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:274
 msgid "entries.modals.new-person.placeholder.display-name"
-msgstr ""
+msgstr "Näyttönimi"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:288
 msgid "entries.modals.new-person.placeholder.phone-number"
@@ -127,7 +127,7 @@ msgstr "Puhelin"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:301
 msgid "entries.modals.new-person.placeholder.mail"
-msgstr ""
+msgstr "Sähköposti"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:383
 msgid "entries.modals.new-location.placeholder.title"
@@ -167,7 +167,7 @@ msgstr "poistaa"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:870
 msgid "entries.modals.more.hide"
-msgstr ""
+msgstr "Piilottaa"
 
 #: src/components/screens/About.jsx:22
 #: src/components/screens/Welcome/ui.jsx:100
@@ -280,11 +280,11 @@ msgstr ""
 #: src/components/screens/Directory/ModalHidePersons.jsx:217
 #: src/components/screens/Directory/ui.jsx:189
 msgid "directory-screen.modals.hide-persons.headline"
-msgstr ""
+msgstr "Piilota henkilöt"
 
 #: src/components/screens/Directory/ModalHidePersons.jsx:250
 msgid "directory-screen.modals.hide-persons.button.save"
-msgstr ""
+msgstr "Tallentaa"
 
 #: src/components/screens/Directory/ui.jsx:147
 msgid "directory-screen.header.headline"
@@ -293,7 +293,7 @@ msgstr "Hallinnoi hakemistoa"
 #: src/components/screens/Directory/ui.jsx:153
 #: src/components/screens/Directory/ui.jsx:180
 msgid "directory-screen.header.button.more"
-msgstr ""
+msgstr "Lisää"
 
 #: src/components/screens/Directory/ui.jsx:197
 #: src/components/screens/Directory/ui.jsx:222
@@ -390,7 +390,7 @@ msgstr "Vie nyt"
 
 #: src/components/screens/Export/ui.jsx:220
 msgid "export-screen.modals.request-user-data.headline"
-msgstr ""
+msgstr "Valmista vienti"
 
 #: src/components/screens/Export/ui.jsx:226
 msgid "export-screen.modals.request-user-data.text"
@@ -398,11 +398,11 @@ msgstr ""
 
 #: src/components/screens/Export/ui.jsx:232
 msgid "export-screen.modals.request-user-data.placeholder.first-name"
-msgstr ""
+msgstr "Etunimi"
 
 #: src/components/screens/Export/ui.jsx:243
 msgid "export-screen.modals.request-user-data.placeholder.last-name"
-msgstr ""
+msgstr "Sukunimi"
 
 #: src/components/screens/Export/ui.jsx:254
 msgid "export-screen.modals.request-user-data.placeholder.case-id"
@@ -414,21 +414,21 @@ msgstr "Vienti valmis"
 
 #: src/components/screens/Export/ui.jsx:291
 msgid "export-screen.modals.export-completed.text"
-msgstr ""
-"Yleiskatsauksen mukainen PDF-tiedosto luotiin onnistuneesti. Voit nyt "
-"tallentaa tai jakaa tiedoston."
+msgstr "Yleiskatsaussi vienti onnistui. Voit nyt jakaa tai tallentaa sen."
 
 #: src/components/screens/Export/ui.jsx:293
 msgid "export-screen.modals.export-completed.text.csv"
 msgstr ""
+"Jos kansanterveysosastosi toimii SORMAS-ohjelmiston kanssa, sinun on "
+"valittava CSV-tiedosto."
 
 #: src/components/screens/Export/ui.jsx:297
 msgid "export-screen.modals.export-completed.csv.headline"
-msgstr ""
+msgstr "CSV-tiedosto"
 
 #: src/components/screens/Export/ui.jsx:315
 msgid "export-screen.modals.export-completed.pdf.headline"
-msgstr ""
+msgstr "PDF-tiedosto"
 
 #: src/components/screens/Legal/index.jsx:243
 #: src/components/screens/Menu.jsx:205
@@ -642,7 +642,7 @@ msgstr ""
 
 #: src/components/screens/Menu.jsx:197
 msgid "menu-screen.items.faq"
-msgstr ""
+msgstr "Usein Kysytyt Kysymykset"
 
 #: src/components/screens/Menu.jsx:201
 #: src/components/screens/Settings/ui.jsx:99
@@ -651,11 +651,11 @@ msgstr "Asetukset"
 
 #: src/components/screens/Menu.jsx:209
 msgid "menu-screen.items.share"
-msgstr ""
+msgstr "Jaa tämä sovellus"
 
 #: src/components/screens/Menu.jsx:213
 msgid "menu-screen.items.website"
-msgstr ""
+msgstr "Vieraile verkkosivustolla"
 
 #: src/components/screens/Menu.jsx:261
 msgid "menu-screen.button.send-feedback"
@@ -683,11 +683,11 @@ msgstr "Yleiskatsaus"
 
 #: src/components/screens/Overview/ui.jsx:148
 msgid "overview-screen.persons.empty"
-msgstr ""
+msgstr "Et ole lisännyt ketään henkilöä päiväkirjaasi."
 
 #: src/components/screens/Overview/ui.jsx:149
 msgid "overview-screen.locations.empty"
-msgstr ""
+msgstr "Et ole lisännyt sijaintiasi päiväkirjaasi."
 
 #: src/components/screens/Overview/ui.jsx:174
 msgid "overview-screen.export.button"
@@ -1084,19 +1084,20 @@ msgstr "Aktivoi nyt"
 
 #: src/components/screens/Welcome/ui.jsx:132
 msgid "welcome-screen.slides.import-contacts.headline"
-msgstr ""
+msgstr "Tuontihenkilöt"
 
 #: src/components/screens/Welcome/ui.jsx:133
 msgid "welcome-screen.slides.import-contacts.text"
 msgstr ""
+"Coronika voi tuoda henkilöitä puhelinluettelostasi, jotta voit aloittaa heti."
 
 #: src/components/screens/Welcome/ui.jsx:134
 msgid "welcome-screen.slides.import-contacts.button-skip"
-msgstr ""
+msgstr "Ohita"
 
 #: src/components/screens/Welcome/ui.jsx:135
 msgid "welcome-screen.slides.import-contacts.button"
-msgstr ""
+msgstr "Tuo nyt"
 
 #: src/components/widgets/DayOverview.jsx:46
 msgid "total"
@@ -1104,7 +1105,7 @@ msgstr "Yhteensä"
 
 #: src/components/widgets/ModalSwitchDay.jsx:170
 msgid "modals-switch-day.headline"
-msgstr ""
+msgstr "Valitse päivä"
 
 #: src/components/widgets/SearchBar.jsx:77
 msgid "placeholder.search-input"

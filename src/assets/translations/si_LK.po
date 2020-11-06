@@ -9,7 +9,7 @@ msgstr ""
 
 #: src/components/App/ui.jsx:79
 msgid "navigation.add-entry.label"
-msgstr ""
+msgstr "ප්‍රවේශය එක් කරන්න"
 
 #: src/components/App/ui.jsx:82
 msgid "navigation.directory.label"
@@ -21,7 +21,7 @@ msgstr "දිනපොත"
 
 #: src/components/App/ui.jsx:88
 msgid "navigation.overview.label"
-msgstr ""
+msgstr "දළ විශ්ලේෂණය"
 
 #: src/components/App/ui.jsx:91
 msgid "navigation.tips.label"
@@ -67,7 +67,7 @@ msgstr "ස්ථාන"
 
 #: src/components/partials/EntriesTabsView/index.jsx:871
 msgid "entries.persons.list.new"
-msgstr "නව පුද්ගලයෙක්"
+msgstr "නව පුද්ගලයෙකු සාදන්න"
 
 #: src/components/partials/EntriesTabsView/index.jsx:893
 #: src/components/partials/EntriesTabsView/index.jsx:953
@@ -86,7 +86,7 @@ msgstr "දැන් ආයාත කරන්න"
 
 #: src/components/partials/EntriesTabsView/index.jsx:931
 msgid "entries.locations.list.new"
-msgstr "නව ස්ථානය"
+msgstr "නව ස්ථානයක් සාදන්න"
 
 #: src/components/partials/EntriesTabsView/index.jsx:957
 msgid "entries.locations.list.empty"
@@ -118,7 +118,7 @@ msgstr "නම"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:274
 msgid "entries.modals.new-person.placeholder.display-name"
-msgstr ""
+msgstr "ප්රදර්ශන නාමය"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:288
 msgid "entries.modals.new-person.placeholder.phone-number"
@@ -126,7 +126,7 @@ msgstr "දුරකතන අංකය"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:301
 msgid "entries.modals.new-person.placeholder.mail"
-msgstr ""
+msgstr "විද්යුත් තැපෑල"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:383
 msgid "entries.modals.new-location.placeholder.title"
@@ -166,7 +166,7 @@ msgstr "මකන්න"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:870
 msgid "entries.modals.more.hide"
-msgstr ""
+msgstr "සඟවන්න"
 
 #: src/components/screens/About.jsx:22
 #: src/components/screens/Welcome/ui.jsx:100
@@ -272,11 +272,11 @@ msgstr "ඔබගේ උපාංගයේ රහස්‍යතා සැකස
 #: src/components/screens/Directory/ModalHidePersons.jsx:217
 #: src/components/screens/Directory/ui.jsx:189
 msgid "directory-screen.modals.hide-persons.headline"
-msgstr ""
+msgstr "පුද්ගලයින් සඟවන්න"
 
 #: src/components/screens/Directory/ModalHidePersons.jsx:250
 msgid "directory-screen.modals.hide-persons.button.save"
-msgstr ""
+msgstr "සුරකින්න"
 
 #: src/components/screens/Directory/ui.jsx:147
 msgid "directory-screen.header.headline"
@@ -285,7 +285,7 @@ msgstr "නාමාවලිය කළමනාකරණය කරන්න"
 #: src/components/screens/Directory/ui.jsx:153
 #: src/components/screens/Directory/ui.jsx:180
 msgid "directory-screen.header.button.more"
-msgstr ""
+msgstr "තව"
 
 #: src/components/screens/Directory/ui.jsx:197
 #: src/components/screens/Directory/ui.jsx:222
@@ -382,7 +382,7 @@ msgstr "දැන් අපනයනය කරන්න"
 
 #: src/components/screens/Export/ui.jsx:220
 msgid "export-screen.modals.request-user-data.headline"
-msgstr ""
+msgstr "අපනයනය සූදානම් කරන්න"
 
 #: src/components/screens/Export/ui.jsx:226
 msgid "export-screen.modals.request-user-data.text"
@@ -390,11 +390,11 @@ msgstr ""
 
 #: src/components/screens/Export/ui.jsx:232
 msgid "export-screen.modals.request-user-data.placeholder.first-name"
-msgstr ""
+msgstr "මුල් නම"
 
 #: src/components/screens/Export/ui.jsx:243
 msgid "export-screen.modals.request-user-data.placeholder.last-name"
-msgstr ""
+msgstr "අවසන් නම"
 
 #: src/components/screens/Export/ui.jsx:254
 msgid "export-screen.modals.request-user-data.placeholder.case-id"
@@ -407,20 +407,22 @@ msgstr "අපනයනය අවසන්"
 #: src/components/screens/Export/ui.jsx:291
 msgid "export-screen.modals.export-completed.text"
 msgstr ""
-"ඔබගේ දළ විශ්ලේෂණය සහිත PDF ගොනුව සාර්ථකව නිර්මාණය කරන ලදි. ඔබට දැන් ගොනුව සුරැකීමට හෝ "
-"බෙදා ගැනීමට හැකිය."
+"ඔබගේ දළ විශ්ලේෂණය අපනයනය සාර්ථකව නිර්මාණය කරන ලදි. ඔබට දැන් එය බෙදා ගැනීමට හෝ සුරැකීමට "
+"හැකිය."
 
 #: src/components/screens/Export/ui.jsx:293
 msgid "export-screen.modals.export-completed.text.csv"
 msgstr ""
+"ඔබේ මහජන සෞඛ්‍ය දෙපාර්තමේන්තුව SORMAS මෘදුකාංගය සමඟ වැඩ කරන්නේ නම්, ඔබ CSV ගොනුව තෝරා "
+"ගත යුතුය."
 
 #: src/components/screens/Export/ui.jsx:297
 msgid "export-screen.modals.export-completed.csv.headline"
-msgstr ""
+msgstr "CSV ගොනුව"
 
 #: src/components/screens/Export/ui.jsx:315
 msgid "export-screen.modals.export-completed.pdf.headline"
-msgstr ""
+msgstr "PDF ගොනුව"
 
 #: src/components/screens/Legal/index.jsx:243
 #: src/components/screens/Menu.jsx:205
@@ -621,7 +623,7 @@ msgstr ""
 
 #: src/components/screens/Menu.jsx:197
 msgid "menu-screen.items.faq"
-msgstr ""
+msgstr "නිතර අසනු ලබන ප්‍රශ්න"
 
 #: src/components/screens/Menu.jsx:201
 #: src/components/screens/Settings/ui.jsx:99
@@ -630,11 +632,11 @@ msgstr "සැකසුම්"
 
 #: src/components/screens/Menu.jsx:209
 msgid "menu-screen.items.share"
-msgstr ""
+msgstr "මෙම යෙදුම බෙදාගන්න"
 
 #: src/components/screens/Menu.jsx:213
 msgid "menu-screen.items.website"
-msgstr ""
+msgstr "වෙබ් අඩවියට පිවිසෙන්න"
 
 #: src/components/screens/Menu.jsx:261
 msgid "menu-screen.button.send-feedback"
@@ -663,11 +665,11 @@ msgstr "දළ විශ්ලේෂණය"
 
 #: src/components/screens/Overview/ui.jsx:148
 msgid "overview-screen.persons.empty"
-msgstr ""
+msgstr "ඔබ ඔබේ දිනපොතට කිසිවෙකු එකතු කර නැත."
 
 #: src/components/screens/Overview/ui.jsx:149
 msgid "overview-screen.locations.empty"
-msgstr ""
+msgstr "ඔබ ඔබේ දිනපොතට කිසිදු ස්ථානයක් එක් කර නැත."
 
 #: src/components/screens/Overview/ui.jsx:174
 msgid "overview-screen.export.button"
@@ -1067,19 +1069,20 @@ msgstr "දැන් ක්‍රියාත්මක කරන්න"
 
 #: src/components/screens/Welcome/ui.jsx:132
 msgid "welcome-screen.slides.import-contacts.headline"
-msgstr ""
+msgstr "පුද්ගලයින් ආනයනය කරන්න"
 
 #: src/components/screens/Welcome/ui.jsx:133
 msgid "welcome-screen.slides.import-contacts.text"
 msgstr ""
+"කොරොනිකාට ඔබගේ දුරකථන පොතෙන් පුද්ගලයින් ආනයනය කළ හැකි බැවින් ඔබට වහාම ආරම්භ කළ හැකිය."
 
 #: src/components/screens/Welcome/ui.jsx:134
 msgid "welcome-screen.slides.import-contacts.button-skip"
-msgstr ""
+msgstr "මඟ හරින්න"
 
 #: src/components/screens/Welcome/ui.jsx:135
 msgid "welcome-screen.slides.import-contacts.button"
-msgstr ""
+msgstr "දැන් ආයාත කරන්න"
 
 #: src/components/widgets/DayOverview.jsx:46
 msgid "total"
@@ -1087,7 +1090,7 @@ msgstr "සමස්ත"
 
 #: src/components/widgets/ModalSwitchDay.jsx:170
 msgid "modals-switch-day.headline"
-msgstr ""
+msgstr "දිනය තෝරන්න"
 
 #: src/components/widgets/SearchBar.jsx:77
 msgid "placeholder.search-input"

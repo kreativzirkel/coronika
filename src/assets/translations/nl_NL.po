@@ -67,7 +67,7 @@ msgstr "Locaties"
 
 #: src/components/partials/EntriesTabsView/index.jsx:871
 msgid "entries.persons.list.new"
-msgstr "Nieuwe persoon"
+msgstr "Creëer een nieuw persoon"
 
 #: src/components/partials/EntriesTabsView/index.jsx:893
 #: src/components/partials/EntriesTabsView/index.jsx:953
@@ -86,7 +86,7 @@ msgstr "Nu importeren"
 
 #: src/components/partials/EntriesTabsView/index.jsx:931
 msgid "entries.locations.list.new"
-msgstr "Nieuwe locatie"
+msgstr "Creëer een nieuwe locatie"
 
 #: src/components/partials/EntriesTabsView/index.jsx:957
 msgid "entries.locations.list.empty"
@@ -118,7 +118,7 @@ msgstr "Naam"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:274
 msgid "entries.modals.new-person.placeholder.display-name"
-msgstr ""
+msgstr "Weergavenaam"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:288
 msgid "entries.modals.new-person.placeholder.phone-number"
@@ -426,6 +426,8 @@ msgstr ""
 #: src/components/screens/Export/ui.jsx:293
 msgid "export-screen.modals.export-completed.text.csv"
 msgstr ""
+"Als uw volksgezondheidsafdeling met de SORMAS-software werkt, moet u het CSV-"
+"bestand kiezen."
 
 #: src/components/screens/Export/ui.jsx:297
 msgid "export-screen.modals.export-completed.csv.headline"
@@ -652,7 +654,7 @@ msgstr ""
 
 #: src/components/screens/Menu.jsx:197
 msgid "menu-screen.items.faq"
-msgstr ""
+msgstr "Veel Gestelde Vragen"
 
 #: src/components/screens/Menu.jsx:201
 #: src/components/screens/Settings/ui.jsx:99
@@ -661,11 +663,11 @@ msgstr "Instellingen"
 
 #: src/components/screens/Menu.jsx:209
 msgid "menu-screen.items.share"
-msgstr ""
+msgstr "Deel deze app"
 
 #: src/components/screens/Menu.jsx:213
 msgid "menu-screen.items.website"
-msgstr ""
+msgstr "Bezoek website"
 
 #: src/components/screens/Menu.jsx:261
 msgid "menu-screen.button.send-feedback"
@@ -694,11 +696,11 @@ msgstr "Overzicht"
 
 #: src/components/screens/Overview/ui.jsx:148
 msgid "overview-screen.persons.empty"
-msgstr ""
+msgstr "Je hebt geen persoon aan je dagboek toegevoegd."
 
 #: src/components/screens/Overview/ui.jsx:149
 msgid "overview-screen.locations.empty"
-msgstr ""
+msgstr "Je hebt geen enkele locatie aan je dagboek toegevoegd."
 
 #: src/components/screens/Overview/ui.jsx:174
 msgid "overview-screen.export.button"

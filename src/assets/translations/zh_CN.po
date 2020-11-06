@@ -9,7 +9,7 @@ msgstr ""
 
 #: src/components/App/ui.jsx:79
 msgid "navigation.add-entry.label"
-msgstr ""
+msgstr "增加条目"
 
 #: src/components/App/ui.jsx:82
 msgid "navigation.directory.label"
@@ -21,7 +21,7 @@ msgstr "日记"
 
 #: src/components/App/ui.jsx:88
 msgid "navigation.overview.label"
-msgstr ""
+msgstr "概述"
 
 #: src/components/App/ui.jsx:91
 msgid "navigation.tips.label"
@@ -67,7 +67,7 @@ msgstr "地点"
 
 #: src/components/partials/EntriesTabsView/index.jsx:871
 msgid "entries.persons.list.new"
-msgstr "新联系人"
+msgstr "创建新的人"
 
 #: src/components/partials/EntriesTabsView/index.jsx:893
 #: src/components/partials/EntriesTabsView/index.jsx:953
@@ -84,7 +84,7 @@ msgstr "现在导入"
 
 #: src/components/partials/EntriesTabsView/index.jsx:931
 msgid "entries.locations.list.new"
-msgstr "新地点"
+msgstr "创建新位置"
 
 #: src/components/partials/EntriesTabsView/index.jsx:957
 msgid "entries.locations.list.empty"
@@ -116,7 +116,7 @@ msgstr "姓名"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:274
 msgid "entries.modals.new-person.placeholder.display-name"
-msgstr ""
+msgstr "显示名称"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:288
 msgid "entries.modals.new-person.placeholder.phone-number"
@@ -124,7 +124,7 @@ msgstr "电话"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:301
 msgid "entries.modals.new-person.placeholder.mail"
-msgstr ""
+msgstr "电子邮件"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:383
 msgid "entries.modals.new-location.placeholder.title"
@@ -164,7 +164,7 @@ msgstr "删去"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:870
 msgid "entries.modals.more.hide"
-msgstr ""
+msgstr "隐藏"
 
 #: src/components/screens/About.jsx:22
 #: src/components/screens/Welcome/ui.jsx:100
@@ -267,11 +267,11 @@ msgstr "允许应用程序在设备的隐私设置中访问您的联系人。"
 #: src/components/screens/Directory/ModalHidePersons.jsx:217
 #: src/components/screens/Directory/ui.jsx:189
 msgid "directory-screen.modals.hide-persons.headline"
-msgstr ""
+msgstr "隐藏人员"
 
 #: src/components/screens/Directory/ModalHidePersons.jsx:250
 msgid "directory-screen.modals.hide-persons.button.save"
-msgstr ""
+msgstr "救"
 
 #: src/components/screens/Directory/ui.jsx:147
 msgid "directory-screen.header.headline"
@@ -280,7 +280,7 @@ msgstr "管理目录"
 #: src/components/screens/Directory/ui.jsx:153
 #: src/components/screens/Directory/ui.jsx:180
 msgid "directory-screen.header.button.more"
-msgstr ""
+msgstr "更多"
 
 #: src/components/screens/Directory/ui.jsx:197
 #: src/components/screens/Directory/ui.jsx:222
@@ -373,19 +373,21 @@ msgstr "现在就导出"
 
 #: src/components/screens/Export/ui.jsx:220
 msgid "export-screen.modals.request-user-data.headline"
-msgstr ""
+msgstr "准备出口"
 
 #: src/components/screens/Export/ui.jsx:226
 msgid "export-screen.modals.request-user-data.text"
 msgstr ""
+"为确保出口完整，可以分配，请输入你的名字和姓氏。如果你已经和卫生局联系过，并"
+"且已经收到了病例号，也请输入这个。"
 
 #: src/components/screens/Export/ui.jsx:232
 msgid "export-screen.modals.request-user-data.placeholder.first-name"
-msgstr ""
+msgstr "名字"
 
 #: src/components/screens/Export/ui.jsx:243
 msgid "export-screen.modals.request-user-data.placeholder.last-name"
-msgstr ""
+msgstr "姓"
 
 #: src/components/screens/Export/ui.jsx:254
 msgid "export-screen.modals.request-user-data.placeholder.case-id"
@@ -397,19 +399,19 @@ msgstr "导出完成"
 
 #: src/components/screens/Export/ui.jsx:291
 msgid "export-screen.modals.export-completed.text"
-msgstr "带有您的总览的PDF文件已成功创建。您现在可以保存或共享该文件了。"
+msgstr "您的概览的导出已成功创建。现在您可以分享或保存它。"
 
 #: src/components/screens/Export/ui.jsx:293
 msgid "export-screen.modals.export-completed.text.csv"
-msgstr ""
+msgstr "如果你的公共卫生部门使用SORMAS软件，你应该选择CSV文件。"
 
 #: src/components/screens/Export/ui.jsx:297
 msgid "export-screen.modals.export-completed.csv.headline"
-msgstr ""
+msgstr "CSV文件"
 
 #: src/components/screens/Export/ui.jsx:315
 msgid "export-screen.modals.export-completed.pdf.headline"
-msgstr ""
+msgstr "PDF文件"
 
 #: src/components/screens/Legal/index.jsx:243
 #: src/components/screens/Menu.jsx:205
@@ -595,7 +597,7 @@ msgstr ""
 
 #: src/components/screens/Menu.jsx:197
 msgid "menu-screen.items.faq"
-msgstr ""
+msgstr "经常问的问题"
 
 #: src/components/screens/Menu.jsx:201
 #: src/components/screens/Settings/ui.jsx:99
@@ -604,11 +606,11 @@ msgstr "设置"
 
 #: src/components/screens/Menu.jsx:209
 msgid "menu-screen.items.share"
-msgstr ""
+msgstr "分享这个应用程式"
 
 #: src/components/screens/Menu.jsx:213
 msgid "menu-screen.items.website"
-msgstr ""
+msgstr "访问网站"
 
 #: src/components/screens/Menu.jsx:261
 msgid "menu-screen.button.send-feedback"
@@ -636,11 +638,11 @@ msgstr "概要"
 
 #: src/components/screens/Overview/ui.jsx:148
 msgid "overview-screen.persons.empty"
-msgstr ""
+msgstr "您没有在您的日记中添加任何人。"
 
 #: src/components/screens/Overview/ui.jsx:149
 msgid "overview-screen.locations.empty"
-msgstr ""
+msgstr "您没有在您的日记中添加任何地点。"
 
 #: src/components/screens/Overview/ui.jsx:174
 msgid "overview-screen.export.button"
@@ -1031,19 +1033,19 @@ msgstr "现在就激活"
 
 #: src/components/screens/Welcome/ui.jsx:132
 msgid "welcome-screen.slides.import-contacts.headline"
-msgstr ""
+msgstr "进口人员"
 
 #: src/components/screens/Welcome/ui.jsx:133
 msgid "welcome-screen.slides.import-contacts.text"
-msgstr ""
+msgstr "Coronika可以从您的电话簿中导入人员，因此您可以立即开始。"
 
 #: src/components/screens/Welcome/ui.jsx:134
 msgid "welcome-screen.slides.import-contacts.button-skip"
-msgstr ""
+msgstr "跳过"
 
 #: src/components/screens/Welcome/ui.jsx:135
 msgid "welcome-screen.slides.import-contacts.button"
-msgstr ""
+msgstr "立即导入"
 
 #: src/components/widgets/DayOverview.jsx:46
 msgid "total"
@@ -1051,7 +1053,7 @@ msgstr "合计"
 
 #: src/components/widgets/ModalSwitchDay.jsx:170
 msgid "modals-switch-day.headline"
-msgstr ""
+msgstr "选择日期"
 
 #: src/components/widgets/SearchBar.jsx:77
 msgid "placeholder.search-input"

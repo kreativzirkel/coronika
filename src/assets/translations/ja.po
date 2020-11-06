@@ -9,7 +9,7 @@ msgstr ""
 
 #: src/components/App/ui.jsx:79
 msgid "navigation.add-entry.label"
-msgstr ""
+msgstr "エントリー追加"
 
 #: src/components/App/ui.jsx:82
 msgid "navigation.directory.label"
@@ -21,7 +21,7 @@ msgstr "日記"
 
 #: src/components/App/ui.jsx:88
 msgid "navigation.overview.label"
-msgstr ""
+msgstr "概要"
 
 #: src/components/App/ui.jsx:91
 msgid "navigation.tips.label"
@@ -67,7 +67,7 @@ msgstr "場所"
 
 #: src/components/partials/EntriesTabsView/index.jsx:871
 msgid "entries.persons.list.new"
-msgstr "新しい連絡先"
+msgstr "新規作成"
 
 #: src/components/partials/EntriesTabsView/index.jsx:893
 #: src/components/partials/EntriesTabsView/index.jsx:953
@@ -86,7 +86,7 @@ msgstr "今すぐインポート"
 
 #: src/components/partials/EntriesTabsView/index.jsx:931
 msgid "entries.locations.list.new"
-msgstr "新しい場所"
+msgstr "新しい場所の作成"
 
 #: src/components/partials/EntriesTabsView/index.jsx:957
 msgid "entries.locations.list.empty"
@@ -119,7 +119,7 @@ msgstr "名前"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:274
 msgid "entries.modals.new-person.placeholder.display-name"
-msgstr ""
+msgstr "表示名"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:288
 msgid "entries.modals.new-person.placeholder.phone-number"
@@ -127,7 +127,7 @@ msgstr "電話"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:301
 msgid "entries.modals.new-person.placeholder.mail"
-msgstr ""
+msgstr "Eメール"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:383
 msgid "entries.modals.new-location.placeholder.title"
@@ -167,7 +167,7 @@ msgstr "抹消"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:870
 msgid "entries.modals.more.hide"
-msgstr ""
+msgstr "隠す"
 
 #: src/components/screens/About.jsx:22
 #: src/components/screens/Welcome/ui.jsx:100
@@ -276,11 +276,11 @@ msgstr ""
 #: src/components/screens/Directory/ModalHidePersons.jsx:217
 #: src/components/screens/Directory/ui.jsx:189
 msgid "directory-screen.modals.hide-persons.headline"
-msgstr ""
+msgstr "隠す人"
 
 #: src/components/screens/Directory/ModalHidePersons.jsx:250
 msgid "directory-screen.modals.hide-persons.button.save"
-msgstr ""
+msgstr "セーブ"
 
 #: src/components/screens/Directory/ui.jsx:147
 msgid "directory-screen.header.headline"
@@ -289,7 +289,7 @@ msgstr "ディレクトリの管理"
 #: src/components/screens/Directory/ui.jsx:153
 #: src/components/screens/Directory/ui.jsx:180
 msgid "directory-screen.header.button.more"
-msgstr ""
+msgstr "もっと"
 
 #: src/components/screens/Directory/ui.jsx:197
 #: src/components/screens/Directory/ui.jsx:222
@@ -390,7 +390,7 @@ msgstr "今すぐエクスポート"
 
 #: src/components/screens/Export/ui.jsx:220
 msgid "export-screen.modals.request-user-data.headline"
-msgstr ""
+msgstr "輸出の準備"
 
 #: src/components/screens/Export/ui.jsx:226
 msgid "export-screen.modals.request-user-data.text"
@@ -398,11 +398,11 @@ msgstr ""
 
 #: src/components/screens/Export/ui.jsx:232
 msgid "export-screen.modals.request-user-data.placeholder.first-name"
-msgstr ""
+msgstr "ファーストネーム"
 
 #: src/components/screens/Export/ui.jsx:243
 msgid "export-screen.modals.request-user-data.placeholder.last-name"
-msgstr ""
+msgstr "苗字"
 
 #: src/components/screens/Export/ui.jsx:254
 msgid "export-screen.modals.request-user-data.placeholder.case-id"
@@ -415,20 +415,21 @@ msgstr "エクスポート完了"
 #: src/components/screens/Export/ui.jsx:291
 msgid "export-screen.modals.export-completed.text"
 msgstr ""
-"無事に概要が記載されたPDFファイルが作成されました。これで保存や共有ができるよ"
-"うになりました。"
+"概要のエクスポートが正常に作成されました。これで、共有または保存することがで"
+"きます。"
 
 #: src/components/screens/Export/ui.jsx:293
 msgid "export-screen.modals.export-completed.text.csv"
 msgstr ""
+"保健所がSORMASソフトと連携している場合は、CSVファイルを選択してください。"
 
 #: src/components/screens/Export/ui.jsx:297
 msgid "export-screen.modals.export-completed.csv.headline"
-msgstr ""
+msgstr "CSVファイル"
 
 #: src/components/screens/Export/ui.jsx:315
 msgid "export-screen.modals.export-completed.pdf.headline"
-msgstr ""
+msgstr "PDFファイル"
 
 #: src/components/screens/Legal/index.jsx:243
 #: src/components/screens/Menu.jsx:205
@@ -631,7 +632,7 @@ msgstr ""
 
 #: src/components/screens/Menu.jsx:197
 msgid "menu-screen.items.faq"
-msgstr ""
+msgstr "よくある質問"
 
 #: src/components/screens/Menu.jsx:201
 #: src/components/screens/Settings/ui.jsx:99
@@ -640,11 +641,11 @@ msgstr "設定"
 
 #: src/components/screens/Menu.jsx:209
 msgid "menu-screen.items.share"
-msgstr ""
+msgstr "このアプリを共有する"
 
 #: src/components/screens/Menu.jsx:213
 msgid "menu-screen.items.website"
-msgstr ""
+msgstr "サイトを訪れる"
 
 #: src/components/screens/Menu.jsx:261
 msgid "menu-screen.button.send-feedback"
@@ -673,11 +674,11 @@ msgstr "概要"
 
 #: src/components/screens/Overview/ui.jsx:148
 msgid "overview-screen.persons.empty"
-msgstr ""
+msgstr "日記に人を追加していません。"
 
 #: src/components/screens/Overview/ui.jsx:149
 msgid "overview-screen.locations.empty"
-msgstr ""
+msgstr "日記に場所を追加していません。"
 
 #: src/components/screens/Overview/ui.jsx:174
 msgid "overview-screen.export.button"
@@ -1081,19 +1082,21 @@ msgstr "今すぐ活性化する"
 
 #: src/components/screens/Welcome/ui.jsx:132
 msgid "welcome-screen.slides.import-contacts.headline"
-msgstr ""
+msgstr "輸入者"
 
 #: src/components/screens/Welcome/ui.jsx:133
 msgid "welcome-screen.slides.import-contacts.text"
 msgstr ""
+"コロニカは電話帳から人を取り込むことができるので、すぐに始めることができま"
+"す。"
 
 #: src/components/screens/Welcome/ui.jsx:134
 msgid "welcome-screen.slides.import-contacts.button-skip"
-msgstr ""
+msgstr "スキップ"
 
 #: src/components/screens/Welcome/ui.jsx:135
 msgid "welcome-screen.slides.import-contacts.button"
-msgstr ""
+msgstr "今すぐインポート"
 
 #: src/components/widgets/DayOverview.jsx:46
 msgid "total"
@@ -1101,7 +1104,7 @@ msgstr "合計"
 
 #: src/components/widgets/ModalSwitchDay.jsx:170
 msgid "modals-switch-day.headline"
-msgstr ""
+msgstr "日を選択してください。"
 
 #: src/components/widgets/SearchBar.jsx:77
 msgid "placeholder.search-input"

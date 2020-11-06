@@ -141,7 +141,7 @@ class ModalPersonOverview extends React.Component {
 
   styles = StyleSheet.create({
     personsList: {
-      height: this.props.vh(35),
+      maxHeight: this.props.vh(60),
     },
     modal: {
       justifyContent: 'flex-end',

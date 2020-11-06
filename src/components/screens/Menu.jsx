@@ -41,7 +41,7 @@ class Menu extends React.Component {
   }
 
   sendFeedback() {
-    Linking.openURL('mailto:info@kreativzirkel.de?subject=Coronika').catch(() => {});
+    Linking.openURL('mailto:info@coronika.app?subject=Feedback Coronika').catch(() => {});
   }
 
   visitKreativzirkel() {

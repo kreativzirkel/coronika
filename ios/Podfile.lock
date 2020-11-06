@@ -69,7 +69,7 @@ PODS:
   - glog (0.3.5)
   - Interactable (2.0.1):
     - React
-  - lottie-ios (3.1.8)
+  - lottie-ios (3.1.9)
   - lottie-react-native (3.5.0):
     - lottie-ios (~> 3.1.8)
     - React
@@ -328,9 +328,9 @@ PODS:
     - React-Core
   - RNReanimated (1.13.1):
     - React
-  - RNScreens (2.12.0):
+  - RNScreens (2.13.0):
     - React-Core
-  - RNShare (4.0.4):
+  - RNShare (4.1.0):
     - React-Core
   - RNSVG (12.1.0):
     - React
@@ -530,7 +530,7 @@ SPEC CHECKSUMS:
   Folly: b73c3869541e86821df3c387eb0af5f65addfab4
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
   Interactable: 334971ca372efcb6791bb47f81f3265963c47f3e
-  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
+  lottie-ios: 3a3758ef5a008e762faec9c9d50a39842f26d124
   lottie-react-native: 1fb4ce21d6ad37dab8343eaff8719df76035bd93
   OpenSSL-Universal: 8b48cc0d10c1b2923617dfe5c178aa9ed2689355
   RCTRequired: 48884c74035a0b5b76dbb7a998bd93bcfc5f2047
@@ -566,8 +566,8 @@ SPEC CHECKSUMS:
   RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
   RNLocalize: ff8b96bffbe096a158f952a170741208f2c18746
   RNReanimated: dd8c286ab5dd4ba36d3a7fef8bff7e08711b5476
-  RNScreens: 4b488fdf9537bbce829e2910c8cce1d17f6d9be8
-  RNShare: af2aeae0587bf3e40e5268f1ef96aa162f1a6ac9
+  RNScreens: 13f23e5498fb4aa749d19a5eda7f8792fbb9d01f
+  RNShare: 106a76243ac90f43ddb9028dcb78ade406b8adff
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   Yoga: 7d13633d129fd179e01b8953d38d47be90db185a
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a

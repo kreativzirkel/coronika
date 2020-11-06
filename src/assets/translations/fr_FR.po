@@ -67,7 +67,7 @@ msgstr "lieux"
 
 #: src/components/partials/EntriesTabsView/index.jsx:871
 msgid "entries.persons.list.new"
-msgstr "Nouvelle personne"
+msgstr "Créer une nouvelle personne"
 
 #: src/components/partials/EntriesTabsView/index.jsx:893
 #: src/components/partials/EntriesTabsView/index.jsx:953
@@ -86,7 +86,7 @@ msgstr "Importer maintenant"
 
 #: src/components/partials/EntriesTabsView/index.jsx:931
 msgid "entries.locations.list.new"
-msgstr "Nouvelle localisation"
+msgstr "Créer un nouveau localisation"
 
 #: src/components/partials/EntriesTabsView/index.jsx:957
 msgid "entries.locations.list.empty"
@@ -704,11 +704,11 @@ msgstr "Vue d'ensemble"
 
 #: src/components/screens/Overview/ui.jsx:148
 msgid "overview-screen.persons.empty"
-msgstr ""
+msgstr "Vous n'avez ajouté aucune personne à votre agenda."
 
 #: src/components/screens/Overview/ui.jsx:149
 msgid "overview-screen.locations.empty"
-msgstr ""
+msgstr "Vous n'avez ajouté aucun lieu à votre agenda."
 
 #: src/components/screens/Overview/ui.jsx:174
 msgid "overview-screen.export.button"
@@ -1139,7 +1139,7 @@ msgstr "total"
 
 #: src/components/widgets/ModalSwitchDay.jsx:170
 msgid "modals-switch-day.headline"
-msgstr ""
+msgstr "Sélectionnez le jour"
 
 #: src/components/widgets/SearchBar.jsx:77
 msgid "placeholder.search-input"
