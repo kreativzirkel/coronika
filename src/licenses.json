@@ -35,19 +35,19 @@
         "licenseUrl": "https://github.com/react-native-community/push-notification-ios/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "@react-navigation/bottom-tabs@5.10.2": {
+    "@react-navigation/bottom-tabs@5.10.6": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "@react-navigation/native@5.8.2": {
+    "@react-navigation/native@5.8.6": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "@react-navigation/stack@5.11.1": {
+    "@react-navigation/stack@5.12.3": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
@@ -77,7 +77,7 @@
         "licenseUrl": "https://github.com/lodash/lodash/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "lottie-ios@3.1.8": {
+    "lottie-ios@3.1.9": {
         "licenses": "Apache-2.0",
         "repository": "https://github.com/airbnb/lottie-ios",
         "licenseUrl": "https://github.com/airbnb/lottie-ios/raw/master/LICENSE",
@@ -179,13 +179,13 @@
         "licenseUrl": "https://github.com/th3rdwave/react-native-safe-area-context/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-screens@2.12.0": {
+    "react-native-screens@2.13.0": {
         "licenses": "MIT",
         "repository": "https://github.com/kmagiera/react-native-screens",
         "licenseUrl": "https://github.com/kmagiera/react-native-screens/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-share@4.0.4": {
+    "react-native-share@4.1.0": {
         "licenses": "MIT",
         "repository": "https://github.com/react-native-community/react-native-share",
         "licenseUrl": "https://github.com/react-native-community/react-native-share/raw/master/LICENSE",

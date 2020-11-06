@@ -1,8 +1,13 @@
 # Changelog
 
+## 1.7.1
+
+- Feedback mail address updated
+- Bug fixes and improvements
+
 ## 1.7.0
 
-- People can be hidden to reduce the list
+- Persons can be hidden to reduce the list
 - Detailed information on individual entries can be called up in the overview
 - Added button for quick creation of entries
 - Days can now be changed simply by clicking on the date
