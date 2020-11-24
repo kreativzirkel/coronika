@@ -121,6 +121,28 @@ const DayPersons = memo(({ colors, isDark, isSmall, persons, showIcons, styles, 
   );
 });
 
+const DayEncounters = memo(({ colors, isDark, isSmall, encounters, showIcons, styles, vw, __ }) => {
+  return (
+    <View style={styles.dayPersonsWrapper}>
+      <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('encounters')}</Text>
+      {showIcons ? (
+        <UilSmile color={colors.TEXT} size={vw(8.2)} style={styles.dayIcon} />
+      ) : (
+        <Text
+          style={{
+            ...styles.dayValue,
+            ...(isSmall && styles.dayValueSmall),
+            ...styles.dayValueNumber,
+            ...(!encounters && styles.dayValueNumberEmpty),
+            ...(isDark && styles.dayValueNumberDark),
+          }}>
+          {encounters || '-'}
+        </Text>
+      )}
+    </View>
+  );
+});
+
 class DayOverview extends React.Component {
   constructor(props) {
     super(props);
@@ -223,6 +245,7 @@ class DayOverview extends React.Component {
     const {
       colors,
       colorScheme,
+      encounters,
       formatTimeDistance,
       isDark,
       isEmphasized,
@@ -296,8 +319,12 @@ class DayOverview extends React.Component {
             __,
           }}
         />
-        {!isReduced && <DayLocations {...{ colors, isDark, isSmall, locations, showIcons, styles: styles, vw, __ }} />}
-        {!isReduced && <DayPersons {...{ colors, isDark, isSmall, persons, showIcons, styles: styles, vw, __ }} />}
+        {/* TODO: enable and refactor for Overview */}
+        {/* !isReduced && <DayLocations {...{ colors, isDark, isSmall, locations, showIcons, styles: styles, vw, __ }} /> */}
+        {/* !isReduced && <DayPersons {...{ colors, isDark, isSmall, persons, showIcons, styles: styles, vw, __ }} /> */}
+        {!isReduced && (
+          <DayEncounters {...{ colors, encounters, isDark, isSmall, showIcons, styles: styles, vw, __ }} />
+        )}
       </View>
     );
   }

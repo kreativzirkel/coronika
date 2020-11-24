@@ -163,7 +163,7 @@ class Dashboard extends React.Component {
     return timestamp.toString();
   }
 
-  renderItem({ item: { loadMore, locations, persons, timestamp } }) {
+  renderItem({ item: { loadMore, encounters, timestamp } }) {
     const { firstStartHintVisible, __ } = this.props;
 
     if (loadMore) {
@@ -183,8 +183,7 @@ class Dashboard extends React.Component {
         <DayOverview
           isEmphasized={timestamp === today.valueOf()}
           isTranslucent={firstStartHintVisible && timestamp !== today.valueOf()}
-          locations={locations.length}
-          persons={persons.length}
+          encounters={encounters.length}
           showIcons={firstStartHintVisible && timestamp === today.valueOf()}
           timestamp={timestamp}
           today={today}

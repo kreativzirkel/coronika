@@ -40,3 +40,5 @@ export const showFirstStartHint = () => ({ type: 'SHOW_FIRST_START_HINT_DASHBOAR
 export const hideFirstStartHint = () => ({ type: 'HIDE_FIRST_START_HINT_DASHBOARD' });
 
 export const setLastUpdated = (lastUpdated) => ({ type: 'SET_LAST_UPDATED_DASHBOARD', lastUpdated });
+
+export const transformDataStructure = () => ({ type: 'TRANSFORM_DATA_STRUCTURE_DASHBOARD' });

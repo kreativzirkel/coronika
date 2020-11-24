@@ -13,6 +13,7 @@ import {
   confirmFirstStartHint,
   showFirstStartHint,
   setLastUpdated,
+  transformDataStructure,
 } from './actions';
 import Screen from './ui';
 
@@ -108,6 +109,16 @@ const resetLastUsageTimestamps = () => async (dispatch, getState) => {
     });
 };
 
+const transformDataStructureAsync = () => async (dispatch, getState) => {
+  const {
+    dashboard: { dataStructureVersion },
+  } = getState();
+
+  if (dataStructureVersion !== '2') {
+    dispatch(transformDataStructure());
+  }
+};
+
 const mapStateToProps = ({ dashboard: { days, firstStartHintVisible } }) => {
   const daysList = Object.keys(days)
     .sort((a, b) => daysSortingFunction(a, b))
@@ -138,6 +149,8 @@ const Container = container(Screen, {
         store: { dispatch, getState },
       } = this.context;
 
+      dispatch(transformDataStructureAsync());
+
       await dispatch(await loadDays());
 
       dispatch(resetLastUsageTimestamps());
@@ -148,16 +161,15 @@ const Container = container(Screen, {
 
       if (!firstStartHintConfirmed) {
         const total = Object.values(days)
-          .map(({ persons, locations }) => ({ persons: persons.length, locations: locations.length }))
+          .map(({ encounters }) => ({ encounters: encounters.length }))
           .reduce(
             (accumulator, currentValue) => ({
-              persons: accumulator.persons + currentValue.persons,
-              locations: accumulator.locations + currentValue.locations,
+              encounters: accumulator.encounters + currentValue.encounters,
             }),
-            { persons: 0, locations: 0 }
+            { encounters: 0 }
           );
 
-        if (total.persons === 0 && total.locations === 0) {
+        if (total.encounters === 0) {
           dispatch(showFirstStartHint());
         }
       }
@@ -168,6 +180,8 @@ const Container = container(Screen, {
     const {
       store: { dispatch, getState },
     } = this.context;
+
+    dispatch(transformDataStructureAsync());
 
     const {
       dashboard: { lastUpdated },
