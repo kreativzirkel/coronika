@@ -1,5 +1,3 @@
-export const addPerson = (id) => ({ type: 'ADD_PERSON_ENCOUNTER', id });
-
 export const removePerson = (id) => ({ type: 'REMOVE_PERSON_ENCOUNTER', id });
 
 export const setPersons = (persons) => ({ type: 'SET_PERSONS_ENCOUNTER', persons });
@@ -29,6 +27,10 @@ export const hideDateSwitcherModal = () => ({ type: 'HIDE_DATE_SWITCHER_MODAL_EN
 export const showModalConfirmDelete = () => ({ type: 'SHOW_MODAL_CONFIRM_DELETE_ENCOUNTER' });
 
 export const hideModalConfirmDelete = () => ({ type: 'HIDE_MODAL_CONFIRM_DELETE_ENCOUNTER' });
+
+export const showModalHints = () => ({ type: 'SHOW_MODAL_HINTS_ENCOUNTER' });
+
+export const hideModalHints = () => ({ type: 'HIDE_MODAL_HINTS_ENCOUNTER' });
 
 export const showModalSelectLocation = () => ({ type: 'SHOW_MODAL_SELECT_LOCATION_ENCOUNTER' });
 

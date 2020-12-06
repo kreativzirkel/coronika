@@ -54,13 +54,13 @@ msgid "entries.modals.select-location.headline"
 msgstr "ස්ථානය තෝරන්න"
 
 #: src/components/partials/EntriesTabsView/index.jsx:851
-#: src/components/screens/Export/createPdfFile.js:346
+#: src/components/screens/Export/createPdfFile.js:352
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "පුද්ගලයන්"
 
 #: src/components/partials/EntriesTabsView/index.jsx:859
-#: src/components/screens/Export/createPdfFile.js:438
+#: src/components/screens/Export/createPdfFile.js:444
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "ස්ථාන"
@@ -146,17 +146,17 @@ msgstr "විස්තර"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:442
 #: src/components/partials/EntriesTabsView/Modals.jsx:454
-#: src/components/screens/Encounter/Modals.jsx:92
-#: src/components/screens/Encounter/ui.jsx:625
-#: src/components/screens/Encounter/ui.jsx:637
+#: src/components/screens/Encounter/Modals.jsx:104
+#: src/components/screens/Encounter/ui.jsx:635
+#: src/components/screens/Encounter/ui.jsx:647
 msgid "Cancel"
 msgstr "අවලංගු කරන්න"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:443
 #: src/components/partials/EntriesTabsView/Modals.jsx:455
-#: src/components/screens/Encounter/Modals.jsx:202
-#: src/components/screens/Encounter/ui.jsx:626
-#: src/components/screens/Encounter/ui.jsx:638
+#: src/components/screens/Encounter/Modals.jsx:402
+#: src/components/screens/Encounter/ui.jsx:636
+#: src/components/screens/Encounter/ui.jsx:648
 msgid "Confirm"
 msgstr "තහවුරු කරන්න"
 
@@ -242,6 +242,7 @@ msgid "dashboard-screen.first-start.hint"
 msgstr "ඔබගේ පළමු පුද්ගලයින් හෝ ස්ථාන ඇතුළත් කිරීමට අද දිනය තෝරන්න"
 
 #: src/components/screens/Dashboard/ui.jsx:225
+#: src/components/screens/Encounter/Modals.jsx:202
 msgid "Close"
 msgstr "වසන්න"
 
@@ -304,75 +305,111 @@ msgstr "ආනයනය ..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "දැන් ආයාත කරන්න"
 
-#: src/components/screens/Encounter/Modals.jsx:118
+#: src/components/screens/Encounter/Modals.jsx:203
+msgid "encounter-screen.modals.hints.headline"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:214
+msgid "encounter-screen.modals.hints.persons.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:225
+msgid "encounter-screen.modals.hints.location.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:236
+msgid "encounter-screen.modals.hints.time.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:247
+msgid "encounter-screen.modals.hints.outside.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:258
+msgid "encounter-screen.modals.hints.ventilated.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:268
+msgid "encounter-screen.modals.hints.mask.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:279
+msgid "encounter-screen.modals.hints.distance.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:290
+msgid "encounter-screen.modals.hints.note.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:318
 msgid "encounter-screen.modals.select-location.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:203
+#: src/components/screens/Encounter/Modals.jsx:403
 msgid "encounter-screen.modals.select-persons.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:79
+#: src/components/screens/Encounter/Modals.jsx:91
 msgid "encounter-screen.modals.delete.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:82
+#: src/components/screens/Encounter/Modals.jsx:94
 msgid "encounter-screen.modals.delete.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:86
+#: src/components/screens/Encounter/Modals.jsx:98
 msgid "encounter-screen.modals.delete.button-delete"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:410
+#: src/components/screens/Encounter/ui.jsx:418
 msgid "encounter-screen.headline.edit"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:410
+#: src/components/screens/Encounter/ui.jsx:418
 msgid "encounter-screen.headline.add"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:447
+#: src/components/screens/Encounter/ui.jsx:455
 msgid "encounter-screen.persons.add"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:471
+#: src/components/screens/Encounter/ui.jsx:479
 msgid "location"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:517
+#: src/components/screens/Encounter/ui.jsx:525
 msgid "encounter-screen.options.outside.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:517
+#: src/components/screens/Encounter/ui.jsx:525
 msgid "encounter-screen.options.outside.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:531
+#: src/components/screens/Encounter/ui.jsx:539
 msgid "encounter-screen.options.ventilated.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:531
+#: src/components/screens/Encounter/ui.jsx:539
 msgid "encounter-screen.options.ventilated.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:545
+#: src/components/screens/Encounter/ui.jsx:553
 msgid "encounter-screen.options.mask.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:545
+#: src/components/screens/Encounter/ui.jsx:553
 msgid "encounter-screen.options.mask.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:558
+#: src/components/screens/Encounter/ui.jsx:566
 msgid "encounter-screen.options.distance.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:558
+#: src/components/screens/Encounter/ui.jsx:566
 msgid "encounter-screen.options.distance.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:590
+#: src/components/screens/Encounter/ui.jsx:598
 msgid "encounter-screen.button.save"
 msgstr ""
 
@@ -393,7 +430,7 @@ msgstr "පිටුව"
 msgid "export-screen.header.headline"
 msgstr "අපනයන"
 
-#: src/components/screens/Export/createPdfFile.js:335
+#: src/components/screens/Export/createPdfFile.js:341
 msgid "quantity"
 msgstr "ප්‍රමාණය"
 

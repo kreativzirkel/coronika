@@ -6,6 +6,7 @@ const initialState = {
   location: undefined,
   mask: undefined, // true, false, undefined
   modalConfirmDeleteVisible: false,
+  modalHintsVisible: false,
   modalSelectLocationVisible: false,
   modalSelectPersonsVisible: false,
   modalTimestampEndVisible: false,
@@ -17,16 +18,10 @@ const initialState = {
   ventilation: undefined, // true, false, undefined
 };
 
-// TODO
+// TODO: reduce complexity
 /* eslint-disable-next-line complexity */
 export default (state = initialState, action = { type: null }) => {
   switch (action.type) {
-    case 'ADD_PERSON_ENCOUNTER': {
-      const id = action.id;
-
-      return { ...state, persons: [...state.persons, id] };
-    }
-
     case 'REMOVE_PERSON_ENCOUNTER': {
       const id = action.id;
 
@@ -92,6 +87,12 @@ export default (state = initialState, action = { type: null }) => {
 
     case 'HIDE_MODAL_CONFIRM_DELETE_ENCOUNTER':
       return { ...state, modalConfirmDeleteVisible: false };
+
+    case 'SHOW_MODAL_HINTS_ENCOUNTER':
+      return { ...state, modalHintsVisible: true };
+
+    case 'HIDE_MODAL_HINTS_ENCOUNTER':
+      return { ...state, modalHintsVisible: false };
 
     case 'SHOW_MODAL_SELECT_LOCATION_ENCOUNTER':
       return { ...state, modalSelectLocationVisible: true };

@@ -29,7 +29,7 @@ import ButtonSwitch from '../../widgets/ButtonSwitch';
 import DateTimePickerModal from '../../widgets/DateTimePickerModal';
 import { DayOverview } from '../../widgets/DayOverview';
 import ModalSwitchDay from '../../widgets/ModalSwitchDay';
-import { ModalDeleteEncounter, ModalSelectLocation, ModalSelectPersons } from './Modals';
+import { ModalDeleteEncounter, ModalHints, ModalSelectLocation, ModalSelectPersons } from './Modals';
 
 const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
 
@@ -322,6 +322,7 @@ class Encounter extends React.Component {
       locationTitle,
       mask,
       modalConfirmDeleteVisible,
+      modalHintsVisible,
       modalSelectLocationVisible,
       modalSelectPersonsVisible,
       modalTimestampEndVisible,
@@ -339,6 +340,7 @@ class Encounter extends React.Component {
       confirmTimestampStart,
       hideDateSwitcherModal,
       hideModalConfirmDelete,
+      hideModalHints,
       hideModalSelectLocation,
       hideModalSelectPersons,
       hideModalTimestampEnd,
@@ -600,6 +602,8 @@ class Encounter extends React.Component {
             </TouchableOpacity>
           )}
         </View>
+
+        <ModalHints isVisible={modalHintsVisible} onPressClose={hideModalHints} />
 
         <ModalSwitchDay
           closeModal={hideDateSwitcherModal}

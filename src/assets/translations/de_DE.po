@@ -54,13 +54,13 @@ msgid "entries.modals.select-location.headline"
 msgstr "Ort auswählen"
 
 #: src/components/partials/EntriesTabsView/index.jsx:851
-#: src/components/screens/Export/createPdfFile.js:346
+#: src/components/screens/Export/createPdfFile.js:352
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "Personen"
 
 #: src/components/partials/EntriesTabsView/index.jsx:859
-#: src/components/screens/Export/createPdfFile.js:438
+#: src/components/screens/Export/createPdfFile.js:444
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "Orte"
@@ -148,17 +148,17 @@ msgstr "Beschreibung"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:442
 #: src/components/partials/EntriesTabsView/Modals.jsx:454
-#: src/components/screens/Encounter/Modals.jsx:92
-#: src/components/screens/Encounter/ui.jsx:625
-#: src/components/screens/Encounter/ui.jsx:637
+#: src/components/screens/Encounter/Modals.jsx:104
+#: src/components/screens/Encounter/ui.jsx:635
+#: src/components/screens/Encounter/ui.jsx:647
 msgid "Cancel"
 msgstr "Abbrechen"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:443
 #: src/components/partials/EntriesTabsView/Modals.jsx:455
-#: src/components/screens/Encounter/Modals.jsx:202
-#: src/components/screens/Encounter/ui.jsx:626
-#: src/components/screens/Encounter/ui.jsx:638
+#: src/components/screens/Encounter/Modals.jsx:402
+#: src/components/screens/Encounter/ui.jsx:636
+#: src/components/screens/Encounter/ui.jsx:648
 msgid "Confirm"
 msgstr "Bestätigen"
 
@@ -248,6 +248,7 @@ msgstr ""
 "Klicke auf den heutigen Tag, um deine ersten Personen oder Orte einzutragen."
 
 #: src/components/screens/Dashboard/ui.jsx:225
+#: src/components/screens/Encounter/Modals.jsx:202
 msgid "Close"
 msgstr "Schließen"
 
@@ -313,75 +314,111 @@ msgstr "Importieren..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Jetzt importieren"
 
-#: src/components/screens/Encounter/Modals.jsx:118
+#: src/components/screens/Encounter/Modals.jsx:203
+msgid "encounter-screen.modals.hints.headline"
+msgstr "Hinweise"
+
+#: src/components/screens/Encounter/Modals.jsx:214
+msgid "encounter-screen.modals.hints.persons.text"
+msgstr "Mit wem hattest du eine Begegnung?"
+
+#: src/components/screens/Encounter/Modals.jsx:225
+msgid "encounter-screen.modals.hints.location.text"
+msgstr "Wo hat die Begegnung stattgefunden?"
+
+#: src/components/screens/Encounter/Modals.jsx:236
+msgid "encounter-screen.modals.hints.time.text"
+msgstr "Wann war die Begegnung?"
+
+#: src/components/screens/Encounter/Modals.jsx:247
+msgid "encounter-screen.modals.hints.outside.text"
+msgstr "Hat die Begegnung drinnen oder draußen stattgefunden?"
+
+#: src/components/screens/Encounter/Modals.jsx:258
+msgid "encounter-screen.modals.hints.ventilated.text"
+msgstr "Falls drinnen: Wurde der Raum mindestens alle 30 Minuten gelüftet?"
+
+#: src/components/screens/Encounter/Modals.jsx:268
+msgid "encounter-screen.modals.hints.mask.text"
+msgstr "Hast du einen Mund-/Nasenschutz getragen?"
+
+#: src/components/screens/Encounter/Modals.jsx:279
+msgid "encounter-screen.modals.hints.distance.text"
+msgstr "Wie groß war der Abstand zwischen den einzelnen Personen?"
+
+#: src/components/screens/Encounter/Modals.jsx:290
+msgid "encounter-screen.modals.hints.note.text"
+msgstr "Sonstige Notizen und Anmerkungen"
+
+#: src/components/screens/Encounter/Modals.jsx:318
 msgid "encounter-screen.modals.select-location.headline"
 msgstr "Ort auswählen"
 
-#: src/components/screens/Encounter/Modals.jsx:203
+#: src/components/screens/Encounter/Modals.jsx:403
 msgid "encounter-screen.modals.select-persons.headline"
 msgstr "Personen auswählen"
 
-#: src/components/screens/Encounter/Modals.jsx:79
+#: src/components/screens/Encounter/Modals.jsx:91
 msgid "encounter-screen.modals.delete.headline"
 msgstr "Begegnung löschen"
 
-#: src/components/screens/Encounter/Modals.jsx:82
+#: src/components/screens/Encounter/Modals.jsx:94
 msgid "encounter-screen.modals.delete.text"
 msgstr "Möchtest du diese Begegnung wirklich löschen?"
 
-#: src/components/screens/Encounter/Modals.jsx:86
+#: src/components/screens/Encounter/Modals.jsx:98
 msgid "encounter-screen.modals.delete.button-delete"
 msgstr "Löschen"
 
-#: src/components/screens/Encounter/ui.jsx:410
+#: src/components/screens/Encounter/ui.jsx:418
 msgid "encounter-screen.headline.edit"
 msgstr "Begegnung bearbeiten"
 
-#: src/components/screens/Encounter/ui.jsx:410
+#: src/components/screens/Encounter/ui.jsx:418
 msgid "encounter-screen.headline.add"
 msgstr "Begegnung hinzufügen"
 
-#: src/components/screens/Encounter/ui.jsx:447
+#: src/components/screens/Encounter/ui.jsx:455
 msgid "encounter-screen.persons.add"
 msgstr "Person hinzufügen"
 
-#: src/components/screens/Encounter/ui.jsx:471
+#: src/components/screens/Encounter/ui.jsx:479
 msgid "location"
 msgstr "Ort"
 
-#: src/components/screens/Encounter/ui.jsx:517
+#: src/components/screens/Encounter/ui.jsx:525
 msgid "encounter-screen.options.outside.yes"
 msgstr "draußen"
 
-#: src/components/screens/Encounter/ui.jsx:517
+#: src/components/screens/Encounter/ui.jsx:525
 msgid "encounter-screen.options.outside.no"
 msgstr "drinnen"
 
-#: src/components/screens/Encounter/ui.jsx:531
+#: src/components/screens/Encounter/ui.jsx:539
 msgid "encounter-screen.options.ventilated.yes"
 msgstr "gelüftet"
 
-#: src/components/screens/Encounter/ui.jsx:531
+#: src/components/screens/Encounter/ui.jsx:539
 msgid "encounter-screen.options.ventilated.no"
 msgstr "nicht gelüftet"
 
-#: src/components/screens/Encounter/ui.jsx:545
+#: src/components/screens/Encounter/ui.jsx:553
 msgid "encounter-screen.options.mask.yes"
 msgstr "Maske"
 
-#: src/components/screens/Encounter/ui.jsx:545
+#: src/components/screens/Encounter/ui.jsx:553
 msgid "encounter-screen.options.mask.no"
 msgstr "keine Maske"
 
-#: src/components/screens/Encounter/ui.jsx:558
+#: src/components/screens/Encounter/ui.jsx:566
 msgid "encounter-screen.options.distance.yes"
 msgstr ">= 1,5m"
 
-#: src/components/screens/Encounter/ui.jsx:558
+#: src/components/screens/Encounter/ui.jsx:566
 msgid "encounter-screen.options.distance.no"
 msgstr "< 1,5m"
 
-#: src/components/screens/Encounter/ui.jsx:590
+#: src/components/screens/Encounter/ui.jsx:598
 msgid "encounter-screen.button.save"
 msgstr "Speichern"
 
@@ -403,7 +440,7 @@ msgstr "Seite"
 msgid "export-screen.header.headline"
 msgstr "Export"
 
-#: src/components/screens/Export/createPdfFile.js:335
+#: src/components/screens/Export/createPdfFile.js:341
 msgid "quantity"
 msgstr "Anzahl"
 
