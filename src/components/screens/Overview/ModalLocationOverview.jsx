@@ -60,7 +60,7 @@ class LocationOverviewListItemClass extends React.Component {
   });
 
   render() {
-    const { colors, description, timestamp, timestampStart, timestampEnd, __ } = this.props;
+    const { colors, timestamp, __ } = this.props;
 
     const currentDay = moment(timestamp);
     const today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
@@ -76,26 +76,6 @@ class LocationOverviewListItemClass extends React.Component {
             {isToday ? __('today') : currentDay.from(today)}
           </Text>
         </View>
-
-        <View style={this.styles.locationContent}>
-          {description.trim().length > 0 && (
-            <Text
-              style={{
-                ...this.styles.locationContentText,
-                ...this.styles.locationContentDescription,
-                color: colors.GRAY_3,
-              }}>
-              {description}
-            </Text>
-          )}
-          {timestamp > 0 && (
-            <Text
-              style={{ ...this.styles.locationContentText, color: colors.TEXT, ...this.styles.locationContentTime }}>
-              {moment(timestampStart || 0).format('LT')}
-              {timestampEnd > 0 && timestampEnd > timestampStart && ` - ${moment(timestampEnd).format('LT')}`}
-            </Text>
-          )}
-        </View>
       </View>
     );
   }
@@ -105,7 +85,13 @@ const LocationOverviewListItem = withColorScheme(withI18n(withViewportUnits(Loca
 
 const getLocationEntries = (days, locationId) => {
   const timestamps = Object.keys(days)
-    .filter((timestamp) => days[timestamp].locations.find(({ id }) => id === locationId))
+    .filter((timestamp) =>
+      days[timestamp].encounters
+        .filter(({ location }) => location !== undefined)
+        .map(({ location }) => [location])
+        .reduce((accumulator, currentValue) => [...accumulator, ...currentValue], [])
+        .find((id) => id === locationId)
+    )
     .map((key) => parseInt(key, 10))
     .sort((a, b) => {
       if (a > b) return -1;
@@ -117,16 +103,16 @@ const getLocationEntries = (days, locationId) => {
   const entries = [];
 
   timestamps.forEach((timestamp) => {
-    days[timestamp].locations
-      .filter(({ id }) => id === locationId)
+    days[timestamp].encounters
+      .filter(({ location }) => location === locationId)
       .sort((a, b) => {
         if (a.timestamp > b.timestamp) return -1;
         if (a.timestamp < b.timestamp) return 1;
 
         return 0;
       })
-      .forEach(({ description, timestamp: timestampStart, timestampEnd }) => {
-        entries.push({ description, timestamp, timestampStart, timestampEnd });
+      .forEach(() => {
+        entries.push({ timestamp });
       });
   });
 
@@ -246,14 +232,9 @@ class ModalPersonOverview extends React.Component {
     return `location-overview-list-item-${timestamp}-${timestampStart}-${timestampEnd}`;
   }
 
-  locationOverviewRenderItem({ item: { description, timestamp, timestampStart, timestampEnd } }) {
+  locationOverviewRenderItem({ item: { timestamp, timestampStart, timestampEnd } }) {
     return (
-      <LocationOverviewListItem
-        description={description}
-        timestamp={timestamp}
-        timestampStart={timestampStart}
-        timestampEnd={timestampEnd}
-      />
+      <LocationOverviewListItem timestamp={timestamp} timestampStart={timestampStart} timestampEnd={timestampEnd} />
     );
   }
 

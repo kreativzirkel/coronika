@@ -1,8 +1,8 @@
 import About from './About';
-import AddEntry from './AddEntry/logic';
 import Directory from './Directory/logic';
 import Dashboard from './Dashboard/logic';
 import Day from './Day/logic';
+import Encounter from './Encounter/logic';
 import Export from './Export/logic';
 import Legal from './Legal';
 import Menu from './Menu';
@@ -23,10 +23,10 @@ import Welcome from './Welcome/logic';
 
 export default {
   About,
-  AddEntry,
   Directory,
   Dashboard,
   Day,
+  Encounter,
   Export,
   Legal,
   Menu,

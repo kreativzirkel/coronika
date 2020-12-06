@@ -48,9 +48,14 @@ const mapStateToProps = ({
   overview: { isLocationOverviewModalVisible, isPersonOverviewModalVisible, selectedLocationId, selectedPersonId },
 }) => {
   const total = Object.values(days)
-    .map(({ persons, locations }) => ({
-      persons: persons.map(({ id }) => id),
-      locations: locations.map(({ id }) => id),
+    .map(({ encounters }) => ({
+      persons: encounters
+        .map(({ persons }) => persons)
+        .reduce((accumulator, currentValue) => [...accumulator, ...currentValue], []),
+      locations: encounters
+        .filter(({ location }) => location !== undefined)
+        .map(({ location }) => [location])
+        .reduce((accumulator, currentValue) => [...accumulator, ...currentValue], []),
     }))
     .reduce(
       (accumulator, currentValue) => ({
@@ -75,34 +80,36 @@ const mapStateToProps = ({
   });
 
   daysSorted.forEach((day) => {
-    day.locations.forEach(({ id, title }) => {
-      if (Object.values(locations).find((l) => l.id === id)) {
-        locations[id].counter += 1;
-      } else {
-        const defaultLocationTitle = directoryLocations?.find((l) => l.id === id)?.title;
+    day.encounters.forEach(({ persons: encounterPersons, location: encounterLocationId }) => {
+      if (encounterLocationId !== undefined) {
+        if (Object.values(locations).find((l) => l.id === encounterLocationId)) {
+          locations[encounterLocationId].counter += 1;
+        } else {
+          const title = directoryLocations?.find((l) => l.id === encounterLocationId)?.title;
 
-        locations[id] = { counter: 1, id, title: defaultLocationTitle || title };
-      }
-    });
-
-    day.persons.forEach(({ id }) => {
-      if (Object.values(persons).find((p) => p.id === id)) {
-        persons[id].counter += 1;
-      } else {
-        let fullName = '';
-        const directoryPerson = directoryPersons?.find((p) => p.id === id);
-
-        if (directoryPerson) {
-          fullName =
-            directoryPerson.recordID !== undefined &&
-            !!directoryPerson.fullNameDisplay &&
-            directoryPerson.fullNameDisplay.trim().length > 0
-              ? directoryPerson.fullNameDisplay
-              : directoryPerson.fullName;
+          locations[encounterLocationId] = { counter: 1, id: encounterLocationId, title };
         }
-
-        persons[id] = { counter: 1, fullName, id };
       }
+
+      encounterPersons.forEach((personId) => {
+        if (Object.values(persons).find((p) => p.id === personId)) {
+          persons[personId].counter += 1;
+        } else {
+          let fullName = '';
+          const directoryPerson = directoryPersons?.find((p) => p.id === personId);
+
+          if (directoryPerson) {
+            fullName =
+              directoryPerson.recordID !== undefined &&
+              !!directoryPerson.fullNameDisplay &&
+              directoryPerson.fullNameDisplay.trim().length > 0
+                ? directoryPerson.fullNameDisplay
+                : directoryPerson.fullName;
+          }
+
+          persons[personId] = { counter: 1, fullName, id: personId };
+        }
+      });
     });
   });
 

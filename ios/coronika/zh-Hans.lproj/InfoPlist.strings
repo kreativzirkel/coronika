@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  coronika
+
+  Created by Leon Hillebrandt on 03.12.20.
+  Copyright © 2020 Kreativzirkel. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "coronika";

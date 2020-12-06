@@ -54,7 +54,11 @@ class HeaderBackClass extends React.Component {
       fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(5),
       marginLeft: 'auto',
+      textAlign: 'right',
       textTransform: 'lowercase',
+    },
+    headerHeadlineIos: {
+      paddingLeft: this.props.vw(12),
     },
     headerBackButton: {
       marginBottom: -this.props.vw(3),
@@ -82,7 +86,14 @@ class HeaderBackClass extends React.Component {
             </TouchableOpacity>
           )}
 
-          <Text style={{ ...this.styles.headerHeadline, color: colors.TEXT }}>{headline}</Text>
+          <Text
+            style={{
+              ...this.styles.headerHeadline,
+              color: colors.TEXT,
+              ...(Platform.OS === 'ios' && this.styles.headerHeadlineIos),
+            }}>
+            {headline}
+          </Text>
         </View>
       </Header>
     );

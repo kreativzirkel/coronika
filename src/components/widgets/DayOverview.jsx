@@ -143,7 +143,7 @@ const DayEncounters = memo(({ colors, isDark, isSmall, encounters, showIcons, st
   );
 });
 
-class DayOverview extends React.Component {
+class DayOverviewClass extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -253,6 +253,189 @@ class DayOverview extends React.Component {
       isSmall,
       isTotal,
       isTranslucent,
+      showIcons,
+      timestamp,
+      today,
+      vw,
+      __,
+    } = this.props;
+
+    const styles = {
+      ...this.styles,
+      day: {
+        ...this.styles.day,
+        backgroundColor: colors.SECONDARY,
+      },
+      dayDark: {
+        ...this.styles.dayDark,
+        backgroundColor: colorScheme === 'dark' ? colors.DARK.TEXT : colors.DARK.BACKGROUND,
+      },
+      dayValue: {
+        ...this.styles.dayValue,
+        color: colors.TEXT,
+      },
+      dayValueNumberEmpty: {
+        ...this.styles.dayValueNumberEmpty,
+        color: colors.GRAY_2,
+      },
+      dayValueNumberDark: {
+        ...this.styles.dayValueNumberDark,
+        color: colors.TEXT_ALT,
+      },
+      dayValueCaption: {
+        ...this.styles.dayValueCaption,
+        color: colors.GRAY_1,
+      },
+      dayValueCaptionDark: {
+        ...this.styles.dayValueCaptionDark,
+        color: colors.DARK.TEXT,
+      },
+    };
+
+    const currentDay = moment(this.props.timestamp);
+    const isToday = currentDay.diff(this.props.today) === 0;
+
+    return (
+      <View
+        style={{
+          ...styles.day,
+          ...(isDark && styles.dayDark),
+          ...(isEmphasized && styles.dayEmphasized),
+          ...(isTranslucent && styles.dayTranslucent),
+        }}>
+        <DayDate
+          {...{
+            formatTimeDistance,
+            isDark,
+            isReduced,
+            isSmall,
+            isToday,
+            isTotal,
+            styles: styles,
+            timestamp,
+            today,
+            __,
+          }}
+        />
+        {!isReduced && (
+          <DayEncounters {...{ colors, encounters, isDark, isSmall, showIcons, styles: styles, vw, __ }} />
+        )}
+      </View>
+    );
+  }
+}
+
+export const DayOverview = memo(withColorScheme(withI18n(withViewportUnits(DayOverviewClass))));
+
+class DayOverviewPersonsLocationsClass extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  styles = StyleSheet.create({
+    day: {
+      borderRadius: this.props.vw(2.3),
+      display: 'flex',
+      flexDirection: 'row',
+      marginBottom: this.props.vw(2),
+      marginLeft: this.props.vw(2.5),
+      marginRight: this.props.vw(2.5),
+      padding: this.props.vw(3),
+      paddingBottom: this.props.vw(2.5),
+      paddingTop: this.props.vw(2.5),
+    },
+    dayDark: {
+      //
+    },
+    dayEmphasized: {
+      borderColor: COLOR_PRIMARY,
+      borderWidth: this.props.vw(0.5),
+      padding: this.props.vw(2.5),
+      paddingBottom: this.props.vw(2),
+      paddingTop: this.props.vw(2),
+    },
+    dayTranslucent: {
+      opacity: 0.4,
+    },
+    dayIcon: {
+      alignSelf: 'flex-end',
+    },
+    dayValue: {
+      fontFamily: this.props.fontFamilyBold,
+      fontSize: this.props.vw(7),
+      textTransform: 'lowercase',
+    },
+    dayValueReduced: {
+      fontSize: this.props.vw(4.5),
+    },
+    dayValueSmall: {
+      fontSize: this.props.vw(5.5),
+    },
+    dayValueDay: {
+      marginRight: this.props.vw(2.5),
+    },
+    dayValueDayReduced: {
+      marginRight: this.props.vw(1.5),
+    },
+    dayValueDaySmall: {
+      marginRight: this.props.vw(1.8),
+    },
+    dayValueNumber: {
+      color: COLOR_PRIMARY,
+      textAlign: 'right',
+    },
+    dayValueNumberEmpty: {
+      //
+    },
+    dayValueNumberDark: {
+      //
+    },
+    dayValueCaption: {
+      fontFamily: this.props.fontFamilyRegular,
+      fontSize: this.props.vw(2.7),
+      marginBottom: this.props.vw(0.5),
+      textTransform: 'lowercase',
+    },
+    dayValueCaptionReduced: {
+      marginBottom: 0,
+    },
+    dayValueCaptionDark: {
+      //
+    },
+    dayValueWrapper: {
+      flexDirection: 'row',
+    },
+    dayDateWrapper: {
+      flex: 1,
+      flexDirection: 'column',
+    },
+    dayDateWrapperReduced: {
+      alignItems: 'center',
+      flexDirection: 'row-reverse',
+      justifyContent: 'space-between',
+    },
+    dayPersonsWrapper: {
+      flexGrow: 0,
+      flexShrink: 0,
+    },
+    dayLocationsWrapper: {
+      flexGrow: 0,
+      flexShrink: 0,
+      marginRight: this.props.vw(1.8),
+    },
+  });
+
+  render() {
+    const {
+      colors,
+      colorScheme,
+      formatTimeDistance,
+      isDark,
+      isEmphasized,
+      isReduced,
+      isSmall,
+      isTotal,
+      isTranslucent,
       locations,
       persons,
       showIcons,
@@ -319,15 +502,13 @@ class DayOverview extends React.Component {
             __,
           }}
         />
-        {/* TODO: enable and refactor for Overview */}
-        {/* !isReduced && <DayLocations {...{ colors, isDark, isSmall, locations, showIcons, styles: styles, vw, __ }} /> */}
-        {/* !isReduced && <DayPersons {...{ colors, isDark, isSmall, persons, showIcons, styles: styles, vw, __ }} /> */}
-        {!isReduced && (
-          <DayEncounters {...{ colors, encounters, isDark, isSmall, showIcons, styles: styles, vw, __ }} />
-        )}
+        {!isReduced && <DayLocations {...{ colors, isDark, isSmall, locations, showIcons, styles: styles, vw, __ }} />}
+        {!isReduced && <DayPersons {...{ colors, isDark, isSmall, persons, showIcons, styles: styles, vw, __ }} />}
       </View>
     );
   }
 }
 
-export default memo(withColorScheme(withI18n(withViewportUnits(DayOverview))));
+export const DayOverviewPersonsLocations = memo(
+  withColorScheme(withI18n(withViewportUnits(DayOverviewPersonsLocationsClass)))
+);

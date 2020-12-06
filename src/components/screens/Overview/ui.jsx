@@ -5,7 +5,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY, DAYS_OVERVIEW_MAX } from '../../../constants';
 import EntriesTabsView from '../../partials/EntriesTabsView';
-import DayOverview from '../../widgets/DayOverview';
+import { DayOverviewPersonsLocations } from '../../widgets/DayOverview';
 import Header from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 import ModalLocationOverview from './ModalLocationOverview';
@@ -133,7 +133,7 @@ const Overview = ({
         </Header>
 
         <View style={styles.dayOverviewWrapper}>
-          <DayOverview
+          <DayOverviewPersonsLocations
             isDark
             isSmall
             isTotal

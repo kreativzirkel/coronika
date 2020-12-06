@@ -223,8 +223,8 @@ const sortPersons = (inputPersonsList, orderByLastUsage = false) => {
         return 1;
       }
 
-      const fullNameA = a.fullName.toLowerCase();
-      const fullNameB = b.fullName.toLowerCase();
+      const fullNameA = a?.fullNameDisplay?.toLowerCase() || a.fullName.toLowerCase();
+      const fullNameB = b?.fullNameDisplay?.toLowerCase() || b.fullName.toLowerCase();
 
       if (fullNameA < fullNameB) {
         return -1;

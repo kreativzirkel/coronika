@@ -3,20 +3,18 @@ import moment from 'moment';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { COLOR_PRIMARY } from '../../../constants';
-import EntriesTabsView from '../../partials/EntriesTabsView';
-import DayOverview from '../../widgets/DayOverview';
+import { DayOverview } from '../../widgets/DayOverview';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 import ModalSwitchDay from '../../widgets/ModalSwitchDay';
+import EncountersList from './EncountersList';
 
 class Day extends React.Component {
   constructor(props) {
     super(props);
 
-    this.deleteLocationFromDay = this.deleteLocationFromDay.bind(this);
-    this.deletePersonFromDay = this.deletePersonFromDay.bind(this);
-    this.goToAddEntry = this.goToAddEntry.bind(this);
-    this.updateSelectedLocation = this.updateSelectedLocation.bind(this);
+    this.goToEncounter = this.goToEncounter.bind(this);
+    this.onPressEncounterItem = this.onPressEncounterItem.bind(this);
   }
 
   today = moment().hours(0).minutes(0).seconds(0).milliseconds(0);
@@ -49,29 +47,22 @@ class Day extends React.Component {
     },
   });
 
-  goToAddEntry() {
-    this.props.navigation.navigate('AddEntry');
+  goToEncounter() {
+    this.props.navigation.navigate('Encounter');
   }
 
-  deleteLocationFromDay(id, description, time) {
-    if (this.props.deleteLocationFromDay) this.props.deleteLocationFromDay(id, description, time);
-  }
+  onPressEncounterItem(id) {
+    const { navigation, openEncounter } = this.props;
 
-  deletePersonFromDay(id) {
-    if (this.props.deletePersonFromDay) this.props.deletePersonFromDay(id);
-  }
-
-  updateSelectedLocation(locationOld, locationUpdated) {
-    if (this.props.updateSelectedLocation) this.props.updateSelectedLocation(locationOld, locationUpdated);
+    openEncounter(id, navigation);
   }
 
   render() {
     const {
       colors,
       daysList,
+      encounters,
       isDateSwitcherModalVisible,
-      locations,
-      persons,
       timestamp,
       hideDateSwitcherModal,
       showDateSwitcherModal,
@@ -87,34 +78,14 @@ class Day extends React.Component {
 
         <View style={this.styles.dayOverviewWrapper}>
           <TouchableOpacity onPress={showDateSwitcherModal}>
-            <DayOverview
-              isDark
-              isSmall
-              locations={locations.length}
-              persons={persons.length}
-              timestamp={timestamp}
-              today={this.today}
-            />
+            <DayOverview isDark isSmall encounters={encounters.length} timestamp={timestamp} today={this.today} />
           </TouchableOpacity>
         </View>
 
-        <EntriesTabsView
-          allowDelete
-          allowMore
-          customLocationsEmptyText={__('day-screen.locations.empty')}
-          customPersonsEmptyText={__('day-screen.persons.empty')}
-          deletePersonItem={this.deletePersonFromDay}
-          deleteLocationItem={this.deleteLocationFromDay}
-          hideCreateButton
-          hideSearchBar
-          locations={locations}
-          persons={persons}
-          showHiddenPersons
-          updateSelectedLocation={this.updateSelectedLocation}
-        />
+        <EncountersList encounters={encounters} onPressItem={this.onPressEncounterItem} />
 
         <View style={{ ...this.styles.wrapperAddEntry, backgroundColor: colors.BACKGROUND }}>
-          <TouchableOpacity onPress={this.goToAddEntry} style={this.styles.buttonAdd}>
+          <TouchableOpacity onPress={this.goToEncounter} style={this.styles.buttonAdd}>
             <UilPlus color={COLOR_PRIMARY} size={vw(6)} style={this.styles.buttonAddIcon} />
             <Text style={this.styles.buttonAddText}>{__('day-screen.entries.add')}</Text>
           </TouchableOpacity>

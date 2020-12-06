@@ -2,7 +2,7 @@ import UilBars from '@iconscout/react-native-unicons/icons/uil-bars';
 import moment from 'moment';
 import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import DayOverview from '../../widgets/DayOverview';
+import { DayOverview } from '../../widgets/DayOverview';
 import Layout from '../../widgets/Layout';
 import Header from '../../widgets/Header';
 import { ALTERNATIVE_FONT_LANGUAGES, COLOR_PRIMARY } from '../../../constants';

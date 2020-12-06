@@ -134,7 +134,7 @@ class AppNavigatorTabBarClass extends React.Component {
     dispatch(setTimestampDay(today));
 
     this.props.navigation.navigate('Dashboard');
-    this.props.navigation.navigate('AddEntry');
+    this.props.navigation.navigate('Encounter');
   }
 
   styles = StyleSheet.create({
@@ -203,7 +203,7 @@ const isTabBarVisibleOnDashboard = (route) => {
 };
  */
 
-const AppNavigator = () => (
+const App = () => (
   <Tab.Navigator
     backBehaviour={'none'}
     initialRouteName={'Dashboard'}
@@ -220,7 +220,5 @@ const AppNavigator = () => (
     <Tab.Screen component={screens.Tips} name={'Tips'} />
   </Tab.Navigator>
 );
-
-const App = () => <AppNavigator />;
 
 export default App;

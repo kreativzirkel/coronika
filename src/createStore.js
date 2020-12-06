@@ -10,7 +10,7 @@ import thunk from 'redux-thunk';
 import { reducers } from './redux';
 
 const storeConfig = {
-  blacklist: ['addEntry', 'app', 'day', 'export', 'i18n', 'overview'],
+  blacklist: ['addEntry', 'app', 'encounter', 'day', 'export', 'i18n', 'overview'],
   key: 'coronika',
   stateReconciler: autoMergeLevel2,
   storage: AsyncStorage,

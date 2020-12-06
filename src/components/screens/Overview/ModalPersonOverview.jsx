@@ -72,7 +72,12 @@ const PersonOverviewListItem = withColorScheme(withI18n(withViewportUnits(Person
 
 const getPersonTimestamps = (days, personId) => {
   return Object.keys(days)
-    .filter((timestamp) => days[timestamp].persons.find(({ id }) => id === personId))
+    .filter((timestamp) =>
+      days[timestamp].encounters
+        .map(({ persons }) => persons)
+        .reduce((accumulator, currentValue) => [...accumulator, ...currentValue], [])
+        .find((id) => id === personId)
+    )
     .map((key) => parseInt(key, 10))
     .sort((a, b) => {
       if (a > b) return -1;

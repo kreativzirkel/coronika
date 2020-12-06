@@ -1,6 +1,4 @@
 import UilEllipsisV from '@iconscout/react-native-unicons/icons/uil-ellipsis-v';
-import UilMinus from '@iconscout/react-native-unicons/icons/uil-minus';
-import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
 import cloneDeep from 'lodash/cloneDeep';
 import deepEqual from 'fast-deep-equal';
 import moment from 'moment';
@@ -18,12 +16,10 @@ class LocationsListItemClass extends React.Component {
 
     this.onPress = this.onPress.bind(this);
     this.openMore = this.openMore.bind(this);
-    this.toggleSelection = this.toggleSelection.bind(this);
   }
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
     return (
-      this.props.isLocationSelected !== nextProps.isLocationSelected ||
       this.props.title !== nextProps.title ||
       this.props.description !== nextProps.description ||
       this.props.phone !== nextProps.phone ||
@@ -46,10 +42,6 @@ class LocationsListItemClass extends React.Component {
         this.props.timestamp,
         this.props.timestampEnd
       );
-  }
-
-  toggleSelection() {
-    if (this.props.toggleSelection) this.props.toggleSelection(this.props.id);
   }
 
   styles = StyleSheet.create({
@@ -139,10 +131,7 @@ class LocationsListItemClass extends React.Component {
       colors,
       counter,
       description,
-      isLocationSelected,
       onPress,
-      selectedLocationDescription,
-      selectedLocationTime,
       showCounter,
       timestamp,
       timestampEnd,
@@ -163,47 +152,12 @@ class LocationsListItemClass extends React.Component {
             {title}
           </Text>
 
-          {allowSelection && (
-            <View style={this.styles.selectButton}>
-              <View
-                style={{
-                  ...this.styles.selectButtonInner,
-                  ...(isLocationSelected && this.styles.selectButtonInnerSelected),
-                }}>
-                {isLocationSelected ? (
-                  <UilMinus size={vw(7)} color={colors.TEXT_ALT} />
-                ) : (
-                  <UilPlus size={vw(7)} color={COLOR_PRIMARY} />
-                )}
-              </View>
-            </View>
-          )}
-
           {showCounter && (
             <View style={this.styles.viewCounter}>
               <Text style={this.styles.viewCounterText}>{counter}</Text>
             </View>
           )}
         </View>
-
-        {allowSelection && isLocationSelected && (
-          <View style={this.styles.locationContent}>
-            {selectedLocationDescription.trim().length > 0 && (
-              <Text
-                style={{
-                  ...this.styles.locationContentText,
-                  ...this.styles.locationContentDescription,
-                  color: colors.GRAY_3,
-                }}>
-                {selectedLocationDescription}
-              </Text>
-            )}
-            <Text
-              style={{ ...this.styles.locationContentText, color: colors.TEXT, ...this.styles.locationContentTime }}>
-              {selectedLocationTime}
-            </Text>
-          </View>
-        )}
 
         {allowDelete && (
           <View style={this.styles.locationContent}>
@@ -235,11 +189,7 @@ class LocationsListItemClass extends React.Component {
       </View>
     );
 
-    return allowSelection ? (
-      <TouchableOpacity onPress={this.toggleSelection}>
-        <LocationItem />
-      </TouchableOpacity>
-    ) : onPress ? (
+    return onPress ? (
       <TouchableOpacity onPress={this.onPress}>
         <LocationItem />
       </TouchableOpacity>
@@ -306,26 +256,19 @@ class LocationsList extends React.Component {
       locations: sortLocations(this.props.locations, this.props.orderByLastUsage),
       locationsRaw: this.props.locations,
       locationsLength: this.props.locations.length,
-      selectedLocationsLength: this.props.selectedLocations.length,
     };
 
     this.onPressLocation = this.onPressLocation.bind(this);
     this.onPressMoreLocation = this.onPressMoreLocation.bind(this);
     this.renderItem = this.renderItem.bind(this);
-    this.toggleSelection = this.toggleSelection.bind(this);
   }
 
   static getDerivedStateFromProps(props, state) {
-    if (
-      props.locations.length !== state.locationsLength ||
-      props.selectedLocations.length !== state.selectedLocationsLength ||
-      !deepEqual(props.locations, state.locationsRaw)
-    ) {
+    if (props.locations.length !== state.locationsLength || !deepEqual(props.locations, state.locationsRaw)) {
       return {
         locations: sortLocations(props.locations, props.orderByLastUsage),
         locationsRaw: props.locations,
         locationsLength: props.locations.length,
-        selectedLocationsLength: props.selectedLocations.length,
       };
     }
 
@@ -335,7 +278,6 @@ class LocationsList extends React.Component {
   shouldComponentUpdate(nextProps, nextState, nextContext) {
     return (
       nextProps.locations.length !== this.state.locationsLength ||
-      nextProps.selectedLocations.length !== this.state.selectedLocationsLength ||
       !deepEqual(nextProps.locations, this.state.locationsRaw)
     );
   }
@@ -371,28 +313,12 @@ class LocationsList extends React.Component {
       );
   }
 
-  toggleSelection(locationId) {
-    if (this.props.toggleSelection) this.props.toggleSelection(locationId);
-  }
-
   renderItem({ item: { counter, description, id, phone, separatorItem, timestamp, timestampEnd, title } }) {
     if (separatorItem) {
       return <ListItemSeparator />;
     }
 
-    const { allowDelete, allowSelection, allowUpdate, onPressItem, selectedLocations, showCounter } = this.props;
-    const selectedLocation = allowSelection ? selectedLocations.find(({ id: locationId }) => locationId === id) : null;
-    const isLocationSelected = allowSelection && selectedLocation;
-    let selectedLocationDescription = '';
-    let selectedLocationTime = '';
-
-    if (isLocationSelected) {
-      selectedLocationDescription = selectedLocation.description;
-      selectedLocationTime = moment(selectedLocation.timestamp || 0).format('LT');
-      if (selectedLocation.timestampEnd > 0 && selectedLocation.timestampEnd > selectedLocation.timestamp) {
-        selectedLocationTime = `${selectedLocationTime} - ${moment(selectedLocation.timestampEnd).format('LT')}`;
-      }
-    }
+    const { allowDelete, allowSelection, allowUpdate, onPressItem, showCounter } = this.props;
 
     return (
       <LocationsListItem
@@ -402,17 +328,13 @@ class LocationsList extends React.Component {
         counter={counter}
         description={description}
         id={id}
-        isLocationSelected={isLocationSelected}
         onPress={onPressItem ? this.onPressLocation : null}
         onPressMore={this.onPressMoreLocation}
         phone={phone}
-        selectedLocationDescription={selectedLocationDescription}
-        selectedLocationTime={selectedLocationTime}
         showCounter={showCounter}
         timestamp={timestamp}
         timestampEnd={timestampEnd}
         title={title}
-        toggleSelection={this.toggleSelection}
       />
     );
   }
