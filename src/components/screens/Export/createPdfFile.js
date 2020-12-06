@@ -269,61 +269,67 @@ const createPdfFile = async (options = {}) => {
   });
 
   daysSorted.forEach((day) => {
-    day.locations.forEach(({ description, id, phone, title, timestamp, timestampEnd }) => {
-      if (Object.values(locations).find((l) => l.id === id)) {
-        locations[id].counter += 1;
-        if (phone && !locations[id].phoneNumbers.includes(phone)) locations[id].phoneNumbers.push(phone);
-        locations[id].timestamps = [...locations[id].timestamps, { description, timestamp, timestampEnd }];
-        if (day.timestamp > locations[id].lastUsage) {
-          locations[id].lastUsage = day.timestamp;
+    day.encounters.forEach(
+      ({ persons: encounterPersons, location: encounterLocationId, timestampStart, timestampEnd }) => {
+        if (encounterLocationId !== undefined) {
+          const directoryLocation = directoryLocations.find(({ id }) => id === encounterLocationId);
+          if (directoryLocation) {
+            if (Object.values(locations).find((l) => l.id === encounterLocationId)) {
+              locations[encounterLocationId].counter += 1;
+              locations[encounterLocationId].timestamps = [
+                ...locations[encounterLocationId].timestamps,
+                { timestampStart, timestampEnd },
+              ];
+              if (day.timestamp > locations[encounterLocationId].lastUsage) {
+                locations[encounterLocationId].lastUsage = day.timestamp;
+              }
+            } else {
+              const { phone, title } = directoryLocation;
+
+              locations[encounterLocationId] = {
+                counter: 1,
+                id: encounterLocationId,
+                lastUsage: day.timestamp,
+                phone,
+                title,
+                timestamps: [{ timestampStart, timestampEnd }],
+              };
+            }
+          }
         }
-      } else {
-        const defaultLocationPhone = directoryLocations?.find((l) => l.id === id)?.phone;
-        const defaultLocationTitle = directoryLocations?.find((l) => l.id === id)?.title;
 
-        locations[id] = {
-          counter: 1,
-          id,
-          lastUsage: day.timestamp,
-          phoneNumbers: defaultLocationPhone ? [defaultLocationPhone] : [],
-          title: defaultLocationTitle || title,
-          timestamps: [{ description, timestamp, timestampEnd }],
-        };
+        encounterPersons.forEach((personId) => {
+          if (Object.values(persons).find((p) => p.id === personId)) {
+            persons[personId].counter += 1;
+            if (day.timestamp > persons[personId].lastUsage) {
+              persons[personId].lastUsage = day.timestamp;
+            }
+          } else {
+            let fullName = '';
+            let phoneNumbers = [];
+            const directoryPerson = directoryPersons?.find((p) => p.id === personId);
 
-        if (phone && !locations[id].phoneNumbers.includes(phone)) locations[id].phoneNumbers.push(phone);
+            if (directoryPerson) {
+              fullName =
+                directoryPerson.recordID !== undefined &&
+                !!directoryPerson.fullNameDisplay &&
+                directoryPerson.fullNameDisplay.trim().length > 0
+                  ? directoryPerson.fullNameDisplay
+                  : directoryPerson.fullName;
+              phoneNumbers = directoryPerson.phoneNumbers || [];
+            }
+
+            persons[personId] = {
+              counter: 1,
+              fullName,
+              id: personId,
+              phoneNumbers,
+              lastUsage: day.timestamp,
+            };
+          }
+        });
       }
-    });
-
-    day.persons.forEach(({ id }) => {
-      if (Object.values(persons).find((p) => p.id === id)) {
-        persons[id].counter += 1;
-        if (day.timestamp > persons[id].lastUsage) {
-          persons[id].lastUsage = day.timestamp;
-        }
-      } else {
-        let fullName = '';
-        let phoneNumbers = [];
-        const directoryPerson = directoryPersons?.find((p) => p.id === id);
-
-        if (directoryPerson) {
-          fullName =
-            directoryPerson.recordID !== undefined &&
-            !!directoryPerson.fullNameDisplay &&
-            directoryPerson.fullNameDisplay.trim().length > 0
-              ? directoryPerson.fullNameDisplay
-              : directoryPerson.fullName;
-          phoneNumbers = directoryPerson.phoneNumbers || [];
-        }
-
-        persons[id] = {
-          counter: 1,
-          fullName,
-          id,
-          phoneNumbers,
-          lastUsage: day.timestamp,
-        };
-      }
-    });
+    );
   });
 
   const locationsSorted = Object.values(locations).sort((a, b) => sortByTitle(a, b));
@@ -467,7 +473,7 @@ const createPdfFile = async (options = {}) => {
     }
   }
 
-  locationsSorted.forEach(({ counter, lastUsage, phoneNumbers, timestamps, title }, index) => {
+  locationsSorted.forEach(({ counter, lastUsage, phone, timestamps, title }, index) => {
     let page;
 
     const daysLastUsage = (today - lastUsage) / 1000 / 60 / 60 / 24;
@@ -537,16 +543,13 @@ const createPdfFile = async (options = {}) => {
       size: entryNameTextSize,
     });
 
-    const numbers = [
-      ...new Set(phoneNumbers.map((number) => number.replace(/\s/g, '')).filter((number) => number.trim().length > 0)),
-    ];
-    const numbersText = numbers.join(', ');
+    const phoneNumber = (phone || '').replace(/\s/g, '').trim();
 
-    page.drawText(numbersText, {
+    page.drawText(phoneNumber, {
       x: PAGE_MARGINS.LEFT + entryPadding,
       y: pageCursorY - entryPadding - entryNameTextHeight - entryPadding - entryPhoneTextHeight,
       color: isRelevant ? rgb(0, 0, 0) : fontColorNotRelevant,
-      font: chooseFontRegular(numbersText),
+      font: chooseFontRegular(phoneNumber),
       size: entryPhoneTextSize,
     });
 
@@ -557,9 +560,9 @@ const createPdfFile = async (options = {}) => {
 
         return 0;
       })
-      .forEach(({ description, timestamp, timestampEnd }, i) => {
-        let timestampText = moment(timestamp).format('L LT');
-        if (timestampEnd > 0 && timestampEnd > timestamp)
+      .forEach(({ timestampStart, timestampEnd }, i) => {
+        let timestampText = moment(timestampStart).format('L LT');
+        if (timestampEnd > 0 && timestampEnd > timestampStart)
           timestampText = `${timestampText} - ${moment(timestampEnd).format('LT')}`;
 
         const timestampTextFont = chooseFontRegular(timestampText);
@@ -581,19 +584,6 @@ const createPdfFile = async (options = {}) => {
           font: timestampTextFont,
           size: entryTimestampTextSize,
         });
-
-        if (description.trim().length > 0) {
-          const timestampTextWidth = timestampTextFont.widthOfTextAtSize(timestampText, entryTimestampTextSize);
-          const descriptionText = `(${description.trim()})`;
-
-          page.drawText(descriptionText, {
-            x: PAGE_MARGINS.LEFT + 1.5 * entryPadding + timestampTextWidth,
-            y: y - entryTimestampTextHeight,
-            color: isRelevant ? rgb(0.33, 0.33, 0.33) : fontColorNotRelevant,
-            font: chooseFontRegular(descriptionText),
-            size: entryTimestampTextSize - 1,
-          });
-        }
       });
 
     pageCursorY -= locationEntryHeight;

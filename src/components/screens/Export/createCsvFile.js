@@ -19,38 +19,40 @@ const createCsvFile = (options = {}) => {
   });
 
   daysSorted.forEach((day) => {
-    day.persons.forEach(({ id }) => {
-      if (Object.values(persons).find((p) => p.id === id)) {
-        persons[id].counter += 1;
-        if (day.timestamp > persons[id].lastUsage) {
-          persons[id].lastUsage = day.timestamp;
-        }
-      } else {
-        let fullName = '';
-        let phoneNumbers = [];
-        let emailAddresses = [];
-        const directoryPerson = directoryPersons?.find((p) => p.id === id);
+    day.encounters.forEach(({ persons: encounterPersons }) => {
+      encounterPersons.forEach((personId) => {
+        if (Object.values(persons).find((p) => p.id === personId)) {
+          persons[personId].counter += 1;
+          if (day.timestamp > persons[personId].lastUsage) {
+            persons[personId].lastUsage = day.timestamp;
+          }
+        } else {
+          let fullName = '';
+          let phoneNumbers = [];
+          let emailAddresses = [];
+          const directoryPerson = directoryPersons?.find((p) => p.id === personId);
 
-        if (directoryPerson) {
-          fullName =
-            directoryPerson.recordID !== undefined &&
-            !!directoryPerson.fullNameDisplay &&
-            directoryPerson.fullNameDisplay.trim().length > 0
-              ? directoryPerson.fullNameDisplay
-              : directoryPerson.fullName;
-          phoneNumbers = directoryPerson.phoneNumbers || [];
-          emailAddresses = directoryPerson.emailAddresses || [];
-        }
+          if (directoryPerson) {
+            fullName =
+              directoryPerson.recordID !== undefined &&
+              !!directoryPerson.fullNameDisplay &&
+              directoryPerson.fullNameDisplay.trim().length > 0
+                ? directoryPerson.fullNameDisplay
+                : directoryPerson.fullName;
+            phoneNumbers = directoryPerson.phoneNumbers || [];
+            emailAddresses = directoryPerson.emailAddresses || [];
+          }
 
-        persons[id] = {
-          counter: 1,
-          fullName,
-          id,
-          phoneNumbers,
-          emailAddresses,
-          lastUsage: day.timestamp,
-        };
-      }
+          persons[personId] = {
+            counter: 1,
+            fullName,
+            id: personId,
+            phoneNumbers,
+            emailAddresses,
+            lastUsage: day.timestamp,
+          };
+        }
+      });
     });
   });
 
