@@ -1,5 +1,6 @@
 import UilClock from '@iconscout/react-native-unicons/icons/uil-clock';
 import UilEditAlt from '@iconscout/react-native-unicons/icons/uil-edit-alt';
+import UilInfoCircle from '@iconscout/react-native-unicons/icons/uil-info-circle';
 import UilLocationPinAlt from '@iconscout/react-native-unicons/icons/uil-location-pin-alt';
 import UilMinus from '@iconscout/react-native-unicons/icons/uil-minus';
 import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
@@ -124,6 +125,21 @@ class Encounter extends React.Component {
   }
 
   styles = StyleSheet.create({
+    headerWrapper: {
+      alignItems: 'center',
+      display: 'flex',
+      flexDirection: 'row',
+    },
+    headerComponentWrapper: {
+      width: this.props.vw(90),
+    },
+    headerIconWrapper: {
+      alignItems: 'center',
+      height: this.props.vw(12),
+      justifyContent: 'center',
+      marginTop: -this.props.vw(1.5),
+      width: this.props.vw(8),
+    },
     button: {
       alignItems: 'center',
       backgroundColor: COLOR_PRIMARY,
@@ -347,6 +363,7 @@ class Encounter extends React.Component {
       hideModalTimestampStart,
       showDateSwitcherModal,
       showModalConfirmDelete,
+      showModalHints,
       showModalSelectLocation,
       showModalSelectPersons,
       showModalTimestampEnd,
@@ -410,10 +427,17 @@ class Encounter extends React.Component {
 
     return (
       <Layout>
-        <HeaderBack
-          headline={id !== undefined ? __('encounter-screen.headline.edit') : __('encounter-screen.headline.add')}
-          navigation={navigation}
-        />
+        <View style={styles.headerWrapper}>
+          <View style={styles.headerComponentWrapper}>
+            <HeaderBack
+              headline={id !== undefined ? __('encounter-screen.headline.edit') : __('encounter-screen.headline.add')}
+              navigation={navigation}
+            />
+          </View>
+          <TouchableOpacity onPress={showModalHints} style={styles.headerIconWrapper}>
+            <UilInfoCircle color={colors.TEXT} size={vw(6.5)} />
+          </TouchableOpacity>
+        </View>
 
         <View style={this.styles.dayOverviewWrapper}>
           <TouchableOpacity onPress={showDateSwitcherModal} disabled={id !== undefined}>
