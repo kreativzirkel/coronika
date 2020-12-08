@@ -48,10 +48,10 @@ The app is available at the Apple App Store and on Google Play:
 </tr>
 <tr>
 <td style="border: 0; padding-left: 0; padding-top: 0;">
-<small>_Apple and the Apple Logo are trademarks of Apple Inc._</small>
+<small><em>Apple and the Apple Logo are trademarks of Apple Inc.</em></small>
 </td>
 <td style="border: 0; padding-left: 15px; padding-top: 0;">
-<small>_Google Play and the Google Play logo are trademarks of Google LLC._</small>
+<small><em>Google Play and the Google Play logo are trademarks of Google LLC.</em></small>
 </td>
 </tr>
 </table>

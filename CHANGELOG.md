@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7.2
+
+- Optimized CSV export file
+- Bug fixes and improvements
+
 ## 1.7.1
 
 - Feedback mail address updated
