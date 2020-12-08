@@ -36,11 +36,25 @@ If we all make a small contribution, it will have a big effect on health and the
 Get more information on the [website](https://www.coronika.app/) of the app.
 
 ## Download the app
-At the moment the app is only available for android smartphones and you can get it on Google Play:
-<br>
-<a href="https://play.google.com/store/apps/details?id=de.kreativzirkel.coronika"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" style="width: 200px" width="200px" /></a>
-<br>
-<small>_Google Play and the Google Play logo are trademarks of Google LLC._</small>
+The app is available at the Apple App Store and on Google Play:
+<table>
+<tr>
+<td style="border: 0; padding-bottom: 0; padding-left: 0; padding-top: 8px;">
+<a href="https://apps.apple.com/de/app/coronika/id1538427759"><img alt="Download on the App Store" src="./docs/assets/images/apple-app-store.png" style="width: 160px" width="160px" /></a>
+</td>
+<td style="border: 0; padding-bottom: 0; padding-left: 0;">
+<a href="https://play.google.com/store/apps/details?id=de.kreativzirkel.coronika"><img alt="Get it on Google Play" src="./docs/assets/images/google-play.png" style="width: 200px" width="200px" /></a>
+</td>
+</tr>
+<tr>
+<td style="border: 0; padding-left: 0; padding-top: 0;">
+<small><em>Apple and the Apple Logo are trademarks of Apple Inc.</em></small>
+</td>
+<td style="border: 0; padding-left: 15px; padding-top: 0;">
+<small><em>Google Play and the Google Play logo are trademarks of Google LLC.</em></small>
+</td>
+</tr>
+</table>
 
 ## Translations
 The app currently is available in 17 languages:

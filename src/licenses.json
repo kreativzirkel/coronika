@@ -5,7 +5,7 @@
         "licenseUrl": "https://github.com/Iconscout/react-native-unicons",
         "parents": "coronika"
     },
-    "@pdf-lib/fontkit@1.0.0": {
+    "@pdf-lib/fontkit@1.1.1": {
         "licenses": "MIT",
         "repository": "https://github.com/Hopding/fontkit",
         "licenseUrl": "https://github.com/Hopding/fontkit",
@@ -17,7 +17,7 @@
         "licenseUrl": "https://github.com/react-native-community/react-native-async-storage/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "@react-native-community/datetimepicker@3.0.4": {
+    "@react-native-community/datetimepicker@3.0.8": {
         "licenses": "MIT",
         "repository": "https://github.com/react-native-community/datetimepicker",
         "licenseUrl": "https://github.com/react-native-community/datetimepicker/raw/master/LICENSE.md",
@@ -29,31 +29,31 @@
         "licenseUrl": "https://github.com/react-native-community/react-native-masked-view",
         "parents": "coronika"
     },
-    "@react-native-community/push-notification-ios@1.7.1": {
+    "@react-native-community/push-notification-ios@1.8.0": {
         "licenses": "MIT",
         "repository": "https://github.com/react-native-community/push-notification-ios",
         "licenseUrl": "https://github.com/react-native-community/push-notification-ios/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "@react-navigation/bottom-tabs@5.10.6": {
+    "@react-navigation/bottom-tabs@5.11.2": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "@react-navigation/native@5.8.6": {
+    "@react-navigation/native@5.8.10": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "@react-navigation/stack@5.12.3": {
+    "@react-navigation/stack@5.12.8": {
         "licenses": "MIT",
         "repository": "https://github.com/react-navigation/react-navigation",
         "licenseUrl": "https://github.com/react-navigation/react-navigation/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "csv-stringify@5.5.1": {
+    "csv-stringify@5.5.3": {
         "licenses": "MIT",
         "repository": "https://github.com/adaltas/node-csv-stringify",
         "licenseUrl": "https://github.com/adaltas/node-csv-stringify/raw/master/LICENSE",
@@ -95,13 +95,13 @@
         "licenseUrl": "https://github.com/moment/moment/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "node-libs-react-native@1.2.0": {
+    "node-libs-react-native@1.2.1": {
         "licenses": "MIT",
         "repository": "https://github.com/parshap/node-libs-react-native",
         "licenseUrl": "https://github.com/parshap/node-libs-react-native/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "pdf-lib@1.11.2": {
+    "pdf-lib@1.13.0": {
         "licenses": "MIT",
         "repository": "https://github.com/Hopding/pdf-lib",
         "licenseUrl": "https://github.com/Hopding/pdf-lib/raw/master/LICENSE.md",
@@ -125,7 +125,7 @@
         "licenseUrl": "https://github.com/itinance/react-native-fs/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-gesture-handler@1.8.0": {
+    "react-native-gesture-handler@1.9.0": {
         "licenses": "MIT",
         "repository": "https://github.com/software-mansion/react-native-gesture-handler",
         "licenseUrl": "https://github.com/software-mansion/react-native-gesture-handler/raw/master/LICENSE",
@@ -143,13 +143,13 @@
         "licenseUrl": "https://github.com/wix/react-native-interactable/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-localize@1.4.3": {
+    "react-native-localize@2.0.1": {
         "licenses": "MIT",
-        "repository": "https://github.com/react-native-community/react-native-localize",
-        "licenseUrl": "https://github.com/react-native-community/react-native-localize/raw/master/LICENSE",
+        "repository": "https://github.com/zoontek/react-native-localize",
+        "licenseUrl": "https://github.com/zoontek/react-native-localize/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-modal-datetime-picker@9.0.0": {
+    "react-native-modal-datetime-picker@9.1.0": {
         "licenses": "MIT",
         "repository": "https://github.com/mmazzarolo/react-native-modal-datetime-picker",
         "licenseUrl": "https://github.com/mmazzarolo/react-native-modal-datetime-picker/raw/master/LICENSE.md",
@@ -161,25 +161,25 @@
         "licenseUrl": "https://github.com/react-native-community/react-native-modal/raw/master/LICENSE.md",
         "parents": "coronika"
     },
-    "react-native-push-notification@6.1.2": {
+    "react-native-push-notification@6.1.3": {
         "licenses": "MIT",
         "repository": "https://github.com/zo0r/react-native-push-notification",
         "licenseUrl": "https://github.com/zo0r/react-native-push-notification/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-reanimated@1.13.1": {
+    "react-native-reanimated@1.13.2": {
         "licenses": "MIT",
         "repository": "https://github.com/software-mansion/react-native-reanimated",
         "licenseUrl": "https://github.com/software-mansion/react-native-reanimated/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-safe-area-context@3.1.8": {
+    "react-native-safe-area-context@3.1.9": {
         "licenses": "MIT",
         "repository": "https://github.com/th3rdwave/react-native-safe-area-context",
         "licenseUrl": "https://github.com/th3rdwave/react-native-safe-area-context/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-screens@2.13.0": {
+    "react-native-screens@2.15.0": {
         "licenses": "MIT",
         "repository": "https://github.com/kmagiera/react-native-screens",
         "licenseUrl": "https://github.com/kmagiera/react-native-screens/raw/master/LICENSE",
@@ -203,7 +203,7 @@
         "licenseUrl": "https://github.com/react-native-community/react-native-svg/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native@0.63.3": {
+    "react-native@0.63.4": {
         "licenses": "MIT",
         "repository": "https://github.com/facebook/react-native",
         "licenseUrl": "https://github.com/facebook/react-native/raw/master/LICENSE",

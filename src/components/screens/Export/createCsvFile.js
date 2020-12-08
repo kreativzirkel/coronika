@@ -117,7 +117,7 @@ const createCsvFile = (options = {}) => {
     ]);
   });
 
-  const content = stringify(outputData, { delimiter: ',', recordDelimiter: '\r\n', eof: false });
+  const content = stringify(outputData, { delimiter: ';', recordDelimiter: '\r\n', eof: false });
 
   const filename = `contacts${
     userCaseId.trim().length > 0 ? `_${userCaseId.trim()}` : ''
