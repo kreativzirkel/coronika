@@ -33,10 +33,11 @@ class SearchBar extends React.Component {
       zIndex: 2,
     },
     searchInput: {
+      borderWidth: this.props.vw(0.8),
       borderRadius: 8,
       fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(3.8),
-      height: this.props.vw(11),
+      height: this.props.vw(12.6),
       marginLeft: this.props.vw(2.5),
       marginRight: this.props.vw(2.5),
       padding: this.props.vw(3.5),
@@ -57,7 +58,7 @@ class SearchBar extends React.Component {
   }
 
   render() {
-    const { colors, innerRef, searchValue, vw, __ } = this.props;
+    const { colors, innerRef, searchValue, showBorder, vw, __ } = this.props;
 
     return (
       <View style={this.styles.searchWrapper}>
@@ -78,7 +79,12 @@ class SearchBar extends React.Component {
           placeholderTextColor={colors.GRAY_3}
           ref={innerRef}
           returnKeyType={'search'}
-          style={{ ...this.styles.searchInput, backgroundColor: colors.BACKGROUND, color: colors.TEXT }}
+          style={{
+            ...this.styles.searchInput,
+            backgroundColor: colors.BACKGROUND,
+            color: colors.TEXT,
+            borderColor: showBorder ? colors.SECONDARY : colors.BACKGROUND,
+          }}
           textContentType={'none'}
           value={searchValue}
         />

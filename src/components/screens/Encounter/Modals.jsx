@@ -7,7 +7,7 @@ import UilUsersAlt from '@iconscout/react-native-unicons/icons/uil-users-alt';
 import UilWind from '@iconscout/react-native-unicons/icons/uil-wind';
 import deepEqual from 'fast-deep-equal';
 import React, { Fragment } from 'react';
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Keyboard, ScrollView, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
 import MaskIcon from '../../../assets/images/icons/mask.svg';
 import { COLOR_PRIMARY } from '../../../constants';
 import withI18n from '../../../i18n';
@@ -16,6 +16,7 @@ import withViewportUnits from '../../../utils/withViewportUnits';
 import LocationsList from '../../widgets/LocationsList';
 import ModalDefault from '../../widgets/ModalDefault';
 import PersonsList from '../../widgets/PersonsList';
+import SearchBar from '../../widgets/SearchBar';
 
 class ModalDeleteEncounterClass extends React.Component {
   constructor(props) {
@@ -298,24 +299,91 @@ export const ModalHints = withColorScheme(withI18n(withViewportUnits(ModalHintsC
 class ModalSelectLocationClass extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      searchValue: '',
+    };
+
+    this.searchInput = React.createRef();
+    this.onPressSearchIcon = this.onPressSearchIcon.bind(this);
+    this.setSearchValue = this.setSearchValue.bind(this);
   }
 
   styles = StyleSheet.create({
     listWrapper: {
       height: this.props.vh(65),
     },
+    listEmptyWrapper: {
+      flex: 1,
+      padding: this.props.vw(10),
+      paddingTop: this.props.vw(5),
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    listEmptyText: {
+      fontFamily: this.props.fontFamilyRegular,
+      fontSize: this.props.vw(4.2),
+      lineHeight: this.props.vw(6.5),
+      marginBottom: this.props.vw(4.5),
+      textAlign: 'center',
+    },
   });
 
+  onPressSearchIcon() {
+    const { searchValue } = this.state;
+
+    if (searchValue.length > 0) {
+      Keyboard.dismiss();
+      this.setSearchValue('');
+    } else {
+      this.searchInput.current.focus();
+    }
+  }
+
+  setSearchValue(value) {
+    this.setState({ searchValue: value });
+  }
+
   render() {
-    const { isVisible, locations, onPressClose, onPressLocation, __ } = this.props;
+    const { colors, isVisible, locations, onPressClose, onPressLocation, __ } = this.props;
+    const { searchValue } = this.state;
+
+    const isSearchFilled = searchValue.trim().length > 0;
+    const filteredLocations = isSearchFilled
+      ? locations.filter(({ title }) => title.toLowerCase().indexOf(searchValue.trim().toLowerCase()) !== -1)
+      : locations;
 
     return (
       <ModalDefault
         headline={__('encounter-screen.modals.select-location.headline')}
         isVisible={isVisible}
         onPressClose={onPressClose}>
+        <SearchBar
+          onPressSearchIcon={this.onPressSearchIcon}
+          ref={this.searchInput}
+          searchValue={searchValue}
+          setSearchValue={this.setSearchValue}
+          showBorder
+        />
+        {/* TODO: add button for new location */}
         <View style={this.styles.listWrapper}>
-          <LocationsList locations={locations} orderByLastUsage onPressItem={onPressLocation} />
+          {filteredLocations.length > 0 ? (
+            <LocationsList locations={filteredLocations} orderByLastUsage onPressItem={onPressLocation} />
+          ) : (
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+              <View style={this.styles.listEmptyWrapper}>
+                {isSearchFilled ? (
+                  <Text style={{ ...this.styles.listEmptyText, color: colors.TEXT }}>
+                    {__('entries.search.list.empty')}
+                  </Text>
+                ) : (
+                  <Text style={{ ...this.styles.listEmptyText, color: colors.TEXT }}>
+                    {__('entries.locations.list.empty')}
+                  </Text>
+                )}
+              </View>
+            </TouchableWithoutFeedback>
+          )}
         </View>
       </ModalDefault>
     );
@@ -330,10 +398,14 @@ class ModalSelectPersonsClass extends React.Component {
 
     this.state = {
       isVisible: this.props.isVisible,
+      searchValue: '',
       selectedPersons: this.props.selectedPersons,
     };
 
+    this.searchInput = React.createRef();
     this.onPressConfirm = this.onPressConfirm.bind(this);
+    this.onPressSearchIcon = this.onPressSearchIcon.bind(this);
+    this.setSearchValue = this.setSearchValue.bind(this);
     this.toggleSelection = this.toggleSelection.bind(this);
   }
 
@@ -358,6 +430,7 @@ class ModalSelectPersonsClass extends React.Component {
     return (
       (nextProps.isVisible && !this.state.isVisible) ||
       nextProps.isVisible !== this.props.isVisible ||
+      nextState.searchValue !== this.state.searchValue ||
       nextProps.selectedPersons.length !== this.state.selectedPersons.length ||
       nextState.selectedPersons.length !== this.state.selectedPersons.length ||
       !deepEqual(nextProps.selectedPersons, this.state.selectedPersons) ||
@@ -368,6 +441,20 @@ class ModalSelectPersonsClass extends React.Component {
   styles = StyleSheet.create({
     listWrapper: {
       height: this.props.vh(60),
+    },
+    listEmptyWrapper: {
+      flex: 1,
+      padding: this.props.vw(10),
+      paddingTop: this.props.vw(5),
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    listEmptyText: {
+      fontFamily: this.props.fontFamilyRegular,
+      fontSize: this.props.vw(4.2),
+      lineHeight: this.props.vw(6.5),
+      marginBottom: this.props.vw(4.5),
+      textAlign: 'center',
     },
   });
 
@@ -381,6 +468,21 @@ class ModalSelectPersonsClass extends React.Component {
     this.props.onPressClose();
   }
 
+  onPressSearchIcon() {
+    const { searchValue } = this.state;
+
+    if (searchValue.length > 0) {
+      Keyboard.dismiss();
+      this.setSearchValue('');
+    } else {
+      this.searchInput.current.focus();
+    }
+  }
+
+  setSearchValue(value) {
+    this.setState({ searchValue: value });
+  }
+
   toggleSelection(id) {
     if (this.state.selectedPersons.includes(id)) {
       this.setState({ selectedPersons: this.state.selectedPersons.filter((personId) => personId !== id) });
@@ -391,7 +493,13 @@ class ModalSelectPersonsClass extends React.Component {
 
   render() {
     const { isVisible, persons, onPressClose, __ } = this.props;
-    const { selectedPersons } = this.state;
+    const { searchValue, selectedPersons } = this.state;
+
+    const isSearchFilled = searchValue.trim().length > 0;
+    const visiblePersons = persons.filter(({ hidden }) => !hidden);
+    const filteredPersons = isSearchFilled
+      ? visiblePersons.filter(({ fullName }) => fullName.toLowerCase().indexOf(searchValue.trim().toLowerCase()) !== -1)
+      : visiblePersons;
 
     return (
       <ModalDefault
@@ -400,12 +508,20 @@ class ModalSelectPersonsClass extends React.Component {
         isVisible={isVisible}
         onPressClose={onPressClose}
         onPressConfirm={this.onPressConfirm}>
+        <SearchBar
+          onPressSearchIcon={this.onPressSearchIcon}
+          ref={this.searchInput}
+          searchValue={searchValue}
+          setSearchValue={this.setSearchValue}
+          showBorder
+        />
+        {/* TODO: add button for new person */}
         <View style={this.styles.listWrapper}>
           <PersonsList
             allowSelection
             orderByLastUsage
             toggleSelection={this.toggleSelection}
-            persons={persons.filter(({ hidden }) => !hidden)}
+            persons={filteredPersons}
             selectedPersons={selectedPersons}
           />
         </View>
