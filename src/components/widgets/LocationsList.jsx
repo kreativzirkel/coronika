@@ -48,8 +48,6 @@ class LocationsListItemClass extends React.Component {
     location: {
       borderRadius: this.props.vw(2.3),
       flexDirection: 'column',
-      marginLeft: this.props.vw(2.5),
-      marginRight: this.props.vw(2.5),
       marginTop: this.props.vw(2.3),
       padding: this.props.vw(3),
     },

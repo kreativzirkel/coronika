@@ -8,7 +8,16 @@ import UilUsersAlt from '@iconscout/react-native-unicons/icons/uil-users-alt';
 import UilWind from '@iconscout/react-native-unicons/icons/uil-wind';
 import deepEqual from 'fast-deep-equal';
 import React, { Fragment } from 'react';
-import { Keyboard, ScrollView, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
+import {
+  Keyboard,
+  KeyboardAvoidingView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 import { ReactReduxContext } from 'react-redux';
 import MaskIcon from '../../../assets/images/icons/mask.svg';
 import { COLOR_PRIMARY } from '../../../constants';
@@ -374,16 +383,19 @@ class ModalSelectLocationClass extends React.Component {
 
     return (
       <ModalDefault
+        defaultKeyboardAvoidingViewDisabled
         headline={__('encounter-screen.modals.select-location.headline')}
         isVisible={isVisible}
         onPressClose={this.onPressClose}>
-        <SearchBar
-          onPressSearchIcon={this.onPressSearchIcon}
-          ref={this.searchInput}
-          searchValue={searchValue}
-          setSearchValue={this.setSearchValue}
-          showBorder
-        />
+        <KeyboardAvoidingView behavior={'padding'} enabled>
+          <SearchBar
+            onPressSearchIcon={this.onPressSearchIcon}
+            ref={this.searchInput}
+            searchValue={searchValue}
+            setSearchValue={this.setSearchValue}
+            showBorder
+          />
+        </KeyboardAvoidingView>
         {/* TODO: add button for new location */}
         <View style={this.styles.listWrapper}>
           {filteredLocations.length > 0 ? (
@@ -545,17 +557,20 @@ class ModalSelectPersonsClass extends React.Component {
     return (
       <ModalDefault
         buttonConfirmLabel={__('Confirm')}
+        defaultKeyboardAvoidingViewDisabled
         headline={__('encounter-screen.modals.select-persons.headline')}
         isVisible={isVisible}
         onPressClose={this.onPressClose}
         onPressConfirm={this.onPressConfirm}>
-        <SearchBar
-          onPressSearchIcon={this.onPressSearchIcon}
-          ref={this.searchInput}
-          searchValue={searchValue}
-          setSearchValue={this.setSearchValue}
-          showBorder
-        />
+        <KeyboardAvoidingView behavior={'padding'} enabled>
+          <SearchBar
+            onPressSearchIcon={this.onPressSearchIcon}
+            ref={this.searchInput}
+            searchValue={searchValue}
+            setSearchValue={this.setSearchValue}
+            showBorder
+          />
+        </KeyboardAvoidingView>
         {/* TODO: add button for new person */}
         <View style={this.styles.listWrapper}>
           {filteredPersons.length > 0 ? (

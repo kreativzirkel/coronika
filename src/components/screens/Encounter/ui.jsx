@@ -178,7 +178,7 @@ class Encounter extends React.Component {
     encounterButtonWrapper: {
       alignItems: 'center',
       flexDirection: 'row',
-      padding: this.props.vw(3.5),
+      padding: this.props.vw(2.3),
       paddingBottom: 0,
       width: '100%',
     },

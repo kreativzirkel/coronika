@@ -87,7 +87,16 @@ class ModalDefaultClass extends React.Component {
   }
 
   render() {
-    const { buttonConfirmDisabled, buttonConfirmLabel, children, colors, headline, isVisible, vw } = this.props;
+    const {
+      buttonConfirmDisabled,
+      buttonConfirmLabel,
+      children,
+      colors,
+      defaultKeyboardAvoidingViewDisabled,
+      headline,
+      isVisible,
+      vw,
+    } = this.props;
     const { renderedBefore } = this.state;
 
     if (!renderedBefore && !isVisible) return null;
@@ -118,7 +127,7 @@ class ModalDefaultClass extends React.Component {
         statusBarTranslucent
         style={styles.modal}
         useNativeDriver>
-        <KeyboardAvoidingView behavior={'padding'} enabled>
+        <KeyboardAvoidingView behavior={'padding'} enabled={!defaultKeyboardAvoidingViewDisabled}>
           <View style={styles.modalContent}>
             <View style={styles.modalHeader}>
               <Text numberOfLines={1} style={styles.modalHeaderText}>

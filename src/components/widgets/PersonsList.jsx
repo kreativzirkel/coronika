@@ -45,8 +45,6 @@ class PersonListItemClass extends React.Component {
       borderRadius: this.props.vw(2.3),
       flexDirection: 'row',
       justifyContent: 'space-between',
-      marginLeft: this.props.vw(2.5),
-      marginRight: this.props.vw(2.5),
       marginTop: this.props.vw(2.3),
       padding: this.props.vw(3),
     },

@@ -749,12 +749,19 @@ class EntriesTabsView extends React.Component {
       marginLeft: this.props.vw(1.5),
       textTransform: 'lowercase',
     },
+    searchBarWrapper: {
+      paddingLeft: this.props.vw(2.5),
+      paddingRight: this.props.vw(2.5),
+      width: '100%',
+    },
     tabContentWrapper: {
       alignItems: 'center',
       flex: 1,
       flexDirection: 'column',
       height: '100%',
       justifyContent: 'center',
+      paddingLeft: this.props.vw(2.5),
+      paddingRight: this.props.vw(2.5),
       width: '100%',
     },
   });
@@ -833,12 +840,14 @@ class EntriesTabsView extends React.Component {
     return (
       <Fragment>
         {!hideSearchBar && (
-          <SearchBar
-            onPressSearchIcon={this.onPressSearchIcon}
-            ref={this.searchInput}
-            searchValue={searchValue}
-            setSearchValue={this.setSearchValue}
-          />
+          <View style={this.styles.searchBarWrapper}>
+            <SearchBar
+              onPressSearchIcon={this.onPressSearchIcon}
+              ref={this.searchInput}
+              searchValue={searchValue}
+              setSearchValue={this.setSearchValue}
+            />
+          </View>
         )}
 
         {!hideTabBar && (
