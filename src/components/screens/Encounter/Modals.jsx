@@ -1,5 +1,6 @@
 import UilClock from '@iconscout/react-native-unicons/icons/uil-clock';
 import UilEditAlt from '@iconscout/react-native-unicons/icons/uil-edit-alt';
+import UilImport from '@iconscout/react-native-unicons/icons/uil-import';
 import UilLocationPinAlt from '@iconscout/react-native-unicons/icons/uil-location-pin-alt';
 import UilSocialDistancing from '@iconscout/react-native-unicons/icons/uil-social-distancing';
 import UilSun from '@iconscout/react-native-unicons/icons/uil-sun';
@@ -8,6 +9,7 @@ import UilWind from '@iconscout/react-native-unicons/icons/uil-wind';
 import deepEqual from 'fast-deep-equal';
 import React, { Fragment } from 'react';
 import { Keyboard, ScrollView, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
+import ReactReduxContext from 'react-redux/lib/components/Context';
 import MaskIcon from '../../../assets/images/icons/mask.svg';
 import { COLOR_PRIMARY } from '../../../constants';
 import withI18n from '../../../i18n';
@@ -17,6 +19,7 @@ import LocationsList from '../../widgets/LocationsList';
 import ModalDefault from '../../widgets/ModalDefault';
 import PersonsList from '../../widgets/PersonsList';
 import SearchBar from '../../widgets/SearchBar';
+import importPersons from '../Directory/importPersons';
 
 class ModalDeleteEncounterClass extends React.Component {
   constructor(props) {
@@ -305,6 +308,7 @@ class ModalSelectLocationClass extends React.Component {
     };
 
     this.searchInput = React.createRef();
+    this.importPersons = this.importPersons.bind(this);
     this.onPressClose = this.onPressClose.bind(this);
     this.onPressSearchIcon = this.onPressSearchIcon.bind(this);
     this.setSearchValue = this.setSearchValue.bind(this);
@@ -329,6 +333,15 @@ class ModalSelectLocationClass extends React.Component {
       textAlign: 'center',
     },
   });
+
+  importPersons() {
+    const {
+      store: { dispatch },
+    } = this.context;
+    const { __ } = this.props;
+
+    dispatch(importPersons(__));
+  }
 
   onPressClose() {
     this.setSearchValue('');
@@ -395,6 +408,8 @@ class ModalSelectLocationClass extends React.Component {
     );
   }
 }
+
+ModalSelectLocationClass.contextType = ReactReduxContext;
 
 export const ModalSelectLocation = withColorScheme(withI18n(withViewportUnits(ModalSelectLocationClass)));
 
@@ -463,6 +478,20 @@ class ModalSelectPersonsClass extends React.Component {
       marginBottom: this.props.vw(4.5),
       textAlign: 'center',
     },
+    personsImportButton: {
+      alignItems: 'center',
+      flexDirection: 'row',
+      justifyContent: 'center',
+    },
+    personsImportButtonIcon: {
+      marginRight: this.props.vw(1.5),
+    },
+    personsImportButtonText: {
+      color: COLOR_PRIMARY,
+      fontFamily: this.props.fontFamilyRegular,
+      fontSize: this.props.vw(4.5),
+      textTransform: 'lowercase',
+    },
   });
 
   onPressClose() {
@@ -504,7 +533,7 @@ class ModalSelectPersonsClass extends React.Component {
   }
 
   render() {
-    const { isVisible, persons, __ } = this.props;
+    const { colors, isVisible, persons, vw, __ } = this.props;
     const { searchValue, selectedPersons } = this.state;
 
     const isSearchFilled = searchValue.trim().length > 0;
@@ -529,13 +558,37 @@ class ModalSelectPersonsClass extends React.Component {
         />
         {/* TODO: add button for new person */}
         <View style={this.styles.listWrapper}>
-          <PersonsList
-            allowSelection
-            orderByLastUsage
-            toggleSelection={this.toggleSelection}
-            persons={filteredPersons}
-            selectedPersons={selectedPersons}
-          />
+          {filteredPersons.length > 0 ? (
+            <PersonsList
+              allowSelection
+              orderByLastUsage
+              toggleSelection={this.toggleSelection}
+              persons={filteredPersons}
+              selectedPersons={selectedPersons}
+            />
+          ) : (
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+              <View style={this.styles.listEmptyWrapper}>
+                {isSearchFilled ? (
+                  <Text style={{ ...this.styles.listEmptyText, color: colors.TEXT }}>
+                    {__('entries.search.list.empty')}
+                  </Text>
+                ) : (
+                  <Fragment>
+                    <Text style={{ ...this.styles.listEmptyText, color: colors.TEXT }}>
+                      {__('entries.persons.list.empty')}
+                    </Text>
+                    <TouchableOpacity onPress={this.importPersons} style={this.styles.personsImportButton}>
+                      <UilImport color={COLOR_PRIMARY} size={vw(5.5)} style={this.styles.personsImportButtonIcon} />
+                      <Text style={this.styles.personsImportButtonText}>
+                        {__('entries.persons.list.import.button')}
+                      </Text>
+                    </TouchableOpacity>
+                  </Fragment>
+                )}
+              </View>
+            </TouchableWithoutFeedback>
+          )}
         </View>
       </ModalDefault>
     );
