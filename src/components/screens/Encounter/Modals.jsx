@@ -305,6 +305,7 @@ class ModalSelectLocationClass extends React.Component {
     };
 
     this.searchInput = React.createRef();
+    this.onPressClose = this.onPressClose.bind(this);
     this.onPressSearchIcon = this.onPressSearchIcon.bind(this);
     this.setSearchValue = this.setSearchValue.bind(this);
   }
@@ -329,6 +330,11 @@ class ModalSelectLocationClass extends React.Component {
     },
   });
 
+  onPressClose() {
+    this.setSearchValue('');
+    this.props.onPressClose();
+  }
+
   onPressSearchIcon() {
     const { searchValue } = this.state;
 
@@ -345,7 +351,7 @@ class ModalSelectLocationClass extends React.Component {
   }
 
   render() {
-    const { colors, isVisible, locations, onPressClose, onPressLocation, __ } = this.props;
+    const { colors, isVisible, locations, onPressLocation, __ } = this.props;
     const { searchValue } = this.state;
 
     const isSearchFilled = searchValue.trim().length > 0;
@@ -357,7 +363,7 @@ class ModalSelectLocationClass extends React.Component {
       <ModalDefault
         headline={__('encounter-screen.modals.select-location.headline')}
         isVisible={isVisible}
-        onPressClose={onPressClose}>
+        onPressClose={this.onPressClose}>
         <SearchBar
           onPressSearchIcon={this.onPressSearchIcon}
           ref={this.searchInput}
@@ -403,6 +409,7 @@ class ModalSelectPersonsClass extends React.Component {
     };
 
     this.searchInput = React.createRef();
+    this.onPressClose = this.onPressClose.bind(this);
     this.onPressConfirm = this.onPressConfirm.bind(this);
     this.onPressSearchIcon = this.onPressSearchIcon.bind(this);
     this.setSearchValue = this.setSearchValue.bind(this);
@@ -458,6 +465,11 @@ class ModalSelectPersonsClass extends React.Component {
     },
   });
 
+  onPressClose() {
+    this.setSearchValue('');
+    this.props.onPressClose();
+  }
+
   onPressConfirm() {
     if (this.props.onPressConfirm) {
       const { selectedPersons } = this.state;
@@ -465,7 +477,7 @@ class ModalSelectPersonsClass extends React.Component {
       this.props.onPressConfirm(selectedPersons);
     }
 
-    this.props.onPressClose();
+    this.onPressClose();
   }
 
   onPressSearchIcon() {
@@ -492,7 +504,7 @@ class ModalSelectPersonsClass extends React.Component {
   }
 
   render() {
-    const { isVisible, persons, onPressClose, __ } = this.props;
+    const { isVisible, persons, __ } = this.props;
     const { searchValue, selectedPersons } = this.state;
 
     const isSearchFilled = searchValue.trim().length > 0;
@@ -506,7 +518,7 @@ class ModalSelectPersonsClass extends React.Component {
         buttonConfirmLabel={__('Confirm')}
         headline={__('encounter-screen.modals.select-persons.headline')}
         isVisible={isVisible}
-        onPressClose={onPressClose}
+        onPressClose={this.onPressClose}
         onPressConfirm={this.onPressConfirm}>
         <SearchBar
           onPressSearchIcon={this.onPressSearchIcon}

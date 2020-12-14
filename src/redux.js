@@ -8,7 +8,6 @@ import exportState from './components/screens/Export/state';
 import { reducer as i18n } from './i18n';
 import overview from './components/screens/Overview/state';
 import settings from './components/screens/Settings/state';
-import welcome from './components/screens/Welcome/state';
 
 export const reducers = {
   app,
@@ -21,5 +20,4 @@ export const reducers = {
   i18n,
   overview,
   settings,
-  welcome,
 };

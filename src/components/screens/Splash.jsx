@@ -25,11 +25,11 @@ class Splash extends React.Component {
     dispatch(configurePushNotifications(navigation));
 
     const {
-      app: { welcomeScreenShowKey },
-      welcome: { showKey },
+      app: { showKeyWelcome: showKeyWelcomeApp },
+      settings: { showKeyWelcome: showKeyWelcomeSettings },
     } = getState();
 
-    const showWelcomeScreen = welcomeScreenShowKey !== showKey;
+    const showWelcomeScreen = showKeyWelcomeApp !== showKeyWelcomeSettings;
 
     (async () => {
       await new Promise((resolve) => setTimeout(resolve, Platform.OS === 'ios' ? 1500 : 1000));

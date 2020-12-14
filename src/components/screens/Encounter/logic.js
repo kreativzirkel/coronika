@@ -9,6 +9,7 @@ import withViewportUnits from '../../../utils/withViewportUnits';
 import { addEncounter, removeEncounter, updateEncounter } from '../Dashboard/actions';
 import { setTimestamp } from '../Day/actions';
 import { updateLastUsageOfLocation, updateLastUsageOfPerson } from '../Directory/actions';
+import { setShowKeyEncounterHints } from '../Settings/actions';
 import {
   hideDateSwitcherModal,
   hideModalConfirmDelete,
@@ -41,6 +42,15 @@ import Screen from './ui';
 const openDateSwitcherModal = () => async (dispatch) => {
   Keyboard.dismiss();
   dispatch(showDateSwitcherModal());
+};
+
+const closeModalHints = () => async (dispatch, getState) => {
+  const {
+    app: { showKeyEncounterHints: showKeyEncounterHintsApp },
+  } = getState();
+
+  dispatch(hideModalHints());
+  dispatch(setShowKeyEncounterHints(showKeyEncounterHintsApp));
 };
 
 const confirmTimestampEnd = (timestampEnd) => async (dispatch) => {
@@ -159,6 +169,7 @@ const locationsSortingFunction = (a, b) => {
 };
 
 const mapStateToProps = ({
+  app: { showKeyEncounterHints: showKeyEncounterHintsApp },
   directory: { persons: directoryPersons, locations: directoryLocations },
   dashboard: { days },
   day: { timestamp },
@@ -181,6 +192,7 @@ const mapStateToProps = ({
     timestampStart,
     ventilation,
   },
+  settings: { showKeyEncounterHints: showKeyEncounterHintsSettings },
 }) => {
   directoryPersons.sort((a, b) => personsSortingFunction(a, b));
   directoryLocations.sort((a, b) => locationsSortingFunction(a, b));
@@ -218,7 +230,7 @@ const mapStateToProps = ({
     locationTitle,
     mask,
     modalConfirmDeleteVisible,
-    modalHintsVisible,
+    modalHintsVisible: modalHintsVisible || showKeyEncounterHintsApp !== showKeyEncounterHintsSettings,
     modalSelectLocationVisible,
     modalSelectPersonsVisible,
     modalTimestampEndVisible,
@@ -243,7 +255,7 @@ const mapDispatchToProps = (dispatch) => {
     deleteEncounter: (navigation) => dispatch(deleteEncounter(navigation)),
     hideDateSwitcherModal: () => dispatch(hideDateSwitcherModal()),
     hideModalConfirmDelete: () => dispatch(hideModalConfirmDelete()),
-    hideModalHints: () => dispatch(hideModalHints()),
+    hideModalHints: () => dispatch(closeModalHints()),
     hideModalSelectLocation: () => dispatch(hideModalSelectLocation()),
     hideModalSelectPersons: () => dispatch(hideModalSelectPersons()),
     hideModalTimestampEnd: () => dispatch(hideModalTimestampEnd()),

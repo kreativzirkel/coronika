@@ -4,15 +4,15 @@ import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import importPersons from '../Directory/importPersons';
 import { activateDefaultNotifications } from '../Settings/logic';
-import { setShowKey } from './actions';
+import { setShowKeyWelcome } from '../Settings/actions';
 import Screen from './ui';
 
 const finish = (navigation) => async (dispatch, getState) => {
   const {
-    app: { welcomeScreenShowKey },
+    app: { showKeyWelcome },
   } = getState();
 
-  dispatch(setShowKey(welcomeScreenShowKey));
+  dispatch(setShowKeyWelcome(showKeyWelcome));
 
   navigation.navigate('App');
 };

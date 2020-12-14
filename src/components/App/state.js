@@ -3,7 +3,8 @@ const initialState = {
   screenHeight: undefined,
   screenOrientation: undefined,
   screenWidth: undefined,
-  welcomeScreenShowKey: '8',
+  showKeyEncounterHints: '1',
+  showKeyWelcome: '8',
 };
 
 export default (state = initialState, action = { type: null }) => {

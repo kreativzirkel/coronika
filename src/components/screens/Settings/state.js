@@ -5,6 +5,8 @@ const initialState = {
   notificationWashingHandsEnabled: false,
   notificationWashingHandsOption1Enabled: false,
   notificationWashingHandsOption2Enabled: false,
+  showKeyEncounterHints: '',
+  showKeyWelcome: '',
 };
 
 export default (state = initialState, action = { type: null }) => {
@@ -47,6 +49,12 @@ export default (state = initialState, action = { type: null }) => {
 
     case 'SET_COLOR_SCHEME_SETTINGS':
       return { ...state, colorScheme: action.colorScheme };
+
+    case 'SET_SHOW_KEY_ENCOUNTER_HINTS_SETTINGS':
+      return { ...state, showKeyEncounterHints: action.showKeyEncounterHints };
+
+    case 'SET_SHOW_KEY_WELCOME_SETTINGS':
+      return { ...state, showKeyWelcome: action.showKeyWelcome };
 
     default:
       return state;
