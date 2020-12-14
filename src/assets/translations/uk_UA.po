@@ -27,92 +27,97 @@ msgstr "Огляд"
 msgid "navigation.tips.label"
 msgstr "Поради"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1013
-#: src/components/partials/EntriesTabsView/index.jsx:1035
+#: src/components/partials/EntriesTabsView/index.jsx:1002
+msgid "entries.modals.update-person.headline"
+msgstr "Редагувати особу"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1002
+msgid "entries.modals.new-person.headline"
+msgstr "Нова людина"
+
+#: src/components/partials/EntriesTabsView/index.jsx:1022
+#: src/components/partials/EntriesTabsView/index.jsx:1044
 msgid "entries.modals.update-location.button"
 msgstr "Зберегти"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1014
+#: src/components/partials/EntriesTabsView/index.jsx:1023
 msgid "entries.modals.new-location.button"
 msgstr "Додайте"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1018
-#: src/components/partials/EntriesTabsView/index.jsx:1042
+#: src/components/partials/EntriesTabsView/index.jsx:1027
+#: src/components/partials/EntriesTabsView/index.jsx:1051
 msgid "entries.modals.update-location.headline"
 msgstr "Редагувати місцеположення"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1019
+#: src/components/partials/EntriesTabsView/index.jsx:1028
 msgid "entries.modals.new-location.headline"
 msgstr "Нове місцезнаходження"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1036
+#: src/components/partials/EntriesTabsView/index.jsx:1045
 msgid "entries.modals.select-location.button"
 msgstr "Виберіть"
 
-#: src/components/partials/EntriesTabsView/index.jsx:1043
+#: src/components/partials/EntriesTabsView/index.jsx:1052
 msgid "entries.modals.select-location.headline"
 msgstr "Виберіть місцеположення"
 
-#: src/components/partials/EntriesTabsView/index.jsx:851
+#: src/components/partials/EntriesTabsView/index.jsx:860
 #: src/components/screens/Export/createPdfFile.js:352
 #: src/components/widgets/DayOverview.jsx:105
 msgid "persons"
 msgstr "осіб"
 
-#: src/components/partials/EntriesTabsView/index.jsx:859
+#: src/components/partials/EntriesTabsView/index.jsx:868
 #: src/components/screens/Export/createPdfFile.js:444
 #: src/components/widgets/DayOverview.jsx:83
 msgid "locations"
 msgstr "локації"
 
-#: src/components/partials/EntriesTabsView/index.jsx:871
+#: src/components/partials/EntriesTabsView/index.jsx:880
 msgid "entries.persons.list.new"
 msgstr "Створити нову людину"
 
-#: src/components/partials/EntriesTabsView/index.jsx:893
-#: src/components/partials/EntriesTabsView/index.jsx:953
+#: src/components/partials/EntriesTabsView/index.jsx:902
+#: src/components/partials/EntriesTabsView/index.jsx:962
+#: src/components/screens/Encounter/Modals.jsx:408
+#: src/components/screens/Encounter/Modals.jsx:589
 msgid "entries.search.list.empty"
 msgstr "Нічого не вдалося знайти при вашому пошуку."
 
-#: src/components/partials/EntriesTabsView/index.jsx:904
+#: src/components/partials/EntriesTabsView/index.jsx:913
+#: src/components/screens/Encounter/Modals.jsx:594
 msgid "entries.persons.list.empty"
 msgstr ""
 "Ви ще не створили людину. Щоб розпочати роботу, ви можете імпортувати осіб "
 "із телефонної книги."
 
-#: src/components/partials/EntriesTabsView/index.jsx:913
+#: src/components/partials/EntriesTabsView/index.jsx:922
+#: src/components/screens/Encounter/Modals.jsx:599
 msgid "entries.persons.list.import.button"
 msgstr "Імпортуйте зараз"
 
-#: src/components/partials/EntriesTabsView/index.jsx:931
+#: src/components/partials/EntriesTabsView/index.jsx:940
 msgid "entries.locations.list.new"
 msgstr "Створити нове місце"
 
-#: src/components/partials/EntriesTabsView/index.jsx:957
+#: src/components/partials/EntriesTabsView/index.jsx:966
+#: src/components/screens/Encounter/Modals.jsx:412
 msgid "entries.locations.list.empty"
 msgstr ""
 "Ви ще не створили місцезнаходження. Почніть зараз і створіть своє перше "
 "місце розташування."
 
-#: src/components/partials/EntriesTabsView/index.jsx:975
+#: src/components/partials/EntriesTabsView/index.jsx:984
 msgid "entries.selection.add"
 msgstr "Додати вибір"
 
-#: src/components/partials/EntriesTabsView/index.jsx:990
+#: src/components/partials/EntriesTabsView/index.jsx:999
 msgid "entries.modals.update-person.button"
 msgstr "Зберегти"
 
-#: src/components/partials/EntriesTabsView/index.jsx:990
+#: src/components/partials/EntriesTabsView/index.jsx:999
 msgid "entries.modals.new-person.button"
 msgstr "Додайте"
-
-#: src/components/partials/EntriesTabsView/index.jsx:993
-msgid "entries.modals.update-person.headline"
-msgstr "Редагувати особу"
-
-#: src/components/partials/EntriesTabsView/index.jsx:993
-msgid "entries.modals.new-person.headline"
-msgstr "Нова людина"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:114
 msgid "entries.modals.new-person.placeholder.name"
@@ -148,17 +153,17 @@ msgstr "Опис"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:442
 #: src/components/partials/EntriesTabsView/Modals.jsx:454
-#: src/components/screens/Encounter/Modals.jsx:104
-#: src/components/screens/Encounter/ui.jsx:635
-#: src/components/screens/Encounter/ui.jsx:647
+#: src/components/screens/Encounter/Modals.jsx:113
+#: src/components/screens/Encounter/ui.jsx:655
+#: src/components/screens/Encounter/ui.jsx:667
 msgid "Cancel"
 msgstr "Скасувати"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:443
 #: src/components/partials/EntriesTabsView/Modals.jsx:455
-#: src/components/screens/Encounter/Modals.jsx:402
-#: src/components/screens/Encounter/ui.jsx:636
-#: src/components/screens/Encounter/ui.jsx:648
+#: src/components/screens/Encounter/Modals.jsx:559
+#: src/components/screens/Encounter/ui.jsx:656
+#: src/components/screens/Encounter/ui.jsx:668
 msgid "Confirm"
 msgstr "Підтвердіть"
 
@@ -249,7 +254,7 @@ msgstr ""
 "місцеположення."
 
 #: src/components/screens/Dashboard/ui.jsx:225
-#: src/components/screens/Encounter/Modals.jsx:202
+#: src/components/screens/Encounter/Modals.jsx:211
 msgid "Close"
 msgstr "Закрити"
 
@@ -315,111 +320,111 @@ msgstr "Імпорт..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Імпортуйте зараз"
 
-#: src/components/screens/Encounter/Modals.jsx:203
-msgid "encounter-screen.modals.hints.headline"
-msgstr ""
-
-#: src/components/screens/Encounter/Modals.jsx:214
-msgid "encounter-screen.modals.hints.persons.text"
-msgstr ""
-
-#: src/components/screens/Encounter/Modals.jsx:225
-msgid "encounter-screen.modals.hints.location.text"
-msgstr ""
-
-#: src/components/screens/Encounter/Modals.jsx:236
-msgid "encounter-screen.modals.hints.time.text"
-msgstr ""
-
-#: src/components/screens/Encounter/Modals.jsx:247
-msgid "encounter-screen.modals.hints.outside.text"
-msgstr ""
-
-#: src/components/screens/Encounter/Modals.jsx:258
-msgid "encounter-screen.modals.hints.ventilated.text"
-msgstr ""
-
-#: src/components/screens/Encounter/Modals.jsx:268
-msgid "encounter-screen.modals.hints.mask.text"
-msgstr ""
-
-#: src/components/screens/Encounter/Modals.jsx:279
-msgid "encounter-screen.modals.hints.distance.text"
-msgstr ""
-
-#: src/components/screens/Encounter/Modals.jsx:290
-msgid "encounter-screen.modals.hints.note.text"
-msgstr ""
-
-#: src/components/screens/Encounter/Modals.jsx:318
-msgid "encounter-screen.modals.select-location.headline"
-msgstr ""
-
-#: src/components/screens/Encounter/Modals.jsx:403
-msgid "encounter-screen.modals.select-persons.headline"
-msgstr ""
-
-#: src/components/screens/Encounter/Modals.jsx:91
+#: src/components/screens/Encounter/Modals.jsx:100
 msgid "encounter-screen.modals.delete.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:94
+#: src/components/screens/Encounter/Modals.jsx:103
 msgid "encounter-screen.modals.delete.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:98
+#: src/components/screens/Encounter/Modals.jsx:107
 msgid "encounter-screen.modals.delete.button-delete"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:418
+#: src/components/screens/Encounter/Modals.jsx:212
+msgid "encounter-screen.modals.hints.headline"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:223
+msgid "encounter-screen.modals.hints.persons.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:234
+msgid "encounter-screen.modals.hints.location.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:245
+msgid "encounter-screen.modals.hints.time.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:256
+msgid "encounter-screen.modals.hints.outside.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:267
+msgid "encounter-screen.modals.hints.ventilated.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:277
+msgid "encounter-screen.modals.hints.mask.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:288
+msgid "encounter-screen.modals.hints.distance.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:299
+msgid "encounter-screen.modals.hints.note.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:387
+msgid "encounter-screen.modals.select-location.headline"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:561
+msgid "encounter-screen.modals.select-persons.headline"
+msgstr ""
+
+#: src/components/screens/Encounter/ui.jsx:433
 msgid "encounter-screen.headline.edit"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:418
+#: src/components/screens/Encounter/ui.jsx:433
 msgid "encounter-screen.headline.add"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:455
+#: src/components/screens/Encounter/ui.jsx:475
 msgid "encounter-screen.persons.add"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:479
+#: src/components/screens/Encounter/ui.jsx:499
 msgid "location"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:525
+#: src/components/screens/Encounter/ui.jsx:545
 msgid "encounter-screen.options.outside.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:525
+#: src/components/screens/Encounter/ui.jsx:545
 msgid "encounter-screen.options.outside.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:539
+#: src/components/screens/Encounter/ui.jsx:559
 msgid "encounter-screen.options.ventilated.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:539
+#: src/components/screens/Encounter/ui.jsx:559
 msgid "encounter-screen.options.ventilated.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:553
+#: src/components/screens/Encounter/ui.jsx:573
 msgid "encounter-screen.options.mask.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:553
+#: src/components/screens/Encounter/ui.jsx:573
 msgid "encounter-screen.options.mask.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:566
+#: src/components/screens/Encounter/ui.jsx:586
 msgid "encounter-screen.options.distance.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:566
+#: src/components/screens/Encounter/ui.jsx:586
 msgid "encounter-screen.options.distance.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:598
+#: src/components/screens/Encounter/ui.jsx:618
 msgid "encounter-screen.button.save"
 msgstr ""
 
@@ -914,7 +919,7 @@ msgstr "Нагадування про використання щоденник�
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "нагадуйте щодня"
 
-#: src/components/screens/Splash.jsx:113
+#: src/components/screens/Splash.jsx:122
 msgid "splash-screen.supported-by.headline"
 msgstr ""
 
@@ -1255,7 +1260,7 @@ msgstr "всього"
 msgid "modals-switch-day.headline"
 msgstr "Виберіть день"
 
-#: src/components/widgets/SearchBar.jsx:77
+#: src/components/widgets/SearchBar.jsx:76
 msgid "placeholder.search-input"
 msgstr "Пошук"
 
@@ -1266,3 +1271,7 @@ msgstr "Джерела"
 #: src/components/widgets/Tip.jsx:200
 msgid "tips.sources.last-updated"
 msgstr "Останнє оновлення:"
+
+#: src/index.jsx:128
+msgid "Done"
+msgstr ""

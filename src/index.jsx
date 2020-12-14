@@ -2,7 +2,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import React from 'react';
-import { Appearance, Dimensions, SafeAreaView, StyleSheet, View } from 'react-native';
+import { Appearance, Dimensions, Platform, SafeAreaView, StyleSheet, View } from 'react-native';
+import KeyboardManager from 'react-native-keyboard-manager';
 import * as RNLocalize from 'react-native-localize';
 import { enableScreens } from 'react-native-screens';
 import { Provider } from 'react-redux';
@@ -12,7 +13,7 @@ import App from './components/App/logic';
 import screens from './components/screens';
 import { COLOR_PRIMARY, SUPPORTED_LANGUAGES } from './constants';
 import configureStore from './createStore';
-import { changeLanguage } from './i18n';
+import { changeLanguage, __ } from './i18n';
 import withColorScheme from './utils/withColorScheme';
 
 enableScreens();
@@ -118,6 +119,20 @@ class AppContainer extends React.PureComponent {
     dispatch(setScreenDimensions(screenHeight, screenWidth));
 
     this.appearanceListener = this.appearanceListener.bind(this);
+
+    if (Platform.OS === 'ios') {
+      KeyboardManager.setEnable(false);
+      KeyboardManager.setKeyboardDistanceFromTextField(0);
+      KeyboardManager.setPreventShowingBottomBlankSpace(false);
+      KeyboardManager.setEnableAutoToolbar(true);
+      KeyboardManager.setToolbarDoneBarButtonItemText(__('Done'));
+      KeyboardManager.setToolbarManageBehaviour(0);
+      KeyboardManager.setToolbarPreviousNextButtonEnable(false);
+      KeyboardManager.setShouldToolbarUsesTextFieldTintColor(true);
+      KeyboardManager.setShouldShowToolbarPlaceholder(false);
+      KeyboardManager.setOverrideKeyboardAppearance(false);
+      KeyboardManager.setShouldResignOnTouchOutside(true);
+    }
   }
 
   componentDidMount() {
