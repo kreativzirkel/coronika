@@ -74,10 +74,21 @@ export default (state = initialState, action = { type: null }) => {
       const personId = action.personId;
       const days = cloneDeep(state.days);
 
-      // TODO: remove person from encounters and remove encounters with only this person and no location
-
       Object.keys(days).forEach((timestamp) => {
-        days[timestamp].persons = days[timestamp].persons.filter(({ id }) => id !== personId);
+        const encounters = [];
+
+        days[timestamp].encounters.forEach((encounter) => {
+          const enc = {
+            ...encounter,
+            persons: encounter.persons.filter((id) => id !== personId),
+          };
+
+          if (enc.location !== undefined || enc.persons.length > 0) {
+            encounters.push(enc);
+          }
+        });
+
+        days[timestamp].encounters = encounters;
       });
 
       return { ...state, days };
@@ -87,10 +98,21 @@ export default (state = initialState, action = { type: null }) => {
       const locationId = action.locationId;
       const days = cloneDeep(state.days);
 
-      // TODO: remove location from encounters and remove encounters with this location and no persons
-
       Object.keys(days).forEach((timestamp) => {
-        days[timestamp].locations = days[timestamp].locations.filter(({ id }) => id !== locationId);
+        const encounters = [];
+
+        days[timestamp].encounters.forEach((encounter) => {
+          const enc = {
+            ...encounter,
+            location: encounter.location === locationId ? undefined : encounter.location,
+          };
+
+          if (enc.location !== undefined || enc.persons.length > 0) {
+            encounters.push(enc);
+          }
+        });
+
+        days[timestamp].encounters = encounters;
       });
 
       return { ...state, days };

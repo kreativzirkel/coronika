@@ -36,7 +36,7 @@ If we all make a small contribution, it will have a big effect on health and the
 Get more information on the [website](https://www.coronika.app/) of the app.
 
 ## Download the app
-The app is available at the Apple App Store and on Google Play:
+The app is available on the Apple App Store and on Google Play:
 <table>
 <tr>
 <td style="border: 0; padding-bottom: 0; padding-left: 0; padding-top: 8px;">
