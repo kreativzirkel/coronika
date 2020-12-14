@@ -712,11 +712,11 @@ class EntriesTabsView extends React.Component {
       textTransform: 'lowercase',
     },
     entriesEmptyWrapper: {
-      flex: 1,
-      padding: this.props.vw(10),
-      paddingTop: this.props.vw(5),
       alignItems: 'center',
-      justifyContent: 'center',
+      flex: 1,
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      padding: this.props.vw(10),
     },
     entriesEmptyText: {
       fontFamily: this.props.fontFamilyRegular,

@@ -328,11 +328,11 @@ class ModalSelectLocationClass extends React.Component {
       height: this.props.vh(65),
     },
     listEmptyWrapper: {
-      flex: 1,
-      padding: this.props.vw(10),
-      paddingTop: this.props.vw(5),
       alignItems: 'center',
-      justifyContent: 'center',
+      flex: 1,
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      padding: this.props.vw(10),
     },
     listEmptyText: {
       fontFamily: this.props.fontFamilyRegular,
@@ -477,11 +477,11 @@ class ModalSelectPersonsClass extends React.Component {
       height: this.props.vh(60),
     },
     listEmptyWrapper: {
-      flex: 1,
-      padding: this.props.vw(10),
-      paddingTop: this.props.vw(5),
       alignItems: 'center',
-      justifyContent: 'center',
+      flex: 1,
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      padding: this.props.vw(10),
     },
     listEmptyText: {
       fontFamily: this.props.fontFamilyRegular,
