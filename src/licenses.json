@@ -179,7 +179,7 @@
         "licenseUrl": "https://github.com/th3rdwave/react-native-safe-area-context/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-screens@2.15.0": {
+    "react-native-screens@2.16.1": {
         "licenses": "MIT",
         "repository": "https://github.com/kmagiera/react-native-screens",
         "licenseUrl": "https://github.com/kmagiera/react-native-screens/raw/master/LICENSE",
@@ -239,7 +239,7 @@
         "licenseUrl": "https://github.com/reduxjs/redux/raw/master/LICENSE.md",
         "parents": "coronika"
     },
-    "uuid@8.3.1": {
+    "uuid@8.3.2": {
         "licenses": "MIT",
         "repository": "https://github.com/uuidjs/uuid",
         "licenseUrl": "https://github.com/uuidjs/uuid/raw/master/LICENSE.md",
