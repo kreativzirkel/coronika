@@ -9,7 +9,7 @@ import UilWind from '@iconscout/react-native-unicons/icons/uil-wind';
 import deepEqual from 'fast-deep-equal';
 import React, { Fragment } from 'react';
 import { Keyboard, ScrollView, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
-import ReactReduxContext from 'react-redux/lib/components/Context';
+import { ReactReduxContext } from 'react-redux';
 import MaskIcon from '../../../assets/images/icons/mask.svg';
 import { COLOR_PRIMARY } from '../../../constants';
 import withI18n from '../../../i18n';

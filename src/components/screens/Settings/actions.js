@@ -24,3 +24,8 @@ export const setShowKeyEncounterHints = (showKeyEncounterHints) => ({
 });
 
 export const setShowKeyWelcome = (showKeyWelcome) => ({ type: 'SET_SHOW_KEY_WELCOME_SETTINGS', showKeyWelcome });
+
+export const setVersionDataStructure = (versionDataStructure) => ({
+  type: 'SET_VERSION_DATA_STRUCTURE_SETTINGS',
+  versionDataStructure,
+});

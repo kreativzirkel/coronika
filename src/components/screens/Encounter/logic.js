@@ -1,7 +1,7 @@
 import { CommonActions } from '@react-navigation/native';
 import moment from 'moment';
 import { Keyboard } from 'react-native';
-import connect from 'react-redux/lib/connect/connect';
+import { connect } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import withI18n from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';

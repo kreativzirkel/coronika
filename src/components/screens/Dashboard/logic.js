@@ -1,5 +1,5 @@
 import moment from 'moment';
-import connect from 'react-redux/lib/connect/connect';
+import { connect } from 'react-redux';
 import { DAYS_LAST_USAGE, DAYS_OVERVIEW_MAX, DAYS_OVERVIEW_MIN, DAYS_TO_ADD } from '../../../constants';
 import withI18n from '../../../i18n';
 import { container } from '../../../utils/react';
@@ -13,7 +13,6 @@ import {
   confirmFirstStartHint,
   showFirstStartHint,
   setLastUpdated,
-  transformDataStructure,
 } from './actions';
 import Screen from './ui';
 
@@ -109,16 +108,6 @@ const resetLastUsageTimestamps = () => async (dispatch, getState) => {
     });
 };
 
-const transformDataStructureAsync = () => async (dispatch, getState) => {
-  const {
-    dashboard: { dataStructureVersion },
-  } = getState();
-
-  if (dataStructureVersion !== '2') {
-    dispatch(transformDataStructure());
-  }
-};
-
 const mapStateToProps = ({ dashboard: { days, firstStartHintVisible } }) => {
   const daysList = Object.keys(days)
     .sort((a, b) => daysSortingFunction(a, b))
@@ -149,8 +138,6 @@ const Container = container(Screen, {
         store: { dispatch, getState },
       } = this.context;
 
-      dispatch(transformDataStructureAsync());
-
       await dispatch(await loadDays());
 
       dispatch(resetLastUsageTimestamps());
@@ -180,8 +167,6 @@ const Container = container(Screen, {
     const {
       store: { dispatch, getState },
     } = this.context;
-
-    dispatch(transformDataStructureAsync());
 
     const {
       dashboard: { lastUpdated },

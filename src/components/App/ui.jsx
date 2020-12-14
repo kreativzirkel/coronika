@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import moment from 'moment';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import ReactReduxContext from 'react-redux/lib/components/Context';
+import { ReactReduxContext } from 'react-redux';
 import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
 import withColorScheme from '../../utils/withColorScheme';

@@ -131,8 +131,6 @@ export default (state = initialState, action = { type: null }) => {
       return { ...state, lastUpdated: action.lastUpdated };
 
     case 'TRANSFORM_DATA_STRUCTURE_DASHBOARD': {
-      if (state.dataStructureVersion === '2') return state;
-
       const days = cloneDeep(state.days);
       Object.keys(days).forEach((timestamp) => {
         const encounters = []; //days[timestamp]?.encounters || [];
@@ -166,7 +164,7 @@ export default (state = initialState, action = { type: null }) => {
         days[timestamp].encounters = encounters;
       });
 
-      return { ...state, dataStructureVersion: '2', days };
+      return { ...state, days };
     }
 
     default:

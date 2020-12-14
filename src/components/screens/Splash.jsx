@@ -7,6 +7,8 @@ import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
 import withI18n from '../../i18n';
 import Layout from '../widgets/Layout';
+import { transformDataStructure } from './Dashboard/actions';
+import { setVersionDataStructure } from './Settings/actions';
 import { configurePushNotifications } from './Settings/logic';
 
 class Splash extends React.Component {
@@ -25,13 +27,20 @@ class Splash extends React.Component {
     dispatch(configurePushNotifications(navigation));
 
     const {
-      app: { showKeyWelcome: showKeyWelcomeApp },
-      settings: { showKeyWelcome: showKeyWelcomeSettings },
+      app: { showKeyWelcome: showKeyWelcomeApp, versionDataStructure: versionDataStructureApp },
+      settings: { showKeyWelcome: showKeyWelcomeSettings, versionDataStructure: versionDataStructureSettings },
     } = getState();
 
-    const showWelcomeScreen = showKeyWelcomeApp !== showKeyWelcomeSettings;
-
     (async () => {
+      if (versionDataStructureApp !== versionDataStructureSettings) {
+        dispatch(transformDataStructure());
+        dispatch(setVersionDataStructure(versionDataStructureApp));
+
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+      }
+
+      const showWelcomeScreen = showKeyWelcomeApp !== showKeyWelcomeSettings;
+
       await new Promise((resolve) => setTimeout(resolve, Platform.OS === 'ios' ? 1500 : 1000));
 
       if (showWelcomeScreen) {

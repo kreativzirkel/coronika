@@ -5,6 +5,7 @@ const initialState = {
   screenWidth: undefined,
   showKeyEncounterHints: '1',
   showKeyWelcome: '8',
+  versionDataStructure: '2',
 };
 
 export default (state = initialState, action = { type: null }) => {

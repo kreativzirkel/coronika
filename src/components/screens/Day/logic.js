@@ -1,5 +1,5 @@
 import cloneDeep from 'lodash/cloneDeep';
-import connect from 'react-redux/lib/connect/connect';
+import { connect } from 'react-redux';
 import withI18n from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';

@@ -2,7 +2,7 @@ import PushNotificationIOS from '@react-native-community/push-notification-ios';
 import moment from 'moment';
 import { Platform } from 'react-native';
 import PushNotification from 'react-native-push-notification';
-import connect from 'react-redux/lib/connect/connect';
+import { connect } from 'react-redux';
 import withI18n, { __ as __i18n } from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';

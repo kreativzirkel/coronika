@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactReduxContext from 'react-redux/lib/components/Context';
+import { ReactReduxContext } from 'react-redux';
 
 export const container = (Component, methods = {}) => {
   class Class extends React.Component {

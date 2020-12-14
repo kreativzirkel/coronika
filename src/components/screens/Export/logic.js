@@ -1,7 +1,7 @@
 import { Alert, Keyboard, PermissionsAndroid, Platform } from 'react-native';
 import RNFS from 'react-native-fs';
 import Share from 'react-native-share';
-import connect from 'react-redux/lib/connect/connect';
+import { connect } from 'react-redux';
 import withI18n, { __ } from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';

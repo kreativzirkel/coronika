@@ -7,6 +7,7 @@ const initialState = {
   notificationWashingHandsOption2Enabled: false,
   showKeyEncounterHints: '',
   showKeyWelcome: '',
+  versionDataStructure: '',
 };
 
 export default (state = initialState, action = { type: null }) => {
@@ -55,6 +56,9 @@ export default (state = initialState, action = { type: null }) => {
 
     case 'SET_SHOW_KEY_WELCOME_SETTINGS':
       return { ...state, showKeyWelcome: action.showKeyWelcome };
+
+    case 'SET_VERSION_DATA_STRUCTURE_SETTINGS':
+      return { ...state, versionDataStructure: action.versionDataStructure };
 
     default:
       return state;

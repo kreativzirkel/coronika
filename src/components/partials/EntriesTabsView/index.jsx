@@ -7,7 +7,7 @@ import deepEqual from 'fast-deep-equal/es6';
 import moment from 'moment';
 import React, { Fragment } from 'react';
 import { Keyboard, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
-import ReactReduxContext from 'react-redux/lib/components/Context';
+import { ReactReduxContext } from 'react-redux';
 import { COLOR_PRIMARY } from '../../../constants';
 import withI18n from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';

@@ -2,10 +2,10 @@ import UilBars from '@iconscout/react-native-unicons/icons/uil-bars';
 import moment from 'moment';
 import React from 'react';
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ALTERNATIVE_FONT_LANGUAGES, COLOR_PRIMARY } from '../../../constants';
 import { DayOverview } from '../../widgets/DayOverview';
 import Layout from '../../widgets/Layout';
 import Header from '../../widgets/Header';
-import { ALTERNATIVE_FONT_LANGUAGES, COLOR_PRIMARY } from '../../../constants';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -183,7 +183,7 @@ class Dashboard extends React.Component {
         <DayOverview
           isEmphasized={timestamp === today.valueOf()}
           isTranslucent={firstStartHintVisible && timestamp !== today.valueOf()}
-          encounters={encounters.length}
+          encounters={encounters?.length || 0}
           showIcons={firstStartHintVisible && timestamp === today.valueOf()}
           timestamp={timestamp}
           today={today}
