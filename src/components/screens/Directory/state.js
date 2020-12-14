@@ -31,7 +31,11 @@ const addPersonToList = (persons, person) => {
       .replace(/\s+/g, ' ');
   } else {
     for (const c of persons) {
-      if (c.recordID || c.fullName !== importPerson.fullName) {
+      if (
+        c.recordID ||
+        (importPerson.id !== undefined && c.id !== importPerson.id) ||
+        c.fullName !== importPerson.fullName
+      ) {
         resultList.push(c);
       } else {
         importPerson.id = c.id;
@@ -95,10 +99,14 @@ export default (state = initialState, action = { type: null }) => {
       const location = action.location;
       const locations = [...state.locations];
 
-      if (!locations.find(({ title }) => title === location.title)) {
+      if (
+        !locations.find(
+          ({ id, title }) => (location.id !== undefined && id === location.id) || title === location.title
+        )
+      ) {
         locations.push({
           ...location,
-          id: uuidv4(),
+          id: location.id || uuidv4(),
         });
       }
 

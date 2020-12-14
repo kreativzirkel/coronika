@@ -7,6 +7,8 @@ const initialState = {
   mask: undefined, // true, false, undefined
   modalConfirmDeleteVisible: false,
   modalHintsVisible: false,
+  modalLocationVisible: false,
+  modalPersonVisible: false,
   modalSelectLocationVisible: false,
   modalSelectPersonsVisible: false,
   modalTimestampEndVisible: false,
@@ -93,6 +95,18 @@ export default (state = initialState, action = { type: null }) => {
 
     case 'HIDE_MODAL_HINTS_ENCOUNTER':
       return { ...state, modalHintsVisible: false };
+
+    case 'SHOW_MODAL_LOCATION_ENCOUNTER':
+      return { ...state, modalLocationVisible: true };
+
+    case 'HIDE_MODAL_LOCATION_ENCOUNTER':
+      return { ...state, modalLocationVisible: false };
+
+    case 'SHOW_MODAL_PERSON_ENCOUNTER':
+      return { ...state, modalPersonVisible: true };
+
+    case 'HIDE_MODAL_PERSON_ENCOUNTER':
+      return { ...state, modalPersonVisible: false };
 
     case 'SHOW_MODAL_SELECT_LOCATION_ENCOUNTER':
       return { ...state, modalSelectLocationVisible: true };

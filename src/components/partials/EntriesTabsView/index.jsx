@@ -8,7 +8,7 @@ import moment from 'moment';
 import React, { Fragment } from 'react';
 import { Keyboard, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
 import { ReactReduxContext } from 'react-redux';
-import { COLOR_PRIMARY } from '../../../constants';
+import { COLOR_PRIMARY, MODAL_OPENING_DELAY } from '../../../constants';
 import withI18n from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
@@ -248,7 +248,7 @@ class EntriesTabsView extends React.Component {
 
       if (addedLocation) {
         // timeout is necessary because of waiting for other modal to close before opening a new one
-        setTimeout(() => this.toggleLocationSelection(addedLocation.id), 500);
+        setTimeout(() => this.toggleLocationSelection(addedLocation.id), MODAL_OPENING_DELAY);
       }
     }
   }
@@ -339,7 +339,7 @@ class EntriesTabsView extends React.Component {
       } else {
         this.editLocation(locationId);
       }
-    }, 500);
+    }, MODAL_OPENING_DELAY);
   }
 
   onPressMoreLocationDelete() {
@@ -394,7 +394,7 @@ class EntriesTabsView extends React.Component {
 
     setTimeout(() => {
       this.editPerson(personId);
-    }, 500);
+    }, MODAL_OPENING_DELAY);
   }
 
   onPressMorePersonHide() {
@@ -822,7 +822,7 @@ class EntriesTabsView extends React.Component {
       selectLocationTitle,
     } = this.state;
 
-    const buttonAddNewPersonDisabled = personName.length < 3;
+    const buttonAddNewPersonDisabled = personName.length < 3 || personPhone.length < 5;
     const buttonAddNewLocationDisabled = locationTitle.length < 3;
     const buttonAddSelectionDisabled = allowSelection && selectedLocations.length === 0 && selectedPersons.length === 0;
 

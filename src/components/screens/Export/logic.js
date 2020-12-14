@@ -2,6 +2,7 @@ import { Alert, Keyboard, PermissionsAndroid, Platform } from 'react-native';
 import RNFS from 'react-native-fs';
 import Share from 'react-native-share';
 import { connect } from 'react-redux';
+import { MODAL_OPENING_DELAY } from '../../../constants';
 import withI18n, { __ } from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
@@ -188,7 +189,7 @@ const createExport = () => async (dispatch, getState) => {
 
   setTimeout(() => {
     dispatch(showExportResultModal());
-  }, 500);
+  }, MODAL_OPENING_DELAY);
 };
 
 const mapStateToProps = ({

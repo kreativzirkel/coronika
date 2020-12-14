@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { MODAL_OPENING_DELAY } from '../../../constants';
 import withI18n from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
@@ -59,7 +60,7 @@ const showHidePersonsModalAsync = () => async (dispatch) => {
 
   setTimeout(() => {
     dispatch(showHidePersonsModal());
-  }, 500);
+  }, MODAL_OPENING_DELAY);
 };
 
 const showImportPersonsModalAsync = () => async (dispatch) => {
@@ -67,7 +68,7 @@ const showImportPersonsModalAsync = () => async (dispatch) => {
 
   setTimeout(() => {
     dispatch(showImportPersonsModal());
-  }, 500);
+  }, MODAL_OPENING_DELAY);
 };
 
 const confirmHiddenPersonsSelection = (selectedPersons) => async (dispatch) => {

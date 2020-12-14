@@ -32,6 +32,14 @@ export const showModalHints = () => ({ type: 'SHOW_MODAL_HINTS_ENCOUNTER' });
 
 export const hideModalHints = () => ({ type: 'HIDE_MODAL_HINTS_ENCOUNTER' });
 
+export const showModalLocation = () => ({ type: 'SHOW_MODAL_LOCATION_ENCOUNTER' });
+
+export const hideModalLocation = () => ({ type: 'HIDE_MODAL_LOCATION_ENCOUNTER' });
+
+export const showModalPerson = () => ({ type: 'SHOW_MODAL_PERSON_ENCOUNTER' });
+
+export const hideModalPerson = () => ({ type: 'HIDE_MODAL_PERSON_ENCOUNTER' });
+
 export const showModalSelectLocation = () => ({ type: 'SHOW_MODAL_SELECT_LOCATION_ENCOUNTER' });
 
 export const hideModalSelectLocation = () => ({ type: 'HIDE_MODAL_SELECT_LOCATION_ENCOUNTER' });

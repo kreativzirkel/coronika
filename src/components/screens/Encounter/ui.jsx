@@ -29,6 +29,8 @@ import Layout from '../../widgets/Layout';
 import ButtonSwitch from '../../widgets/ButtonSwitch';
 import DateTimePickerModal from '../../widgets/DateTimePickerModal';
 import { DayOverview } from '../../widgets/DayOverview';
+import ModalLocation from '../../widgets/ModalLocation';
+import ModalPerson from '../../widgets/ModalPerson';
 import ModalSwitchDay from '../../widgets/ModalSwitchDay';
 import { ModalDeleteEncounter, ModalHints, ModalSelectLocation, ModalSelectPersons } from './Modals';
 
@@ -339,6 +341,8 @@ class Encounter extends React.Component {
       mask,
       modalConfirmDeleteVisible,
       modalHintsVisible,
+      modalLocationVisible,
+      modalPersonVisible,
       modalSelectLocationVisible,
       modalSelectPersonsVisible,
       modalTimestampEndVisible,
@@ -352,11 +356,15 @@ class Encounter extends React.Component {
       timestampEnd,
       timestampStart,
       ventilation,
+      addLocation,
+      addPerson,
       confirmTimestampEnd,
       confirmTimestampStart,
       hideDateSwitcherModal,
       hideModalConfirmDelete,
       hideModalHints,
+      hideModalLocation,
+      hideModalPerson,
       hideModalSelectLocation,
       hideModalSelectPersons,
       hideModalTimestampEnd,
@@ -364,6 +372,8 @@ class Encounter extends React.Component {
       showDateSwitcherModal,
       showModalConfirmDelete,
       showModalHints,
+      showModalLocation,
+      showModalPerson,
       showModalSelectLocation,
       showModalSelectPersons,
       showModalTimestampEnd,
@@ -640,16 +650,22 @@ class Encounter extends React.Component {
           isVisible={modalSelectPersonsVisible}
           onPressClose={hideModalSelectPersons}
           onPressConfirm={setPersons}
+          onPressAddPerson={showModalPerson}
           persons={directoryPersons}
           selectedPersons={persons}
         />
 
+        <ModalPerson isVisible={modalPersonVisible} onPressClose={hideModalPerson} onPressConfirm={addPerson} />
+
         <ModalSelectLocation
           isVisible={modalSelectLocationVisible}
           locations={directoryLocations}
+          onPressAddLocation={showModalLocation}
           onPressClose={hideModalSelectLocation}
           onPressLocation={this.selectLocation}
         />
+
+        <ModalLocation isVisible={modalLocationVisible} onPressClose={hideModalLocation} onPressConfirm={addLocation} />
 
         <DateTimePickerModal
           cancelTextIOS={__('Cancel')}

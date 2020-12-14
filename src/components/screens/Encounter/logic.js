@@ -3,17 +3,20 @@ import moment from 'moment';
 import { Keyboard } from 'react-native';
 import { connect } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
+import { MODAL_OPENING_DELAY } from '../../../constants';
 import withI18n from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import { addEncounter, removeEncounter, updateEncounter } from '../Dashboard/actions';
 import { setTimestamp } from '../Day/actions';
-import { updateLastUsageOfLocation, updateLastUsageOfPerson } from '../Directory/actions';
+import { addPerson, addLocation, updateLastUsageOfLocation, updateLastUsageOfPerson } from '../Directory/actions';
 import { setShowKeyEncounterHints } from '../Settings/actions';
 import {
   hideDateSwitcherModal,
   hideModalConfirmDelete,
   hideModalHints,
+  hideModalLocation,
+  hideModalPerson,
   hideModalSelectLocation,
   hideModalSelectPersons,
   hideModalTimestampEnd,
@@ -31,6 +34,8 @@ import {
   showDateSwitcherModal,
   showModalConfirmDelete,
   showModalHints,
+  showModalLocation,
+  showModalPerson,
   showModalSelectLocation,
   showModalSelectPersons,
   showModalTimestampEnd,
@@ -38,6 +43,32 @@ import {
   reset,
 } from './actions';
 import Screen from './ui';
+
+const addPersonAsync = (personName, personPhone, personMail) => async (dispatch, getState) => {
+  dispatch(closeModalPerson());
+
+  const id = uuidv4();
+  const person = {
+    id,
+    fullName: personName,
+    phoneNumbers: [{ label: 'phone', number: personPhone }],
+    emailAddresses: [{ label: 'mail', email: personMail }],
+  };
+  dispatch(addPerson(person));
+
+  const {
+    encounter: { persons },
+  } = getState();
+  dispatch(setPersons([...persons, id]));
+};
+
+const addLocationAsync = (locationTitle, locationDescription, locationPhone) => async (dispatch) => {
+  dispatch(hideModalLocation());
+  const id = uuidv4();
+  const location = { id, description: locationDescription, phone: locationPhone, title: locationTitle };
+  dispatch(addLocation(location));
+  dispatch(setLocation(id));
+};
 
 const openDateSwitcherModal = () => async (dispatch) => {
   Keyboard.dismiss();
@@ -51,6 +82,30 @@ const closeModalHints = () => async (dispatch, getState) => {
 
   dispatch(hideModalHints());
   dispatch(setShowKeyEncounterHints(showKeyEncounterHintsApp));
+};
+
+const openModalLocation = () => async (dispatch) => {
+  dispatch(hideModalSelectLocation());
+
+  setTimeout(() => dispatch(showModalLocation()), MODAL_OPENING_DELAY);
+};
+
+const closeModalLocation = () => async (dispatch) => {
+  dispatch(hideModalLocation());
+
+  setTimeout(() => dispatch(showModalSelectLocation()), MODAL_OPENING_DELAY);
+};
+
+const openModalPerson = () => async (dispatch) => {
+  dispatch(hideModalSelectPersons());
+
+  setTimeout(() => dispatch(showModalPerson()), MODAL_OPENING_DELAY);
+};
+
+const closeModalPerson = () => async (dispatch) => {
+  dispatch(hideModalPerson());
+
+  setTimeout(() => dispatch(showModalSelectPersons()), MODAL_OPENING_DELAY);
 };
 
 const confirmTimestampEnd = (timestampEnd) => async (dispatch) => {
@@ -181,6 +236,8 @@ const mapStateToProps = ({
     mask,
     modalConfirmDeleteVisible,
     modalHintsVisible,
+    modalLocationVisible,
+    modalPersonVisible,
     modalSelectLocationVisible,
     modalSelectPersonsVisible,
     modalTimestampEndVisible,
@@ -231,6 +288,8 @@ const mapStateToProps = ({
     mask,
     modalConfirmDeleteVisible,
     modalHintsVisible: modalHintsVisible || showKeyEncounterHintsApp !== showKeyEncounterHintsSettings,
+    modalLocationVisible,
+    modalPersonVisible,
     modalSelectLocationVisible,
     modalSelectPersonsVisible,
     modalTimestampEndVisible,
@@ -250,12 +309,18 @@ const mapStateToProps = ({
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    addLocation: (id, locationTitle, locationDescription, locationPhone) =>
+      dispatch(addLocationAsync(locationTitle, locationDescription, locationPhone)),
+    addPerson: (id, personName, personPhone, personMail) =>
+      dispatch(addPersonAsync(personName, personPhone, personMail)),
     confirmTimestampEnd: (timestampEnd) => dispatch(confirmTimestampEnd(timestampEnd)),
     confirmTimestampStart: (timestampStart) => dispatch(confirmTimestampStart(timestampStart)),
     deleteEncounter: (navigation) => dispatch(deleteEncounter(navigation)),
     hideDateSwitcherModal: () => dispatch(hideDateSwitcherModal()),
     hideModalConfirmDelete: () => dispatch(hideModalConfirmDelete()),
     hideModalHints: () => dispatch(closeModalHints()),
+    hideModalLocation: () => dispatch(closeModalLocation()),
+    hideModalPerson: () => dispatch(closeModalPerson()),
     hideModalSelectLocation: () => dispatch(hideModalSelectLocation()),
     hideModalSelectPersons: () => dispatch(hideModalSelectPersons()),
     hideModalTimestampEnd: () => dispatch(hideModalTimestampEnd()),
@@ -266,6 +331,8 @@ const mapDispatchToProps = (dispatch) => {
     showDateSwitcherModal: () => dispatch(openDateSwitcherModal()),
     showModalConfirmDelete: () => dispatch(showModalConfirmDelete()),
     showModalHints: () => dispatch(showModalHints()),
+    showModalLocation: () => dispatch(openModalLocation()),
+    showModalPerson: () => dispatch(openModalPerson()),
     showModalSelectLocation: () => dispatch(showModalSelectLocation()),
     showModalSelectPersons: () => dispatch(showModalSelectPersons()),
     showModalTimestampEnd: () => dispatch(showModalTimestampEnd()),
