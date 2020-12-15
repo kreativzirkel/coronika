@@ -12,6 +12,10 @@ class ButtonSwitch extends React.Component {
     this.onPress = this.onPress.bind(this);
   }
 
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    return nextProps.activeState !== this.props.activeState;
+  }
+
   styles = StyleSheet.create({
     button: {
       alignItems: 'center',

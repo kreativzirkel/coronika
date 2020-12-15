@@ -14,8 +14,9 @@ import moment from 'moment';
 import React, { Fragment } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { v4 as uuidv4 } from 'uuid';
 import MaskIcon from '../../../assets/images/icons/mask.svg';
-import { COLOR_PRIMARY } from '../../../constants';
+import { COLOR_PRIMARY, MODAL_OPENING_DELAY } from '../../../constants';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 import ButtonSwitch from '../../widgets/ButtonSwitch';
@@ -92,25 +93,71 @@ class Encounter extends React.Component {
   constructor(props, context) {
     super(props, context);
 
+    this.state = {
+      distance: this.props.distance,
+      location: this.props.location,
+      locationTitle: this.props.locationTitle,
+      mask: this.props.mask,
+      modalLocationVisible: false,
+      modalPersonVisible: false,
+      modalSelectLocationVisible: false,
+      modalSelectPersonsVisible: false,
+      modalTimestampEndVisible: false,
+      modalTimestampStartVisible: false,
+      note: this.props.note,
+      outside: this.props.outside,
+      persons: this.props.persons,
+      personsDisplay: this.props.personsDisplay,
+      timestampEnd: this.props.timestampEnd,
+      timestampStart: this.props.timestampStart,
+      ventilation: this.props.ventilation,
+    };
+
+    this.addLocation = this.addLocation.bind(this);
+    this.addPerson = this.addPerson.bind(this);
+    this.confirmSelectedPersons = this.confirmSelectedPersons.bind(this);
     this.delete = this.delete.bind(this);
+    this.hideModalLocation = this.hideModalLocation.bind(this);
+    this.hideModalPerson = this.hideModalPerson.bind(this);
+    this.hideModalSelectLocation = this.hideModalSelectLocation.bind(this);
+    this.hideModalSelectPersons = this.hideModalSelectPersons.bind(this);
+    this.hideModalTimestampEnd = this.hideModalTimestampEnd.bind(this);
+    this.hideModalTimestampStart = this.hideModalTimestampStart.bind(this);
+    this.removePerson = this.removePerson.bind(this);
     this.resetLocation = this.resetLocation.bind(this);
     this.save = this.save.bind(this);
     this.selectLocation = this.selectLocation.bind(this);
+    this.setDistance = this.setDistance.bind(this);
+    this.setLocation = this.setLocation.bind(this);
+    this.setMask = this.setMask.bind(this);
+    this.setNote = this.setNote.bind(this);
+    this.setOutside = this.setOutside.bind(this);
+    this.setTimestampEnd = this.setTimestampEnd.bind(this);
+    this.setTimestampStart = this.setTimestampStart.bind(this);
+    this.setVentilation = this.setVentilation.bind(this);
+    this.showModalLocation = this.showModalLocation.bind(this);
+    this.showModalPerson = this.showModalPerson.bind(this);
+    this.showModalSelectLocation = this.showModalSelectLocation.bind(this);
+    this.showModalSelectPersons = this.showModalSelectPersons.bind(this);
+    this.showModalTimestampEnd = this.showModalTimestampEnd.bind(this);
+    this.showModalTimestampStart = this.showModalTimestampStart.bind(this);
+    this.togglePerson = this.togglePerson.bind(this);
   }
 
   componentDidMount() {
-    const { timestamp, timestampEnd, timestampStart, setTimestampEnd, setTimestampStart } = this.props;
+    const { timestamp } = this.props;
+    const { timestampEnd, timestampStart } = this.state;
 
     const now = moment();
 
     if (timestampEnd === 0) {
       const timestampEndFixed = moment(timestamp).hours(now.hours()).minutes(now.minutes()).valueOf();
-      setTimestampEnd(timestampEndFixed);
+      this.setTimestampEnd(timestampEndFixed);
     }
 
     if (timestampStart === 0) {
       const timestampStartFixed = moment(timestamp).hours(now.hours()).minutes(now.minutes()).valueOf();
-      setTimestampStart(timestampStartFixed);
+      this.setTimestampStart(timestampStartFixed);
     }
   }
 
@@ -270,6 +317,8 @@ class Encounter extends React.Component {
       paddingRight: this.props.vw(10),
     },
     textInputMultiline: {
+      alignItems: 'flex-start',
+      flexDirection: 'row',
       height: this.props.vw(30),
     },
     textInputText: {
@@ -281,6 +330,7 @@ class Encounter extends React.Component {
     },
     textInputTextMultiline: {
       flex: 1,
+      height: '100%',
     },
     textInputTextTime: {
       textAlign: 'center',
@@ -300,8 +350,93 @@ class Encounter extends React.Component {
     },
   });
 
+  addLocation(id, locationTitle, locationDescription, locationPhone) {
+    if (this.props.addLocation) {
+      const locationId = uuidv4();
+      this.props.addLocation(locationId, locationTitle, locationDescription, locationPhone);
+      this.setState({ location: locationId, locationTitle, modalLocationVisible: false });
+    }
+  }
+
+  addPerson(id, personName, personPhone, personMail) {
+    if (this.props.addPerson) {
+      const { personsDisplay } = this.state;
+      const personId = uuidv4();
+      this.props.addPerson(personId, personName, personPhone, personMail);
+      this.togglePerson(personId);
+      this.setState({
+        modalPersonVisible: false,
+        personsDisplay: [...personsDisplay, { id: personId, name: personName }],
+      });
+      setTimeout(() => this.setState({ modalSelectPersonsVisible: true }), MODAL_OPENING_DELAY);
+    }
+  }
+
+  confirmSelectedPersons() {
+    const { directoryPersons } = this.props;
+    const { persons } = this.state;
+
+    const personsDisplay = persons.map((personId) => {
+      const person = directoryPersons.find((p) => p.id === personId);
+      const personName = person.fullNameDisplay || person.fullName;
+
+      return {
+        id: personId,
+        name: personName,
+      };
+    });
+
+    this.setState({ personsDisplay });
+  }
+
   delete() {
     this.props.deleteEncounter(this.props.navigation);
+  }
+
+  hideModalLocation() {
+    this.setState({ modalLocationVisible: false });
+
+    setTimeout(() => this.setState({ modalSelectLocationVisible: true }), MODAL_OPENING_DELAY);
+  }
+
+  hideModalPerson() {
+    this.setState({ modalPersonVisible: false });
+
+    setTimeout(() => this.setState({ modalSelectPersonsVisible: true }), MODAL_OPENING_DELAY);
+  }
+
+  hideModalSelectLocation() {
+    this.setState({ modalSelectLocationVisible: false });
+  }
+
+  hideModalSelectPersons() {
+    this.confirmSelectedPersons();
+    this.setState({ modalSelectPersonsVisible: false });
+  }
+
+  hideModalTimestampEnd() {
+    this.setState({ modalTimestampEndVisible: false });
+  }
+
+  hideModalTimestampStart() {
+    this.setState({ modalTimestampStartVisible: false });
+  }
+
+  removePerson(id) {
+    const { directoryPersons } = this.props;
+
+    const persons = this.state.persons.filter((p) => p !== id);
+    const personsDisplay = persons.map((personId) => {
+      const person = directoryPersons.find((p) => p.id === personId);
+      const personName = person.fullNameDisplay || person.fullName;
+
+      return {
+        id: personId,
+        name: personName,
+      };
+    });
+
+    this.setState({ persons, personsDisplay });
   }
 
   resetLocation() {
@@ -309,12 +444,112 @@ class Encounter extends React.Component {
   }
 
   save() {
-    this.props.save(this.props.navigation);
+    const { distance, location, mask, note, outside, persons, timestampEnd, timestampStart, ventilation } = this.state;
+    const encounter = {
+      distance,
+      location,
+      mask,
+      note,
+      outside,
+      persons,
+      timestampEnd,
+      timestampStart,
+      ventilation,
+    };
+    this.props.save(encounter, this.props.navigation);
   }
 
   selectLocation(location) {
-    this.props.setLocation(location);
+    this.setLocation(location);
     this.props.hideModalSelectLocation();
+  }
+
+  setDistance(value) {
+    this.setState({ distance: value });
+  }
+
+  setLocation(value) {
+    const locationTitle = this.props.directoryLocations.find(({ id: locationId }) => locationId === value)?.title;
+    this.setState({ location: value, locationTitle });
+  }
+
+  setMask(value) {
+    this.setState({ mask: value });
+  }
+
+  setNote(value) {
+    let note = '';
+
+    if (value?.trim()?.length > 0 && value?.length <= 512) {
+      note = value;
+    }
+
+    this.setState({ note });
+  }
+
+  setOutside(value) {
+    if (value === undefined || value === true) {
+      this.setState({ outside: value, ventilation: undefined });
+    } else {
+      this.setState({ outside: value });
+    }
+  }
+
+  setTimestampEnd(value) {
+    const timestampEnd = moment(value).valueOf();
+    const timestampStart = timestampEnd > this.state.timestampStart ? this.state.timestampStart : timestampEnd;
+
+    this.setState({ modalTimestampEndVisible: false, timestampStart, timestampEnd });
+  }
+
+  setTimestampStart(value) {
+    const timestampStart = moment(value).valueOf();
+    const timestampEnd = timestampStart < this.state.timestampEnd ? this.state.timestampEnd : timestampStart;
+
+    this.setState({ modalTimestampStartVisible: false, timestampStart, timestampEnd });
+  }
+
+  setVentilation(value) {
+    this.setState({ ventilation: value });
+  }
+
+  showModalLocation() {
+    this.setState({ modalSelectLocationVisible: false });
+
+    setTimeout(() => this.setState({ modalLocationVisible: true }), MODAL_OPENING_DELAY);
+  }
+
+  showModalPerson() {
+    this.confirmSelectedPersons();
+    this.setState({ modalSelectPersonsVisible: false });
+
+    setTimeout(() => this.setState({ modalPersonVisible: true }), MODAL_OPENING_DELAY);
+  }
+
+  showModalSelectLocation() {
+    this.setState({ modalSelectLocationVisible: true });
+  }
+
+  showModalSelectPersons() {
+    this.setState({ modalSelectPersonsVisible: true });
+  }
+
+  showModalTimestampEnd() {
+    this.setState({ modalTimestampEndVisible: true });
+  }
+
+  showModalTimestampStart() {
+    this.setState({ modalTimestampStartVisible: true });
+  }
+
+  togglePerson(id) {
+    const { persons } = this.state;
+
+    if (persons.includes(id)) {
+      this.setState({ persons: persons.filter((p) => p !== id) });
+    } else {
+      this.setState({ persons: [...persons, id] });
+    }
   }
 
   render() {
@@ -324,15 +559,27 @@ class Encounter extends React.Component {
       daysList,
       directoryLocations,
       directoryPersons,
-      distance,
       id,
       isDateSwitcherModalVisible,
-      isSaveButtonDisabled,
+      modalConfirmDeleteVisible,
+      modalHintsVisible,
+      timestamp,
+      hideDateSwitcherModal,
+      hideModalConfirmDelete,
+      hideModalHints,
+      showDateSwitcherModal,
+      showModalConfirmDelete,
+      showModalHints,
+      setTimestamp,
+      navigation,
+      vw,
+      __,
+    } = this.props;
+    const {
+      distance,
       location,
       locationTitle,
       mask,
-      modalConfirmDeleteVisible,
-      modalHintsVisible,
       modalLocationVisible,
       modalPersonVisible,
       modalSelectLocationVisible,
@@ -343,44 +590,10 @@ class Encounter extends React.Component {
       outside,
       persons,
       personsDisplay,
-      removePerson,
-      timestamp,
       timestampEnd,
       timestampStart,
       ventilation,
-      addLocation,
-      addPerson,
-      confirmTimestampEnd,
-      confirmTimestampStart,
-      hideDateSwitcherModal,
-      hideModalConfirmDelete,
-      hideModalHints,
-      hideModalLocation,
-      hideModalPerson,
-      hideModalSelectLocation,
-      hideModalSelectPersons,
-      hideModalTimestampEnd,
-      hideModalTimestampStart,
-      showDateSwitcherModal,
-      showModalConfirmDelete,
-      showModalHints,
-      showModalLocation,
-      showModalPerson,
-      showModalSelectLocation,
-      showModalSelectPersons,
-      showModalTimestampEnd,
-      showModalTimestampStart,
-      setDistance,
-      setMask,
-      setNote,
-      setOutside,
-      setPersons,
-      setTimestamp,
-      setVentilation,
-      navigation,
-      vw,
-      __,
-    } = this.props;
+    } = this.state;
 
     const styles = {
       ...this.styles,
@@ -426,6 +639,7 @@ class Encounter extends React.Component {
     const iconColorActive = colors.TEXT;
     const iconColorInactive = colorScheme === 'dark' ? colors.GRAY_2 : colors.GRAY_4;
     const iconSize = vw(7);
+    const isSaveButtonDisabled = persons.length === 0 && location === undefined;
 
     return (
       <Layout>
@@ -463,12 +677,12 @@ class Encounter extends React.Component {
                       <Text numberOfLines={1} style={styles.personsItemText}>
                         {person.name}
                       </Text>
-                      <TouchableOpacity onPress={() => removePerson(person.id)} style={styles.personsItemRemove}>
+                      <TouchableOpacity onPress={() => this.removePerson(person.id)} style={styles.personsItemRemove}>
                         <UilTimes color={colors.TEXT} size={vw(5.5)} />
                       </TouchableOpacity>
                     </View>
                   ))}
-                <TouchableOpacity onPress={showModalSelectPersons} style={styles.personsAddButton}>
+                <TouchableOpacity onPress={this.showModalSelectPersons} style={styles.personsAddButton}>
                   <UilPlus color={COLOR_PRIMARY} size={vw(6)} style={styles.personsAddButtonIcon} />
                   <Text numberOfLines={1} style={styles.personsAddButtonText}>
                     {__('encounter-screen.persons.add')}
@@ -485,7 +699,7 @@ class Encounter extends React.Component {
               />
 
               <View style={styles.locationWrapper}>
-                <TouchableOpacity onPress={showModalSelectLocation} style={styles.textInputWrapper}>
+                <TouchableOpacity onPress={this.showModalSelectLocation} style={styles.textInputWrapper}>
                   <View
                     style={{ ...styles.textInput, ...(location !== undefined && styles.textInputLocationSelected) }}>
                     <Text
@@ -511,7 +725,7 @@ class Encounter extends React.Component {
               <UilClock color={iconColorActive} size={iconSize} style={styles.optionIcon} />
 
               <View style={styles.timeInputContainer}>
-                <TouchableOpacity onPress={showModalTimestampStart} style={styles.textInputWrapper}>
+                <TouchableOpacity onPress={this.showModalTimestampStart} style={styles.textInputWrapper}>
                   <View style={styles.textInput}>
                     <Text style={{ ...styles.textInputText, ...styles.textInputTextTime }}>
                       {moment(timestampStart).format('LT')}
@@ -523,7 +737,7 @@ class Encounter extends React.Component {
                   <UilMinus size={vw(5)} color={iconColorActive} />
                 </View>
 
-                <TouchableOpacity onPress={showModalTimestampEnd} style={styles.textInputWrapper}>
+                <TouchableOpacity onPress={this.showModalTimestampEnd} style={styles.textInputWrapper}>
                   <View style={styles.textInput}>
                     <Text style={{ ...styles.textInputText, ...styles.textInputTextTime }}>
                       {moment(timestampEnd).format('LT')}
@@ -542,7 +756,7 @@ class Encounter extends React.Component {
                 iconSize={iconSize}
                 iconStyle={styles.optionIcon}
                 labels={[__('encounter-screen.options.outside.yes'), __('encounter-screen.options.outside.no')]}
-                onPress={setOutside}
+                onPress={this.setOutside}
               />
             </View>
 
@@ -556,7 +770,7 @@ class Encounter extends React.Component {
                   iconSize={iconSize}
                   iconStyle={styles.optionIcon}
                   labels={[__('encounter-screen.options.ventilated.yes'), __('encounter-screen.options.ventilated.no')]}
-                  onPress={setVentilation}
+                  onPress={this.setVentilation}
                 />
               </View>
             )}
@@ -570,7 +784,7 @@ class Encounter extends React.Component {
                 iconSize={iconSize}
                 iconStyle={styles.optionIcon}
                 labels={[__('encounter-screen.options.mask.yes'), __('encounter-screen.options.mask.no')]}
-                onPress={setMask}
+                onPress={this.setMask}
               />
             </View>
 
@@ -583,7 +797,7 @@ class Encounter extends React.Component {
                 iconSize={iconSize}
                 iconStyle={styles.optionIcon}
                 labels={[__('encounter-screen.options.distance.yes'), __('encounter-screen.options.distance.no')]}
-                onPress={setDistance}
+                onPress={this.setDistance}
               />
             </View>
 
@@ -597,7 +811,7 @@ class Encounter extends React.Component {
               <View style={{ ...styles.textInput, ...styles.textInputMultiline }}>
                 <TextInput
                   multiline
-                  onChangeText={setNote}
+                  onChangeText={this.setNote}
                   style={{ ...styles.textInputText, ...styles.textInputTextMultiline }}
                   value={note}
                 />
@@ -637,24 +851,33 @@ class Encounter extends React.Component {
 
         <ModalSelectPersons
           isVisible={modalSelectPersonsVisible}
-          onPressClose={hideModalSelectPersons}
-          onPressConfirm={setPersons}
-          onPressAddPerson={showModalPerson}
+          onPressClose={this.hideModalSelectPersons}
+          onPressConfirm={this.hideModalSelectPersons}
+          onPressAddPerson={this.showModalPerson}
           persons={directoryPersons}
           selectedPersons={persons}
+          togglePerson={this.togglePerson}
         />
 
-        <ModalPerson isVisible={modalPersonVisible} onPressClose={hideModalPerson} onPressConfirm={addPerson} />
+        <ModalPerson
+          isVisible={modalPersonVisible}
+          onPressClose={this.hideModalPerson}
+          onPressConfirm={this.addPerson}
+        />
 
         <ModalSelectLocation
           isVisible={modalSelectLocationVisible}
           locations={directoryLocations}
-          onPressAddLocation={showModalLocation}
-          onPressClose={hideModalSelectLocation}
+          onPressAddLocation={this.showModalLocation}
+          onPressClose={this.hideModalSelectLocation}
           onPressLocation={this.selectLocation}
         />
 
-        <ModalLocation isVisible={modalLocationVisible} onPressClose={hideModalLocation} onPressConfirm={addLocation} />
+        <ModalLocation
+          isVisible={modalLocationVisible}
+          onPressClose={this.hideModalLocation}
+          onPressConfirm={this.addLocation}
+        />
 
         <DateTimePickerModal
           cancelTextIOS={__('Cancel')}
@@ -664,8 +887,8 @@ class Encounter extends React.Component {
           headerTextIOS={''}
           isVisible={modalTimestampStartVisible}
           mode={'time'}
-          onCancel={hideModalTimestampStart}
-          onConfirm={confirmTimestampStart}
+          onCancel={this.hideModalTimestampStart}
+          onConfirm={this.setTimestampStart}
         />
 
         <DateTimePickerModal
@@ -676,8 +899,8 @@ class Encounter extends React.Component {
           headerTextIOS={''}
           isVisible={modalTimestampEndVisible}
           mode={'time'}
-          onCancel={hideModalTimestampEnd}
-          onConfirm={confirmTimestampEnd}
+          onCancel={this.hideModalTimestampEnd}
+          onConfirm={this.setTimestampEnd}
         />
 
         <ModalDeleteEncounter

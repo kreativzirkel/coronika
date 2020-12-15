@@ -3,7 +3,6 @@ import moment from 'moment';
 import { Keyboard } from 'react-native';
 import { connect } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { MODAL_OPENING_DELAY } from '../../../constants';
 import withI18n from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
@@ -15,59 +14,26 @@ import {
   hideDateSwitcherModal,
   hideModalConfirmDelete,
   hideModalHints,
-  hideModalLocation,
-  hideModalPerson,
-  hideModalSelectLocation,
-  hideModalSelectPersons,
-  hideModalTimestampEnd,
-  hideModalTimestampStart,
-  removePerson,
-  setDistance,
-  setLocation,
-  setMask,
-  setNote,
-  setOutside,
-  setPersons,
-  setTimestampEnd,
-  setTimestampStart,
-  setVentilation,
   showDateSwitcherModal,
   showModalConfirmDelete,
   showModalHints,
-  showModalLocation,
-  showModalPerson,
-  showModalSelectLocation,
-  showModalSelectPersons,
-  showModalTimestampEnd,
-  showModalTimestampStart,
   reset,
 } from './actions';
 import Screen from './ui';
 
-const addPersonAsync = (personName, personPhone, personMail) => async (dispatch, getState) => {
-  dispatch(closeModalPerson());
-
-  const id = uuidv4();
+const addPersonAsync = (personId, personName, personPhone, personMail) => async (dispatch) => {
   const person = {
-    id,
+    id: personId,
     fullName: personName,
     phoneNumbers: [{ label: 'phone', number: personPhone }],
     emailAddresses: [{ label: 'mail', email: personMail }],
   };
   dispatch(addPerson(person));
-
-  const {
-    encounter: { persons },
-  } = getState();
-  dispatch(setPersons([...persons, id]));
 };
 
-const addLocationAsync = (locationTitle, locationDescription, locationPhone) => async (dispatch) => {
-  dispatch(hideModalLocation());
-  const id = uuidv4();
-  const location = { id, description: locationDescription, phone: locationPhone, title: locationTitle };
+const addLocationAsync = (locationId, locationTitle, locationDescription, locationPhone) => async (dispatch) => {
+  const location = { id: locationId, description: locationDescription, phone: locationPhone, title: locationTitle };
   dispatch(addLocation(location));
-  dispatch(setLocation(id));
 };
 
 const openDateSwitcherModal = () => async (dispatch) => {
@@ -84,76 +50,20 @@ const closeModalHints = () => async (dispatch, getState) => {
   dispatch(setShowKeyEncounterHints(showKeyEncounterHintsApp));
 };
 
-const openModalLocation = () => async (dispatch) => {
-  dispatch(hideModalSelectLocation());
-
-  setTimeout(() => dispatch(showModalLocation()), MODAL_OPENING_DELAY);
-};
-
-const closeModalLocation = () => async (dispatch) => {
-  dispatch(hideModalLocation());
-
-  setTimeout(() => dispatch(showModalSelectLocation()), MODAL_OPENING_DELAY);
-};
-
-const openModalPerson = () => async (dispatch) => {
-  dispatch(hideModalSelectPersons());
-
-  setTimeout(() => dispatch(showModalPerson()), MODAL_OPENING_DELAY);
-};
-
-const closeModalPerson = () => async (dispatch) => {
-  dispatch(hideModalPerson());
-
-  setTimeout(() => dispatch(showModalSelectPersons()), MODAL_OPENING_DELAY);
-};
-
-const confirmTimestampEnd = (timestampEnd) => async (dispatch) => {
-  const timestamp = moment(timestampEnd).valueOf();
-
-  dispatch(hideModalTimestampEnd());
-  dispatch(setTimestampEnd(timestamp));
-};
-
-const confirmTimestampStart = (timestampStart) => async (dispatch) => {
-  const timestamp = moment(timestampStart).valueOf();
-
-  dispatch(hideModalTimestampStart());
-  dispatch(setTimestampStart(timestamp));
-};
-
-const saveEncounter = (navigation) => async (dispatch, getState) => {
+const saveEncounter = (encounterData, navigation) => async (dispatch, getState) => {
   const {
     day: { timestamp: timestampDay },
-    encounter: {
-      distance,
-      id,
-      location,
-      mask,
-      note,
-      outside,
-      persons,
-      timestamp: timestampEncounter,
-      timestampEnd,
-      timestampStart,
-      ventilation,
-    },
+    encounter: { id, timestamp: timestampEncounter },
   } = getState();
+
+  const { location, persons, timestampEnd, timestampStart } = encounterData;
 
   if (persons?.length === 0 && location === undefined) return;
 
   const encounter = {
-    distance,
+    ...encounterData,
     id: id !== undefined ? id : uuidv4(),
-    location,
-    mask,
-    note,
-    outside,
-    persons,
     timestamp: id !== undefined ? timestampEncounter : timestampDay,
-    timestampEnd,
-    timestampStart,
-    ventilation,
   };
 
   if (id !== undefined) {
@@ -310,43 +220,19 @@ const mapStateToProps = ({
 const mapDispatchToProps = (dispatch) => {
   return {
     addLocation: (id, locationTitle, locationDescription, locationPhone) =>
-      dispatch(addLocationAsync(locationTitle, locationDescription, locationPhone)),
+      dispatch(addLocationAsync(id, locationTitle, locationDescription, locationPhone)),
     addPerson: (id, personName, personPhone, personMail) =>
-      dispatch(addPersonAsync(personName, personPhone, personMail)),
-    confirmTimestampEnd: (timestampEnd) => dispatch(confirmTimestampEnd(timestampEnd)),
-    confirmTimestampStart: (timestampStart) => dispatch(confirmTimestampStart(timestampStart)),
+      dispatch(addPersonAsync(id, personName, personPhone, personMail)),
     deleteEncounter: (navigation) => dispatch(deleteEncounter(navigation)),
     hideDateSwitcherModal: () => dispatch(hideDateSwitcherModal()),
     hideModalConfirmDelete: () => dispatch(hideModalConfirmDelete()),
     hideModalHints: () => dispatch(closeModalHints()),
-    hideModalLocation: () => dispatch(closeModalLocation()),
-    hideModalPerson: () => dispatch(closeModalPerson()),
-    hideModalSelectLocation: () => dispatch(hideModalSelectLocation()),
-    hideModalSelectPersons: () => dispatch(hideModalSelectPersons()),
-    hideModalTimestampEnd: () => dispatch(hideModalTimestampEnd()),
-    hideModalTimestampStart: () => dispatch(hideModalTimestampStart()),
-    removePerson: (id) => dispatch(removePerson(id)),
     reset: () => dispatch(reset()),
-    save: (navigation) => dispatch(saveEncounter(navigation)),
+    save: (encounter, navigation) => dispatch(saveEncounter(encounter, navigation)),
     showDateSwitcherModal: () => dispatch(openDateSwitcherModal()),
     showModalConfirmDelete: () => dispatch(showModalConfirmDelete()),
     showModalHints: () => dispatch(showModalHints()),
-    showModalLocation: () => dispatch(openModalLocation()),
-    showModalPerson: () => dispatch(openModalPerson()),
-    showModalSelectLocation: () => dispatch(showModalSelectLocation()),
-    showModalSelectPersons: () => dispatch(showModalSelectPersons()),
-    showModalTimestampEnd: () => dispatch(showModalTimestampEnd()),
-    showModalTimestampStart: () => dispatch(showModalTimestampStart()),
-    setDistance: (distance) => dispatch(setDistance(distance)),
-    setLocation: (location) => dispatch(setLocation(location)),
-    setMask: (mask) => dispatch(setMask(mask)),
-    setNote: (note) => dispatch(setNote(note)),
-    setOutside: (outside) => dispatch(setOutside(outside)),
-    setPersons: (persons) => dispatch(setPersons(persons)),
     setTimestamp: (timestamp) => dispatch(setTimestamp(timestamp)),
-    setTimestampEnd: (timestampEnd) => dispatch(setTimestampEnd(timestampEnd)),
-    setTimestampStart: (timestampStart) => dispatch(setTimestampStart(timestampStart)),
-    setVentilation: (ventilation) => dispatch(setVentilation(ventilation)),
   };
 };
 

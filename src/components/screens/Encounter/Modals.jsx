@@ -18,7 +18,6 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import { ReactReduxContext } from 'react-redux';
 import MaskIcon from '../../../assets/images/icons/mask.svg';
 import { COLOR_PRIMARY } from '../../../constants';
 import withI18n from '../../../i18n';
@@ -34,6 +33,10 @@ import UilPlus from '@iconscout/react-native-unicons/icons/uil-plus';
 class ModalDeleteEncounterClass extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    return nextProps.isVisible !== this.props.isVisible;
   }
 
   styles = StyleSheet.create({
@@ -127,7 +130,7 @@ class EncounterOptionHint extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
-    return nextProps.activeState !== this.props.activeState;
+    return false;
   }
 
   render() {
@@ -148,7 +151,7 @@ class EncounterOptionHintMask extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
-    return nextProps.activeState !== this.props.activeState;
+    return false;
   }
 
   render() {
@@ -166,6 +169,10 @@ class EncounterOptionHintMask extends React.Component {
 class ModalHintsClass extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    return nextProps.isVisible !== this.props.isVisible;
   }
 
   styles = StyleSheet.create({
@@ -324,6 +331,10 @@ class ModalSelectLocationClass extends React.Component {
     this.setSearchValue = this.setSearchValue.bind(this);
   }
 
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    return nextProps.isVisible !== this.props.isVisible || nextState.searchValue !== this.state.searchValue;
+  }
+
   styles = StyleSheet.create({
     buttonCreateNew: {
       alignItems: 'center',
@@ -439,8 +450,6 @@ class ModalSelectLocationClass extends React.Component {
   }
 }
 
-ModalSelectLocationClass.contextType = ReactReduxContext;
-
 export const ModalSelectLocation = withColorScheme(withI18n(withViewportUnits(ModalSelectLocationClass)));
 
 class ModalSelectPersonsClass extends React.Component {
@@ -450,7 +459,6 @@ class ModalSelectPersonsClass extends React.Component {
     this.state = {
       isVisible: this.props.isVisible,
       searchValue: '',
-      selectedPersons: this.props.selectedPersons,
     };
 
     this.searchInput = React.createRef();
@@ -466,14 +474,9 @@ class ModalSelectPersonsClass extends React.Component {
   static getDerivedStateFromProps(props, state) {
     const isVisibleFirstTime = props.isVisible && !state.isVisible;
 
-    if (
-      isVisibleFirstTime ||
-      props.selectedPersons.length !== state.selectedPersons.length ||
-      !deepEqual(props.selectedPersons, state.selectedPersons)
-    ) {
+    if (isVisibleFirstTime) {
       return {
         isVisible: props.isVisible,
-        selectedPersons: isVisibleFirstTime ? props.selectedPersons : state.selectedPersons,
       };
     }
 
@@ -485,10 +488,8 @@ class ModalSelectPersonsClass extends React.Component {
       (nextProps.isVisible && !this.state.isVisible) ||
       nextProps.isVisible !== this.props.isVisible ||
       nextState.searchValue !== this.state.searchValue ||
-      nextProps.selectedPersons.length !== this.state.selectedPersons.length ||
-      nextState.selectedPersons.length !== this.state.selectedPersons.length ||
-      !deepEqual(nextProps.selectedPersons, this.state.selectedPersons) ||
-      !deepEqual(nextState.selectedPersons, this.state.selectedPersons)
+      nextProps.selectedPersons.length !== this.props.selectedPersons.length ||
+      !deepEqual(nextProps.selectedPersons, this.props.selectedPersons)
     );
   }
 
@@ -587,16 +588,12 @@ class ModalSelectPersonsClass extends React.Component {
   }
 
   toggleSelection(id) {
-    if (this.state.selectedPersons.includes(id)) {
-      this.setState({ selectedPersons: this.state.selectedPersons.filter((personId) => personId !== id) });
-    } else {
-      this.setState({ selectedPersons: [...this.state.selectedPersons, id] });
-    }
+    if (this.props.togglePerson) this.props.togglePerson(id);
   }
 
   render() {
-    const { colors, isVisible, persons, vw, __ } = this.props;
-    const { searchValue, selectedPersons } = this.state;
+    const { colors, isVisible, persons, selectedPersons, vw, __ } = this.props;
+    const { searchValue } = this.state;
 
     const isSearchFilled = searchValue.trim().length > 0;
     const visiblePersons = persons.filter(({ hidden }) => !hidden);
