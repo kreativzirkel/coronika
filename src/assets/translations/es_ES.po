@@ -829,7 +829,7 @@ msgid "menu-screen.items.faq"
 msgstr "Preguntas frecuentes"
 
 #: src/components/screens/Menu.jsx:214
-#: src/components/screens/Settings/ui.jsx:99
+#: src/components/screens/Settings/ui.jsx:103
 msgid "settings-screen.header.headline"
 msgstr "Ajustes"
 
@@ -879,113 +879,174 @@ msgstr "No has añadido ningún lugar a tu agenda."
 msgid "overview-screen.export.button"
 msgstr "Resumen de la exportación"
 
-#: src/components/screens/Settings/logic.js:160
+#: src/components/screens/Settings/logic.js:189
 msgid "notifications.diary.headline"
 msgstr "📒 Registra tus contactos"
 
-#: src/components/screens/Settings/logic.js:161
+#: src/components/screens/Settings/logic.js:190
 msgid "notifications.diary.text"
 msgstr ""
 "Registra tus contactos cercanos y ayuda a frenar la propagación del "
 "coronavirus."
 
-#: src/components/screens/Settings/logic.js:176
+#: src/components/screens/Settings/logic.js:205
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽 Mantén tu pantalla limpia"
 
-#: src/components/screens/Settings/logic.js:177
+#: src/components/screens/Settings/logic.js:206
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr "Libera tu pantalla de numerosos gérmenes, bacterias y otros patógenos."
 
-#: src/components/screens/Settings/logic.js:180
+#: src/components/screens/Settings/logic.js:209
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 Desinfecta tu teléfono"
 
-#: src/components/screens/Settings/logic.js:181
+#: src/components/screens/Settings/logic.js:210
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr ""
 "Mantener el teléfono limpio es otra forma inteligente de evitar que los "
 "gérmenes entren en contacto con la punta de los dedos."
 
-#: src/components/screens/Settings/logic.js:184
+#: src/components/screens/Settings/logic.js:213
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Limpia la pantalla de tu smartphone"
 
-#: src/components/screens/Settings/logic.js:185
+#: src/components/screens/Settings/logic.js:214
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "Elimina los gérmenes limpiando la pantalla con un paño desinfectante."
 
-#: src/components/screens/Settings/logic.js:201
-#: src/components/screens/Settings/logic.js:234
-#: src/components/screens/Settings/logic.js:249
+#: src/components/screens/Settings/logic.js:230
+#: src/components/screens/Settings/logic.js:263
+#: src/components/screens/Settings/logic.js:278
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "Si has estado fuera lávate bien las manos."
 
-#: src/components/screens/Settings/logic.js:202
-#: src/components/screens/Settings/logic.js:235
-#: src/components/screens/Settings/logic.js:250
+#: src/components/screens/Settings/logic.js:231
+#: src/components/screens/Settings/logic.js:264
+#: src/components/screens/Settings/logic.js:279
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 Lávate las manos"
 
-#: src/components/screens/Settings/logic.js:206
-#: src/components/screens/Settings/logic.js:239
-#: src/components/screens/Settings/logic.js:254
+#: src/components/screens/Settings/logic.js:235
+#: src/components/screens/Settings/logic.js:268
+#: src/components/screens/Settings/logic.js:283
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Lavarse las manos es una de las formas más simples de protegerse a sí mismo "
 "y a los demás de las enfermedades."
 
-#: src/components/screens/Settings/logic.js:207
-#: src/components/screens/Settings/logic.js:240
-#: src/components/screens/Settings/logic.js:255
+#: src/components/screens/Settings/logic.js:236
+#: src/components/screens/Settings/logic.js:269
+#: src/components/screens/Settings/logic.js:284
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 ¿Te has lavado las manos?"
 
-#: src/components/screens/Settings/logic.js:211
-#: src/components/screens/Settings/logic.js:244
-#: src/components/screens/Settings/logic.js:259
+#: src/components/screens/Settings/logic.js:240
+#: src/components/screens/Settings/logic.js:273
+#: src/components/screens/Settings/logic.js:288
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Practica el lavado de manos con cuidado y no olvides limpiar las puntas de "
 "los dedos y el espacio entre ellos."
 
-#: src/components/screens/Settings/logic.js:212
-#: src/components/screens/Settings/logic.js:245
-#: src/components/screens/Settings/logic.js:260
+#: src/components/screens/Settings/logic.js:241
+#: src/components/screens/Settings/logic.js:274
+#: src/components/screens/Settings/logic.js:289
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 ¡No olvides tus consejos!"
 
-#: src/components/screens/Settings/ui.jsx:104
+#: src/components/screens/Settings/logic.js:319
+msgid "notifications.christmas.1218.text"
+msgstr ""
+"🎄 Una semana hasta la Navidad. Especialmente antes de las vacaciones, "
+"asegúrese de mantener sus encuentros al mínimo."
+
+#: src/components/screens/Settings/logic.js:323
+msgid "notifications.christmas.1219.text"
+msgstr ""
+"🎄 La temporada festiva se acerca, su lista de deseos está lista, piense en "
+"su agenda de contactos de este año también."
+
+#: src/components/screens/Settings/logic.js:327
+msgid "notifications.christmas.1220.text"
+msgstr ""
+"🎄 ¡El regalo más importante que puedes traer es tu salud! Protégete a ti "
+"mismo y a los que te rodean."
+
+#: src/components/screens/Settings/logic.js:331
+msgid "notifications.christmas.1221.text"
+msgstr ""
+"🎄 ¿No has comprado ningún regalo todavía? ¡Este año, los vales caseros para "
+"restaurantes locales son una gran idea!"
+
+#: src/components/screens/Settings/logic.js:335
+msgid "notifications.christmas.1222.text"
+msgstr ""
+"🎄 Adviento, Adviento, una pequeña luz está ardiendo,\n"
+"primero uno, luego dos, luego tres, luego cuatro,\n"
+"Demasiados encuentros que guardo."
+
+#: src/components/screens/Settings/logic.js:339
+msgid "notifications.christmas.1223.text"
+msgstr ""
+"🎄 Si viajas a casa, recuerda: ¡Mantengan distancia, observen la higiene, "
+"usen una máscara de todos los días!"
+
+#: src/components/screens/Settings/logic.js:343
+msgid "notifications.christmas.1224.text"
+msgstr ""
+"🎄 ¡Le deseamos unas vacaciones tranquilas y bien ventiladas! La ventilación "
+"regular reduce el riesgo de infección."
+
+#: src/components/screens/Settings/logic.js:347
+msgid "notifications.christmas.1225.text"
+msgstr "🎄 Hoy es el día perfecto para ver algunos clásicos navideños en casa."
+
+#: src/components/screens/Settings/logic.js:351
+msgid "notifications.christmas.1226.text"
+msgstr ""
+"🎄 Los síntomas no siempre son visibles. Su diario de contactos le ayuda a "
+"rastrear los encuentros y las cadenas de infección."
+
+#: src/components/screens/Settings/ui.jsx:108
 msgid "settings-screen.notifications.headline"
 msgstr "Notificaciones"
 
-#: src/components/screens/Settings/ui.jsx:108
+#: src/components/screens/Settings/ui.jsx:112
 msgid "settings-screen.notifications.washing-hands.headline"
 msgstr "Recordatorio para lavarse las manos"
 
-#: src/components/screens/Settings/ui.jsx:112
+#: src/components/screens/Settings/ui.jsx:116
 msgid "settings-screen.notifications.washing-hands.option-1.label"
 msgstr "recordar 3 veces al día"
 
-#: src/components/screens/Settings/ui.jsx:121
+#: src/components/screens/Settings/ui.jsx:125
 msgid "settings-screen.notifications.washing-hands.option-2.label"
 msgstr "recordar 6 veces al día"
 
-#: src/components/screens/Settings/ui.jsx:132
+#: src/components/screens/Settings/ui.jsx:136
 msgid "settings-screen.notifications.disinfect-smartphone.headline"
 msgstr "Recordatorio para desinfectar el teléfono"
 
-#: src/components/screens/Settings/ui.jsx:136
+#: src/components/screens/Settings/ui.jsx:140
 msgid "settings-screen.notifications.disinfect-smartphone.option.label"
 msgstr "recuerde a diario"
 
-#: src/components/screens/Settings/ui.jsx:146
+#: src/components/screens/Settings/ui.jsx:150
 msgid "settings-screen.notifications.diary.headline"
 msgstr "Recordatorio para usar el diario"
 
-#: src/components/screens/Settings/ui.jsx:149
+#: src/components/screens/Settings/ui.jsx:153
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "recuerda a diario"
+
+#: src/components/screens/Settings/ui.jsx:159
+msgid "settings-screen.notifications.christmas.headline"
+msgstr "Navidad"
+
+#: src/components/screens/Settings/ui.jsx:162
+msgid "settings-screen.notifications.christmas.option.label"
+msgstr "Recibe pistas"
 
 #: src/components/screens/Splash.jsx:122
 msgid "splash-screen.supported-by.headline"

@@ -1,3 +1,7 @@
+export const enableNotificationChristmas = () => ({ type: 'ENABLE_NOTIFICATION_CHRISTMAS_SETTINGS' });
+
+export const disableNotificationChristmas = () => ({ type: 'DISABLE_NOTIFICATION_CHRISTMAS_SETTINGS' });
+
 export const enableNotificationDiary = () => ({ type: 'ENABLE_NOTIFICATION_DIARY_SETTINGS' });
 
 export const disableNotificationDiary = () => ({ type: 'DISABLE_NOTIFICATION_DIARY_SETTINGS' });

@@ -820,7 +820,7 @@ msgid "menu-screen.items.faq"
 msgstr "Часто задаваемые вопросы"
 
 #: src/components/screens/Menu.jsx:214
-#: src/components/screens/Settings/ui.jsx:99
+#: src/components/screens/Settings/ui.jsx:103
 msgid "settings-screen.header.headline"
 msgstr "Настройки"
 
@@ -871,117 +871,179 @@ msgstr "Вы не добавили ни одного места в свой дн
 msgid "overview-screen.export.button"
 msgstr "Обзор экспорта"
 
-#: src/components/screens/Settings/logic.js:160
+#: src/components/screens/Settings/logic.js:189
 msgid "notifications.diary.headline"
 msgstr "📒 Зарегистрируйте ваши контакты"
 
-#: src/components/screens/Settings/logic.js:161
+#: src/components/screens/Settings/logic.js:190
 msgid "notifications.diary.text"
 msgstr ""
 "Зарегистрируйте ваши близкие контакты и помогите замедлить распространение "
 "коронавируса."
 
-#: src/components/screens/Settings/logic.js:176
+#: src/components/screens/Settings/logic.js:205
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽 Держите экран в чистоте."
 
-#: src/components/screens/Settings/logic.js:177
+#: src/components/screens/Settings/logic.js:206
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr ""
 "Очистите экран от многочисленных микробов, бактерий и других патогенных "
 "микроорганизмов."
 
-#: src/components/screens/Settings/logic.js:180
+#: src/components/screens/Settings/logic.js:209
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 Дезинфекция телефона."
 
-#: src/components/screens/Settings/logic.js:181
+#: src/components/screens/Settings/logic.js:210
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr ""
 "Держать телефон дезинфицированным - еще один умный способ держать микробов "
 "подальше от кончиков пальцев."
 
-#: src/components/screens/Settings/logic.js:184
+#: src/components/screens/Settings/logic.js:213
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Продезинфицируйте  экран смартфона."
 
-#: src/components/screens/Settings/logic.js:185
+#: src/components/screens/Settings/logic.js:214
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr ""
 "Очистите поверхность телефона от микробов, протерев его дезинфицирующей "
 "салфеткой."
 
-#: src/components/screens/Settings/logic.js:201
-#: src/components/screens/Settings/logic.js:234
-#: src/components/screens/Settings/logic.js:249
+#: src/components/screens/Settings/logic.js:230
+#: src/components/screens/Settings/logic.js:263
+#: src/components/screens/Settings/logic.js:278
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "Если вы были на улице, тщательно вымойте руки."
 
-#: src/components/screens/Settings/logic.js:202
-#: src/components/screens/Settings/logic.js:235
-#: src/components/screens/Settings/logic.js:250
+#: src/components/screens/Settings/logic.js:231
+#: src/components/screens/Settings/logic.js:264
+#: src/components/screens/Settings/logic.js:279
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 Помойте руки"
 
-#: src/components/screens/Settings/logic.js:206
-#: src/components/screens/Settings/logic.js:239
-#: src/components/screens/Settings/logic.js:254
+#: src/components/screens/Settings/logic.js:235
+#: src/components/screens/Settings/logic.js:268
+#: src/components/screens/Settings/logic.js:283
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Мытье рук - один из самых простых способов защитить себя и других от "
 "болезней."
 
-#: src/components/screens/Settings/logic.js:207
-#: src/components/screens/Settings/logic.js:240
-#: src/components/screens/Settings/logic.js:255
+#: src/components/screens/Settings/logic.js:236
+#: src/components/screens/Settings/logic.js:269
+#: src/components/screens/Settings/logic.js:284
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Вы мыли руки?"
 
-#: src/components/screens/Settings/logic.js:211
-#: src/components/screens/Settings/logic.js:244
-#: src/components/screens/Settings/logic.js:259
+#: src/components/screens/Settings/logic.js:240
+#: src/components/screens/Settings/logic.js:273
+#: src/components/screens/Settings/logic.js:288
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Практикуйте тщательное мытье рук и не забывайте мыть кончики пальцев и "
 "пространство между пальцами."
 
-#: src/components/screens/Settings/logic.js:212
-#: src/components/screens/Settings/logic.js:245
-#: src/components/screens/Settings/logic.js:260
+#: src/components/screens/Settings/logic.js:241
+#: src/components/screens/Settings/logic.js:274
+#: src/components/screens/Settings/logic.js:289
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 Не забывайте о советах!"
 
-#: src/components/screens/Settings/ui.jsx:104
+#: src/components/screens/Settings/logic.js:319
+msgid "notifications.christmas.1218.text"
+msgstr ""
+"🎄 Одна неделя до Рождества. Особенно перед праздниками, убедитесь, что ваши "
+"встречи сведены к минимуму."
+
+#: src/components/screens/Settings/logic.js:323
+msgid "notifications.christmas.1219.text"
+msgstr ""
+"🎄 Приближается праздничный сезон, список ваших пожеланий готов, подумайте о "
+"вашем контактном дневнике и в этом году."
+
+#: src/components/screens/Settings/logic.js:327
+msgid "notifications.christmas.1220.text"
+msgstr ""
+"🎄 Самый важный подарок, который вы можете сделать - это ваше здоровье! "
+"Защищай себя и тех, кто вас окружает."
+
+#: src/components/screens/Settings/logic.js:331
+msgid "notifications.christmas.1221.text"
+msgstr ""
+"🎄 Еще не купили подарки? В этом году домашние ваучеры для местных ресторанов "
+"- отличная идея!"
+
+#: src/components/screens/Settings/logic.js:335
+msgid "notifications.christmas.1222.text"
+msgstr ""
+"🎄 Адвент, Адвент, загорается свет,\n"
+"Сначала один, потом два, потом три, потом четыре,\n"
+"Слишком много встреч -  я избегаю."
+
+#: src/components/screens/Settings/logic.js:339
+msgid "notifications.christmas.1223.text"
+msgstr ""
+"🎄 Если ты едешь домой, помни: Соблюдай дистанцию, гигиену и носи "
+"повседневную маску!"
+
+#: src/components/screens/Settings/logic.js:343
+msgid "notifications.christmas.1224.text"
+msgstr ""
+"🎄 Желаем Вам мирного и хорошо проветриваемого курортного сезона! Регулярное "
+"проветривание снижает риск заражения."
+
+#: src/components/screens/Settings/logic.js:347
+msgid "notifications.christmas.1225.text"
+msgstr ""
+"🎄 Сегодня идеальный день, чтобы посмотреть рождественскую классику дома."
+
+#: src/components/screens/Settings/logic.js:351
+msgid "notifications.christmas.1226.text"
+msgstr ""
+"🎄 Симптомы не всегда заметны. Ваш контактный дневник поможет вам проследить "
+"встречи и цепочки инфекции."
+
+#: src/components/screens/Settings/ui.jsx:108
 msgid "settings-screen.notifications.headline"
 msgstr "Уведомления"
 
-#: src/components/screens/Settings/ui.jsx:108
+#: src/components/screens/Settings/ui.jsx:112
 msgid "settings-screen.notifications.washing-hands.headline"
 msgstr "Напоминание помыть руки"
 
-#: src/components/screens/Settings/ui.jsx:112
+#: src/components/screens/Settings/ui.jsx:116
 msgid "settings-screen.notifications.washing-hands.option-1.label"
 msgstr "напоминать 3 раза в день"
 
-#: src/components/screens/Settings/ui.jsx:121
+#: src/components/screens/Settings/ui.jsx:125
 msgid "settings-screen.notifications.washing-hands.option-2.label"
 msgstr "напоминать 6 раз в день"
 
-#: src/components/screens/Settings/ui.jsx:132
+#: src/components/screens/Settings/ui.jsx:136
 msgid "settings-screen.notifications.disinfect-smartphone.headline"
 msgstr "Напоминание о необходимости дезинфекции телефона"
 
-#: src/components/screens/Settings/ui.jsx:136
+#: src/components/screens/Settings/ui.jsx:140
 msgid "settings-screen.notifications.disinfect-smartphone.option.label"
 msgstr "напоминать ежедневно"
 
-#: src/components/screens/Settings/ui.jsx:146
+#: src/components/screens/Settings/ui.jsx:150
 msgid "settings-screen.notifications.diary.headline"
 msgstr "Напоминание об использовании дневника"
 
-#: src/components/screens/Settings/ui.jsx:149
+#: src/components/screens/Settings/ui.jsx:153
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "напоминать ежедневно"
+
+#: src/components/screens/Settings/ui.jsx:159
+msgid "settings-screen.notifications.christmas.headline"
+msgstr "Рождество"
+
+#: src/components/screens/Settings/ui.jsx:162
+msgid "settings-screen.notifications.christmas.option.label"
+msgstr "Получать подсказки"
 
 #: src/components/screens/Splash.jsx:122
 msgid "splash-screen.supported-by.headline"

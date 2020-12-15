@@ -7,9 +7,11 @@ import withI18n, { __ as __i18n } from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import {
+  disableNotificationChristmas,
   disableNotificationDiary,
   disableNotificationDisinfectPhone,
   disableNotificationWashingHands,
+  enableNotificationChristmas,
   enableNotificationDiary,
   enableNotificationDisinfectPhone,
   enableNotificationWashingHandsOption1,
@@ -18,6 +20,7 @@ import {
 import Screen from './ui';
 
 const NOTIFICATION_KEY = {
+  CHRISTMAS: 'coronika.notification.christmas',
   DIARY: 'coronika.notification.diary.daily',
   DISINFECT_SMARTPHONE: 'coronika.notification.disinfect-smartphone.daily',
   WASHING_HANDS: 'coronika.notification.washing-hands',
@@ -56,12 +59,33 @@ export const configurePushNotifications = (navigation, requestPermissions = fals
     requestPermissions,
   });
 
+  const {
+    settings: {
+      notificationChristmasEnabled,
+      notificationDiaryEnabled,
+      notificationDisinfectSmartphoneEnabled,
+      notificationWashingHandsOption1Enabled,
+      notificationWashingHandsOption2Enabled,
+    },
+  } = getState();
+
+  if (
+    notificationChristmasEnabled === undefined &&
+    (notificationDiaryEnabled ||
+      notificationDisinfectSmartphoneEnabled ||
+      notificationWashingHandsOption1Enabled ||
+      notificationWashingHandsOption2Enabled)
+  ) {
+    dispatch(enableNotificationChristmas());
+  }
+
   dispatch(resetNotifications(__i18n));
 };
 
 const setDefaultNotifications = (__, cb) => async (dispatch, getState) => {
   let {
     settings: {
+      notificationChristmasEnabled,
       notificationDiaryEnabled,
       notificationDisinfectSmartphoneEnabled,
       notificationWashingHandsOption1Enabled,
@@ -71,11 +95,14 @@ const setDefaultNotifications = (__, cb) => async (dispatch, getState) => {
   } = getState();
 
   if (
+    !notificationChristmasEnabled &&
     !notificationDiaryEnabled &&
     !notificationDisinfectSmartphoneEnabled &&
     !notificationWashingHandsOption1Enabled &&
     !notificationWashingHandsOption2Enabled
   ) {
+    dispatch(enableNotificationChristmas());
+    notificationChristmasEnabled = true;
     dispatch(enableNotificationDiary());
     notificationDiaryEnabled = true;
     dispatch(enableNotificationDisinfectPhone());
@@ -86,6 +113,7 @@ const setDefaultNotifications = (__, cb) => async (dispatch, getState) => {
 
   setupNotifications(
     {
+      notificationChristmasEnabled,
       notificationDiaryEnabled,
       notificationDisinfectSmartphoneEnabled,
       notificationWashingHandsOption1Enabled,
@@ -97,7 +125,7 @@ const setDefaultNotifications = (__, cb) => async (dispatch, getState) => {
   );
 };
 
-export const activateDefaultNotifications = (__, cb) => async (dispatch, getState) => {
+export const activateDefaultNotifications = (__, cb) => async (dispatch) => {
   if (Platform.OS === 'ios') {
     PushNotification.requestPermissions().then((grant) => {
       if (Platform.OS === 'ios' && !grant.alert && !grant.badge && !grant.sound) {
@@ -138,6 +166,7 @@ const setNotifications = (notifications, __, cb) => {
   PushNotification.cancelAllLocalNotifications();
 
   const {
+    notificationChristmasEnabled,
     notificationDiaryEnabled,
     notificationDisinfectSmartphoneEnabled,
     notificationWashingHandsOption1Enabled,
@@ -275,6 +304,69 @@ const setNotifications = (notifications, __, cb) => {
     });
   }
 
+  // enable christmas notifications if setting is true or if setting is undefined and any other notification setting is true
+  if (
+    notificationChristmasEnabled ||
+    (notificationChristmasEnabled === undefined &&
+      (notificationDiaryEnabled ||
+        notificationDisinfectSmartphoneEnabled ||
+        notificationWashingHandsOption1Enabled ||
+        notificationWashingHandsOption2Enabled))
+  ) {
+    const list = [
+      {
+        timestamp: 1608249600, // 18.12.2020
+        message: __('notifications.christmas.1218.text'),
+      },
+      {
+        timestamp: 1608336000, // 19.12.2020
+        message: __('notifications.christmas.1219.text'),
+      },
+      {
+        timestamp: 1608422400, // 20.12.2020
+        message: __('notifications.christmas.1220.text'),
+      },
+      {
+        timestamp: 1608508800, // 21.12.2020
+        message: __('notifications.christmas.1221.text'),
+      },
+      {
+        timestamp: 1608595200, // 22.12.2020
+        message: __('notifications.christmas.1222.text'),
+      },
+      {
+        timestamp: 1608681600, // 23.12.2020
+        message: __('notifications.christmas.1223.text'),
+      },
+      {
+        timestamp: 1608768000, // 24.12.2020
+        message: __('notifications.christmas.1224.text'),
+      },
+      {
+        timestamp: 1608854400, // 25.12.2020
+        message: __('notifications.christmas.1225.text'),
+      },
+      {
+        timestamp: 1608940800, // 26.12.2020
+        message: __('notifications.christmas.1226.text'),
+      },
+    ];
+
+    list.forEach(({ message, timestamp }) => {
+      const tag = NOTIFICATION_KEY.CHRISTMAS;
+      const notificationTimestamp = moment.unix(timestamp).hours(12).minutes(0).seconds(0).milliseconds(0).valueOf();
+      if (notificationTimestamp > moment().valueOf()) {
+        PushNotification.localNotificationSchedule({
+          ...defaultNotificationOptions,
+          message,
+          date: new Date(notificationTimestamp),
+          tag,
+          userInfo: { tag },
+        });
+      }
+    });
+  }
+
   if (cb) {
     cb();
   }
@@ -303,6 +395,7 @@ const setupNotifications = (notifications, __, cb, timeout = 1000) => {
 const resetNotifications = (__, cb) => async (dispatch, getState) => {
   const {
     settings: {
+      notificationChristmasEnabled,
       notificationDiaryEnabled,
       notificationDisinfectSmartphoneEnabled,
       notificationWashingHandsOption1Enabled,
@@ -311,6 +404,7 @@ const resetNotifications = (__, cb) => async (dispatch, getState) => {
   } = getState();
 
   if (
+    notificationChristmasEnabled ||
     notificationDiaryEnabled ||
     notificationDisinfectSmartphoneEnabled ||
     notificationWashingHandsOption1Enabled ||
@@ -318,6 +412,7 @@ const resetNotifications = (__, cb) => async (dispatch, getState) => {
   ) {
     setupNotifications(
       {
+        notificationChristmasEnabled,
         notificationDiaryEnabled,
         notificationDisinfectSmartphoneEnabled,
         notificationWashingHandsOption1Enabled,
@@ -333,6 +428,7 @@ const resetNotifications = (__, cb) => async (dispatch, getState) => {
 const activateNotification = (notificationKey, __) => async (dispatch, getState) => {
   let {
     settings: {
+      notificationChristmasEnabled,
       notificationDiaryEnabled,
       notificationDisinfectSmartphoneEnabled,
       notificationWashingHandsOption1Enabled,
@@ -341,6 +437,10 @@ const activateNotification = (notificationKey, __) => async (dispatch, getState)
   } = getState();
 
   switch (notificationKey) {
+    case NOTIFICATION_KEY.CHRISTMAS:
+      dispatch(enableNotificationChristmas());
+      notificationChristmasEnabled = true;
+      break;
     case NOTIFICATION_KEY.DIARY:
       dispatch(enableNotificationDiary());
       notificationDiaryEnabled = true;
@@ -361,6 +461,7 @@ const activateNotification = (notificationKey, __) => async (dispatch, getState)
 
   setupNotifications(
     {
+      notificationChristmasEnabled,
       notificationDiaryEnabled,
       notificationDisinfectSmartphoneEnabled,
       notificationWashingHandsOption1Enabled,
@@ -373,6 +474,7 @@ const activateNotification = (notificationKey, __) => async (dispatch, getState)
 const deactivateNotification = (notificationKey, __) => async (dispatch, getState) => {
   let {
     settings: {
+      notificationChristmasEnabled,
       notificationDiaryEnabled,
       notificationDisinfectSmartphoneEnabled,
       notificationWashingHandsOption1Enabled,
@@ -381,6 +483,10 @@ const deactivateNotification = (notificationKey, __) => async (dispatch, getStat
   } = getState();
 
   switch (notificationKey) {
+    case NOTIFICATION_KEY.CHRISTMAS:
+      dispatch(disableNotificationChristmas());
+      notificationChristmasEnabled = false;
+      break;
     case NOTIFICATION_KEY.DIARY:
       dispatch(disableNotificationDiary());
       notificationDiaryEnabled = false;
@@ -400,6 +506,7 @@ const deactivateNotification = (notificationKey, __) => async (dispatch, getStat
 
   setupNotifications(
     {
+      notificationChristmasEnabled,
       notificationDiaryEnabled,
       notificationDisinfectSmartphoneEnabled,
       notificationWashingHandsOption1Enabled,
@@ -411,6 +518,7 @@ const deactivateNotification = (notificationKey, __) => async (dispatch, getStat
 
 const mapStateToProps = ({
   settings: {
+    notificationChristmasEnabled,
     notificationDiaryEnabled,
     notificationDisinfectSmartphoneEnabled,
     notificationWashingHandsOption1Enabled,
@@ -418,6 +526,7 @@ const mapStateToProps = ({
   },
 }) => {
   return {
+    notificationChristmasEnabled,
     notificationDiaryEnabled,
     notificationDisinfectSmartphoneEnabled,
     notificationWashingHandsOption1Enabled,
@@ -427,10 +536,12 @@ const mapStateToProps = ({
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    disableNotificationChristmas: (__) => dispatch(deactivateNotification(NOTIFICATION_KEY.CHRISTMAS, __)),
     disableNotificationDiary: (__) => dispatch(deactivateNotification(NOTIFICATION_KEY.DIARY, __)),
     disableNotificationDisinfectSmartphone: (__) =>
       dispatch(deactivateNotification(NOTIFICATION_KEY.DISINFECT_SMARTPHONE, __)),
     disableNotificationWashingHands: (__) => dispatch(deactivateNotification(NOTIFICATION_KEY.WASHING_HANDS, __)),
+    enableNotificationChristmas: (__) => dispatch(activateNotification(NOTIFICATION_KEY.CHRISTMAS, __)),
     enableNotificationDiary: (__) => dispatch(activateNotification(NOTIFICATION_KEY.DIARY, __)),
     enableNotificationDisinfectSmartphone: (__) =>
       dispatch(activateNotification(NOTIFICATION_KEY.DISINFECT_SMARTPHONE, __)),

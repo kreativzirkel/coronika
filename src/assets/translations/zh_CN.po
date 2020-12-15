@@ -750,7 +750,7 @@ msgid "menu-screen.items.faq"
 msgstr "经常问的问题"
 
 #: src/components/screens/Menu.jsx:214
-#: src/components/screens/Settings/ui.jsx:99
+#: src/components/screens/Settings/ui.jsx:103
 msgid "settings-screen.header.headline"
 msgstr "设置"
 
@@ -798,105 +798,149 @@ msgstr "您没有在您的日记中添加任何地点。"
 msgid "overview-screen.export.button"
 msgstr "导出概要"
 
-#: src/components/screens/Settings/logic.js:160
+#: src/components/screens/Settings/logic.js:189
 msgid "notifications.diary.headline"
 msgstr "📒 添加您的联系人"
 
-#: src/components/screens/Settings/logic.js:161
+#: src/components/screens/Settings/logic.js:190
 msgid "notifications.diary.text"
 msgstr "添加您的亲密联系人，并帮助减缓新冠病毒的传播。"
 
-#: src/components/screens/Settings/logic.js:176
+#: src/components/screens/Settings/logic.js:205
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽保持屏幕清洁"
 
-#: src/components/screens/Settings/logic.js:177
+#: src/components/screens/Settings/logic.js:206
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr "使您的屏幕摆脱各种细菌，病菌和其他病原体的侵害。"
 
-#: src/components/screens/Settings/logic.js:180
+#: src/components/screens/Settings/logic.js:209
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 对手机进行消毒"
 
-#: src/components/screens/Settings/logic.js:181
+#: src/components/screens/Settings/logic.js:210
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr "保持手机清洁是防止细菌滋生的另一种好方法。"
 
-#: src/components/screens/Settings/logic.js:184
+#: src/components/screens/Settings/logic.js:213
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 清洁您的智能手机屏幕"
 
-#: src/components/screens/Settings/logic.js:185
+#: src/components/screens/Settings/logic.js:214
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "用消毒湿巾清洁屏幕以清除细菌。"
 
-#: src/components/screens/Settings/logic.js:201
-#: src/components/screens/Settings/logic.js:234
-#: src/components/screens/Settings/logic.js:249
+#: src/components/screens/Settings/logic.js:230
+#: src/components/screens/Settings/logic.js:263
+#: src/components/screens/Settings/logic.js:278
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "如果您出门在外，请认真彻底的洗手。"
 
-#: src/components/screens/Settings/logic.js:202
-#: src/components/screens/Settings/logic.js:235
-#: src/components/screens/Settings/logic.js:250
+#: src/components/screens/Settings/logic.js:231
+#: src/components/screens/Settings/logic.js:264
+#: src/components/screens/Settings/logic.js:279
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧洗手"
 
-#: src/components/screens/Settings/logic.js:206
-#: src/components/screens/Settings/logic.js:239
-#: src/components/screens/Settings/logic.js:254
+#: src/components/screens/Settings/logic.js:235
+#: src/components/screens/Settings/logic.js:268
+#: src/components/screens/Settings/logic.js:283
 msgid "notifications.washing-hands.variant-2.text"
 msgstr "洗手是保护自己和他人免受疾病侵害的最简单方法之一。"
 
-#: src/components/screens/Settings/logic.js:207
-#: src/components/screens/Settings/logic.js:240
-#: src/components/screens/Settings/logic.js:255
+#: src/components/screens/Settings/logic.js:236
+#: src/components/screens/Settings/logic.js:269
+#: src/components/screens/Settings/logic.js:284
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 你洗手了吗？"
 
-#: src/components/screens/Settings/logic.js:211
-#: src/components/screens/Settings/logic.js:244
-#: src/components/screens/Settings/logic.js:259
+#: src/components/screens/Settings/logic.js:240
+#: src/components/screens/Settings/logic.js:273
+#: src/components/screens/Settings/logic.js:288
 msgid "notifications.washing-hands.variant-3.text"
 msgstr "洗手的时候不要忘记清洁指尖和手指之间的缝隙。"
 
-#: src/components/screens/Settings/logic.js:212
-#: src/components/screens/Settings/logic.js:245
-#: src/components/screens/Settings/logic.js:260
+#: src/components/screens/Settings/logic.js:241
+#: src/components/screens/Settings/logic.js:274
+#: src/components/screens/Settings/logic.js:289
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 不要忘记您的提示！"
 
-#: src/components/screens/Settings/ui.jsx:104
+#: src/components/screens/Settings/logic.js:319
+msgid "notifications.christmas.1218.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:323
+msgid "notifications.christmas.1219.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:327
+msgid "notifications.christmas.1220.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:331
+msgid "notifications.christmas.1221.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:335
+msgid "notifications.christmas.1222.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:339
+msgid "notifications.christmas.1223.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:343
+msgid "notifications.christmas.1224.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:347
+msgid "notifications.christmas.1225.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:351
+msgid "notifications.christmas.1226.text"
+msgstr ""
+
+#: src/components/screens/Settings/ui.jsx:108
 msgid "settings-screen.notifications.headline"
 msgstr "通知"
 
-#: src/components/screens/Settings/ui.jsx:108
+#: src/components/screens/Settings/ui.jsx:112
 msgid "settings-screen.notifications.washing-hands.headline"
 msgstr "提醒要洗手"
 
-#: src/components/screens/Settings/ui.jsx:112
+#: src/components/screens/Settings/ui.jsx:116
 msgid "settings-screen.notifications.washing-hands.option-1.label"
 msgstr "每天提醒3次"
 
-#: src/components/screens/Settings/ui.jsx:121
+#: src/components/screens/Settings/ui.jsx:125
 msgid "settings-screen.notifications.washing-hands.option-2.label"
 msgstr "每天提醒6次"
 
-#: src/components/screens/Settings/ui.jsx:132
+#: src/components/screens/Settings/ui.jsx:136
 msgid "settings-screen.notifications.disinfect-smartphone.headline"
 msgstr "要对手机进行消毒"
 
-#: src/components/screens/Settings/ui.jsx:136
+#: src/components/screens/Settings/ui.jsx:140
 msgid "settings-screen.notifications.disinfect-smartphone.option.label"
 msgstr "每日提醒"
 
-#: src/components/screens/Settings/ui.jsx:146
+#: src/components/screens/Settings/ui.jsx:150
 msgid "settings-screen.notifications.diary.headline"
 msgstr "提醒使用日记"
 
-#: src/components/screens/Settings/ui.jsx:149
+#: src/components/screens/Settings/ui.jsx:153
 msgid "settings-screen.notifications.diary.option.label"
 msgstr "每日提醒"
+
+#: src/components/screens/Settings/ui.jsx:159
+msgid "settings-screen.notifications.christmas.headline"
+msgstr ""
+
+#: src/components/screens/Settings/ui.jsx:162
+msgid "settings-screen.notifications.christmas.option.label"
+msgstr ""
 
 #: src/components/screens/Splash.jsx:122
 msgid "splash-screen.supported-by.headline"

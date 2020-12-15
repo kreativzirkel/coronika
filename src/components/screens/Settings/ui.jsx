@@ -6,13 +6,16 @@ import Toggle from '../../widgets/Toggle';
 
 const Settings = ({
   colors,
+  notificationChristmasEnabled,
   notificationDiaryEnabled,
   notificationDisinfectSmartphoneEnabled,
   notificationWashingHandsOption1Enabled,
   notificationWashingHandsOption2Enabled,
+  disableNotificationChristmas,
   disableNotificationDiary,
   disableNotificationDisinfectSmartphone,
   disableNotificationWashingHands,
+  enableNotificationChristmas,
   enableNotificationDiary,
   enableNotificationDisinfectSmartphone,
   enableNotificationWashingHandsOption1,
@@ -66,6 +69,7 @@ const Settings = ({
       color: colors.TEXT,
       fontFamily: fontFamilyRegular,
       fontSize: vw(4.2),
+      textTransform: 'lowercase',
       width: '85%',
     },
     settingToggle: {
@@ -148,6 +152,17 @@ const Settings = ({
                 active={notificationDiaryEnabled}
                 label={__('settings-screen.notifications.diary.option.label')}
                 onPress={() => (notificationDiaryEnabled ? disableNotificationDiary(__) : enableNotificationDiary(__))}
+              />
+            </View>
+
+            <View style={styles.viewSetting}>
+              <Text style={styles.contentTextHeadline}>{__('settings-screen.notifications.christmas.headline')}</Text>
+              <Setting
+                active={notificationChristmasEnabled}
+                label={__('settings-screen.notifications.christmas.option.label')}
+                onPress={() =>
+                  notificationChristmasEnabled ? disableNotificationChristmas(__) : enableNotificationChristmas(__)
+                }
               />
             </View>
           </View>

@@ -1,5 +1,6 @@
 const initialState = {
   colorScheme: 'light',
+  notificationChristmasEnabled: undefined,
   notificationDiaryEnabled: false,
   notificationDisinfectSmartphoneEnabled: false,
   notificationWashingHandsEnabled: false,
@@ -12,6 +13,12 @@ const initialState = {
 
 export default (state = initialState, action = { type: null }) => {
   switch (action.type) {
+    case 'ENABLE_NOTIFICATION_CHRISTMAS_SETTINGS':
+      return { ...state, notificationChristmasEnabled: true };
+
+    case 'DISABLE_NOTIFICATION_CHRISTMAS_SETTINGS':
+      return { ...state, notificationChristmasEnabled: false };
+
     case 'ENABLE_NOTIFICATION_DIARY_SETTINGS':
       return { ...state, notificationDiaryEnabled: true };
 
