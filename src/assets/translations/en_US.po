@@ -80,36 +80,36 @@ msgid "locations"
 msgstr "locations"
 
 #: src/components/partials/EntriesTabsView/index.jsx:880
-#: src/components/screens/Encounter/Modals.jsx:627
+#: src/components/screens/Encounter/Modals.jsx:624
 msgid "entries.persons.list.new"
 msgstr "Create new person"
 
 #: src/components/partials/EntriesTabsView/index.jsx:902
 #: src/components/partials/EntriesTabsView/index.jsx:962
-#: src/components/screens/Encounter/Modals.jsx:426
-#: src/components/screens/Encounter/Modals.jsx:644
+#: src/components/screens/Encounter/Modals.jsx:437
+#: src/components/screens/Encounter/Modals.jsx:641
 msgid "entries.search.list.empty"
 msgstr "Nothing could be found on your search."
 
 #: src/components/partials/EntriesTabsView/index.jsx:913
-#: src/components/screens/Encounter/Modals.jsx:649
+#: src/components/screens/Encounter/Modals.jsx:646
 msgid "entries.persons.list.empty"
 msgstr ""
 "You have not yet created a person. To get started right away, you can import "
 "persons from your phone book."
 
 #: src/components/partials/EntriesTabsView/index.jsx:922
-#: src/components/screens/Encounter/Modals.jsx:654
+#: src/components/screens/Encounter/Modals.jsx:651
 msgid "entries.persons.list.import.button"
 msgstr "Import now"
 
 #: src/components/partials/EntriesTabsView/index.jsx:940
-#: src/components/screens/Encounter/Modals.jsx:415
+#: src/components/screens/Encounter/Modals.jsx:426
 msgid "entries.locations.list.new"
 msgstr "Create new location"
 
 #: src/components/partials/EntriesTabsView/index.jsx:966
-#: src/components/screens/Encounter/Modals.jsx:430
+#: src/components/screens/Encounter/Modals.jsx:441
 msgid "entries.locations.list.empty"
 msgstr ""
 "You haven’t created a location yet. Start now and create your first location."
@@ -169,17 +169,17 @@ msgstr "Description"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:442
 #: src/components/partials/EntriesTabsView/Modals.jsx:454
-#: src/components/screens/Encounter/Modals.jsx:114
-#: src/components/screens/Encounter/ui.jsx:660
-#: src/components/screens/Encounter/ui.jsx:672
+#: src/components/screens/Encounter/Modals.jsx:117
+#: src/components/screens/Encounter/ui.jsx:882
+#: src/components/screens/Encounter/ui.jsx:894
 msgid "Cancel"
 msgstr "Cancel"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:443
 #: src/components/partials/EntriesTabsView/Modals.jsx:455
-#: src/components/screens/Encounter/Modals.jsx:609
-#: src/components/screens/Encounter/ui.jsx:661
-#: src/components/screens/Encounter/ui.jsx:673
+#: src/components/screens/Encounter/Modals.jsx:606
+#: src/components/screens/Encounter/ui.jsx:883
+#: src/components/screens/Encounter/ui.jsx:895
 msgid "Confirm"
 msgstr "Confirm"
 
@@ -248,16 +248,42 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Start now"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:193
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:206
 msgid "about-screen.header.headline"
 msgstr "About Coronika"
+
+#: src/components/screens/BjoernSteigerFoundation.jsx:82
+#: src/components/screens/Menu.jsx:230
+msgid "bjoern-steiger-stiftung-screen.header.headline"
+msgstr "Björn Steiger Foundation"
+
+#: src/components/screens/BjoernSteigerFoundation.jsx:87
+msgid "bjoern-steiger-stiftung-screen.content.text"
+msgstr ""
+"The Björn Steiger Foundation has been committed to emergency aid for more "
+"than 50 years. Milestones of this commitment are the introduction of the "
+"Germany-wide standardized and free emergency numbers 110/112, the "
+"development of the emergency telephone networks on German roads, the "
+"introduction of voice radio in ambulances and the development of air "
+"rescue. \n"
+"\n"
+"Current initiatives are dedicated in particular to the fight against cardiac "
+"death, broad-based training in resuscitation, raising emergency awareness "
+"among children and young people, and transporting premature babies. \n"
+"\n"
+"Since 2019, the foundation has been placing newly developed, modern "
+"emergency call pillars at bathing waters and other emergency hotspots, and "
+"is involved nationally and internationally in innovative developments aimed "
+"at improving rescue and emergency services. The foundation acts as a think "
+"tank to concretely implement innovative ideas and approaches to challenges "
+"in the healthcare system and to scale them with the help of networks."
 
 #: src/components/screens/Dashboard/ui.jsx:173
 msgid "dashboard-screen.list.load-more"
 msgstr "load more"
 
 #: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:220
+#: src/components/screens/Menu.jsx:238
 #: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
@@ -268,23 +294,23 @@ msgid "dashboard-screen.first-start.hint"
 msgstr "Click on todays date to enter your first persons or locations."
 
 #: src/components/screens/Dashboard/ui.jsx:226
-#: src/components/screens/Encounter/Modals.jsx:212
+#: src/components/screens/Encounter/Modals.jsx:219
 msgid "Close"
 msgstr "Close"
 
-#: src/components/screens/Day/EncountersList.jsx:209
+#: src/components/screens/Day/EncountersList.jsx:208
 msgid "encounters-list.no-encounters.text"
 msgstr "You had no encounters that day."
 
-#: src/components/screens/Day/EncountersList.jsx:209
+#: src/components/screens/Day/EncountersList.jsx:208
 msgid "encounters-list.empty"
 msgstr "You have not added any encounters for this day."
 
-#: src/components/screens/Day/EncountersList.jsx:215
+#: src/components/screens/Day/EncountersList.jsx:214
 msgid "encounters-list.no-encounters.confirmation.text"
 msgstr "You didn't have any encounters on this day?"
 
-#: src/components/screens/Day/EncountersList.jsx:221
+#: src/components/screens/Day/EncountersList.jsx:220
 msgid "encounters-list.no-encounters.confirmation.button"
 msgstr "no encounters"
 
@@ -344,111 +370,111 @@ msgstr "Importing..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Import now"
 
-#: src/components/screens/Encounter/Modals.jsx:101
+#: src/components/screens/Encounter/Modals.jsx:104
 msgid "encounter-screen.modals.delete.headline"
 msgstr "Delete encounter"
 
-#: src/components/screens/Encounter/Modals.jsx:104
+#: src/components/screens/Encounter/Modals.jsx:107
 msgid "encounter-screen.modals.delete.text"
 msgstr "Do you really want to delete this encounter?"
 
-#: src/components/screens/Encounter/Modals.jsx:108
+#: src/components/screens/Encounter/Modals.jsx:111
 msgid "encounter-screen.modals.delete.button-delete"
 msgstr "Delete"
 
-#: src/components/screens/Encounter/Modals.jsx:213
+#: src/components/screens/Encounter/Modals.jsx:220
 msgid "encounter-screen.modals.hints.headline"
 msgstr "Hints"
 
-#: src/components/screens/Encounter/Modals.jsx:224
+#: src/components/screens/Encounter/Modals.jsx:231
 msgid "encounter-screen.modals.hints.persons.text"
 msgstr "Who did you have an encounter with?"
 
-#: src/components/screens/Encounter/Modals.jsx:235
+#: src/components/screens/Encounter/Modals.jsx:242
 msgid "encounter-screen.modals.hints.location.text"
 msgstr "Where did the meeting take place?"
 
-#: src/components/screens/Encounter/Modals.jsx:246
+#: src/components/screens/Encounter/Modals.jsx:253
 msgid "encounter-screen.modals.hints.time.text"
 msgstr "When was the encounter?"
 
-#: src/components/screens/Encounter/Modals.jsx:257
+#: src/components/screens/Encounter/Modals.jsx:264
 msgid "encounter-screen.modals.hints.outside.text"
 msgstr "Did the encounter take place inside or outside?"
 
-#: src/components/screens/Encounter/Modals.jsx:268
+#: src/components/screens/Encounter/Modals.jsx:275
 msgid "encounter-screen.modals.hints.ventilated.text"
 msgstr "If inside: Was the room ventilated at least every 30 minutes?"
 
-#: src/components/screens/Encounter/Modals.jsx:278
+#: src/components/screens/Encounter/Modals.jsx:285
 msgid "encounter-screen.modals.hints.mask.text"
 msgstr "Did you wear a mouth/nose protection?"
 
-#: src/components/screens/Encounter/Modals.jsx:289
+#: src/components/screens/Encounter/Modals.jsx:296
 msgid "encounter-screen.modals.hints.distance.text"
 msgstr "What was the distance between the persons?"
 
-#: src/components/screens/Encounter/Modals.jsx:300
+#: src/components/screens/Encounter/Modals.jsx:307
 msgid "encounter-screen.modals.hints.note.text"
 msgstr "Other notes and remarks"
 
-#: src/components/screens/Encounter/Modals.jsx:400
+#: src/components/screens/Encounter/Modals.jsx:411
 msgid "encounter-screen.modals.select-location.headline"
 msgstr "Select location"
 
-#: src/components/screens/Encounter/Modals.jsx:611
+#: src/components/screens/Encounter/Modals.jsx:608
 msgid "encounter-screen.modals.select-persons.headline"
 msgstr "Select persons"
 
-#: src/components/screens/Encounter/ui.jsx:435
+#: src/components/screens/Encounter/ui.jsx:648
 msgid "encounter-screen.headline.edit"
 msgstr "edit encounter"
 
-#: src/components/screens/Encounter/ui.jsx:435
+#: src/components/screens/Encounter/ui.jsx:648
 msgid "encounter-screen.headline.add"
 msgstr "add encounter"
 
-#: src/components/screens/Encounter/ui.jsx:474
+#: src/components/screens/Encounter/ui.jsx:687
 msgid "encounter-screen.persons.add"
 msgstr "Add person"
 
-#: src/components/screens/Encounter/ui.jsx:498
+#: src/components/screens/Encounter/ui.jsx:711
 msgid "location"
 msgstr "location"
 
-#: src/components/screens/Encounter/ui.jsx:544
+#: src/components/screens/Encounter/ui.jsx:757
 msgid "encounter-screen.options.outside.yes"
 msgstr "outside"
 
-#: src/components/screens/Encounter/ui.jsx:544
+#: src/components/screens/Encounter/ui.jsx:757
 msgid "encounter-screen.options.outside.no"
 msgstr "inside"
 
-#: src/components/screens/Encounter/ui.jsx:558
+#: src/components/screens/Encounter/ui.jsx:771
 msgid "encounter-screen.options.ventilated.yes"
 msgstr "ventilated"
 
-#: src/components/screens/Encounter/ui.jsx:558
+#: src/components/screens/Encounter/ui.jsx:771
 msgid "encounter-screen.options.ventilated.no"
 msgstr "not ventilated"
 
-#: src/components/screens/Encounter/ui.jsx:572
+#: src/components/screens/Encounter/ui.jsx:785
 msgid "encounter-screen.options.mask.yes"
 msgstr "mask"
 
-#: src/components/screens/Encounter/ui.jsx:572
+#: src/components/screens/Encounter/ui.jsx:785
 msgid "encounter-screen.options.mask.no"
 msgstr "no mask"
 
-#: src/components/screens/Encounter/ui.jsx:585
+#: src/components/screens/Encounter/ui.jsx:798
 msgid "encounter-screen.options.distance.yes"
 msgstr ">= 1.5m"
 
-#: src/components/screens/Encounter/ui.jsx:585
+#: src/components/screens/Encounter/ui.jsx:798
 msgid "encounter-screen.options.distance.no"
 msgstr "< 1.5m"
 
-#: src/components/screens/Encounter/ui.jsx:617
+#: src/components/screens/Encounter/ui.jsx:830
 msgid "encounter-screen.button.save"
 msgstr "Save"
 
@@ -578,7 +604,7 @@ msgid "export-screen.modals.export-completed.pdf.headline"
 msgstr "PDF file"
 
 #: src/components/screens/Legal/index.jsx:243
-#: src/components/screens/Menu.jsx:205
+#: src/components/screens/Menu.jsx:218
 msgid "legal-screen.header.headline"
 msgstr "Legal"
 
@@ -785,24 +811,24 @@ msgstr ""
 "accordingly. If we become aware of any infringements, we will remove such "
 "contents immediately."
 
-#: src/components/screens/Menu.jsx:197
+#: src/components/screens/Menu.jsx:210
 msgid "menu-screen.items.faq"
 msgstr "Frequently asked questions"
 
-#: src/components/screens/Menu.jsx:201
+#: src/components/screens/Menu.jsx:214
 #: src/components/screens/Settings/ui.jsx:99
 msgid "settings-screen.header.headline"
 msgstr "Settings"
 
-#: src/components/screens/Menu.jsx:209
+#: src/components/screens/Menu.jsx:222
 msgid "menu-screen.items.share"
 msgstr "Share this app"
 
-#: src/components/screens/Menu.jsx:213
+#: src/components/screens/Menu.jsx:226
 msgid "menu-screen.items.website"
 msgstr "Visit website"
 
-#: src/components/screens/Menu.jsx:261
+#: src/components/screens/Menu.jsx:297
 msgid "menu-screen.button.send-feedback"
 msgstr "Send feedback"
 
@@ -1285,6 +1311,6 @@ msgstr "Sources"
 msgid "tips.sources.last-updated"
 msgstr "Last updated:"
 
-#: src/index.jsx:128
+#: src/index.jsx:131
 msgid "Done"
 msgstr "Done"

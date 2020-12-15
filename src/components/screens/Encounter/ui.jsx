@@ -220,7 +220,6 @@ class Encounter extends React.Component {
       alignItems: 'center',
       flexDirection: 'row',
       padding: this.props.vw(2.3),
-      paddingBottom: 0,
       width: '100%',
     },
     locationWrapper: {

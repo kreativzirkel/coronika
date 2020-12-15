@@ -2,7 +2,7 @@ import UilArrowLeft from '@iconscout/react-native-unicons/icons/uil-arrow-left';
 import UilArrowRight from '@iconscout/react-native-unicons/icons/uil-arrow-right';
 import UilHeart from '@iconscout/react-native-unicons/icons/uil-heart';
 import React from 'react';
-import { Linking, ScrollView, Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Linking, Platform, ScrollView, Share, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { version } from '../../config';
 import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
@@ -80,6 +80,10 @@ class Menu extends React.Component {
       fontSize: this.props.vw(5.5),
       textAlign: 'center',
     },
+    logoFoundation: {
+      height: this.props.vw(20),
+      width: this.props.vw(50),
+    },
     madeByButton: {
       alignItems: 'center',
       flexDirection: 'column',
@@ -145,6 +149,15 @@ class Menu extends React.Component {
       paddingRight: this.props.vw(2.5),
       paddingTop: this.props.vw(2.5),
     },
+    viewFoundation: {
+      alignItems: 'center',
+      flex: 1,
+      flexDirection: 'column',
+      height: this.props.vw(20),
+      justifyContent: 'center',
+      marginTop: this.props.vw(2.5),
+      width: '100%',
+    },
     viewMadeBy: {
       alignItems: 'center',
       flexDirection: 'row',
@@ -158,7 +171,7 @@ class Menu extends React.Component {
   });
 
   render() {
-    const { colors, navigation, vw, isRTL, __ } = this.props;
+    const { colors, colorScheme, navigation, vw, isRTL, __ } = this.props;
 
     const styles = {
       ...this.styles,
@@ -213,6 +226,11 @@ class Menu extends React.Component {
         headline: __('menu-screen.items.website'),
         routeName: 'Website',
       },
+      {
+        headline: __('bjoern-steiger-stiftung-screen.header.headline'),
+        routeName: 'BjoernSteigerFoundation',
+        hidden: Platform.OS !== 'ios',
+      },
     ];
 
     return (
@@ -223,25 +241,43 @@ class Menu extends React.Component {
           <View style={styles.viewInner}>
             <ScrollView style={styles.viewInnerContent}>
               <View style={styles.viewContent}>
-                {menuItems.map(({ headline, routeName }, index) => (
-                  <TouchableOpacity
-                    key={`menu-item-${index}`}
-                    onPress={() => this.onPressMenuItem(routeName)}
-                    style={styles.menuItemWrapper}>
-                    <View style={styles.menuItemTextWrapper}>
-                      <Text style={styles.menuItemText}>{headline}</Text>
-                    </View>
+                {menuItems
+                  .filter(({ hidden }) => !hidden)
+                  .map(({ headline, routeName }, index) => (
+                    <TouchableOpacity
+                      key={`menu-item-${index}`}
+                      onPress={() => this.onPressMenuItem(routeName)}
+                      style={styles.menuItemWrapper}>
+                      <View style={styles.menuItemTextWrapper}>
+                        <Text style={styles.menuItemText}>{headline}</Text>
+                      </View>
 
-                    <View style={styles.menuItemIcon}>
-                      {isRTL ? (
-                        <UilArrowLeft size={vw(9)} color={COLOR_PRIMARY} />
-                      ) : (
-                        <UilArrowRight size={vw(9)} color={COLOR_PRIMARY} />
-                      )}
-                    </View>
-                  </TouchableOpacity>
-                ))}
+                      <View style={styles.menuItemIcon}>
+                        {isRTL ? (
+                          <UilArrowLeft size={vw(9)} color={COLOR_PRIMARY} />
+                        ) : (
+                          <UilArrowRight size={vw(9)} color={COLOR_PRIMARY} />
+                        )}
+                      </View>
+                    </TouchableOpacity>
+                  ))}
               </View>
+
+              {Platform.OS === 'ios' && (
+                <View style={styles.viewFoundation}>
+                  <TouchableOpacity onPress={() => navigation.navigate('BjoernSteigerFoundation')}>
+                    <Image
+                      resizeMode={'contain'}
+                      source={
+                        colorScheme === 'dark'
+                          ? require('../../assets/images/logo_bjoern-steiger-stiftung_white.png')
+                          : require('../../assets/images/logo_bjoern-steiger-stiftung.png')
+                      }
+                      style={styles.logoFoundation}
+                    />
+                  </TouchableOpacity>
+                </View>
+              )}
             </ScrollView>
           </View>
 

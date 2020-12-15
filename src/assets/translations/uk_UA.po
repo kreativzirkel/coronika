@@ -80,36 +80,36 @@ msgid "locations"
 msgstr "локації"
 
 #: src/components/partials/EntriesTabsView/index.jsx:880
-#: src/components/screens/Encounter/Modals.jsx:627
+#: src/components/screens/Encounter/Modals.jsx:624
 msgid "entries.persons.list.new"
 msgstr "Створити нову людину"
 
 #: src/components/partials/EntriesTabsView/index.jsx:902
 #: src/components/partials/EntriesTabsView/index.jsx:962
-#: src/components/screens/Encounter/Modals.jsx:426
-#: src/components/screens/Encounter/Modals.jsx:644
+#: src/components/screens/Encounter/Modals.jsx:437
+#: src/components/screens/Encounter/Modals.jsx:641
 msgid "entries.search.list.empty"
 msgstr "Нічого не вдалося знайти при вашому пошуку."
 
 #: src/components/partials/EntriesTabsView/index.jsx:913
-#: src/components/screens/Encounter/Modals.jsx:649
+#: src/components/screens/Encounter/Modals.jsx:646
 msgid "entries.persons.list.empty"
 msgstr ""
 "Ви ще не створили людину. Щоб розпочати роботу, ви можете імпортувати осіб "
 "із телефонної книги."
 
 #: src/components/partials/EntriesTabsView/index.jsx:922
-#: src/components/screens/Encounter/Modals.jsx:654
+#: src/components/screens/Encounter/Modals.jsx:651
 msgid "entries.persons.list.import.button"
 msgstr "Імпортуйте зараз"
 
 #: src/components/partials/EntriesTabsView/index.jsx:940
-#: src/components/screens/Encounter/Modals.jsx:415
+#: src/components/screens/Encounter/Modals.jsx:426
 msgid "entries.locations.list.new"
 msgstr "Створити нове місце"
 
 #: src/components/partials/EntriesTabsView/index.jsx:966
-#: src/components/screens/Encounter/Modals.jsx:430
+#: src/components/screens/Encounter/Modals.jsx:441
 msgid "entries.locations.list.empty"
 msgstr ""
 "Ви ще не створили місцезнаходження. Почніть зараз і створіть своє перше "
@@ -170,17 +170,17 @@ msgstr "Опис"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:442
 #: src/components/partials/EntriesTabsView/Modals.jsx:454
-#: src/components/screens/Encounter/Modals.jsx:114
-#: src/components/screens/Encounter/ui.jsx:660
-#: src/components/screens/Encounter/ui.jsx:672
+#: src/components/screens/Encounter/Modals.jsx:117
+#: src/components/screens/Encounter/ui.jsx:882
+#: src/components/screens/Encounter/ui.jsx:894
 msgid "Cancel"
 msgstr "Скасувати"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:443
 #: src/components/partials/EntriesTabsView/Modals.jsx:455
-#: src/components/screens/Encounter/Modals.jsx:609
-#: src/components/screens/Encounter/ui.jsx:661
-#: src/components/screens/Encounter/ui.jsx:673
+#: src/components/screens/Encounter/Modals.jsx:606
+#: src/components/screens/Encounter/ui.jsx:883
+#: src/components/screens/Encounter/ui.jsx:895
 msgid "Confirm"
 msgstr "Підтвердіть"
 
@@ -249,16 +249,43 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Розпочати зараз"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:193
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:206
 msgid "about-screen.header.headline"
 msgstr "Про Короніку"
+
+#: src/components/screens/BjoernSteigerFoundation.jsx:82
+#: src/components/screens/Menu.jsx:230
+msgid "bjoern-steiger-stiftung-screen.header.headline"
+msgstr "Фонд Бйорна Штайгер"
+
+#: src/components/screens/BjoernSteigerFoundation.jsx:87
+msgid "bjoern-steiger-stiftung-screen.content.text"
+msgstr ""
+"Фонд Бйорна Штайгер займається наданням екстреної допомоги вже більше 50 "
+"років. Основним завданням фонду є введення загальнонаціональних "
+"стандартизованих і безкоштовних номерів екстреної допомоги 110/112, розвиток "
+"телефонних мереж екстреного зв'язку на дорогах Німеччини, впровадження "
+"голосового радіо в машинах швидкої допомоги та розвиток повітряного "
+"порятунку.\n"
+"\n"
+"Поточні ініціативи присвячені, зокрема, боротьбі з серцевою смертністю, "
+"широкої підготовці кадрів в області реанімації, підвищенню обізнаності дітей "
+"та молоді про невідкладних ситуаціях і перевезення недоношених дітей.\n"
+"\n"
+"З 2019 року Фонд розміщує недавно розроблені, ультрасучасні телефони виклику "
+"екстреної допомоги в місцях купання та інших місцях де може статися "
+"надзвичайна ситуація, а також бере участь в інноваційних розробках як на "
+"національному, так і на міжнародному рівні, спрямованих на поліпшення роботи "
+"рятувальних та аварійно-рятувальних служб. Фонд виступає в якості "
+"аналітичного центру для конкретної реалізації інноваційних ідей і підходів "
+"до викликів в системі охорони здоров'я і їх розширення за допомогою мереж."
 
 #: src/components/screens/Dashboard/ui.jsx:173
 msgid "dashboard-screen.list.load-more"
 msgstr "завантажити ще"
 
 #: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:220
+#: src/components/screens/Menu.jsx:238
 #: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
@@ -271,25 +298,25 @@ msgstr ""
 "місцеположення."
 
 #: src/components/screens/Dashboard/ui.jsx:226
-#: src/components/screens/Encounter/Modals.jsx:212
+#: src/components/screens/Encounter/Modals.jsx:219
 msgid "Close"
 msgstr "Закрити"
 
-#: src/components/screens/Day/EncountersList.jsx:209
+#: src/components/screens/Day/EncountersList.jsx:208
 msgid "encounters-list.no-encounters.text"
 msgstr ""
 
-#: src/components/screens/Day/EncountersList.jsx:209
+#: src/components/screens/Day/EncountersList.jsx:208
 msgid "encounters-list.empty"
 msgstr ""
 
-#: src/components/screens/Day/EncountersList.jsx:215
+#: src/components/screens/Day/EncountersList.jsx:214
 msgid "encounters-list.no-encounters.confirmation.text"
 msgstr ""
 
-#: src/components/screens/Day/EncountersList.jsx:221
+#: src/components/screens/Day/EncountersList.jsx:220
 msgid "encounters-list.no-encounters.confirmation.button"
-msgstr ""
+msgstr "ніяких зустрічей"
 
 #: src/components/screens/Day/ui.jsx:109
 msgid "day-screen.entries.add"
@@ -349,111 +376,111 @@ msgstr "Імпорт..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Імпортуйте зараз"
 
-#: src/components/screens/Encounter/Modals.jsx:101
+#: src/components/screens/Encounter/Modals.jsx:104
 msgid "encounter-screen.modals.delete.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:104
+#: src/components/screens/Encounter/Modals.jsx:107
 msgid "encounter-screen.modals.delete.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:108
+#: src/components/screens/Encounter/Modals.jsx:111
 msgid "encounter-screen.modals.delete.button-delete"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:213
+#: src/components/screens/Encounter/Modals.jsx:220
 msgid "encounter-screen.modals.hints.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:224
+#: src/components/screens/Encounter/Modals.jsx:231
 msgid "encounter-screen.modals.hints.persons.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:235
+#: src/components/screens/Encounter/Modals.jsx:242
 msgid "encounter-screen.modals.hints.location.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:246
+#: src/components/screens/Encounter/Modals.jsx:253
 msgid "encounter-screen.modals.hints.time.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:257
+#: src/components/screens/Encounter/Modals.jsx:264
 msgid "encounter-screen.modals.hints.outside.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:268
+#: src/components/screens/Encounter/Modals.jsx:275
 msgid "encounter-screen.modals.hints.ventilated.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:278
+#: src/components/screens/Encounter/Modals.jsx:285
 msgid "encounter-screen.modals.hints.mask.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:289
+#: src/components/screens/Encounter/Modals.jsx:296
 msgid "encounter-screen.modals.hints.distance.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:300
+#: src/components/screens/Encounter/Modals.jsx:307
 msgid "encounter-screen.modals.hints.note.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:400
+#: src/components/screens/Encounter/Modals.jsx:411
 msgid "encounter-screen.modals.select-location.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:611
+#: src/components/screens/Encounter/Modals.jsx:608
 msgid "encounter-screen.modals.select-persons.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:435
+#: src/components/screens/Encounter/ui.jsx:648
 msgid "encounter-screen.headline.edit"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:435
+#: src/components/screens/Encounter/ui.jsx:648
 msgid "encounter-screen.headline.add"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:474
+#: src/components/screens/Encounter/ui.jsx:687
 msgid "encounter-screen.persons.add"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:498
+#: src/components/screens/Encounter/ui.jsx:711
 msgid "location"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:544
+#: src/components/screens/Encounter/ui.jsx:757
 msgid "encounter-screen.options.outside.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:544
+#: src/components/screens/Encounter/ui.jsx:757
 msgid "encounter-screen.options.outside.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:558
+#: src/components/screens/Encounter/ui.jsx:771
 msgid "encounter-screen.options.ventilated.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:558
+#: src/components/screens/Encounter/ui.jsx:771
 msgid "encounter-screen.options.ventilated.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:572
+#: src/components/screens/Encounter/ui.jsx:785
 msgid "encounter-screen.options.mask.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:572
+#: src/components/screens/Encounter/ui.jsx:785
 msgid "encounter-screen.options.mask.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:585
+#: src/components/screens/Encounter/ui.jsx:798
 msgid "encounter-screen.options.distance.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:585
+#: src/components/screens/Encounter/ui.jsx:798
 msgid "encounter-screen.options.distance.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:617
+#: src/components/screens/Encounter/ui.jsx:830
 msgid "encounter-screen.button.save"
 msgstr ""
 
@@ -580,7 +607,7 @@ msgid "export-screen.modals.export-completed.pdf.headline"
 msgstr "Файл PDF"
 
 #: src/components/screens/Legal/index.jsx:243
-#: src/components/screens/Menu.jsx:205
+#: src/components/screens/Menu.jsx:218
 msgid "legal-screen.header.headline"
 msgstr "Юридичні"
 
@@ -785,24 +812,24 @@ msgstr ""
 "авторських прав, повідомте нас про це. Якщо нам стане відомо про будь-які "
 "порушення, ми будемо негайно видаляти такий вміст."
 
-#: src/components/screens/Menu.jsx:197
+#: src/components/screens/Menu.jsx:210
 msgid "menu-screen.items.faq"
 msgstr "Питання що часто задаються"
 
-#: src/components/screens/Menu.jsx:201
+#: src/components/screens/Menu.jsx:214
 #: src/components/screens/Settings/ui.jsx:99
 msgid "settings-screen.header.headline"
 msgstr "Налаштування"
 
-#: src/components/screens/Menu.jsx:209
+#: src/components/screens/Menu.jsx:222
 msgid "menu-screen.items.share"
 msgstr "Поділіться цим додатком"
 
-#: src/components/screens/Menu.jsx:213
+#: src/components/screens/Menu.jsx:226
 msgid "menu-screen.items.website"
 msgstr "Відвідайте веб-сайт"
 
-#: src/components/screens/Menu.jsx:261
+#: src/components/screens/Menu.jsx:297
 msgid "menu-screen.button.send-feedback"
 msgstr "Надіслати відгук"
 
@@ -1279,7 +1306,7 @@ msgstr "Імпортуйте зараз"
 
 #: src/components/widgets/DayOverview.jsx:127
 msgid "encounters"
-msgstr ""
+msgstr "зустрічі"
 
 #: src/components/widgets/DayOverview.jsx:46
 msgid "total"
@@ -1301,6 +1328,6 @@ msgstr "Джерела"
 msgid "tips.sources.last-updated"
 msgstr "Останнє оновлення:"
 
-#: src/index.jsx:128
+#: src/index.jsx:131
 msgid "Done"
 msgstr ""

@@ -52,6 +52,9 @@ const AppNavigator = () => (
     }}>
     <Stack.Screen component={App} name={'App'} />
     <Stack.Screen component={screens.About} name={'About'} />
+    {Platform.OS === 'ios' && (
+      <Stack.Screen component={screens.BjoernSteigerFoundation} name={'BjoernSteigerFoundation'} />
+    )}
     <Stack.Screen component={screens.Day} name={'Day'} />
     <Stack.Screen component={screens.Encounter} name={'Encounter'} />
     <Stack.Screen component={screens.Export} name={'Export'} />

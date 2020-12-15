@@ -4,7 +4,7 @@ import withI18n from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 
-const ImprintBjoernSteigerStiftung = ({ colors, fontFamilyRegular, vw }) => {
+const ImprintBjoernSteigerFoundation = ({ colors, fontFamilyRegular, vw }) => {
   const styles = StyleSheet.create({
     text: {
       color: colors.TEXT,
@@ -89,4 +89,4 @@ const ImprintBjoernSteigerStiftung = ({ colors, fontFamilyRegular, vw }) => {
   );
 };
 
-export default withColorScheme(withI18n(withViewportUnits(ImprintBjoernSteigerStiftung)));
+export default withColorScheme(withI18n(withViewportUnits(ImprintBjoernSteigerFoundation)));

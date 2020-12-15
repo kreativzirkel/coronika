@@ -1,4 +1,5 @@
 import About from './About';
+import BjoernSteigerFoundation from './BjoernSteigerFoundation';
 import Directory from './Directory/logic';
 import Dashboard from './Dashboard/logic';
 import Day from './Day/logic';
@@ -23,6 +24,7 @@ import Welcome from './Welcome/logic';
 
 export default {
   About,
+  BjoernSteigerFoundation,
   Directory,
   Dashboard,
   Day,

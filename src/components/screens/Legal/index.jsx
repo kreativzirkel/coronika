@@ -12,7 +12,7 @@ import Layout from '../../widgets/Layout';
 import ListItemSeparator from '../../widgets/ListItemSeparator';
 import TabBar from '../../widgets/TabBar';
 import TabBarItem from '../../widgets/TabBarItem';
-import ImprintBjoernSteigerStiftung from './ImprintBjoernSteigerStiftung';
+import ImprintBjoernSteigerFoundation from './ImprintBjoernSteigerFoundation';
 
 const TABS = {
   IMPRINT: 0,
@@ -346,7 +346,7 @@ class Index extends React.Component {
                 <View style={styles.viewTabContent}>
                   {Platform.OS === 'ios' && (
                     <Fragment>
-                      <ImprintBjoernSteigerStiftung />
+                      <ImprintBjoernSteigerFoundation />
                       <ListItemSeparator />
                     </Fragment>
                   )}
@@ -363,7 +363,7 @@ class Index extends React.Component {
                     <CollapsibleBox headline={'English version'} style={styles.collapsible}>
                       {Platform.OS === 'ios' && (
                         <Fragment>
-                          <ImprintBjoernSteigerStiftung />
+                          <ImprintBjoernSteigerFoundation />
                           <ListItemSeparator inverted />
                         </Fragment>
                       )}
@@ -390,7 +390,7 @@ class Index extends React.Component {
                     <CollapsibleBox headline={'Deutsche Version'} style={styles.collapsible}>
                       {Platform.OS === 'ios' && (
                         <Fragment>
-                          <ImprintBjoernSteigerStiftung />
+                          <ImprintBjoernSteigerFoundation />
                           <ListItemSeparator inverted />
                         </Fragment>
                       )}

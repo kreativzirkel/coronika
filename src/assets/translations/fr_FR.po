@@ -80,36 +80,36 @@ msgid "locations"
 msgstr "lieux"
 
 #: src/components/partials/EntriesTabsView/index.jsx:880
-#: src/components/screens/Encounter/Modals.jsx:627
+#: src/components/screens/Encounter/Modals.jsx:624
 msgid "entries.persons.list.new"
 msgstr "Créer une nouvelle personne"
 
 #: src/components/partials/EntriesTabsView/index.jsx:902
 #: src/components/partials/EntriesTabsView/index.jsx:962
-#: src/components/screens/Encounter/Modals.jsx:426
-#: src/components/screens/Encounter/Modals.jsx:644
+#: src/components/screens/Encounter/Modals.jsx:437
+#: src/components/screens/Encounter/Modals.jsx:641
 msgid "entries.search.list.empty"
 msgstr "Rien n'a pu être trouvé lors de ta recherche."
 
 #: src/components/partials/EntriesTabsView/index.jsx:913
-#: src/components/screens/Encounter/Modals.jsx:649
+#: src/components/screens/Encounter/Modals.jsx:646
 msgid "entries.persons.list.empty"
 msgstr ""
 "Tu n'as pas encore créé une personne. Pour commencer tout de suite, tu peut "
 "importer des personnes à partir de ton annuaire téléphonique."
 
 #: src/components/partials/EntriesTabsView/index.jsx:922
-#: src/components/screens/Encounter/Modals.jsx:654
+#: src/components/screens/Encounter/Modals.jsx:651
 msgid "entries.persons.list.import.button"
 msgstr "Importer maintenant"
 
 #: src/components/partials/EntriesTabsView/index.jsx:940
-#: src/components/screens/Encounter/Modals.jsx:415
+#: src/components/screens/Encounter/Modals.jsx:426
 msgid "entries.locations.list.new"
 msgstr "Créer un nouveau localisation"
 
 #: src/components/partials/EntriesTabsView/index.jsx:966
-#: src/components/screens/Encounter/Modals.jsx:430
+#: src/components/screens/Encounter/Modals.jsx:441
 msgid "entries.locations.list.empty"
 msgstr ""
 "Tu n'as pas encore créé de lieu. Commence maintenant et crée ton premier "
@@ -170,17 +170,17 @@ msgstr "Description"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:442
 #: src/components/partials/EntriesTabsView/Modals.jsx:454
-#: src/components/screens/Encounter/Modals.jsx:114
-#: src/components/screens/Encounter/ui.jsx:660
-#: src/components/screens/Encounter/ui.jsx:672
+#: src/components/screens/Encounter/Modals.jsx:117
+#: src/components/screens/Encounter/ui.jsx:882
+#: src/components/screens/Encounter/ui.jsx:894
 msgid "Cancel"
 msgstr "Annuler"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:443
 #: src/components/partials/EntriesTabsView/Modals.jsx:455
-#: src/components/screens/Encounter/Modals.jsx:609
-#: src/components/screens/Encounter/ui.jsx:661
-#: src/components/screens/Encounter/ui.jsx:673
+#: src/components/screens/Encounter/Modals.jsx:606
+#: src/components/screens/Encounter/ui.jsx:883
+#: src/components/screens/Encounter/ui.jsx:895
 msgid "Confirm"
 msgstr "Confirmer"
 
@@ -249,16 +249,45 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Commencer maintenant"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:193
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:206
 msgid "about-screen.header.headline"
 msgstr "À propos de Coronika"
+
+#: src/components/screens/BjoernSteigerFoundation.jsx:82
+#: src/components/screens/Menu.jsx:230
+msgid "bjoern-steiger-stiftung-screen.header.headline"
+msgstr "Fondation Björn Steiger"
+
+#: src/components/screens/BjoernSteigerFoundation.jsx:87
+msgid "bjoern-steiger-stiftung-screen.content.text"
+msgstr ""
+"La Fondation Björn Steiger est engagée dans l'aide d'urgence depuis plus de "
+"50 ans. Les jalons de cet engagement sont l'introduction des numéros "
+"d'urgence standardisés et gratuits 110/112 à l'échelle nationale, le "
+"développement des réseaux téléphoniques d'urgence sur les routes allemandes, "
+"l'introduction de la radio vocale dans les ambulances et le développement du "
+"sauvetage aérien. \n"
+"\n"
+"Les initiatives actuelles sont notamment consacrées à la lutte contre la "
+"mort cardiaque, à une large formation en matière de réanimation, à la "
+"sensibilisation des enfants et des jeunes aux situations d'urgence et au "
+"transport des bébés prématurés. \n"
+"\n"
+"Depuis 2019, la Fondation place des boîtes d'appel d'urgence nouvellement "
+"développées et à la pointe de la technologie dans les eaux de baignade et "
+"autres points chauds d'urgence, et participe à des développements innovants "
+"tant au niveau national qu'international visant à améliorer les services de "
+"sauvetage et d'urgence. La fondation agit comme un groupe de réflexion pour "
+"mettre en œuvre concrètement des idées et des approches innovantes pour "
+"relever les défis du système de santé et les mettre à l'échelle avec l'aide "
+"de réseaux."
 
 #: src/components/screens/Dashboard/ui.jsx:173
 msgid "dashboard-screen.list.load-more"
 msgstr "charger plus"
 
 #: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:220
+#: src/components/screens/Menu.jsx:238
 #: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
@@ -271,25 +300,25 @@ msgstr ""
 "lieux."
 
 #: src/components/screens/Dashboard/ui.jsx:226
-#: src/components/screens/Encounter/Modals.jsx:212
+#: src/components/screens/Encounter/Modals.jsx:219
 msgid "Close"
 msgstr "Fermer"
 
-#: src/components/screens/Day/EncountersList.jsx:209
+#: src/components/screens/Day/EncountersList.jsx:208
 msgid "encounters-list.no-encounters.text"
 msgstr ""
 
-#: src/components/screens/Day/EncountersList.jsx:209
+#: src/components/screens/Day/EncountersList.jsx:208
 msgid "encounters-list.empty"
 msgstr ""
 
-#: src/components/screens/Day/EncountersList.jsx:215
+#: src/components/screens/Day/EncountersList.jsx:214
 msgid "encounters-list.no-encounters.confirmation.text"
 msgstr ""
 
-#: src/components/screens/Day/EncountersList.jsx:221
+#: src/components/screens/Day/EncountersList.jsx:220
 msgid "encounters-list.no-encounters.confirmation.button"
-msgstr ""
+msgstr "pas de rencontres"
 
 #: src/components/screens/Day/ui.jsx:109
 msgid "day-screen.entries.add"
@@ -349,111 +378,111 @@ msgstr "Importer..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Importer maintenant"
 
-#: src/components/screens/Encounter/Modals.jsx:101
+#: src/components/screens/Encounter/Modals.jsx:104
 msgid "encounter-screen.modals.delete.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:104
+#: src/components/screens/Encounter/Modals.jsx:107
 msgid "encounter-screen.modals.delete.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:108
+#: src/components/screens/Encounter/Modals.jsx:111
 msgid "encounter-screen.modals.delete.button-delete"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:213
+#: src/components/screens/Encounter/Modals.jsx:220
 msgid "encounter-screen.modals.hints.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:224
+#: src/components/screens/Encounter/Modals.jsx:231
 msgid "encounter-screen.modals.hints.persons.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:235
+#: src/components/screens/Encounter/Modals.jsx:242
 msgid "encounter-screen.modals.hints.location.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:246
+#: src/components/screens/Encounter/Modals.jsx:253
 msgid "encounter-screen.modals.hints.time.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:257
+#: src/components/screens/Encounter/Modals.jsx:264
 msgid "encounter-screen.modals.hints.outside.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:268
+#: src/components/screens/Encounter/Modals.jsx:275
 msgid "encounter-screen.modals.hints.ventilated.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:278
+#: src/components/screens/Encounter/Modals.jsx:285
 msgid "encounter-screen.modals.hints.mask.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:289
+#: src/components/screens/Encounter/Modals.jsx:296
 msgid "encounter-screen.modals.hints.distance.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:300
+#: src/components/screens/Encounter/Modals.jsx:307
 msgid "encounter-screen.modals.hints.note.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:400
+#: src/components/screens/Encounter/Modals.jsx:411
 msgid "encounter-screen.modals.select-location.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:611
+#: src/components/screens/Encounter/Modals.jsx:608
 msgid "encounter-screen.modals.select-persons.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:435
+#: src/components/screens/Encounter/ui.jsx:648
 msgid "encounter-screen.headline.edit"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:435
+#: src/components/screens/Encounter/ui.jsx:648
 msgid "encounter-screen.headline.add"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:474
+#: src/components/screens/Encounter/ui.jsx:687
 msgid "encounter-screen.persons.add"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:498
+#: src/components/screens/Encounter/ui.jsx:711
 msgid "location"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:544
+#: src/components/screens/Encounter/ui.jsx:757
 msgid "encounter-screen.options.outside.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:544
+#: src/components/screens/Encounter/ui.jsx:757
 msgid "encounter-screen.options.outside.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:558
+#: src/components/screens/Encounter/ui.jsx:771
 msgid "encounter-screen.options.ventilated.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:558
+#: src/components/screens/Encounter/ui.jsx:771
 msgid "encounter-screen.options.ventilated.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:572
+#: src/components/screens/Encounter/ui.jsx:785
 msgid "encounter-screen.options.mask.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:572
+#: src/components/screens/Encounter/ui.jsx:785
 msgid "encounter-screen.options.mask.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:585
+#: src/components/screens/Encounter/ui.jsx:798
 msgid "encounter-screen.options.distance.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:585
+#: src/components/screens/Encounter/ui.jsx:798
 msgid "encounter-screen.options.distance.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:617
+#: src/components/screens/Encounter/ui.jsx:830
 msgid "encounter-screen.button.save"
 msgstr ""
 
@@ -584,7 +613,7 @@ msgid "export-screen.modals.export-completed.pdf.headline"
 msgstr "Fichier PDF"
 
 #: src/components/screens/Legal/index.jsx:243
-#: src/components/screens/Menu.jsx:205
+#: src/components/screens/Menu.jsx:218
 msgid "legal-screen.header.headline"
 msgstr "Juridique"
 
@@ -799,24 +828,24 @@ msgstr ""
 "nous en informer. Si nous avons connaissance d'une infraction, nous "
 "retirerons immédiatement ces contenus."
 
-#: src/components/screens/Menu.jsx:197
+#: src/components/screens/Menu.jsx:210
 msgid "menu-screen.items.faq"
 msgstr "Foire aux questions"
 
-#: src/components/screens/Menu.jsx:201
+#: src/components/screens/Menu.jsx:214
 #: src/components/screens/Settings/ui.jsx:99
 msgid "settings-screen.header.headline"
 msgstr "Paramètres"
 
-#: src/components/screens/Menu.jsx:209
+#: src/components/screens/Menu.jsx:222
 msgid "menu-screen.items.share"
 msgstr "Partager cette application"
 
-#: src/components/screens/Menu.jsx:213
+#: src/components/screens/Menu.jsx:226
 msgid "menu-screen.items.website"
 msgstr "Visitez le site web"
 
-#: src/components/screens/Menu.jsx:261
+#: src/components/screens/Menu.jsx:297
 msgid "menu-screen.button.send-feedback"
 msgstr "Envoie tes commentaires"
 
@@ -1276,7 +1305,7 @@ msgstr "Importer maintenant"
 
 #: src/components/widgets/DayOverview.jsx:127
 msgid "encounters"
-msgstr ""
+msgstr "rencontres"
 
 #: src/components/widgets/DayOverview.jsx:46
 msgid "total"
@@ -1298,6 +1327,6 @@ msgstr "Sources"
 msgid "tips.sources.last-updated"
 msgstr "Dernière mise à jour:"
 
-#: src/index.jsx:128
+#: src/index.jsx:131
 msgid "Done"
 msgstr ""
