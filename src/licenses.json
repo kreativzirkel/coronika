@@ -143,6 +143,12 @@
         "licenseUrl": "https://github.com/wix/react-native-interactable/raw/master/LICENSE",
         "parents": "coronika"
     },
+    "react-native-keyboard-aware-scroll-view@0.9.3": {
+        "licenses": "MIT",
+        "repository": "https://github.com/APSL/react-native-keyboard-aware-scroll-view",
+        "licenseUrl": "https://github.com/APSL/react-native-keyboard-aware-scroll-view/raw/master/LICENSE",
+        "parents": "coronika"
+    },
     "react-native-keyboard-manager@4.0.13-17": {
         "licenses": "MIT",
         "repository": "https://github.com/douglasjunior/react-native-keyboard-manager",

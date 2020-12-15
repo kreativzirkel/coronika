@@ -318,7 +318,6 @@ class ModalSelectLocationClass extends React.Component {
     };
 
     this.searchInput = React.createRef();
-    this.importPersons = this.importPersons.bind(this);
     this.onPressAddLocation = this.onPressAddLocation.bind(this);
     this.onPressClose = this.onPressClose.bind(this);
     this.onPressSearchIcon = this.onPressSearchIcon.bind(this);
@@ -344,7 +343,7 @@ class ModalSelectLocationClass extends React.Component {
       textTransform: 'lowercase',
     },
     listWrapper: {
-      height: this.props.vh(65),
+      height: this.props.vh(55),
     },
     listEmptyWrapper: {
       alignItems: 'center',
@@ -361,15 +360,6 @@ class ModalSelectLocationClass extends React.Component {
       textAlign: 'center',
     },
   });
-
-  importPersons() {
-    const {
-      store: { dispatch },
-    } = this.context;
-    const { __ } = this.props;
-
-    dispatch(importPersons(__));
-  }
 
   onPressAddLocation() {
     if (this.props.onPressAddLocation) this.props.onPressAddLocation();
@@ -464,6 +454,7 @@ class ModalSelectPersonsClass extends React.Component {
     };
 
     this.searchInput = React.createRef();
+    this.importPersons = this.importPersons.bind(this);
     this.onPressAddPerson = this.onPressAddPerson.bind(this);
     this.onPressClose = this.onPressClose.bind(this);
     this.onPressConfirm = this.onPressConfirm.bind(this);
@@ -520,7 +511,7 @@ class ModalSelectPersonsClass extends React.Component {
       textTransform: 'lowercase',
     },
     listWrapper: {
-      height: this.props.vh(60),
+      height: this.props.vh(50),
     },
     listEmptyWrapper: {
       alignItems: 'center',
@@ -551,6 +542,15 @@ class ModalSelectPersonsClass extends React.Component {
       textTransform: 'lowercase',
     },
   });
+
+  importPersons() {
+    const {
+      store: { dispatch },
+    } = this.context;
+    const { __ } = this.props;
+
+    dispatch(importPersons(__));
+  }
 
   onPressAddPerson() {
     if (this.props.onPressAddPerson) this.props.onPressAddPerson();

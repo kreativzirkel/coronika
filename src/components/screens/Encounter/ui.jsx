@@ -12,16 +12,8 @@ import UilUsersAlt from '@iconscout/react-native-unicons/icons/uil-users-alt';
 import UilWind from '@iconscout/react-native-unicons/icons/uil-wind';
 import moment from 'moment';
 import React, { Fragment } from 'react';
-import {
-  KeyboardAvoidingView,
-  Platform,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import MaskIcon from '../../../assets/images/icons/mask.svg';
 import { COLOR_PRIMARY } from '../../../constants';
 import { HeaderBack } from '../../widgets/Header';
@@ -455,11 +447,8 @@ class Encounter extends React.Component {
           </TouchableOpacity>
         </View>
 
-        <ScrollView style={styles.encounterWrapper}>
-          <KeyboardAvoidingView
-            behavior={Platform.OS === 'ios' ? 'position' : 'padding'}
-            enabled
-            keyboardVerticalOffset={vw(50)}>
+        <View style={styles.encounterWrapper}>
+          <KeyboardAwareScrollView extraScrollHeight={vw(30)}>
             <View style={{ ...styles.optionWrapper, ...styles.optionWrapperPersons }}>
               <UilUsersAlt
                 color={persons?.length > 0 ? iconColorActive : iconColorInactive}
@@ -614,8 +603,8 @@ class Encounter extends React.Component {
                 />
               </View>
             </View>
-          </KeyboardAvoidingView>
-        </ScrollView>
+          </KeyboardAwareScrollView>
+        </View>
 
         <View style={styles.encounterButtonWrapper}>
           <TouchableOpacity disabled={isSaveButtonDisabled} onPress={this.save} style={styles.buttonSave}>
