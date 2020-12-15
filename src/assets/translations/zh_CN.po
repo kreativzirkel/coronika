@@ -28,28 +28,34 @@ msgid "navigation.tips.label"
 msgstr "小贴士"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1002
+#: src/components/widgets/ModalPerson.jsx:116
 msgid "entries.modals.update-person.headline"
 msgstr "编辑联系人"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1002
+#: src/components/widgets/ModalPerson.jsx:116
 msgid "entries.modals.new-person.headline"
 msgstr "新联系人"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1022
 #: src/components/partials/EntriesTabsView/index.jsx:1044
+#: src/components/widgets/ModalLocation.jsx:90
 msgid "entries.modals.update-location.button"
 msgstr "保存"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1023
+#: src/components/widgets/ModalLocation.jsx:90
 msgid "entries.modals.new-location.button"
 msgstr "添加"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1027
 #: src/components/partials/EntriesTabsView/index.jsx:1051
+#: src/components/widgets/ModalLocation.jsx:94
 msgid "entries.modals.update-location.headline"
 msgstr "修改地点"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1028
+#: src/components/widgets/ModalLocation.jsx:94
 msgid "entries.modals.new-location.headline"
 msgstr "新地点"
 
@@ -74,32 +80,34 @@ msgid "locations"
 msgstr "地点"
 
 #: src/components/partials/EntriesTabsView/index.jsx:880
+#: src/components/screens/Encounter/Modals.jsx:627
 msgid "entries.persons.list.new"
 msgstr "创建新的人"
 
 #: src/components/partials/EntriesTabsView/index.jsx:902
 #: src/components/partials/EntriesTabsView/index.jsx:962
-#: src/components/screens/Encounter/Modals.jsx:408
-#: src/components/screens/Encounter/Modals.jsx:589
+#: src/components/screens/Encounter/Modals.jsx:426
+#: src/components/screens/Encounter/Modals.jsx:644
 msgid "entries.search.list.empty"
 msgstr "没有搜索到相关内容。"
 
 #: src/components/partials/EntriesTabsView/index.jsx:913
-#: src/components/screens/Encounter/Modals.jsx:594
+#: src/components/screens/Encounter/Modals.jsx:649
 msgid "entries.persons.list.empty"
 msgstr "您尚未添加第一个联系人。从电话簿中导入联系人，以便您可以立即开始使用。"
 
 #: src/components/partials/EntriesTabsView/index.jsx:922
-#: src/components/screens/Encounter/Modals.jsx:599
+#: src/components/screens/Encounter/Modals.jsx:654
 msgid "entries.persons.list.import.button"
 msgstr "现在导入"
 
 #: src/components/partials/EntriesTabsView/index.jsx:940
+#: src/components/screens/Encounter/Modals.jsx:415
 msgid "entries.locations.list.new"
 msgstr "创建新位置"
 
 #: src/components/partials/EntriesTabsView/index.jsx:966
-#: src/components/screens/Encounter/Modals.jsx:412
+#: src/components/screens/Encounter/Modals.jsx:430
 msgid "entries.locations.list.empty"
 msgstr "您尚未创建新地点。 现在开始并创建您的第一个地点。"
 
@@ -108,38 +116,47 @@ msgid "entries.selection.add"
 msgstr "添加选项"
 
 #: src/components/partials/EntriesTabsView/index.jsx:999
+#: src/components/widgets/ModalPerson.jsx:112
 msgid "entries.modals.update-person.button"
 msgstr "保存"
 
 #: src/components/partials/EntriesTabsView/index.jsx:999
+#: src/components/widgets/ModalPerson.jsx:112
 msgid "entries.modals.new-person.button"
 msgstr "添加"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:114
+#: src/components/widgets/ModalPerson.jsx:126
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "姓名"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:129
+#: src/components/widgets/ModalPerson.jsx:141
 msgid "entries.modals.new-person.placeholder.display-name"
 msgstr "显示名称"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:143
+#: src/components/widgets/ModalPerson.jsx:155
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "电话"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:156
+#: src/components/widgets/ModalPerson.jsx:168
 msgid "entries.modals.new-person.placeholder.mail"
 msgstr "电子邮件"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:238
+#: src/components/widgets/ModalLocation.jsx:103
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "标题"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:249
+#: src/components/widgets/ModalLocation.jsx:114
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "描述"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:261
+#: src/components/widgets/ModalLocation.jsx:126
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "电话"
 
@@ -149,17 +166,17 @@ msgstr "描述"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:442
 #: src/components/partials/EntriesTabsView/Modals.jsx:454
-#: src/components/screens/Encounter/Modals.jsx:113
-#: src/components/screens/Encounter/ui.jsx:655
-#: src/components/screens/Encounter/ui.jsx:667
+#: src/components/screens/Encounter/Modals.jsx:114
+#: src/components/screens/Encounter/ui.jsx:660
+#: src/components/screens/Encounter/ui.jsx:672
 msgid "Cancel"
 msgstr "取消"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:443
 #: src/components/partials/EntriesTabsView/Modals.jsx:455
-#: src/components/screens/Encounter/Modals.jsx:559
-#: src/components/screens/Encounter/ui.jsx:656
-#: src/components/screens/Encounter/ui.jsx:668
+#: src/components/screens/Encounter/Modals.jsx:609
+#: src/components/screens/Encounter/ui.jsx:661
+#: src/components/screens/Encounter/ui.jsx:673
 msgid "Confirm"
 msgstr "确认"
 
@@ -230,33 +247,45 @@ msgstr "关于Coronika"
 msgid "dashboard-screen.list.load-more"
 msgstr "装载更多"
 
-#: src/components/screens/Dashboard/ui.jsx:210
+#: src/components/screens/Dashboard/ui.jsx:211
 #: src/components/screens/Menu.jsx:220
 #: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
 msgstr "菜单"
 
-#: src/components/screens/Dashboard/ui.jsx:222
+#: src/components/screens/Dashboard/ui.jsx:223
 msgid "dashboard-screen.first-start.hint"
 msgstr "点击今天的日期，添加您的第一联系人或地点。"
 
-#: src/components/screens/Dashboard/ui.jsx:225
-#: src/components/screens/Encounter/Modals.jsx:211
+#: src/components/screens/Dashboard/ui.jsx:226
+#: src/components/screens/Encounter/Modals.jsx:212
 msgid "Close"
 msgstr "关闭"
 
-#: src/components/screens/Day/EncountersList.jsx:183
+#: src/components/screens/Day/EncountersList.jsx:209
+msgid "encounters-list.no-encounters.text"
+msgstr ""
+
+#: src/components/screens/Day/EncountersList.jsx:209
 msgid "encounters-list.empty"
 msgstr ""
 
-#: src/components/screens/Day/ui.jsx:77
-msgid "day-screen.header.headline"
-msgstr "每日总览"
+#: src/components/screens/Day/EncountersList.jsx:215
+msgid "encounters-list.no-encounters.confirmation.text"
+msgstr ""
 
-#: src/components/screens/Day/ui.jsx:90
+#: src/components/screens/Day/EncountersList.jsx:221
+msgid "encounters-list.no-encounters.confirmation.button"
+msgstr ""
+
+#: src/components/screens/Day/ui.jsx:109
 msgid "day-screen.entries.add"
 msgstr "添加条目"
+
+#: src/components/screens/Day/ui.jsx:83
+msgid "day-screen.header.headline"
+msgstr "每日总览"
 
 #: src/components/screens/Directory/importPersons.js:52
 #: src/components/screens/Directory/importPersons.js:64
@@ -305,111 +334,111 @@ msgstr "导入中..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "现在导入"
 
-#: src/components/screens/Encounter/Modals.jsx:100
+#: src/components/screens/Encounter/Modals.jsx:101
 msgid "encounter-screen.modals.delete.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:103
+#: src/components/screens/Encounter/Modals.jsx:104
 msgid "encounter-screen.modals.delete.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:107
+#: src/components/screens/Encounter/Modals.jsx:108
 msgid "encounter-screen.modals.delete.button-delete"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:212
+#: src/components/screens/Encounter/Modals.jsx:213
 msgid "encounter-screen.modals.hints.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:223
+#: src/components/screens/Encounter/Modals.jsx:224
 msgid "encounter-screen.modals.hints.persons.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:234
+#: src/components/screens/Encounter/Modals.jsx:235
 msgid "encounter-screen.modals.hints.location.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:245
+#: src/components/screens/Encounter/Modals.jsx:246
 msgid "encounter-screen.modals.hints.time.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:256
+#: src/components/screens/Encounter/Modals.jsx:257
 msgid "encounter-screen.modals.hints.outside.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:267
+#: src/components/screens/Encounter/Modals.jsx:268
 msgid "encounter-screen.modals.hints.ventilated.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:277
+#: src/components/screens/Encounter/Modals.jsx:278
 msgid "encounter-screen.modals.hints.mask.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:288
+#: src/components/screens/Encounter/Modals.jsx:289
 msgid "encounter-screen.modals.hints.distance.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:299
+#: src/components/screens/Encounter/Modals.jsx:300
 msgid "encounter-screen.modals.hints.note.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:387
+#: src/components/screens/Encounter/Modals.jsx:400
 msgid "encounter-screen.modals.select-location.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:561
+#: src/components/screens/Encounter/Modals.jsx:611
 msgid "encounter-screen.modals.select-persons.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:433
+#: src/components/screens/Encounter/ui.jsx:435
 msgid "encounter-screen.headline.edit"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:433
+#: src/components/screens/Encounter/ui.jsx:435
 msgid "encounter-screen.headline.add"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:475
+#: src/components/screens/Encounter/ui.jsx:474
 msgid "encounter-screen.persons.add"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:499
+#: src/components/screens/Encounter/ui.jsx:498
 msgid "location"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:545
+#: src/components/screens/Encounter/ui.jsx:544
 msgid "encounter-screen.options.outside.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:545
+#: src/components/screens/Encounter/ui.jsx:544
 msgid "encounter-screen.options.outside.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:559
+#: src/components/screens/Encounter/ui.jsx:558
 msgid "encounter-screen.options.ventilated.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:559
+#: src/components/screens/Encounter/ui.jsx:558
 msgid "encounter-screen.options.ventilated.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:573
+#: src/components/screens/Encounter/ui.jsx:572
 msgid "encounter-screen.options.mask.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:573
+#: src/components/screens/Encounter/ui.jsx:572
 msgid "encounter-screen.options.mask.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:586
+#: src/components/screens/Encounter/ui.jsx:585
 msgid "encounter-screen.options.distance.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:586
+#: src/components/screens/Encounter/ui.jsx:585
 msgid "encounter-screen.options.distance.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:618
+#: src/components/screens/Encounter/ui.jsx:617
 msgid "encounter-screen.button.save"
 msgstr ""
 
@@ -424,8 +453,8 @@ msgstr "页"
 #: src/components/screens/Export/createPdfFile.js:188
 #: src/components/screens/Export/createPdfFile.js:191
 #: src/components/screens/Export/createPdfFile.js:74
-#: src/components/screens/Export/logic.js:116
-#: src/components/screens/Export/logic.js:51
+#: src/components/screens/Export/logic.js:117
+#: src/components/screens/Export/logic.js:52
 #: src/components/screens/Export/ui.jsx:191
 msgid "export-screen.header.headline"
 msgstr "导出"
@@ -434,27 +463,27 @@ msgstr "导出"
 msgid "quantity"
 msgstr "数量"
 
-#: src/components/screens/Export/logic.js:64
+#: src/components/screens/Export/logic.js:65
 msgid "export-screen.alerts.save-file.success.title"
 msgstr "成功保存"
 
-#: src/components/screens/Export/logic.js:65
+#: src/components/screens/Export/logic.js:66
 msgid "export-screen.alerts.save-file.success.message"
 msgstr "该文件被成功保存在设备的下载目录中。"
 
-#: src/components/screens/Export/logic.js:70
+#: src/components/screens/Export/logic.js:71
 msgid "export-screen.alerts.save-file.error.title"
 msgstr "錯誤"
 
-#: src/components/screens/Export/logic.js:71
+#: src/components/screens/Export/logic.js:72
 msgid "export-screen.alerts.save-file.error.message"
 msgstr "在保存设备的下载目录中的文件时发生错误。"
 
-#: src/components/screens/Export/logic.js:76
+#: src/components/screens/Export/logic.js:77
 msgid "export-screen.alerts.save-file.missing-permission.title"
 msgstr "丢失权限"
 
-#: src/components/screens/Export/logic.js:77
+#: src/components/screens/Export/logic.js:78
 msgid "export-screen.alerts.save-file.missing-permission.message"
 msgstr "允许应用程序访问设备的隐私设置中的内存。"
 

@@ -28,28 +28,34 @@ msgid "navigation.tips.label"
 msgstr "Советы"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1002
+#: src/components/widgets/ModalPerson.jsx:116
 msgid "entries.modals.update-person.headline"
 msgstr "Редактор"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1002
+#: src/components/widgets/ModalPerson.jsx:116
 msgid "entries.modals.new-person.headline"
 msgstr "Новый человек"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1022
 #: src/components/partials/EntriesTabsView/index.jsx:1044
+#: src/components/widgets/ModalLocation.jsx:90
 msgid "entries.modals.update-location.button"
 msgstr "Сохранить"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1023
+#: src/components/widgets/ModalLocation.jsx:90
 msgid "entries.modals.new-location.button"
 msgstr "Добавить"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1027
 #: src/components/partials/EntriesTabsView/index.jsx:1051
+#: src/components/widgets/ModalLocation.jsx:94
 msgid "entries.modals.update-location.headline"
 msgstr "Редактировать местоположение"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1028
+#: src/components/widgets/ModalLocation.jsx:94
 msgid "entries.modals.new-location.headline"
 msgstr "Новое место"
 
@@ -74,34 +80,36 @@ msgid "locations"
 msgstr "местоположения"
 
 #: src/components/partials/EntriesTabsView/index.jsx:880
+#: src/components/screens/Encounter/Modals.jsx:627
 msgid "entries.persons.list.new"
 msgstr "Создать нового человека"
 
 #: src/components/partials/EntriesTabsView/index.jsx:902
 #: src/components/partials/EntriesTabsView/index.jsx:962
-#: src/components/screens/Encounter/Modals.jsx:408
-#: src/components/screens/Encounter/Modals.jsx:589
+#: src/components/screens/Encounter/Modals.jsx:426
+#: src/components/screens/Encounter/Modals.jsx:644
 msgid "entries.search.list.empty"
 msgstr "Ничего не было найдено при вашем поиске."
 
 #: src/components/partials/EntriesTabsView/index.jsx:913
-#: src/components/screens/Encounter/Modals.jsx:594
+#: src/components/screens/Encounter/Modals.jsx:649
 msgid "entries.persons.list.empty"
 msgstr ""
 "Ты еще не создал человека. Чтобы сразу приступить к работе, ты можешь "
 "импортировать людей из своей телефонной книги."
 
 #: src/components/partials/EntriesTabsView/index.jsx:922
-#: src/components/screens/Encounter/Modals.jsx:599
+#: src/components/screens/Encounter/Modals.jsx:654
 msgid "entries.persons.list.import.button"
 msgstr "Импорт сейчас"
 
 #: src/components/partials/EntriesTabsView/index.jsx:940
+#: src/components/screens/Encounter/Modals.jsx:415
 msgid "entries.locations.list.new"
 msgstr "Создать новое местоположение"
 
 #: src/components/partials/EntriesTabsView/index.jsx:966
-#: src/components/screens/Encounter/Modals.jsx:412
+#: src/components/screens/Encounter/Modals.jsx:430
 msgid "entries.locations.list.empty"
 msgstr ""
 "Ты еще не создал местоположение. Начни сейчас и создай своё первое "
@@ -112,38 +120,47 @@ msgid "entries.selection.add"
 msgstr "Добавить выбор"
 
 #: src/components/partials/EntriesTabsView/index.jsx:999
+#: src/components/widgets/ModalPerson.jsx:112
 msgid "entries.modals.update-person.button"
 msgstr "Сохранить"
 
 #: src/components/partials/EntriesTabsView/index.jsx:999
+#: src/components/widgets/ModalPerson.jsx:112
 msgid "entries.modals.new-person.button"
 msgstr "Добавить"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:114
+#: src/components/widgets/ModalPerson.jsx:126
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Имя"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:129
+#: src/components/widgets/ModalPerson.jsx:141
 msgid "entries.modals.new-person.placeholder.display-name"
 msgstr "Показать имя"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:143
+#: src/components/widgets/ModalPerson.jsx:155
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Телефон"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:156
+#: src/components/widgets/ModalPerson.jsx:168
 msgid "entries.modals.new-person.placeholder.mail"
 msgstr "Эл. почта"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:238
+#: src/components/widgets/ModalLocation.jsx:103
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Название"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:249
+#: src/components/widgets/ModalLocation.jsx:114
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Описание"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:261
+#: src/components/widgets/ModalLocation.jsx:126
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "Телефон"
 
@@ -153,17 +170,17 @@ msgstr "Описание"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:442
 #: src/components/partials/EntriesTabsView/Modals.jsx:454
-#: src/components/screens/Encounter/Modals.jsx:113
-#: src/components/screens/Encounter/ui.jsx:655
-#: src/components/screens/Encounter/ui.jsx:667
+#: src/components/screens/Encounter/Modals.jsx:114
+#: src/components/screens/Encounter/ui.jsx:660
+#: src/components/screens/Encounter/ui.jsx:672
 msgid "Cancel"
 msgstr "Отменить"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:443
 #: src/components/partials/EntriesTabsView/Modals.jsx:455
-#: src/components/screens/Encounter/Modals.jsx:559
-#: src/components/screens/Encounter/ui.jsx:656
-#: src/components/screens/Encounter/ui.jsx:668
+#: src/components/screens/Encounter/Modals.jsx:609
+#: src/components/screens/Encounter/ui.jsx:661
+#: src/components/screens/Encounter/ui.jsx:673
 msgid "Confirm"
 msgstr "Подтвердить"
 
@@ -240,34 +257,46 @@ msgstr "О Коронике"
 msgid "dashboard-screen.list.load-more"
 msgstr "Загрузи больше"
 
-#: src/components/screens/Dashboard/ui.jsx:210
+#: src/components/screens/Dashboard/ui.jsx:211
 #: src/components/screens/Menu.jsx:220
 #: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
 msgstr "Меню"
 
-#: src/components/screens/Dashboard/ui.jsx:222
+#: src/components/screens/Dashboard/ui.jsx:223
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Нажмите на сегодняшнюю дату, чтобы ввести ваши контакты или местоположение."
 
-#: src/components/screens/Dashboard/ui.jsx:225
-#: src/components/screens/Encounter/Modals.jsx:211
+#: src/components/screens/Dashboard/ui.jsx:226
+#: src/components/screens/Encounter/Modals.jsx:212
 msgid "Close"
 msgstr "Закрыть"
 
-#: src/components/screens/Day/EncountersList.jsx:183
+#: src/components/screens/Day/EncountersList.jsx:209
+msgid "encounters-list.no-encounters.text"
+msgstr ""
+
+#: src/components/screens/Day/EncountersList.jsx:209
 msgid "encounters-list.empty"
 msgstr ""
 
-#: src/components/screens/Day/ui.jsx:77
-msgid "day-screen.header.headline"
-msgstr "Ежедневный обзор"
+#: src/components/screens/Day/EncountersList.jsx:215
+msgid "encounters-list.no-encounters.confirmation.text"
+msgstr ""
 
-#: src/components/screens/Day/ui.jsx:90
+#: src/components/screens/Day/EncountersList.jsx:221
+msgid "encounters-list.no-encounters.confirmation.button"
+msgstr ""
+
+#: src/components/screens/Day/ui.jsx:109
 msgid "day-screen.entries.add"
 msgstr "Добавить запись"
+
+#: src/components/screens/Day/ui.jsx:83
+msgid "day-screen.header.headline"
+msgstr "Ежедневный обзор"
 
 #: src/components/screens/Directory/importPersons.js:52
 #: src/components/screens/Directory/importPersons.js:64
@@ -318,111 +347,111 @@ msgstr "Импорт..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Импорт сейчас"
 
-#: src/components/screens/Encounter/Modals.jsx:100
+#: src/components/screens/Encounter/Modals.jsx:101
 msgid "encounter-screen.modals.delete.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:103
+#: src/components/screens/Encounter/Modals.jsx:104
 msgid "encounter-screen.modals.delete.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:107
+#: src/components/screens/Encounter/Modals.jsx:108
 msgid "encounter-screen.modals.delete.button-delete"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:212
+#: src/components/screens/Encounter/Modals.jsx:213
 msgid "encounter-screen.modals.hints.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:223
+#: src/components/screens/Encounter/Modals.jsx:224
 msgid "encounter-screen.modals.hints.persons.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:234
+#: src/components/screens/Encounter/Modals.jsx:235
 msgid "encounter-screen.modals.hints.location.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:245
+#: src/components/screens/Encounter/Modals.jsx:246
 msgid "encounter-screen.modals.hints.time.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:256
+#: src/components/screens/Encounter/Modals.jsx:257
 msgid "encounter-screen.modals.hints.outside.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:267
+#: src/components/screens/Encounter/Modals.jsx:268
 msgid "encounter-screen.modals.hints.ventilated.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:277
+#: src/components/screens/Encounter/Modals.jsx:278
 msgid "encounter-screen.modals.hints.mask.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:288
+#: src/components/screens/Encounter/Modals.jsx:289
 msgid "encounter-screen.modals.hints.distance.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:299
+#: src/components/screens/Encounter/Modals.jsx:300
 msgid "encounter-screen.modals.hints.note.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:387
+#: src/components/screens/Encounter/Modals.jsx:400
 msgid "encounter-screen.modals.select-location.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:561
+#: src/components/screens/Encounter/Modals.jsx:611
 msgid "encounter-screen.modals.select-persons.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:433
+#: src/components/screens/Encounter/ui.jsx:435
 msgid "encounter-screen.headline.edit"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:433
+#: src/components/screens/Encounter/ui.jsx:435
 msgid "encounter-screen.headline.add"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:475
+#: src/components/screens/Encounter/ui.jsx:474
 msgid "encounter-screen.persons.add"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:499
+#: src/components/screens/Encounter/ui.jsx:498
 msgid "location"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:545
+#: src/components/screens/Encounter/ui.jsx:544
 msgid "encounter-screen.options.outside.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:545
+#: src/components/screens/Encounter/ui.jsx:544
 msgid "encounter-screen.options.outside.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:559
+#: src/components/screens/Encounter/ui.jsx:558
 msgid "encounter-screen.options.ventilated.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:559
+#: src/components/screens/Encounter/ui.jsx:558
 msgid "encounter-screen.options.ventilated.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:573
+#: src/components/screens/Encounter/ui.jsx:572
 msgid "encounter-screen.options.mask.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:573
+#: src/components/screens/Encounter/ui.jsx:572
 msgid "encounter-screen.options.mask.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:586
+#: src/components/screens/Encounter/ui.jsx:585
 msgid "encounter-screen.options.distance.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:586
+#: src/components/screens/Encounter/ui.jsx:585
 msgid "encounter-screen.options.distance.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:618
+#: src/components/screens/Encounter/ui.jsx:617
 msgid "encounter-screen.button.save"
 msgstr ""
 
@@ -437,8 +466,8 @@ msgstr "страница"
 #: src/components/screens/Export/createPdfFile.js:188
 #: src/components/screens/Export/createPdfFile.js:191
 #: src/components/screens/Export/createPdfFile.js:74
-#: src/components/screens/Export/logic.js:116
-#: src/components/screens/Export/logic.js:51
+#: src/components/screens/Export/logic.js:117
+#: src/components/screens/Export/logic.js:52
 #: src/components/screens/Export/ui.jsx:191
 msgid "export-screen.header.headline"
 msgstr "Экспорт"
@@ -447,27 +476,27 @@ msgstr "Экспорт"
 msgid "quantity"
 msgstr "количество"
 
-#: src/components/screens/Export/logic.js:64
+#: src/components/screens/Export/logic.js:65
 msgid "export-screen.alerts.save-file.success.title"
 msgstr "Успешно спасённый"
 
-#: src/components/screens/Export/logic.js:65
+#: src/components/screens/Export/logic.js:66
 msgid "export-screen.alerts.save-file.success.message"
 msgstr "Файл был успешно сохранен в каталоге загрузки вашего устройства."
 
-#: src/components/screens/Export/logic.js:70
+#: src/components/screens/Export/logic.js:71
 msgid "export-screen.alerts.save-file.error.title"
 msgstr "ошибка"
 
-#: src/components/screens/Export/logic.js:71
+#: src/components/screens/Export/logic.js:72
 msgid "export-screen.alerts.save-file.error.message"
 msgstr "Произошла ошибка при сохранении файла в каталоге загрузки устройства."
 
-#: src/components/screens/Export/logic.js:76
+#: src/components/screens/Export/logic.js:77
 msgid "export-screen.alerts.save-file.missing-permission.title"
 msgstr "Отсутствует разрешение"
 
-#: src/components/screens/Export/logic.js:77
+#: src/components/screens/Export/logic.js:78
 msgid "export-screen.alerts.save-file.missing-permission.message"
 msgstr ""
 "Разрешите приложению доступ к памяти в настройках конфиденциальности вашего "

@@ -43,6 +43,7 @@ export default (state = initialState, action = { type: null }) => {
 
       if (!days[timestamp].encounters.find(({ id }) => id === encounter.id)) {
         days[timestamp].encounters.push(encounter);
+        days[timestamp].noEncounters = false;
       }
 
       return { ...state, days };
@@ -66,6 +67,16 @@ export default (state = initialState, action = { type: null }) => {
       const days = cloneDeep(state.days);
 
       days[timestamp].encounters = days[timestamp].encounters.filter((encounter) => encounter.id !== id);
+
+      return { ...state, days };
+    }
+
+    case 'SET_NO_ENCOUNTERS_FOR_DAY_DASHBOARD': {
+      const timestamp = action.timestamp;
+
+      const days = cloneDeep(state.days);
+
+      days[timestamp].noEncounters = true;
 
       return { ...state, days };
     }

@@ -123,7 +123,7 @@ class ModalPerson extends React.Component {
             autoCompleteType={'off'}
             autoCorrect={false}
             onChangeText={this.setPersonName}
-            placeholder={__('entries.modals.new-person.placeholder.name').toLowerCase()}
+            placeholder={`${__('entries.modals.new-person.placeholder.name').toLowerCase()} *`}
             placeholderTextColor={'#B0B0B1'}
             style={styles.modalTextInput}
             textContentType={'none'}
@@ -152,7 +152,7 @@ class ModalPerson extends React.Component {
             autoCorrect={false}
             onChangeText={this.setPersonPhone}
             keyboardType={'phone-pad'}
-            placeholder={__('entries.modals.new-person.placeholder.phone-number').toLowerCase()}
+            placeholder={`${__('entries.modals.new-person.placeholder.phone-number').toLowerCase()} *`}
             placeholderTextColor={'#B0B0B1'}
             style={styles.modalTextInput}
             textContentType={'none'}

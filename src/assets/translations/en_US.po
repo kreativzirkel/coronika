@@ -28,28 +28,34 @@ msgid "navigation.tips.label"
 msgstr "Tips"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1002
+#: src/components/widgets/ModalPerson.jsx:116
 msgid "entries.modals.update-person.headline"
 msgstr "Edit person"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1002
+#: src/components/widgets/ModalPerson.jsx:116
 msgid "entries.modals.new-person.headline"
 msgstr "New person"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1022
 #: src/components/partials/EntriesTabsView/index.jsx:1044
+#: src/components/widgets/ModalLocation.jsx:90
 msgid "entries.modals.update-location.button"
 msgstr "Save"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1023
+#: src/components/widgets/ModalLocation.jsx:90
 msgid "entries.modals.new-location.button"
 msgstr "Add"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1027
 #: src/components/partials/EntriesTabsView/index.jsx:1051
+#: src/components/widgets/ModalLocation.jsx:94
 msgid "entries.modals.update-location.headline"
 msgstr "Edit location"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1028
+#: src/components/widgets/ModalLocation.jsx:94
 msgid "entries.modals.new-location.headline"
 msgstr "New location"
 
@@ -74,34 +80,36 @@ msgid "locations"
 msgstr "locations"
 
 #: src/components/partials/EntriesTabsView/index.jsx:880
+#: src/components/screens/Encounter/Modals.jsx:627
 msgid "entries.persons.list.new"
 msgstr "Create new person"
 
 #: src/components/partials/EntriesTabsView/index.jsx:902
 #: src/components/partials/EntriesTabsView/index.jsx:962
-#: src/components/screens/Encounter/Modals.jsx:408
-#: src/components/screens/Encounter/Modals.jsx:589
+#: src/components/screens/Encounter/Modals.jsx:426
+#: src/components/screens/Encounter/Modals.jsx:644
 msgid "entries.search.list.empty"
 msgstr "Nothing could be found on your search."
 
 #: src/components/partials/EntriesTabsView/index.jsx:913
-#: src/components/screens/Encounter/Modals.jsx:594
+#: src/components/screens/Encounter/Modals.jsx:649
 msgid "entries.persons.list.empty"
 msgstr ""
 "You have not yet created a person. To get started right away, you can import "
 "persons from your phone book."
 
 #: src/components/partials/EntriesTabsView/index.jsx:922
-#: src/components/screens/Encounter/Modals.jsx:599
+#: src/components/screens/Encounter/Modals.jsx:654
 msgid "entries.persons.list.import.button"
 msgstr "Import now"
 
 #: src/components/partials/EntriesTabsView/index.jsx:940
+#: src/components/screens/Encounter/Modals.jsx:415
 msgid "entries.locations.list.new"
 msgstr "Create new location"
 
 #: src/components/partials/EntriesTabsView/index.jsx:966
-#: src/components/screens/Encounter/Modals.jsx:412
+#: src/components/screens/Encounter/Modals.jsx:430
 msgid "entries.locations.list.empty"
 msgstr ""
 "You haven’t created a location yet. Start now and create your first location."
@@ -111,38 +119,47 @@ msgid "entries.selection.add"
 msgstr "Add selection"
 
 #: src/components/partials/EntriesTabsView/index.jsx:999
+#: src/components/widgets/ModalPerson.jsx:112
 msgid "entries.modals.update-person.button"
 msgstr "Save"
 
 #: src/components/partials/EntriesTabsView/index.jsx:999
+#: src/components/widgets/ModalPerson.jsx:112
 msgid "entries.modals.new-person.button"
 msgstr "Add"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:114
+#: src/components/widgets/ModalPerson.jsx:126
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Name"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:129
+#: src/components/widgets/ModalPerson.jsx:141
 msgid "entries.modals.new-person.placeholder.display-name"
 msgstr "Display name"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:143
+#: src/components/widgets/ModalPerson.jsx:155
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Phone"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:156
+#: src/components/widgets/ModalPerson.jsx:168
 msgid "entries.modals.new-person.placeholder.mail"
 msgstr "E-mail"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:238
+#: src/components/widgets/ModalLocation.jsx:103
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Title"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:249
+#: src/components/widgets/ModalLocation.jsx:114
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Description"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:261
+#: src/components/widgets/ModalLocation.jsx:126
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "Phone"
 
@@ -152,17 +169,17 @@ msgstr "Description"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:442
 #: src/components/partials/EntriesTabsView/Modals.jsx:454
-#: src/components/screens/Encounter/Modals.jsx:113
-#: src/components/screens/Encounter/ui.jsx:655
-#: src/components/screens/Encounter/ui.jsx:667
+#: src/components/screens/Encounter/Modals.jsx:114
+#: src/components/screens/Encounter/ui.jsx:660
+#: src/components/screens/Encounter/ui.jsx:672
 msgid "Cancel"
 msgstr "Cancel"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:443
 #: src/components/partials/EntriesTabsView/Modals.jsx:455
-#: src/components/screens/Encounter/Modals.jsx:559
-#: src/components/screens/Encounter/ui.jsx:656
-#: src/components/screens/Encounter/ui.jsx:668
+#: src/components/screens/Encounter/Modals.jsx:609
+#: src/components/screens/Encounter/ui.jsx:661
+#: src/components/screens/Encounter/ui.jsx:673
 msgid "Confirm"
 msgstr "Confirm"
 
@@ -239,33 +256,45 @@ msgstr "About Coronika"
 msgid "dashboard-screen.list.load-more"
 msgstr "load more"
 
-#: src/components/screens/Dashboard/ui.jsx:210
+#: src/components/screens/Dashboard/ui.jsx:211
 #: src/components/screens/Menu.jsx:220
 #: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
 msgstr "Menu"
 
-#: src/components/screens/Dashboard/ui.jsx:222
+#: src/components/screens/Dashboard/ui.jsx:223
 msgid "dashboard-screen.first-start.hint"
 msgstr "Click on todays date to enter your first persons or locations."
 
-#: src/components/screens/Dashboard/ui.jsx:225
-#: src/components/screens/Encounter/Modals.jsx:211
+#: src/components/screens/Dashboard/ui.jsx:226
+#: src/components/screens/Encounter/Modals.jsx:212
 msgid "Close"
 msgstr "Close"
 
-#: src/components/screens/Day/EncountersList.jsx:183
+#: src/components/screens/Day/EncountersList.jsx:209
+msgid "encounters-list.no-encounters.text"
+msgstr "You had no encounters that day."
+
+#: src/components/screens/Day/EncountersList.jsx:209
 msgid "encounters-list.empty"
 msgstr "You have not added any encounters for this day."
 
-#: src/components/screens/Day/ui.jsx:77
-msgid "day-screen.header.headline"
-msgstr "Daily overview"
+#: src/components/screens/Day/EncountersList.jsx:215
+msgid "encounters-list.no-encounters.confirmation.text"
+msgstr "You didn't have any encounters on this day?"
 
-#: src/components/screens/Day/ui.jsx:90
+#: src/components/screens/Day/EncountersList.jsx:221
+msgid "encounters-list.no-encounters.confirmation.button"
+msgstr "no encounters"
+
+#: src/components/screens/Day/ui.jsx:109
 msgid "day-screen.entries.add"
 msgstr "Add entry"
+
+#: src/components/screens/Day/ui.jsx:83
+msgid "day-screen.header.headline"
+msgstr "Daily overview"
 
 #: src/components/screens/Directory/importPersons.js:52
 #: src/components/screens/Directory/importPersons.js:64
@@ -315,111 +344,111 @@ msgstr "Importing..."
 msgid "directory-screen.modals.import-persons.button.default"
 msgstr "Import now"
 
-#: src/components/screens/Encounter/Modals.jsx:100
+#: src/components/screens/Encounter/Modals.jsx:101
 msgid "encounter-screen.modals.delete.headline"
 msgstr "Delete encounter"
 
-#: src/components/screens/Encounter/Modals.jsx:103
+#: src/components/screens/Encounter/Modals.jsx:104
 msgid "encounter-screen.modals.delete.text"
 msgstr "Do you really want to delete this encounter?"
 
-#: src/components/screens/Encounter/Modals.jsx:107
+#: src/components/screens/Encounter/Modals.jsx:108
 msgid "encounter-screen.modals.delete.button-delete"
 msgstr "Delete"
 
-#: src/components/screens/Encounter/Modals.jsx:212
+#: src/components/screens/Encounter/Modals.jsx:213
 msgid "encounter-screen.modals.hints.headline"
 msgstr "Hints"
 
-#: src/components/screens/Encounter/Modals.jsx:223
+#: src/components/screens/Encounter/Modals.jsx:224
 msgid "encounter-screen.modals.hints.persons.text"
 msgstr "Who did you have an encounter with?"
 
-#: src/components/screens/Encounter/Modals.jsx:234
+#: src/components/screens/Encounter/Modals.jsx:235
 msgid "encounter-screen.modals.hints.location.text"
 msgstr "Where did the meeting take place?"
 
-#: src/components/screens/Encounter/Modals.jsx:245
+#: src/components/screens/Encounter/Modals.jsx:246
 msgid "encounter-screen.modals.hints.time.text"
 msgstr "When was the encounter?"
 
-#: src/components/screens/Encounter/Modals.jsx:256
+#: src/components/screens/Encounter/Modals.jsx:257
 msgid "encounter-screen.modals.hints.outside.text"
 msgstr "Did the encounter take place inside or outside?"
 
-#: src/components/screens/Encounter/Modals.jsx:267
+#: src/components/screens/Encounter/Modals.jsx:268
 msgid "encounter-screen.modals.hints.ventilated.text"
 msgstr "If inside: Was the room ventilated at least every 30 minutes?"
 
-#: src/components/screens/Encounter/Modals.jsx:277
+#: src/components/screens/Encounter/Modals.jsx:278
 msgid "encounter-screen.modals.hints.mask.text"
 msgstr "Did you wear a mouth/nose protection?"
 
-#: src/components/screens/Encounter/Modals.jsx:288
+#: src/components/screens/Encounter/Modals.jsx:289
 msgid "encounter-screen.modals.hints.distance.text"
 msgstr "What was the distance between the persons?"
 
-#: src/components/screens/Encounter/Modals.jsx:299
+#: src/components/screens/Encounter/Modals.jsx:300
 msgid "encounter-screen.modals.hints.note.text"
 msgstr "Other notes and remarks"
 
-#: src/components/screens/Encounter/Modals.jsx:387
+#: src/components/screens/Encounter/Modals.jsx:400
 msgid "encounter-screen.modals.select-location.headline"
 msgstr "Select location"
 
-#: src/components/screens/Encounter/Modals.jsx:561
+#: src/components/screens/Encounter/Modals.jsx:611
 msgid "encounter-screen.modals.select-persons.headline"
 msgstr "Select persons"
 
-#: src/components/screens/Encounter/ui.jsx:433
+#: src/components/screens/Encounter/ui.jsx:435
 msgid "encounter-screen.headline.edit"
 msgstr "edit encounter"
 
-#: src/components/screens/Encounter/ui.jsx:433
+#: src/components/screens/Encounter/ui.jsx:435
 msgid "encounter-screen.headline.add"
 msgstr "add encounter"
 
-#: src/components/screens/Encounter/ui.jsx:475
+#: src/components/screens/Encounter/ui.jsx:474
 msgid "encounter-screen.persons.add"
 msgstr "Add person"
 
-#: src/components/screens/Encounter/ui.jsx:499
+#: src/components/screens/Encounter/ui.jsx:498
 msgid "location"
 msgstr "location"
 
-#: src/components/screens/Encounter/ui.jsx:545
+#: src/components/screens/Encounter/ui.jsx:544
 msgid "encounter-screen.options.outside.yes"
 msgstr "outside"
 
-#: src/components/screens/Encounter/ui.jsx:545
+#: src/components/screens/Encounter/ui.jsx:544
 msgid "encounter-screen.options.outside.no"
 msgstr "inside"
 
-#: src/components/screens/Encounter/ui.jsx:559
+#: src/components/screens/Encounter/ui.jsx:558
 msgid "encounter-screen.options.ventilated.yes"
 msgstr "ventilated"
 
-#: src/components/screens/Encounter/ui.jsx:559
+#: src/components/screens/Encounter/ui.jsx:558
 msgid "encounter-screen.options.ventilated.no"
 msgstr "not ventilated"
 
-#: src/components/screens/Encounter/ui.jsx:573
+#: src/components/screens/Encounter/ui.jsx:572
 msgid "encounter-screen.options.mask.yes"
 msgstr "mask"
 
-#: src/components/screens/Encounter/ui.jsx:573
+#: src/components/screens/Encounter/ui.jsx:572
 msgid "encounter-screen.options.mask.no"
 msgstr "no mask"
 
-#: src/components/screens/Encounter/ui.jsx:586
+#: src/components/screens/Encounter/ui.jsx:585
 msgid "encounter-screen.options.distance.yes"
 msgstr ">= 1.5m"
 
-#: src/components/screens/Encounter/ui.jsx:586
+#: src/components/screens/Encounter/ui.jsx:585
 msgid "encounter-screen.options.distance.no"
 msgstr "< 1.5m"
 
-#: src/components/screens/Encounter/ui.jsx:618
+#: src/components/screens/Encounter/ui.jsx:617
 msgid "encounter-screen.button.save"
 msgstr "Save"
 
@@ -434,8 +463,8 @@ msgstr "page"
 #: src/components/screens/Export/createPdfFile.js:188
 #: src/components/screens/Export/createPdfFile.js:191
 #: src/components/screens/Export/createPdfFile.js:74
-#: src/components/screens/Export/logic.js:116
-#: src/components/screens/Export/logic.js:51
+#: src/components/screens/Export/logic.js:117
+#: src/components/screens/Export/logic.js:52
 #: src/components/screens/Export/ui.jsx:191
 msgid "export-screen.header.headline"
 msgstr "Export"
@@ -444,30 +473,30 @@ msgstr "Export"
 msgid "quantity"
 msgstr "quantity"
 
-#: src/components/screens/Export/logic.js:64
+#: src/components/screens/Export/logic.js:65
 msgid "export-screen.alerts.save-file.success.title"
 msgstr "Successfully saved"
 
-#: src/components/screens/Export/logic.js:65
+#: src/components/screens/Export/logic.js:66
 msgid "export-screen.alerts.save-file.success.message"
 msgstr ""
 "The file was successfully saved to the download directory of your device."
 
-#: src/components/screens/Export/logic.js:70
+#: src/components/screens/Export/logic.js:71
 msgid "export-screen.alerts.save-file.error.title"
 msgstr "Error"
 
-#: src/components/screens/Export/logic.js:71
+#: src/components/screens/Export/logic.js:72
 msgid "export-screen.alerts.save-file.error.message"
 msgstr ""
 "An error occurred while saving the file in the download directory of your "
 "device."
 
-#: src/components/screens/Export/logic.js:76
+#: src/components/screens/Export/logic.js:77
 msgid "export-screen.alerts.save-file.missing-permission.title"
 msgstr "Missing permission"
 
-#: src/components/screens/Export/logic.js:77
+#: src/components/screens/Export/logic.js:78
 msgid "export-screen.alerts.save-file.missing-permission.message"
 msgstr ""
 "Allow the app to access the storage in the privacy settings of your device."

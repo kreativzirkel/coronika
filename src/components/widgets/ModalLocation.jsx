@@ -100,7 +100,7 @@ class ModalLocation extends React.Component {
           autoCompleteType={'off'}
           autoCorrect={false}
           onChangeText={this.setLocationTitle}
-          placeholder={__('entries.modals.new-location.placeholder.title').toLowerCase()}
+          placeholder={`${__('entries.modals.new-location.placeholder.title').toLowerCase()} *`}
           placeholderTextColor={'#B0B0B1'}
           style={styles.modalTextInput}
           textContentType={'none'}

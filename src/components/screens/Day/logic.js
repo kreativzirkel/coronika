@@ -3,9 +3,11 @@ import { connect } from 'react-redux';
 import withI18n from '../../../i18n';
 import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
+import { setNoEncountersForDay } from '../Dashboard/actions';
 import { setData } from '../Encounter/actions';
 import { setTimestamp, showDateSwitcherModal, hideDateSwitcherModal } from './actions';
 import Screen from './ui';
+import { CommonActions } from '@react-navigation/native';
 
 const openEncounter = (id, navigation) => async (dispatch, getState) => {
   const {
@@ -20,6 +22,16 @@ const openEncounter = (id, navigation) => async (dispatch, getState) => {
 
     navigation.navigate('Encounter');
   }
+};
+
+const setNoEncountersForDayAsync = (navigation) => async (dispatch, getState) => {
+  const {
+    day: { timestamp },
+  } = getState();
+
+  dispatch(setNoEncountersForDay(timestamp));
+
+  navigation.dispatch(CommonActions.goBack());
 };
 
 const getEncountersForList = (encounters, locations, persons) => {
@@ -91,10 +103,13 @@ const mapStateToProps = ({
       return 0;
     });
 
+  const noEncounters = days[timestamp]?.noEncounters === true;
+
   return {
     daysList,
     encounters: dayEncounters,
     isDateSwitcherModalVisible,
+    noEncounters,
     timestamp,
   };
 };
@@ -102,6 +117,7 @@ const mapStateToProps = ({
 const mapDispatchToProps = (dispatch) => {
   return {
     openEncounter: (id, navigation) => dispatch(openEncounter(id, navigation)),
+    setNoEncountersForDay: (navigation) => dispatch(setNoEncountersForDayAsync(navigation)),
     setTimestamp: (timestamp) => dispatch(setTimestamp(timestamp)),
     showDateSwitcherModal: () => dispatch(showDateSwitcherModal()),
     hideDateSwitcherModal: () => dispatch(hideDateSwitcherModal()),

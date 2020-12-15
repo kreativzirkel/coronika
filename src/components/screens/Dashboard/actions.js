@@ -10,6 +10,8 @@ export const updateEncounter = (encounter) => ({ type: 'UPDATE_ENCOUNTER_DASHBOA
 
 export const removeEncounter = (id, timestamp) => ({ type: 'REMOVE_ENCOUNTER_DASHBOARD', id, timestamp });
 
+export const setNoEncountersForDay = (timestamp) => ({ type: 'SET_NO_ENCOUNTERS_FOR_DAY_DASHBOARD', timestamp });
+
 export const removePersonFromAllDays = (personId) => ({ type: 'REMOVE_PERSON_FROM_ALL_DAYS_DASHBOARD', personId });
 
 export const removeLocationFromAllDays = (locationId) => ({

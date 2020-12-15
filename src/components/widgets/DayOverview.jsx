@@ -121,7 +121,7 @@ const DayPersons = memo(({ colors, isDark, isSmall, persons, showIcons, styles, 
   );
 });
 
-const DayEncounters = memo(({ colors, isDark, isSmall, encounters, showIcons, styles, vw, __ }) => {
+const DayEncounters = memo(({ colors, isDark, isSmall, encounters, noEncounters, showIcons, styles, vw, __ }) => {
   return (
     <View style={styles.dayPersonsWrapper}>
       <Text style={{ ...styles.dayValueCaption, ...(isDark && styles.dayValueNumberDark) }}>{__('encounters')}</Text>
@@ -133,10 +133,10 @@ const DayEncounters = memo(({ colors, isDark, isSmall, encounters, showIcons, st
             ...styles.dayValue,
             ...(isSmall && styles.dayValueSmall),
             ...styles.dayValueNumber,
-            ...(!encounters && styles.dayValueNumberEmpty),
+            ...(!encounters && !noEncounters && styles.dayValueNumberEmpty),
             ...(isDark && styles.dayValueNumberDark),
           }}>
-          {encounters || '-'}
+          {encounters || (encounters === 0 && noEncounters ? '0' : '-') || '-'}
         </Text>
       )}
     </View>
@@ -253,6 +253,7 @@ class DayOverviewClass extends React.Component {
       isSmall,
       isTotal,
       isTranslucent,
+      noEncounters,
       showIcons,
       timestamp,
       today,
@@ -318,7 +319,9 @@ class DayOverviewClass extends React.Component {
           }}
         />
         {!isReduced && (
-          <DayEncounters {...{ colors, encounters, isDark, isSmall, showIcons, styles: styles, vw, __ }} />
+          <DayEncounters
+            {...{ colors, encounters, isDark, isSmall, noEncounters, showIcons, styles: styles, vw, __ }}
+          />
         )}
       </View>
     );

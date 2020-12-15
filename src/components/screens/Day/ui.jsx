@@ -14,6 +14,7 @@ class Day extends React.Component {
     super(props);
 
     this.goToEncounter = this.goToEncounter.bind(this);
+    this.onPressNoEncounters = this.onPressNoEncounters.bind(this);
     this.onPressEncounterItem = this.onPressEncounterItem.bind(this);
   }
 
@@ -57,12 +58,17 @@ class Day extends React.Component {
     openEncounter(id, navigation);
   }
 
+  onPressNoEncounters() {
+    this.props.setNoEncountersForDay(this.props.navigation);
+  }
+
   render() {
     const {
       colors,
       daysList,
       encounters,
       isDateSwitcherModalVisible,
+      noEncounters,
       timestamp,
       hideDateSwitcherModal,
       showDateSwitcherModal,
@@ -78,11 +84,24 @@ class Day extends React.Component {
 
         <View style={this.styles.dayOverviewWrapper}>
           <TouchableOpacity onPress={showDateSwitcherModal}>
-            <DayOverview isDark isSmall encounters={encounters.length} timestamp={timestamp} today={this.today} />
+            <DayOverview
+              isDark
+              isSmall
+              encounters={encounters.length}
+              noEncounters={noEncounters}
+              timestamp={timestamp}
+              today={this.today}
+            />
           </TouchableOpacity>
         </View>
 
-        <EncountersList encounters={encounters} onPressItem={this.onPressEncounterItem} />
+        <EncountersList
+          encounters={encounters}
+          noEncounters={noEncounters}
+          onPressItem={this.onPressEncounterItem}
+          onPressNoEncountersButton={this.onPressNoEncounters}
+          showNoEncountersButton
+        />
 
         <View style={{ ...this.styles.wrapperAddEntry, backgroundColor: colors.BACKGROUND }}>
           <TouchableOpacity onPress={this.goToEncounter} style={this.styles.buttonAdd}>
