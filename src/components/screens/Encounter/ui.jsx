@@ -439,7 +439,7 @@ class Encounter extends React.Component {
   }
 
   resetLocation() {
-    this.props.setLocation(undefined);
+    this.setLocation(undefined);
   }
 
   save() {
@@ -460,7 +460,7 @@ class Encounter extends React.Component {
 
   selectLocation(location) {
     this.setLocation(location);
-    this.props.hideModalSelectLocation();
+    this.setState({ modalSelectLocationVisible: false });
   }
 
   setDistance(value) {
