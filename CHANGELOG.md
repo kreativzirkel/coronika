@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.0
+
+- Encounters: Persons and locations are now grouped into encounters
+- Additional information such as mask, distance, etc. can be recorded for encounters
+- It can be stored that no encounter has taken place on a day
+- Notifications for Christmas added
+- Bug fixes and improvements
+
 ## 1.7.2
 
 - Optimized CSV export file
