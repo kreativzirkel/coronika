@@ -355,6 +355,7 @@ class ModalSelectLocationClass extends React.Component {
     },
     listWrapper: {
       height: this.props.vh(55),
+      paddingBottom: this.props.vw(2.3),
     },
     listEmptyWrapper: {
       alignItems: 'center',
@@ -513,6 +514,7 @@ class ModalSelectPersonsClass extends React.Component {
     },
     listWrapper: {
       height: this.props.vh(50),
+      paddingBottom: this.props.vw(2.3),
     },
     listEmptyWrapper: {
       alignItems: 'center',

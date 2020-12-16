@@ -883,6 +883,7 @@ class Encounter extends React.Component {
           confirmTextIOS={__('Confirm')}
           customHeaderIOS={View}
           date={new Date(timestampStart)}
+          display={'spinner'}
           headerTextIOS={''}
           isVisible={modalTimestampStartVisible}
           mode={'time'}
@@ -895,6 +896,7 @@ class Encounter extends React.Component {
           confirmTextIOS={__('Confirm')}
           customHeaderIOS={View}
           date={new Date(timestampEnd)}
+          display={'spinner'}
           headerTextIOS={''}
           isVisible={modalTimestampEndVisible}
           mode={'time'}
