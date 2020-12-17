@@ -67,6 +67,11 @@ class EncountersListItemClass extends React.Component {
     const countPersons = persons?.length || 0;
     const hasLocation = location?.trim()?.length > 0 || false;
     const isLocation = hasLocation && countPersons === 0;
+    const hasTimestampEnd = timestampEnd !== undefined && timestampEnd > 0;
+    const isTimestampEndFilled =
+      hasTimestampEnd && (moment(timestampEnd).hours() > 0 || moment(timestampEnd).minutes() > 0);
+    const hasTimestampStart = timestampStart !== undefined && timestampStart > 0;
+    const showTime = hasTimestampStart && isTimestampEndFilled;
 
     return (
       <TouchableOpacity onPress={this.onPress}>
@@ -97,11 +102,17 @@ class EncountersListItemClass extends React.Component {
                 <Text style={{ ...this.styles.encounterContentText, color: colors.GRAY_3 }}>{location}</Text>
               </View>
             )}
-            <Text
-              style={{ ...this.styles.encounterContentText, color: colors.TEXT, ...this.styles.encounterContentTime }}>
-              {moment(timestampStart || 0).format('LT')}
-              {timestampEnd > 0 && timestampEnd > timestampStart && ` - ${moment(timestampEnd).format('LT')}`}
-            </Text>
+            {showTime && (
+              <Text
+                style={{
+                  ...this.styles.encounterContentText,
+                  color: colors.TEXT,
+                  ...this.styles.encounterContentTime,
+                }}>
+                {moment(timestampStart).format('LT')}
+                {hasTimestampEnd && timestampEnd > timestampStart && ` - ${moment(timestampEnd).format('LT')}`}
+              </Text>
+            )}
           </View>
         </View>
       </TouchableOpacity>

@@ -150,7 +150,7 @@ export default (state = initialState, action = { type: null }) => {
           const encounter = {
             id: uuidv4(),
             persons: [id],
-            timestamp,
+            timestamp: parseInt(timestamp, 10),
             timestampStart: parseInt(timestamp, 10),
             timestampEnd: parseInt(timestamp, 10),
           };
@@ -159,14 +159,18 @@ export default (state = initialState, action = { type: null }) => {
         delete days[timestamp].persons;
 
         days[timestamp]?.locations?.forEach(({ description, id, timestamp: timestampStart, timestampEnd }) => {
+          const encounterTimestampStart = timestampStart || parseInt(timestamp, 10);
+          const encounterTimestampEnd = timestampEnd || parseInt(timestamp, 10);
+
           const encounter = {
             id: uuidv4(),
             location: id,
             note: description,
             persons: [],
-            timestamp,
-            timestampStart,
-            timestampEnd,
+            timestamp: parseInt(timestamp, 10),
+            timestampStart: encounterTimestampStart,
+            timestampEnd:
+              encounterTimestampEnd > encounterTimestampStart ? encounterTimestampEnd : encounterTimestampStart,
           };
           encounters.push(encounter);
         });

@@ -148,15 +148,13 @@ class Encounter extends React.Component {
     const { timestamp } = this.props;
     const { timestampEnd, timestampStart } = this.state;
 
-    const now = moment();
-
     if (timestampEnd === 0) {
-      const timestampEndFixed = moment(timestamp).hours(now.hours()).minutes(now.minutes()).valueOf();
+      const timestampEndFixed = moment(timestamp).hours(0).minutes(0).valueOf();
       this.setTimestampEnd(timestampEndFixed);
     }
 
     if (timestampStart === 0) {
-      const timestampStartFixed = moment(timestamp).hours(now.hours()).minutes(now.minutes()).valueOf();
+      const timestampStartFixed = moment(timestamp).hours(0).minutes(0).valueOf();
       this.setTimestampStart(timestampStartFixed);
     }
   }
