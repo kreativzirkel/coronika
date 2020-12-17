@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1
+
+- Bug fixes and improvements
+
 ## 2.0.0
 
 - Encounters: Persons and locations are now grouped into encounters
