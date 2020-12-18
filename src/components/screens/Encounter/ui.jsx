@@ -12,7 +12,7 @@ import UilUsersAlt from '@iconscout/react-native-unicons/icons/uil-users-alt';
 import UilWind from '@iconscout/react-native-unicons/icons/uil-wind';
 import moment from 'moment';
 import React, { Fragment } from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { v4 as uuidv4 } from 'uuid';
 import MaskIcon from '../../../assets/images/icons/mask.svg';
@@ -881,7 +881,7 @@ class Encounter extends React.Component {
           confirmTextIOS={__('Confirm')}
           customHeaderIOS={View}
           date={new Date(timestampStart)}
-          display={'spinner'}
+          display={Platform.OS === 'ios' ? 'spinner' : 'default'}
           headerTextIOS={''}
           isVisible={modalTimestampStartVisible}
           mode={'time'}
@@ -894,7 +894,7 @@ class Encounter extends React.Component {
           confirmTextIOS={__('Confirm')}
           customHeaderIOS={View}
           date={new Date(timestampEnd)}
-          display={'spinner'}
+          display={Platform.OS === 'ios' ? 'spinner' : 'default'}
           headerTextIOS={''}
           isVisible={modalTimestampEndVisible}
           mode={'time'}
