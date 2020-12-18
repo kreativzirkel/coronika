@@ -87,7 +87,7 @@ class ModalPerson extends React.Component {
   }
 
   render() {
-    const { colors, id, isVisible, __ } = this.props;
+    const { colors, id, isVisible, onModalHide, __ } = this.props;
     const { personDisplayName, personMail, personName, personPhone } = this.state;
 
     const styles = {
@@ -116,6 +116,7 @@ class ModalPerson extends React.Component {
           id !== undefined ? __('entries.modals.update-person.headline') : __('entries.modals.new-person.headline')
         }
         isVisible={isVisible}
+        onModalHide={onModalHide}
         onPressClose={this.onPressClose}
         onPressConfirm={this.onPressConfirm}>
         {!isImported && (

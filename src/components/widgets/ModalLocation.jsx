@@ -70,7 +70,7 @@ class ModalLocation extends React.Component {
   }
 
   render() {
-    const { colors, id, isVisible, __ } = this.props;
+    const { colors, id, isVisible, onModalHide, __ } = this.props;
     const { locationDescription, locationPhone, locationTitle } = this.state;
 
     const styles = {
@@ -94,6 +94,7 @@ class ModalLocation extends React.Component {
           id !== undefined ? __('entries.modals.update-location.headline') : __('entries.modals.new-location.headline')
         }
         isVisible={isVisible}
+        onModalHide={onModalHide}
         onPressClose={this.onPressClose}
         onPressConfirm={this.onPressConfirm}>
         <TextInput

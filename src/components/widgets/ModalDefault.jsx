@@ -15,6 +15,7 @@ class ModalDefaultClass extends React.Component {
       renderedBefore: false,
     };
 
+    this.onModalHide = this.onModalHide.bind(this);
     this.onPressClose = this.onPressClose.bind(this);
     this.onPressConfirm = this.onPressConfirm.bind(this);
   }
@@ -78,6 +79,10 @@ class ModalDefaultClass extends React.Component {
 
   showConfirmationButton = this.props.buttonConfirmLabel && this.props.onPressConfirm;
 
+  onModalHide() {
+    if (this.props.onModalHide) this.props.onModalHide();
+  }
+
   onPressClose() {
     if (this.props.onPressClose) this.props.onPressClose();
   }
@@ -124,6 +129,7 @@ class ModalDefaultClass extends React.Component {
         isVisible={isVisible}
         onBackButtonPress={this.onPressClose}
         onBackdropPress={this.onPressClose}
+        onModalHide={this.onModalHide}
         statusBarTranslucent
         style={styles.modal}
         useNativeDriver>

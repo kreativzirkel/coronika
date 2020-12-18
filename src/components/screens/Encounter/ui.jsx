@@ -16,7 +16,7 @@ import { Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'r
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { v4 as uuidv4 } from 'uuid';
 import MaskIcon from '../../../assets/images/icons/mask.svg';
-import { COLOR_PRIMARY, MODAL_OPENING_DELAY } from '../../../constants';
+import { COLOR_PRIMARY } from '../../../constants';
 import { HeaderBack } from '../../widgets/Header';
 import Layout from '../../widgets/Layout';
 import ButtonSwitch from '../../widgets/ButtonSwitch';
@@ -99,8 +99,11 @@ class Encounter extends React.Component {
       locationTitle: this.props.locationTitle,
       mask: this.props.mask,
       modalLocationVisible: false,
+      modalLocationVisibleNext: false,
       modalPersonVisible: false,
+      modalPersonVisibleNext: false,
       modalSelectLocationVisible: false,
+      modalSelectLocationVisibleNext: false,
       modalSelectPersonsVisible: false,
       modalTimestampEndVisible: false,
       modalTimestampStartVisible: false,
@@ -123,6 +126,10 @@ class Encounter extends React.Component {
     this.hideModalSelectPersons = this.hideModalSelectPersons.bind(this);
     this.hideModalTimestampEnd = this.hideModalTimestampEnd.bind(this);
     this.hideModalTimestampStart = this.hideModalTimestampStart.bind(this);
+    this.onModalLocationHide = this.onModalLocationHide.bind(this);
+    this.onModalPersonHide = this.onModalPersonHide.bind(this);
+    this.onModalSelectLocationHide = this.onModalSelectLocationHide.bind(this);
+    this.onModalSelectPersonsHide = this.onModalSelectPersonsHide.bind(this);
     this.removePerson = this.removePerson.bind(this);
     this.resetLocation = this.resetLocation.bind(this);
     this.save = this.save.bind(this);
@@ -351,7 +358,13 @@ class Encounter extends React.Component {
     if (this.props.addLocation) {
       const locationId = uuidv4();
       this.props.addLocation(locationId, locationTitle, locationDescription, locationPhone);
-      this.setState({ location: locationId, locationTitle, modalLocationVisible: false });
+      this.setState({
+        location: locationId,
+        locationTitle,
+        modalLocationVisible: false,
+        modalLocationVisibleNext: false,
+        modalSelectLocationVisibleNext: false,
+      });
     }
   }
 
@@ -363,9 +376,9 @@ class Encounter extends React.Component {
       this.togglePerson(personId);
       this.setState({
         modalPersonVisible: false,
+        modalPersonVisibleNext: false,
         personsDisplay: [...personsDisplay, { id: personId, name: personName }],
       });
-      setTimeout(() => this.setState({ modalSelectPersonsVisible: true }), MODAL_OPENING_DELAY);
     }
   }
 
@@ -391,24 +404,42 @@ class Encounter extends React.Component {
   }
 
   hideModalLocation() {
-    this.setState({ modalLocationVisible: false });
+    this.setState({ modalLocationVisible: false, modalLocationVisibleNext: false });
+  }
 
-    setTimeout(() => this.setState({ modalSelectLocationVisible: true }), MODAL_OPENING_DELAY);
+  onModalLocationHide() {
+    if (this.state.modalSelectLocationVisibleNext) {
+      this.setState({ modalSelectLocationVisible: true, modalSelectLocationVisibleNext: false });
+    }
   }
 
   hideModalPerson() {
-    this.setState({ modalPersonVisible: false });
+    this.setState({ modalPersonVisible: false, modalPersonVisibleNext: false });
+  }
 
-    setTimeout(() => this.setState({ modalSelectPersonsVisible: true }), MODAL_OPENING_DELAY);
+  onModalPersonHide() {
+    this.setState({ modalSelectPersonsVisible: true });
   }
 
   hideModalSelectLocation() {
     this.setState({ modalSelectLocationVisible: false });
   }
 
+  onModalSelectLocationHide() {
+    if (this.state.modalLocationVisibleNext) {
+      this.setState({ modalLocationVisible: true });
+    }
+  }
+
   hideModalSelectPersons() {
     this.confirmSelectedPersons();
     this.setState({ modalSelectPersonsVisible: false });
+  }
+
+  onModalSelectPersonsHide() {
+    if (this.state.modalPersonVisibleNext) {
+      this.setState({ modalPersonVisible: true });
+    }
   }
 
   hideModalTimestampEnd() {
@@ -511,16 +542,16 @@ class Encounter extends React.Component {
   }
 
   showModalLocation() {
-    this.setState({ modalSelectLocationVisible: false });
-
-    setTimeout(() => this.setState({ modalLocationVisible: true }), MODAL_OPENING_DELAY);
+    this.setState({
+      modalSelectLocationVisible: false,
+      modalLocationVisibleNext: true,
+      modalSelectLocationVisibleNext: true,
+    });
   }
 
   showModalPerson() {
     this.confirmSelectedPersons();
-    this.setState({ modalSelectPersonsVisible: false });
-
-    setTimeout(() => this.setState({ modalPersonVisible: true }), MODAL_OPENING_DELAY);
+    this.setState({ modalSelectPersonsVisible: false, modalPersonVisibleNext: true });
   }
 
   showModalSelectLocation() {
@@ -848,6 +879,7 @@ class Encounter extends React.Component {
 
         <ModalSelectPersons
           isVisible={modalSelectPersonsVisible}
+          onModalHide={this.onModalSelectPersonsHide}
           onPressClose={this.hideModalSelectPersons}
           onPressConfirm={this.hideModalSelectPersons}
           onPressAddPerson={this.showModalPerson}
@@ -858,6 +890,7 @@ class Encounter extends React.Component {
 
         <ModalPerson
           isVisible={modalPersonVisible}
+          onModalHide={this.onModalPersonHide}
           onPressClose={this.hideModalPerson}
           onPressConfirm={this.addPerson}
         />
@@ -865,6 +898,7 @@ class Encounter extends React.Component {
         <ModalSelectLocation
           isVisible={modalSelectLocationVisible}
           locations={directoryLocations}
+          onModalHide={this.onModalSelectLocationHide}
           onPressAddLocation={this.showModalLocation}
           onPressClose={this.hideModalSelectLocation}
           onPressLocation={this.selectLocation}
@@ -872,6 +906,7 @@ class Encounter extends React.Component {
 
         <ModalLocation
           isVisible={modalLocationVisible}
+          onModalHide={this.onModalLocationHide}
           onPressClose={this.hideModalLocation}
           onPressConfirm={this.addLocation}
         />

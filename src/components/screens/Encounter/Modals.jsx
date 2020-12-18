@@ -398,7 +398,7 @@ class ModalSelectLocationClass extends React.Component {
   }
 
   render() {
-    const { colors, isVisible, locations, onPressLocation, vw, __ } = this.props;
+    const { colors, isVisible, locations, onModalHide, onPressLocation, vw, __ } = this.props;
     const { searchValue } = this.state;
 
     const isSearchFilled = searchValue.trim().length > 0;
@@ -411,6 +411,7 @@ class ModalSelectLocationClass extends React.Component {
         defaultKeyboardAvoidingViewDisabled
         headline={__('encounter-screen.modals.select-location.headline')}
         isVisible={isVisible}
+        onModalHide={onModalHide}
         onPressClose={this.onPressClose}>
         <KeyboardAvoidingView behavior={'padding'} enabled>
           <SearchBar
@@ -594,7 +595,7 @@ class ModalSelectPersonsClass extends React.Component {
   }
 
   render() {
-    const { colors, isVisible, persons, selectedPersons, vw, __ } = this.props;
+    const { colors, isVisible, onModalHide, persons, selectedPersons, vw, __ } = this.props;
     const { searchValue } = this.state;
 
     const isSearchFilled = searchValue.trim().length > 0;
@@ -609,6 +610,7 @@ class ModalSelectPersonsClass extends React.Component {
         defaultKeyboardAvoidingViewDisabled
         headline={__('encounter-screen.modals.select-persons.headline')}
         isVisible={isVisible}
+        onModalHide={onModalHide}
         onPressClose={this.onPressClose}
         onPressConfirm={this.onPressConfirm}>
         <KeyboardAvoidingView behavior={'padding'} enabled>

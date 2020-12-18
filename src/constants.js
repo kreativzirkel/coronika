@@ -7,7 +7,7 @@ const DAYS_OVERVIEW_MIN = 7;
 const DAYS_RELEVANT = 14;
 const DAYS_TO_ADD = 7;
 const DEFAULT_LANGUAGE = 'en';
-const MODAL_OPENING_DELAY = 400;
+const MODAL_OPENING_DELAY = 500;
 const RTL_LANGUAGES = ['ar'];
 const SUPPORTED_LANGUAGES = [
   'ar',
