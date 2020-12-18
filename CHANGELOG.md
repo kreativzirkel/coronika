@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.2
+
+- Optimized modals on Encounter screen
+- Made phone number optional again
+
 ## 2.0.1
 
 - Bug fixes and improvements
