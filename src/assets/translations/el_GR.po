@@ -28,12 +28,12 @@ msgid "navigation.tips.label"
 msgstr "Συμβουλές"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1002
-#: src/components/widgets/ModalPerson.jsx:116
+#: src/components/widgets/ModalPerson.jsx:136
 msgid "entries.modals.update-person.headline"
 msgstr "Επεξεργασία προσώπου"
 
 #: src/components/partials/EntriesTabsView/index.jsx:1002
-#: src/components/widgets/ModalPerson.jsx:116
+#: src/components/widgets/ModalPerson.jsx:136
 msgid "entries.modals.new-person.headline"
 msgstr "Νέα επαφή"
 
@@ -80,36 +80,36 @@ msgid "locations"
 msgstr "τοποθεσίες"
 
 #: src/components/partials/EntriesTabsView/index.jsx:880
-#: src/components/screens/Encounter/Modals.jsx:624
+#: src/components/screens/Encounter/Modals.jsx:628
 msgid "entries.persons.list.new"
 msgstr "Δημιουργήστε νέο άτομο"
 
 #: src/components/partials/EntriesTabsView/index.jsx:902
 #: src/components/partials/EntriesTabsView/index.jsx:962
-#: src/components/screens/Encounter/Modals.jsx:437
-#: src/components/screens/Encounter/Modals.jsx:641
+#: src/components/screens/Encounter/Modals.jsx:439
+#: src/components/screens/Encounter/Modals.jsx:645
 msgid "entries.search.list.empty"
 msgstr "Δεν βρέθηκε τίποτα στην αναζήτησή σου."
 
 #: src/components/partials/EntriesTabsView/index.jsx:913
-#: src/components/screens/Encounter/Modals.jsx:646
+#: src/components/screens/Encounter/Modals.jsx:650
 msgid "entries.persons.list.empty"
 msgstr ""
 "Δεν έχεις δημιουργήσει καμία επαφή εως τώρα. Για να ξεκινήσεις, μπορείς να "
 "εισάγεις άτομα από τον τηλεφωνικό σου κατάλογο."
 
 #: src/components/partials/EntriesTabsView/index.jsx:922
-#: src/components/screens/Encounter/Modals.jsx:651
+#: src/components/screens/Encounter/Modals.jsx:655
 msgid "entries.persons.list.import.button"
 msgstr "Εισαγωγή τώρα"
 
 #: src/components/partials/EntriesTabsView/index.jsx:940
-#: src/components/screens/Encounter/Modals.jsx:426
+#: src/components/screens/Encounter/Modals.jsx:428
 msgid "entries.locations.list.new"
 msgstr "Δημιουργία νέας τοποθεσίας"
 
 #: src/components/partials/EntriesTabsView/index.jsx:966
-#: src/components/screens/Encounter/Modals.jsx:441
+#: src/components/screens/Encounter/Modals.jsx:443
 msgid "entries.locations.list.empty"
 msgstr ""
 "Δεν έχεις δημιουργήσει καμία τοποθεσία εως τώρα. Ξεκίνησε τώρα και "
@@ -120,81 +120,88 @@ msgid "entries.selection.add"
 msgstr "Προσθήκη επιλογής"
 
 #: src/components/partials/EntriesTabsView/index.jsx:999
-#: src/components/widgets/ModalPerson.jsx:112
+#: src/components/widgets/ModalPerson.jsx:132
 msgid "entries.modals.update-person.button"
 msgstr "Αποθήκευση"
 
 #: src/components/partials/EntriesTabsView/index.jsx:999
-#: src/components/widgets/ModalPerson.jsx:112
+#: src/components/widgets/ModalPerson.jsx:132
 msgid "entries.modals.new-person.button"
 msgstr "Προσθήκη"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:114
-#: src/components/widgets/ModalPerson.jsx:126
+#: src/components/partials/EntriesTabsView/Modals.jsx:134
+#: src/components/widgets/ModalPerson.jsx:147
 msgid "entries.modals.new-person.placeholder.name"
 msgstr "Όνομα"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:129
-#: src/components/widgets/ModalPerson.jsx:141
+#: src/components/partials/EntriesTabsView/Modals.jsx:149
+#: src/components/widgets/ModalPerson.jsx:162
 msgid "entries.modals.new-person.placeholder.display-name"
 msgstr "Εμφανιζόμενο όνομα"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:143
-#: src/components/widgets/ModalPerson.jsx:155
+#: src/components/partials/EntriesTabsView/Modals.jsx:163
+#: src/components/widgets/ModalPerson.jsx:176
 msgid "entries.modals.new-person.placeholder.phone-number"
 msgstr "Τηλέφωνο"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:156
-#: src/components/widgets/ModalPerson.jsx:168
+#: src/components/partials/EntriesTabsView/Modals.jsx:176
+#: src/components/widgets/ModalPerson.jsx:189
 msgid "entries.modals.new-person.placeholder.mail"
 msgstr "ΗΛΕΚΤΡΟΝΙΚΗ ΔΙΕΥΘΥΝΣΗ"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:238
-#: src/components/widgets/ModalLocation.jsx:103
+#: src/components/partials/EntriesTabsView/Modals.jsx:187
+#: src/components/widgets/ModalPerson.jsx:200
+msgid "entries.modals.new-person.hint.phone-number"
+msgstr ""
+"Ο αριθμός τηλεφώνου χρησιμεύει ως σημαντικό σημείο επαφής σε περίπτωση "
+"μόλυνσης."
+
+#: src/components/partials/EntriesTabsView/Modals.jsx:265
+#: src/components/widgets/ModalLocation.jsx:104
 msgid "entries.modals.new-location.placeholder.title"
 msgstr "Τίτλος"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:249
-#: src/components/widgets/ModalLocation.jsx:114
+#: src/components/partials/EntriesTabsView/Modals.jsx:276
+#: src/components/widgets/ModalLocation.jsx:115
 msgid "entries.modals.new-location.placeholder.description"
 msgstr "Περιγραφή"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:261
-#: src/components/widgets/ModalLocation.jsx:126
+#: src/components/partials/EntriesTabsView/Modals.jsx:288
+#: src/components/widgets/ModalLocation.jsx:127
 msgid "entries.modals.new-location.placeholder.phone-number"
 msgstr "Τηλέφωνο"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:415
+#: src/components/partials/EntriesTabsView/Modals.jsx:442
 msgid "entries.modals.select-location.placeholder.description"
 msgstr "Περιγραφή"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:442
-#: src/components/partials/EntriesTabsView/Modals.jsx:454
+#: src/components/partials/EntriesTabsView/Modals.jsx:469
+#: src/components/partials/EntriesTabsView/Modals.jsx:481
 #: src/components/screens/Encounter/Modals.jsx:117
-#: src/components/screens/Encounter/ui.jsx:882
-#: src/components/screens/Encounter/ui.jsx:894
+#: src/components/screens/Encounter/ui.jsx:915
+#: src/components/screens/Encounter/ui.jsx:928
 msgid "Cancel"
 msgstr "Ματαίωση"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:443
-#: src/components/partials/EntriesTabsView/Modals.jsx:455
-#: src/components/screens/Encounter/Modals.jsx:606
-#: src/components/screens/Encounter/ui.jsx:883
-#: src/components/screens/Encounter/ui.jsx:895
+#: src/components/partials/EntriesTabsView/Modals.jsx:470
+#: src/components/partials/EntriesTabsView/Modals.jsx:482
+#: src/components/screens/Encounter/Modals.jsx:609
+#: src/components/screens/Encounter/ui.jsx:916
+#: src/components/screens/Encounter/ui.jsx:929
 msgid "Confirm"
 msgstr "Επιβεβαίωση"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:582
-#: src/components/partials/EntriesTabsView/Modals.jsx:715
+#: src/components/partials/EntriesTabsView/Modals.jsx:609
+#: src/components/partials/EntriesTabsView/Modals.jsx:742
 msgid "entries.modals.more.edit"
 msgstr "επεξεργασία"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:589
-#: src/components/partials/EntriesTabsView/Modals.jsx:734
+#: src/components/partials/EntriesTabsView/Modals.jsx:616
+#: src/components/partials/EntriesTabsView/Modals.jsx:761
 msgid "entries.modals.more.delete"
 msgstr "διαγράφω"
 
-#: src/components/partials/EntriesTabsView/Modals.jsx:725
+#: src/components/partials/EntriesTabsView/Modals.jsx:752
 msgid "entries.modals.more.hide"
 msgstr "Κρύβω"
 
@@ -284,19 +291,19 @@ msgstr ""
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: src/components/screens/Day/EncountersList.jsx:208
+#: src/components/screens/Day/EncountersList.jsx:219
 msgid "encounters-list.no-encounters.text"
 msgstr ""
 
-#: src/components/screens/Day/EncountersList.jsx:208
+#: src/components/screens/Day/EncountersList.jsx:219
 msgid "encounters-list.empty"
 msgstr ""
 
-#: src/components/screens/Day/EncountersList.jsx:214
+#: src/components/screens/Day/EncountersList.jsx:225
 msgid "encounters-list.no-encounters.confirmation.text"
 msgstr ""
 
-#: src/components/screens/Day/EncountersList.jsx:220
+#: src/components/screens/Day/EncountersList.jsx:231
 msgid "encounters-list.no-encounters.confirmation.button"
 msgstr ""
 
@@ -406,63 +413,63 @@ msgstr ""
 msgid "encounter-screen.modals.hints.note.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:411
+#: src/components/screens/Encounter/Modals.jsx:412
 msgid "encounter-screen.modals.select-location.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:608
+#: src/components/screens/Encounter/Modals.jsx:611
 msgid "encounter-screen.modals.select-persons.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:648
+#: src/components/screens/Encounter/ui.jsx:677
 msgid "encounter-screen.headline.edit"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:648
+#: src/components/screens/Encounter/ui.jsx:677
 msgid "encounter-screen.headline.add"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:687
+#: src/components/screens/Encounter/ui.jsx:716
 msgid "encounter-screen.persons.add"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:711
+#: src/components/screens/Encounter/ui.jsx:740
 msgid "location"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:757
+#: src/components/screens/Encounter/ui.jsx:786
 msgid "encounter-screen.options.outside.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:757
+#: src/components/screens/Encounter/ui.jsx:786
 msgid "encounter-screen.options.outside.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:771
+#: src/components/screens/Encounter/ui.jsx:800
 msgid "encounter-screen.options.ventilated.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:771
+#: src/components/screens/Encounter/ui.jsx:800
 msgid "encounter-screen.options.ventilated.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:785
+#: src/components/screens/Encounter/ui.jsx:814
 msgid "encounter-screen.options.mask.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:785
+#: src/components/screens/Encounter/ui.jsx:814
 msgid "encounter-screen.options.mask.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:798
+#: src/components/screens/Encounter/ui.jsx:827
 msgid "encounter-screen.options.distance.yes"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:798
+#: src/components/screens/Encounter/ui.jsx:827
 msgid "encounter-screen.options.distance.no"
 msgstr ""
 
-#: src/components/screens/Encounter/ui.jsx:830
+#: src/components/screens/Encounter/ui.jsx:859
 msgid "encounter-screen.button.save"
 msgstr ""
 

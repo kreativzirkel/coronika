@@ -822,7 +822,7 @@ class EntriesTabsView extends React.Component {
       selectLocationTitle,
     } = this.state;
 
-    const buttonAddNewPersonDisabled = personName.length < 3 || personPhone.length < 5;
+    const buttonAddNewPersonDisabled = personName.length < 3;
     const buttonAddNewLocationDisabled = locationTitle.length < 3;
     const buttonAddSelectionDisabled = allowSelection && selectedLocations.length === 0 && selectedPersons.length === 0;
 

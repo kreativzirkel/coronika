@@ -1,5 +1,7 @@
+import UilCommentInfoAlt from '@iconscout/react-native-unicons/icons/uil-comment-info-alt';
 import React from 'react';
-import { StyleSheet, Text, TextInput } from 'react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { COLOR_PRIMARY } from '../../constants';
 import withI18n from '../../i18n';
 import withColorScheme from '../../utils/withColorScheme';
 import withViewportUnits from '../../utils/withViewportUnits';
@@ -26,6 +28,20 @@ class ModalPerson extends React.Component {
   }
 
   styles = StyleSheet.create({
+    hintWrapper: {
+      alignItems: 'flex-start',
+      flexDirection: 'row',
+      marginBottom: this.props.vw(4),
+    },
+    hintIcon: {
+      marginRight: this.props.vw(2.5),
+      marginTop: this.props.vw(0),
+    },
+    hintText: {
+      flex: 1,
+      fontFamily: this.props.fontFamilyRegular,
+      fontSize: this.props.vw(4),
+    },
     modalText: {
       fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.4),
@@ -87,11 +103,15 @@ class ModalPerson extends React.Component {
   }
 
   render() {
-    const { colors, id, isVisible, onModalHide, __ } = this.props;
+    const { colors, id, isVisible, onModalHide, vw, __ } = this.props;
     const { personDisplayName, personMail, personName, personPhone } = this.state;
 
     const styles = {
       ...this.styles,
+      hintText: {
+        ...this.styles.hintText,
+        color: colors.TEXT,
+      },
       modalText: {
         ...this.styles.modalText,
         color: colors.TEXT,
@@ -103,7 +123,7 @@ class ModalPerson extends React.Component {
       },
     };
 
-    const buttonConfirmDisabled = personName.length < 3 || personPhone.length < 5;
+    const buttonConfirmDisabled = personName.length < 3;
     const isImported = false;
 
     return (
@@ -153,7 +173,7 @@ class ModalPerson extends React.Component {
             autoCorrect={false}
             onChangeText={this.setPersonPhone}
             keyboardType={'phone-pad'}
-            placeholder={`${__('entries.modals.new-person.placeholder.phone-number').toLowerCase()} *`}
+            placeholder={__('entries.modals.new-person.placeholder.phone-number').toLowerCase()}
             placeholderTextColor={'#B0B0B1'}
             style={styles.modalTextInput}
             textContentType={'none'}
@@ -172,6 +192,13 @@ class ModalPerson extends React.Component {
             textContentType={'none'}
             value={personMail}
           />
+        )}
+
+        {!isImported && (
+          <View style={styles.hintWrapper}>
+            <UilCommentInfoAlt color={COLOR_PRIMARY} size={vw(6)} style={styles.hintIcon} />
+            <Text style={styles.hintText}>{__('entries.modals.new-person.hint.phone-number')}</Text>
+          </View>
         )}
       </ModalDefault>
     );
