@@ -360,6 +360,7 @@ const setNotifications = (notifications, __, cb) => {
           ...defaultNotificationOptions,
           message,
           date: new Date(notificationTimestamp),
+          repeatType: undefined,
           tag,
           userInfo: { tag },
         });
