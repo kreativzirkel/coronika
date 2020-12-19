@@ -251,7 +251,7 @@ PODS:
     - React-Core
   - react-native-splash-screen (3.2.0):
     - React
-  - react-native-unicons (1.0.2):
+  - react-native-unicons (1.0.3):
     - React
   - React-RCTActionSheet (0.63.4):
     - React-Core/RCTActionSheetHeaders (= 0.63.4)
@@ -557,7 +557,7 @@ SPEC CHECKSUMS:
   react-native-get-random-values: 1404bd5cc0ab0e287f75ee1c489555688fc65f89
   react-native-safe-area-context: 86612d2c9a9e94e288319262d10b5f93f0b395f5
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
-  react-native-unicons: ad4249b43fc95cc1804c8d1ff79bfc49f34f3df4
+  react-native-unicons: 3f98688cbfc9f47e3ae45dd1560b7a2ab65075f4
   React-RCTActionSheet: 89a0ca9f4a06c1f93c26067af074ccdce0f40336
   React-RCTAnimation: 1bde3ecc0c104c55df246eda516e0deb03c4e49b
   React-RCTBlob: a97d378b527740cc667e03ebfa183a75231ab0f0

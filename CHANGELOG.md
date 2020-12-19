@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.3
+
+- Bug fixes and improvements
+
 ## 2.0.2
 
 - Optimized modals on Encounter screen
