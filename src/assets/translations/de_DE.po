@@ -256,12 +256,12 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Jetzt anfangen"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:206
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:209
 msgid "about-screen.header.headline"
 msgstr "Über Coronika"
 
 #: src/components/screens/BjoernSteigerFoundation.jsx:82
-#: src/components/screens/Menu.jsx:230
+#: src/components/screens/Menu.jsx:237
 msgid "bjoern-steiger-stiftung-screen.header.headline"
 msgstr "Björn Steiger Stiftung"
 
@@ -291,7 +291,7 @@ msgid "dashboard-screen.list.load-more"
 msgstr "mehr laden"
 
 #: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:238
+#: src/components/screens/Menu.jsx:245
 #: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
@@ -304,6 +304,7 @@ msgstr ""
 
 #: src/components/screens/Dashboard/ui.jsx:226
 #: src/components/screens/Encounter/Modals.jsx:219
+#: src/components/screens/VentilationMode/ModalHint.jsx:68
 msgid "Close"
 msgstr "Schließen"
 
@@ -619,7 +620,7 @@ msgid "export-screen.modals.export-completed.pdf.headline"
 msgstr "PDF Datei"
 
 #: src/components/screens/Legal/index.jsx:243
-#: src/components/screens/Menu.jsx:218
+#: src/components/screens/Menu.jsx:225
 msgid "legal-screen.header.headline"
 msgstr "Rechtliches"
 
@@ -833,24 +834,29 @@ msgstr ""
 "Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend "
 "entfernen."
 
-#: src/components/screens/Menu.jsx:210
+#: src/components/screens/Menu.jsx:213
+#: src/components/screens/VentilationMode/ui.jsx:282
+msgid "ventilation-mode-screen.header.headline"
+msgstr "Lüften"
+
+#: src/components/screens/Menu.jsx:217
 msgid "menu-screen.items.faq"
 msgstr "Häufige Fragen"
 
-#: src/components/screens/Menu.jsx:214
+#: src/components/screens/Menu.jsx:221
 #: src/components/screens/Settings/ui.jsx:103
 msgid "settings-screen.header.headline"
 msgstr "Einstellungen"
 
-#: src/components/screens/Menu.jsx:222
+#: src/components/screens/Menu.jsx:229
 msgid "menu-screen.items.share"
 msgstr "Teile diese App"
 
-#: src/components/screens/Menu.jsx:226
+#: src/components/screens/Menu.jsx:233
 msgid "menu-screen.items.website"
 msgstr "Website besuchen"
 
-#: src/components/screens/Menu.jsx:297
+#: src/components/screens/Menu.jsx:304
 msgid "menu-screen.button.send-feedback"
 msgstr "Feedback senden"
 
@@ -888,138 +894,150 @@ msgstr "Du hast deinem Tagebuch noch keine Orte hinzugefügt."
 msgid "overview-screen.export.button"
 msgstr "Übersicht exportieren"
 
-#: src/components/screens/Settings/logic.js:189
+#: src/components/screens/Settings/logic.js:227
 msgid "notifications.diary.headline"
 msgstr "📒 Trage deine Kontakte ein"
 
-#: src/components/screens/Settings/logic.js:190
+#: src/components/screens/Settings/logic.js:228
 msgid "notifications.diary.text"
 msgstr ""
 "Trage deine engen Kontakte ein und unterstütze bei der Eindämmung des Virus."
 
-#: src/components/screens/Settings/logic.js:205
+#: src/components/screens/Settings/logic.js:243
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽 Halte deinen Bildschirm sauber"
 
-#: src/components/screens/Settings/logic.js:206
+#: src/components/screens/Settings/logic.js:244
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr ""
 "Desinfiziere deinen Screen von unzähligen Keimen, Bakterien und anderen "
 "Erregern."
 
-#: src/components/screens/Settings/logic.js:209
+#: src/components/screens/Settings/logic.js:247
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 Desinfiziere dein Handy"
 
-#: src/components/screens/Settings/logic.js:210
+#: src/components/screens/Settings/logic.js:248
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr ""
 "Die Reinigung deines Handys ist eine smarte Methode, um Erreger an deinen "
 "Händen zu reduzieren."
 
-#: src/components/screens/Settings/logic.js:213
+#: src/components/screens/Settings/logic.js:251
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Reinige dein Smartphone"
 
-#: src/components/screens/Settings/logic.js:214
+#: src/components/screens/Settings/logic.js:252
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "Befreie dein Handy von möglichen Keimen mit einem Desinfektionstuch."
 
-#: src/components/screens/Settings/logic.js:230
-#: src/components/screens/Settings/logic.js:263
-#: src/components/screens/Settings/logic.js:278
+#: src/components/screens/Settings/logic.js:268
+#: src/components/screens/Settings/logic.js:301
+#: src/components/screens/Settings/logic.js:316
 msgid "notifications.washing-hands.variant-1.text"
 msgstr ""
 "Wenn du unterwegs warst, solltest du zunächst deine Hände gründlich waschen."
 
-#: src/components/screens/Settings/logic.js:231
-#: src/components/screens/Settings/logic.js:264
-#: src/components/screens/Settings/logic.js:279
+#: src/components/screens/Settings/logic.js:269
+#: src/components/screens/Settings/logic.js:302
+#: src/components/screens/Settings/logic.js:317
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧Händewaschen"
 
-#: src/components/screens/Settings/logic.js:235
-#: src/components/screens/Settings/logic.js:268
-#: src/components/screens/Settings/logic.js:283
+#: src/components/screens/Settings/logic.js:273
+#: src/components/screens/Settings/logic.js:306
+#: src/components/screens/Settings/logic.js:321
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Regelmäßiges Händewaschen ist die einfachste Maßnahme, um einer Infektion "
 "vorzubeugen."
 
-#: src/components/screens/Settings/logic.js:236
-#: src/components/screens/Settings/logic.js:269
-#: src/components/screens/Settings/logic.js:284
+#: src/components/screens/Settings/logic.js:274
+#: src/components/screens/Settings/logic.js:307
+#: src/components/screens/Settings/logic.js:322
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧Hände gewaschen? "
 
-#: src/components/screens/Settings/logic.js:240
-#: src/components/screens/Settings/logic.js:273
-#: src/components/screens/Settings/logic.js:288
+#: src/components/screens/Settings/logic.js:278
+#: src/components/screens/Settings/logic.js:311
+#: src/components/screens/Settings/logic.js:326
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Wasche deine Hände bewusst und denke auch an die Kuppen und Stellen zwischen "
 "den Fingern. "
 
-#: src/components/screens/Settings/logic.js:241
-#: src/components/screens/Settings/logic.js:274
-#: src/components/screens/Settings/logic.js:289
+#: src/components/screens/Settings/logic.js:279
+#: src/components/screens/Settings/logic.js:312
+#: src/components/screens/Settings/logic.js:327
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧Fingerkuppen nicht vergessen!"
 
-#: src/components/screens/Settings/logic.js:319
+#: src/components/screens/Settings/logic.js:357
 msgid "notifications.christmas.1218.text"
 msgstr ""
 "🎄 Noch eine Woche bis Weihnachten. Achte besonders vor dem Fest darauf deine "
 "Begegnungen gering zu halten."
 
-#: src/components/screens/Settings/logic.js:323
+#: src/components/screens/Settings/logic.js:361
 msgid "notifications.christmas.1219.text"
 msgstr ""
 "🎄 Das Fest rückt näher, dein Wunschzettel ist fertig, denk dieses Jahr auch "
 "an dein Kontakttagebuch."
 
-#: src/components/screens/Settings/logic.js:327
+#: src/components/screens/Settings/logic.js:365
 msgid "notifications.christmas.1220.text"
 msgstr ""
 "🎄 Das wichtigste Geschenk, was du mitbringen kannst, ist deine Gesundheit! "
 "Schütze dich und deine Mitmenschen."
 
-#: src/components/screens/Settings/logic.js:331
+#: src/components/screens/Settings/logic.js:369
 msgid "notifications.christmas.1221.text"
 msgstr ""
 "🎄 Noch keine Geschenke gekauft? Dieses Jahr sind selbstgebastelte Gutscheine "
 "für lokale Gastronomien eine gute Idee!"
 
-#: src/components/screens/Settings/logic.js:335
+#: src/components/screens/Settings/logic.js:373
 msgid "notifications.christmas.1222.text"
 msgstr ""
 "🎄 Advent, Advent, ein Lichtlein brennt,\n"
 "erst eins, dann zwei, dann drei, dann vier,\n"
 "zu viele Begegnungen spar ich mir."
 
-#: src/components/screens/Settings/logic.js:339
+#: src/components/screens/Settings/logic.js:377
 msgid "notifications.christmas.1223.text"
 msgstr ""
 "🎄 Falls du heimreist, denke an: Abstand halten, Hygiene beachten, "
 "Alltagsmaske tragen!"
 
-#: src/components/screens/Settings/logic.js:343
+#: src/components/screens/Settings/logic.js:381
 msgid "notifications.christmas.1224.text"
 msgstr ""
 "🎄 Wir wünschen dir ein besinnliches und gut gelüftetes Fest! Regelmäßiges "
 "Durchlüften verringert die Ansteckungsgefahr."
 
-#: src/components/screens/Settings/logic.js:347
+#: src/components/screens/Settings/logic.js:385
 msgid "notifications.christmas.1225.text"
 msgstr ""
 "🎄 Heute ist der perfekte Tag, um sich zuhause ein paar Weihnachtsklassiker "
 "anzusehen."
 
-#: src/components/screens/Settings/logic.js:351
+#: src/components/screens/Settings/logic.js:389
 msgid "notifications.christmas.1226.text"
 msgstr ""
 "🎄 Symptome sind nicht immer sichtbar. Dein Kontakttagebuch hilft dir "
 "Begegnungen und Infektionsketten nachzuvollziehen."
+
+#: src/components/screens/Settings/logic.js:411
+msgid "notifications.ventilation-mode.ventilate.variant-1.text"
+msgstr ""
+"💨 Jetzt lüften! Öffne die Fenster und lasse frische Luft herein, um die "
+"Ausbreitung des Virus durch Aerosole zu verringern."
+
+#: src/components/screens/Settings/logic.js:426
+msgid "notifications.ventilation-mode.end"
+msgstr ""
+"💨 Lüften beendet. Bitte denke auch weiterhin daran, in geschlossenen Räumen "
+"regelmäßig zu lüften."
 
 #: src/components/screens/Settings/ui.jsx:108
 msgid "settings-screen.notifications.headline"
@@ -1338,6 +1356,45 @@ msgstr ""
 "Eine der effizientesten Maßnahmen zur Verhinderung einer weiteren "
 "Ausbreitung von Keimen ist gründliches Händewaschen:"
 
+#: src/components/screens/VentilationMode/ModalHint.jsx:73
+msgid "ventilation-mode-screen.modals.hints.content.headline"
+msgstr ""
+"Das richtige Lüften von Innenräumen hilft das Ansteckungsrisiko über "
+"Aerosole zu verringern"
+
+#: src/components/screens/VentilationMode/ModalHint.jsx:76
+msgid "ventilation-mode-screen.modals.hints.content.text"
+msgstr ""
+"Gute Luft ist eine wichtige Grundlage für Gesundheit und Wohlbefinden. Lüfte "
+"regelmäßig, besonders wenn sich mehrere Personen darin aufhalten.  Lüfte die "
+"Räume im Winter 10-15 Minuten lang  (20-30 Minuten im Sommer)  und öffne die "
+"Fenster so weit wie möglich."
+
+#: src/components/screens/VentilationMode/ModalHint.jsx:78
+#: src/components/widgets/Tip.jsx:190
+msgid "tips.sources.headline"
+msgstr "Quellen"
+
+#: src/components/screens/VentilationMode/ui.jsx:310
+msgid "ventilation-mode-screen.timer.text"
+msgstr "Lüften in"
+
+#: src/components/screens/VentilationMode/ui.jsx:328
+msgid "ventilation-mode-screen.duration.15-minutes"
+msgstr "15 Minuten"
+
+#: src/components/screens/VentilationMode/ui.jsx:329
+msgid "ventilation-mode-screen.duration.30-minutes"
+msgstr "30 Minuten"
+
+#: src/components/screens/VentilationMode/ui.jsx:359
+msgid "ventilation-mode-screen.button.stop"
+msgstr "Beenden"
+
+#: src/components/screens/VentilationMode/ui.jsx:359
+msgid "ventilation-mode-screen.button.start"
+msgstr "Starten"
+
 #: src/components/screens/Welcome/ui.jsx:120
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "Hände gewaschen?"
@@ -1390,14 +1447,10 @@ msgstr "Tag auswählen"
 msgid "placeholder.search-input"
 msgstr "Suche"
 
-#: src/components/widgets/Tip.jsx:190
-msgid "tips.sources.headline"
-msgstr "Quellen"
-
 #: src/components/widgets/Tip.jsx:200
 msgid "tips.sources.last-updated"
 msgstr "Zuletzt aktualisiert:"
 
-#: src/index.jsx:131
+#: src/index.jsx:132
 msgid "Done"
 msgstr "Fertig"

@@ -251,12 +251,12 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "今すぐ始める"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:206
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:209
 msgid "about-screen.header.headline"
 msgstr "コロニカについて"
 
 #: src/components/screens/BjoernSteigerFoundation.jsx:82
-#: src/components/screens/Menu.jsx:230
+#: src/components/screens/Menu.jsx:237
 msgid "bjoern-steiger-stiftung-screen.header.headline"
 msgstr ""
 
@@ -269,7 +269,7 @@ msgid "dashboard-screen.list.load-more"
 msgstr "もっと読み込む"
 
 #: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:238
+#: src/components/screens/Menu.jsx:245
 #: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
@@ -281,6 +281,7 @@ msgstr "今日の日付をクリックして、最初の人や場所を入力し
 
 #: src/components/screens/Dashboard/ui.jsx:226
 #: src/components/screens/Encounter/Modals.jsx:219
+#: src/components/screens/VentilationMode/ModalHint.jsx:68
 msgid "Close"
 msgstr "閉じる"
 
@@ -587,7 +588,7 @@ msgid "export-screen.modals.export-completed.pdf.headline"
 msgstr "PDFファイル"
 
 #: src/components/screens/Legal/index.jsx:243
-#: src/components/screens/Menu.jsx:218
+#: src/components/screens/Menu.jsx:225
 msgid "legal-screen.header.headline"
 msgstr "法律関連"
 
@@ -785,24 +786,29 @@ msgstr ""
 "侵害に気づいた場合には、その旨をご連絡ください。著作権侵害を発見した場合に"
 "は、速やかに削除いたします。"
 
-#: src/components/screens/Menu.jsx:210
+#: src/components/screens/Menu.jsx:213
+#: src/components/screens/VentilationMode/ui.jsx:282
+msgid "ventilation-mode-screen.header.headline"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:217
 msgid "menu-screen.items.faq"
 msgstr "よくある質問"
 
-#: src/components/screens/Menu.jsx:214
+#: src/components/screens/Menu.jsx:221
 #: src/components/screens/Settings/ui.jsx:103
 msgid "settings-screen.header.headline"
 msgstr "設定"
 
-#: src/components/screens/Menu.jsx:222
+#: src/components/screens/Menu.jsx:229
 msgid "menu-screen.items.share"
 msgstr "このアプリを共有する"
 
-#: src/components/screens/Menu.jsx:226
+#: src/components/screens/Menu.jsx:233
 msgid "menu-screen.items.website"
 msgstr "サイトを訪れる"
 
-#: src/components/screens/Menu.jsx:297
+#: src/components/screens/Menu.jsx:304
 msgid "menu-screen.button.send-feedback"
 msgstr "フィードバックを送る"
 
@@ -839,112 +845,120 @@ msgstr "日記に場所を追加していません。"
 msgid "overview-screen.export.button"
 msgstr "エクスポートの概要"
 
-#: src/components/screens/Settings/logic.js:189
+#: src/components/screens/Settings/logic.js:227
 msgid "notifications.diary.headline"
 msgstr "📒 連絡先を記録する"
 
-#: src/components/screens/Settings/logic.js:190
+#: src/components/screens/Settings/logic.js:228
 msgid "notifications.diary.text"
 msgstr "密接な連絡先を記録し、コロナウイルスの拡散を遅らせます。"
 
-#: src/components/screens/Settings/logic.js:205
+#: src/components/screens/Settings/logic.js:243
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽 画面を清潔に保つ"
 
-#: src/components/screens/Settings/logic.js:206
+#: src/components/screens/Settings/logic.js:244
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr ""
 "スマートフォンの画面から多数の細菌、バクテリア、その他の病原体を取り除きま"
 "しょう。"
 
-#: src/components/screens/Settings/logic.js:209
+#: src/components/screens/Settings/logic.js:247
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 スマートフォンを消毒する"
 
-#: src/components/screens/Settings/logic.js:210
+#: src/components/screens/Settings/logic.js:248
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr ""
 "スマートフォンを無菌状態に保つことは、指をバクテリアから防ぐ効果があります。"
 
-#: src/components/screens/Settings/logic.js:213
+#: src/components/screens/Settings/logic.js:251
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 スマートフォンの画面をきれいにする"
 
-#: src/components/screens/Settings/logic.js:214
+#: src/components/screens/Settings/logic.js:252
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "消毒用ワイプで画面をクリーニングして、細菌を取り除きます。"
 
-#: src/components/screens/Settings/logic.js:230
-#: src/components/screens/Settings/logic.js:263
-#: src/components/screens/Settings/logic.js:278
+#: src/components/screens/Settings/logic.js:268
+#: src/components/screens/Settings/logic.js:301
+#: src/components/screens/Settings/logic.js:316
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "外出した場合は、手をよく洗ってください。"
 
-#: src/components/screens/Settings/logic.js:231
-#: src/components/screens/Settings/logic.js:264
-#: src/components/screens/Settings/logic.js:279
+#: src/components/screens/Settings/logic.js:269
+#: src/components/screens/Settings/logic.js:302
+#: src/components/screens/Settings/logic.js:317
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 手を洗いましょう"
 
-#: src/components/screens/Settings/logic.js:235
-#: src/components/screens/Settings/logic.js:268
-#: src/components/screens/Settings/logic.js:283
+#: src/components/screens/Settings/logic.js:273
+#: src/components/screens/Settings/logic.js:306
+#: src/components/screens/Settings/logic.js:321
 msgid "notifications.washing-hands.variant-2.text"
 msgstr "手を洗うことは、自分や他の人を病気から守る最も簡単な方法の1つです。"
 
-#: src/components/screens/Settings/logic.js:236
-#: src/components/screens/Settings/logic.js:269
-#: src/components/screens/Settings/logic.js:284
+#: src/components/screens/Settings/logic.js:274
+#: src/components/screens/Settings/logic.js:307
+#: src/components/screens/Settings/logic.js:322
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 手を洗いましたか？"
 
-#: src/components/screens/Settings/logic.js:240
-#: src/components/screens/Settings/logic.js:273
-#: src/components/screens/Settings/logic.js:288
+#: src/components/screens/Settings/logic.js:278
+#: src/components/screens/Settings/logic.js:311
+#: src/components/screens/Settings/logic.js:326
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "念入りに手洗いを練習し、指先と指の間をきれいにすることを忘れないでください。"
 
-#: src/components/screens/Settings/logic.js:241
-#: src/components/screens/Settings/logic.js:274
-#: src/components/screens/Settings/logic.js:289
+#: src/components/screens/Settings/logic.js:279
+#: src/components/screens/Settings/logic.js:312
+#: src/components/screens/Settings/logic.js:327
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 ヒントを忘れないでください！"
 
-#: src/components/screens/Settings/logic.js:319
+#: src/components/screens/Settings/logic.js:357
 msgid "notifications.christmas.1218.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:323
+#: src/components/screens/Settings/logic.js:361
 msgid "notifications.christmas.1219.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:327
+#: src/components/screens/Settings/logic.js:365
 msgid "notifications.christmas.1220.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:331
+#: src/components/screens/Settings/logic.js:369
 msgid "notifications.christmas.1221.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:335
+#: src/components/screens/Settings/logic.js:373
 msgid "notifications.christmas.1222.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:339
+#: src/components/screens/Settings/logic.js:377
 msgid "notifications.christmas.1223.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:343
+#: src/components/screens/Settings/logic.js:381
 msgid "notifications.christmas.1224.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:347
+#: src/components/screens/Settings/logic.js:385
 msgid "notifications.christmas.1225.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:351
+#: src/components/screens/Settings/logic.js:389
 msgid "notifications.christmas.1226.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:411
+msgid "notifications.ventilation-mode.ventilate.variant-1.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:426
+msgid "notifications.ventilation-mode.end"
 msgstr ""
 
 #: src/components/screens/Settings/ui.jsx:108
@@ -1261,6 +1275,39 @@ msgstr ""
 "手を洗うのは簡単で、細菌の拡散を防ぐ最も効果的な方法の1つです。きれいな手は、"
 "細菌の拡散を防ぐことができます。毎回次の5つの手順を実行します。"
 
+#: src/components/screens/VentilationMode/ModalHint.jsx:73
+msgid "ventilation-mode-screen.modals.hints.content.headline"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ModalHint.jsx:76
+msgid "ventilation-mode-screen.modals.hints.content.text"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ModalHint.jsx:78
+#: src/components/widgets/Tip.jsx:190
+msgid "tips.sources.headline"
+msgstr "情報源"
+
+#: src/components/screens/VentilationMode/ui.jsx:310
+msgid "ventilation-mode-screen.timer.text"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ui.jsx:328
+msgid "ventilation-mode-screen.duration.15-minutes"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ui.jsx:329
+msgid "ventilation-mode-screen.duration.30-minutes"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ui.jsx:359
+msgid "ventilation-mode-screen.button.stop"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ui.jsx:359
+msgid "ventilation-mode-screen.button.start"
+msgstr ""
+
 #: src/components/screens/Welcome/ui.jsx:120
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "手洗いはしましたか？"
@@ -1313,14 +1360,10 @@ msgstr "日を選択してください。"
 msgid "placeholder.search-input"
 msgstr "探す"
 
-#: src/components/widgets/Tip.jsx:190
-msgid "tips.sources.headline"
-msgstr "情報源"
-
 #: src/components/widgets/Tip.jsx:200
 msgid "tips.sources.last-updated"
 msgstr "最終更新日。"
 
-#: src/index.jsx:131
+#: src/index.jsx:132
 msgid "Done"
 msgstr ""

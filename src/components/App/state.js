@@ -4,6 +4,7 @@ const initialState = {
   screenOrientation: undefined,
   screenWidth: undefined,
   showKeyEncounterHints: '1',
+  showKeyVentilationModeHints: '1',
   showKeyWelcome: '8',
   versionDataStructure: '2',
 };

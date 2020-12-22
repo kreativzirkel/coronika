@@ -254,12 +254,12 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Начать сейчас"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:206
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:209
 msgid "about-screen.header.headline"
 msgstr "О Коронике"
 
 #: src/components/screens/BjoernSteigerFoundation.jsx:82
-#: src/components/screens/Menu.jsx:230
+#: src/components/screens/Menu.jsx:237
 msgid "bjoern-steiger-stiftung-screen.header.headline"
 msgstr "Фонд Бьёрна Штайгера"
 
@@ -290,7 +290,7 @@ msgid "dashboard-screen.list.load-more"
 msgstr "Загрузи больше"
 
 #: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:238
+#: src/components/screens/Menu.jsx:245
 #: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
@@ -303,6 +303,7 @@ msgstr ""
 
 #: src/components/screens/Dashboard/ui.jsx:226
 #: src/components/screens/Encounter/Modals.jsx:219
+#: src/components/screens/VentilationMode/ModalHint.jsx:68
 msgid "Close"
 msgstr "Закрыть"
 
@@ -608,7 +609,7 @@ msgid "export-screen.modals.export-completed.pdf.headline"
 msgstr "PDF файл"
 
 #: src/components/screens/Legal/index.jsx:243
-#: src/components/screens/Menu.jsx:218
+#: src/components/screens/Menu.jsx:225
 msgid "legal-screen.header.headline"
 msgstr "Юридический"
 
@@ -820,24 +821,29 @@ msgstr ""
 "станет известно о каких-либо нарушениях, мы немедленно удалим такое "
 "содержание."
 
-#: src/components/screens/Menu.jsx:210
+#: src/components/screens/Menu.jsx:213
+#: src/components/screens/VentilationMode/ui.jsx:282
+msgid "ventilation-mode-screen.header.headline"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:217
 msgid "menu-screen.items.faq"
 msgstr "Часто задаваемые вопросы"
 
-#: src/components/screens/Menu.jsx:214
+#: src/components/screens/Menu.jsx:221
 #: src/components/screens/Settings/ui.jsx:103
 msgid "settings-screen.header.headline"
 msgstr "Настройки"
 
-#: src/components/screens/Menu.jsx:222
+#: src/components/screens/Menu.jsx:229
 msgid "menu-screen.items.share"
 msgstr "Поделись этим приложением"
 
-#: src/components/screens/Menu.jsx:226
+#: src/components/screens/Menu.jsx:233
 msgid "menu-screen.items.website"
 msgstr "Посетите сайт"
 
-#: src/components/screens/Menu.jsx:297
+#: src/components/screens/Menu.jsx:304
 msgid "menu-screen.button.send-feedback"
 msgstr "Отправить отзыв"
 
@@ -876,139 +882,147 @@ msgstr "Вы не добавили ни одного места в свой дн
 msgid "overview-screen.export.button"
 msgstr "Обзор экспорта"
 
-#: src/components/screens/Settings/logic.js:189
+#: src/components/screens/Settings/logic.js:227
 msgid "notifications.diary.headline"
 msgstr "📒 Зарегистрируйте ваши контакты"
 
-#: src/components/screens/Settings/logic.js:190
+#: src/components/screens/Settings/logic.js:228
 msgid "notifications.diary.text"
 msgstr ""
 "Зарегистрируйте ваши близкие контакты и помогите замедлить распространение "
 "коронавируса."
 
-#: src/components/screens/Settings/logic.js:205
+#: src/components/screens/Settings/logic.js:243
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽 Держите экран в чистоте."
 
-#: src/components/screens/Settings/logic.js:206
+#: src/components/screens/Settings/logic.js:244
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr ""
 "Очистите экран от многочисленных микробов, бактерий и других патогенных "
 "микроорганизмов."
 
-#: src/components/screens/Settings/logic.js:209
+#: src/components/screens/Settings/logic.js:247
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 Дезинфекция телефона."
 
-#: src/components/screens/Settings/logic.js:210
+#: src/components/screens/Settings/logic.js:248
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr ""
 "Держать телефон дезинфицированным - еще один умный способ держать микробов "
 "подальше от кончиков пальцев."
 
-#: src/components/screens/Settings/logic.js:213
+#: src/components/screens/Settings/logic.js:251
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 Продезинфицируйте  экран смартфона."
 
-#: src/components/screens/Settings/logic.js:214
+#: src/components/screens/Settings/logic.js:252
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr ""
 "Очистите поверхность телефона от микробов, протерев его дезинфицирующей "
 "салфеткой."
 
-#: src/components/screens/Settings/logic.js:230
-#: src/components/screens/Settings/logic.js:263
-#: src/components/screens/Settings/logic.js:278
+#: src/components/screens/Settings/logic.js:268
+#: src/components/screens/Settings/logic.js:301
+#: src/components/screens/Settings/logic.js:316
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "Если вы были на улице, тщательно вымойте руки."
 
-#: src/components/screens/Settings/logic.js:231
-#: src/components/screens/Settings/logic.js:264
-#: src/components/screens/Settings/logic.js:279
+#: src/components/screens/Settings/logic.js:269
+#: src/components/screens/Settings/logic.js:302
+#: src/components/screens/Settings/logic.js:317
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧 Помойте руки"
 
-#: src/components/screens/Settings/logic.js:235
-#: src/components/screens/Settings/logic.js:268
-#: src/components/screens/Settings/logic.js:283
+#: src/components/screens/Settings/logic.js:273
+#: src/components/screens/Settings/logic.js:306
+#: src/components/screens/Settings/logic.js:321
 msgid "notifications.washing-hands.variant-2.text"
 msgstr ""
 "Мытье рук - один из самых простых способов защитить себя и других от "
 "болезней."
 
-#: src/components/screens/Settings/logic.js:236
-#: src/components/screens/Settings/logic.js:269
-#: src/components/screens/Settings/logic.js:284
+#: src/components/screens/Settings/logic.js:274
+#: src/components/screens/Settings/logic.js:307
+#: src/components/screens/Settings/logic.js:322
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 Вы мыли руки?"
 
-#: src/components/screens/Settings/logic.js:240
-#: src/components/screens/Settings/logic.js:273
-#: src/components/screens/Settings/logic.js:288
+#: src/components/screens/Settings/logic.js:278
+#: src/components/screens/Settings/logic.js:311
+#: src/components/screens/Settings/logic.js:326
 msgid "notifications.washing-hands.variant-3.text"
 msgstr ""
 "Практикуйте тщательное мытье рук и не забывайте мыть кончики пальцев и "
 "пространство между пальцами."
 
-#: src/components/screens/Settings/logic.js:241
-#: src/components/screens/Settings/logic.js:274
-#: src/components/screens/Settings/logic.js:289
+#: src/components/screens/Settings/logic.js:279
+#: src/components/screens/Settings/logic.js:312
+#: src/components/screens/Settings/logic.js:327
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 Не забывайте о советах!"
 
-#: src/components/screens/Settings/logic.js:319
+#: src/components/screens/Settings/logic.js:357
 msgid "notifications.christmas.1218.text"
 msgstr ""
 "🎄 Одна неделя до Рождества. Особенно перед праздниками, убедитесь, что ваши "
 "встречи сведены к минимуму."
 
-#: src/components/screens/Settings/logic.js:323
+#: src/components/screens/Settings/logic.js:361
 msgid "notifications.christmas.1219.text"
 msgstr ""
 "🎄 Приближается праздничный сезон, список ваших пожеланий готов, подумайте о "
 "вашем контактном дневнике и в этом году."
 
-#: src/components/screens/Settings/logic.js:327
+#: src/components/screens/Settings/logic.js:365
 msgid "notifications.christmas.1220.text"
 msgstr ""
 "🎄 Самый важный подарок, который вы можете сделать - это ваше здоровье! "
 "Защищай себя и тех, кто вас окружает."
 
-#: src/components/screens/Settings/logic.js:331
+#: src/components/screens/Settings/logic.js:369
 msgid "notifications.christmas.1221.text"
 msgstr ""
 "🎄 Еще не купили подарки? В этом году домашние ваучеры для местных ресторанов "
 "- отличная идея!"
 
-#: src/components/screens/Settings/logic.js:335
+#: src/components/screens/Settings/logic.js:373
 msgid "notifications.christmas.1222.text"
 msgstr ""
 "🎄 Адвент, Адвент, загорается свет,\n"
 "Сначала один, потом два, потом три, потом четыре,\n"
 "Слишком много встреч -  я избегаю."
 
-#: src/components/screens/Settings/logic.js:339
+#: src/components/screens/Settings/logic.js:377
 msgid "notifications.christmas.1223.text"
 msgstr ""
 "🎄 Если ты едешь домой, помни: Соблюдай дистанцию, гигиену и носи "
 "повседневную маску!"
 
-#: src/components/screens/Settings/logic.js:343
+#: src/components/screens/Settings/logic.js:381
 msgid "notifications.christmas.1224.text"
 msgstr ""
 "🎄 Желаем Вам мирного и хорошо проветриваемого курортного сезона! Регулярное "
 "проветривание снижает риск заражения."
 
-#: src/components/screens/Settings/logic.js:347
+#: src/components/screens/Settings/logic.js:385
 msgid "notifications.christmas.1225.text"
 msgstr ""
 "🎄 Сегодня идеальный день, чтобы посмотреть рождественскую классику дома."
 
-#: src/components/screens/Settings/logic.js:351
+#: src/components/screens/Settings/logic.js:389
 msgid "notifications.christmas.1226.text"
 msgstr ""
 "🎄 Симптомы не всегда заметны. Ваш контактный дневник поможет вам проследить "
 "встречи и цепочки инфекции."
+
+#: src/components/screens/Settings/logic.js:411
+msgid "notifications.ventilation-mode.ventilate.variant-1.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:426
+msgid "notifications.ventilation-mode.end"
+msgstr ""
 
 #: src/components/screens/Settings/ui.jsx:108
 msgid "settings-screen.notifications.headline"
@@ -1341,6 +1355,39 @@ msgstr ""
 "распространение микробов. Чистые руки могут остановить распространение "
 "микробов. Каждый раз следуйте этим пяти шагам:"
 
+#: src/components/screens/VentilationMode/ModalHint.jsx:73
+msgid "ventilation-mode-screen.modals.hints.content.headline"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ModalHint.jsx:76
+msgid "ventilation-mode-screen.modals.hints.content.text"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ModalHint.jsx:78
+#: src/components/widgets/Tip.jsx:190
+msgid "tips.sources.headline"
+msgstr "Источники"
+
+#: src/components/screens/VentilationMode/ui.jsx:310
+msgid "ventilation-mode-screen.timer.text"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ui.jsx:328
+msgid "ventilation-mode-screen.duration.15-minutes"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ui.jsx:329
+msgid "ventilation-mode-screen.duration.30-minutes"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ui.jsx:359
+msgid "ventilation-mode-screen.button.stop"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ui.jsx:359
+msgid "ventilation-mode-screen.button.start"
+msgstr ""
+
 #: src/components/screens/Welcome/ui.jsx:120
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "Ты помыл руки?"
@@ -1393,14 +1440,10 @@ msgstr "Выбрать день"
 msgid "placeholder.search-input"
 msgstr "Поиск"
 
-#: src/components/widgets/Tip.jsx:190
-msgid "tips.sources.headline"
-msgstr "Источники"
-
 #: src/components/widgets/Tip.jsx:200
 msgid "tips.sources.last-updated"
 msgstr "Последнее обновление:"
 
-#: src/index.jsx:131
+#: src/index.jsx:132
 msgid "Done"
 msgstr ""

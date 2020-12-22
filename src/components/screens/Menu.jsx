@@ -79,6 +79,7 @@ class Menu extends React.Component {
       fontFamily: this.props.fontFamilyBold,
       fontSize: this.props.vw(5.5),
       textAlign: 'center',
+      textTransform: 'lowercase',
     },
     logoFoundation: {
       height: this.props.vw(20),
@@ -95,6 +96,7 @@ class Menu extends React.Component {
       fontSize: this.props.vw(3.5),
       marginLeft: this.props.vw(2),
       marginRight: this.props.vw(2),
+      textTransform: 'lowercase',
     },
     menuItemIcon: {
       marginBottom: -this.props.vw(3),
@@ -104,6 +106,7 @@ class Menu extends React.Component {
     menuItemText: {
       fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.2),
+      textTransform: 'lowercase',
     },
     menuItemTextWrapper: {
       width: '85%',
@@ -205,6 +208,10 @@ class Menu extends React.Component {
       {
         headline: __('about-screen.header.headline'),
         routeName: 'About',
+      },
+      {
+        headline: __('ventilation-mode-screen.header.headline'),
+        routeName: 'VentilationMode',
       },
       {
         headline: __('menu-screen.items.faq'),

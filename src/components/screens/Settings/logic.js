@@ -23,6 +23,7 @@ const NOTIFICATION_KEY = {
   CHRISTMAS: 'coronika.notification.christmas',
   DIARY: 'coronika.notification.diary.daily',
   DISINFECT_SMARTPHONE: 'coronika.notification.disinfect-smartphone.daily',
+  VENTILATION_MODE: 'coronika.notification.ventilation-mode',
   WASHING_HANDS: 'coronika.notification.washing-hands',
   WASHING_HANDS_OPTION_1: 'coronika.notification.washing-hands.option-1',
   WASHING_HANDS_OPTION_2: 'coronika.notification.washing-hands.option-2',
@@ -44,6 +45,9 @@ export const configurePushNotifications = (navigation, requestPermissions = fals
             break;
           case NOTIFICATION_KEY.DISINFECT_SMARTPHONE:
             navigation.navigate('Tips');
+            break;
+          case NOTIFICATION_KEY.VENTILATION_MODE:
+            navigation.navigate('VentilationMode');
             break;
           case NOTIFICATION_KEY.WASHING_HANDS:
             navigation.navigate('TipWashingHands');
@@ -92,6 +96,8 @@ const setDefaultNotifications = (__, cb) => async (dispatch, getState) => {
       /* eslint-disable-next-line prefer-const */
       notificationWashingHandsOption2Enabled,
     },
+    /* eslint-disable-next-line prefer-const */
+    ventilationMode: { timestamps: notificationVentilationModeTimestamps },
   } = getState();
 
   if (
@@ -118,10 +124,38 @@ const setDefaultNotifications = (__, cb) => async (dispatch, getState) => {
       notificationDisinfectSmartphoneEnabled,
       notificationWashingHandsOption1Enabled,
       notificationWashingHandsOption2Enabled,
+      notificationVentilationModeTimestamps,
     },
     __,
     cb,
     0
+  );
+};
+
+export const updateVentilationModeNotifications = (notificationVentilationModeTimestamps, __) => async (
+  dispatch,
+  getState
+) => {
+  const {
+    settings: {
+      notificationChristmasEnabled,
+      notificationDiaryEnabled,
+      notificationDisinfectSmartphoneEnabled,
+      notificationWashingHandsOption1Enabled,
+      notificationWashingHandsOption2Enabled,
+    },
+  } = getState();
+
+  setupNotifications(
+    {
+      notificationChristmasEnabled,
+      notificationDiaryEnabled,
+      notificationDisinfectSmartphoneEnabled,
+      notificationWashingHandsOption1Enabled,
+      notificationWashingHandsOption2Enabled,
+      notificationVentilationModeTimestamps,
+    },
+    __
   );
 };
 
@@ -162,7 +196,7 @@ const setNotifications = (notifications, __, cb) => {
     });
   }
 
-  if (Platform.OS === 'ios') PushNotificationIOS.removeAllDeliveredNotifications();
+  PushNotification.removeAllDeliveredNotifications();
   PushNotification.cancelAllLocalNotifications();
 
   const {
@@ -171,21 +205,25 @@ const setNotifications = (notifications, __, cb) => {
     notificationDisinfectSmartphoneEnabled,
     notificationWashingHandsOption1Enabled,
     notificationWashingHandsOption2Enabled,
+    notificationVentilationModeTimestamps,
   } = notifications;
 
   const defaultNotificationOptions = {
     channelId: 'coronika',
     ignoreInForeground: false,
-    repeatType: 'day',
     smallIcon: 'ic_launcher',
     visibility: 'public',
+  };
+  const defaultNotificationOptionsDaily = {
+    ...defaultNotificationOptions,
+    repeatType: 'day',
   };
 
   if (notificationDiaryEnabled) {
     const tag = NOTIFICATION_KEY.DIARY;
     const timestamp = getDailyNotificationTimestamp(19, 30);
     PushNotification.localNotificationSchedule({
-      ...defaultNotificationOptions,
+      ...defaultNotificationOptionsDaily,
       title: __('notifications.diary.headline'),
       message: __('notifications.diary.text'),
       date: new Date(timestamp),
@@ -214,7 +252,7 @@ const setNotifications = (notifications, __, cb) => {
         message = __('notifications.disinfect-smartphone.variant-1.text');
     }
     PushNotification.localNotificationSchedule({
-      ...defaultNotificationOptions,
+      ...defaultNotificationOptionsDaily,
       title,
       message,
       date: new Date(timestamp),
@@ -246,7 +284,7 @@ const setNotifications = (notifications, __, cb) => {
       const tag = NOTIFICATION_KEY.WASHING_HANDS;
       const timestamp = getDailyNotificationTimestamp(hours);
       PushNotification.localNotificationSchedule({
-        ...defaultNotificationOptions,
+        ...defaultNotificationOptionsDaily,
         title,
         message,
         date: new Date(timestamp),
@@ -294,7 +332,7 @@ const setNotifications = (notifications, __, cb) => {
       const tag = NOTIFICATION_KEY.WASHING_HANDS;
       const timestamp = getDailyNotificationTimestamp(hours);
       PushNotification.localNotificationSchedule({
-        ...defaultNotificationOptions,
+        ...defaultNotificationOptionsDaily,
         title,
         message,
         date: new Date(timestamp),
@@ -360,12 +398,43 @@ const setNotifications = (notifications, __, cb) => {
           ...defaultNotificationOptions,
           message,
           date: new Date(notificationTimestamp),
-          repeatType: undefined,
           tag,
           userInfo: { tag },
         });
       }
     });
+  }
+
+  if (notificationVentilationModeTimestamps.length > 0) {
+    notificationVentilationModeTimestamps.forEach((timestamp) => {
+      const tag = NOTIFICATION_KEY.VENTILATION_MODE;
+      const message = __('notifications.ventilation-mode.ventilate.variant-1.text');
+      if (timestamp >= moment().valueOf()) {
+        PushNotification.localNotificationSchedule({
+          ...defaultNotificationOptions,
+          message,
+          date: new Date(timestamp),
+          tag,
+          userInfo: { tag },
+        });
+      }
+    });
+
+    const lastTimestamp = Math.max(...notificationVentilationModeTimestamps);
+    if (lastTimestamp >= moment().valueOf()) {
+      const tag = NOTIFICATION_KEY.VENTILATION_MODE;
+      const message = __('notifications.ventilation-mode.end');
+      const timestamp = moment(lastTimestamp).add('5', 'seconds').valueOf();
+      if (timestamp >= moment().valueOf()) {
+        PushNotification.localNotificationSchedule({
+          ...defaultNotificationOptions,
+          message,
+          date: new Date(timestamp),
+          tag,
+          userInfo: { tag },
+        });
+      }
+    }
   }
 
   if (cb) {
@@ -402,6 +471,7 @@ const resetNotifications = (__, cb) => async (dispatch, getState) => {
       notificationWashingHandsOption1Enabled,
       notificationWashingHandsOption2Enabled,
     },
+    ventilationMode: { timestamps: notificationVentilationModeTimestamps },
   } = getState();
 
   if (
@@ -409,7 +479,8 @@ const resetNotifications = (__, cb) => async (dispatch, getState) => {
     notificationDiaryEnabled ||
     notificationDisinfectSmartphoneEnabled ||
     notificationWashingHandsOption1Enabled ||
-    notificationWashingHandsOption2Enabled
+    notificationWashingHandsOption2Enabled ||
+    notificationVentilationModeTimestamps.length > 0
   ) {
     setupNotifications(
       {
@@ -418,6 +489,7 @@ const resetNotifications = (__, cb) => async (dispatch, getState) => {
         notificationDisinfectSmartphoneEnabled,
         notificationWashingHandsOption1Enabled,
         notificationWashingHandsOption2Enabled,
+        notificationVentilationModeTimestamps,
       },
       __,
       cb,
@@ -435,6 +507,8 @@ const activateNotification = (notificationKey, __) => async (dispatch, getState)
       notificationWashingHandsOption1Enabled,
       notificationWashingHandsOption2Enabled,
     },
+    /* eslint-disable-next-line prefer-const */
+    ventilationMode: { timestamps: notificationVentilationModeTimestamps },
   } = getState();
 
   switch (notificationKey) {
@@ -467,6 +541,7 @@ const activateNotification = (notificationKey, __) => async (dispatch, getState)
       notificationDisinfectSmartphoneEnabled,
       notificationWashingHandsOption1Enabled,
       notificationWashingHandsOption2Enabled,
+      notificationVentilationModeTimestamps,
     },
     __
   );
@@ -481,6 +556,8 @@ const deactivateNotification = (notificationKey, __) => async (dispatch, getStat
       notificationWashingHandsOption1Enabled,
       notificationWashingHandsOption2Enabled,
     },
+    /* eslint-disable-next-line prefer-const */
+    ventilationMode: { timestamps: notificationVentilationModeTimestamps },
   } = getState();
 
   switch (notificationKey) {
@@ -512,6 +589,7 @@ const deactivateNotification = (notificationKey, __) => async (dispatch, getStat
       notificationDisinfectSmartphoneEnabled,
       notificationWashingHandsOption1Enabled,
       notificationWashingHandsOption2Enabled,
+      notificationVentilationModeTimestamps,
     },
     __
   );

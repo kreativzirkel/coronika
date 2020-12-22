@@ -27,6 +27,11 @@ export const setShowKeyEncounterHints = (showKeyEncounterHints) => ({
   showKeyEncounterHints,
 });
 
+export const setShowKeyVentilationModeHints = (showKeyVentilationModeHints) => ({
+  type: 'SET_SHOW_KEY_VENTILATION_MODE_HINTS_SETTINGS',
+  showKeyVentilationModeHints,
+});
+
 export const setShowKeyWelcome = (showKeyWelcome) => ({ type: 'SET_SHOW_KEY_WELCOME_SETTINGS', showKeyWelcome });
 
 export const setVersionDataStructure = (versionDataStructure) => ({

@@ -244,12 +244,12 @@ msgstr "Coronika创建和使用的所有数据都存储在本地，不会被跟�
 msgid "welcome-screen.slides.local-data.button"
 msgstr "现在开始"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:206
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:209
 msgid "about-screen.header.headline"
 msgstr "关于Coronika"
 
 #: src/components/screens/BjoernSteigerFoundation.jsx:82
-#: src/components/screens/Menu.jsx:230
+#: src/components/screens/Menu.jsx:237
 msgid "bjoern-steiger-stiftung-screen.header.headline"
 msgstr ""
 
@@ -262,7 +262,7 @@ msgid "dashboard-screen.list.load-more"
 msgstr "装载更多"
 
 #: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:238
+#: src/components/screens/Menu.jsx:245
 #: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
@@ -274,6 +274,7 @@ msgstr "点击今天的日期，添加您的第一联系人或地点。"
 
 #: src/components/screens/Dashboard/ui.jsx:226
 #: src/components/screens/Encounter/Modals.jsx:219
+#: src/components/screens/VentilationMode/ModalHint.jsx:68
 msgid "Close"
 msgstr "关闭"
 
@@ -569,7 +570,7 @@ msgid "export-screen.modals.export-completed.pdf.headline"
 msgstr "PDF文件"
 
 #: src/components/screens/Legal/index.jsx:243
-#: src/components/screens/Menu.jsx:218
+#: src/components/screens/Menu.jsx:225
 msgid "legal-screen.header.headline"
 msgstr "法律方面"
 
@@ -750,24 +751,29 @@ msgstr ""
 "权。特别是，第三方的内容都会被标明。如果您发现有侵犯版权的情况，请及时通知我"
 "们。如果我们发现任何侵权行为，我们将立即删除这些内容。"
 
-#: src/components/screens/Menu.jsx:210
+#: src/components/screens/Menu.jsx:213
+#: src/components/screens/VentilationMode/ui.jsx:282
+msgid "ventilation-mode-screen.header.headline"
+msgstr ""
+
+#: src/components/screens/Menu.jsx:217
 msgid "menu-screen.items.faq"
 msgstr "经常问的问题"
 
-#: src/components/screens/Menu.jsx:214
+#: src/components/screens/Menu.jsx:221
 #: src/components/screens/Settings/ui.jsx:103
 msgid "settings-screen.header.headline"
 msgstr "设置"
 
-#: src/components/screens/Menu.jsx:222
+#: src/components/screens/Menu.jsx:229
 msgid "menu-screen.items.share"
 msgstr "分享这个应用程式"
 
-#: src/components/screens/Menu.jsx:226
+#: src/components/screens/Menu.jsx:233
 msgid "menu-screen.items.website"
 msgstr "访问网站"
 
-#: src/components/screens/Menu.jsx:297
+#: src/components/screens/Menu.jsx:304
 msgid "menu-screen.button.send-feedback"
 msgstr "发送反馈信息"
 
@@ -803,108 +809,116 @@ msgstr "您没有在您的日记中添加任何地点。"
 msgid "overview-screen.export.button"
 msgstr "导出概要"
 
-#: src/components/screens/Settings/logic.js:189
+#: src/components/screens/Settings/logic.js:227
 msgid "notifications.diary.headline"
 msgstr "📒 添加您的联系人"
 
-#: src/components/screens/Settings/logic.js:190
+#: src/components/screens/Settings/logic.js:228
 msgid "notifications.diary.text"
 msgstr "添加您的亲密联系人，并帮助减缓新冠病毒的传播。"
 
-#: src/components/screens/Settings/logic.js:205
+#: src/components/screens/Settings/logic.js:243
 msgid "notifications.disinfect-smartphone.variant-2.headline"
 msgstr "📱🧽保持屏幕清洁"
 
-#: src/components/screens/Settings/logic.js:206
+#: src/components/screens/Settings/logic.js:244
 msgid "notifications.disinfect-smartphone.variant-2.text"
 msgstr "使您的屏幕摆脱各种细菌，病菌和其他病原体的侵害。"
 
-#: src/components/screens/Settings/logic.js:209
+#: src/components/screens/Settings/logic.js:247
 msgid "notifications.disinfect-smartphone.variant-3.headline"
 msgstr "📱🧽 对手机进行消毒"
 
-#: src/components/screens/Settings/logic.js:210
+#: src/components/screens/Settings/logic.js:248
 msgid "notifications.disinfect-smartphone.variant-3.text"
 msgstr "保持手机清洁是防止细菌滋生的另一种好方法。"
 
-#: src/components/screens/Settings/logic.js:213
+#: src/components/screens/Settings/logic.js:251
 msgid "notifications.disinfect-smartphone.variant-1.headline"
 msgstr "📱🧽 清洁您的智能手机屏幕"
 
-#: src/components/screens/Settings/logic.js:214
+#: src/components/screens/Settings/logic.js:252
 msgid "notifications.disinfect-smartphone.variant-1.text"
 msgstr "用消毒湿巾清洁屏幕以清除细菌。"
 
-#: src/components/screens/Settings/logic.js:230
-#: src/components/screens/Settings/logic.js:263
-#: src/components/screens/Settings/logic.js:278
+#: src/components/screens/Settings/logic.js:268
+#: src/components/screens/Settings/logic.js:301
+#: src/components/screens/Settings/logic.js:316
 msgid "notifications.washing-hands.variant-1.text"
 msgstr "如果您出门在外，请认真彻底的洗手。"
 
-#: src/components/screens/Settings/logic.js:231
-#: src/components/screens/Settings/logic.js:264
-#: src/components/screens/Settings/logic.js:279
+#: src/components/screens/Settings/logic.js:269
+#: src/components/screens/Settings/logic.js:302
+#: src/components/screens/Settings/logic.js:317
 msgid "notifications.washing-hands.variant-1.headline"
 msgstr "🤚💧洗手"
 
-#: src/components/screens/Settings/logic.js:235
-#: src/components/screens/Settings/logic.js:268
-#: src/components/screens/Settings/logic.js:283
+#: src/components/screens/Settings/logic.js:273
+#: src/components/screens/Settings/logic.js:306
+#: src/components/screens/Settings/logic.js:321
 msgid "notifications.washing-hands.variant-2.text"
 msgstr "洗手是保护自己和他人免受疾病侵害的最简单方法之一。"
 
-#: src/components/screens/Settings/logic.js:236
-#: src/components/screens/Settings/logic.js:269
-#: src/components/screens/Settings/logic.js:284
+#: src/components/screens/Settings/logic.js:274
+#: src/components/screens/Settings/logic.js:307
+#: src/components/screens/Settings/logic.js:322
 msgid "notifications.washing-hands.variant-2.headline"
 msgstr "🤚💧 你洗手了吗？"
 
-#: src/components/screens/Settings/logic.js:240
-#: src/components/screens/Settings/logic.js:273
-#: src/components/screens/Settings/logic.js:288
+#: src/components/screens/Settings/logic.js:278
+#: src/components/screens/Settings/logic.js:311
+#: src/components/screens/Settings/logic.js:326
 msgid "notifications.washing-hands.variant-3.text"
 msgstr "洗手的时候不要忘记清洁指尖和手指之间的缝隙。"
 
-#: src/components/screens/Settings/logic.js:241
-#: src/components/screens/Settings/logic.js:274
-#: src/components/screens/Settings/logic.js:289
+#: src/components/screens/Settings/logic.js:279
+#: src/components/screens/Settings/logic.js:312
+#: src/components/screens/Settings/logic.js:327
 msgid "notifications.washing-hands.variant-3.headline"
 msgstr "🤚💧 不要忘记您的提示！"
 
-#: src/components/screens/Settings/logic.js:319
+#: src/components/screens/Settings/logic.js:357
 msgid "notifications.christmas.1218.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:323
+#: src/components/screens/Settings/logic.js:361
 msgid "notifications.christmas.1219.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:327
+#: src/components/screens/Settings/logic.js:365
 msgid "notifications.christmas.1220.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:331
+#: src/components/screens/Settings/logic.js:369
 msgid "notifications.christmas.1221.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:335
+#: src/components/screens/Settings/logic.js:373
 msgid "notifications.christmas.1222.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:339
+#: src/components/screens/Settings/logic.js:377
 msgid "notifications.christmas.1223.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:343
+#: src/components/screens/Settings/logic.js:381
 msgid "notifications.christmas.1224.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:347
+#: src/components/screens/Settings/logic.js:385
 msgid "notifications.christmas.1225.text"
 msgstr ""
 
-#: src/components/screens/Settings/logic.js:351
+#: src/components/screens/Settings/logic.js:389
 msgid "notifications.christmas.1226.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:411
+msgid "notifications.ventilation-mode.ventilate.variant-1.text"
+msgstr ""
+
+#: src/components/screens/Settings/logic.js:426
+msgid "notifications.ventilation-mode.end"
 msgstr ""
 
 #: src/components/screens/Settings/ui.jsx:108
@@ -1214,6 +1228,39 @@ msgstr ""
 "洗手很容易，这是防止细菌传播的最有效方法之一。干净的手可以阻止细菌传播。每次"
 "执行以下五个步骤："
 
+#: src/components/screens/VentilationMode/ModalHint.jsx:73
+msgid "ventilation-mode-screen.modals.hints.content.headline"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ModalHint.jsx:76
+msgid "ventilation-mode-screen.modals.hints.content.text"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ModalHint.jsx:78
+#: src/components/widgets/Tip.jsx:190
+msgid "tips.sources.headline"
+msgstr "来源"
+
+#: src/components/screens/VentilationMode/ui.jsx:310
+msgid "ventilation-mode-screen.timer.text"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ui.jsx:328
+msgid "ventilation-mode-screen.duration.15-minutes"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ui.jsx:329
+msgid "ventilation-mode-screen.duration.30-minutes"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ui.jsx:359
+msgid "ventilation-mode-screen.button.stop"
+msgstr ""
+
+#: src/components/screens/VentilationMode/ui.jsx:359
+msgid "ventilation-mode-screen.button.start"
+msgstr ""
+
 #: src/components/screens/Welcome/ui.jsx:120
 msgid "welcome-screen.slides.notifications.headline"
 msgstr "你洗过手了吗？"
@@ -1262,14 +1309,10 @@ msgstr "选择日期"
 msgid "placeholder.search-input"
 msgstr "搜索"
 
-#: src/components/widgets/Tip.jsx:190
-msgid "tips.sources.headline"
-msgstr "来源"
-
 #: src/components/widgets/Tip.jsx:200
 msgid "tips.sources.last-updated"
 msgstr "最后一次更新："
 
-#: src/index.jsx:131
+#: src/index.jsx:132
 msgid "Done"
 msgstr ""

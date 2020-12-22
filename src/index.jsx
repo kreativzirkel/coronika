@@ -70,6 +70,7 @@ const AppNavigator = () => (
     <Stack.Screen component={screens.TipNotFeelingWell} name={'TipNotFeelingWell'} />
     <Stack.Screen component={screens.TipReliableSources} name={'TipReliableSources'} />
     <Stack.Screen component={screens.TipWashingHands} name={'TipWashingHands'} />
+    <Stack.Screen component={screens.VentilationMode} name={'VentilationMode'} />
   </Stack.Navigator>
 );
 

@@ -1,4 +1,5 @@
 import formatDistance from 'date-fns/formatDistance';
+import formatDistanceStrict from 'date-fns/formatDistanceStrict';
 import {
   arSA as dateFnsArSa,
   de as dateFnsDe,
@@ -336,7 +337,7 @@ const withI18n = (WrappedComponent) => {
       if (this.unsubscribeStore) this.unsubscribeStore();
     }
 
-    formatTimeDistance(start, end) {
+    formatTimeDistance(start, end, strict = false) {
       const { currentLanguage } = this.state;
       let locale;
 
@@ -395,6 +396,10 @@ const withI18n = (WrappedComponent) => {
 
       // TODO: remove!!
       // locale = dateFnsArSa;
+
+      if (strict) {
+        return formatDistanceStrict(start, end, { locale });
+      }
 
       return formatDistance(start, end, { locale });
     }

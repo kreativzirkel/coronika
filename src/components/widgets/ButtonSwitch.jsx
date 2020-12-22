@@ -13,7 +13,7 @@ class ButtonSwitch extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState, nextContext) {
-    return nextProps.activeState !== this.props.activeState;
+    return nextProps.activeState !== this.props.activeState || nextProps.disabled !== this.props.disabled;
   }
 
   styles = StyleSheet.create({
@@ -60,7 +60,7 @@ class ButtonSwitch extends React.Component {
   }
 
   render() {
-    const { activeState, colors, colorScheme, labels } = this.props;
+    const { activeState, colors, colorScheme, disabled, labels } = this.props;
 
     const styles = {
       ...this.styles,
@@ -73,8 +73,18 @@ class ButtonSwitch extends React.Component {
         ...this.styles.buttonActive,
         backgroundColor: colors.BACKGROUND,
       },
+      buttonDisabled: {
+        backgroundColor: colors.BACKGROUND,
+        borderColor: colors.BACKGROUND,
+      },
+      buttonDisabledActive: {
+        borderColor: colorScheme === 'dark' ? colors.GRAY_2 : colors.GRAY_4,
+      },
       buttonText: {
         ...this.styles.buttonText,
+        color: colorScheme === 'dark' ? colors.GRAY_2 : colors.GRAY_4,
+      },
+      buttonTextDisabled: {
         color: colorScheme === 'dark' ? colors.GRAY_2 : colors.GRAY_4,
       },
       buttonTextActive: {
@@ -86,21 +96,41 @@ class ButtonSwitch extends React.Component {
     return (
       <View style={styles.buttonWrapper}>
         <TouchableOpacity
+          disabled={disabled}
           onPress={() => this.onPress(true)}
-          style={{ ...styles.button, ...(activeState === true && styles.buttonActive) }}>
+          style={{
+            ...styles.button,
+            ...(activeState === true && styles.buttonActive),
+            ...(disabled && styles.buttonDisabled),
+            ...(disabled && activeState === true && styles.buttonDisabledActive),
+          }}>
           <Text
             numberOfLines={1}
-            style={{ ...styles.buttonText, ...(activeState === true && styles.buttonTextActive) }}>
+            style={{
+              ...styles.buttonText,
+              ...(activeState === true && styles.buttonTextActive),
+              ...(disabled && styles.buttonTextDisabled),
+            }}>
             {labels?.[0]}
           </Text>
         </TouchableOpacity>
         <View style={styles.buttonSeparator} />
         <TouchableOpacity
+          disabled={disabled}
           onPress={() => this.onPress(false)}
-          style={{ ...styles.button, ...(activeState === false && styles.buttonActive) }}>
+          style={{
+            ...styles.button,
+            ...(activeState === false && styles.buttonActive),
+            ...(disabled && styles.buttonDisabled),
+            ...(disabled && activeState === false && styles.buttonDisabledActive),
+          }}>
           <Text
             numberOfLines={1}
-            style={{ ...styles.buttonText, ...(activeState === false && styles.buttonTextActive) }}>
+            style={{
+              ...styles.buttonText,
+              ...(activeState === false && styles.buttonTextActive),
+              ...(disabled && styles.buttonTextDisabled),
+            }}>
             {labels?.[1]}
           </Text>
         </TouchableOpacity>

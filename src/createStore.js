@@ -15,7 +15,7 @@ const storeConfig = {
   stateReconciler: autoMergeLevel2,
   storage: AsyncStorage,
   timeout: 0,
-  whitelist: ['dashboard', 'directory', 'settings', 'welcome'],
+  whitelist: ['dashboard', 'directory', 'settings', 'ventilationMode', 'welcome'],
 };
 
 const purgeStore = async () => {

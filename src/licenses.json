@@ -101,7 +101,7 @@
         "licenseUrl": "https://github.com/parshap/node-libs-react-native/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "pdf-lib@1.13.0": {
+    "pdf-lib@1.14.0": {
         "licenses": "MIT",
         "repository": "https://github.com/Hopding/pdf-lib",
         "licenseUrl": "https://github.com/Hopding/pdf-lib/raw/master/LICENSE.md",
@@ -203,7 +203,7 @@
         "licenseUrl": "https://github.com/kmagiera/react-native-screens/raw/master/LICENSE",
         "parents": "coronika"
     },
-    "react-native-share@4.1.0": {
+    "react-native-share@4.1.1": {
         "licenses": "MIT",
         "repository": "https://github.com/react-native-community/react-native-share",
         "licenseUrl": "https://github.com/react-native-community/react-native-share/raw/master/LICENSE",
