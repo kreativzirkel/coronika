@@ -80,36 +80,36 @@ msgid "locations"
 msgstr "場所"
 
 #: src/components/partials/EntriesTabsView/index.jsx:880
-#: src/components/screens/Encounter/Modals.jsx:628
+#: src/components/screens/Encounter/Modals.jsx:636
 msgid "entries.persons.list.new"
 msgstr "新規作成"
 
 #: src/components/partials/EntriesTabsView/index.jsx:902
 #: src/components/partials/EntriesTabsView/index.jsx:962
-#: src/components/screens/Encounter/Modals.jsx:439
-#: src/components/screens/Encounter/Modals.jsx:645
+#: src/components/screens/Encounter/Modals.jsx:447
+#: src/components/screens/Encounter/Modals.jsx:653
 msgid "entries.search.list.empty"
 msgstr "何も見つかりませんでした。"
 
 #: src/components/partials/EntriesTabsView/index.jsx:913
-#: src/components/screens/Encounter/Modals.jsx:650
+#: src/components/screens/Encounter/Modals.jsx:658
 msgid "entries.persons.list.empty"
 msgstr ""
 "連絡先はまだ追加されていません。 すぐに開始するには、電話帳から連絡先をイン"
 "ポートしてください。"
 
 #: src/components/partials/EntriesTabsView/index.jsx:922
-#: src/components/screens/Encounter/Modals.jsx:655
+#: src/components/screens/Encounter/Modals.jsx:663
 msgid "entries.persons.list.import.button"
 msgstr "今すぐインポート"
 
 #: src/components/partials/EntriesTabsView/index.jsx:940
-#: src/components/screens/Encounter/Modals.jsx:428
+#: src/components/screens/Encounter/Modals.jsx:436
 msgid "entries.locations.list.new"
 msgstr "新しい場所の作成"
 
 #: src/components/partials/EntriesTabsView/index.jsx:966
-#: src/components/screens/Encounter/Modals.jsx:443
+#: src/components/screens/Encounter/Modals.jsx:451
 msgid "entries.locations.list.empty"
 msgstr ""
 "場所がまだ作成されていません。 今から開始し、最初の場所を作成してください。"
@@ -182,7 +182,7 @@ msgstr "キャンセル"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:470
 #: src/components/partials/EntriesTabsView/Modals.jsx:482
-#: src/components/screens/Encounter/Modals.jsx:609
+#: src/components/screens/Encounter/Modals.jsx:617
 #: src/components/screens/Encounter/ui.jsx:916
 #: src/components/screens/Encounter/ui.jsx:929
 msgid "Confirm"
@@ -281,7 +281,7 @@ msgstr "今日の日付をクリックして、最初の人や場所を入力し
 
 #: src/components/screens/Dashboard/ui.jsx:233
 #: src/components/screens/Dashboard/ui.jsx:256
-#: src/components/screens/Encounter/Modals.jsx:219
+#: src/components/screens/Encounter/Modals.jsx:223
 #: src/components/screens/VentilationMode/ModalHint.jsx:68
 msgid "Close"
 msgstr "閉じる"
@@ -377,47 +377,51 @@ msgstr ""
 msgid "encounter-screen.modals.delete.button-delete"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:220
+#: src/components/screens/Encounter/Modals.jsx:224
 msgid "encounter-screen.modals.hints.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:231
+#: src/components/screens/Encounter/Modals.jsx:230
+msgid "encounter-screen.modals.hints.description.text"
+msgstr ""
+
+#: src/components/screens/Encounter/Modals.jsx:239
 msgid "encounter-screen.modals.hints.persons.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:242
+#: src/components/screens/Encounter/Modals.jsx:250
 msgid "encounter-screen.modals.hints.location.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:253
+#: src/components/screens/Encounter/Modals.jsx:261
 msgid "encounter-screen.modals.hints.time.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:264
+#: src/components/screens/Encounter/Modals.jsx:272
 msgid "encounter-screen.modals.hints.outside.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:275
+#: src/components/screens/Encounter/Modals.jsx:283
 msgid "encounter-screen.modals.hints.ventilated.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:285
+#: src/components/screens/Encounter/Modals.jsx:293
 msgid "encounter-screen.modals.hints.mask.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:296
+#: src/components/screens/Encounter/Modals.jsx:304
 msgid "encounter-screen.modals.hints.distance.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:307
+#: src/components/screens/Encounter/Modals.jsx:315
 msgid "encounter-screen.modals.hints.note.text"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:412
+#: src/components/screens/Encounter/Modals.jsx:420
 msgid "encounter-screen.modals.select-location.headline"
 msgstr ""
 
-#: src/components/screens/Encounter/Modals.jsx:611
+#: src/components/screens/Encounter/Modals.jsx:619
 msgid "encounter-screen.modals.select-persons.headline"
 msgstr ""
 

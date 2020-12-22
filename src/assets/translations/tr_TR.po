@@ -80,36 +80,36 @@ msgid "locations"
 msgstr "Konum"
 
 #: src/components/partials/EntriesTabsView/index.jsx:880
-#: src/components/screens/Encounter/Modals.jsx:628
+#: src/components/screens/Encounter/Modals.jsx:636
 msgid "entries.persons.list.new"
 msgstr "Yeni kişi oluştur"
 
 #: src/components/partials/EntriesTabsView/index.jsx:902
 #: src/components/partials/EntriesTabsView/index.jsx:962
-#: src/components/screens/Encounter/Modals.jsx:439
-#: src/components/screens/Encounter/Modals.jsx:645
+#: src/components/screens/Encounter/Modals.jsx:447
+#: src/components/screens/Encounter/Modals.jsx:653
 msgid "entries.search.list.empty"
 msgstr "Aramanızda hiçbir şey bulunamadı."
 
 #: src/components/partials/EntriesTabsView/index.jsx:913
-#: src/components/screens/Encounter/Modals.jsx:650
+#: src/components/screens/Encounter/Modals.jsx:658
 msgid "entries.persons.list.empty"
 msgstr ""
 "Henüz bir kişi oluşturmadınız. Hemen başlamak için telefon defterinizden "
 "kişileri aktarabilirsiniz."
 
 #: src/components/partials/EntriesTabsView/index.jsx:922
-#: src/components/screens/Encounter/Modals.jsx:655
+#: src/components/screens/Encounter/Modals.jsx:663
 msgid "entries.persons.list.import.button"
 msgstr "Şimdi aktar "
 
 #: src/components/partials/EntriesTabsView/index.jsx:940
-#: src/components/screens/Encounter/Modals.jsx:428
+#: src/components/screens/Encounter/Modals.jsx:436
 msgid "entries.locations.list.new"
 msgstr "Yeni konum oluştur"
 
 #: src/components/partials/EntriesTabsView/index.jsx:966
-#: src/components/screens/Encounter/Modals.jsx:443
+#: src/components/screens/Encounter/Modals.jsx:451
 msgid "entries.locations.list.empty"
 msgstr ""
 "Henüz bir konum oluşturmadınız. Şimdi başlayın ve ilk konumunuzu oluşturun."
@@ -184,7 +184,7 @@ msgstr "İptal etmek"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:470
 #: src/components/partials/EntriesTabsView/Modals.jsx:482
-#: src/components/screens/Encounter/Modals.jsx:609
+#: src/components/screens/Encounter/Modals.jsx:617
 #: src/components/screens/Encounter/ui.jsx:916
 #: src/components/screens/Encounter/ui.jsx:929
 msgid "Confirm"
@@ -300,7 +300,7 @@ msgstr "İlk kişileri veya konumları girmek için bugünün tarihini tıklayı
 
 #: src/components/screens/Dashboard/ui.jsx:233
 #: src/components/screens/Dashboard/ui.jsx:256
-#: src/components/screens/Encounter/Modals.jsx:219
+#: src/components/screens/Encounter/Modals.jsx:223
 #: src/components/screens/VentilationMode/ModalHint.jsx:68
 msgid "Close"
 msgstr "Kapatmak "
@@ -313,15 +313,15 @@ msgstr "Ne var ne yok?"
 
 #: src/components/screens/Day/EncountersList.jsx:219
 msgid "encounters-list.no-encounters.text"
-msgstr ""
+msgstr "O gün karşılaşmadın."
 
 #: src/components/screens/Day/EncountersList.jsx:219
 msgid "encounters-list.empty"
-msgstr ""
+msgstr "Bu gün için hiç karşılaşma eklemediniz."
 
 #: src/components/screens/Day/EncountersList.jsx:225
 msgid "encounters-list.no-encounters.confirmation.text"
-msgstr ""
+msgstr "Bu gün hiç karşılaşmadın mı?"
 
 #: src/components/screens/Day/EncountersList.jsx:231
 msgid "encounters-list.no-encounters.confirmation.button"
@@ -390,63 +390,70 @@ msgstr "Karşılaşmayı sil"
 
 #: src/components/screens/Encounter/Modals.jsx:107
 msgid "encounter-screen.modals.delete.text"
-msgstr ""
+msgstr "Bu karşılaşmayı gerçekten silmek istiyor musun?"
 
 #: src/components/screens/Encounter/Modals.jsx:111
 msgid "encounter-screen.modals.delete.button-delete"
 msgstr "Sil"
 
-#: src/components/screens/Encounter/Modals.jsx:220
+#: src/components/screens/Encounter/Modals.jsx:224
 msgid "encounter-screen.modals.hints.headline"
 msgstr "İpuçları"
 
-#: src/components/screens/Encounter/Modals.jsx:231
+#: src/components/screens/Encounter/Modals.jsx:230
+msgid "encounter-screen.modals.hints.description.text"
+msgstr ""
+"Karşılaşma oluşturmak için sadece bir yer veya en az bir kişi seçilmelidir. "
+"Diğer tüm bilgiler isteğe bağlıdır. Bununla birlikte, bir karşılaşma riskini "
+"daha iyi değerlendirmek için ek bilgiler önemlidir."
+
+#: src/components/screens/Encounter/Modals.jsx:239
 msgid "encounter-screen.modals.hints.persons.text"
 msgstr "Kiminle karşılaştın?"
 
-#: src/components/screens/Encounter/Modals.jsx:242
+#: src/components/screens/Encounter/Modals.jsx:250
 msgid "encounter-screen.modals.hints.location.text"
 msgstr "Toplantı nerede gerçekleşti?"
 
-#: src/components/screens/Encounter/Modals.jsx:253
+#: src/components/screens/Encounter/Modals.jsx:261
 msgid "encounter-screen.modals.hints.time.text"
 msgstr "Karşılaşma ne zaman oldu?"
 
-#: src/components/screens/Encounter/Modals.jsx:264
+#: src/components/screens/Encounter/Modals.jsx:272
 msgid "encounter-screen.modals.hints.outside.text"
 msgstr "Karşılaşma içeride mi yoksa dışarıda mı gerçekleşti?"
 
-#: src/components/screens/Encounter/Modals.jsx:275
+#: src/components/screens/Encounter/Modals.jsx:283
 msgid "encounter-screen.modals.hints.ventilated.text"
 msgstr "İçindeyse: Oda en az 30 dakikada bir havalandırıldı mı?"
 
-#: src/components/screens/Encounter/Modals.jsx:285
+#: src/components/screens/Encounter/Modals.jsx:293
 msgid "encounter-screen.modals.hints.mask.text"
 msgstr "Ağız / burun koruması taktın mı?"
 
-#: src/components/screens/Encounter/Modals.jsx:296
+#: src/components/screens/Encounter/Modals.jsx:304
 msgid "encounter-screen.modals.hints.distance.text"
 msgstr "Kişiler arasındaki mesafe neydi?"
 
-#: src/components/screens/Encounter/Modals.jsx:307
+#: src/components/screens/Encounter/Modals.jsx:315
 msgid "encounter-screen.modals.hints.note.text"
 msgstr "Diğer notlar ve açıklamalar"
 
-#: src/components/screens/Encounter/Modals.jsx:412
+#: src/components/screens/Encounter/Modals.jsx:420
 msgid "encounter-screen.modals.select-location.headline"
 msgstr "Konum seçin"
 
-#: src/components/screens/Encounter/Modals.jsx:611
+#: src/components/screens/Encounter/Modals.jsx:619
 msgid "encounter-screen.modals.select-persons.headline"
 msgstr "Kişi seçin"
 
 #: src/components/screens/Encounter/ui.jsx:677
 msgid "encounter-screen.headline.edit"
-msgstr ""
+msgstr "karşılaşmayı düzenle"
 
 #: src/components/screens/Encounter/ui.jsx:677
 msgid "encounter-screen.headline.add"
-msgstr ""
+msgstr "karşılaşma ekle"
 
 #: src/components/screens/Encounter/ui.jsx:716
 msgid "encounter-screen.persons.add"
@@ -458,27 +465,27 @@ msgstr "konum"
 
 #: src/components/screens/Encounter/ui.jsx:786
 msgid "encounter-screen.options.outside.yes"
-msgstr ""
+msgstr "dışarıda"
 
 #: src/components/screens/Encounter/ui.jsx:786
 msgid "encounter-screen.options.outside.no"
-msgstr ""
+msgstr "içeride"
 
 #: src/components/screens/Encounter/ui.jsx:800
 msgid "encounter-screen.options.ventilated.yes"
-msgstr ""
+msgstr "havalandırılmış"
 
 #: src/components/screens/Encounter/ui.jsx:800
 msgid "encounter-screen.options.ventilated.no"
-msgstr ""
+msgstr "havalandırılmamış"
 
 #: src/components/screens/Encounter/ui.jsx:814
 msgid "encounter-screen.options.mask.yes"
-msgstr ""
+msgstr "maske"
 
 #: src/components/screens/Encounter/ui.jsx:814
 msgid "encounter-screen.options.mask.no"
-msgstr ""
+msgstr "maske yok"
 
 #: src/components/screens/Encounter/ui.jsx:827
 msgid "encounter-screen.options.distance.yes"
@@ -1456,4 +1463,4 @@ msgstr ""
 
 #: src/index.jsx:133
 msgid "Done"
-msgstr ""
+msgstr "Bitti"

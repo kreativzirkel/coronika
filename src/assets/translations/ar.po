@@ -80,36 +80,36 @@ msgid "locations"
 msgstr "المواقع"
 
 #: src/components/partials/EntriesTabsView/index.jsx:880
-#: src/components/screens/Encounter/Modals.jsx:628
+#: src/components/screens/Encounter/Modals.jsx:636
 msgid "entries.persons.list.new"
 msgstr "قم بإنشاء شخص جديد"
 
 #: src/components/partials/EntriesTabsView/index.jsx:902
 #: src/components/partials/EntriesTabsView/index.jsx:962
-#: src/components/screens/Encounter/Modals.jsx:439
-#: src/components/screens/Encounter/Modals.jsx:645
+#: src/components/screens/Encounter/Modals.jsx:447
+#: src/components/screens/Encounter/Modals.jsx:653
 msgid "entries.search.list.empty"
 msgstr "لا يمكن العثور على شيء في بحثك."
 
 #: src/components/partials/EntriesTabsView/index.jsx:913
-#: src/components/screens/Encounter/Modals.jsx:650
+#: src/components/screens/Encounter/Modals.jsx:658
 msgid "entries.persons.list.empty"
 msgstr ""
 "لم تقم بإنشاء شخص بعد. للبدء على الفور ، يمكنك استيراد الأشخاص من دليل "
 "الهاتف الخاص بك."
 
 #: src/components/partials/EntriesTabsView/index.jsx:922
-#: src/components/screens/Encounter/Modals.jsx:655
+#: src/components/screens/Encounter/Modals.jsx:663
 msgid "entries.persons.list.import.button"
 msgstr "استيراد الآن"
 
 #: src/components/partials/EntriesTabsView/index.jsx:940
-#: src/components/screens/Encounter/Modals.jsx:428
+#: src/components/screens/Encounter/Modals.jsx:436
 msgid "entries.locations.list.new"
 msgstr "إنشاء موقع جديد"
 
 #: src/components/partials/EntriesTabsView/index.jsx:966
-#: src/components/screens/Encounter/Modals.jsx:443
+#: src/components/screens/Encounter/Modals.jsx:451
 msgid "entries.locations.list.empty"
 msgstr "لم تقم بإنشاء موقع حتى الآن. ابدأ الآن وأنشئ موقعك الأول."
 
@@ -181,7 +181,7 @@ msgstr "إلغاء"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:470
 #: src/components/partials/EntriesTabsView/Modals.jsx:482
-#: src/components/screens/Encounter/Modals.jsx:609
+#: src/components/screens/Encounter/Modals.jsx:617
 #: src/components/screens/Encounter/ui.jsx:916
 #: src/components/screens/Encounter/ui.jsx:929
 msgid "Confirm"
@@ -294,7 +294,7 @@ msgstr "انقر على تاريخ اليوم لإضافة الأشخاص أو �
 
 #: src/components/screens/Dashboard/ui.jsx:233
 #: src/components/screens/Dashboard/ui.jsx:256
-#: src/components/screens/Encounter/Modals.jsx:219
+#: src/components/screens/Encounter/Modals.jsx:223
 #: src/components/screens/VentilationMode/ModalHint.jsx:68
 msgid "Close"
 msgstr "اغلاق"
@@ -307,19 +307,19 @@ msgstr "ما هو الجديد؟"
 
 #: src/components/screens/Day/EncountersList.jsx:219
 msgid "encounters-list.no-encounters.text"
-msgstr ""
+msgstr "لم يكن لديك لقاءات في ذلك اليوم."
 
 #: src/components/screens/Day/EncountersList.jsx:219
 msgid "encounters-list.empty"
-msgstr ""
+msgstr "لم تقم بإضافة أي لقاءات لهذا اليوم."
 
 #: src/components/screens/Day/EncountersList.jsx:225
 msgid "encounters-list.no-encounters.confirmation.text"
-msgstr ""
+msgstr "لم يكن لديك أي لقاءات في هذا اليوم؟"
 
 #: src/components/screens/Day/EncountersList.jsx:231
 msgid "encounters-list.no-encounters.confirmation.button"
-msgstr ""
+msgstr "لا لقاءات"
 
 #: src/components/screens/Day/ui.jsx:109
 msgid "day-screen.entries.add"
@@ -378,99 +378,106 @@ msgstr "استيراد الآن"
 
 #: src/components/screens/Encounter/Modals.jsx:104
 msgid "encounter-screen.modals.delete.headline"
-msgstr ""
+msgstr "حذف اللقاء"
 
 #: src/components/screens/Encounter/Modals.jsx:107
 msgid "encounter-screen.modals.delete.text"
-msgstr ""
+msgstr "هل تريد حقًا حذف هذا اللقاء؟"
 
 #: src/components/screens/Encounter/Modals.jsx:111
 msgid "encounter-screen.modals.delete.button-delete"
-msgstr ""
+msgstr "حذف"
 
-#: src/components/screens/Encounter/Modals.jsx:220
+#: src/components/screens/Encounter/Modals.jsx:224
 msgid "encounter-screen.modals.hints.headline"
-msgstr ""
+msgstr "تلميحات"
 
-#: src/components/screens/Encounter/Modals.jsx:231
+#: src/components/screens/Encounter/Modals.jsx:230
+msgid "encounter-screen.modals.hints.description.text"
+msgstr ""
+"لإنشاء لقاء ، يجب تحديد موقع فقط أو شخص واحد على الأقل. المعلومات الأخرى "
+"اختيارية. ومع ذلك ، فإن المعلومات الإضافية مهمة لتقييم مخاطر المواجهة بشكل "
+"أفضل."
+
+#: src/components/screens/Encounter/Modals.jsx:239
 msgid "encounter-screen.modals.hints.persons.text"
-msgstr ""
+msgstr "مع من كان لديك لقاء؟"
 
-#: src/components/screens/Encounter/Modals.jsx:242
+#: src/components/screens/Encounter/Modals.jsx:250
 msgid "encounter-screen.modals.hints.location.text"
-msgstr ""
+msgstr "أين عقد الاجتماع؟"
 
-#: src/components/screens/Encounter/Modals.jsx:253
+#: src/components/screens/Encounter/Modals.jsx:261
 msgid "encounter-screen.modals.hints.time.text"
-msgstr ""
+msgstr "متى كان اللقاء؟"
 
-#: src/components/screens/Encounter/Modals.jsx:264
+#: src/components/screens/Encounter/Modals.jsx:272
 msgid "encounter-screen.modals.hints.outside.text"
-msgstr ""
+msgstr "هل حدث اللقاء في الداخل أم في الخارج؟"
 
-#: src/components/screens/Encounter/Modals.jsx:275
+#: src/components/screens/Encounter/Modals.jsx:283
 msgid "encounter-screen.modals.hints.ventilated.text"
-msgstr ""
+msgstr "إذا كان بالداخل: هل كانت تهوية الغرفة على الأقل كل 30 دقيقة؟"
 
-#: src/components/screens/Encounter/Modals.jsx:285
+#: src/components/screens/Encounter/Modals.jsx:293
 msgid "encounter-screen.modals.hints.mask.text"
-msgstr ""
+msgstr "هل قمت بارتداء واقي للفم / الأنف؟"
 
-#: src/components/screens/Encounter/Modals.jsx:296
+#: src/components/screens/Encounter/Modals.jsx:304
 msgid "encounter-screen.modals.hints.distance.text"
-msgstr ""
+msgstr "كم كانت المسافة بين الأشخاص؟"
 
-#: src/components/screens/Encounter/Modals.jsx:307
+#: src/components/screens/Encounter/Modals.jsx:315
 msgid "encounter-screen.modals.hints.note.text"
-msgstr ""
+msgstr "ملاحظات وملاحظات أخرى"
 
-#: src/components/screens/Encounter/Modals.jsx:412
+#: src/components/screens/Encounter/Modals.jsx:420
 msgid "encounter-screen.modals.select-location.headline"
-msgstr ""
+msgstr "اختر موقعا"
 
-#: src/components/screens/Encounter/Modals.jsx:611
+#: src/components/screens/Encounter/Modals.jsx:619
 msgid "encounter-screen.modals.select-persons.headline"
-msgstr ""
+msgstr "حدد الأشخاص"
 
 #: src/components/screens/Encounter/ui.jsx:677
 msgid "encounter-screen.headline.edit"
-msgstr ""
+msgstr "تحرير اللقاء"
 
 #: src/components/screens/Encounter/ui.jsx:677
 msgid "encounter-screen.headline.add"
-msgstr ""
+msgstr "إضافة لقاء"
 
 #: src/components/screens/Encounter/ui.jsx:716
 msgid "encounter-screen.persons.add"
-msgstr ""
+msgstr "أضف الشخص"
 
 #: src/components/screens/Encounter/ui.jsx:740
 msgid "location"
-msgstr ""
+msgstr "موقعك"
 
 #: src/components/screens/Encounter/ui.jsx:786
 msgid "encounter-screen.options.outside.yes"
-msgstr ""
+msgstr "في الخارج"
 
 #: src/components/screens/Encounter/ui.jsx:786
 msgid "encounter-screen.options.outside.no"
-msgstr ""
+msgstr "في داخل"
 
 #: src/components/screens/Encounter/ui.jsx:800
 msgid "encounter-screen.options.ventilated.yes"
-msgstr ""
+msgstr "تهوية"
 
 #: src/components/screens/Encounter/ui.jsx:800
 msgid "encounter-screen.options.ventilated.no"
-msgstr ""
+msgstr "لا تهوية"
 
 #: src/components/screens/Encounter/ui.jsx:814
 msgid "encounter-screen.options.mask.yes"
-msgstr ""
+msgstr "قناع"
 
 #: src/components/screens/Encounter/ui.jsx:814
 msgid "encounter-screen.options.mask.no"
-msgstr ""
+msgstr "لاقناع"
 
 #: src/components/screens/Encounter/ui.jsx:827
 msgid "encounter-screen.options.distance.yes"
@@ -1388,7 +1395,7 @@ msgstr "الاستيراد الآن"
 
 #: src/components/widgets/DayOverview.jsx:127
 msgid "encounters"
-msgstr ""
+msgstr "لقاءات"
 
 #: src/components/widgets/DayOverview.jsx:46
 msgid "total"
@@ -1424,4 +1431,4 @@ msgstr ""
 
 #: src/index.jsx:133
 msgid "Done"
-msgstr ""
+msgstr "منجز"

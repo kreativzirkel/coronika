@@ -176,12 +176,16 @@ class ModalHintsClass extends React.Component {
   }
 
   styles = StyleSheet.create({
+    descriptionWrapper: {
+      flexDirection: 'row',
+      marginBottom: this.props.vw(8),
+    },
     optionIcon: {
       marginLeft: this.props.vw(2.3),
       marginRight: this.props.vw(4.6),
       marginTop: -this.props.vw(0.75),
     },
-    optionTextStyle: {
+    optionText: {
       flex: 1,
       fontFamily: this.props.fontFamilyRegular,
       fontSize: this.props.vw(4.4),
@@ -205,8 +209,8 @@ class ModalHintsClass extends React.Component {
 
     const styles = {
       ...this.styles,
-      optionTextStyle: {
-        ...this.styles.optionTextStyle,
+      optionText: {
+        ...this.styles.optionText,
         color: colors.TEXT,
       },
     };
@@ -222,6 +226,10 @@ class ModalHintsClass extends React.Component {
         onPressClose={onPressClose}
         onPressConfirm={onPressClose}>
         <ScrollView style={styles.wrapper}>
+          <View style={styles.descriptionWrapper}>
+            <Text style={styles.optionText}>{__('encounter-screen.modals.hints.description.text')}</Text>
+          </View>
+
           <View style={styles.optionWrapper}>
             <EncounterOptionHint
               IconComponent={UilUsersAlt}
@@ -229,7 +237,7 @@ class ModalHintsClass extends React.Component {
               iconSize={iconSize}
               iconStyle={styles.optionIcon}
               text={__('encounter-screen.modals.hints.persons.text')}
-              textStyle={styles.optionTextStyle}
+              textStyle={styles.optionText}
             />
           </View>
 
@@ -240,7 +248,7 @@ class ModalHintsClass extends React.Component {
               iconSize={iconSize}
               iconStyle={styles.optionIcon}
               text={__('encounter-screen.modals.hints.location.text')}
-              textStyle={styles.optionTextStyle}
+              textStyle={styles.optionText}
             />
           </View>
 
@@ -251,7 +259,7 @@ class ModalHintsClass extends React.Component {
               iconSize={iconSize}
               iconStyle={styles.optionIcon}
               text={__('encounter-screen.modals.hints.time.text')}
-              textStyle={styles.optionTextStyle}
+              textStyle={styles.optionText}
             />
           </View>
 
@@ -262,7 +270,7 @@ class ModalHintsClass extends React.Component {
               iconSize={iconSize}
               iconStyle={styles.optionIcon}
               text={__('encounter-screen.modals.hints.outside.text')}
-              textStyle={styles.optionTextStyle}
+              textStyle={styles.optionText}
             />
           </View>
 
@@ -273,7 +281,7 @@ class ModalHintsClass extends React.Component {
               iconSize={iconSize}
               iconStyle={styles.optionIcon}
               text={__('encounter-screen.modals.hints.ventilated.text')}
-              textStyle={styles.optionTextStyle}
+              textStyle={styles.optionText}
             />
           </View>
 
@@ -283,7 +291,7 @@ class ModalHintsClass extends React.Component {
               iconSize={iconSize}
               iconStyle={styles.optionIcon}
               text={__('encounter-screen.modals.hints.mask.text')}
-              textStyle={styles.optionTextStyle}
+              textStyle={styles.optionText}
             />
           </View>
 
@@ -294,7 +302,7 @@ class ModalHintsClass extends React.Component {
               iconSize={iconSize}
               iconStyle={styles.optionIcon}
               text={__('encounter-screen.modals.hints.distance.text')}
-              textStyle={styles.optionTextStyle}
+              textStyle={styles.optionText}
             />
           </View>
 
@@ -305,7 +313,7 @@ class ModalHintsClass extends React.Component {
               iconSize={iconSize}
               iconStyle={styles.optionIcon}
               text={__('encounter-screen.modals.hints.note.text')}
-              textStyle={styles.optionTextStyle}
+              textStyle={styles.optionText}
             />
           </View>
         </ScrollView>

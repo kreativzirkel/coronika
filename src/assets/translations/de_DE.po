@@ -80,36 +80,36 @@ msgid "locations"
 msgstr "Orte"
 
 #: src/components/partials/EntriesTabsView/index.jsx:880
-#: src/components/screens/Encounter/Modals.jsx:628
+#: src/components/screens/Encounter/Modals.jsx:636
 msgid "entries.persons.list.new"
 msgstr "Neue Person anlegen"
 
 #: src/components/partials/EntriesTabsView/index.jsx:902
 #: src/components/partials/EntriesTabsView/index.jsx:962
-#: src/components/screens/Encounter/Modals.jsx:439
-#: src/components/screens/Encounter/Modals.jsx:645
+#: src/components/screens/Encounter/Modals.jsx:447
+#: src/components/screens/Encounter/Modals.jsx:653
 msgid "entries.search.list.empty"
 msgstr "Zu deiner Suche konnte nichts gefunden werden."
 
 #: src/components/partials/EntriesTabsView/index.jsx:913
-#: src/components/screens/Encounter/Modals.jsx:650
+#: src/components/screens/Encounter/Modals.jsx:658
 msgid "entries.persons.list.empty"
 msgstr ""
 "Du hast noch keine Person angelegt. Um direkt loszulegen, kannst du Personen "
 "aus deinem Telefonbuch importieren."
 
 #: src/components/partials/EntriesTabsView/index.jsx:922
-#: src/components/screens/Encounter/Modals.jsx:655
+#: src/components/screens/Encounter/Modals.jsx:663
 msgid "entries.persons.list.import.button"
 msgstr "Jetzt importieren"
 
 #: src/components/partials/EntriesTabsView/index.jsx:940
-#: src/components/screens/Encounter/Modals.jsx:428
+#: src/components/screens/Encounter/Modals.jsx:436
 msgid "entries.locations.list.new"
 msgstr "Neuen Ort anlegen"
 
 #: src/components/partials/EntriesTabsView/index.jsx:966
-#: src/components/screens/Encounter/Modals.jsx:443
+#: src/components/screens/Encounter/Modals.jsx:451
 msgid "entries.locations.list.empty"
 msgstr ""
 "Du hast noch keinen Ort angelegt. Beginne jetzt und erstelle deinen ersten "
@@ -185,7 +185,7 @@ msgstr "Abbrechen"
 
 #: src/components/partials/EntriesTabsView/Modals.jsx:470
 #: src/components/partials/EntriesTabsView/Modals.jsx:482
-#: src/components/screens/Encounter/Modals.jsx:609
+#: src/components/screens/Encounter/Modals.jsx:617
 #: src/components/screens/Encounter/ui.jsx:916
 #: src/components/screens/Encounter/ui.jsx:929
 msgid "Confirm"
@@ -304,7 +304,7 @@ msgstr ""
 
 #: src/components/screens/Dashboard/ui.jsx:233
 #: src/components/screens/Dashboard/ui.jsx:256
-#: src/components/screens/Encounter/Modals.jsx:219
+#: src/components/screens/Encounter/Modals.jsx:223
 #: src/components/screens/VentilationMode/ModalHint.jsx:68
 msgid "Close"
 msgstr "Schließen"
@@ -401,47 +401,55 @@ msgstr "Möchtest du diese Begegnung wirklich löschen?"
 msgid "encounter-screen.modals.delete.button-delete"
 msgstr "Löschen"
 
-#: src/components/screens/Encounter/Modals.jsx:220
+#: src/components/screens/Encounter/Modals.jsx:224
 msgid "encounter-screen.modals.hints.headline"
 msgstr "Hinweise"
 
-#: src/components/screens/Encounter/Modals.jsx:231
+#: src/components/screens/Encounter/Modals.jsx:230
+msgid "encounter-screen.modals.hints.description.text"
+msgstr ""
+"Um eine Begegnung zu erstellen muss nur ein Ort oder mindestens eine Person "
+"ausgewählt werden. Alle anderen Angaben sind optional. Die zusätzlichen "
+"Informationen sind aber wichtig, um das Risiko einer Begegnung besser "
+"einschätzen zu können."
+
+#: src/components/screens/Encounter/Modals.jsx:239
 msgid "encounter-screen.modals.hints.persons.text"
 msgstr "Mit wem hattest du eine Begegnung?"
 
-#: src/components/screens/Encounter/Modals.jsx:242
+#: src/components/screens/Encounter/Modals.jsx:250
 msgid "encounter-screen.modals.hints.location.text"
 msgstr "Wo hat die Begegnung stattgefunden?"
 
-#: src/components/screens/Encounter/Modals.jsx:253
+#: src/components/screens/Encounter/Modals.jsx:261
 msgid "encounter-screen.modals.hints.time.text"
 msgstr "Wann war die Begegnung?"
 
-#: src/components/screens/Encounter/Modals.jsx:264
+#: src/components/screens/Encounter/Modals.jsx:272
 msgid "encounter-screen.modals.hints.outside.text"
 msgstr "Hat die Begegnung drinnen oder draußen stattgefunden?"
 
-#: src/components/screens/Encounter/Modals.jsx:275
+#: src/components/screens/Encounter/Modals.jsx:283
 msgid "encounter-screen.modals.hints.ventilated.text"
 msgstr "Falls drinnen: Wurde der Raum mindestens alle 30 Minuten gelüftet?"
 
-#: src/components/screens/Encounter/Modals.jsx:285
+#: src/components/screens/Encounter/Modals.jsx:293
 msgid "encounter-screen.modals.hints.mask.text"
 msgstr "Hast du einen Mund-/Nasenschutz getragen?"
 
-#: src/components/screens/Encounter/Modals.jsx:296
+#: src/components/screens/Encounter/Modals.jsx:304
 msgid "encounter-screen.modals.hints.distance.text"
 msgstr "Wie groß war der Abstand zwischen den einzelnen Personen?"
 
-#: src/components/screens/Encounter/Modals.jsx:307
+#: src/components/screens/Encounter/Modals.jsx:315
 msgid "encounter-screen.modals.hints.note.text"
 msgstr "Sonstige Notizen und Anmerkungen"
 
-#: src/components/screens/Encounter/Modals.jsx:412
+#: src/components/screens/Encounter/Modals.jsx:420
 msgid "encounter-screen.modals.select-location.headline"
 msgstr "Ort auswählen"
 
-#: src/components/screens/Encounter/Modals.jsx:611
+#: src/components/screens/Encounter/Modals.jsx:619
 msgid "encounter-screen.modals.select-persons.headline"
 msgstr "Personen auswählen"
 
@@ -1473,7 +1481,7 @@ msgstr ""
 #: src/components/widgets/WhatsNew.jsx:63
 msgid "whats-new.christmas.text"
 msgstr ""
-"Passend zu Weihnachten erhältst du wichtige Hinweise um Infektionen zu "
+"Passend zu Weihnachten erhältst du wichtige Hinweise, um Infektionen zu "
 "minimieren."
 
 #: src/index.jsx:133
