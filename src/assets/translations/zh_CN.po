@@ -244,12 +244,12 @@ msgstr "Coronika创建和使用的所有数据都存储在本地，不会被跟�
 msgid "welcome-screen.slides.local-data.button"
 msgstr "现在开始"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:209
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:213
 msgid "about-screen.header.headline"
 msgstr "关于Coronika"
 
 #: src/components/screens/BjoernSteigerFoundation.jsx:82
-#: src/components/screens/Menu.jsx:237
+#: src/components/screens/Menu.jsx:241
 msgid "bjoern-steiger-stiftung-screen.header.headline"
 msgstr ""
 
@@ -257,26 +257,33 @@ msgstr ""
 msgid "bjoern-steiger-stiftung-screen.content.text"
 msgstr ""
 
-#: src/components/screens/Dashboard/ui.jsx:173
+#: src/components/screens/Dashboard/ui.jsx:180
 msgid "dashboard-screen.list.load-more"
 msgstr "装载更多"
 
-#: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:245
+#: src/components/screens/Dashboard/ui.jsx:218
+#: src/components/screens/Menu.jsx:249
 #: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
 msgstr "菜单"
 
-#: src/components/screens/Dashboard/ui.jsx:223
+#: src/components/screens/Dashboard/ui.jsx:230
 msgid "dashboard-screen.first-start.hint"
 msgstr "点击今天的日期，添加您的第一联系人或地点。"
 
-#: src/components/screens/Dashboard/ui.jsx:226
+#: src/components/screens/Dashboard/ui.jsx:233
+#: src/components/screens/Dashboard/ui.jsx:256
 #: src/components/screens/Encounter/Modals.jsx:219
 #: src/components/screens/VentilationMode/ModalHint.jsx:68
 msgid "Close"
 msgstr "关闭"
+
+#: src/components/screens/Dashboard/ui.jsx:257
+#: src/components/screens/Menu.jsx:209
+#: src/components/screens/UpdateHints.jsx:45
+msgid "update-hints-screen.header.headline"
+msgstr ""
 
 #: src/components/screens/Day/EncountersList.jsx:219
 msgid "encounters-list.no-encounters.text"
@@ -570,7 +577,7 @@ msgid "export-screen.modals.export-completed.pdf.headline"
 msgstr "PDF文件"
 
 #: src/components/screens/Legal/index.jsx:243
-#: src/components/screens/Menu.jsx:225
+#: src/components/screens/Menu.jsx:229
 msgid "legal-screen.header.headline"
 msgstr "法律方面"
 
@@ -751,29 +758,29 @@ msgstr ""
 "权。特别是，第三方的内容都会被标明。如果您发现有侵犯版权的情况，请及时通知我"
 "们。如果我们发现任何侵权行为，我们将立即删除这些内容。"
 
-#: src/components/screens/Menu.jsx:213
-#: src/components/screens/VentilationMode/ui.jsx:282
+#: src/components/screens/Menu.jsx:217
+#: src/components/screens/VentilationMode/ui.jsx:280
 msgid "ventilation-mode-screen.header.headline"
 msgstr ""
 
-#: src/components/screens/Menu.jsx:217
+#: src/components/screens/Menu.jsx:221
 msgid "menu-screen.items.faq"
 msgstr "经常问的问题"
 
-#: src/components/screens/Menu.jsx:221
+#: src/components/screens/Menu.jsx:225
 #: src/components/screens/Settings/ui.jsx:103
 msgid "settings-screen.header.headline"
 msgstr "设置"
 
-#: src/components/screens/Menu.jsx:229
+#: src/components/screens/Menu.jsx:233
 msgid "menu-screen.items.share"
 msgstr "分享这个应用程式"
 
-#: src/components/screens/Menu.jsx:233
+#: src/components/screens/Menu.jsx:237
 msgid "menu-screen.items.website"
 msgstr "访问网站"
 
-#: src/components/screens/Menu.jsx:304
+#: src/components/screens/Menu.jsx:308
 msgid "menu-screen.button.send-feedback"
 msgstr "发送反馈信息"
 
@@ -1241,23 +1248,23 @@ msgstr ""
 msgid "tips.sources.headline"
 msgstr "来源"
 
-#: src/components/screens/VentilationMode/ui.jsx:310
+#: src/components/screens/VentilationMode/ui.jsx:308
 msgid "ventilation-mode-screen.timer.text"
 msgstr ""
 
-#: src/components/screens/VentilationMode/ui.jsx:328
+#: src/components/screens/VentilationMode/ui.jsx:326
 msgid "ventilation-mode-screen.duration.15-minutes"
 msgstr ""
 
-#: src/components/screens/VentilationMode/ui.jsx:329
+#: src/components/screens/VentilationMode/ui.jsx:327
 msgid "ventilation-mode-screen.duration.30-minutes"
 msgstr ""
 
-#: src/components/screens/VentilationMode/ui.jsx:359
+#: src/components/screens/VentilationMode/ui.jsx:357
 msgid "ventilation-mode-screen.button.stop"
 msgstr ""
 
-#: src/components/screens/VentilationMode/ui.jsx:359
+#: src/components/screens/VentilationMode/ui.jsx:357
 msgid "ventilation-mode-screen.button.start"
 msgstr ""
 
@@ -1313,6 +1320,18 @@ msgstr "搜索"
 msgid "tips.sources.last-updated"
 msgstr "最后一次更新："
 
-#: src/index.jsx:132
+#: src/components/widgets/WhatsNew.jsx:53
+msgid "whats-new.ventilation-mode.text"
+msgstr ""
+
+#: src/components/widgets/WhatsNew.jsx:58
+msgid "whats-new.encounters.text"
+msgstr ""
+
+#: src/components/widgets/WhatsNew.jsx:63
+msgid "whats-new.christmas.text"
+msgstr ""
+
+#: src/index.jsx:133
 msgid "Done"
 msgstr ""

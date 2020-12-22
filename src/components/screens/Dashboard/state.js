@@ -6,6 +6,7 @@ const initialState = {
   firstStartHintConfirmed: false,
   firstStartHintVisible: false,
   lastUpdated: 0,
+  modalUpdateHintsVisible: false,
 };
 
 export default (state = initialState, action = { type: null }) => {
@@ -137,6 +138,9 @@ export default (state = initialState, action = { type: null }) => {
 
     case 'HIDE_FIRST_START_HINT_DASHBOARD':
       return { ...state, firstStartHintVisible: false };
+
+    case 'HIDE_MODAL_UPDATE_HINTS_DASHBOARD':
+      return { ...state, modalUpdateHintsVisible: false };
 
     case 'SET_LAST_UPDATED_DASHBOARD':
       return { ...state, lastUpdated: action.lastUpdated };

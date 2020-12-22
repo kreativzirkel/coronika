@@ -206,6 +206,10 @@ class Menu extends React.Component {
 
     const menuItems = [
       {
+        headline: __('update-hints-screen.header.headline'),
+        routeName: 'UpdateHints',
+      },
+      {
         headline: __('about-screen.header.headline'),
         routeName: 'About',
       },

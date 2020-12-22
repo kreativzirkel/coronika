@@ -7,6 +7,7 @@ const initialState = {
   notificationWashingHandsOption1Enabled: false,
   notificationWashingHandsOption2Enabled: false,
   showKeyEncounterHints: '',
+  showKeyUpdateHints: '',
   showKeyVentilationModeHints: '',
   showKeyWelcome: '',
   versionDataStructure: '',
@@ -61,6 +62,9 @@ export default (state = initialState, action = { type: null }) => {
 
     case 'SET_SHOW_KEY_ENCOUNTER_HINTS_SETTINGS':
       return { ...state, showKeyEncounterHints: action.showKeyEncounterHints };
+
+    case 'SET_SHOW_KEY_UPDATE_HINTS_SETTINGS':
+      return { ...state, showKeyUpdateHints: action.showKeyUpdateHints };
 
     case 'SET_SHOW_KEY_VENTILATION_MODE_HINTS_SETTINGS':
       return { ...state, showKeyVentilationModeHints: action.showKeyVentilationModeHints };

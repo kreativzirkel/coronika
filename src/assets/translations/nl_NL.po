@@ -254,12 +254,12 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Nu beginen"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:209
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:213
 msgid "about-screen.header.headline"
 msgstr "Over Coronika"
 
 #: src/components/screens/BjoernSteigerFoundation.jsx:82
-#: src/components/screens/Menu.jsx:237
+#: src/components/screens/Menu.jsx:241
 msgid "bjoern-steiger-stiftung-screen.header.headline"
 msgstr "Björn Steiger Stichting"
 
@@ -284,27 +284,34 @@ msgstr ""
 "gezondheidszorg concreet uit te voeren en op te schalen met behulp van "
 "netwerken."
 
-#: src/components/screens/Dashboard/ui.jsx:173
+#: src/components/screens/Dashboard/ui.jsx:180
 msgid "dashboard-screen.list.load-more"
 msgstr "meer laden"
 
-#: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:245
+#: src/components/screens/Dashboard/ui.jsx:218
+#: src/components/screens/Menu.jsx:249
 #: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
 msgstr "Menu"
 
-#: src/components/screens/Dashboard/ui.jsx:223
+#: src/components/screens/Dashboard/ui.jsx:230
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Klik op de datum van vandaag en voeg je eerste personen of locaties toe."
 
-#: src/components/screens/Dashboard/ui.jsx:226
+#: src/components/screens/Dashboard/ui.jsx:233
+#: src/components/screens/Dashboard/ui.jsx:256
 #: src/components/screens/Encounter/Modals.jsx:219
 #: src/components/screens/VentilationMode/ModalHint.jsx:68
 msgid "Close"
 msgstr "Sluit"
+
+#: src/components/screens/Dashboard/ui.jsx:257
+#: src/components/screens/Menu.jsx:209
+#: src/components/screens/UpdateHints.jsx:45
+msgid "update-hints-screen.header.headline"
+msgstr "Wat is er nieuw?"
 
 #: src/components/screens/Day/EncountersList.jsx:219
 msgid "encounters-list.no-encounters.text"
@@ -613,7 +620,7 @@ msgid "export-screen.modals.export-completed.pdf.headline"
 msgstr ""
 
 #: src/components/screens/Legal/index.jsx:243
-#: src/components/screens/Menu.jsx:225
+#: src/components/screens/Menu.jsx:229
 msgid "legal-screen.header.headline"
 msgstr "Juridisch"
 
@@ -827,29 +834,29 @@ msgstr ""
 "Indien wij kennis nemen van een inbreuk, zullen wij deze inhoud onmiddellijk "
 "verwijderen."
 
-#: src/components/screens/Menu.jsx:213
-#: src/components/screens/VentilationMode/ui.jsx:282
-msgid "ventilation-mode-screen.header.headline"
-msgstr ""
-
 #: src/components/screens/Menu.jsx:217
+#: src/components/screens/VentilationMode/ui.jsx:280
+msgid "ventilation-mode-screen.header.headline"
+msgstr "Ventileer"
+
+#: src/components/screens/Menu.jsx:221
 msgid "menu-screen.items.faq"
 msgstr "Veel Gestelde Vragen"
 
-#: src/components/screens/Menu.jsx:221
+#: src/components/screens/Menu.jsx:225
 #: src/components/screens/Settings/ui.jsx:103
 msgid "settings-screen.header.headline"
 msgstr "Instellingen"
 
-#: src/components/screens/Menu.jsx:229
+#: src/components/screens/Menu.jsx:233
 msgid "menu-screen.items.share"
 msgstr "Deel deze app"
 
-#: src/components/screens/Menu.jsx:233
+#: src/components/screens/Menu.jsx:237
 msgid "menu-screen.items.website"
 msgstr "Bezoek website"
 
-#: src/components/screens/Menu.jsx:304
+#: src/components/screens/Menu.jsx:308
 msgid "menu-screen.button.send-feedback"
 msgstr "Feedback sturen"
 
@@ -1022,10 +1029,13 @@ msgstr ""
 #: src/components/screens/Settings/logic.js:411
 msgid "notifications.ventilation-mode.ventilate.variant-1.text"
 msgstr ""
+"💨 Ventileer nu! Open de ramen en laat frisse lucht binnen om de verspreiding "
+"van het virus via aërosolen te beperken."
 
 #: src/components/screens/Settings/logic.js:426
 msgid "notifications.ventilation-mode.end"
 msgstr ""
+"💨 Ventileer klaar. Vergeet niet om regelmatig binnenshuis te ventileren."
 
 #: src/components/screens/Settings/ui.jsx:108
 msgid "settings-screen.notifications.headline"
@@ -1340,35 +1350,41 @@ msgstr ""
 #: src/components/screens/VentilationMode/ModalHint.jsx:73
 msgid "ventilation-mode-screen.modals.hints.content.headline"
 msgstr ""
+"Een goede ventilatie van de binnenruimtes helpt het risico op infectie via "
+"aërosolen te verminderen."
 
 #: src/components/screens/VentilationMode/ModalHint.jsx:76
 msgid "ventilation-mode-screen.modals.hints.content.text"
 msgstr ""
+"Goede lucht is een belangrijke basis voor gezondheid en welzijn. Ventileer "
+"regelmatig, vooral als er meer dan één persoon in zit.  Luchtkamers voor "
+"10-15 minuten in de winter (20-30 minuten in de zomer) en open ramen zo "
+"breed mogelijk."
 
 #: src/components/screens/VentilationMode/ModalHint.jsx:78
 #: src/components/widgets/Tip.jsx:190
 msgid "tips.sources.headline"
 msgstr "Bron"
 
-#: src/components/screens/VentilationMode/ui.jsx:310
+#: src/components/screens/VentilationMode/ui.jsx:308
 msgid "ventilation-mode-screen.timer.text"
-msgstr ""
+msgstr "Ventileer in"
 
-#: src/components/screens/VentilationMode/ui.jsx:328
+#: src/components/screens/VentilationMode/ui.jsx:326
 msgid "ventilation-mode-screen.duration.15-minutes"
-msgstr ""
+msgstr "15 minuten"
 
-#: src/components/screens/VentilationMode/ui.jsx:329
+#: src/components/screens/VentilationMode/ui.jsx:327
 msgid "ventilation-mode-screen.duration.30-minutes"
-msgstr ""
+msgstr "30 minuten"
 
-#: src/components/screens/VentilationMode/ui.jsx:359
+#: src/components/screens/VentilationMode/ui.jsx:357
 msgid "ventilation-mode-screen.button.stop"
-msgstr ""
+msgstr "Stop"
 
-#: src/components/screens/VentilationMode/ui.jsx:359
+#: src/components/screens/VentilationMode/ui.jsx:357
 msgid "ventilation-mode-screen.button.start"
-msgstr ""
+msgstr "Start"
 
 #: src/components/screens/Welcome/ui.jsx:120
 msgid "welcome-screen.slides.notifications.headline"
@@ -1426,6 +1442,24 @@ msgstr "Opzoeken"
 msgid "tips.sources.last-updated"
 msgstr "Laatste update"
 
-#: src/index.jsx:132
+#: src/components/widgets/WhatsNew.jsx:53
+msgid "whats-new.ventilation-mode.text"
+msgstr ""
+"In het menu vindt u de nieuwe functie \"Ventileer\". Dit herinnert u eraan "
+"om regelmatig te ventileren tijdens ontmoetingen."
+
+#: src/components/widgets/WhatsNew.jsx:58
+msgid "whats-new.encounters.text"
+msgstr ""
+"Ontmoetingen kunnen nu worden ingevoerd met informatie over afstand, "
+"ventilatie, maskers en meer."
+
+#: src/components/widgets/WhatsNew.jsx:63
+msgid "whats-new.christmas.text"
+msgstr ""
+"Op tijd voor Kerstmis krijgt u belangrijke tips over hoe u infecties tot een "
+"minimum kunt beperken."
+
+#: src/index.jsx:133
 msgid "Done"
 msgstr ""

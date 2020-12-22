@@ -1,11 +1,13 @@
 import UilBars from '@iconscout/react-native-unicons/icons/uil-bars';
 import moment from 'moment';
 import React from 'react';
-import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { FlatList, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ALTERNATIVE_FONT_LANGUAGES, COLOR_PRIMARY } from '../../../constants';
 import { DayOverview } from '../../widgets/DayOverview';
-import Layout from '../../widgets/Layout';
 import Header from '../../widgets/Header';
+import Layout from '../../widgets/Layout';
+import ModalDefault from '../../widgets/ModalDefault';
+import WhatsNew from '../../widgets/WhatsNew';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -129,6 +131,11 @@ class Dashboard extends React.Component {
       fontSize: this.props.vw(4.5),
       lineHeight: this.props.vw(7),
     },
+    viewModalUpdateHintsWrapper: {
+      marginBottom: this.props.vw(2.3),
+      marginLeft: this.props.vw(2.5),
+      marginRight: this.props.vw(2.5),
+    },
   });
 
   closeFirstStartHint() {
@@ -194,7 +201,7 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    const { colors, days, firstStartHintVisible, vw, __ } = this.props;
+    const { colors, days, firstStartHintVisible, modalUpdateHintsVisible, hideModalUpdateHints, vw, __ } = this.props;
 
     return (
       <Layout>
@@ -244,6 +251,17 @@ class Dashboard extends React.Component {
             )}
           </View>
         </View>
+
+        <ModalDefault
+          buttonConfirmLabel={__('Close')}
+          headline={__('update-hints-screen.header.headline')}
+          isVisible={modalUpdateHintsVisible}
+          onPressClose={hideModalUpdateHints}
+          onPressConfirm={hideModalUpdateHints}>
+          <ScrollView style={this.styles.viewModalUpdateHintsWrapper}>
+            <WhatsNew />
+          </ScrollView>
+        </ModalDefault>
       </Layout>
     );
   }

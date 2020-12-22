@@ -254,12 +254,12 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "Начать сейчас"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:209
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:213
 msgid "about-screen.header.headline"
 msgstr "О Коронике"
 
 #: src/components/screens/BjoernSteigerFoundation.jsx:82
-#: src/components/screens/Menu.jsx:237
+#: src/components/screens/Menu.jsx:241
 msgid "bjoern-steiger-stiftung-screen.header.headline"
 msgstr "Фонд Бьёрна Штайгера"
 
@@ -285,27 +285,34 @@ msgstr ""
 "инновационных идей и подходов к вызовам в системе здравоохранения и их "
 "расширения с помощью сетей."
 
-#: src/components/screens/Dashboard/ui.jsx:173
+#: src/components/screens/Dashboard/ui.jsx:180
 msgid "dashboard-screen.list.load-more"
 msgstr "Загрузи больше"
 
-#: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:245
+#: src/components/screens/Dashboard/ui.jsx:218
+#: src/components/screens/Menu.jsx:249
 #: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
 msgstr "Меню"
 
-#: src/components/screens/Dashboard/ui.jsx:223
+#: src/components/screens/Dashboard/ui.jsx:230
 msgid "dashboard-screen.first-start.hint"
 msgstr ""
 "Нажмите на сегодняшнюю дату, чтобы ввести ваши контакты или местоположение."
 
-#: src/components/screens/Dashboard/ui.jsx:226
+#: src/components/screens/Dashboard/ui.jsx:233
+#: src/components/screens/Dashboard/ui.jsx:256
 #: src/components/screens/Encounter/Modals.jsx:219
 #: src/components/screens/VentilationMode/ModalHint.jsx:68
 msgid "Close"
 msgstr "Закрыть"
+
+#: src/components/screens/Dashboard/ui.jsx:257
+#: src/components/screens/Menu.jsx:209
+#: src/components/screens/UpdateHints.jsx:45
+msgid "update-hints-screen.header.headline"
+msgstr "Что нового?"
 
 #: src/components/screens/Day/EncountersList.jsx:219
 msgid "encounters-list.no-encounters.text"
@@ -609,7 +616,7 @@ msgid "export-screen.modals.export-completed.pdf.headline"
 msgstr "PDF файл"
 
 #: src/components/screens/Legal/index.jsx:243
-#: src/components/screens/Menu.jsx:225
+#: src/components/screens/Menu.jsx:229
 msgid "legal-screen.header.headline"
 msgstr "Юридический"
 
@@ -821,29 +828,29 @@ msgstr ""
 "станет известно о каких-либо нарушениях, мы немедленно удалим такое "
 "содержание."
 
-#: src/components/screens/Menu.jsx:213
-#: src/components/screens/VentilationMode/ui.jsx:282
-msgid "ventilation-mode-screen.header.headline"
-msgstr ""
-
 #: src/components/screens/Menu.jsx:217
+#: src/components/screens/VentilationMode/ui.jsx:280
+msgid "ventilation-mode-screen.header.headline"
+msgstr "Вентиляция"
+
+#: src/components/screens/Menu.jsx:221
 msgid "menu-screen.items.faq"
 msgstr "Часто задаваемые вопросы"
 
-#: src/components/screens/Menu.jsx:221
+#: src/components/screens/Menu.jsx:225
 #: src/components/screens/Settings/ui.jsx:103
 msgid "settings-screen.header.headline"
 msgstr "Настройки"
 
-#: src/components/screens/Menu.jsx:229
+#: src/components/screens/Menu.jsx:233
 msgid "menu-screen.items.share"
 msgstr "Поделись этим приложением"
 
-#: src/components/screens/Menu.jsx:233
+#: src/components/screens/Menu.jsx:237
 msgid "menu-screen.items.website"
 msgstr "Посетите сайт"
 
-#: src/components/screens/Menu.jsx:304
+#: src/components/screens/Menu.jsx:308
 msgid "menu-screen.button.send-feedback"
 msgstr "Отправить отзыв"
 
@@ -1019,10 +1026,14 @@ msgstr ""
 #: src/components/screens/Settings/logic.js:411
 msgid "notifications.ventilation-mode.ventilate.variant-1.text"
 msgstr ""
+"💨 Вентилируйте сейчас! Откройте окна и пропустите свежий воздух, чтобы "
+"уменьшить распространение вируса через аэрозоли."
 
 #: src/components/screens/Settings/logic.js:426
 msgid "notifications.ventilation-mode.end"
 msgstr ""
+"💨 Вентиляция закончена. Пожалуйста, не забывайте регулярно проветривать "
+"помещения."
 
 #: src/components/screens/Settings/ui.jsx:108
 msgid "settings-screen.notifications.headline"
@@ -1358,35 +1369,41 @@ msgstr ""
 #: src/components/screens/VentilationMode/ModalHint.jsx:73
 msgid "ventilation-mode-screen.modals.hints.content.headline"
 msgstr ""
+"Надлежащая вентиляция внутренних помещений помогает снизить риск заражения "
+"через воздух."
 
 #: src/components/screens/VentilationMode/ModalHint.jsx:76
 msgid "ventilation-mode-screen.modals.hints.content.text"
 msgstr ""
+"Свежий воздух является важной основой здоровья и хорошего самочувствия. "
+"Регулярно проветривайте помещение, особенно если в нем находится несколько "
+"человек. Воздушные ванны на 10-15 минут зимой (20-30 минут летом) и открытые "
+"окна как можно шире."
 
 #: src/components/screens/VentilationMode/ModalHint.jsx:78
 #: src/components/widgets/Tip.jsx:190
 msgid "tips.sources.headline"
 msgstr "Источники"
 
-#: src/components/screens/VentilationMode/ui.jsx:310
+#: src/components/screens/VentilationMode/ui.jsx:308
 msgid "ventilation-mode-screen.timer.text"
-msgstr ""
+msgstr "Вентилируйте"
 
-#: src/components/screens/VentilationMode/ui.jsx:328
+#: src/components/screens/VentilationMode/ui.jsx:326
 msgid "ventilation-mode-screen.duration.15-minutes"
-msgstr ""
+msgstr "15 минут"
 
-#: src/components/screens/VentilationMode/ui.jsx:329
+#: src/components/screens/VentilationMode/ui.jsx:327
 msgid "ventilation-mode-screen.duration.30-minutes"
-msgstr ""
+msgstr "30 минут"
 
-#: src/components/screens/VentilationMode/ui.jsx:359
+#: src/components/screens/VentilationMode/ui.jsx:357
 msgid "ventilation-mode-screen.button.stop"
-msgstr ""
+msgstr "Остановить"
 
-#: src/components/screens/VentilationMode/ui.jsx:359
+#: src/components/screens/VentilationMode/ui.jsx:357
 msgid "ventilation-mode-screen.button.start"
-msgstr ""
+msgstr "Начать"
 
 #: src/components/screens/Welcome/ui.jsx:120
 msgid "welcome-screen.slides.notifications.headline"
@@ -1444,6 +1461,24 @@ msgstr "Поиск"
 msgid "tips.sources.last-updated"
 msgstr "Последнее обновление:"
 
-#: src/index.jsx:132
+#: src/components/widgets/WhatsNew.jsx:53
+msgid "whats-new.ventilation-mode.text"
+msgstr ""
+"В меню Вы найдете новую функцию \"Вентиляция\". Она напоминает о регулярном "
+"проветривании во время встреч."
+
+#: src/components/widgets/WhatsNew.jsx:58
+msgid "whats-new.encounters.text"
+msgstr ""
+"Теперь можно вводить информацию о расстоянии, вентиляции, масках и многое "
+"другое."
+
+#: src/components/widgets/WhatsNew.jsx:63
+msgid "whats-new.christmas.text"
+msgstr ""
+"В преддверии Рождества вы получите важные советы о том, как свести к "
+"минимуму количество инфекций."
+
+#: src/index.jsx:133
 msgid "Done"
 msgstr ""

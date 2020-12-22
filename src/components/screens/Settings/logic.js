@@ -55,7 +55,7 @@ export const configurePushNotifications = (navigation, requestPermissions = fals
         }
       }
 
-      if (Platform.OS === 'ios') PushNotificationIOS.removeAllDeliveredNotifications();
+      PushNotification.removeAllDeliveredNotifications();
 
       notification.finish(PushNotificationIOS.FetchResult.NoData);
     },

@@ -20,6 +20,7 @@ import TipMouthguard from './TipMouthguard';
 import TipNotFeelingWell from './TipNotFeelingWell';
 import TipReliableSources from './TipReliableSources';
 import TipWashingHands from './TipWashingHands';
+import UpdateHints from './UpdateHints';
 import VentilationMode from './VentilationMode/logic';
 import Welcome from './Welcome/logic';
 
@@ -46,6 +47,7 @@ export default {
   TipNotFeelingWell,
   TipReliableSources,
   TipWashingHands,
+  UpdateHints,
   VentilationMode,
   Welcome,
 };

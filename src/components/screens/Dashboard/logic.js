@@ -7,9 +7,11 @@ import withColorScheme from '../../../utils/withColorScheme';
 import withViewportUnits from '../../../utils/withViewportUnits';
 import { setTimestamp as setTimestampDay } from '../Day/actions';
 import { resetLastUsageOfLocation, resetLastUsageOfPerson } from '../Directory/actions';
+import { setShowKeyUpdateHints } from '../Settings/actions';
 import {
   initializeDays,
   hideFirstStartHint,
+  hideModalUpdateHints,
   confirmFirstStartHint,
   showFirstStartHint,
   setLastUpdated,
@@ -85,6 +87,15 @@ const closeFirstStartHint = () => async (dispatch) => {
   dispatch(confirmFirstStartHint());
 };
 
+const closeModalUpdateHints = () => async (dispatch, getState) => {
+  const {
+    app: { showKeyUpdateHints: showKeyUpdateHintsApp },
+  } = getState();
+
+  dispatch(setShowKeyUpdateHints(showKeyUpdateHintsApp));
+  dispatch(hideModalUpdateHints());
+};
+
 const resetLastUsageTimestamps = () => async (dispatch, getState) => {
   const {
     directory: { locations, persons },
@@ -108,7 +119,11 @@ const resetLastUsageTimestamps = () => async (dispatch, getState) => {
     });
 };
 
-const mapStateToProps = ({ dashboard: { days, firstStartHintVisible } }) => {
+const mapStateToProps = ({
+  app: { showKeyUpdateHints: showKeyUpdateHintsApp },
+  dashboard: { days, firstStartHintVisible, modalUpdateHintsVisible },
+  settings: { showKeyUpdateHints: showKeyUpdateHintsSettings },
+}) => {
   const daysList = Object.keys(days)
     .sort((a, b) => daysSortingFunction(a, b))
     .map((timestamp) => days[timestamp]);
@@ -120,12 +135,14 @@ const mapStateToProps = ({ dashboard: { days, firstStartHintVisible } }) => {
   return {
     days: daysList,
     firstStartHintVisible,
+    modalUpdateHintsVisible: modalUpdateHintsVisible || showKeyUpdateHintsApp !== showKeyUpdateHintsSettings,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     closeFirstStartHint: () => dispatch(closeFirstStartHint()),
+    hideModalUpdateHints: () => dispatch(closeModalUpdateHints()),
     loadMoreDays: () => dispatch(loadMoreDays()),
     openDay: (timestamp, navigation) => dispatch(openDay(timestamp, navigation)),
   };

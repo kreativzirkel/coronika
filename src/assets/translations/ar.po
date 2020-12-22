@@ -249,12 +249,12 @@ msgstr ""
 msgid "welcome-screen.slides.local-data.button"
 msgstr "ابدأ الآن"
 
-#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:209
+#: src/components/screens/About.jsx:66 src/components/screens/Menu.jsx:213
 msgid "about-screen.header.headline"
 msgstr "حول كورونيكا"
 
 #: src/components/screens/BjoernSteigerFoundation.jsx:82
-#: src/components/screens/Menu.jsx:237
+#: src/components/screens/Menu.jsx:241
 msgid "bjoern-steiger-stiftung-screen.header.headline"
 msgstr "مؤسسة Björn Steiger"
 
@@ -277,26 +277,33 @@ msgstr ""
 "تعمل المؤسسة كمركز أبحاث من أجل تنفيذ الأفكار الخلاقة والحلول الإبداعية "
 "للتحديات التي تواجه النظام الصحي وتقييمها بشكل معياري بمساعدة الشبكات."
 
-#: src/components/screens/Dashboard/ui.jsx:173
+#: src/components/screens/Dashboard/ui.jsx:180
 msgid "dashboard-screen.list.load-more"
 msgstr "تحميل المزيد"
 
-#: src/components/screens/Dashboard/ui.jsx:211
-#: src/components/screens/Menu.jsx:245
+#: src/components/screens/Dashboard/ui.jsx:218
+#: src/components/screens/Menu.jsx:249
 #: src/components/screens/Overview/ui.jsx:128
 #: src/components/screens/Tips.jsx:154
 msgid "menu-screen.header.headline"
 msgstr "قائمة "
 
-#: src/components/screens/Dashboard/ui.jsx:223
+#: src/components/screens/Dashboard/ui.jsx:230
 msgid "dashboard-screen.first-start.hint"
 msgstr "انقر على تاريخ اليوم لإضافة الأشخاص أو المواقع الأولى."
 
-#: src/components/screens/Dashboard/ui.jsx:226
+#: src/components/screens/Dashboard/ui.jsx:233
+#: src/components/screens/Dashboard/ui.jsx:256
 #: src/components/screens/Encounter/Modals.jsx:219
 #: src/components/screens/VentilationMode/ModalHint.jsx:68
 msgid "Close"
 msgstr "اغلاق"
+
+#: src/components/screens/Dashboard/ui.jsx:257
+#: src/components/screens/Menu.jsx:209
+#: src/components/screens/UpdateHints.jsx:45
+msgid "update-hints-screen.header.headline"
+msgstr "ما هو الجديد؟"
 
 #: src/components/screens/Day/EncountersList.jsx:219
 msgid "encounters-list.no-encounters.text"
@@ -598,7 +605,7 @@ msgid "export-screen.modals.export-completed.pdf.headline"
 msgstr "ملف PDF"
 
 #: src/components/screens/Legal/index.jsx:243
-#: src/components/screens/Menu.jsx:225
+#: src/components/screens/Menu.jsx:229
 msgid "legal-screen.header.headline"
 msgstr "قانوني"
 
@@ -794,29 +801,29 @@ msgstr ""
 "ومع ذلك ، إذا علمت بانتهاك حقوق الطبع والنشر ، فيرجى إبلاغنا بذلك. إذا علمنا "
 "بأي انتهاكات ، فسوف نزيل هذه المحتويات على الفور."
 
-#: src/components/screens/Menu.jsx:213
-#: src/components/screens/VentilationMode/ui.jsx:282
-msgid "ventilation-mode-screen.header.headline"
-msgstr ""
-
 #: src/components/screens/Menu.jsx:217
+#: src/components/screens/VentilationMode/ui.jsx:280
+msgid "ventilation-mode-screen.header.headline"
+msgstr "تهوية"
+
+#: src/components/screens/Menu.jsx:221
 msgid "menu-screen.items.faq"
 msgstr "أسئلة مكررة"
 
-#: src/components/screens/Menu.jsx:221
+#: src/components/screens/Menu.jsx:225
 #: src/components/screens/Settings/ui.jsx:103
 msgid "settings-screen.header.headline"
 msgstr "الإعدادات"
 
-#: src/components/screens/Menu.jsx:229
+#: src/components/screens/Menu.jsx:233
 msgid "menu-screen.items.share"
 msgstr "شارك هذا التطبيق"
 
-#: src/components/screens/Menu.jsx:233
+#: src/components/screens/Menu.jsx:237
 msgid "menu-screen.items.website"
 msgstr "زيارة الموقع"
 
-#: src/components/screens/Menu.jsx:304
+#: src/components/screens/Menu.jsx:308
 msgid "menu-screen.button.send-feedback"
 msgstr "ارسل رأيك"
 
@@ -977,10 +984,12 @@ msgstr ""
 #: src/components/screens/Settings/logic.js:411
 msgid "notifications.ventilation-mode.ventilate.variant-1.text"
 msgstr ""
+"💨 تهوية الآن! افتح النوافذ ودع الهواء النقي يدخل إلى المنزل للحد من انتشار "
+"الفيروس عبر الهباء الجوي."
 
 #: src/components/screens/Settings/logic.js:426
 msgid "notifications.ventilation-mode.end"
-msgstr ""
+msgstr "💨 انتهى التهوية. يرجى الاستمرار في تذكر التهوية بانتظام في الداخل."
 
 #: src/components/screens/Settings/ui.jsx:108
 msgid "settings-screen.notifications.headline"
@@ -1308,35 +1317,41 @@ msgstr ""
 #: src/components/screens/VentilationMode/ModalHint.jsx:73
 msgid "ventilation-mode-screen.modals.hints.content.headline"
 msgstr ""
+"تساعد التهوية السليمة للأماكن الداخلية على تقليل خطر نقل العدوى عبر الهباء "
+"الجوي (الإيروسول)."
 
 #: src/components/screens/VentilationMode/ModalHint.jsx:76
 msgid "ventilation-mode-screen.modals.hints.content.text"
 msgstr ""
+"يُعد الهواء النقي من الأسس المهمة للصحة والشعور بالارتياح. قم بتهوية المكان "
+"بشكل منتظم، خاصة في حالة تواجد العديد من الأشخاص داخله. في فصل الشتاء قم "
+"بتهوية المكان لمدة 10 إلى 15 دقيقة كل مرة (20 إلى 30 دقيقة في الصيف) وافتح "
+"النوافذ على مصرعيها قدر الإمكان."
 
 #: src/components/screens/VentilationMode/ModalHint.jsx:78
 #: src/components/widgets/Tip.jsx:190
 msgid "tips.sources.headline"
 msgstr "مصادر"
 
-#: src/components/screens/VentilationMode/ui.jsx:310
+#: src/components/screens/VentilationMode/ui.jsx:308
 msgid "ventilation-mode-screen.timer.text"
-msgstr ""
+msgstr "تهوية"
 
-#: src/components/screens/VentilationMode/ui.jsx:328
+#: src/components/screens/VentilationMode/ui.jsx:326
 msgid "ventilation-mode-screen.duration.15-minutes"
-msgstr ""
+msgstr "15 دقيقة"
 
-#: src/components/screens/VentilationMode/ui.jsx:329
+#: src/components/screens/VentilationMode/ui.jsx:327
 msgid "ventilation-mode-screen.duration.30-minutes"
-msgstr ""
+msgstr "30 دقيقة"
 
-#: src/components/screens/VentilationMode/ui.jsx:359
+#: src/components/screens/VentilationMode/ui.jsx:357
 msgid "ventilation-mode-screen.button.stop"
-msgstr ""
+msgstr "قف"
 
-#: src/components/screens/VentilationMode/ui.jsx:359
+#: src/components/screens/VentilationMode/ui.jsx:357
 msgid "ventilation-mode-screen.button.start"
-msgstr ""
+msgstr "بداية"
 
 #: src/components/screens/Welcome/ui.jsx:120
 msgid "welcome-screen.slides.notifications.headline"
@@ -1391,6 +1406,22 @@ msgstr "بحث"
 msgid "tips.sources.last-updated"
 msgstr "آخر تحديث:"
 
-#: src/index.jsx:132
+#: src/components/widgets/WhatsNew.jsx:53
+msgid "whats-new.ventilation-mode.text"
+msgstr ""
+"في القائمة سوف تجد الميزة الجديدة \"التهوية\". يذكرك هذا بالتهوية بانتظام "
+"أثناء المواجهات."
+
+#: src/components/widgets/WhatsNew.jsx:58
+msgid "whats-new.encounters.text"
+msgstr ""
+"يمكن الآن إدخال اللقاءات بمعلومات حول المسافة والتهوية والأقنعة والمزيد."
+
+#: src/components/widgets/WhatsNew.jsx:63
+msgid "whats-new.christmas.text"
+msgstr ""
+"في الوقت المناسب لعيد الميلاد ، ستتلقى نصائح مهمة حول كيفية تقليل العدوى."
+
+#: src/index.jsx:133
 msgid "Done"
 msgstr ""
