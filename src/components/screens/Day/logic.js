@@ -84,6 +84,16 @@ const encountersSortingFunction = (a, b) => {
 
   if (timestampA > timestampB) return 1;
 
+  const titleA = a.title || '';
+  const titleB = b.title || '';
+
+  if (titleA < titleB) {
+    return -1;
+  }
+  if (titleA > titleB) {
+    return 1;
+  }
+
   return 0;
 };
 
