@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.0
+
+- Ventilate: This new feature reminds you to ventilate regularly during encounters
+- Bug fixes and improvements
+
 ## 2.0.3
 
 - Bug fixes and improvements
